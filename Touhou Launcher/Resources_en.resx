@@ -1,0 +1,589 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AoCF" xml:space="preserve">
+    <value>Antinomy of Common Flowers</value>
+  </data>
+  <data name="AoCFTitle" xml:space="preserve">
+    <value>Touhou 15.5: Antinomy of Common Flowers</value>
+  </data>
+  <data name="DDC" xml:space="preserve">
+    <value>Double Drealing Character</value>
+  </data>
+  <data name="DDCTitle" xml:space="preserve">
+    <value>Touhou 14: Double Dealing Character</value>
+  </data>
+  <data name="DS" xml:space="preserve">
+    <value>Double Spoiler</value>
+  </data>
+  <data name="DSTitle" xml:space="preserve">
+    <value>Touhou 12.3: Double Spoiler</value>
+  </data>
+  <data name="EoSD" xml:space="preserve">
+    <value>Embodiment of Scarlet Devil</value>
+  </data>
+  <data name="EoSDTitle" xml:space="preserve">
+    <value>Touhou 06: the Embodiment of Scarlet Devil</value>
+  </data>
+  <data name="GFW" xml:space="preserve">
+    <value>Great Fairy Wars</value>
+  </data>
+  <data name="GFWTitle" xml:space="preserve">
+    <value>Touhou 12.8: Great Fairy Wars</value>
+  </data>
+  <data name="HM" xml:space="preserve">
+    <value>Hopeless Masquerade</value>
+  </data>
+  <data name="HMTitle" xml:space="preserve">
+    <value>Touhou 13.5: Hopeless Masquerade</value>
+  </data>
+  <data name="HRtP" xml:space="preserve">
+    <value>Highly Responsive to Prayers</value>
+  </data>
+  <data name="HRtPTitle" xml:space="preserve">
+    <value>Touhou 01: Highly Responsive to Prayers</value>
+  </data>
+  <data name="HSiFS" xml:space="preserve">
+    <value>Hidden Star in Four Seasons</value>
+  </data>
+  <data name="HSiFSTitle" xml:space="preserve">
+    <value>Touhou 16: Hidden Star in Four Seasons</value>
+  </data>
+  <data name="IaMP" xml:space="preserve">
+    <value>Immaterial and Missing Power</value>
+  </data>
+  <data name="IaMPTitle" xml:space="preserve">
+    <value>Touhou 7.5: Immaterial and Missing Power</value>
+  </data>
+  <data name="IN" xml:space="preserve">
+    <value>Imperishable Night</value>
+  </data>
+  <data name="INTitle" xml:space="preserve">
+    <value>Touhou 08: Imperishable Night</value>
+  </data>
+  <data name="ISC" xml:space="preserve">
+    <value>Impossible Spell Card</value>
+  </data>
+  <data name="ISCTitle" xml:space="preserve">
+    <value>Touhou 14.3: Impossible Spell Card</value>
+  </data>
+  <data name="LLS" xml:space="preserve">
+    <value>Lotus Land Story</value>
+  </data>
+  <data name="LLSTitle" xml:space="preserve">
+    <value>Touhou 04: Lotus Land Story</value>
+  </data>
+  <data name="LoLK" xml:space="preserve">
+    <value>Legacy of Lunatic Kingdom</value>
+  </data>
+  <data name="LoLKTitle" xml:space="preserve">
+    <value>Touhou 15: Legacy of Lunatic Kingdom</value>
+  </data>
+  <data name="MoF" xml:space="preserve">
+    <value>Mountain of Faith</value>
+  </data>
+  <data name="MoFTitle" xml:space="preserve">
+    <value>Touhou 10: Mountain of Faith</value>
+  </data>
+  <data name="MS" xml:space="preserve">
+    <value>Mystic Square</value>
+  </data>
+  <data name="MSTitle" xml:space="preserve">
+    <value>Touhou 05: Mystic Square</value>
+  </data>
+  <data name="PCB" xml:space="preserve">
+    <value>Perfect Cherry Blossom</value>
+  </data>
+  <data name="PCBTitle" xml:space="preserve">
+    <value>Touhou 07: Perfect Cherry Blossom</value>
+  </data>
+  <data name="PoDD" xml:space="preserve">
+    <value>Phantasmagoria of Dim. Dream</value>
+  </data>
+  <data name="PoDDTitle" xml:space="preserve">
+    <value>Touhou 03: Phantasmagoria of Dim. Dream</value>
+  </data>
+  <data name="PoFV" xml:space="preserve">
+    <value>Phantasmagoria of Flower View</value>
+  </data>
+  <data name="PoFVTitle" xml:space="preserve">
+    <value>Touhou 09: Phantasmagoria of Flower View</value>
+  </data>
+  <data name="SA" xml:space="preserve">
+    <value>Subterranean Animism</value>
+  </data>
+  <data name="SATitle" xml:space="preserve">
+    <value>Touhou 11: Subterranean Animism</value>
+  </data>
+  <data name="SoEW" xml:space="preserve">
+    <value>Story of Eastern Wonderland</value>
+  </data>
+  <data name="SoEWTitle" xml:space="preserve">
+    <value>Touhou 02: the Story of Eastern Wonderland</value>
+  </data>
+  <data name="StB" xml:space="preserve">
+    <value>Shoot the Bullet</value>
+  </data>
+  <data name="StBTitle" xml:space="preserve">
+    <value>Touhou 9.5: Shoot the Bullet</value>
+  </data>
+  <data name="SWR" xml:space="preserve">
+    <value>Scarlet Weather Rhapsody</value>
+  </data>
+  <data name="SWRTitle" xml:space="preserve">
+    <value>Touhou 10.5: Scarlet Weather Rhapsody</value>
+  </data>
+  <data name="TD" xml:space="preserve">
+    <value>Ten Desires</value>
+  </data>
+  <data name="TDTitle" xml:space="preserve">
+    <value>Touhou 13: Ten Desires</value>
+  </data>
+  <data name="UFO" xml:space="preserve">
+    <value>Undefined Fantastic Object</value>
+  </data>
+  <data name="UFOTitle" xml:space="preserve">
+    <value>Touhou 12: Undefined Fantastic Object</value>
+  </data>
+  <data name="ULiL" xml:space="preserve">
+    <value>Urban Legend in Limbo</value>
+  </data>
+  <data name="ULiLTitle" xml:space="preserve">
+    <value>Touhou 14.5: Urban Legend in Limbo</value>
+  </data>
+  <data name="UoNL" xml:space="preserve">
+    <value>Hisoutensoku</value>
+  </data>
+  <data name="UoNLTitle" xml:space="preserve">
+    <value>Touhou 12.5: Hisoutensoku</value>
+  </data>
+  <data name="VD" xml:space="preserve">
+    <value>Violet Detector</value>
+  </data>
+  <data name="VDTitle" xml:space="preserve">
+    <value>Touhou 16.5: Violet Detector</value>
+  </data>
+  <data name="Random" xml:space="preserve">
+    <value>Random</value>
+  </data>
+  <data name="RandomTitle" xml:space="preserve">
+    <value>Run a Random Game</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Touhou Launcher</value>
+  </data>
+  <data name="FightingGroup" xml:space="preserve">
+    <value>Fighting Games</value>
+  </data>
+  <data name="MainGroup" xml:space="preserve">
+    <value>Main Games</value>
+  </data>
+  <data name="OtherGroup" xml:space="preserve">
+    <value>Other Games</value>
+  </data>
+  <data name="AoCFShort" xml:space="preserve">
+    <value>AoCF</value>
+  </data>
+  <data name="autoClose" xml:space="preserve">
+    <value>Auto-Close</value>
+  </data>
+  <data name="autoCloseToolTip" xml:space="preserve">
+    <value>Automatically close the launcher after launching a game</value>
+  </data>
+  <data name="bannerOffLabel" xml:space="preserve">
+    <value>Grey Banner</value>
+  </data>
+  <data name="bannerOnLabel" xml:space="preserve">
+    <value>Colored Banner</value>
+  </data>
+  <data name="bannerSettings" xml:space="preserve">
+    <value>Banner Settings</value>
+  </data>
+  <data name="browse" xml:space="preserve">
+    <value>Browse</value>
+  </data>
+  <data name="chkCustomBanner" xml:space="preserve">
+    <value>Use custom banner</value>
+  </data>
+  <data name="configureToolStripMenuItem" xml:space="preserve">
+    <value>Configure Game</value>
+  </data>
+  <data name="crapLabel" xml:space="preserve">
+    <value>thcrap Shortcut/Argument:</value>
+  </data>
+  <data name="customAdd" xml:space="preserve">
+    <value>Add Game</value>
+  </data>
+  <data name="customGames" xml:space="preserve">
+    <value>Custom Games</value>
+  </data>
+  <data name="customLabel" xml:space="preserve">
+    <value>Custom.exe:</value>
+  </data>
+  <data name="DDCShort" xml:space="preserve">
+    <value>DDC</value>
+  </data>
+  <data name="defaultLabel" xml:space="preserve">
+    <value>Default Executable:</value>
+  </data>
+  <data name="deleteCategoryToolStripMenuItem" xml:space="preserve">
+    <value>Delete Category</value>
+  </data>
+  <data name="DSShort" xml:space="preserve">
+    <value>DS</value>
+  </data>
+  <data name="enLabel" xml:space="preserve">
+    <value>English Executable:</value>
+  </data>
+  <data name="EoSDShort" xml:space="preserve">
+    <value>EoSD</value>
+  </data>
+  <data name="games" xml:space="preserve">
+    <value>Games</value>
+  </data>
+  <data name="GFWShort" xml:space="preserve">
+    <value>GFW</value>
+  </data>
+  <data name="hdiLabel" xml:space="preserve">
+    <value>Game HDI:</value>
+  </data>
+  <data name="HMShort" xml:space="preserve">
+    <value>HM</value>
+  </data>
+  <data name="HRtPShort" xml:space="preserve">
+    <value>HRtP</value>
+  </data>
+  <data name="HSiFSShort" xml:space="preserve">
+    <value>HSiFS</value>
+  </data>
+  <data name="IaMPShort" xml:space="preserve">
+    <value>IaMP</value>
+  </data>
+  <data name="info" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="INShort" xml:space="preserve">
+    <value>IN</value>
+  </data>
+  <data name="ISCShort" xml:space="preserve">
+    <value>ISC</value>
+  </data>
+  <data name="jpLabel" xml:space="preserve">
+    <value>Japanese/vpatch Executable:</value>
+  </data>
+  <data name="langLabel" xml:space="preserve">
+    <value>Language:</value>
+  </data>
+  <data name="launch" xml:space="preserve">
+    <value>Launch</value>
+  </data>
+  <data name="launcherSettings" xml:space="preserve">
+    <value>Launcher Settings</value>
+  </data>
+  <data name="LLSShort" xml:space="preserve">
+    <value>LLS</value>
+  </data>
+  <data name="LoLKShort" xml:space="preserve">
+    <value>LoLK</value>
+  </data>
+  <data name="MoFShort" xml:space="preserve">
+    <value>MoF</value>
+  </data>
+  <data name="MSShort" xml:space="preserve">
+    <value>MS</value>
+  </data>
+  <data name="newCategoryToolStripMenuItem" xml:space="preserve">
+    <value>New Category</value>
+  </data>
+  <data name="np2Label" xml:space="preserve">
+    <value>Neko Project II Location</value>
+  </data>
+  <data name="openFolder" xml:space="preserve">
+    <value>Open Folder</value>
+  </data>
+  <data name="openNP2Folder" xml:space="preserve">
+    <value>Open Neko Project II Folder</value>
+  </data>
+  <data name="openReplays" xml:space="preserve">
+    <value>Open Replays Folder</value>
+  </data>
+  <data name="openvpatch" xml:space="preserve">
+    <value>Edit vpatch.ini</value>
+  </data>
+  <data name="pc98Settings" xml:space="preserve">
+    <value>PC-98 Settings</value>
+  </data>
+  <data name="PCBShort" xml:space="preserve">
+    <value>PCB</value>
+  </data>
+  <data name="PoDDShort" xml:space="preserve">
+    <value>PoDD</value>
+  </data>
+  <data name="PoFVShort" xml:space="preserve">
+    <value>PoFV</value>
+  </data>
+  <data name="randomAll" xml:space="preserve">
+    <value>Select All</value>
+  </data>
+  <data name="randomLabel" xml:space="preserve">
+    <value>Games that will be included in the
+random game option</value>
+  </data>
+  <data name="randomNone" xml:space="preserve">
+    <value>Select None</value>
+  </data>
+  <data name="randomSettings" xml:space="preserve">
+    <value>Random Game Settings</value>
+  </data>
+  <data name="renameCategoryToolStripMenuItem" xml:space="preserve">
+    <value>Rename Category</value>
+  </data>
+  <data name="replays" xml:space="preserve">
+    <value>Replays</value>
+  </data>
+  <data name="SAShort" xml:space="preserve">
+    <value>SA</value>
+  </data>
+  <data name="settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="SoEWShort" xml:space="preserve">
+    <value>SoEW</value>
+  </data>
+  <data name="StBShort" xml:space="preserve">
+    <value>StB</value>
+  </data>
+  <data name="SWRShort" xml:space="preserve">
+    <value>SWR</value>
+  </data>
+  <data name="TDShort" xml:space="preserve">
+    <value>TD</value>
+  </data>
+  <data name="UFOShort" xml:space="preserve">
+    <value>UFO</value>
+  </data>
+  <data name="ULiLShort" xml:space="preserve">
+    <value>ULiL</value>
+  </data>
+  <data name="UoNLShort" xml:space="preserve">
+    <value>Hisoutensoku</value>
+  </data>
+  <data name="useApplocale" xml:space="preserve">
+    <value>With Applocale</value>
+  </data>
+  <data name="VDShort" xml:space="preserve">
+    <value>VD</value>
+  </data>
+  <data name="windowsSettings" xml:space="preserve">
+    <value>Windows Settings</value>
+  </data>
+  <data name="allFilter" xml:space="preserve">
+    <value>All Files</value>
+  </data>
+  <data name="ascendingToolStripMenuItem" xml:space="preserve">
+    <value>Ascending</value>
+  </data>
+  <data name="bannerOffSelectTitle" xml:space="preserve">
+    <value>Select the grey banner</value>
+  </data>
+  <data name="bannerOnSelectTitle" xml:space="preserve">
+    <value>Select the colored banner</value>
+  </data>
+  <data name="defaultExec" xml:space="preserve">
+    <value>Japanese/vpatch.ini, English (non-THCRAP), Custom.exe, thcrap</value>
+  </data>
+  <data name="deleteToolStripMenuItem" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="descendingToolStripMenuItem" xml:space="preserve">
+    <value>Descending</value>
+  </data>
+  <data name="detailsToolStripMenuItem" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="errorAppdataNotFound" xml:space="preserve">
+    <value>Cannot find Appdata Folder</value>
+  </data>
+  <data name="errorFileNotFound" xml:space="preserve">
+    <value>File could not be found</value>
+  </data>
+  <data name="errorNP2NotFound" xml:space="preserve">
+    <value>Please set Neko Project 2's location</value>
+  </data>
+  <data name="errorOpenImage" xml:space="preserve">
+    <value>Cannot openfile as image:\n</value>
+  </data>
+  <data name="errorReplaysNotFound" xml:space="preserve">
+    <value>Cannot find Replays folder</value>
+  </data>
+  <data name="errorvpatchNotFound" xml:space="preserve">
+    <value>Cannot find vpatch.ini</value>
+  </data>
+  <data name="executableFilter" xml:space="preserve">
+    <value>Executable Files</value>
+  </data>
+  <data name="gameSelectTitle" xml:space="preserve">
+    <value>Select Executable/Shortcut</value>
+  </data>
+  <data name="hdiFilter" xml:space="preserve">
+    <value>Hard Disk Image Files</value>
+  </data>
+  <data name="hdiSelectTitle" xml:space="preserve">
+    <value>Select the game's HDI</value>
+  </data>
+  <data name="imageFilter" xml:space="preserve">
+    <value>Image Files</value>
+  </data>
+  <data name="largeIconsToolStripMenuItem" xml:space="preserve">
+    <value>Large Icons</value>
+  </data>
+  <data name="listToolStripMenuItem" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="np2SelectTitle" xml:space="preserve">
+    <value>Select Neko Project II's executable</value>
+  </data>
+  <data name="openAppdata" xml:space="preserve">
+    <value>Appdata Folder</value>
+  </data>
+  <data name="openFolderToolStripMenuItem" xml:space="preserve">
+    <value>Open Folder</value>
+  </data>
+  <data name="openWithApplocaleToolStripMenuItem" xml:space="preserve">
+    <value>Open With Applocale</value>
+  </data>
+  <data name="playRandomToolStripMenuItem" xml:space="preserve">
+    <value>Play Random</value>
+  </data>
+  <data name="renameToolStripMenuItem" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="smallIconsToolStripMenuItem" xml:space="preserve">
+    <value>Small Icons</value>
+  </data>
+  <data name="sortToolStripMenuItem" xml:space="preserve">
+    <value>Sort</value>
+  </data>
+  <data name="tileToolStripMenuItem" xml:space="preserve">
+    <value>Tile</value>
+  </data>
+  <data name="viewToolStripMenuItem" xml:space="preserve">
+    <value>View</value>
+  </data>
+</root>
