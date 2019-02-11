@@ -374,7 +374,7 @@ namespace Touhou_Launcher
                     Application.Exit();
             }
             else
-                MessageBox.Show("Cannot find game.");
+                MessageBox.Show(rm.GetString("errorGameNotFound"));
         }
 
         private void customAdd_Click(object sender, EventArgs e)
@@ -609,6 +609,7 @@ namespace Touhou_Launcher
         {
             foreach (string file in MainForm.FileBrowser(MainForm.rm.GetString("np2SelectTitle"), MainForm.rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*"))
             {
+                np2Dir.BackColor = SystemColors.Window;
                 np2Dir.Text = file;
                 MainForm.curCfg.np2Dir = file;
             }
@@ -618,8 +619,11 @@ namespace Touhou_Launcher
         {
             if (File.Exists(np2Dir.Text) || np2Dir.Text == "")
             {
+                ((TextBox)sender).BackColor = SystemColors.Window;
                 MainForm.curCfg.np2Dir = np2Dir.Text;
             }
+            else
+                ((TextBox)sender).BackColor = Color.Red;
         }
 
         private void autoClose_CheckedChanged(object sender, EventArgs e)

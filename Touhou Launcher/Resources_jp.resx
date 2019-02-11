@@ -527,7 +527,7 @@ random game option</value>
     <value>Please set Neko Project 2's location</value>
   </data>
   <data name="errorOpenImage" xml:space="preserve">
-    <value>Cannot openfile as image:\n</value>
+    <value>Cannot open file as image:\n</value>
   </data>
   <data name="errorReplaysNotFound" xml:space="preserve">
     <value>Cannot find Replays folder</value>
@@ -588,5 +588,8 @@ random game option</value>
   </data>
   <data name="errorInvalidNP2INI" xml:space="preserve">
     <value>Neko Project II's configuration ini is not valid.</value>
+  </data>
+  <data name="errorGameNotFound" xml:space="preserve">
+    <value>Cannot find game</value>
   </data>
 </root>

@@ -105,9 +105,9 @@
             this.jpDir.Name = "jpDir";
             this.jpDir.Size = new System.Drawing.Size(181, 20);
             this.jpDir.TabIndex = 2;
-            this.jpDir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
-            this.jpDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
             this.jpDir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
+            this.jpDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
+            this.jpDir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
             // 
             // enDir
             // 
@@ -116,9 +116,9 @@
             this.enDir.Name = "enDir";
             this.enDir.Size = new System.Drawing.Size(181, 20);
             this.enDir.TabIndex = 3;
-            this.enDir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
-            this.enDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
             this.enDir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
+            this.enDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
+            this.enDir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
             // 
             // customDir
             // 
@@ -127,9 +127,9 @@
             this.customDir.Name = "customDir";
             this.customDir.Size = new System.Drawing.Size(181, 20);
             this.customDir.TabIndex = 4;
-            this.customDir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
-            this.customDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
             this.customDir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
+            this.customDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
+            this.customDir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
             // 
             // browseJP
             // 
@@ -308,9 +308,9 @@
             this.crapDir.Name = "crapDir";
             this.crapDir.Size = new System.Drawing.Size(181, 20);
             this.crapDir.TabIndex = 20;
-            this.crapDir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
-            this.crapDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
             this.crapDir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
+            this.crapDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
+            this.crapDir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
             // 
             // customApplocale
             // 
@@ -393,9 +393,9 @@
             this.bannerOnDir.Name = "bannerOnDir";
             this.bannerOnDir.Size = new System.Drawing.Size(161, 20);
             this.bannerOnDir.TabIndex = 29;
-            this.bannerOnDir.LostFocus += new System.EventHandler(this.bannerDir_LostFocus);
-            this.bannerOnDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
             this.bannerOnDir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
+            this.bannerOnDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
+            this.bannerOnDir.LostFocus += new System.EventHandler(this.bannerDir_LostFocus);
             // 
             // bannerOffLabel
             // 
@@ -424,9 +424,9 @@
             this.bannerOffDir.Name = "bannerOffDir";
             this.bannerOffDir.Size = new System.Drawing.Size(161, 20);
             this.bannerOffDir.TabIndex = 32;
-            this.bannerOffDir.LostFocus += new System.EventHandler(this.bannerDir_LostFocus);
-            this.bannerOffDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
             this.bannerOffDir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
+            this.bannerOffDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
+            this.bannerOffDir.LostFocus += new System.EventHandler(this.bannerDir_LostFocus);
             // 
             // pc98Settings
             // 
@@ -491,9 +491,9 @@
             this.hdiDir.Name = "hdiDir";
             this.hdiDir.Size = new System.Drawing.Size(229, 20);
             this.hdiDir.TabIndex = 20;
-            this.hdiDir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
-            this.hdiDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
             this.hdiDir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
+            this.hdiDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
+            this.hdiDir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
             // 
             // bannerSettings
             // 

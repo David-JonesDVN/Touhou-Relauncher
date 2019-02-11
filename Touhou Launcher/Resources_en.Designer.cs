@@ -394,6 +394,15 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cannot find game.
+        /// </summary>
+        public static string errorGameNotFound {
+            get {
+                return ResourceManager.GetString("errorGameNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Neko Project II&apos;s configuration ini is not valid..
         /// </summary>
         public static string errorInvalidNP2INI {
@@ -412,7 +421,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cannot openfile as image:\n.
+        ///   Looks up a localized string similar to Cannot open file as image:\n.
         /// </summary>
         public static string errorOpenImage {
             get {

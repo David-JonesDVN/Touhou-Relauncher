@@ -1,7 +1,8 @@
 0.8 (02/11/2019)
 Added: Actual launch code for PC-98 games (How did I forget that).
-Added: Drag/Drop support for game configuration.
+Added: Drag/Drop support for game configuration
 Changed: Launching PC-98 games now simply replaces the hdi directory instead of the entire ini file.
+Changed: Invalid textboxes turn red instead of giving you a message box/not doing anything.
 Fixed: PC-98 games not saving their status immediately.
 Fixed: Manually adding banners now checks if the image is valid/openable.
 

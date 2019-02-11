@@ -2158,7 +2158,6 @@
 
         private System.Windows.Forms.ContextMenuStrip gameContextMenu;
         private System.Windows.Forms.ToolStripMenuItem configureToolStripMenuItem;
-        private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.ContextMenuStrip customFolderContextMenu;
         private System.Windows.Forms.ToolStripMenuItem newCategoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteCategoryToolStripMenuItem;
@@ -2314,6 +2313,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem26;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem27;
         private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.ToolTip toolTip;
     }
 }
 

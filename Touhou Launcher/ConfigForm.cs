@@ -108,8 +108,13 @@ namespace Touhou_Launcher
         {
             if (File.Exists(((TextBox)sender).Text) || ((TextBox)sender).Text == "")
             {
+                ((TextBox)sender).BackColor = SystemColors.Window;
                 int dirID = game > 4 ? MainForm.dirToNumber[((TextBox)sender).Name.Replace("Dir", "")] : 0;
                 MainForm.curCfg.gameCFG[game].GameDir[dirID] = ((TextBox)sender).Text;
+            }
+            else
+            {
+                ((TextBox)sender).BackColor = Color.Red;
             }
         }
 
@@ -208,7 +213,7 @@ namespace Touhou_Launcher
             }
             else
             {
-                MessageBox.Show(MainForm.rm.GetString("errorFileNotFound"));
+                MessageBox.Show(MainForm.rm.GetString("errorGameNotFound"));
             }
         }
 
@@ -266,13 +271,16 @@ namespace Touhou_Launcher
                 }
                 catch (OutOfMemoryException ex)
                 {
+
                     MessageBox.Show(MainForm.rm.GetString("errorOpenImage") + ex);
                 }
                 catch (FileNotFoundException ex)
                 {
-                    MessageBox.Show(MainForm.rm.GetString("errorFileNotFound"));
+                    ((TextBox)sender).BackColor = Color.Red;
                 }
             }
+            else
+                ((TextBox)sender).BackColor = SystemColors.Window;
         }
 
         private void browseHDI_Click(object sender, EventArgs e)
