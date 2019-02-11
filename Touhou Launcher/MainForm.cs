@@ -189,6 +189,24 @@ namespace Touhou_Launcher
             return parent.Nodes;
         }
 
+        public static bool NekoProject(string hdi)
+        {
+            string[] config = File.ReadAllLines(Path.GetDirectoryName(curCfg.np2Dir) + "\\np21nt.ini", Encoding.Unicode);
+            for (int i = 0; i < config.Length; i++)
+            {
+                if (config[i].Contains("HDD1FILE="))
+                {
+                    if (config[i] != "HDD1FILE=" + hdi)
+                    {
+                        config[i] = "HDD1FILE=" + hdi;
+                        File.WriteAllLines(Path.GetDirectoryName(curCfg.np2Dir) + "\\np21nt.ini", config, Encoding.Unicode);
+                    }
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public static string[] FileBrowser(string title, string filter, bool multiSelect = false)
         {
             OpenFileDialog browser = new OpenFileDialog();
@@ -341,7 +359,12 @@ namespace Touhou_Launcher
             	}
             	else
             	{
-            		path = curCfg.np2Dir + curGame.GameDir[0];
+                    if (!File.Exists(curCfg.np2Dir))
+                        MessageBox.Show(rm.GetString("errorNP2NotFound"));
+                    else if (!NekoProject(curGame.GameDir[0]))
+                        MessageBox.Show(rm.GetString("errorInvalidNP2INI"));
+                    else
+                        path = curCfg.np2Dir;
             	}
             }
             if (path != "")

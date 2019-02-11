@@ -62,6 +62,7 @@
             this.btnLLS = new System.Windows.Forms.Button();
             this.btnMS = new System.Windows.Forms.Button();
             this.info = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
@@ -153,13 +154,6 @@
             this.btnHSiFS = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mainToolMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.fightingToolMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.otherToolMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.customToolMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.randomToolMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.openToolMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
@@ -176,17 +170,24 @@
             this.toolStripMenuItem14 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem15 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem16 = new System.Windows.Forms.ToolStripMenuItem();
+            this.fightingToolMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem17 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem18 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem19 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem20 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem21 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem22 = new System.Windows.Forms.ToolStripMenuItem();
+            this.otherToolMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem23 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem24 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem25 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem26 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem27 = new System.Windows.Forms.ToolStripMenuItem();
+            this.customToolMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.randomToolMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.openToolMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.gameContextMenu.SuspendLayout();
             this.customContextMenu.SuspendLayout();
             this.customFolderContextMenu.SuspendLayout();
@@ -520,6 +521,7 @@
             // info
             // 
             this.info.BackColor = System.Drawing.Color.Transparent;
+            this.info.Controls.Add(this.label4);
             this.info.Controls.Add(this.label3);
             this.info.Controls.Add(this.linkLabel1);
             this.info.Controls.Add(this.label2);
@@ -530,6 +532,15 @@
             this.info.Size = new System.Drawing.Size(527, 535);
             this.info.TabIndex = 5;
             this.info.Text = "Info";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(10, 257);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(189, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Json.NET used under the MIT license.";
             // 
             // label3
             // 
@@ -557,7 +568,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(10, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(331, 156);
+            this.label2.Size = new System.Drawing.Size(419, 156);
             this.label2.TabIndex = 1;
             this.label2.Text = resources.GetString("label2.Text");
             // 
@@ -569,7 +580,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(247, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Touhou Launcher 0.5 BETA";
+            this.label1.Text = "Touhou Launcher 0.8 BETA";
             // 
             // settings
             // 
@@ -1802,7 +1813,7 @@
             this.openToolMenu,
             this.exitToolMenu});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(158, 186);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(158, 164);
             // 
             // mainToolMenu
             // 
@@ -1826,60 +1837,6 @@
             this.mainToolMenu.Name = "mainToolMenu";
             this.mainToolMenu.Size = new System.Drawing.Size(157, 22);
             this.mainToolMenu.Text = "Main Games";
-            // 
-            // fightingToolMenu
-            // 
-            this.fightingToolMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem17,
-            this.toolStripMenuItem18,
-            this.toolStripMenuItem19,
-            this.toolStripMenuItem20,
-            this.toolStripMenuItem21,
-            this.toolStripMenuItem22});
-            this.fightingToolMenu.Name = "fightingToolMenu";
-            this.fightingToolMenu.Size = new System.Drawing.Size(157, 22);
-            this.fightingToolMenu.Text = "Fighting Games";
-            // 
-            // otherToolMenu
-            // 
-            this.otherToolMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem23,
-            this.toolStripMenuItem24,
-            this.toolStripMenuItem25,
-            this.toolStripMenuItem26,
-            this.toolStripMenuItem27});
-            this.otherToolMenu.Name = "otherToolMenu";
-            this.otherToolMenu.Size = new System.Drawing.Size(157, 22);
-            this.otherToolMenu.Text = "Other Games";
-            // 
-            // customToolMenu
-            // 
-            this.customToolMenu.Name = "customToolMenu";
-            this.customToolMenu.Size = new System.Drawing.Size(157, 22);
-            this.customToolMenu.Text = "Custom Games";
-            // 
-            // randomToolMenu
-            // 
-            this.randomToolMenu.Name = "randomToolMenu";
-            this.randomToolMenu.Size = new System.Drawing.Size(157, 22);
-            this.randomToolMenu.Text = "Random Game";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(154, 6);
-            // 
-            // openToolMenu
-            // 
-            this.openToolMenu.Name = "openToolMenu";
-            this.openToolMenu.Size = new System.Drawing.Size(157, 22);
-            this.openToolMenu.Text = "Open";
-            // 
-            // exitToolMenu
-            // 
-            this.exitToolMenu.Name = "exitToolMenu";
-            this.exitToolMenu.Size = new System.Drawing.Size(157, 22);
-            this.exitToolMenu.Text = "Exit";
             // 
             // toolStripMenuItem1
             // 
@@ -2009,6 +1966,19 @@
             this.toolStripMenuItem16.Size = new System.Drawing.Size(256, 38);
             this.toolStripMenuItem16.Text = "Hidden Star in Four Seasons";
             // 
+            // fightingToolMenu
+            // 
+            this.fightingToolMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem17,
+            this.toolStripMenuItem18,
+            this.toolStripMenuItem19,
+            this.toolStripMenuItem20,
+            this.toolStripMenuItem21,
+            this.toolStripMenuItem22});
+            this.fightingToolMenu.Name = "fightingToolMenu";
+            this.fightingToolMenu.Size = new System.Drawing.Size(157, 22);
+            this.fightingToolMenu.Text = "Fighting Games";
+            // 
             // toolStripMenuItem17
             // 
             this.toolStripMenuItem17.Image = global::Touhou_Launcher.Properties.Resources.Icon_th075;
@@ -2057,6 +2027,18 @@
             this.toolStripMenuItem22.Size = new System.Drawing.Size(254, 38);
             this.toolStripMenuItem22.Text = "Antinomy of Common Flowers";
             // 
+            // otherToolMenu
+            // 
+            this.otherToolMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem23,
+            this.toolStripMenuItem24,
+            this.toolStripMenuItem25,
+            this.toolStripMenuItem26,
+            this.toolStripMenuItem27});
+            this.otherToolMenu.Name = "otherToolMenu";
+            this.otherToolMenu.Size = new System.Drawing.Size(157, 22);
+            this.otherToolMenu.Text = "Other Games";
+            // 
             // toolStripMenuItem23
             // 
             this.toolStripMenuItem23.Image = global::Touhou_Launcher.Properties.Resources.Icon_th095;
@@ -2096,6 +2078,35 @@
             this.toolStripMenuItem27.Name = "toolStripMenuItem27";
             this.toolStripMenuItem27.Size = new System.Drawing.Size(203, 38);
             this.toolStripMenuItem27.Text = "Violet Detector";
+            // 
+            // customToolMenu
+            // 
+            this.customToolMenu.Name = "customToolMenu";
+            this.customToolMenu.Size = new System.Drawing.Size(157, 22);
+            this.customToolMenu.Text = "Custom Games";
+            // 
+            // randomToolMenu
+            // 
+            this.randomToolMenu.Name = "randomToolMenu";
+            this.randomToolMenu.Size = new System.Drawing.Size(157, 22);
+            this.randomToolMenu.Text = "Random Game";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(154, 6);
+            // 
+            // openToolMenu
+            // 
+            this.openToolMenu.Name = "openToolMenu";
+            this.openToolMenu.Size = new System.Drawing.Size(157, 22);
+            this.openToolMenu.Text = "Open";
+            // 
+            // exitToolMenu
+            // 
+            this.exitToolMenu.Name = "exitToolMenu";
+            this.exitToolMenu.Size = new System.Drawing.Size(157, 22);
+            this.exitToolMenu.Text = "Exit";
             // 
             // MainForm
             // 
@@ -2302,6 +2313,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem25;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem26;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem27;
+        private System.Windows.Forms.Label label4;
     }
 }
 

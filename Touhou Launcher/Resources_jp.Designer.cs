@@ -394,6 +394,15 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Neko Project II&apos;s configuration ini is not valid..
+        /// </summary>
+        public static string errorInvalidNP2INI {
+            get {
+                return ResourceManager.GetString("errorInvalidNP2INI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please set Neko Project 2&apos;s location.
         /// </summary>
         public static string errorNP2NotFound {

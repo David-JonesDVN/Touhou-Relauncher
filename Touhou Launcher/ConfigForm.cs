@@ -90,22 +90,42 @@ namespace Touhou_Launcher
 
         private void ConfigForm_Closing(object sender, FormClosingEventArgs e)
         {
-            jpLabel.Focus();
+            this.Focus();
             if (MainForm.curCfg.gameCFG[game].GameDir[MainForm.curCfg.gameCFG[game].DefaultDir] == "")
-                foreach (string dir in MainForm.curCfg.gameCFG[game].GameDir)
+                for (int i = 0; i < MainForm.curCfg.gameCFG[game].GameDir.Count; i++)
                 {
-
+                    if (MainForm.curCfg.gameCFG[game].GameDir[i] != "")
+                    {
+                        MainForm.curCfg.gameCFG[game].DefaultDir = i;
+                        break;
+                    }
                 }
-            MainForm.curCfg.Save();
             main.RefreshGames();
+            MainForm.curCfg.Save();
         }
 
         private void Dir_LostFocus(object sender, EventArgs e)
         {
             if (File.Exists(((TextBox)sender).Text) || ((TextBox)sender).Text == "")
             {
-                MainForm.curCfg.gameCFG[game].GameDir[MainForm.dirToNumber[((TextBox)sender).Name.Replace("Dir", "")]] = ((TextBox)sender).Text;
+                int dirID = game > 4 ? MainForm.dirToNumber[((TextBox)sender).Name.Replace("Dir", "")] : 0;
+                MainForm.curCfg.gameCFG[game].GameDir[dirID] = ((TextBox)sender).Text;
             }
+        }
+
+        private void Dir_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+                e.Effect = DragDropEffects.Copy;
+        }
+
+        private void Dir_DragDrop(object sender, DragEventArgs e)
+        {
+            ((TextBox)sender).Text = ((string[])e.Data.GetData(DataFormats.FileDrop)).FirstOrDefault(n => File.Exists(n));
+            if (((TextBox)sender).Name.Contains("banner"))
+                bannerDir_LostFocus(sender, new EventArgs());
+            else
+                Dir_LostFocus(sender, new EventArgs());
         }
 
         private void defaultExec_SelectedIndexChanged(object sender, EventArgs e)
@@ -203,6 +223,7 @@ namespace Touhou_Launcher
             {
                 try
                 {
+                    Image.FromFile(bannerOnDir.Text);
                     MainForm.curCfg.gameCFG[game].bannerOn = file;
                     bannerOnDir.Text = file;
                 }
@@ -219,6 +240,7 @@ namespace Touhou_Launcher
             {
                 try
                 {
+                    Image.FromFile(file);
                     MainForm.curCfg.gameCFG[game].bannerOff = file;
                     bannerOffDir.Text = file;
                 }
@@ -229,32 +251,18 @@ namespace Touhou_Launcher
             }
         }
 
-        private void bannerOnDir_LostFocus(object sender, EventArgs e)
+        private void bannerDir_LostFocus(object sender, EventArgs e)
         {
-            if (bannerOnDir.Text != "")
+            if (((TextBox)sender).Text != "")
             {
                 try
                 {
-                    MainForm.curCfg.gameCFG[game].bannerOn = bannerOnDir.Text;
-                }
-                catch (OutOfMemoryException ex)
-                {
-                    MessageBox.Show(MainForm.rm.GetString("errorOpenImage") + ex);
-                }
-                catch (FileNotFoundException ex)
-                {
-                    MessageBox.Show(MainForm.rm.GetString("errorFileNotFound"));
-                }
-            }
-        }
-
-        private void bannerOffDir_LostFocus(object sender, EventArgs e)
-        {
-            if (bannerOffDir.Text != "")
-            {
-                try
-                {
-                    MainForm.curCfg.gameCFG[game].bannerOff = bannerOffDir.Text;
+                    Image.FromFile(((TextBox)sender).Text);
+                    bool onTxtBox = ((TextBox)sender).Name.Contains("On");
+                    if (onTxtBox)
+                        MainForm.curCfg.gameCFG[game].bannerOn = ((TextBox)sender).Text;
+                    else
+                        MainForm.curCfg.gameCFG[game].bannerOff = ((TextBox)sender).Text;
                 }
                 catch (OutOfMemoryException ex)
                 {
@@ -271,34 +279,19 @@ namespace Touhou_Launcher
         {
             foreach (string file in MainForm.FileBrowser(MainForm.rm.GetString("hdiSelectTitle"), MainForm.rm.GetString("hdiFilter") + " (*.hdi)|*.hdi|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*"))
             {
+                hdiDir.Text = file;
                 MainForm.curCfg.gameCFG[game].GameDir[0] = file;
             }
         }
 
         private void launchHDI_Click(object sender, EventArgs e)
         {
-            if (File.Exists(MainForm.curCfg.np2Dir))
-            {
-                if (File.Exists(MainForm.curCfg.np2Dir + "\\th" + (MainForm.idToNumber[game]).ToString("00") + ".ini"))
-                {
-                    File.Copy(MainForm.curCfg.np2Dir + "\\th" + (MainForm.idToNumber[game]).ToString("00") + ".ini", MainForm.curCfg.np2Dir + "\\np21nt.ini", true);
-                }
-                else
-                {
-                    string[] config = File.ReadAllLines(MainForm.curCfg.np2Dir + "\\np2nt.ini");
-                    for (int i = 0; i < config.Length; i++)
-                    {
-                        if (config[i].Contains("HDD1FILE="))
-                        {
-                            config[i] = "HDD1FILE=" + hdiDir;
-                            File.WriteAllLines(MainForm.curCfg.np2Dir + "\\th" + (MainForm.idToNumber[game]) + ".ini", config);
-                            launchHDI_Click(this, new EventArgs());
-                        }
-                    }
-                }
-            }
-            else
+            if (!File.Exists(MainForm.curCfg.np2Dir))
                 MessageBox.Show(MainForm.rm.GetString("errorNP2NotFound"));
+            else if (!MainForm.NekoProject(hdiDir.Text))
+                MessageBox.Show(MainForm.rm.GetString("errorInvalidNP2INI"));
+            else
+                Process.Start(MainForm.curCfg.np2Dir);
         }
 
         private void openFolder_Click(object sender, EventArgs e)

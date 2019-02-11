@@ -586,4 +586,7 @@ random game option</value>
   <data name="viewToolStripMenuItem" xml:space="preserve">
     <value>View</value>
   </data>
+  <data name="errorInvalidNP2INI" xml:space="preserve">
+    <value>Neko Project II's configuration ini is not valid.</value>
+  </data>
 </root>
