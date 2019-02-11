@@ -1,0 +1,14 @@
+C:\Users\7\Documents\Visual Studio 2012\Projects\Touhou Launcher\Touhou Launcher\bin\Debug\Touhou Launcher.exe.config
+C:\Users\7\Documents\Visual Studio 2012\Projects\Touhou Launcher\Touhou Launcher\obj\Debug\Touhou_Launcher.MainForm.resources
+C:\Users\7\Documents\Visual Studio 2012\Projects\Touhou Launcher\Touhou Launcher\obj\Debug\Touhou_Launcher.Properties.Resources.resources
+C:\Users\7\Documents\Visual Studio 2012\Projects\Touhou Launcher\Touhou Launcher\obj\Debug\Touhou Launcher.csproj.GenerateResource.Cache
+C:\Users\7\Documents\Visual Studio 2012\Projects\Touhou Launcher\Touhou Launcher\obj\Debug\Touhou Launcher.csprojResolveAssemblyReference.cache
+C:\Users\7\Documents\Visual Studio 2012\Projects\Touhou Launcher\Touhou Launcher\bin\Debug\Touhou Launcher.exe
+C:\Users\7\Documents\Visual Studio 2012\Projects\Touhou Launcher\Touhou Launcher\bin\Debug\Touhou Launcher.pdb
+C:\Users\7\Documents\Visual Studio 2012\Projects\Touhou Launcher\Touhou Launcher\bin\Debug\Newtonsoft.Json.dll
+C:\Users\7\Documents\Visual Studio 2012\Projects\Touhou Launcher\Touhou Launcher\bin\Debug\Newtonsoft.Json.xml
+C:\Users\7\Documents\Visual Studio 2012\Projects\Touhou Launcher\Touhou Launcher\obj\Debug\Touhou Launcher.exe
+C:\Users\7\Documents\Visual Studio 2012\Projects\Touhou Launcher\Touhou Launcher\obj\Debug\Touhou Launcher.pdb
+C:\Users\7\documents\visual studio 2012\Projects\Touhou Launcher\Touhou Launcher\obj\Debug\Touhou_Launcher.Resources_en.resources
+C:\Users\7\documents\visual studio 2012\Projects\Touhou Launcher\Touhou Launcher\obj\Debug\Touhou_Launcher.Resources_jp.resources
+C:\Users\7\documents\visual studio 2012\Projects\Touhou Launcher\Touhou Launcher\obj\Debug\Touhou_Launcher.ConfigForm.resources
