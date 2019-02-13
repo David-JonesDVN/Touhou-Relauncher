@@ -421,7 +421,8 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cannot open file as image:\n.
+        ///   Looks up a localized string similar to Cannot open file as image:
+        ///.
         /// </summary>
         public static string errorOpenImage {
             get {
@@ -1156,6 +1157,35 @@ namespace Touhou_Launcher {
         public static string renameToolStripMenuItem {
             get {
                 return ResourceManager.GetString("renameToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Download &quot;{0}&quot; to:
+        ///{1}.
+        /// </summary>
+        public static string replayDownload {
+            get {
+                return ResourceManager.GetString("replayDownload", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Replay Files.
+        /// </summary>
+        public static string replayFilter {
+            get {
+                return ResourceManager.GetString("replayFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Player replays full and Touhou 10 does not support user replays.
+        ///.
+        /// </summary>
+        public static string replayFull {
+            get {
+                return ResourceManager.GetString("replayFull", resourceCulture);
             }
         }
         

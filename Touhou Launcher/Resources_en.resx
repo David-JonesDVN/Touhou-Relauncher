@@ -527,7 +527,8 @@ random game option</value>
     <value>Please set Neko Project 2's location</value>
   </data>
   <data name="errorOpenImage" xml:space="preserve">
-    <value>Cannot open file as image:\n</value>
+    <value>Cannot open file as image:
+</value>
   </data>
   <data name="errorReplaysNotFound" xml:space="preserve">
     <value>Cannot find Replays folder</value>
@@ -591,5 +592,16 @@ random game option</value>
   </data>
   <data name="errorGameNotFound" xml:space="preserve">
     <value>Cannot find game</value>
+  </data>
+  <data name="replayFilter" xml:space="preserve">
+    <value>Replay Files</value>
+  </data>
+  <data name="replayDownload" xml:space="preserve">
+    <value>Download "{0}" to:
+{1}</value>
+  </data>
+  <data name="replayFull" xml:space="preserve">
+    <value>Player replays full and Touhou 10 does not support user replays.
+</value>
   </data>
 </root>

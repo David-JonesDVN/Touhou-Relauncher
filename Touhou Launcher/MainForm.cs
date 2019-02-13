@@ -221,6 +221,34 @@ namespace Touhou_Launcher
             else return new string[0];
         }
 
+        private void downloadReplay(string path, string name, Uri url, bool th10full = false)
+        {
+            string message = String.Format(rm.GetString("replayDownload"), name, path);
+            Console.WriteLine(rm.GetString("replayDownload"));
+            if (th10full)
+            {
+                message = rm.GetString("replayFull") + message;
+            }
+            DialogResult confirm = MessageBox.Show(message, "Download Replay?", MessageBoxButtons.YesNoCancel);
+            using (System.Net.WebClient wc = new System.Net.WebClient())
+            {
+                if (confirm == DialogResult.Yes)
+                {
+                    wc.DownloadFile(url, path + name);
+                }
+                else if (confirm == System.Windows.Forms.DialogResult.No)
+                {
+                    SaveFileDialog browser = new SaveFileDialog();
+                    browser.Filter = rm.GetString("replayFilter") + " (*.rpy)|*.rpy|" + rm.GetString("allFilter") + " (*.*)|*.*";
+                    browser.InitialDirectory = path;
+                    browser.RestoreDirectory = true;
+                    browser.FileName = name;
+                    if (browser.ShowDialog() == DialogResult.OK)
+                        wc.DownloadFile(url, browser.FileName);
+                }
+            }
+        }
+
         private void LoadSettings()
         {
             InitializeLanguage();
@@ -377,6 +405,27 @@ namespace Touhou_Launcher
                 MessageBox.Show(rm.GetString("errorGameNotFound"));
         }
 
+        private void btnRandom_Click(object sender, EventArgs e)
+        {
+            List<string> gameList = new List<string>();
+            foreach (CheckBox box in GetAll(randomSettings, typeof(CheckBox)))
+            {
+                if (box.Checked)
+                    gameList.Add(box.Name.Substring(3));
+            }
+            if (gameList.Count > 0)
+                btn_Click(games.Controls.Find("btn" + gameList[new Random().Next(gameList.Count - 1)], true)[0], new EventArgs());
+            else
+                MessageBox.Show("No games selected");
+        }
+
+        private void configureToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int id = nameToID[((ContextMenuStrip)((ToolStripMenuItem)sender).GetCurrentParent()).SourceControl.Name.Substring(3)];
+            ConfigForm gameConfig = new ConfigForm(id, this);
+            gameConfig.ShowDialog();
+        }
+
         private void customAdd_Click(object sender, EventArgs e)
         {
             if (treeView1.SelectedNode != null)
@@ -405,6 +454,24 @@ namespace Touhou_Launcher
             }
         }
 
+        private void treeView1_AfterLabelEdit(object sender, NodeLabelEditEventArgs e)
+        {
+            int i = 0;
+        search:
+            foreach (TreeNode node in treeView1.Nodes)
+            {
+                if (node.Name == e.Label.Replace(" ", "") + i)
+                {
+                    i++;
+                    goto search;
+                }
+            }
+            e.Node.Name = e.Label.Replace(" ", "") + i;
+            e.Node.Text = e.Label;
+            curCfg.Custom = TreeToJSON(treeView1, new SubNode());
+            curCfg.Save();
+        }
+
         private void newCategoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (treeView1.SelectedNode != null)
@@ -426,24 +493,6 @@ namespace Touhou_Launcher
         {
             if (treeView1.SelectedNode != null)
                 treeView1.SelectedNode.BeginEdit();
-        }
-
-        private void treeView1_AfterLabelEdit(object sender, NodeLabelEditEventArgs e)
-        {
-            int i = 0;
-        search:
-            foreach (TreeNode node in treeView1.Nodes)
-            {
-                if (node.Name == e.Label.Replace(" ", "") + i)
-                {
-                    i++;
-                    goto search;
-                }
-            }
-            e.Node.Name = e.Label.Replace(" ", "") + i;
-            e.Node.Text = e.Label;
-            curCfg.Custom = TreeToJSON(treeView1, new SubNode());
-            curCfg.Save();
         }
 
         private void deleteCategoryToolStripMenuItem_Click(object sender, EventArgs e)
@@ -480,40 +529,11 @@ namespace Touhou_Launcher
             RefreshList(ref listView1, (Dictionary<string, string>)treeView1.SelectedNode.Tag);
         }
 
-        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (ListViewItem game in listView1.SelectedItems)
-            {
-                listView1.Items.Remove(game);
-                ((Dictionary<string, string>)treeView1.SelectedNode.Tag).Remove(game.Name);
-                curCfg.Custom = TreeToJSON(treeView1, new SubNode());
-                curCfg.Save();
-                RefreshList(ref listView1, (Dictionary<string, string>)treeView1.SelectedNode.Tag);
-            }
-        }
-
-        private void renameToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            listView1.SelectedItems[0].BeginEdit();
-        }
-
         private void listView1_AfterLabelEdit(object sender, LabelEditEventArgs e)
         {
             ((Dictionary<string, string>)treeView1.SelectedNode.Tag)[listView1.Items[e.Item].Name] = e.Label;
             curCfg.Custom = TreeToJSON(treeView1, new SubNode());
             curCfg.Save();
-        }
-
-        private void playRandomToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (listView1.Items.Count > 0)
-                Process.Start(listView1.Items[new Random().Next(listView1.Items.Count) - 1].Name);
-        }
-
-
-        private void openFolderToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Process.Start(Path.GetDirectoryName(listView1.SelectedItems[0].Name));
         }
 
         private void listView1_DoubleClick(object sender, EventArgs e)
@@ -556,9 +576,130 @@ namespace Touhou_Launcher
             }
         }
 
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem game in listView1.SelectedItems)
+            {
+                listView1.Items.Remove(game);
+                ((Dictionary<string, string>)treeView1.SelectedNode.Tag).Remove(game.Name);
+                curCfg.Custom = TreeToJSON(treeView1, new SubNode());
+                curCfg.Save();
+                RefreshList(ref listView1, (Dictionary<string, string>)treeView1.SelectedNode.Tag);
+            }
+        }
+
+        private void renameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            listView1.SelectedItems[0].BeginEdit();
+        }
+
+        private void playRandomToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (listView1.Items.Count > 0)
+                Process.Start(listView1.Items[new Random().Next(listView1.Items.Count) - 1].Name);
+        }
+
+        private void openFolderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start(Path.GetDirectoryName(listView1.SelectedItems[0].Name));
+        }
+
+        private void openWithApplocaleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+            {
+                Process.Start("C:\\Windows\\AppPatch\\AppLoc.exe", listView1.SelectedItems[0].Name + " /L");
+            }
+        }
+
+        private void largeIconsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            listView1.View = View.LargeIcon;
+            curCfg.customView = View.LargeIcon;
+        }
+
+        private void smallIconsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            listView1.View = View.SmallIcon;
+            curCfg.customView = View.SmallIcon;
+        }
+
+        private void listToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            listView1.View = View.List;
+            curCfg.customView = View.List;
+        }
+
+        private void detailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            listView1.View = View.Details;
+            curCfg.customView = View.Details;
+        }
+
+        private void tileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            listView1.View = View.Tile;
+            curCfg.customView = View.Tile;
+        }
+
+        private void ascendingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            listView1.Sorting = SortOrder.Ascending;
+            curCfg.customSort = SortOrder.Ascending;
+        }
+
+        private void descendingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            listView1.Sorting = SortOrder.Descending;
+            curCfg.customSort = SortOrder.Descending;
+        }
+
         private void Replays_CheckedChanged(object sender, EventArgs e)
         {
             replayBrowser.Navigate(((RadioButton)sender).Text);
+        }
+        
+        private void replayBrowser_Navigating(object sender, WebBrowserNavigatingEventArgs e)
+        {
+            if (e.Url.ToString().EndsWith(".rpy"))
+            {
+                e.Cancel = true;
+                string name = e.Url.ToString().Substring(e.Url.ToString().LastIndexOf("/") + 1);
+                int game = Convert.ToInt32(name.Substring(2, name.LastIndexOf("_") - 2)) - 1;
+                Console.WriteLine(name);
+                if (Directory.Exists(Environment.SpecialFolder.ApplicationData + "\\ShanghaiAlice\\th" + idToNumber[game].ToString("00")))
+                {
+                    downloadReplay(Environment.SpecialFolder.ApplicationData + "\\ShanghaiAlice\\th" + idToNumber[game].ToString("00"), name, e.Url);
+                }
+                else
+                {
+                    foreach (string dir in curCfg.gameCFG[game].GameDir)
+                    {
+                        if (dir == "")
+                            continue;
+                        if (game == 9)
+                        {
+                            for (int i = 1; i < 26; i++)
+                            {
+                                if (!File.Exists(Path.GetDirectoryName(dir) + "\\replay\\th10_" + i.ToString("00") + ".rpy"))
+                                {
+                                    name = "th10_" + i.ToString("00") + ".rpy";
+                                    downloadReplay(Path.GetDirectoryName(dir) + "\\replay\\", "th10_" + i.ToString("00") + ".rpy", e.Url);
+                                    return;
+                                }
+                            }
+                            downloadReplay(Path.GetDirectoryName(dir) + "\\replay\\", name, e.Url, true);
+                        }
+                        else
+                        {
+                            downloadReplay(Path.GetDirectoryName(dir) + "\\replay\\", name, e.Url);
+                            return;
+                        }
+                    }
+                    MessageBox.Show(rm.GetString("errorGameNotFound"));
+                    e.Cancel = false;
+                }
+            }
         }
 
         private void languageBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -566,27 +707,6 @@ namespace Touhou_Launcher
             curCfg.language = languageBox.SelectedIndex;
             curCfg.Save();
             InitializeLanguage();
-        }
-
-        private void btnRandom_Click(object sender, EventArgs e)
-        {
-            List<string> gameList = new List<string>();
-            foreach (CheckBox box in GetAll(randomSettings, typeof(CheckBox)))
-            {
-                if (box.Checked)
-                    gameList.Add(box.Name.Substring(3));
-            }
-            if (gameList.Count > 0)
-                btn_Click(games.Controls.Find("btn" + gameList[new Random().Next(gameList.Count - 1)], true)[0], new EventArgs());
-            else
-                MessageBox.Show("No games selected");
-        }
-
-        private void configureToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            int id = nameToID[((ContextMenuStrip)((ToolStripMenuItem)sender).GetCurrentParent()).SourceControl.Name.Substring(3)];
-            ConfigForm gameConfig = new ConfigForm(id, this);
-            gameConfig.ShowDialog();
         }
 
         private void randomAll_Click(object sender, EventArgs e)
@@ -632,59 +752,10 @@ namespace Touhou_Launcher
             curCfg.Save();
         }
 
-        private void largeIconsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            listView1.View = View.LargeIcon;
-            curCfg.customView = View.LargeIcon;
-        }
-
-        private void smallIconsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            listView1.View = View.SmallIcon;
-            curCfg.customView = View.SmallIcon;
-        }
-
-        private void listToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            listView1.View = View.List;
-            curCfg.customView = View.List;
-        }
-
-        private void detailsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            listView1.View = View.Details;
-            curCfg.customView = View.Details;
-        }
-
-        private void tileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            listView1.View = View.Tile;
-            curCfg.customView = View.Tile;
-        }
-
-        private void ascendingToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            listView1.Sorting = SortOrder.Ascending;
-            curCfg.customSort = SortOrder.Ascending;
-        }
-
-        private void descendingToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            listView1.Sorting = SortOrder.Descending;
-            curCfg.customSort = SortOrder.Descending;
-        }
-
-        private void openWithApplocaleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (listView1.SelectedItems.Count > 0)
-            {
-                Process.Start("C:\\Windows\\AppPatch\\AppLoc.exe", listView1.SelectedItems[0].Name + " /L");
-            }
-        }
-
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start("http://www.widdiful.co.uk/irc/touhou-launcher.htm");
         }
+
     }
 }

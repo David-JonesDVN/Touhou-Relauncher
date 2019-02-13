@@ -1151,6 +1151,7 @@
             this.replayBrowser.Size = new System.Drawing.Size(524, 506);
             this.replayBrowser.TabIndex = 4;
             this.replayBrowser.Url = new System.Uri("http://replays.gensokyo.org", System.UriKind.Absolute);
+            this.replayBrowser.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.replayBrowser_Navigating);
             // 
             // panel1
             // 
