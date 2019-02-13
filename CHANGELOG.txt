@@ -1,6 +1,7 @@
 1.0
 Added: Replay downloader.
-Code reorganization.
+Fixed: Unformatted localization strings.
+Code reorganization
 
 0.8 (02/11/2019)
 Added: Actual launch code for PC-98 games (How did I forget that).

@@ -665,15 +665,15 @@ namespace Touhou_Launcher
             {
                 e.Cancel = true;
                 string name = e.Url.ToString().Substring(e.Url.ToString().LastIndexOf("/") + 1);
-                int game = Convert.ToInt32(name.Substring(2, name.LastIndexOf("_") - 2)) - 1;
+                int game = Convert.ToInt32(name.Substring(2, name.LastIndexOf("_") - 2));
                 Console.WriteLine(name);
-                if (Directory.Exists(Environment.SpecialFolder.ApplicationData + "\\ShanghaiAlice\\th" + idToNumber[game].ToString("00")))
+                if (Directory.Exists(Environment.SpecialFolder.ApplicationData + "\\ShanghaiAlice\\th" + game))
                 {
-                    downloadReplay(Environment.SpecialFolder.ApplicationData + "\\ShanghaiAlice\\th" + idToNumber[game].ToString("00"), name, e.Url);
+                    downloadReplay(Environment.SpecialFolder.ApplicationData + "\\ShanghaiAlice\\th" + game, name, e.Url);
                 }
                 else
                 {
-                    foreach (string dir in curCfg.gameCFG[game].GameDir)
+                    foreach (string dir in curCfg.gameCFG[idToNumber.IndexOf(game)].GameDir)
                     {
                         if (dir == "")
                             continue;
