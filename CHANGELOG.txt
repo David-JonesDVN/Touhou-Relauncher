@@ -1,6 +1,9 @@
 1.0
 Added: Replay downloader.
+Added: Tray icon including minimization to tray and always-on tray settings. Can be used to launch any game set up in the program.
+Changed: Game configuration dialog shows which game you're configuring.
 Fixed: Unformatted localization strings.
+Updated localization files.
 Code reorganization
 
 0.8 (02/11/2019)

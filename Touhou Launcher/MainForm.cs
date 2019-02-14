@@ -66,6 +66,8 @@ namespace Touhou_Launcher
             public bool autoClose = false;
             public View customView = View.LargeIcon;
             public SortOrder customSort = SortOrder.Ascending;
+            public bool showTray = false;
+            public bool minimizeToTray = false;
             public Configs()
             {
                 for (int i = 0; i < gameCFG.Length ; i++)
@@ -167,26 +169,38 @@ namespace Touhou_Launcher
             return serializableTree;
         }
 
-        private TreeNodeCollection JSONToTree(SubNode nodeList, TreeView parent)
+        private void JSONToTree(SubNode nodeList, TreeView parent)
         {
             for (int i = 0; i < nodeList.Nodes.Count; i++)
             {
-                parent.Nodes.Add(nodeList.Nodes[i].Name, nodeList.Nodes[i].Text);
-                parent.Nodes[parent.Nodes.Count - 1].Tag = nodeList.Nodes[i].Games;
+                TreeNode newNode = parent.Nodes.Add(nodeList.Nodes[i].Name, nodeList.Nodes[i].Text);
+                newNode.Tag = nodeList.Nodes[i].Games;
                 JSONToTree(nodeList.Nodes[i], parent.Nodes[i]);
             }
-            return parent.Nodes;
         }
 
-        private TreeNodeCollection JSONToTree(SubNode nodeList, TreeNode parent)
+        private void JSONToTree(SubNode nodeList, TreeNode parent)
         {
             for (int i = 0; i < nodeList.Nodes.Count; i++)
             {
-                parent.Nodes.Add(nodeList.Nodes[i].Name, nodeList.Nodes[i].Text);
-                parent.Nodes[parent.Nodes.Count - 1].Tag = nodeList.Nodes[i].Games;
+                TreeNode newNode = parent.Nodes.Add(nodeList.Nodes[i].Name, nodeList.Nodes[i].Text);
+                newNode.Tag = nodeList.Nodes[i].Games;
                 JSONToTree(nodeList.Nodes[i], parent.Nodes[i]);
             }
-            return parent.Nodes;
+        }
+
+        private void JSONToTray(SubNode nodeList, ToolStripMenuItem parent)
+        {
+            for (int i = 0; i < nodeList.Nodes.Count; i++)
+            {
+                parent.DropDownItems.Add(nodeList.Nodes[i].Text);
+                foreach (KeyValuePair<string, string> game in nodeList.Nodes[i].Games)
+                {
+                    ToolStripItem gameItem = parent.DropDownItems.Add(game.Value, Icon.ExtractAssociatedIcon(game.Key).ToBitmap(), trayCustom_Click);
+                    gameItem.Tag = game.Key;
+                }
+                JSONToTray(nodeList.Nodes[i], (ToolStripMenuItem)parent.DropDownItems[i]);
+            }
         }
 
         public static bool NekoProject(string hdi)
@@ -254,9 +268,13 @@ namespace Touhou_Launcher
             InitializeLanguage();
             RefreshGames();
             JSONToTree(curCfg.Custom, treeView1);
+            JSONToTray(curCfg.Custom, trayCustom);
             languageBox.SelectedIndexChanged -= languageBox_SelectedIndexChanged;
             languageBox.SelectedIndex = curCfg.language;
             languageBox.SelectedIndexChanged += languageBox_SelectedIndexChanged;
+            autoClose.Checked = curCfg.autoClose;
+            minimizeToTray.Checked = curCfg.minimizeToTray;
+            showTray.Checked = curCfg.showTray;
             np2Dir.Text = curCfg.np2Dir;
         }
 
@@ -273,6 +291,18 @@ namespace Touhou_Launcher
                     else
                         languageBox.SelectedIndex = 0;
                     break;
+            }
+            foreach (ToolStripMenuItem tMenu in trayMain.DropDownItems)
+            {
+                tMenu.Text = rm.GetString(tMenu.Name.Substring(4));
+            }
+            foreach (ToolStripMenuItem tMenu in trayFighting.DropDownItems)
+            {
+                tMenu.Text = rm.GetString(tMenu.Name.Substring(4));
+            }
+            foreach (ToolStripMenuItem tMenu in trayOther.DropDownItems)
+            {
+                tMenu.Text = rm.GetString(tMenu.Name.Substring(4));
             }
             foreach (Button btn in GetAll(games, typeof(Button)))
             {
@@ -296,6 +326,10 @@ namespace Touhou_Launcher
             {
                 tab.Text = rm.GetString(tab.Name);
             }
+            trayMain.Text = rm.GetString("mainGroup");
+            trayFighting.Text = rm.GetString("fightingGroup");
+            trayOther.Text = rm.GetString("otherGroup");
+            trayCustom.Text = rm.GetString("customGames");
             mainGroup.Text = rm.GetString("mainGroup");
             fightingGroup.Text = rm.GetString("fightingGroup");
             otherGroup.Text = rm.GetString("otherGroup");
@@ -308,6 +342,8 @@ namespace Touhou_Launcher
             descendingToolStripMenuItem.Text = rm.GetString("descendingToolStripMenuItem");
             autoClose.Text = rm.GetString("autoClose");
             toolTip.SetToolTip(autoClose, rm.GetString("autoCloseToolTip"));
+            minimizeToTray.Text = rm.GetString("minimizeToTray");
+            showTray.Text = rm.GetString("showTray");
             langLabel.Text = rm.GetString("langLabel");
             browseNP2.Text = rm.GetString("browse");
             randomAll.Text = rm.GetString("randomAll");
@@ -419,6 +455,22 @@ namespace Touhou_Launcher
                 MessageBox.Show("No games selected");
         }
 
+        private void tray_Click(object sender, EventArgs e)
+        {
+            btn_Click(games.Controls.Find("btn" + ((ToolStripMenuItem)sender).Name.Substring(4), true)[0], new EventArgs());
+        }
+
+        private void trayCustom_Click(object sender, EventArgs e)
+        {
+            Process.Start((string)((ToolStripItem)sender).Tag);
+        }
+
+        private void trayMenu_Opening(object sender, CancelEventArgs e)
+        {
+            trayCustom.DropDownItems.Clear();
+            JSONToTray(curCfg.Custom, trayCustom);
+        }
+
         private void configureToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int id = nameToID[((ContextMenuStrip)((ToolStripMenuItem)sender).GetCurrentParent()).SourceControl.Name.Substring(3)];
@@ -502,6 +554,7 @@ namespace Touhou_Launcher
                 treeView1.SelectedNode.Remove();
                 curCfg.Custom = TreeToJSON(treeView1, new SubNode());
                 curCfg.Save();
+                RefreshList(ref listView1, treeView1.SelectedNode != null ? (Dictionary<string, string>)treeView1.SelectedNode.Tag : new Dictionary<string, string>());
             }
         }
 
@@ -724,6 +777,23 @@ namespace Touhou_Launcher
                 chk.Checked = false;
             }
         }
+        private void autoClose_CheckedChanged(object sender, EventArgs e)
+        {
+            curCfg.autoClose = autoClose.Checked;
+            curCfg.Save();
+        }
+        private void minimizeToTray_CheckedChanged(object sender, EventArgs e)
+        {
+            curCfg.minimizeToTray = minimizeToTray.Checked;
+            curCfg.Save();
+        }
+
+        private void showTray_CheckedChanged(object sender, EventArgs e)
+        {
+            curCfg.showTray = showTray.Checked;
+            trayIcon.Visible = showTray.Checked;
+            curCfg.Save();
+        }
 
         private void browseNP2_Click(object sender, EventArgs e)
         {
@@ -746,16 +816,30 @@ namespace Touhou_Launcher
                 ((TextBox)sender).BackColor = Color.Red;
         }
 
-        private void autoClose_CheckedChanged(object sender, EventArgs e)
-        {
-            curCfg.autoClose = autoClose.Checked;
-            curCfg.Save();
-        }
-
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start("http://www.widdiful.co.uk/irc/touhou-launcher.htm");
         }
 
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized && curCfg.minimizeToTray)
+            {
+                trayIcon.Visible = true;
+                this.Hide();
+            }
+        }
+
+        private void MainForm_Show(object sender, EventArgs e)
+        {
+            this.Show();
+            this.WindowState = FormWindowState.Normal;
+            trayIcon.Visible = curCfg.showTray;
+        }
+
+        private void trayExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

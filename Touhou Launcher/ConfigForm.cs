@@ -86,6 +86,7 @@ namespace Touhou_Launcher
             }
             defaultExec.Items.Clear();
             defaultExec.Items.AddRange(MainForm.rm.GetString("defaultExec").Split(new string[] {", "}, 4, StringSplitOptions.None));
+            this.Text = MainForm.rm.GetString("gameConfiguration") + MainForm.rm.GetString(MainForm.nameToID.FirstOrDefault(t => t.Value == game).Key);
         }
 
         private void ConfigForm_Closing(object sender, FormClosingEventArgs e)

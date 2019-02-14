@@ -288,13 +288,13 @@
   <data name="Title" xml:space="preserve">
     <value>東方ランチャー</value>
   </data>
-  <data name="FightingGroup" xml:space="preserve">
+  <data name="fightingGroup" xml:space="preserve">
     <value>格闘ゲーム</value>
   </data>
-  <data name="MainGroup" xml:space="preserve">
+  <data name="mainGroup" xml:space="preserve">
     <value>メインゲーム</value>
   </data>
-  <data name="OtherGroup" xml:space="preserve">
+  <data name="otherGroup" xml:space="preserve">
     <value>他のゲーム</value>
   </data>
   <data name="AoCFShort" xml:space="preserve">
@@ -603,5 +603,14 @@ random game option</value>
   <data name="replayFull" xml:space="preserve">
     <value>Player replays full and Touhou 10 does not support user replays.
 </value>
+  </data>
+  <data name="gameConfiguration" xml:space="preserve">
+    <value>Configure game: </value>
+  </data>
+  <data name="minimizeToTray" xml:space="preserve">
+    <value>Minimize to tray</value>
+  </data>
+  <data name="showTray" xml:space="preserve">
+    <value>Always show tray icon</value>
   </data>
 </root>

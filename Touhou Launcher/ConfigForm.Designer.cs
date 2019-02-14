@@ -570,7 +570,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ConfigForm";
-            this.Text = "Game Configuration";
+            this.Text = "Game Configuration: ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ConfigForm_Closing);
             this.Load += new System.EventHandler(this.ConfigForm_Load);
             this.pc98Settings.ResumeLayout(false);
