@@ -2,11 +2,16 @@
 Added: Replay downloader.
 Added: Tray icon including minimization to tray and always-on tray settings. Can be used to launch any game set up in the program.
 Changed: Game configuration dialog shows which game you're configuring.
+Changed: Normal buttons no longer use the hand cursor.
+Changed: The configuration form always shows at the center of the main window.
+Changed: Switched to the DD/MM/YYYY format.
 Fixed: Unformatted localization strings.
+Fixed: PC-98 games giving two messageboxes per error.
+Fixed: Possibility of Neko Project II's directory not being saved.
 Updated localization files.
 Code reorganization
 
-0.8 (02/11/2019)
+0.8 (11/02/2019)
 Added: Actual launch code for PC-98 games (How did I forget that).
 Added: Drag/Drop support for game configuration.
 Changed: Launching PC-98 games now simply replaces the hdi directory instead of the entire ini file.
@@ -14,8 +19,8 @@ Changed: Invalid textboxes turn red instead of giving you a message box/not doin
 Fixed: PC-98 games not saving their status immediately.
 Fixed: Manually adding banners now checks if the image is valid/openable.
 
-0.5 (02/10/2019)
+0.5 (10/02/2019)
 Initial Release
 
-02/07/2019 (MM/DD/YYYY)
+07/02/2019 (DD/MM/YYYY)
 Project Start

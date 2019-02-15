@@ -78,7 +78,6 @@
             // 
             // openFolder
             // 
-            this.openFolder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.openFolder.Location = new System.Drawing.Point(337, 235);
             this.openFolder.Name = "openFolder";
             this.openFolder.Size = new System.Drawing.Size(242, 23);
@@ -89,7 +88,6 @@
             // 
             // openvpatch
             // 
-            this.openvpatch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.openvpatch.Location = new System.Drawing.Point(231, 227);
             this.openvpatch.Name = "openvpatch";
             this.openvpatch.Size = new System.Drawing.Size(91, 23);
@@ -133,7 +131,6 @@
             // 
             // browseJP
             // 
-            this.browseJP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.browseJP.Location = new System.Drawing.Point(196, 32);
             this.browseJP.Name = "browseJP";
             this.browseJP.Size = new System.Drawing.Size(62, 22);
@@ -171,7 +168,6 @@
             // 
             // openReplays
             // 
-            this.openReplays.Cursor = System.Windows.Forms.Cursors.Hand;
             this.openReplays.Location = new System.Drawing.Point(106, 227);
             this.openReplays.Name = "openReplays";
             this.openReplays.Size = new System.Drawing.Size(119, 23);
@@ -182,7 +178,6 @@
             // 
             // browseEN
             // 
-            this.browseEN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.browseEN.Location = new System.Drawing.Point(196, 80);
             this.browseEN.Name = "browseEN";
             this.browseEN.Size = new System.Drawing.Size(62, 22);
@@ -193,7 +188,6 @@
             // 
             // browseCustom
             // 
-            this.browseCustom.Cursor = System.Windows.Forms.Cursors.Hand;
             this.browseCustom.Location = new System.Drawing.Point(196, 126);
             this.browseCustom.Name = "browseCustom";
             this.browseCustom.Size = new System.Drawing.Size(62, 22);
@@ -239,7 +233,6 @@
             // 
             // launchCustom
             // 
-            this.launchCustom.Cursor = System.Windows.Forms.Cursors.Hand;
             this.launchCustom.Location = new System.Drawing.Point(264, 126);
             this.launchCustom.Name = "launchCustom";
             this.launchCustom.Size = new System.Drawing.Size(55, 22);
@@ -250,7 +243,6 @@
             // 
             // launchEN
             // 
-            this.launchEN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.launchEN.Location = new System.Drawing.Point(264, 80);
             this.launchEN.Name = "launchEN";
             this.launchEN.Size = new System.Drawing.Size(55, 22);
@@ -261,7 +253,6 @@
             // 
             // launchJP
             // 
-            this.launchJP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.launchJP.Location = new System.Drawing.Point(264, 32);
             this.launchJP.Name = "launchJP";
             this.launchJP.Size = new System.Drawing.Size(55, 22);
@@ -272,7 +263,6 @@
             // 
             // launchcrap
             // 
-            this.launchcrap.Cursor = System.Windows.Forms.Cursors.Hand;
             this.launchcrap.Location = new System.Drawing.Point(264, 171);
             this.launchcrap.Name = "launchcrap";
             this.launchcrap.Size = new System.Drawing.Size(55, 22);
@@ -283,7 +273,6 @@
             // 
             // browsecrap
             // 
-            this.browsecrap.Cursor = System.Windows.Forms.Cursors.Hand;
             this.browsecrap.Location = new System.Drawing.Point(196, 171);
             this.browsecrap.Name = "browsecrap";
             this.browsecrap.Size = new System.Drawing.Size(62, 22);
@@ -377,7 +366,6 @@
             // 
             // browseBannerOn
             // 
-            this.browseBannerOn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.browseBannerOn.Location = new System.Drawing.Point(176, 30);
             this.browseBannerOn.Name = "browseBannerOn";
             this.browseBannerOn.Size = new System.Drawing.Size(62, 22);
@@ -408,7 +396,6 @@
             // 
             // browseBannerOff
             // 
-            this.browseBannerOff.Cursor = System.Windows.Forms.Cursors.Hand;
             this.browseBannerOff.Location = new System.Drawing.Point(176, 78);
             this.browseBannerOff.Name = "browseBannerOff";
             this.browseBannerOff.Size = new System.Drawing.Size(62, 22);
@@ -444,7 +431,6 @@
             // 
             // openNP2Folder
             // 
-            this.openNP2Folder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.openNP2Folder.Location = new System.Drawing.Point(9, 88);
             this.openNP2Folder.Name = "openNP2Folder";
             this.openNP2Folder.Size = new System.Drawing.Size(229, 23);
@@ -455,7 +441,6 @@
             // 
             // launchHDI
             // 
-            this.launchHDI.Cursor = System.Windows.Forms.Cursors.Hand;
             this.launchHDI.Location = new System.Drawing.Point(183, 66);
             this.launchHDI.Name = "launchHDI";
             this.launchHDI.Size = new System.Drawing.Size(55, 22);
@@ -475,7 +460,6 @@
             // 
             // browseHDI
             // 
-            this.browseHDI.Cursor = System.Windows.Forms.Cursors.Hand;
             this.browseHDI.Location = new System.Drawing.Point(9, 66);
             this.browseHDI.Name = "browseHDI";
             this.browseHDI.Size = new System.Drawing.Size(62, 22);
@@ -548,7 +532,6 @@
             // 
             // openAppdata
             // 
-            this.openAppdata.Cursor = System.Windows.Forms.Cursors.Hand;
             this.openAppdata.Location = new System.Drawing.Point(9, 227);
             this.openAppdata.Name = "openAppdata";
             this.openAppdata.Size = new System.Drawing.Size(91, 23);
@@ -570,6 +553,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ConfigForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Game Configuration: ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ConfigForm_Closing);
             this.Load += new System.EventHandler(this.ConfigForm_Load);

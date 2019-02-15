@@ -13,7 +13,7 @@ namespace Touhou_Launcher
 {
     public partial class ConfigForm : Form
     {
-        int game;
+        public int game;
         bool tr = false;
         MainForm main;
 

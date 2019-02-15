@@ -198,6 +198,7 @@ namespace Touhou_Launcher
                 {
                     ToolStripItem gameItem = parent.DropDownItems.Add(game.Value, Icon.ExtractAssociatedIcon(game.Key).ToBitmap(), trayCustom_Click);
                     gameItem.Tag = game.Key;
+                    gameItem.ImageScaling = ToolStripItemImageScaling.None;
                 }
                 JSONToTray(nodeList.Nodes[i], (ToolStripMenuItem)parent.DropDownItems[i]);
             }
@@ -412,27 +413,30 @@ namespace Touhou_Launcher
             GameConfig curGame = curCfg.gameCFG[game];
             if (File.Exists(curGame.GameDir[curGame.DefaultDir]))
             {
-            	if (game > 4)
-            	{
-	                path = curGame.GameDir[curGame.DefaultDir];
-	                if (curGame.DefaultApplocale)
-	                {
-	                    args = "\"" + path + "\" \"/L0411\"";
-	                    path = "C:\\Windows\\AppPatch\\AppLoc.exe";
-	                }
-            	}
-            	else
-            	{
+                if (game > 4)
+                {
+                    path = curGame.GameDir[curGame.DefaultDir];
+                    if (curGame.DefaultApplocale)
+                    {
+                        args = "\"" + path + "\" \"/L0411\"";
+                        path = "C:\\Windows\\AppPatch\\AppLoc.exe";
+                    }
+                }
+                else
+                {
                     if (!File.Exists(curCfg.np2Dir))
+                    {
                         MessageBox.Show(rm.GetString("errorNP2NotFound"));
+                        return;
+                    }
                     else if (!NekoProject(curGame.GameDir[0]))
+                    {
                         MessageBox.Show(rm.GetString("errorInvalidNP2INI"));
+                        return;
+                    }
                     else
                         path = curCfg.np2Dir;
-            	}
-            }
-            if (path != "")
-            {
+                }
                 Process.Start(path, args);
                 if (curCfg.autoClose)
                     Application.Exit();
@@ -828,6 +832,12 @@ namespace Touhou_Launcher
                 trayIcon.Visible = true;
                 this.Hide();
             }
+        }
+
+        private void MainForm_Closing(object sender, FormClosingEventArgs e)
+        {
+            this.Focus();
+            trayIcon.Visible = false;
         }
 
         private void MainForm_Show(object sender, EventArgs e)

@@ -550,9 +550,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(10, 217);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(357, 13);
+            this.label3.Size = new System.Drawing.Size(362, 13);
             this.label3.TabIndex = 3;
-            this.label3.Text = "^ Seriously? I had to add an entire event just for this link? C\'mon Microsoft.";
+            this.label3.Text = "^ Seriously? I had to add an entire object  just for this link? C\'mon Microsoft.";
             // 
             // linkLabel1
             // 
@@ -1841,7 +1841,7 @@
             this.trayOpen,
             this.trayExit});
             this.trayMenu.Name = "contextMenuStrip1";
-            this.trayMenu.Size = new System.Drawing.Size(158, 186);
+            this.trayMenu.Size = new System.Drawing.Size(158, 164);
             this.trayMenu.Opening += new System.ComponentModel.CancelEventHandler(this.trayMenu_Opening);
             // 
             // trayMain
@@ -2184,6 +2184,7 @@
             this.MinimumSize = new System.Drawing.Size(550, 600);
             this.Name = "MainForm";
             this.Text = "Touhou Launcher";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_Closing);
             this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.gameContextMenu.ResumeLayout(false);
             this.customContextMenu.ResumeLayout(false);
