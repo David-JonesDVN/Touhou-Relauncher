@@ -71,6 +71,7 @@
             this.bannerSettings = new System.Windows.Forms.GroupBox();
             this.windowsSettings = new System.Windows.Forms.GroupBox();
             this.openAppdata = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.pc98Settings.SuspendLayout();
             this.bannerSettings.SuspendLayout();
             this.windowsSettings.SuspendLayout();
@@ -481,6 +482,7 @@
             // 
             // bannerSettings
             // 
+            this.bannerSettings.Controls.Add(this.label1);
             this.bannerSettings.Controls.Add(this.bannerOnLabel);
             this.bannerSettings.Controls.Add(this.chkCustomBanner);
             this.bannerSettings.Controls.Add(this.bannerOffLabel);
@@ -539,6 +541,15 @@
             this.openAppdata.Text = "Appdata Folder";
             this.openAppdata.UseVisualStyleBackColor = true;
             this.openAppdata.Click += new System.EventHandler(this.openAppdata_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(183, 60);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "* 120 x 44";
             // 
             // ConfigForm
             // 
@@ -611,5 +622,6 @@
         private System.Windows.Forms.GroupBox windowsSettings;
         private System.Windows.Forms.Button openAppdata;
         private System.Windows.Forms.Button openNP2Folder;
+        private System.Windows.Forms.Label label1;
     }
 }

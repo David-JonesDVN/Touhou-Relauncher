@@ -5,9 +5,12 @@ Changed: Game configuration dialog shows which game you're configuring.
 Changed: Normal buttons no longer use the hand cursor.
 Changed: The configuration form always shows at the center of the main window.
 Changed: Switched to the DD/MM/YYYY format.
+Changed: Custom banner group box now shows the supported dimensions.
 Fixed: Unformatted localization strings.
 Fixed: PC-98 games giving two messageboxes per error.
 Fixed: Possibility of Neko Project II's directory not being saved.
+Fixed: Colored banner throwing an exception when editing it manually.
+Fixed: Custom banner checkbox and text box not saving when the latter is edited manually.
 Updated localization files.
 Code reorganization
 

@@ -223,13 +223,18 @@ namespace Touhou_Launcher
             MainForm.curCfg.gameCFG[game].DefaultApplocale = defaultApplocale.Checked;
         }
 
+        private void chkCustomBanner_CheckedChanged(object sender, EventArgs e)
+        {
+            MainForm.curCfg.gameCFG[game].customBanner = chkCustomBanner.Checked;
+        }
+
         private void browseBannerOn_Click(object sender, EventArgs e)
         {
             foreach (string file in MainForm.FileBrowser(MainForm.rm.GetString("bannerOnSelectTitle"), MainForm.rm.GetString("imageFilter") + " (*.png, *.jpg, *.bmp)|*.png;*.jpg;*.bmp|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*"))
             {
                 try
                 {
-                    Image.FromFile(bannerOnDir.Text);
+                    Image.FromFile(file);
                     MainForm.curCfg.gameCFG[game].bannerOn = file;
                     bannerOnDir.Text = file;
                 }
@@ -259,20 +264,16 @@ namespace Touhou_Launcher
 
         private void bannerDir_LostFocus(object sender, EventArgs e)
         {
+            bool onTxtBox = ((TextBox)sender).Name.Contains("On");
             if (((TextBox)sender).Text != "")
             {
                 try
                 {
                     Image.FromFile(((TextBox)sender).Text);
-                    bool onTxtBox = ((TextBox)sender).Name.Contains("On");
-                    if (onTxtBox)
-                        MainForm.curCfg.gameCFG[game].bannerOn = ((TextBox)sender).Text;
-                    else
-                        MainForm.curCfg.gameCFG[game].bannerOff = ((TextBox)sender).Text;
                 }
                 catch (OutOfMemoryException ex)
                 {
-
+                    ((TextBox)sender).BackColor = SystemColors.Window;
                     MessageBox.Show(MainForm.rm.GetString("errorOpenImage") + ex);
                 }
                 catch (FileNotFoundException ex)
@@ -282,6 +283,10 @@ namespace Touhou_Launcher
             }
             else
                 ((TextBox)sender).BackColor = SystemColors.Window;
+            if (onTxtBox)
+                MainForm.curCfg.gameCFG[game].bannerOn = ((TextBox)sender).Text;
+            else
+                MainForm.curCfg.gameCFG[game].bannerOff = ((TextBox)sender).Text;
         }
 
         private void browseHDI_Click(object sender, EventArgs e)

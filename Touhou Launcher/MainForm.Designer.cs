@@ -1130,7 +1130,7 @@
             // 
             // browseNP2
             // 
-            this.browseNP2.Location = new System.Drawing.Point(119, 141);
+            this.browseNP2.Location = new System.Drawing.Point(119, 139);
             this.browseNP2.Name = "browseNP2";
             this.browseNP2.Size = new System.Drawing.Size(75, 23);
             this.browseNP2.TabIndex = 4;
