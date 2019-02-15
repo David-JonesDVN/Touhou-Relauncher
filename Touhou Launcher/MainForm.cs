@@ -17,7 +17,9 @@ namespace Touhou_Launcher
 
         public class GameConfig
         {
-            public List<string> GameDir = new List<string>(4);
+            public List<string> GameDir = new List<string>(3);
+            public string crapGame = "None";
+            public string crapCfg = "None";
             public List<bool> appLocale = new List<bool>(4);
             public int DefaultDir = 0;
             public bool DefaultApplocale = false;
@@ -63,6 +65,7 @@ namespace Touhou_Launcher
             public SubNode Custom = new SubNode();
             public int language = 0;
             public string np2Dir = "";
+            public string crapDir = "";
             public bool autoClose = false;
             public View customView = View.LargeIcon;
             public SortOrder customSort = SortOrder.Ascending;
@@ -73,7 +76,7 @@ namespace Touhou_Launcher
                 for (int i = 0; i < gameCFG.Length ; i++)
                 {
                     gameCFG[i] = new GameConfig();
-                    gameCFG[i].GameDir = new List<string> { "", "", "", "" };
+                    gameCFG[i].GameDir = new List<string> { "", "", "" };
                     gameCFG[i].appLocale = new List<bool> { false, false, false, false };
                 }
             }
@@ -277,6 +280,7 @@ namespace Touhou_Launcher
             minimizeToTray.Checked = curCfg.minimizeToTray;
             showTray.Checked = curCfg.showTray;
             np2Dir.Text = curCfg.np2Dir;
+            crapDir.Text = curCfg.crapDir;
         }
 
         private void InitializeLanguage()
@@ -362,7 +366,7 @@ namespace Touhou_Launcher
                 if (btn.Name != "btnRandom")
                 {
                     int game = nameToID[btn.Name.Substring(3)];
-                    bool exists = false;
+                    bool exists = curCfg.gameCFG[game].crapGame != "None" && curCfg.gameCFG[game].crapCfg != "None";
                     foreach (string dir in curCfg.gameCFG[game].GameDir)
                         if (dir != "")
                         {
@@ -411,14 +415,30 @@ namespace Touhou_Launcher
             string path = "";
             string args = "";
             GameConfig curGame = curCfg.gameCFG[game];
-            if (File.Exists(curGame.GameDir[curGame.DefaultDir]))
+            if (File.Exists(curGame.GameDir[curGame.DefaultDir]) || curGame.DefaultDir == 3)
             {
                 if (game > 4)
                 {
-                    path = curGame.GameDir[curGame.DefaultDir];
+                    if (curGame.DefaultDir == 3)
+                    {
+                        if (File.Exists(curCfg.crapDir))
+                        {
+                            path = curCfg.crapDir;
+                            args = "\"" + Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\" + curGame.crapCfg + "\" " + curGame.crapGame;
+                        }
+                        else
+                        {
+                            MessageBox.Show(rm.GetString("errorcrapNotFound"));
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        path = curGame.GameDir[curGame.DefaultDir];
+                    }
                     if (curGame.DefaultApplocale)
                     {
-                        args = "\"" + path + "\" \"/L0411\"";
+                        args = "\"" + path + "\" " + "\"" + args + "\" \"/L0411\"";
                         path = "C:\\Windows\\AppPatch\\AppLoc.exe";
                     }
                 }
@@ -555,10 +575,13 @@ namespace Touhou_Launcher
         {
             if (treeView1.SelectedNode != null)
             {
-                treeView1.SelectedNode.Remove();
-                curCfg.Custom = TreeToJSON(treeView1, new SubNode());
-                curCfg.Save();
-                RefreshList(ref listView1, treeView1.SelectedNode != null ? (Dictionary<string, string>)treeView1.SelectedNode.Tag : new Dictionary<string, string>());
+                if (MessageBox.Show(String.Format(rm.GetString("customCategoryDeleteConfirm"), treeView1.SelectedNode.Text), "", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    treeView1.SelectedNode.Remove();
+                    curCfg.Custom = TreeToJSON(treeView1, new SubNode());
+                    curCfg.Save();
+                    RefreshList(ref listView1, treeView1.SelectedNode != null ? (Dictionary<string, string>)treeView1.SelectedNode.Tag : new Dictionary<string, string>());
+                }
             }
         }
 
@@ -637,11 +660,14 @@ namespace Touhou_Launcher
         {
             foreach (ListViewItem game in listView1.SelectedItems)
             {
-                listView1.Items.Remove(game);
-                ((Dictionary<string, string>)treeView1.SelectedNode.Tag).Remove(game.Name);
-                curCfg.Custom = TreeToJSON(treeView1, new SubNode());
-                curCfg.Save();
-                RefreshList(ref listView1, (Dictionary<string, string>)treeView1.SelectedNode.Tag);
+                if (MessageBox.Show(String.Format(rm.GetString("customDeleteConfirm"), game.Text), "", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    listView1.Items.Remove(game);
+                    ((Dictionary<string, string>)treeView1.SelectedNode.Tag).Remove(game.Name);
+                    curCfg.Custom = TreeToJSON(treeView1, new SubNode());
+                    curCfg.Save();
+                    RefreshList(ref listView1, (Dictionary<string, string>)treeView1.SelectedNode.Tag);
+                }
             }
         }
 
@@ -799,25 +825,49 @@ namespace Touhou_Launcher
             curCfg.Save();
         }
 
-        private void browseNP2_Click(object sender, EventArgs e)
+        private void browse_Click(object sender, EventArgs e)
         {
-            foreach (string file in MainForm.FileBrowser(MainForm.rm.GetString("np2SelectTitle"), MainForm.rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*"))
+            TextBox txtbox = (TextBox)launcherSettings.Controls.Find(((Button)sender).Name.Substring(6).ToLower() + "Dir", false).FirstOrDefault(n => n.GetType() == typeof(TextBox));
+            foreach (string file in MainForm.FileBrowser(MainForm.rm.GetString(((Button)sender).Name.Substring(6).ToLower() + "SelectTitle"), MainForm.rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*"))
             {
-                np2Dir.BackColor = SystemColors.Window;
-                np2Dir.Text = file;
-                MainForm.curCfg.np2Dir = file;
+                txtbox.BackColor = SystemColors.Window;
+                txtbox.Text = file;
+                curCfg.np2Dir = np2Dir.Text;
+                curCfg.crapDir = crapDir.Text;
+                curCfg.Save();
             }
         }
 
-        private void np2Dir_LostFocus(object sender, EventArgs e)
+        private void Dir_LostFocus(object sender, EventArgs e)
         {
-            if (File.Exists(np2Dir.Text) || np2Dir.Text == "")
+            if (File.Exists(((TextBox)sender).Text) || ((TextBox)sender).Text == "")
             {
                 ((TextBox)sender).BackColor = SystemColors.Window;
-                MainForm.curCfg.np2Dir = np2Dir.Text;
+                curCfg.np2Dir = np2Dir.Text;
+                curCfg.crapDir = crapDir.Text;
+                curCfg.Save();
             }
             else
                 ((TextBox)sender).BackColor = Color.Red;
+        }
+
+        private void Dir_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+                e.Effect = DragDropEffects.Copy;
+        }
+
+        private void Dir_DragDrop(object sender, DragEventArgs e)
+        {
+            ((TextBox)sender).Text = ((string[])e.Data.GetData(DataFormats.FileDrop)).FirstOrDefault(n => File.Exists(n));
+            Dir_LostFocus(sender, new EventArgs());
+        }
+
+        private void crapConfigure_Click(object sender, EventArgs e)
+        {
+            string path = Path.GetDirectoryName(curCfg.crapDir) + "\\thcrap_configure.exe";
+            if (File.Exists(path))
+                Process.Start(path);
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

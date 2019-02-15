@@ -214,6 +214,24 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete Category &apos;{0}&apos; and all of its contents?.
+        /// </summary>
+        public static string customCategoryDeleteConfirm {
+            get {
+                return ResourceManager.GetString("customCategoryDeleteConfirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete &apos;{0}&apos;?.
+        /// </summary>
+        public static string customDeleteConfirm {
+            get {
+                return ResourceManager.GetString("customDeleteConfirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Custom Games.
         /// </summary>
         public static string customGames {
@@ -381,6 +399,15 @@ namespace Touhou_Launcher {
         public static string errorAppdataNotFound {
             get {
                 return ResourceManager.GetString("errorAppdataNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please set thcrap&apos;s location.
+        /// </summary>
+        public static string errorcrapNotFound {
+            get {
+                return ResourceManager.GetString("errorcrapNotFound", resourceCulture);
             }
         }
         
@@ -1125,7 +1152,7 @@ namespace Touhou_Launcher {
         
         /// <summary>
         ///   Looks up a localized string similar to Games that will be included in the
-        ///random game option.
+        ///random game option:.
         /// </summary>
         public static string randomLabel {
             get {
@@ -1179,7 +1206,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Download &quot;{0}&quot; to:
+        ///   Looks up a localized string similar to Download &apos;{0}&apos; to:
         ///{1}.
         /// </summary>
         public static string replayDownload {

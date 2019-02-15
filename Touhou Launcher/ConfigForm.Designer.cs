@@ -48,9 +48,7 @@
             this.launchEN = new System.Windows.Forms.Button();
             this.launchJP = new System.Windows.Forms.Button();
             this.launchcrap = new System.Windows.Forms.Button();
-            this.browsecrap = new System.Windows.Forms.Button();
             this.crapLabel = new System.Windows.Forms.Label();
-            this.crapDir = new System.Windows.Forms.TextBox();
             this.customApplocale = new System.Windows.Forms.CheckBox();
             this.defaultApplocale = new System.Windows.Forms.CheckBox();
             this.crapApplocale = new System.Windows.Forms.CheckBox();
@@ -69,9 +67,11 @@
             this.browseHDI = new System.Windows.Forms.Button();
             this.hdiDir = new System.Windows.Forms.TextBox();
             this.bannerSettings = new System.Windows.Forms.GroupBox();
-            this.windowsSettings = new System.Windows.Forms.GroupBox();
-            this.openAppdata = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.windowsSettings = new System.Windows.Forms.GroupBox();
+            this.crapGame = new System.Windows.Forms.ComboBox();
+            this.openAppdata = new System.Windows.Forms.Button();
+            this.crapCfg = new System.Windows.Forms.ComboBox();
             this.pc98Settings.SuspendLayout();
             this.bannerSettings.SuspendLayout();
             this.windowsSettings.SuspendLayout();
@@ -154,9 +154,9 @@
             this.enLabel.AutoSize = true;
             this.enLabel.Location = new System.Drawing.Point(6, 64);
             this.enLabel.Name = "enLabel";
-            this.enLabel.Size = new System.Drawing.Size(103, 13);
+            this.enLabel.Size = new System.Drawing.Size(100, 13);
             this.enLabel.TabIndex = 7;
-            this.enLabel.Text = "English Executable::";
+            this.enLabel.Text = "English Executable:";
             // 
             // customLabel
             // 
@@ -270,17 +270,7 @@
             this.launchcrap.TabIndex = 23;
             this.launchcrap.Text = "Launch";
             this.launchcrap.UseVisualStyleBackColor = true;
-            this.launchcrap.Click += new System.EventHandler(this.launch_Click);
-            // 
-            // browsecrap
-            // 
-            this.browsecrap.Location = new System.Drawing.Point(196, 171);
-            this.browsecrap.Name = "browsecrap";
-            this.browsecrap.Size = new System.Drawing.Size(62, 22);
-            this.browsecrap.TabIndex = 22;
-            this.browsecrap.Text = "Browse";
-            this.browsecrap.UseVisualStyleBackColor = true;
-            this.browsecrap.Click += new System.EventHandler(this.browse_Click);
+            this.launchcrap.Click += new System.EventHandler(this.launchcrap_Click);
             // 
             // crapLabel
             // 
@@ -290,17 +280,6 @@
             this.crapLabel.Size = new System.Drawing.Size(133, 13);
             this.crapLabel.TabIndex = 21;
             this.crapLabel.Text = "thcrap Shortcut/Argument:";
-            // 
-            // crapDir
-            // 
-            this.crapDir.AllowDrop = true;
-            this.crapDir.Location = new System.Drawing.Point(9, 171);
-            this.crapDir.Name = "crapDir";
-            this.crapDir.Size = new System.Drawing.Size(181, 20);
-            this.crapDir.TabIndex = 20;
-            this.crapDir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
-            this.crapDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
-            this.crapDir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
             // 
             // customApplocale
             // 
@@ -497,8 +476,19 @@
             this.bannerSettings.TabStop = false;
             this.bannerSettings.Text = "Banner Settings";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(183, 60);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "* 120 x 44";
+            // 
             // windowsSettings
             // 
+            this.windowsSettings.Controls.Add(this.crapCfg);
+            this.windowsSettings.Controls.Add(this.crapGame);
             this.windowsSettings.Controls.Add(this.openAppdata);
             this.windowsSettings.Controls.Add(this.jpLabel);
             this.windowsSettings.Controls.Add(this.openvpatch);
@@ -512,11 +502,9 @@
             this.windowsSettings.Controls.Add(this.browseJP);
             this.windowsSettings.Controls.Add(this.launchcrap);
             this.windowsSettings.Controls.Add(this.enLabel);
-            this.windowsSettings.Controls.Add(this.browsecrap);
             this.windowsSettings.Controls.Add(this.customLabel);
             this.windowsSettings.Controls.Add(this.crapLabel);
             this.windowsSettings.Controls.Add(this.openReplays);
-            this.windowsSettings.Controls.Add(this.crapDir);
             this.windowsSettings.Controls.Add(this.browseEN);
             this.windowsSettings.Controls.Add(this.launchJP);
             this.windowsSettings.Controls.Add(this.browseCustom);
@@ -532,6 +520,18 @@
             this.windowsSettings.TabStop = false;
             this.windowsSettings.Text = "Windows Settings";
             // 
+            // crapGame
+            // 
+            this.crapGame.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.crapGame.FormattingEnabled = true;
+            this.crapGame.Items.AddRange(new object[] {
+            "None"});
+            this.crapGame.Location = new System.Drawing.Point(6, 171);
+            this.crapGame.Name = "crapGame";
+            this.crapGame.Size = new System.Drawing.Size(116, 21);
+            this.crapGame.TabIndex = 29;
+            this.crapGame.SelectedIndexChanged += new System.EventHandler(this.crapGame_SelectedIndexChanged);
+            // 
             // openAppdata
             // 
             this.openAppdata.Location = new System.Drawing.Point(9, 227);
@@ -542,14 +542,17 @@
             this.openAppdata.UseVisualStyleBackColor = true;
             this.openAppdata.Click += new System.EventHandler(this.openAppdata_Click);
             // 
-            // label1
+            // crapCfg
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(183, 60);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 35;
-            this.label1.Text = "* 120 x 44";
+            this.crapCfg.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.crapCfg.FormattingEnabled = true;
+            this.crapCfg.Items.AddRange(new object[] {
+            "None"});
+            this.crapCfg.Location = new System.Drawing.Point(128, 171);
+            this.crapCfg.Name = "crapCfg";
+            this.crapCfg.Size = new System.Drawing.Size(130, 21);
+            this.crapCfg.TabIndex = 30;
+            this.crapCfg.SelectedIndexChanged += new System.EventHandler(this.crapCfg_SelectedIndexChanged);
             // 
             // ConfigForm
             // 
@@ -599,9 +602,7 @@
         private System.Windows.Forms.Button launchEN;
         private System.Windows.Forms.Button launchJP;
         private System.Windows.Forms.Button launchcrap;
-        private System.Windows.Forms.Button browsecrap;
         private System.Windows.Forms.Label crapLabel;
-        private System.Windows.Forms.TextBox crapDir;
         private System.Windows.Forms.CheckBox customApplocale;
         private System.Windows.Forms.CheckBox defaultApplocale;
         private System.Windows.Forms.CheckBox crapApplocale;
@@ -623,5 +624,7 @@
         private System.Windows.Forms.Button openAppdata;
         private System.Windows.Forms.Button openNP2Folder;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox crapGame;
+        private System.Windows.Forms.ComboBox crapCfg;
     }
 }

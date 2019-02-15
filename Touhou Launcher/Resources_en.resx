@@ -443,7 +443,7 @@
   </data>
   <data name="randomLabel" xml:space="preserve">
     <value>Games that will be included in the
-random game option</value>
+random game option:</value>
   </data>
   <data name="randomNone" xml:space="preserve">
     <value>Select None</value>
@@ -597,8 +597,8 @@ random game option</value>
     <value>Replay Files</value>
   </data>
   <data name="replayDownload" xml:space="preserve">
-    <value>Download "{0}" to:
-{1}</value>
+    <value>Download '{0}' to:
+'{1}'</value>
   </data>
   <data name="replayFull" xml:space="preserve">
     <value>Player replays full and Touhou 10 does not support user replays.
@@ -612,5 +612,14 @@ random game option</value>
   </data>
   <data name="showTray" xml:space="preserve">
     <value>Always show tray icon</value>
+  </data>
+  <data name="customCategoryDeleteConfirm" xml:space="preserve">
+    <value>Delete Category '{0}' and all of its contents?</value>
+  </data>
+  <data name="customDeleteConfirm" xml:space="preserve">
+    <value>Delete '{0}'?</value>
+  </data>
+  <data name="errorcrapNotFound" xml:space="preserve">
+    <value>Please set thcrap's location</value>
   </data>
 </root>

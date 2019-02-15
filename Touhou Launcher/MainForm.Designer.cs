@@ -106,6 +106,10 @@
             this.chkLoLK = new System.Windows.Forms.CheckBox();
             this.chkHSiFS = new System.Windows.Forms.CheckBox();
             this.launcherSettings = new System.Windows.Forms.GroupBox();
+            this.crapConfigure = new System.Windows.Forms.Button();
+            this.browsecrap = new System.Windows.Forms.Button();
+            this.crapDir = new System.Windows.Forms.TextBox();
+            this.thpatchLabel = new System.Windows.Forms.Label();
             this.showTray = new System.Windows.Forms.CheckBox();
             this.minimizeToTray = new System.Windows.Forms.CheckBox();
             this.langLabel = new System.Windows.Forms.Label();
@@ -622,7 +626,7 @@
             this.randomLabel.Name = "randomLabel";
             this.randomLabel.Size = new System.Drawing.Size(211, 29);
             this.randomLabel.TabIndex = 4;
-            this.randomLabel.Text = "Games that will be included in the\r\nrandom game option";
+            this.randomLabel.Text = "Games that will be included in the\r\nrandom game option:";
             this.randomLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // randomNone
@@ -1068,6 +1072,10 @@
             // 
             // launcherSettings
             // 
+            this.launcherSettings.Controls.Add(this.crapConfigure);
+            this.launcherSettings.Controls.Add(this.browsecrap);
+            this.launcherSettings.Controls.Add(this.crapDir);
+            this.launcherSettings.Controls.Add(this.thpatchLabel);
             this.launcherSettings.Controls.Add(this.showTray);
             this.launcherSettings.Controls.Add(this.minimizeToTray);
             this.launcherSettings.Controls.Add(this.autoClose);
@@ -1082,6 +1090,45 @@
             this.launcherSettings.TabIndex = 1;
             this.launcherSettings.TabStop = false;
             this.launcherSettings.Text = "Launcher Settings";
+            // 
+            // crapConfigure
+            // 
+            this.crapConfigure.Location = new System.Drawing.Point(6, 207);
+            this.crapConfigure.Name = "crapConfigure";
+            this.crapConfigure.Size = new System.Drawing.Size(188, 23);
+            this.crapConfigure.TabIndex = 11;
+            this.crapConfigure.Text = "Configure thcrap";
+            this.crapConfigure.UseVisualStyleBackColor = true;
+            this.crapConfigure.Click += new System.EventHandler(this.crapConfigure_Click);
+            // 
+            // browsecrap
+            // 
+            this.browsecrap.Location = new System.Drawing.Point(119, 179);
+            this.browsecrap.Name = "browsecrap";
+            this.browsecrap.Size = new System.Drawing.Size(75, 23);
+            this.browsecrap.TabIndex = 10;
+            this.browsecrap.Text = "Browse";
+            this.browsecrap.UseVisualStyleBackColor = true;
+            this.browsecrap.Click += new System.EventHandler(this.browse_Click);
+            // 
+            // crapDir
+            // 
+            this.crapDir.Location = new System.Drawing.Point(6, 181);
+            this.crapDir.Name = "crapDir";
+            this.crapDir.Size = new System.Drawing.Size(107, 20);
+            this.crapDir.TabIndex = 9;
+            this.crapDir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
+            this.crapDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
+            this.crapDir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
+            // 
+            // thpatchLabel
+            // 
+            this.thpatchLabel.AutoSize = true;
+            this.thpatchLabel.Location = new System.Drawing.Point(6, 165);
+            this.thpatchLabel.Name = "thpatchLabel";
+            this.thpatchLabel.Size = new System.Drawing.Size(125, 13);
+            this.thpatchLabel.TabIndex = 8;
+            this.thpatchLabel.Text = "thpatch_loader Location:";
             // 
             // showTray
             // 
@@ -1136,7 +1183,7 @@
             this.browseNP2.TabIndex = 4;
             this.browseNP2.Text = "Browse";
             this.browseNP2.UseVisualStyleBackColor = true;
-            this.browseNP2.Click += new System.EventHandler(this.browseNP2_Click);
+            this.browseNP2.Click += new System.EventHandler(this.browse_Click);
             // 
             // np2Dir
             // 
@@ -1144,7 +1191,9 @@
             this.np2Dir.Name = "np2Dir";
             this.np2Dir.Size = new System.Drawing.Size(107, 20);
             this.np2Dir.TabIndex = 3;
-            this.np2Dir.LostFocus += new System.EventHandler(this.np2Dir_LostFocus);
+            this.np2Dir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
+            this.np2Dir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
+            this.np2Dir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
             // 
             // np2Label
             // 
@@ -2385,6 +2434,10 @@
         private System.Windows.Forms.NotifyIcon trayIcon;
         private System.Windows.Forms.CheckBox showTray;
         private System.Windows.Forms.CheckBox minimizeToTray;
+        private System.Windows.Forms.Button browsecrap;
+        private System.Windows.Forms.TextBox crapDir;
+        private System.Windows.Forms.Label thpatchLabel;
+        private System.Windows.Forms.Button crapConfigure;
     }
 }
 
