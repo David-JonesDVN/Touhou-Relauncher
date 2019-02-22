@@ -167,7 +167,8 @@ namespace Touhou_Launcher
                 MainForm.curCfg.gameCFG[game].GameDir[type] = path;
                 string jpPath = Path.GetDirectoryName(path) + "\\th" + (MainForm.idToNumber[game]).ToString("00") + ".exe";
                 string enPath = Path.GetDirectoryName(path) + "\\th" + (MainForm.idToNumber[game]).ToString("00") + "e.exe";
-                string customPath = Path.GetDirectoryName(path) + "\\" + "custom.exe";
+                string customPath = Path.GetDirectoryName(path);
+                customPath += game == 16 ? "\\Config.exe" : "\\custom.exe";
                 switch (type)
                 {
                     case 0: if (File.Exists(enPath) && MainForm.curCfg.gameCFG[game].GameDir[1] == "")

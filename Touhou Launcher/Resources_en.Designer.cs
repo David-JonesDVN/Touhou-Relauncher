@@ -196,7 +196,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to thcrap Shortcut/Argument:.
+        ///   Looks up a localized string similar to thcrap Profile:.
         /// </summary>
         public static string crapLabel {
             get {
@@ -494,7 +494,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Configure game: .
+        ///   Looks up a localized string similar to Game Configuration: .
         /// </summary>
         public static string gameConfiguration {
             get {
@@ -1034,7 +1034,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to PC-98 Settings.
+        ///   Looks up a localized string similar to PC-98 Game Settings.
         /// </summary>
         public static string pc98Settings {
             get {
@@ -1559,7 +1559,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Windows Settings.
+        ///   Looks up a localized string similar to Windows Game Settings.
         /// </summary>
         public static string windowsSettings {
             get {

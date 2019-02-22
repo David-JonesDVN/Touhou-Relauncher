@@ -4,6 +4,7 @@ Added: Tray icon including minimization to tray and always-on tray settings. Can
 Added: thcrap directory setting.
 Added: Confirmation dialog when removing custom categories/games.
 Added: Drag/drop support to Neko Project II and thcrap's directory settings.
+Added: Support for IaMP's Config.exe
 Changed: Game configuration dialog shows which game you're configuring.
 Changed: Normal buttons no longer use the hand cursor.
 Changed: The configuration form always shows at the center of the main window.

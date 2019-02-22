@@ -69,9 +69,9 @@
             this.bannerSettings = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.windowsSettings = new System.Windows.Forms.GroupBox();
+            this.crapCfg = new System.Windows.Forms.ComboBox();
             this.crapGame = new System.Windows.Forms.ComboBox();
             this.openAppdata = new System.Windows.Forms.Button();
-            this.crapCfg = new System.Windows.Forms.ComboBox();
             this.pc98Settings.SuspendLayout();
             this.bannerSettings.SuspendLayout();
             this.windowsSettings.SuspendLayout();
@@ -277,9 +277,9 @@
             this.crapLabel.AutoSize = true;
             this.crapLabel.Location = new System.Drawing.Point(6, 155);
             this.crapLabel.Name = "crapLabel";
-            this.crapLabel.Size = new System.Drawing.Size(133, 13);
+            this.crapLabel.Size = new System.Drawing.Size(72, 13);
             this.crapLabel.TabIndex = 21;
-            this.crapLabel.Text = "thcrap Shortcut/Argument:";
+            this.crapLabel.Text = "thcrap Profile:";
             // 
             // customApplocale
             // 
@@ -407,7 +407,7 @@
             this.pc98Settings.Size = new System.Drawing.Size(244, 115);
             this.pc98Settings.TabIndex = 35;
             this.pc98Settings.TabStop = false;
-            this.pc98Settings.Text = "PC-98 Settings";
+            this.pc98Settings.Text = "PC-98 Game Settings";
             // 
             // openNP2Folder
             // 
@@ -518,7 +518,19 @@
             this.windowsSettings.Size = new System.Drawing.Size(328, 255);
             this.windowsSettings.TabIndex = 36;
             this.windowsSettings.TabStop = false;
-            this.windowsSettings.Text = "Windows Settings";
+            this.windowsSettings.Text = "Windows Game Settings";
+            // 
+            // crapCfg
+            // 
+            this.crapCfg.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.crapCfg.FormattingEnabled = true;
+            this.crapCfg.Items.AddRange(new object[] {
+            "None"});
+            this.crapCfg.Location = new System.Drawing.Point(128, 171);
+            this.crapCfg.Name = "crapCfg";
+            this.crapCfg.Size = new System.Drawing.Size(130, 21);
+            this.crapCfg.TabIndex = 30;
+            this.crapCfg.SelectedIndexChanged += new System.EventHandler(this.crapCfg_SelectedIndexChanged);
             // 
             // crapGame
             // 
@@ -541,18 +553,6 @@
             this.openAppdata.Text = "Appdata Folder";
             this.openAppdata.UseVisualStyleBackColor = true;
             this.openAppdata.Click += new System.EventHandler(this.openAppdata_Click);
-            // 
-            // crapCfg
-            // 
-            this.crapCfg.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.crapCfg.FormattingEnabled = true;
-            this.crapCfg.Items.AddRange(new object[] {
-            "None"});
-            this.crapCfg.Location = new System.Drawing.Point(128, 171);
-            this.crapCfg.Name = "crapCfg";
-            this.crapCfg.Size = new System.Drawing.Size(130, 21);
-            this.crapCfg.TabIndex = 30;
-            this.crapCfg.SelectedIndexChanged += new System.EventHandler(this.crapCfg_SelectedIndexChanged);
             // 
             // ConfigForm
             // 

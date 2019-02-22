@@ -97,7 +97,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ascending.
+        ///   Looks up a localized string similar to 昇順.
         /// </summary>
         public static string ascendingToolStripMenuItem {
             get {
@@ -124,7 +124,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Grey Banner.
+        ///   Looks up a localized string similar to 灰色画像.
         /// </summary>
         public static string bannerOffLabel {
             get {
@@ -196,7 +196,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to thcrap Shortcut/Argument:.
+        ///   Looks up a localized string similar to thcrap Profile:.
         /// </summary>
         public static string crapLabel {
             get {
@@ -223,7 +223,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Delete &apos;{0}&apos;?.
+        ///   Looks up a localized string similar to &apos;{0}&apos;を消すか？.
         /// </summary>
         public static string customDeleteConfirm {
             get {
@@ -304,7 +304,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Delete.
+        ///   Looks up a localized string similar to 消す.
         /// </summary>
         public static string deleteToolStripMenuItem {
             get {
@@ -313,7 +313,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Descending.
+        ///   Looks up a localized string similar to 降順.
         /// </summary>
         public static string descendingToolStripMenuItem {
             get {
@@ -322,7 +322,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Details.
+        ///   Looks up a localized string similar to 詳細.
         /// </summary>
         public static string detailsToolStripMenuItem {
             get {
@@ -494,7 +494,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Configure game: .
+        ///   Looks up a localized string similar to Game Configuration: .
         /// </summary>
         public static string gameConfiguration {
             get {
@@ -1007,7 +1007,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Edit vpatch.ini.
+        ///   Looks up a localized string similar to vpatch.iniを編集する.
         /// </summary>
         public static string openvpatch {
             get {
@@ -1034,7 +1034,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to PC-98 Settings.
+        ///   Looks up a localized string similar to PC-98 Game Settings.
         /// </summary>
         public static string pc98Settings {
             get {
@@ -1271,7 +1271,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Settings.
+        ///   Looks up a localized string similar to 設定.
         /// </summary>
         public static string settings {
             get {
@@ -1280,7 +1280,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Always show tray icon.
+        ///   Looks up a localized string similar to トレイアイコンを常に表示する.
         /// </summary>
         public static string showTray {
             get {
@@ -1325,7 +1325,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sort.
+        ///   Looks up a localized string similar to 並べ替え.
         /// </summary>
         public static string sortToolStripMenuItem {
             get {
@@ -1415,7 +1415,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tile.
+        ///   Looks up a localized string similar to 並べて表示.
         /// </summary>
         public static string tileToolStripMenuItem {
             get {
@@ -1514,7 +1514,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to With Applocale.
+        ///   Looks up a localized string similar to AppLocaleで.
         /// </summary>
         public static string useApplocale {
             get {
@@ -1550,7 +1550,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to View.
+        ///   Looks up a localized string similar to 表示.
         /// </summary>
         public static string viewToolStripMenuItem {
             get {
@@ -1559,7 +1559,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Windows Settings.
+        ///   Looks up a localized string similar to Windows Game Settings.
         /// </summary>
         public static string windowsSettings {
             get {

@@ -325,7 +325,7 @@
     <value>Configure Game</value>
   </data>
   <data name="crapLabel" xml:space="preserve">
-    <value>thcrap Shortcut/Argument:</value>
+    <value>thcrap Profile:</value>
   </data>
   <data name="customAdd" xml:space="preserve">
     <value>Add Game</value>
@@ -427,7 +427,7 @@
     <value>Edit vpatch.ini</value>
   </data>
   <data name="pc98Settings" xml:space="preserve">
-    <value>PC-98 Settings</value>
+    <value>PC-98 Game Settings</value>
   </data>
   <data name="PCBShort" xml:space="preserve">
     <value>PCB</value>
@@ -491,7 +491,7 @@ random game option:</value>
     <value>VD</value>
   </data>
   <data name="windowsSettings" xml:space="preserve">
-    <value>Windows Settings</value>
+    <value>Windows Game Settings</value>
   </data>
   <data name="allFilter" xml:space="preserve">
     <value>All Files</value>
@@ -605,7 +605,7 @@ random game option:</value>
 </value>
   </data>
   <data name="gameConfiguration" xml:space="preserve">
-    <value>Configure game: </value>
+    <value>Game Configuration: </value>
   </data>
   <data name="minimizeToTray" xml:space="preserve">
     <value>Minimize to tray</value>

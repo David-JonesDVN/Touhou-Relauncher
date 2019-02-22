@@ -397,7 +397,7 @@
     <value>地霊殿</value>
   </data>
   <data name="settings" xml:space="preserve">
-    <value>Settings</value>
+    <value>設定</value>
   </data>
   <data name="SoEWShort" xml:space="preserve">
     <value>封魔録</value>
@@ -433,7 +433,7 @@
     <value>Automatically close the launcher after launching a game</value>
   </data>
   <data name="bannerOffLabel" xml:space="preserve">
-    <value>Grey Banner</value>
+    <value>灰色画像</value>
   </data>
   <data name="bannerOnLabel" xml:space="preserve">
     <value>Colored Banner</value>
@@ -445,7 +445,7 @@
     <value>Use custom banner</value>
   </data>
   <data name="crapLabel" xml:space="preserve">
-    <value>thcrap Shortcut/Argument:</value>
+    <value>thcrap Profile:</value>
   </data>
   <data name="customLabel" xml:space="preserve">
     <value>Custom.exe:</value>
@@ -478,20 +478,20 @@
     <value>Open Replays Folder</value>
   </data>
   <data name="openvpatch" xml:space="preserve">
-    <value>Edit vpatch.ini</value>
+    <value>vpatch.iniを編集する</value>
   </data>
   <data name="pc98Settings" xml:space="preserve">
-    <value>PC-98 Settings</value>
+    <value>PC-98 Game Settings</value>
   </data>
   <data name="randomLabel" xml:space="preserve">
     <value>Games that will be included in the
 random game option:</value>
   </data>
   <data name="useApplocale" xml:space="preserve">
-    <value>With Applocale</value>
+    <value>AppLocaleで</value>
   </data>
   <data name="windowsSettings" xml:space="preserve">
-    <value>Windows Settings</value>
+    <value>Windows Game Settings</value>
   </data>
   <data name="defaultExec" xml:space="preserve">
     <value>Japanese/vpatch.ini, English (non-THCRAP), Custom.exe, thcrap</value>
@@ -500,7 +500,7 @@ random game option:</value>
     <value>All Files</value>
   </data>
   <data name="ascendingToolStripMenuItem" xml:space="preserve">
-    <value>Ascending</value>
+    <value>昇順</value>
   </data>
   <data name="bannerOffSelectTitle" xml:space="preserve">
     <value>Select the grey banner</value>
@@ -509,13 +509,13 @@ random game option:</value>
     <value>Select the colored banner</value>
   </data>
   <data name="deleteToolStripMenuItem" xml:space="preserve">
-    <value>Delete</value>
+    <value>消す</value>
   </data>
   <data name="descendingToolStripMenuItem" xml:space="preserve">
-    <value>Descending</value>
+    <value>降順</value>
   </data>
   <data name="detailsToolStripMenuItem" xml:space="preserve">
-    <value>Details</value>
+    <value>詳細</value>
   </data>
   <data name="errorAppdataNotFound" xml:space="preserve">
     <value>Cannot find Appdata Folder</value>
@@ -579,13 +579,13 @@ random game option:</value>
     <value>Small Icons</value>
   </data>
   <data name="sortToolStripMenuItem" xml:space="preserve">
-    <value>Sort</value>
+    <value>並べ替え</value>
   </data>
   <data name="tileToolStripMenuItem" xml:space="preserve">
-    <value>Tile</value>
+    <value>並べて表示</value>
   </data>
   <data name="viewToolStripMenuItem" xml:space="preserve">
-    <value>View</value>
+    <value>表示</value>
   </data>
   <data name="errorInvalidNP2INI" xml:space="preserve">
     <value>Neko Project II's configuration ini is not valid.</value>
@@ -605,19 +605,19 @@ random game option:</value>
 </value>
   </data>
   <data name="gameConfiguration" xml:space="preserve">
-    <value>Configure game: </value>
+    <value>Game Configuration: </value>
   </data>
   <data name="minimizeToTray" xml:space="preserve">
     <value>Minimize to tray</value>
   </data>
   <data name="showTray" xml:space="preserve">
-    <value>Always show tray icon</value>
+    <value>トレイアイコンを常に表示する</value>
   </data>
   <data name="customCategoryDeleteConfirm" xml:space="preserve">
     <value>Delete Category '{0}' and all of its contents?</value>
   </data>
   <data name="customDeleteConfirm" xml:space="preserve">
-    <value>Delete '{0}'?</value>
+    <value>'{0}'を消すか？</value>
   </data>
   <data name="errorcrapNotFound" xml:space="preserve">
     <value>Please set thcrap's location</value>
