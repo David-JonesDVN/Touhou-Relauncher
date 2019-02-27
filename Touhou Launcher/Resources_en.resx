@@ -622,6 +622,12 @@ random game option:</value>
   <data name="errorcrapNotFound" xml:space="preserve">
     <value>Please set thcrap's location</value>
   </data>
+  <data name="crapConfigure" xml:space="preserve">
+    <value>Configure thcrap</value>
+  </data>
+  <data name="crapDirLabel" xml:space="preserve">
+    <value>thcrap_loader Location:</value>
+  </data>
   <data name="errorcrapConfigNotSet" xml:space="preserve">
     <value>Please set thcrap's profile</value>
   </data>

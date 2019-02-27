@@ -109,7 +109,7 @@
             this.crapConfigure = new System.Windows.Forms.Button();
             this.browsecrap = new System.Windows.Forms.Button();
             this.crapDir = new System.Windows.Forms.TextBox();
-            this.thpatchLabel = new System.Windows.Forms.Label();
+            this.crapDirLabel = new System.Windows.Forms.Label();
             this.showTray = new System.Windows.Forms.CheckBox();
             this.minimizeToTray = new System.Windows.Forms.CheckBox();
             this.langLabel = new System.Windows.Forms.Label();
@@ -585,9 +585,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(9, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 24);
+            this.label1.Size = new System.Drawing.Size(226, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Touhou Launcher 1.0";
+            this.label1.Text = "Touhou Launcher 1.0 Pre";
             // 
             // settings
             // 
@@ -1075,7 +1075,7 @@
             this.launcherSettings.Controls.Add(this.crapConfigure);
             this.launcherSettings.Controls.Add(this.browsecrap);
             this.launcherSettings.Controls.Add(this.crapDir);
-            this.launcherSettings.Controls.Add(this.thpatchLabel);
+            this.launcherSettings.Controls.Add(this.crapDirLabel);
             this.launcherSettings.Controls.Add(this.showTray);
             this.launcherSettings.Controls.Add(this.minimizeToTray);
             this.launcherSettings.Controls.Add(this.autoClose);
@@ -1121,14 +1121,14 @@
             this.crapDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
             this.crapDir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
             // 
-            // thpatchLabel
+            // crapDirLabel
             // 
-            this.thpatchLabel.AutoSize = true;
-            this.thpatchLabel.Location = new System.Drawing.Point(6, 165);
-            this.thpatchLabel.Name = "thpatchLabel";
-            this.thpatchLabel.Size = new System.Drawing.Size(125, 13);
-            this.thpatchLabel.TabIndex = 8;
-            this.thpatchLabel.Text = "thpatch_loader Location:";
+            this.crapDirLabel.AutoSize = true;
+            this.crapDirLabel.Location = new System.Drawing.Point(6, 165);
+            this.crapDirLabel.Name = "crapDirLabel";
+            this.crapDirLabel.Size = new System.Drawing.Size(119, 13);
+            this.crapDirLabel.TabIndex = 8;
+            this.crapDirLabel.Text = "thcrap_loader Location:";
             // 
             // showTray
             // 
@@ -2436,7 +2436,7 @@
         private System.Windows.Forms.CheckBox minimizeToTray;
         private System.Windows.Forms.Button browsecrap;
         private System.Windows.Forms.TextBox crapDir;
-        private System.Windows.Forms.Label thpatchLabel;
+        private System.Windows.Forms.Label crapDirLabel;
         private System.Windows.Forms.Button crapConfigure;
     }
 }

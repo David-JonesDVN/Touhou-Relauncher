@@ -196,6 +196,24 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Configure thcrap.
+        /// </summary>
+        public static string crapConfigure {
+            get {
+                return ResourceManager.GetString("crapConfigure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to thcrap_loader Location:.
+        /// </summary>
+        public static string crapDirLabel {
+            get {
+                return ResourceManager.GetString("crapDirLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to thcrap Profile:.
         /// </summary>
         public static string crapLabel {
