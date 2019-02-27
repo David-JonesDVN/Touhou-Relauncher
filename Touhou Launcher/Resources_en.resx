@@ -622,6 +622,9 @@ random game option:</value>
   <data name="errorcrapNotFound" xml:space="preserve">
     <value>Please set thcrap's location</value>
   </data>
+  <data name="errorcrapConfigNotSet" xml:space="preserve">
+    <value>Please set thcrap's profile</value>
+  </data>
   <data name="errorRandomListEmpty" xml:space="preserve">
     <value>No Games Selected</value>
   </data>

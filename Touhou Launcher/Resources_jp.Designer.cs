@@ -403,6 +403,15 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please set thcrap&apos;s profile.
+        /// </summary>
+        public static string errorcrapConfigNotSet {
+            get {
+                return ResourceManager.GetString("errorcrapConfigNotSet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please set thcrap&apos;s location.
         /// </summary>
         public static string errorcrapNotFound {

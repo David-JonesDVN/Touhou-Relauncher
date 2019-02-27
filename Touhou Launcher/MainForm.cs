@@ -865,9 +865,12 @@ namespace Touhou_Launcher
 
         private void crapConfigure_Click(object sender, EventArgs e)
         {
-            string path = Path.GetDirectoryName(curCfg.crapDir) + "\\thcrap_configure.exe";
-            if (File.Exists(path))
-                Process.Start(path);
+            if (curCfg.crapDir != "")
+            {
+                string path = Path.GetDirectoryName(curCfg.crapDir) + "\\thcrap_configure.exe";
+                if (File.Exists(path))
+                    Process.Start(path);
+            }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

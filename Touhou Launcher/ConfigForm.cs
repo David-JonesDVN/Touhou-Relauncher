@@ -44,16 +44,20 @@ namespace Touhou_Launcher
                 enApplocale.Checked = MainForm.curCfg.gameCFG[game].appLocale[1];
                 customDir.Text = MainForm.curCfg.gameCFG[game].GameDir[2];
                 customApplocale.Checked = MainForm.curCfg.gameCFG[game].appLocale[2];
-                foreach (KeyValuePair<string, string> line in JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\games.js")))
+                if (MainForm.curCfg.crapDir != "")
                 {
-                    if (Convert.ToInt32(new String(line.Key.Where(Char.IsDigit).ToArray())) == MainForm.idToNumber[game])
+                    if (File.Exists(Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\games.js"))
+                        foreach (KeyValuePair<string, string> line in JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\games.js")))
+                        {
+                            if (Convert.ToInt32(new String(line.Key.Where(Char.IsDigit).ToArray())) == MainForm.idToNumber[game])
+                            {
+                                crapGame.Items.Add(line.Key);
+                            }
+                        }
+                    foreach (string file in Directory.GetFiles(Path.GetDirectoryName(MainForm.curCfg.crapDir), "*.js").Where(n => n != "games.js" && n != "config.js"))
                     {
-                        crapGame.Items.Add(line.Key);
+                        crapCfg.Items.Add(Path.GetFileName(file));
                     }
-                }
-                foreach (string file in Directory.GetFiles(Path.GetDirectoryName(MainForm.curCfg.crapDir), "*.js").Where(n => !n.Contains("games.js") && !n.Contains("config.js")))
-                {
-                    crapCfg.Items.Add(Path.GetFileName(file));
                 }
                 crapGame.SelectedItem = MainForm.curCfg.gameCFG[game].crapGame;
                 crapCfg.SelectedItem = MainForm.curCfg.gameCFG[game].crapCfg;
@@ -215,7 +219,7 @@ namespace Touhou_Launcher
             string args = "";
             if (File.Exists(path))
             {
-                if (MainForm.curCfg.gameCFG[game].appLocale[MainForm.dirToNumber[((Button)sender).Name.ToLower().Substring(6)]])
+                if (MainForm.curCfg.gameCFG[game].appLocale[MainForm.dirToNumber[((Button)sender).Name.ToLower().Substring(6)]] && File.Exists("C:\\Windows\\AppPatch\\AppLoc.exe"))
                 {
                     args = "\"" + path + "\" \"/L0411\"";
                     path = "C:\\Windows\\AppPatch\\AppLoc.exe";
@@ -234,10 +238,12 @@ namespace Touhou_Launcher
 
         private void launchcrap_Click(object sender, EventArgs e)
         {
-            if (File.Exists(MainForm.curCfg.crapDir))
-                Process.Start(MainForm.curCfg.crapDir, "\"" + Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\" + MainForm.curCfg.gameCFG[game].crapCfg + "\" " + MainForm.curCfg.gameCFG[game].crapGame);
-            else
+            if (!File.Exists(MainForm.curCfg.crapDir))
                 MessageBox.Show(MainForm.rm.GetString("errorcrapNotFound"));
+            else if (MainForm.curCfg.gameCFG[game].crapCfg == "None" || MainForm.curCfg.gameCFG[game].crapGame == "None")
+                MessageBox.Show(MainForm.rm.GetString("errorcrapConfigNotSet"));
+            else
+                Process.Start(MainForm.curCfg.crapDir, "\"" + Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\" + MainForm.curCfg.gameCFG[game].crapCfg + "\" " + MainForm.curCfg.gameCFG[game].crapGame);
         }
 
         private void defaultApplocale_CheckedChanged(object sender, EventArgs e)
