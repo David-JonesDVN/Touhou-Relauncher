@@ -458,6 +458,15 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No Games Selected.
+        /// </summary>
+        public static string errorRandomListEmpty {
+            get {
+                return ResourceManager.GetString("errorRandomListEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cannot find Replays folder.
         /// </summary>
         public static string errorReplaysNotFound {
@@ -512,7 +521,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Select Executable/Shortcut.
+        ///   Looks up a localized string similar to Select Executable.
         /// </summary>
         public static string gameSelectTitle {
             get {
@@ -1212,6 +1221,15 @@ namespace Touhou_Launcher {
         public static string replayDownload {
             get {
                 return ResourceManager.GetString("replayDownload", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Download Replay?.
+        /// </summary>
+        public static string replayDownloadTitle {
+            get {
+                return ResourceManager.GetString("replayDownloadTitle", resourceCulture);
             }
         }
         

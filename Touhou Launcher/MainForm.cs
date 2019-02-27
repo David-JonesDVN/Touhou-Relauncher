@@ -247,7 +247,7 @@ namespace Touhou_Launcher
             {
                 message = rm.GetString("replayFull") + message;
             }
-            DialogResult confirm = MessageBox.Show(message, "Download Replay?", MessageBoxButtons.YesNoCancel);
+            DialogResult confirm = MessageBox.Show(message, rm.GetString("replayDownloadTitle"), MessageBoxButtons.YesNoCancel);
             using (System.Net.WebClient wc = new System.Net.WebClient())
             {
                 if (confirm == DialogResult.Yes)
@@ -476,7 +476,7 @@ namespace Touhou_Launcher
             if (gameList.Count > 0)
                 btn_Click(games.Controls.Find("btn" + gameList[new Random().Next(gameList.Count - 1)], true)[0], new EventArgs());
             else
-                MessageBox.Show("No games selected");
+                MessageBox.Show(rm.GetString("errorRandomListEmpty"));
         }
 
         private void tray_Click(object sender, EventArgs e)
@@ -506,7 +506,7 @@ namespace Touhou_Launcher
         {
             if (treeView1.SelectedNode != null)
             {
-                foreach (string file in FileBrowser("Select fangame executable(s)", "Executable Files (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|All Files (*.*)|*.*", true))
+                foreach (string file in FileBrowser(rm.GetString("gameSelectTitle"), rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + rm.GetString("allFilter") + " (*.*)|*.*", true))
                 {
                     ((Dictionary<string, string>)treeView1.SelectedNode.Tag).Add(file, Path.GetFileNameWithoutExtension(file));
                 }

@@ -540,7 +540,7 @@ random game option:</value>
     <value>Executable Files</value>
   </data>
   <data name="gameSelectTitle" xml:space="preserve">
-    <value>Select Executable/Shortcut</value>
+    <value>Select Executable</value>
   </data>
   <data name="hdiFilter" xml:space="preserve">
     <value>Hard Disk Image Files</value>
@@ -621,5 +621,11 @@ random game option:</value>
   </data>
   <data name="errorcrapNotFound" xml:space="preserve">
     <value>Please set thcrap's location</value>
+  </data>
+  <data name="errorRandomListEmpty" xml:space="preserve">
+    <value>No Games Selected</value>
+  </data>
+  <data name="replayDownloadTitle" xml:space="preserve">
+    <value>Download Replay?</value>
   </data>
 </root>
