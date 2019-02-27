@@ -412,7 +412,7 @@
     <value>New Category</value>
   </data>
   <data name="np2Label" xml:space="preserve">
-    <value>Neko Project II Location</value>
+    <value>Neko Project II Location:</value>
   </data>
   <data name="openFolder" xml:space="preserve">
     <value>Open Folder</value>

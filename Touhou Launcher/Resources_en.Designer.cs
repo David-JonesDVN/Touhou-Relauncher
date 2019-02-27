@@ -980,7 +980,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Neko Project II Location.
+        ///   Looks up a localized string similar to Neko Project II Location:.
         /// </summary>
         public static string np2Label {
             get {
