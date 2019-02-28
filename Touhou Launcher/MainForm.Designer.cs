@@ -632,9 +632,9 @@
             // randomNone
             // 
             this.randomNone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.randomNone.Location = new System.Drawing.Point(217, 51);
+            this.randomNone.Location = new System.Drawing.Point(201, 49);
             this.randomNone.Name = "randomNone";
-            this.randomNone.Size = new System.Drawing.Size(75, 23);
+            this.randomNone.Size = new System.Drawing.Size(100, 25);
             this.randomNone.TabIndex = 3;
             this.randomNone.Text = "Select None";
             this.randomNone.UseVisualStyleBackColor = true;
@@ -642,9 +642,9 @@
             // 
             // randomAll
             // 
-            this.randomAll.Location = new System.Drawing.Point(6, 51);
+            this.randomAll.Location = new System.Drawing.Point(6, 49);
             this.randomAll.Name = "randomAll";
-            this.randomAll.Size = new System.Drawing.Size(75, 23);
+            this.randomAll.Size = new System.Drawing.Size(100, 25);
             this.randomAll.TabIndex = 2;
             this.randomAll.Text = "Select All";
             this.randomAll.UseVisualStyleBackColor = true;

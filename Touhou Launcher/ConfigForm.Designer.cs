@@ -542,7 +542,7 @@
             this.crapGame.Name = "crapGame";
             this.crapGame.Size = new System.Drawing.Size(116, 21);
             this.crapGame.TabIndex = 29;
-            this.crapGame.SelectedIndexChanged += new System.EventHandler(this.crapGame_SelectedIndexChanged);
+            this.crapGame.SelectedIndexChanged += new System.EventHandler(this.crapCfg_SelectedIndexChanged);
             // 
             // openAppdata
             // 

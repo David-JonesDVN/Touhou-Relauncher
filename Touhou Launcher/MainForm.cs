@@ -17,9 +17,7 @@ namespace Touhou_Launcher
 
         public class GameConfig
         {
-            public List<string> GameDir = new List<string>(3);
-            public string crapGame = "None";
-            public string crapCfg = "None";
+            public List<string> GameDir = new List<string>(4);
             public List<bool> appLocale = new List<bool>(4);
             public int DefaultDir = 0;
             public bool DefaultApplocale = false;
@@ -76,7 +74,7 @@ namespace Touhou_Launcher
                 for (int i = 0; i < gameCFG.Length ; i++)
                 {
                     gameCFG[i] = new GameConfig();
-                    gameCFG[i].GameDir = new List<string> { "", "", "" };
+                    gameCFG[i].GameDir = new List<string> { "", "", "", "None/None" };
                     gameCFG[i].appLocale = new List<bool> { false, false, false, false };
                 }
             }
@@ -373,9 +371,9 @@ namespace Touhou_Launcher
                 if (btn.Name != "btnRandom")
                 {
                     int game = nameToID[btn.Name.Substring(3)];
-                    bool exists = curCfg.gameCFG[game].crapGame != "None" && curCfg.gameCFG[game].crapCfg != "None";
+                    bool exists = curCfg.gameCFG[game].GameDir[3].Split(new char[] { '/' })[0] != "None" && curCfg.gameCFG[game].GameDir[3].Split(new char[] { '/' })[1] != "None";
                     foreach (string dir in curCfg.gameCFG[game].GameDir)
-                        if (dir != "")
+                        if (dir != "" && dir != curCfg.gameCFG[game].GameDir[3])
                         {
                             exists = true;
                             break;
@@ -431,7 +429,7 @@ namespace Touhou_Launcher
                         if (File.Exists(curCfg.crapDir))
                         {
                             path = curCfg.crapDir;
-                            args = "\"" + Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\" + curGame.crapCfg + "\" " + curGame.crapGame;
+                            args = "\"" + Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\" + curGame.GameDir[3].Split(new char[] { '/' })[1] + "\" " + curGame.GameDir[3].Split(new char[] { '/' })[0];
                         }
                         else
                         {
