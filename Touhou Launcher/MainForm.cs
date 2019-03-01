@@ -289,7 +289,9 @@ namespace Touhou_Launcher
                     break;
                 case 1: rm = new System.Resources.ResourceManager("Touhou_Launcher.Resources_jp", System.Reflection.Assembly.GetExecutingAssembly());
                     break;
-                case 2: if (File.Exists(Path.GetDirectoryName(Application.ExecutablePath) + "\\Resources_custom.resources"))
+                case 2: rm = new System.Resources.ResourceManager("Touhou_Launcher.Resources_ru", System.Reflection.Assembly.GetExecutingAssembly());
+                    break;
+                case 3: if (File.Exists(Path.GetDirectoryName(Application.ExecutablePath) + "\\Resources_custom.resources"))
                         rm = System.Resources.ResourceManager.CreateFileBasedResourceManager("Resources_custom", Path.GetDirectoryName(Application.ExecutablePath), null);
                     else
                         languageBox.SelectedIndex = 0;
@@ -333,6 +335,9 @@ namespace Touhou_Launcher
             trayFighting.Text = rm.GetString("fightingGroup");
             trayOther.Text = rm.GetString("otherGroup");
             trayCustom.Text = rm.GetString("customGames");
+            trayRandom.Text = rm.GetString("trayRandom");
+            trayOpen.Text = rm.GetString("trayOpen");
+            trayExit.Text = rm.GetString("trayExit");
             mainGroup.Text = rm.GetString("mainGroup");
             fightingGroup.Text = rm.GetString("fightingGroup");
             otherGroup.Text = rm.GetString("otherGroup");

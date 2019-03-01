@@ -543,7 +543,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 257);
+            this.label4.Location = new System.Drawing.Point(10, 270);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(189, 13);
             this.label4.TabIndex = 4;
@@ -552,17 +552,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 217);
+            this.label3.Location = new System.Drawing.Point(10, 230);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(362, 13);
+            this.label3.Size = new System.Drawing.Size(359, 13);
             this.label3.TabIndex = 3;
-            this.label3.Text = "^ Seriously? I had to add an entire object  just for this link? C\'mon Microsoft.";
+            this.label3.Text = "^ Seriously? I had to add an entire object just for this link? C\'mon Microsoft.";
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.linkLabel1.Location = new System.Drawing.Point(10, 199);
+            this.linkLabel1.Location = new System.Drawing.Point(10, 212);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(248, 13);
             this.linkLabel1.TabIndex = 2;
@@ -575,7 +575,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(10, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(419, 156);
+            this.label2.Size = new System.Drawing.Size(419, 169);
             this.label2.TabIndex = 1;
             this.label2.Text = resources.GetString("label2.Text");
             // 
@@ -1168,6 +1168,7 @@
             this.languageBox.Items.AddRange(new object[] {
             "English",
             "日本語",
+            "русский",
             "Custom"});
             this.languageBox.Location = new System.Drawing.Point(6, 101);
             this.languageBox.Name = "languageBox";

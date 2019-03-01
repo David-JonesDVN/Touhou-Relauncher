@@ -637,4 +637,13 @@ random game option:</value>
   <data name="replayDownloadTitle" xml:space="preserve">
     <value>Download Replay?</value>
   </data>
+  <data name="trayExit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="trayOpen" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="trayRandom" xml:space="preserve">
+    <value>Random Game</value>
+  </data>
 </root>

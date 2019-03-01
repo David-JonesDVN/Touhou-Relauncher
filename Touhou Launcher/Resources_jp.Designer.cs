@@ -1478,6 +1478,33 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exit.
+        /// </summary>
+        public static string trayExit {
+            get {
+                return ResourceManager.GetString("trayExit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open.
+        /// </summary>
+        public static string trayOpen {
+            get {
+                return ResourceManager.GetString("trayOpen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Random Game.
+        /// </summary>
+        public static string trayRandom {
+            get {
+                return ResourceManager.GetString("trayRandom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 東方星蓮船.
         /// </summary>
         public static string UFO {
