@@ -17,7 +17,7 @@ namespace Touhou_Launcher
         public int game;
         bool tr = false;
         MainForm main;
-        Dictionary<string, string> crap = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\games.js"));
+        Dictionary<string, string> crap = new Dictionary<string,string>();
 
         public ConfigForm(int id, MainForm parent)
         {
@@ -48,6 +48,8 @@ namespace Touhou_Launcher
                 if (MainForm.curCfg.crapDir != "")
                 {
                     if (File.Exists(Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\games.js"))
+                    {
+                        crap = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\games.js"));
                         foreach (KeyValuePair<string, string> line in crap)
                         {
                             if (Convert.ToInt32(new String(line.Key.Where(Char.IsDigit).ToArray())) == MainForm.idToNumber[game])
@@ -55,6 +57,7 @@ namespace Touhou_Launcher
                                 crapGame.Items.Add(line.Key);
                             }
                         }
+                    }
                     foreach (string file in Directory.GetFiles(Path.GetDirectoryName(MainForm.curCfg.crapDir), "*.js").Where(n => !n.Contains("games.js") && !n.Contains("config.js")))
                     {
                         crapCfg.Items.Add(Path.GetFileName(file));
