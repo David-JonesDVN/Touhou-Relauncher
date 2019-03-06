@@ -1,5 +1,5 @@
 1.0
-Added: Replay downloader.
+Added: Replay downloader. Includes 3 websites + manual link input.
 Added: Tray icon including minimization to tray and always-on tray settings. Can be used to launch any game set up in the program.
 Added: thcrap directory setting.
 Added: Confirmation dialog when removing custom categories/games.
@@ -20,6 +20,7 @@ Fixed: Colored banner throwing an exception when editing it manually.
 Fixed: Custom banner checkbox and text box not saving when the latter is edited manually.
 Fixed: Previously filled textboxes being re-filled.
 Fixed: Randomizer select buttons are symmetrical and fit more text.
+Fixed: The random button stretching by resizing the window.
 Updated localization files.
 Code reorganization
 

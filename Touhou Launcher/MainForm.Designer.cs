@@ -119,7 +119,8 @@
             this.np2Label = new System.Windows.Forms.Label();
             this.replays = new System.Windows.Forms.TabPage();
             this.replayBrowser = new System.Windows.Forms.WebBrowser();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.replayPanel = new System.Windows.Forms.Panel();
+            this.linkReplays = new System.Windows.Forms.TextBox();
             this.appspotReplays = new System.Windows.Forms.RadioButton();
             this.royalflareReplays = new System.Windows.Forms.RadioButton();
             this.gensokyoReplays = new System.Windows.Forms.RadioButton();
@@ -209,7 +210,7 @@
             this.flowLayoutPanel5.SuspendLayout();
             this.launcherSettings.SuspendLayout();
             this.replays.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.replayPanel.SuspendLayout();
             this.customGames.SuspendLayout();
             this.mainControl.SuspendLayout();
             this.games.SuspendLayout();
@@ -453,9 +454,7 @@
             // 
             // btnRandom
             // 
-            this.btnRandom.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRandom.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnRandom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnRandom.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRandom.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -1209,7 +1208,7 @@
             // 
             this.replays.BackColor = System.Drawing.Color.Transparent;
             this.replays.Controls.Add(this.replayBrowser);
-            this.replays.Controls.Add(this.panel1);
+            this.replays.Controls.Add(this.replayPanel);
             this.replays.Location = new System.Drawing.Point(4, 22);
             this.replays.Name = "replays";
             this.replays.Padding = new System.Windows.Forms.Padding(3);
@@ -1230,18 +1229,27 @@
             this.replayBrowser.Url = new System.Uri("http://replays.gensokyo.org", System.UriKind.Absolute);
             this.replayBrowser.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.replayBrowser_Navigating);
             // 
-            // panel1
+            // replayPanel
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.replayPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.appspotReplays);
-            this.panel1.Controls.Add(this.royalflareReplays);
-            this.panel1.Controls.Add(this.gensokyoReplays);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(518, 29);
-            this.panel1.TabIndex = 3;
+            this.replayPanel.BackColor = System.Drawing.Color.Transparent;
+            this.replayPanel.Controls.Add(this.linkReplays);
+            this.replayPanel.Controls.Add(this.appspotReplays);
+            this.replayPanel.Controls.Add(this.royalflareReplays);
+            this.replayPanel.Controls.Add(this.gensokyoReplays);
+            this.replayPanel.Location = new System.Drawing.Point(0, 0);
+            this.replayPanel.Name = "replayPanel";
+            this.replayPanel.Size = new System.Drawing.Size(518, 29);
+            this.replayPanel.TabIndex = 3;
+            // 
+            // linkReplays
+            // 
+            this.linkReplays.Location = new System.Drawing.Point(373, 3);
+            this.linkReplays.Name = "linkReplays";
+            this.linkReplays.Size = new System.Drawing.Size(142, 20);
+            this.linkReplays.TabIndex = 3;
+            this.linkReplays.KeyDown += new System.Windows.Forms.KeyEventHandler(this.linkReplays_KeyDown);
             // 
             // appspotReplays
             // 
@@ -2255,8 +2263,8 @@
             this.launcherSettings.ResumeLayout(false);
             this.launcherSettings.PerformLayout();
             this.replays.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.replayPanel.ResumeLayout(false);
+            this.replayPanel.PerformLayout();
             this.customGames.ResumeLayout(false);
             this.customGames.PerformLayout();
             this.mainControl.ResumeLayout(false);
@@ -2301,7 +2309,7 @@
         private System.Windows.Forms.TabPage settings;
         private System.Windows.Forms.TabPage replays;
         private System.Windows.Forms.WebBrowser replayBrowser;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel replayPanel;
         private System.Windows.Forms.RadioButton appspotReplays;
         private System.Windows.Forms.RadioButton royalflareReplays;
         private System.Windows.Forms.RadioButton gensokyoReplays;
@@ -2439,6 +2447,7 @@
         private System.Windows.Forms.TextBox crapDir;
         private System.Windows.Forms.Label crapDirLabel;
         private System.Windows.Forms.Button crapConfigure;
+        private System.Windows.Forms.TextBox linkReplays;
     }
 }
 

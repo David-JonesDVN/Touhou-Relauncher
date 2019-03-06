@@ -18,6 +18,7 @@ namespace Touhou_Launcher
         public class GameConfig
         {
             public List<string> GameDir = new List<string>(4);
+            public List<string> crapCFG = new List<string>(2);
             public List<bool> appLocale = new List<bool>(4);
             public int DefaultDir = 0;
             public bool DefaultApplocale = false;
@@ -74,7 +75,8 @@ namespace Touhou_Launcher
                 for (int i = 0; i < gameCFG.Length ; i++)
                 {
                     gameCFG[i] = new GameConfig();
-                    gameCFG[i].GameDir = new List<string> { "", "", "", "None/None" };
+                    gameCFG[i].GameDir = new List<string> { "", "", "", "" };
+                    gameCFG[i].crapCFG = new List<string> { "None", "None" };
                     gameCFG[i].appLocale = new List<bool> { false, false, false, false };
                 }
             }
@@ -376,7 +378,7 @@ namespace Touhou_Launcher
                 if (btn.Name != "btnRandom")
                 {
                     int game = nameToID[btn.Name.Substring(3)];
-                    bool exists = curCfg.gameCFG[game].GameDir[3].Split(new char[] { '/' })[0] != "None" && curCfg.gameCFG[game].GameDir[3].Split(new char[] { '/' })[1] != "None";
+                    bool exists = curCfg.gameCFG[game].crapCFG[0] != "None" && curCfg.gameCFG[game].crapCFG[1] != "None";
                     foreach (string dir in curCfg.gameCFG[game].GameDir)
                         if (dir != "" && dir != curCfg.gameCFG[game].GameDir[3])
                         {
@@ -434,7 +436,7 @@ namespace Touhou_Launcher
                         if (File.Exists(curCfg.crapDir))
                         {
                             path = curCfg.crapDir;
-                            args = "\"" + Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\" + curGame.GameDir[3].Split(new char[] { '/' })[1] + "\" " + curGame.GameDir[3].Split(new char[] { '/' })[0];
+                            args = "\"" + Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\" + curGame.crapCFG[1] + "\" " + curGame.crapCFG[0];
                         }
                         else
                         {
@@ -749,7 +751,18 @@ namespace Touhou_Launcher
 
         private void Replays_CheckedChanged(object sender, EventArgs e)
         {
-            replayBrowser.Navigate(((RadioButton)sender).Text);
+            replayBrowser.Navigate(((Control)sender).Text);
+        }
+
+        private void linkReplays_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                gensokyoReplays.Checked = false;
+                royalflareReplays.Checked = false;
+                appspotReplays.Checked = false;
+                Replays_CheckedChanged(sender, new EventArgs());
+            }
         }
         
         private void replayBrowser_Navigating(object sender, WebBrowserNavigatingEventArgs e)
@@ -790,7 +803,6 @@ namespace Touhou_Launcher
                         }
                     }
                     MessageBox.Show(rm.GetString("errorGameNotFound"));
-                    e.Cancel = false;
                 }
             }
         }
