@@ -3,7 +3,7 @@ This is basically a rewrite of the Touhou Launcher created by Widdiful.\
 I tried making it more user friendly and added options wherever it was needed.
 
 If you don't know what that is, it's a program you can use and set up to launch any Touhou game (and even others if you're using the custom games tab) from the UI or the tray icon. It supports Neko Project II for PC-98 games, game exe files (the game itself, custom.exe or vpatch.exe) and thcrap.\
-There is also a "Replays" tab you can use to either navigate popular Touhou replay websites (Don't, actually. The .NET web browser is worse than Internet Explorer 8) or enter your own links to let the launcher automatically download them and put them in the correct folder.\
+There is also a "Replays" tab you can use to either navigate popular Touhou replay websites (Don't, actually. The .NET web browser is worse than Internet Explorer 8) or enter your own links to let the launcher automatically download and put them in the correct folder.\
 Finally, each game has a background picture that you can change to whatever you want.
 
 # Features
