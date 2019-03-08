@@ -1,4 +1,4 @@
-1.0
+1.0-pre2
 Fixed: IaMP's text color being black for some reason.
 Fixed: Background pictures for games being one pixel off.
 Fixed: Double Dealing Character typo
