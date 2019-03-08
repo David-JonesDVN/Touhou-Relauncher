@@ -1,8 +1,3 @@
-1.0
-Fixed: IaMP's text color being black for some reason.
-Fixed: Background pictures for games being one pixel off.
-Fixed: Double Dealing Character typo
-
 1.0-pre (06/03/2019)
 Added: Replay downloader. Includes 3 websites + manual link input.
 Added: Tray icon including minimization to tray and always-on tray settings. Can be used to launch any game set up in the program.
