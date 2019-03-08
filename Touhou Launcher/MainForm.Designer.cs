@@ -106,6 +106,12 @@
             this.chkLoLK = new System.Windows.Forms.CheckBox();
             this.chkHSiFS = new System.Windows.Forms.CheckBox();
             this.launcherSettings = new System.Windows.Forms.GroupBox();
+            this.crapConfigure = new System.Windows.Forms.Button();
+            this.browsecrap = new System.Windows.Forms.Button();
+            this.crapDir = new System.Windows.Forms.TextBox();
+            this.crapDirLabel = new System.Windows.Forms.Label();
+            this.showTray = new System.Windows.Forms.CheckBox();
+            this.minimizeToTray = new System.Windows.Forms.CheckBox();
             this.langLabel = new System.Windows.Forms.Label();
             this.languageBox = new System.Windows.Forms.ComboBox();
             this.browseNP2 = new System.Windows.Forms.Button();
@@ -113,7 +119,8 @@
             this.np2Label = new System.Windows.Forms.Label();
             this.replays = new System.Windows.Forms.TabPage();
             this.replayBrowser = new System.Windows.Forms.WebBrowser();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.replayPanel = new System.Windows.Forms.Panel();
+            this.linkReplays = new System.Windows.Forms.TextBox();
             this.appspotReplays = new System.Windows.Forms.RadioButton();
             this.royalflareReplays = new System.Windows.Forms.RadioButton();
             this.gensokyoReplays = new System.Windows.Forms.RadioButton();
@@ -152,42 +159,43 @@
             this.btnDDC = new System.Windows.Forms.Button();
             this.btnLoLK = new System.Windows.Forms.Button();
             this.btnHSiFS = new System.Windows.Forms.Button();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.mainToolMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem13 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem14 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem15 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem16 = new System.Windows.Forms.ToolStripMenuItem();
-            this.fightingToolMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem17 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem18 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem19 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem20 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem21 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem22 = new System.Windows.Forms.ToolStripMenuItem();
-            this.otherToolMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem23 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem24 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem25 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem26 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem27 = new System.Windows.Forms.ToolStripMenuItem();
-            this.customToolMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.randomToolMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.trayMain = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayHRtP = new System.Windows.Forms.ToolStripMenuItem();
+            this.traySoEW = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayPoDD = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayLLS = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayMS = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayEoSD = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayPCB = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayIN = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayPoFV = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayMoF = new System.Windows.Forms.ToolStripMenuItem();
+            this.traySA = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayUFO = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTD = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayDDC = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayLoLK = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayHSiFS = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayFighting = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayIaMP = new System.Windows.Forms.ToolStripMenuItem();
+            this.traySWR = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayUoNL = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayHM = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayULiL = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayAoCF = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayOther = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayStB = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayDS = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayGFW = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayISC = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayVD = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayCustom = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayRandom = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.openToolMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayOpen = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.gameContextMenu.SuspendLayout();
             this.customContextMenu.SuspendLayout();
             this.customFolderContextMenu.SuspendLayout();
@@ -202,7 +210,7 @@
             this.flowLayoutPanel5.SuspendLayout();
             this.launcherSettings.SuspendLayout();
             this.replays.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.replayPanel.SuspendLayout();
             this.customGames.SuspendLayout();
             this.mainControl.SuspendLayout();
             this.games.SuspendLayout();
@@ -212,7 +220,7 @@
             this.flowLayoutPanel2.SuspendLayout();
             this.mainGroup.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
+            this.trayMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // gameContextMenu
@@ -446,9 +454,7 @@
             // 
             // btnRandom
             // 
-            this.btnRandom.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRandom.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnRandom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnRandom.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRandom.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -536,7 +542,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 257);
+            this.label4.Location = new System.Drawing.Point(10, 270);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(189, 13);
             this.label4.TabIndex = 4;
@@ -545,17 +551,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 217);
+            this.label3.Location = new System.Drawing.Point(10, 230);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(357, 13);
+            this.label3.Size = new System.Drawing.Size(359, 13);
             this.label3.TabIndex = 3;
-            this.label3.Text = "^ Seriously? I had to add an entire event just for this link? C\'mon Microsoft.";
+            this.label3.Text = "^ Seriously? I had to add an entire object just for this link? C\'mon Microsoft.";
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.linkLabel1.Location = new System.Drawing.Point(10, 199);
+            this.linkLabel1.Location = new System.Drawing.Point(10, 212);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(248, 13);
             this.linkLabel1.TabIndex = 2;
@@ -568,7 +574,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(10, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(419, 156);
+            this.label2.Size = new System.Drawing.Size(419, 169);
             this.label2.TabIndex = 1;
             this.label2.Text = resources.GetString("label2.Text");
             // 
@@ -578,9 +584,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(9, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(247, 24);
+            this.label1.Size = new System.Drawing.Size(192, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Touhou Launcher 0.8 BETA";
+            this.label1.Text = "Touhou Launcher 1.0";
             // 
             // settings
             // 
@@ -619,15 +625,15 @@
             this.randomLabel.Name = "randomLabel";
             this.randomLabel.Size = new System.Drawing.Size(211, 29);
             this.randomLabel.TabIndex = 4;
-            this.randomLabel.Text = "Games that will be included in the\r\nrandom game option";
+            this.randomLabel.Text = "Games that will be included in the\r\nrandom game option:";
             this.randomLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // randomNone
             // 
             this.randomNone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.randomNone.Location = new System.Drawing.Point(217, 51);
+            this.randomNone.Location = new System.Drawing.Point(201, 49);
             this.randomNone.Name = "randomNone";
-            this.randomNone.Size = new System.Drawing.Size(75, 23);
+            this.randomNone.Size = new System.Drawing.Size(100, 25);
             this.randomNone.TabIndex = 3;
             this.randomNone.Text = "Select None";
             this.randomNone.UseVisualStyleBackColor = true;
@@ -635,9 +641,9 @@
             // 
             // randomAll
             // 
-            this.randomAll.Location = new System.Drawing.Point(6, 51);
+            this.randomAll.Location = new System.Drawing.Point(6, 49);
             this.randomAll.Name = "randomAll";
-            this.randomAll.Size = new System.Drawing.Size(75, 23);
+            this.randomAll.Size = new System.Drawing.Size(100, 25);
             this.randomAll.TabIndex = 2;
             this.randomAll.Text = "Select All";
             this.randomAll.UseVisualStyleBackColor = true;
@@ -1065,6 +1071,12 @@
             // 
             // launcherSettings
             // 
+            this.launcherSettings.Controls.Add(this.crapConfigure);
+            this.launcherSettings.Controls.Add(this.browsecrap);
+            this.launcherSettings.Controls.Add(this.crapDir);
+            this.launcherSettings.Controls.Add(this.crapDirLabel);
+            this.launcherSettings.Controls.Add(this.showTray);
+            this.launcherSettings.Controls.Add(this.minimizeToTray);
             this.launcherSettings.Controls.Add(this.autoClose);
             this.launcherSettings.Controls.Add(this.langLabel);
             this.launcherSettings.Controls.Add(this.languageBox);
@@ -1078,10 +1090,71 @@
             this.launcherSettings.TabStop = false;
             this.launcherSettings.Text = "Launcher Settings";
             // 
+            // crapConfigure
+            // 
+            this.crapConfigure.Location = new System.Drawing.Point(6, 207);
+            this.crapConfigure.Name = "crapConfigure";
+            this.crapConfigure.Size = new System.Drawing.Size(188, 23);
+            this.crapConfigure.TabIndex = 11;
+            this.crapConfigure.Text = "Configure thcrap";
+            this.crapConfigure.UseVisualStyleBackColor = true;
+            this.crapConfigure.Click += new System.EventHandler(this.crapConfigure_Click);
+            // 
+            // browsecrap
+            // 
+            this.browsecrap.Location = new System.Drawing.Point(119, 179);
+            this.browsecrap.Name = "browsecrap";
+            this.browsecrap.Size = new System.Drawing.Size(75, 23);
+            this.browsecrap.TabIndex = 10;
+            this.browsecrap.Text = "Browse";
+            this.browsecrap.UseVisualStyleBackColor = true;
+            this.browsecrap.Click += new System.EventHandler(this.browse_Click);
+            // 
+            // crapDir
+            // 
+            this.crapDir.Location = new System.Drawing.Point(6, 181);
+            this.crapDir.Name = "crapDir";
+            this.crapDir.Size = new System.Drawing.Size(107, 20);
+            this.crapDir.TabIndex = 9;
+            this.crapDir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
+            this.crapDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
+            this.crapDir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
+            // 
+            // crapDirLabel
+            // 
+            this.crapDirLabel.AutoSize = true;
+            this.crapDirLabel.Location = new System.Drawing.Point(6, 165);
+            this.crapDirLabel.Name = "crapDirLabel";
+            this.crapDirLabel.Size = new System.Drawing.Size(119, 13);
+            this.crapDirLabel.TabIndex = 8;
+            this.crapDirLabel.Text = "thcrap_loader Location:";
+            // 
+            // showTray
+            // 
+            this.showTray.AutoSize = true;
+            this.showTray.Location = new System.Drawing.Point(6, 65);
+            this.showTray.Name = "showTray";
+            this.showTray.Size = new System.Drawing.Size(130, 17);
+            this.showTray.TabIndex = 7;
+            this.showTray.Text = "Always show tray icon";
+            this.showTray.UseVisualStyleBackColor = true;
+            this.showTray.CheckedChanged += new System.EventHandler(this.showTray_CheckedChanged);
+            // 
+            // minimizeToTray
+            // 
+            this.minimizeToTray.AutoSize = true;
+            this.minimizeToTray.Location = new System.Drawing.Point(6, 42);
+            this.minimizeToTray.Name = "minimizeToTray";
+            this.minimizeToTray.Size = new System.Drawing.Size(98, 17);
+            this.minimizeToTray.TabIndex = 6;
+            this.minimizeToTray.Text = "Minimize to tray";
+            this.minimizeToTray.UseVisualStyleBackColor = true;
+            this.minimizeToTray.CheckedChanged += new System.EventHandler(this.minimizeToTray_CheckedChanged);
+            // 
             // langLabel
             // 
             this.langLabel.AutoSize = true;
-            this.langLabel.Location = new System.Drawing.Point(6, 39);
+            this.langLabel.Location = new System.Drawing.Point(6, 85);
             this.langLabel.Name = "langLabel";
             this.langLabel.Size = new System.Drawing.Size(58, 13);
             this.langLabel.TabIndex = 1;
@@ -1094,8 +1167,9 @@
             this.languageBox.Items.AddRange(new object[] {
             "English",
             "日本語",
+            "русский",
             "Custom"});
-            this.languageBox.Location = new System.Drawing.Point(6, 55);
+            this.languageBox.Location = new System.Drawing.Point(6, 101);
             this.languageBox.Name = "languageBox";
             this.languageBox.Size = new System.Drawing.Size(188, 21);
             this.languageBox.TabIndex = 0;
@@ -1103,26 +1177,28 @@
             // 
             // browseNP2
             // 
-            this.browseNP2.Location = new System.Drawing.Point(119, 95);
+            this.browseNP2.Location = new System.Drawing.Point(119, 139);
             this.browseNP2.Name = "browseNP2";
             this.browseNP2.Size = new System.Drawing.Size(75, 23);
             this.browseNP2.TabIndex = 4;
             this.browseNP2.Text = "Browse";
             this.browseNP2.UseVisualStyleBackColor = true;
-            this.browseNP2.Click += new System.EventHandler(this.browseNP2_Click);
+            this.browseNP2.Click += new System.EventHandler(this.browse_Click);
             // 
             // np2Dir
             // 
-            this.np2Dir.Location = new System.Drawing.Point(6, 95);
+            this.np2Dir.Location = new System.Drawing.Point(6, 141);
             this.np2Dir.Name = "np2Dir";
             this.np2Dir.Size = new System.Drawing.Size(107, 20);
             this.np2Dir.TabIndex = 3;
-            this.np2Dir.LostFocus += new System.EventHandler(this.np2Dir_LostFocus);
+            this.np2Dir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
+            this.np2Dir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
+            this.np2Dir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
             // 
             // np2Label
             // 
             this.np2Label.AutoSize = true;
-            this.np2Label.Location = new System.Drawing.Point(6, 79);
+            this.np2Label.Location = new System.Drawing.Point(6, 125);
             this.np2Label.Name = "np2Label";
             this.np2Label.Size = new System.Drawing.Size(125, 13);
             this.np2Label.TabIndex = 2;
@@ -1132,7 +1208,7 @@
             // 
             this.replays.BackColor = System.Drawing.Color.Transparent;
             this.replays.Controls.Add(this.replayBrowser);
-            this.replays.Controls.Add(this.panel1);
+            this.replays.Controls.Add(this.replayPanel);
             this.replays.Location = new System.Drawing.Point(4, 22);
             this.replays.Name = "replays";
             this.replays.Padding = new System.Windows.Forms.Padding(3);
@@ -1151,19 +1227,29 @@
             this.replayBrowser.Size = new System.Drawing.Size(524, 506);
             this.replayBrowser.TabIndex = 4;
             this.replayBrowser.Url = new System.Uri("http://replays.gensokyo.org", System.UriKind.Absolute);
+            this.replayBrowser.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.replayBrowser_Navigating);
             // 
-            // panel1
+            // replayPanel
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.replayPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.appspotReplays);
-            this.panel1.Controls.Add(this.royalflareReplays);
-            this.panel1.Controls.Add(this.gensokyoReplays);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(518, 29);
-            this.panel1.TabIndex = 3;
+            this.replayPanel.BackColor = System.Drawing.Color.Transparent;
+            this.replayPanel.Controls.Add(this.linkReplays);
+            this.replayPanel.Controls.Add(this.appspotReplays);
+            this.replayPanel.Controls.Add(this.royalflareReplays);
+            this.replayPanel.Controls.Add(this.gensokyoReplays);
+            this.replayPanel.Location = new System.Drawing.Point(0, 0);
+            this.replayPanel.Name = "replayPanel";
+            this.replayPanel.Size = new System.Drawing.Size(518, 29);
+            this.replayPanel.TabIndex = 3;
+            // 
+            // linkReplays
+            // 
+            this.linkReplays.Location = new System.Drawing.Point(373, 3);
+            this.linkReplays.Name = "linkReplays";
+            this.linkReplays.Size = new System.Drawing.Size(142, 20);
+            this.linkReplays.TabIndex = 3;
+            this.linkReplays.KeyDown += new System.Windows.Forms.KeyEventHandler(this.linkReplays_KeyDown);
             // 
             // appspotReplays
             // 
@@ -1801,312 +1887,350 @@
             this.btnHSiFS.UseVisualStyleBackColor = true;
             this.btnHSiFS.Click += new System.EventHandler(this.btn_Click);
             // 
-            // contextMenuStrip1
+            // trayMenu
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mainToolMenu,
-            this.fightingToolMenu,
-            this.otherToolMenu,
-            this.customToolMenu,
-            this.randomToolMenu,
+            this.trayMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.trayMain,
+            this.trayFighting,
+            this.trayOther,
+            this.trayCustom,
+            this.trayRandom,
             this.toolStripSeparator2,
-            this.openToolMenu,
-            this.exitToolMenu});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(158, 164);
-            // 
-            // mainToolMenu
-            // 
-            this.mainToolMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2,
-            this.toolStripMenuItem3,
-            this.toolStripMenuItem4,
-            this.toolStripMenuItem5,
-            this.toolStripMenuItem6,
-            this.toolStripMenuItem7,
-            this.toolStripMenuItem8,
-            this.toolStripMenuItem9,
-            this.toolStripMenuItem10,
-            this.toolStripMenuItem11,
-            this.toolStripMenuItem12,
-            this.toolStripMenuItem13,
-            this.toolStripMenuItem14,
-            this.toolStripMenuItem15,
-            this.toolStripMenuItem16});
-            this.mainToolMenu.Name = "mainToolMenu";
-            this.mainToolMenu.Size = new System.Drawing.Size(157, 22);
-            this.mainToolMenu.Text = "Main Games";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Image = global::Touhou_Launcher.Properties.Resources.Icon_th01;
-            this.toolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(256, 38);
-            this.toolStripMenuItem1.Text = "Highly Responsive to Prayers";
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Image = global::Touhou_Launcher.Properties.Resources.Icon_th02;
-            this.toolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(256, 38);
-            this.toolStripMenuItem2.Text = "Story of Eastern Wonderland";
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Image = global::Touhou_Launcher.Properties.Resources.Icon_th03;
-            this.toolStripMenuItem3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(256, 38);
-            this.toolStripMenuItem3.Text = "Phantasmagoria of Dim. Dream";
-            // 
-            // toolStripMenuItem4
-            // 
-            this.toolStripMenuItem4.Image = global::Touhou_Launcher.Properties.Resources.Icon_th04;
-            this.toolStripMenuItem4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(256, 38);
-            this.toolStripMenuItem4.Text = "Lotus Land Story";
-            // 
-            // toolStripMenuItem5
-            // 
-            this.toolStripMenuItem5.Image = global::Touhou_Launcher.Properties.Resources.Icon_th05;
-            this.toolStripMenuItem5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(256, 38);
-            this.toolStripMenuItem5.Text = "Mystic Square";
-            // 
-            // toolStripMenuItem6
-            // 
-            this.toolStripMenuItem6.Image = global::Touhou_Launcher.Properties.Resources.Icon_th06;
-            this.toolStripMenuItem6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(256, 38);
-            this.toolStripMenuItem6.Text = "Embodiment of Scarlet Devil";
-            // 
-            // toolStripMenuItem7
-            // 
-            this.toolStripMenuItem7.Image = global::Touhou_Launcher.Properties.Resources.Icon_th07;
-            this.toolStripMenuItem7.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(256, 38);
-            this.toolStripMenuItem7.Text = "Perfect Cherry Blossom";
-            // 
-            // toolStripMenuItem8
-            // 
-            this.toolStripMenuItem8.Image = global::Touhou_Launcher.Properties.Resources.Icon_th08;
-            this.toolStripMenuItem8.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(256, 38);
-            this.toolStripMenuItem8.Text = "Imperishable Night";
-            // 
-            // toolStripMenuItem9
-            // 
-            this.toolStripMenuItem9.Image = global::Touhou_Launcher.Properties.Resources.Icon_th09;
-            this.toolStripMenuItem9.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.Size = new System.Drawing.Size(256, 38);
-            this.toolStripMenuItem9.Text = "Phantasmagoria of Flower View";
-            // 
-            // toolStripMenuItem10
-            // 
-            this.toolStripMenuItem10.Image = global::Touhou_Launcher.Properties.Resources.Icon_th10;
-            this.toolStripMenuItem10.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem10.Name = "toolStripMenuItem10";
-            this.toolStripMenuItem10.Size = new System.Drawing.Size(256, 38);
-            this.toolStripMenuItem10.Text = "Mountain of Faith";
-            // 
-            // toolStripMenuItem11
-            // 
-            this.toolStripMenuItem11.Image = global::Touhou_Launcher.Properties.Resources.Icon_th11;
-            this.toolStripMenuItem11.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem11.Name = "toolStripMenuItem11";
-            this.toolStripMenuItem11.Size = new System.Drawing.Size(256, 38);
-            this.toolStripMenuItem11.Text = "Subterranean Animism";
-            // 
-            // toolStripMenuItem12
-            // 
-            this.toolStripMenuItem12.Image = global::Touhou_Launcher.Properties.Resources.Icon_th12;
-            this.toolStripMenuItem12.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem12.Name = "toolStripMenuItem12";
-            this.toolStripMenuItem12.Size = new System.Drawing.Size(256, 38);
-            this.toolStripMenuItem12.Text = "Undefined Fantastic Object";
-            // 
-            // toolStripMenuItem13
-            // 
-            this.toolStripMenuItem13.Image = global::Touhou_Launcher.Properties.Resources.Icon_th13;
-            this.toolStripMenuItem13.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem13.Name = "toolStripMenuItem13";
-            this.toolStripMenuItem13.Size = new System.Drawing.Size(256, 38);
-            this.toolStripMenuItem13.Text = "Ten Desires";
-            // 
-            // toolStripMenuItem14
-            // 
-            this.toolStripMenuItem14.Image = global::Touhou_Launcher.Properties.Resources.Icon_th14;
-            this.toolStripMenuItem14.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem14.Name = "toolStripMenuItem14";
-            this.toolStripMenuItem14.Size = new System.Drawing.Size(256, 38);
-            this.toolStripMenuItem14.Text = "Double Dealing Character";
-            // 
-            // toolStripMenuItem15
-            // 
-            this.toolStripMenuItem15.Image = global::Touhou_Launcher.Properties.Resources.Icon_th15;
-            this.toolStripMenuItem15.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem15.Name = "toolStripMenuItem15";
-            this.toolStripMenuItem15.Size = new System.Drawing.Size(256, 38);
-            this.toolStripMenuItem15.Text = "Legacy of Lunatic Kingdom";
-            // 
-            // toolStripMenuItem16
-            // 
-            this.toolStripMenuItem16.Image = global::Touhou_Launcher.Properties.Resources.Icon_th16;
-            this.toolStripMenuItem16.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem16.Name = "toolStripMenuItem16";
-            this.toolStripMenuItem16.Size = new System.Drawing.Size(256, 38);
-            this.toolStripMenuItem16.Text = "Hidden Star in Four Seasons";
-            // 
-            // fightingToolMenu
-            // 
-            this.fightingToolMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem17,
-            this.toolStripMenuItem18,
-            this.toolStripMenuItem19,
-            this.toolStripMenuItem20,
-            this.toolStripMenuItem21,
-            this.toolStripMenuItem22});
-            this.fightingToolMenu.Name = "fightingToolMenu";
-            this.fightingToolMenu.Size = new System.Drawing.Size(157, 22);
-            this.fightingToolMenu.Text = "Fighting Games";
-            // 
-            // toolStripMenuItem17
-            // 
-            this.toolStripMenuItem17.Image = global::Touhou_Launcher.Properties.Resources.Icon_th075;
-            this.toolStripMenuItem17.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem17.Name = "toolStripMenuItem17";
-            this.toolStripMenuItem17.Size = new System.Drawing.Size(254, 38);
-            this.toolStripMenuItem17.Text = "Immaterial and Missing Power";
-            // 
-            // toolStripMenuItem18
-            // 
-            this.toolStripMenuItem18.Image = global::Touhou_Launcher.Properties.Resources.Icon_th105;
-            this.toolStripMenuItem18.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem18.Name = "toolStripMenuItem18";
-            this.toolStripMenuItem18.Size = new System.Drawing.Size(254, 38);
-            this.toolStripMenuItem18.Text = "Scarlet Weather Rhapsody";
-            // 
-            // toolStripMenuItem19
-            // 
-            this.toolStripMenuItem19.Image = global::Touhou_Launcher.Properties.Resources.Icon_th123;
-            this.toolStripMenuItem19.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem19.Name = "toolStripMenuItem19";
-            this.toolStripMenuItem19.Size = new System.Drawing.Size(254, 38);
-            this.toolStripMenuItem19.Text = "Hisoutensoku";
-            // 
-            // toolStripMenuItem20
-            // 
-            this.toolStripMenuItem20.Image = global::Touhou_Launcher.Properties.Resources.Icon_th135;
-            this.toolStripMenuItem20.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem20.Name = "toolStripMenuItem20";
-            this.toolStripMenuItem20.Size = new System.Drawing.Size(254, 38);
-            this.toolStripMenuItem20.Text = "Hopeless Masquerade";
-            // 
-            // toolStripMenuItem21
-            // 
-            this.toolStripMenuItem21.Image = global::Touhou_Launcher.Properties.Resources.Icon_th145;
-            this.toolStripMenuItem21.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem21.Name = "toolStripMenuItem21";
-            this.toolStripMenuItem21.Size = new System.Drawing.Size(254, 38);
-            this.toolStripMenuItem21.Text = "Urban Legend in Limbo";
-            // 
-            // toolStripMenuItem22
-            // 
-            this.toolStripMenuItem22.Image = global::Touhou_Launcher.Properties.Resources.Icon_th155;
-            this.toolStripMenuItem22.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem22.Name = "toolStripMenuItem22";
-            this.toolStripMenuItem22.Size = new System.Drawing.Size(254, 38);
-            this.toolStripMenuItem22.Text = "Antinomy of Common Flowers";
-            // 
-            // otherToolMenu
-            // 
-            this.otherToolMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem23,
-            this.toolStripMenuItem24,
-            this.toolStripMenuItem25,
-            this.toolStripMenuItem26,
-            this.toolStripMenuItem27});
-            this.otherToolMenu.Name = "otherToolMenu";
-            this.otherToolMenu.Size = new System.Drawing.Size(157, 22);
-            this.otherToolMenu.Text = "Other Games";
-            // 
-            // toolStripMenuItem23
-            // 
-            this.toolStripMenuItem23.Image = global::Touhou_Launcher.Properties.Resources.Icon_th095;
-            this.toolStripMenuItem23.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem23.Name = "toolStripMenuItem23";
-            this.toolStripMenuItem23.Size = new System.Drawing.Size(203, 38);
-            this.toolStripMenuItem23.Text = "Shoot the Bullet";
-            // 
-            // toolStripMenuItem24
-            // 
-            this.toolStripMenuItem24.Image = global::Touhou_Launcher.Properties.Resources.Icon_th125;
-            this.toolStripMenuItem24.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem24.Name = "toolStripMenuItem24";
-            this.toolStripMenuItem24.Size = new System.Drawing.Size(203, 38);
-            this.toolStripMenuItem24.Text = "Double Spoiler";
-            // 
-            // toolStripMenuItem25
-            // 
-            this.toolStripMenuItem25.Image = global::Touhou_Launcher.Properties.Resources.Icon_th128;
-            this.toolStripMenuItem25.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem25.Name = "toolStripMenuItem25";
-            this.toolStripMenuItem25.Size = new System.Drawing.Size(203, 38);
-            this.toolStripMenuItem25.Text = "Great Fairy Wars";
-            // 
-            // toolStripMenuItem26
-            // 
-            this.toolStripMenuItem26.Image = global::Touhou_Launcher.Properties.Resources.Icon_th143;
-            this.toolStripMenuItem26.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem26.Name = "toolStripMenuItem26";
-            this.toolStripMenuItem26.Size = new System.Drawing.Size(203, 38);
-            this.toolStripMenuItem26.Text = "Impossible Spell Card";
-            // 
-            // toolStripMenuItem27
-            // 
-            this.toolStripMenuItem27.Image = global::Touhou_Launcher.Properties.Resources.Icon_th165;
-            this.toolStripMenuItem27.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem27.Name = "toolStripMenuItem27";
-            this.toolStripMenuItem27.Size = new System.Drawing.Size(203, 38);
-            this.toolStripMenuItem27.Text = "Violet Detector";
-            // 
-            // customToolMenu
-            // 
-            this.customToolMenu.Name = "customToolMenu";
-            this.customToolMenu.Size = new System.Drawing.Size(157, 22);
-            this.customToolMenu.Text = "Custom Games";
-            // 
-            // randomToolMenu
-            // 
-            this.randomToolMenu.Name = "randomToolMenu";
-            this.randomToolMenu.Size = new System.Drawing.Size(157, 22);
-            this.randomToolMenu.Text = "Random Game";
+            this.trayOpen,
+            this.trayExit});
+            this.trayMenu.Name = "contextMenuStrip1";
+            this.trayMenu.Size = new System.Drawing.Size(158, 164);
+            this.trayMenu.Opening += new System.ComponentModel.CancelEventHandler(this.trayMenu_Opening);
+            // 
+            // trayMain
+            // 
+            this.trayMain.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.trayHRtP,
+            this.traySoEW,
+            this.trayPoDD,
+            this.trayLLS,
+            this.trayMS,
+            this.trayEoSD,
+            this.trayPCB,
+            this.trayIN,
+            this.trayPoFV,
+            this.trayMoF,
+            this.traySA,
+            this.trayUFO,
+            this.trayTD,
+            this.trayDDC,
+            this.trayLoLK,
+            this.trayHSiFS});
+            this.trayMain.Name = "trayMain";
+            this.trayMain.Size = new System.Drawing.Size(157, 22);
+            this.trayMain.Text = "Main Games";
+            // 
+            // trayHRtP
+            // 
+            this.trayHRtP.Image = global::Touhou_Launcher.Properties.Resources.Icon_th01;
+            this.trayHRtP.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayHRtP.Name = "trayHRtP";
+            this.trayHRtP.Size = new System.Drawing.Size(256, 38);
+            this.trayHRtP.Text = "Highly Responsive to Prayers";
+            this.trayHRtP.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // traySoEW
+            // 
+            this.traySoEW.Image = global::Touhou_Launcher.Properties.Resources.Icon_th02;
+            this.traySoEW.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.traySoEW.Name = "traySoEW";
+            this.traySoEW.Size = new System.Drawing.Size(256, 38);
+            this.traySoEW.Text = "Story of Eastern Wonderland";
+            this.traySoEW.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayPoDD
+            // 
+            this.trayPoDD.Image = global::Touhou_Launcher.Properties.Resources.Icon_th03;
+            this.trayPoDD.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayPoDD.Name = "trayPoDD";
+            this.trayPoDD.Size = new System.Drawing.Size(256, 38);
+            this.trayPoDD.Text = "Phantasmagoria of Dim. Dream";
+            this.trayPoDD.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayLLS
+            // 
+            this.trayLLS.Image = global::Touhou_Launcher.Properties.Resources.Icon_th04;
+            this.trayLLS.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayLLS.Name = "trayLLS";
+            this.trayLLS.Size = new System.Drawing.Size(256, 38);
+            this.trayLLS.Text = "Lotus Land Story";
+            this.trayLLS.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayMS
+            // 
+            this.trayMS.Image = global::Touhou_Launcher.Properties.Resources.Icon_th05;
+            this.trayMS.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayMS.Name = "trayMS";
+            this.trayMS.Size = new System.Drawing.Size(256, 38);
+            this.trayMS.Text = "Mystic Square";
+            this.trayMS.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayEoSD
+            // 
+            this.trayEoSD.Image = global::Touhou_Launcher.Properties.Resources.Icon_th06;
+            this.trayEoSD.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayEoSD.Name = "trayEoSD";
+            this.trayEoSD.Size = new System.Drawing.Size(256, 38);
+            this.trayEoSD.Text = "Embodiment of Scarlet Devil";
+            this.trayEoSD.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayPCB
+            // 
+            this.trayPCB.Image = global::Touhou_Launcher.Properties.Resources.Icon_th07;
+            this.trayPCB.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayPCB.Name = "trayPCB";
+            this.trayPCB.Size = new System.Drawing.Size(256, 38);
+            this.trayPCB.Text = "Perfect Cherry Blossom";
+            this.trayPCB.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayIN
+            // 
+            this.trayIN.Image = global::Touhou_Launcher.Properties.Resources.Icon_th08;
+            this.trayIN.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayIN.Name = "trayIN";
+            this.trayIN.Size = new System.Drawing.Size(256, 38);
+            this.trayIN.Text = "Imperishable Night";
+            this.trayIN.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayPoFV
+            // 
+            this.trayPoFV.Image = global::Touhou_Launcher.Properties.Resources.Icon_th09;
+            this.trayPoFV.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayPoFV.Name = "trayPoFV";
+            this.trayPoFV.Size = new System.Drawing.Size(256, 38);
+            this.trayPoFV.Text = "Phantasmagoria of Flower View";
+            this.trayPoFV.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayMoF
+            // 
+            this.trayMoF.Image = global::Touhou_Launcher.Properties.Resources.Icon_th10;
+            this.trayMoF.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayMoF.Name = "trayMoF";
+            this.trayMoF.Size = new System.Drawing.Size(256, 38);
+            this.trayMoF.Text = "Mountain of Faith";
+            this.trayMoF.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // traySA
+            // 
+            this.traySA.Image = global::Touhou_Launcher.Properties.Resources.Icon_th11;
+            this.traySA.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.traySA.Name = "traySA";
+            this.traySA.Size = new System.Drawing.Size(256, 38);
+            this.traySA.Text = "Subterranean Animism";
+            this.traySA.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayUFO
+            // 
+            this.trayUFO.Image = global::Touhou_Launcher.Properties.Resources.Icon_th12;
+            this.trayUFO.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayUFO.Name = "trayUFO";
+            this.trayUFO.Size = new System.Drawing.Size(256, 38);
+            this.trayUFO.Text = "Undefined Fantastic Object";
+            this.trayUFO.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayTD
+            // 
+            this.trayTD.Image = global::Touhou_Launcher.Properties.Resources.Icon_th13;
+            this.trayTD.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTD.Name = "trayTD";
+            this.trayTD.Size = new System.Drawing.Size(256, 38);
+            this.trayTD.Text = "Ten Desires";
+            this.trayTD.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayDDC
+            // 
+            this.trayDDC.Image = global::Touhou_Launcher.Properties.Resources.Icon_th14;
+            this.trayDDC.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayDDC.Name = "trayDDC";
+            this.trayDDC.Size = new System.Drawing.Size(256, 38);
+            this.trayDDC.Text = "Double Dealing Character";
+            this.trayDDC.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayLoLK
+            // 
+            this.trayLoLK.Image = global::Touhou_Launcher.Properties.Resources.Icon_th15;
+            this.trayLoLK.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayLoLK.Name = "trayLoLK";
+            this.trayLoLK.Size = new System.Drawing.Size(256, 38);
+            this.trayLoLK.Text = "Legacy of Lunatic Kingdom";
+            this.trayLoLK.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayHSiFS
+            // 
+            this.trayHSiFS.Image = global::Touhou_Launcher.Properties.Resources.Icon_th16;
+            this.trayHSiFS.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayHSiFS.Name = "trayHSiFS";
+            this.trayHSiFS.Size = new System.Drawing.Size(256, 38);
+            this.trayHSiFS.Text = "Hidden Star in Four Seasons";
+            this.trayHSiFS.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayFighting
+            // 
+            this.trayFighting.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.trayIaMP,
+            this.traySWR,
+            this.trayUoNL,
+            this.trayHM,
+            this.trayULiL,
+            this.trayAoCF});
+            this.trayFighting.Name = "trayFighting";
+            this.trayFighting.Size = new System.Drawing.Size(157, 22);
+            this.trayFighting.Text = "Fighting Games";
+            // 
+            // trayIaMP
+            // 
+            this.trayIaMP.Image = global::Touhou_Launcher.Properties.Resources.Icon_th075;
+            this.trayIaMP.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayIaMP.Name = "trayIaMP";
+            this.trayIaMP.Size = new System.Drawing.Size(254, 38);
+            this.trayIaMP.Text = "Immaterial and Missing Power";
+            this.trayIaMP.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // traySWR
+            // 
+            this.traySWR.Image = global::Touhou_Launcher.Properties.Resources.Icon_th105;
+            this.traySWR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.traySWR.Name = "traySWR";
+            this.traySWR.Size = new System.Drawing.Size(254, 38);
+            this.traySWR.Text = "Scarlet Weather Rhapsody";
+            this.traySWR.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayUoNL
+            // 
+            this.trayUoNL.Image = global::Touhou_Launcher.Properties.Resources.Icon_th123;
+            this.trayUoNL.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayUoNL.Name = "trayUoNL";
+            this.trayUoNL.Size = new System.Drawing.Size(254, 38);
+            this.trayUoNL.Text = "Hisoutensoku";
+            this.trayUoNL.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayHM
+            // 
+            this.trayHM.Image = global::Touhou_Launcher.Properties.Resources.Icon_th135;
+            this.trayHM.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayHM.Name = "trayHM";
+            this.trayHM.Size = new System.Drawing.Size(254, 38);
+            this.trayHM.Text = "Hopeless Masquerade";
+            this.trayHM.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayULiL
+            // 
+            this.trayULiL.Image = global::Touhou_Launcher.Properties.Resources.Icon_th145;
+            this.trayULiL.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayULiL.Name = "trayULiL";
+            this.trayULiL.Size = new System.Drawing.Size(254, 38);
+            this.trayULiL.Text = "Urban Legend in Limbo";
+            this.trayULiL.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayAoCF
+            // 
+            this.trayAoCF.Image = global::Touhou_Launcher.Properties.Resources.Icon_th155;
+            this.trayAoCF.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayAoCF.Name = "trayAoCF";
+            this.trayAoCF.Size = new System.Drawing.Size(254, 38);
+            this.trayAoCF.Text = "Antinomy of Common Flowers";
+            this.trayAoCF.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayOther
+            // 
+            this.trayOther.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.trayStB,
+            this.trayDS,
+            this.trayGFW,
+            this.trayISC,
+            this.trayVD});
+            this.trayOther.Name = "trayOther";
+            this.trayOther.Size = new System.Drawing.Size(157, 22);
+            this.trayOther.Text = "Other Games";
+            // 
+            // trayStB
+            // 
+            this.trayStB.Image = global::Touhou_Launcher.Properties.Resources.Icon_th095;
+            this.trayStB.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayStB.Name = "trayStB";
+            this.trayStB.Size = new System.Drawing.Size(203, 38);
+            this.trayStB.Text = "Shoot the Bullet";
+            this.trayStB.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayDS
+            // 
+            this.trayDS.Image = global::Touhou_Launcher.Properties.Resources.Icon_th125;
+            this.trayDS.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayDS.Name = "trayDS";
+            this.trayDS.Size = new System.Drawing.Size(203, 38);
+            this.trayDS.Text = "Double Spoiler";
+            this.trayDS.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayGFW
+            // 
+            this.trayGFW.Image = global::Touhou_Launcher.Properties.Resources.Icon_th128;
+            this.trayGFW.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayGFW.Name = "trayGFW";
+            this.trayGFW.Size = new System.Drawing.Size(203, 38);
+            this.trayGFW.Text = "Great Fairy Wars";
+            this.trayGFW.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayISC
+            // 
+            this.trayISC.Image = global::Touhou_Launcher.Properties.Resources.Icon_th143;
+            this.trayISC.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayISC.Name = "trayISC";
+            this.trayISC.Size = new System.Drawing.Size(203, 38);
+            this.trayISC.Text = "Impossible Spell Card";
+            this.trayISC.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayVD
+            // 
+            this.trayVD.Image = global::Touhou_Launcher.Properties.Resources.Icon_th165;
+            this.trayVD.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayVD.Name = "trayVD";
+            this.trayVD.Size = new System.Drawing.Size(203, 38);
+            this.trayVD.Text = "Violet Detector";
+            this.trayVD.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayCustom
+            // 
+            this.trayCustom.Name = "trayCustom";
+            this.trayCustom.Size = new System.Drawing.Size(157, 22);
+            this.trayCustom.Text = "Custom Games";
+            // 
+            // trayRandom
+            // 
+            this.trayRandom.Name = "trayRandom";
+            this.trayRandom.Size = new System.Drawing.Size(157, 22);
+            this.trayRandom.Text = "Random Game";
+            this.trayRandom.Click += new System.EventHandler(this.btnRandom_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(154, 6);
             // 
-            // openToolMenu
+            // trayOpen
             // 
-            this.openToolMenu.Name = "openToolMenu";
-            this.openToolMenu.Size = new System.Drawing.Size(157, 22);
-            this.openToolMenu.Text = "Open";
+            this.trayOpen.Name = "trayOpen";
+            this.trayOpen.Size = new System.Drawing.Size(157, 22);
+            this.trayOpen.Text = "Open";
+            this.trayOpen.Click += new System.EventHandler(this.MainForm_Show);
             // 
-            // exitToolMenu
+            // trayExit
             // 
-            this.exitToolMenu.Name = "exitToolMenu";
-            this.exitToolMenu.Size = new System.Drawing.Size(157, 22);
-            this.exitToolMenu.Text = "Exit";
+            this.trayExit.Name = "trayExit";
+            this.trayExit.Size = new System.Drawing.Size(157, 22);
+            this.trayExit.Text = "Exit";
+            this.trayExit.Click += new System.EventHandler(this.trayExit_Click);
+            // 
+            // trayIcon
+            // 
+            this.trayIcon.ContextMenuStrip = this.trayMenu;
+            this.trayIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("trayIcon.Icon")));
+            this.trayIcon.Text = "Touhou Launcher";
+            this.trayIcon.DoubleClick += new System.EventHandler(this.MainForm_Show);
             // 
             // MainForm
             // 
@@ -2118,6 +2242,8 @@
             this.MinimumSize = new System.Drawing.Size(550, 600);
             this.Name = "MainForm";
             this.Text = "Touhou Launcher";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_Closing);
+            this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.gameContextMenu.ResumeLayout(false);
             this.customContextMenu.ResumeLayout(false);
             this.customFolderContextMenu.ResumeLayout(false);
@@ -2137,8 +2263,8 @@
             this.launcherSettings.ResumeLayout(false);
             this.launcherSettings.PerformLayout();
             this.replays.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.replayPanel.ResumeLayout(false);
+            this.replayPanel.PerformLayout();
             this.customGames.ResumeLayout(false);
             this.customGames.PerformLayout();
             this.mainControl.ResumeLayout(false);
@@ -2149,7 +2275,7 @@
             this.flowLayoutPanel2.ResumeLayout(false);
             this.mainGroup.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.trayMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2183,7 +2309,7 @@
         private System.Windows.Forms.TabPage settings;
         private System.Windows.Forms.TabPage replays;
         private System.Windows.Forms.WebBrowser replayBrowser;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel replayPanel;
         private System.Windows.Forms.RadioButton appspotReplays;
         private System.Windows.Forms.RadioButton royalflareReplays;
         private System.Windows.Forms.RadioButton gensokyoReplays;
@@ -2276,44 +2402,52 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem mainToolMenu;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem9;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem10;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem11;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem12;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem13;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem14;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem15;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem16;
-        private System.Windows.Forms.ToolStripMenuItem fightingToolMenu;
-        private System.Windows.Forms.ToolStripMenuItem otherToolMenu;
-        private System.Windows.Forms.ToolStripMenuItem customToolMenu;
-        private System.Windows.Forms.ToolStripMenuItem randomToolMenu;
+        private System.Windows.Forms.ContextMenuStrip trayMenu;
+        private System.Windows.Forms.ToolStripMenuItem trayMain;
+        private System.Windows.Forms.ToolStripMenuItem trayHRtP;
+        private System.Windows.Forms.ToolStripMenuItem traySoEW;
+        private System.Windows.Forms.ToolStripMenuItem trayPoDD;
+        private System.Windows.Forms.ToolStripMenuItem trayLLS;
+        private System.Windows.Forms.ToolStripMenuItem trayMS;
+        private System.Windows.Forms.ToolStripMenuItem trayEoSD;
+        private System.Windows.Forms.ToolStripMenuItem trayPCB;
+        private System.Windows.Forms.ToolStripMenuItem trayIN;
+        private System.Windows.Forms.ToolStripMenuItem trayPoFV;
+        private System.Windows.Forms.ToolStripMenuItem trayMoF;
+        private System.Windows.Forms.ToolStripMenuItem traySA;
+        private System.Windows.Forms.ToolStripMenuItem trayUFO;
+        private System.Windows.Forms.ToolStripMenuItem trayTD;
+        private System.Windows.Forms.ToolStripMenuItem trayDDC;
+        private System.Windows.Forms.ToolStripMenuItem trayLoLK;
+        private System.Windows.Forms.ToolStripMenuItem trayHSiFS;
+        private System.Windows.Forms.ToolStripMenuItem trayFighting;
+        private System.Windows.Forms.ToolStripMenuItem trayOther;
+        private System.Windows.Forms.ToolStripMenuItem trayCustom;
+        private System.Windows.Forms.ToolStripMenuItem trayRandom;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem openToolMenu;
-        private System.Windows.Forms.ToolStripMenuItem exitToolMenu;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem17;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem18;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem19;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem20;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem21;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem22;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem23;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem24;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem25;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem26;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem27;
+        private System.Windows.Forms.ToolStripMenuItem trayOpen;
+        private System.Windows.Forms.ToolStripMenuItem trayExit;
+        private System.Windows.Forms.ToolStripMenuItem trayIaMP;
+        private System.Windows.Forms.ToolStripMenuItem traySWR;
+        private System.Windows.Forms.ToolStripMenuItem trayUoNL;
+        private System.Windows.Forms.ToolStripMenuItem trayHM;
+        private System.Windows.Forms.ToolStripMenuItem trayULiL;
+        private System.Windows.Forms.ToolStripMenuItem trayAoCF;
+        private System.Windows.Forms.ToolStripMenuItem trayStB;
+        private System.Windows.Forms.ToolStripMenuItem trayDS;
+        private System.Windows.Forms.ToolStripMenuItem trayGFW;
+        private System.Windows.Forms.ToolStripMenuItem trayISC;
+        private System.Windows.Forms.ToolStripMenuItem trayVD;
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.NotifyIcon trayIcon;
+        private System.Windows.Forms.CheckBox showTray;
+        private System.Windows.Forms.CheckBox minimizeToTray;
+        private System.Windows.Forms.Button browsecrap;
+        private System.Windows.Forms.TextBox crapDir;
+        private System.Windows.Forms.Label crapDirLabel;
+        private System.Windows.Forms.Button crapConfigure;
+        private System.Windows.Forms.TextBox linkReplays;
     }
 }
 

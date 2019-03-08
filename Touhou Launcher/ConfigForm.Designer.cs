@@ -48,9 +48,7 @@
             this.launchEN = new System.Windows.Forms.Button();
             this.launchJP = new System.Windows.Forms.Button();
             this.launchcrap = new System.Windows.Forms.Button();
-            this.browsecrap = new System.Windows.Forms.Button();
             this.crapLabel = new System.Windows.Forms.Label();
-            this.crapDir = new System.Windows.Forms.TextBox();
             this.customApplocale = new System.Windows.Forms.CheckBox();
             this.defaultApplocale = new System.Windows.Forms.CheckBox();
             this.crapApplocale = new System.Windows.Forms.CheckBox();
@@ -69,7 +67,10 @@
             this.browseHDI = new System.Windows.Forms.Button();
             this.hdiDir = new System.Windows.Forms.TextBox();
             this.bannerSettings = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.windowsSettings = new System.Windows.Forms.GroupBox();
+            this.crapCfg = new System.Windows.Forms.ComboBox();
+            this.crapGame = new System.Windows.Forms.ComboBox();
             this.openAppdata = new System.Windows.Forms.Button();
             this.pc98Settings.SuspendLayout();
             this.bannerSettings.SuspendLayout();
@@ -78,7 +79,6 @@
             // 
             // openFolder
             // 
-            this.openFolder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.openFolder.Location = new System.Drawing.Point(337, 235);
             this.openFolder.Name = "openFolder";
             this.openFolder.Size = new System.Drawing.Size(242, 23);
@@ -89,7 +89,6 @@
             // 
             // openvpatch
             // 
-            this.openvpatch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.openvpatch.Location = new System.Drawing.Point(231, 227);
             this.openvpatch.Name = "openvpatch";
             this.openvpatch.Size = new System.Drawing.Size(91, 23);
@@ -133,7 +132,6 @@
             // 
             // browseJP
             // 
-            this.browseJP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.browseJP.Location = new System.Drawing.Point(196, 32);
             this.browseJP.Name = "browseJP";
             this.browseJP.Size = new System.Drawing.Size(62, 22);
@@ -156,9 +154,9 @@
             this.enLabel.AutoSize = true;
             this.enLabel.Location = new System.Drawing.Point(6, 64);
             this.enLabel.Name = "enLabel";
-            this.enLabel.Size = new System.Drawing.Size(103, 13);
+            this.enLabel.Size = new System.Drawing.Size(100, 13);
             this.enLabel.TabIndex = 7;
-            this.enLabel.Text = "English Executable::";
+            this.enLabel.Text = "English Executable:";
             // 
             // customLabel
             // 
@@ -171,7 +169,6 @@
             // 
             // openReplays
             // 
-            this.openReplays.Cursor = System.Windows.Forms.Cursors.Hand;
             this.openReplays.Location = new System.Drawing.Point(106, 227);
             this.openReplays.Name = "openReplays";
             this.openReplays.Size = new System.Drawing.Size(119, 23);
@@ -182,7 +179,6 @@
             // 
             // browseEN
             // 
-            this.browseEN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.browseEN.Location = new System.Drawing.Point(196, 80);
             this.browseEN.Name = "browseEN";
             this.browseEN.Size = new System.Drawing.Size(62, 22);
@@ -193,7 +189,6 @@
             // 
             // browseCustom
             // 
-            this.browseCustom.Cursor = System.Windows.Forms.Cursors.Hand;
             this.browseCustom.Location = new System.Drawing.Point(196, 126);
             this.browseCustom.Name = "browseCustom";
             this.browseCustom.Size = new System.Drawing.Size(62, 22);
@@ -239,7 +234,6 @@
             // 
             // launchCustom
             // 
-            this.launchCustom.Cursor = System.Windows.Forms.Cursors.Hand;
             this.launchCustom.Location = new System.Drawing.Point(264, 126);
             this.launchCustom.Name = "launchCustom";
             this.launchCustom.Size = new System.Drawing.Size(55, 22);
@@ -250,7 +244,6 @@
             // 
             // launchEN
             // 
-            this.launchEN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.launchEN.Location = new System.Drawing.Point(264, 80);
             this.launchEN.Name = "launchEN";
             this.launchEN.Size = new System.Drawing.Size(55, 22);
@@ -261,7 +254,6 @@
             // 
             // launchJP
             // 
-            this.launchJP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.launchJP.Location = new System.Drawing.Point(264, 32);
             this.launchJP.Name = "launchJP";
             this.launchJP.Size = new System.Drawing.Size(55, 22);
@@ -272,45 +264,22 @@
             // 
             // launchcrap
             // 
-            this.launchcrap.Cursor = System.Windows.Forms.Cursors.Hand;
             this.launchcrap.Location = new System.Drawing.Point(264, 171);
             this.launchcrap.Name = "launchcrap";
             this.launchcrap.Size = new System.Drawing.Size(55, 22);
             this.launchcrap.TabIndex = 23;
             this.launchcrap.Text = "Launch";
             this.launchcrap.UseVisualStyleBackColor = true;
-            this.launchcrap.Click += new System.EventHandler(this.launch_Click);
-            // 
-            // browsecrap
-            // 
-            this.browsecrap.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.browsecrap.Location = new System.Drawing.Point(196, 171);
-            this.browsecrap.Name = "browsecrap";
-            this.browsecrap.Size = new System.Drawing.Size(62, 22);
-            this.browsecrap.TabIndex = 22;
-            this.browsecrap.Text = "Browse";
-            this.browsecrap.UseVisualStyleBackColor = true;
-            this.browsecrap.Click += new System.EventHandler(this.browse_Click);
+            this.launchcrap.Click += new System.EventHandler(this.launchcrap_Click);
             // 
             // crapLabel
             // 
             this.crapLabel.AutoSize = true;
             this.crapLabel.Location = new System.Drawing.Point(6, 155);
             this.crapLabel.Name = "crapLabel";
-            this.crapLabel.Size = new System.Drawing.Size(133, 13);
+            this.crapLabel.Size = new System.Drawing.Size(72, 13);
             this.crapLabel.TabIndex = 21;
-            this.crapLabel.Text = "thcrap Shortcut/Argument:";
-            // 
-            // crapDir
-            // 
-            this.crapDir.AllowDrop = true;
-            this.crapDir.Location = new System.Drawing.Point(9, 171);
-            this.crapDir.Name = "crapDir";
-            this.crapDir.Size = new System.Drawing.Size(181, 20);
-            this.crapDir.TabIndex = 20;
-            this.crapDir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
-            this.crapDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
-            this.crapDir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
+            this.crapLabel.Text = "thcrap Profile:";
             // 
             // customApplocale
             // 
@@ -377,7 +346,6 @@
             // 
             // browseBannerOn
             // 
-            this.browseBannerOn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.browseBannerOn.Location = new System.Drawing.Point(176, 30);
             this.browseBannerOn.Name = "browseBannerOn";
             this.browseBannerOn.Size = new System.Drawing.Size(62, 22);
@@ -408,7 +376,6 @@
             // 
             // browseBannerOff
             // 
-            this.browseBannerOff.Cursor = System.Windows.Forms.Cursors.Hand;
             this.browseBannerOff.Location = new System.Drawing.Point(176, 78);
             this.browseBannerOff.Name = "browseBannerOff";
             this.browseBannerOff.Size = new System.Drawing.Size(62, 22);
@@ -440,11 +407,10 @@
             this.pc98Settings.Size = new System.Drawing.Size(244, 115);
             this.pc98Settings.TabIndex = 35;
             this.pc98Settings.TabStop = false;
-            this.pc98Settings.Text = "PC-98 Settings";
+            this.pc98Settings.Text = "PC-98 Game Settings";
             // 
             // openNP2Folder
             // 
-            this.openNP2Folder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.openNP2Folder.Location = new System.Drawing.Point(9, 88);
             this.openNP2Folder.Name = "openNP2Folder";
             this.openNP2Folder.Size = new System.Drawing.Size(229, 23);
@@ -455,7 +421,6 @@
             // 
             // launchHDI
             // 
-            this.launchHDI.Cursor = System.Windows.Forms.Cursors.Hand;
             this.launchHDI.Location = new System.Drawing.Point(183, 66);
             this.launchHDI.Name = "launchHDI";
             this.launchHDI.Size = new System.Drawing.Size(55, 22);
@@ -475,7 +440,6 @@
             // 
             // browseHDI
             // 
-            this.browseHDI.Cursor = System.Windows.Forms.Cursors.Hand;
             this.browseHDI.Location = new System.Drawing.Point(9, 66);
             this.browseHDI.Name = "browseHDI";
             this.browseHDI.Size = new System.Drawing.Size(62, 22);
@@ -497,6 +461,7 @@
             // 
             // bannerSettings
             // 
+            this.bannerSettings.Controls.Add(this.label1);
             this.bannerSettings.Controls.Add(this.bannerOnLabel);
             this.bannerSettings.Controls.Add(this.chkCustomBanner);
             this.bannerSettings.Controls.Add(this.bannerOffLabel);
@@ -511,8 +476,19 @@
             this.bannerSettings.TabStop = false;
             this.bannerSettings.Text = "Banner Settings";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(183, 60);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "* 120 x 44";
+            // 
             // windowsSettings
             // 
+            this.windowsSettings.Controls.Add(this.crapCfg);
+            this.windowsSettings.Controls.Add(this.crapGame);
             this.windowsSettings.Controls.Add(this.openAppdata);
             this.windowsSettings.Controls.Add(this.jpLabel);
             this.windowsSettings.Controls.Add(this.openvpatch);
@@ -526,11 +502,9 @@
             this.windowsSettings.Controls.Add(this.browseJP);
             this.windowsSettings.Controls.Add(this.launchcrap);
             this.windowsSettings.Controls.Add(this.enLabel);
-            this.windowsSettings.Controls.Add(this.browsecrap);
             this.windowsSettings.Controls.Add(this.customLabel);
             this.windowsSettings.Controls.Add(this.crapLabel);
             this.windowsSettings.Controls.Add(this.openReplays);
-            this.windowsSettings.Controls.Add(this.crapDir);
             this.windowsSettings.Controls.Add(this.browseEN);
             this.windowsSettings.Controls.Add(this.launchJP);
             this.windowsSettings.Controls.Add(this.browseCustom);
@@ -544,11 +518,34 @@
             this.windowsSettings.Size = new System.Drawing.Size(328, 255);
             this.windowsSettings.TabIndex = 36;
             this.windowsSettings.TabStop = false;
-            this.windowsSettings.Text = "Windows Settings";
+            this.windowsSettings.Text = "Windows Game Settings";
+            // 
+            // crapCfg
+            // 
+            this.crapCfg.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.crapCfg.FormattingEnabled = true;
+            this.crapCfg.Items.AddRange(new object[] {
+            "None"});
+            this.crapCfg.Location = new System.Drawing.Point(128, 171);
+            this.crapCfg.Name = "crapCfg";
+            this.crapCfg.Size = new System.Drawing.Size(130, 21);
+            this.crapCfg.TabIndex = 30;
+            this.crapCfg.SelectedIndexChanged += new System.EventHandler(this.crapCfg_SelectedIndexChanged);
+            // 
+            // crapGame
+            // 
+            this.crapGame.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.crapGame.FormattingEnabled = true;
+            this.crapGame.Items.AddRange(new object[] {
+            "None"});
+            this.crapGame.Location = new System.Drawing.Point(6, 171);
+            this.crapGame.Name = "crapGame";
+            this.crapGame.Size = new System.Drawing.Size(116, 21);
+            this.crapGame.TabIndex = 29;
+            this.crapGame.SelectedIndexChanged += new System.EventHandler(this.crapCfg_SelectedIndexChanged);
             // 
             // openAppdata
             // 
-            this.openAppdata.Cursor = System.Windows.Forms.Cursors.Hand;
             this.openAppdata.Location = new System.Drawing.Point(9, 227);
             this.openAppdata.Name = "openAppdata";
             this.openAppdata.Size = new System.Drawing.Size(91, 23);
@@ -570,7 +567,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ConfigForm";
-            this.Text = "Game Configuration";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Game Configuration: ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ConfigForm_Closing);
             this.Load += new System.EventHandler(this.ConfigForm_Load);
             this.pc98Settings.ResumeLayout(false);
@@ -604,9 +602,7 @@
         private System.Windows.Forms.Button launchEN;
         private System.Windows.Forms.Button launchJP;
         private System.Windows.Forms.Button launchcrap;
-        private System.Windows.Forms.Button browsecrap;
         private System.Windows.Forms.Label crapLabel;
-        private System.Windows.Forms.TextBox crapDir;
         private System.Windows.Forms.CheckBox customApplocale;
         private System.Windows.Forms.CheckBox defaultApplocale;
         private System.Windows.Forms.CheckBox crapApplocale;
@@ -627,5 +623,8 @@
         private System.Windows.Forms.GroupBox windowsSettings;
         private System.Windows.Forms.Button openAppdata;
         private System.Windows.Forms.Button openNP2Folder;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox crapGame;
+        private System.Windows.Forms.ComboBox crapCfg;
     }
 }

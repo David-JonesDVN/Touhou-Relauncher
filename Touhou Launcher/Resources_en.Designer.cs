@@ -196,7 +196,25 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to thcrap Shortcut/Argument:.
+        ///   Looks up a localized string similar to Configure thcrap.
+        /// </summary>
+        public static string crapConfigure {
+            get {
+                return ResourceManager.GetString("crapConfigure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to thcrap_loader Location:.
+        /// </summary>
+        public static string crapDirLabel {
+            get {
+                return ResourceManager.GetString("crapDirLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to thcrap Profile:.
         /// </summary>
         public static string crapLabel {
             get {
@@ -210,6 +228,24 @@ namespace Touhou_Launcher {
         public static string customAdd {
             get {
                 return ResourceManager.GetString("customAdd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete Category &apos;{0}&apos; and all of its contents?.
+        /// </summary>
+        public static string customCategoryDeleteConfirm {
+            get {
+                return ResourceManager.GetString("customCategoryDeleteConfirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete &apos;{0}&apos;?.
+        /// </summary>
+        public static string customDeleteConfirm {
+            get {
+                return ResourceManager.GetString("customDeleteConfirm", resourceCulture);
             }
         }
         
@@ -385,6 +421,24 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please set thcrap&apos;s profile.
+        /// </summary>
+        public static string errorcrapConfigNotSet {
+            get {
+                return ResourceManager.GetString("errorcrapConfigNotSet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please set thcrap&apos;s location.
+        /// </summary>
+        public static string errorcrapNotFound {
+            get {
+                return ResourceManager.GetString("errorcrapNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to File could not be found.
         /// </summary>
         public static string errorFileNotFound {
@@ -421,11 +475,21 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cannot open file as image:\n.
+        ///   Looks up a localized string similar to Cannot open file as image:
+        ///.
         /// </summary>
         public static string errorOpenImage {
             get {
                 return ResourceManager.GetString("errorOpenImage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Games Selected.
+        /// </summary>
+        public static string errorRandomListEmpty {
+            get {
+                return ResourceManager.GetString("errorRandomListEmpty", resourceCulture);
             }
         }
         
@@ -459,9 +523,18 @@ namespace Touhou_Launcher {
         /// <summary>
         ///   Looks up a localized string similar to Fighting Games.
         /// </summary>
-        public static string FightingGroup {
+        public static string fightingGroup {
             get {
-                return ResourceManager.GetString("FightingGroup", resourceCulture);
+                return ResourceManager.GetString("fightingGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game Configuration: .
+        /// </summary>
+        public static string gameConfiguration {
+            get {
+                return ResourceManager.GetString("gameConfiguration", resourceCulture);
             }
         }
         
@@ -475,7 +548,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Select Executable/Shortcut.
+        ///   Looks up a localized string similar to Select Executable.
         /// </summary>
         public static string gameSelectTitle {
             get {
@@ -828,9 +901,18 @@ namespace Touhou_Launcher {
         /// <summary>
         ///   Looks up a localized string similar to Main Games.
         /// </summary>
-        public static string MainGroup {
+        public static string mainGroup {
             get {
-                return ResourceManager.GetString("MainGroup", resourceCulture);
+                return ResourceManager.GetString("mainGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minimize to tray.
+        /// </summary>
+        public static string minimizeToTray {
+            get {
+                return ResourceManager.GetString("minimizeToTray", resourceCulture);
             }
         }
         
@@ -898,7 +980,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Neko Project II Location.
+        ///   Looks up a localized string similar to Neko Project II Location:.
         /// </summary>
         public static string np2Label {
             get {
@@ -981,14 +1063,14 @@ namespace Touhou_Launcher {
         /// <summary>
         ///   Looks up a localized string similar to Other Games.
         /// </summary>
-        public static string OtherGroup {
+        public static string otherGroup {
             get {
-                return ResourceManager.GetString("OtherGroup", resourceCulture);
+                return ResourceManager.GetString("otherGroup", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to PC-98 Settings.
+        ///   Looks up a localized string similar to PC-98 Game Settings.
         /// </summary>
         public static string pc98Settings {
             get {
@@ -1106,7 +1188,7 @@ namespace Touhou_Launcher {
         
         /// <summary>
         ///   Looks up a localized string similar to Games that will be included in the
-        ///random game option.
+        ///random game option:.
         /// </summary>
         public static string randomLabel {
             get {
@@ -1160,6 +1242,44 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Download &apos;{0}&apos; to:
+        ///&apos;{1}&apos;.
+        /// </summary>
+        public static string replayDownload {
+            get {
+                return ResourceManager.GetString("replayDownload", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Download Replay?.
+        /// </summary>
+        public static string replayDownloadTitle {
+            get {
+                return ResourceManager.GetString("replayDownloadTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Replay Files.
+        /// </summary>
+        public static string replayFilter {
+            get {
+                return ResourceManager.GetString("replayFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Player replays full and Touhou 10 does not support user replays.
+        ///.
+        /// </summary>
+        public static string replayFull {
+            get {
+                return ResourceManager.GetString("replayFull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Replays.
         /// </summary>
         public static string replays {
@@ -1201,6 +1321,15 @@ namespace Touhou_Launcher {
         public static string settings {
             get {
                 return ResourceManager.GetString("settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Always show tray icon.
+        /// </summary>
+        public static string showTray {
+            get {
+                return ResourceManager.GetString("showTray", resourceCulture);
             }
         }
         
@@ -1349,6 +1478,33 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exit.
+        /// </summary>
+        public static string trayExit {
+            get {
+                return ResourceManager.GetString("trayExit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open.
+        /// </summary>
+        public static string trayOpen {
+            get {
+                return ResourceManager.GetString("trayOpen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Random Game.
+        /// </summary>
+        public static string trayRandom {
+            get {
+                return ResourceManager.GetString("trayRandom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Undefined Fantastic Object.
         /// </summary>
         public static string UFO {
@@ -1475,7 +1631,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Windows Settings.
+        ///   Looks up a localized string similar to Windows Game Settings.
         /// </summary>
         public static string windowsSettings {
             get {
