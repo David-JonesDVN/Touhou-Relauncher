@@ -268,7 +268,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Double Dealing Character.
+        ///   Looks up a localized string similar to Double Drealing Character.
         /// </summary>
         public static string DDC {
             get {

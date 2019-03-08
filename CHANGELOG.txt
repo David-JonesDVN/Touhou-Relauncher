@@ -1,9 +1,4 @@
 1.0
-Fixed: IaMP's text color being black for some reason.
-Fixed: Background pictures for games being one pixel off.
-Fixed: Double Dealing Character typo
-
-1.0-pre (06/03/2019)
 Added: Replay downloader. Includes 3 websites + manual link input.
 Added: Tray icon including minimization to tray and always-on tray settings. Can be used to launch any game set up in the program.
 Added: thcrap directory setting.
@@ -26,6 +21,7 @@ Fixed: Custom banner checkbox and text box not saving when the latter is edited 
 Fixed: Previously filled textboxes being re-filled.
 Fixed: Randomizer select buttons are symmetrical and fit more text.
 Fixed: The random button stretching by resizing the window.
+Fixed: IaMP's text color being black for some reason.
 Updated localization files.
 Code reorganization
 
