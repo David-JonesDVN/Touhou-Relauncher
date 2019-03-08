@@ -1548,7 +1548,6 @@
             this.btnIaMP.ContextMenuStrip = this.gameContextMenu;
             this.btnIaMP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIaMP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIaMP.ForeColor = System.Drawing.SystemColors.Window;
             this.btnIaMP.Image = global::Touhou_Launcher.Properties.Resources.iampg;
             this.btnIaMP.Location = new System.Drawing.Point(3, 3);
             this.btnIaMP.Name = "btnIaMP";
