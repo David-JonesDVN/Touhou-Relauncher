@@ -1,6 +1,7 @@
 1.0-pre2
 Fixed: Background pictures for games being one pixel off.
-Fixed: Double Dealing Character typo
+Fixed: Double Dealing Character typo.
+Fixed: Custom banner checkbox not saving.
 
 1.0-pre (06/03/2019)
 Added: Replay downloader. Includes 3 websites + manual link input.
