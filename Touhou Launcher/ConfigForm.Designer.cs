@@ -334,6 +334,7 @@
             this.chkCustomBanner.TabIndex = 28;
             this.chkCustomBanner.Text = "Use custom banner";
             this.chkCustomBanner.UseVisualStyleBackColor = true;
+            this.chkCustomBanner.CheckedChanged += new System.EventHandler(this.chkCustomBanner_CheckedChanged);
             // 
             // bannerOnLabel
             // 
