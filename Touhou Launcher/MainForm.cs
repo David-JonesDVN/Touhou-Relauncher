@@ -196,14 +196,14 @@ namespace Touhou_Launcher
         {
             for (int i = 0; i < nodeList.Nodes.Count; i++)
             {
-                parent.DropDownItems.Add(nodeList.Nodes[i].Text);
+                ToolStripMenuItem category = (ToolStripMenuItem)parent.DropDownItems.Add(nodeList.Nodes[i].Text);
+                JSONToTray(nodeList.Nodes[i], (ToolStripMenuItem)parent.DropDownItems[i]);
                 foreach (KeyValuePair<string, string> game in nodeList.Nodes[i].Games)
                 {
-                    ToolStripItem gameItem = parent.DropDownItems.Add(game.Value, Icon.ExtractAssociatedIcon(game.Key).ToBitmap(), trayCustom_Click);
+                    ToolStripItem gameItem = category.DropDownItems.Add(game.Value, Icon.ExtractAssociatedIcon(game.Key).ToBitmap(), trayCustom_Click);
                     gameItem.Tag = game.Key;
                     gameItem.ImageScaling = ToolStripItemImageScaling.None;
                 }
-                JSONToTray(nodeList.Nodes[i], (ToolStripMenuItem)parent.DropDownItems[i]);
             }
         }
 

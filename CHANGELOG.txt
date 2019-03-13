@@ -2,6 +2,7 @@
 Fixed: Background pictures for games being one pixel off.
 Fixed: Double Dealing Character typo.
 Fixed: Custom banner checkbox not saving.
+Fixed: Tray icon's custom games list adding games to their parent category.
 
 1.0-pre (06/03/2019)
 Added: Replay downloader. Includes 3 websites + manual link input.
