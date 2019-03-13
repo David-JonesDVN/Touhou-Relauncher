@@ -404,6 +404,18 @@ namespace Touhou_Launcher
             }
         }
 
+        private void customAddItem(string[] files)
+        {
+            foreach (string file in files)
+            {
+                if (!((Dictionary<string, string>)treeView1.SelectedNode.Tag).ContainsKey(file))
+                    ((Dictionary<string, string>)treeView1.SelectedNode.Tag).Add(file, Path.GetFileNameWithoutExtension(file));
+            }
+            curCfg.Custom = TreeToJSON(treeView1, new SubNode());
+            curCfg.Save();
+            RefreshList(ref listView1, (Dictionary<string, string>)treeView1.SelectedNode.Tag);
+        }
+
         private void RefreshList(ref ListView list, Dictionary<string, string> files)
         {
             list.Clear();
@@ -518,13 +530,7 @@ namespace Touhou_Launcher
         {
             if (treeView1.SelectedNode != null)
             {
-                foreach (string file in FileBrowser(rm.GetString("gameSelectTitle"), rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + rm.GetString("allFilter") + " (*.*)|*.*", true))
-                {
-                    ((Dictionary<string, string>)treeView1.SelectedNode.Tag).Add(file, Path.GetFileNameWithoutExtension(file));
-                }
-                curCfg.Custom = TreeToJSON(treeView1, new SubNode());
-                curCfg.Save();
-                RefreshList(ref listView1, (Dictionary<string, string>)treeView1.SelectedNode.Tag);
+                customAddItem(FileBrowser(rm.GetString("gameSelectTitle"), rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + rm.GetString("allFilter") + " (*.*)|*.*", true));
             }
         }
 
@@ -544,20 +550,23 @@ namespace Touhou_Launcher
 
         private void treeView1_AfterLabelEdit(object sender, NodeLabelEditEventArgs e)
         {
-            int i = 0;
-        search:
-            foreach (TreeNode node in treeView1.Nodes)
+            if (e.Label != null)
             {
-                if (node.Name == e.Label.Replace(" ", "") + i)
+                int i = 0;
+            search:
+                foreach (TreeNode node in treeView1.Nodes)
                 {
-                    i++;
-                    goto search;
+                    if (node.Name == e.Label.Replace(" ", "") + i)
+                    {
+                        i++;
+                        goto search;
+                    }
                 }
+                e.Node.Name = e.Label.Replace(" ", "") + i;
+                e.Node.Text = e.Label;
+                curCfg.Custom = TreeToJSON(treeView1, new SubNode());
+                curCfg.Save();
             }
-            e.Node.Name = e.Label.Replace(" ", "") + i;
-            e.Node.Text = e.Label;
-            curCfg.Custom = TreeToJSON(treeView1, new SubNode());
-            curCfg.Save();
         }
 
         private void newCategoryToolStripMenuItem_Click(object sender, EventArgs e)
@@ -612,20 +621,20 @@ namespace Touhou_Launcher
 
         private void listView1_DragDrop(object sender, DragEventArgs e)
         {
-            foreach (string file in (string[])e.Data.GetData(DataFormats.FileDrop))
+            if (treeView1.SelectedNode != null)
             {
-                ((Dictionary<string, string>)treeView1.SelectedNode.Tag).Add(file, Path.GetFileNameWithoutExtension(file));
+                customAddItem((string[])e.Data.GetData(DataFormats.FileDrop));
             }
-            curCfg.Custom = TreeToJSON(treeView1, new SubNode());
-            curCfg.Save();
-            RefreshList(ref listView1, (Dictionary<string, string>)treeView1.SelectedNode.Tag);
         }
 
         private void listView1_AfterLabelEdit(object sender, LabelEditEventArgs e)
         {
-            ((Dictionary<string, string>)treeView1.SelectedNode.Tag)[listView1.Items[e.Item].Name] = e.Label;
-            curCfg.Custom = TreeToJSON(treeView1, new SubNode());
-            curCfg.Save();
+            if (e.Label != null)
+            {
+                ((Dictionary<string, string>)treeView1.SelectedNode.Tag)[listView1.Items[e.Item].Name] = e.Label;
+                curCfg.Custom = TreeToJSON(treeView1, new SubNode());
+                curCfg.Save();
+            }
         }
 
         private void listView1_DoubleClick(object sender, EventArgs e)

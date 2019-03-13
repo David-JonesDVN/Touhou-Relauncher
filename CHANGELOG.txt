@@ -3,6 +3,8 @@ Fixed: Background pictures for games being one pixel off.
 Fixed: Double Dealing Character typo.
 Fixed: Custom banner checkbox not saving.
 Fixed: Tray icon's custom games list adding games to their parent category.
+Fixed: Not changing the name while renaming custom games/categories would result in an error.
+Fixed: Adding the same custom game multiple times. (As long as the path is the exact same)
 
 1.0-pre (06/03/2019)
 Added: Replay downloader. Includes 3 websites + manual link input.
