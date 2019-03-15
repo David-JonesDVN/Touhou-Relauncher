@@ -1,7 +1,9 @@
 1.0-pre2
+Changed: Custom game categories no longer save their key name in the config (hopefully since they are no longer needed).
 Fixed: Background pictures for games being one pixel off.
 Fixed: Double Dealing Character typo.
 Fixed: Custom banner checkbox not saving.
+Fixed: Tab order for the controls.
 Fixed: Tray icon's custom games list adding games to their parent category.
 Fixed: Not changing the name while renaming custom games/categories would result in an error.
 Fixed: Adding the same custom game multiple times. (As long as the path is the exact same)

@@ -29,10 +29,14 @@ namespace Touhou_Launcher
 
         public class SubNode
         {
-            public string Name { get; set; }
             public string Text { get; set; }
             public List<SubNode> Nodes = new List<SubNode>();
             public Dictionary<string, string> Games = new Dictionary<string, string>();
+            
+            public SubNode(string Text = "The root node")
+            {
+                this.Text = Text;
+            }
         }
 
         public class AppSettings<T> where T : new()
@@ -144,9 +148,7 @@ namespace Touhou_Launcher
         {
             foreach (TreeNode node in parent.Nodes)
             {
-                SubNode snode = new SubNode();
-                snode.Name = node.Name;
-                snode.Text = node.Text;
+                SubNode snode = new SubNode(node.Text);
                 if (node.Tag != null)
                     snode.Games = (Dictionary<string, string>)node.Tag;
                 serializableTree.Nodes.Add(snode);
@@ -157,13 +159,9 @@ namespace Touhou_Launcher
 
         private SubNode TreeToJSON(TreeView parent, SubNode serializableTree)
         {
-            serializableTree.Name = "Root";
-            serializableTree.Text = "The root node";
             foreach (TreeNode node in parent.Nodes)
             {
-                SubNode snode = new SubNode();
-                snode.Name = node.Name;
-                snode.Text = node.Text;
+                SubNode snode = new SubNode(node.Text);
                 if (node.Tag != null)
                     snode.Games = (Dictionary<string, string>)node.Tag;
                 serializableTree.Nodes.Add(snode);
@@ -176,7 +174,7 @@ namespace Touhou_Launcher
         {
             for (int i = 0; i < nodeList.Nodes.Count; i++)
             {
-                TreeNode newNode = parent.Nodes.Add(nodeList.Nodes[i].Name, nodeList.Nodes[i].Text);
+                TreeNode newNode = parent.Nodes.Add(nodeList.Nodes[i].Text);
                 newNode.Tag = nodeList.Nodes[i].Games;
                 JSONToTree(nodeList.Nodes[i], parent.Nodes[i]);
             }
@@ -186,7 +184,7 @@ namespace Touhou_Launcher
         {
             for (int i = 0; i < nodeList.Nodes.Count; i++)
             {
-                TreeNode newNode = parent.Nodes.Add(nodeList.Nodes[i].Name, nodeList.Nodes[i].Text);
+                TreeNode newNode = parent.Nodes.Add(nodeList.Nodes[i].Text);
                 newNode.Tag = nodeList.Nodes[i].Games;
                 JSONToTree(nodeList.Nodes[i], parent.Nodes[i]);
             }
@@ -552,17 +550,6 @@ namespace Touhou_Launcher
         {
             if (e.Label != null)
             {
-                int i = 0;
-            search:
-                foreach (TreeNode node in treeView1.Nodes)
-                {
-                    if (node.Name == e.Label.Replace(" ", "") + i)
-                    {
-                        i++;
-                        goto search;
-                    }
-                }
-                e.Node.Name = e.Label.Replace(" ", "") + i;
                 e.Node.Text = e.Label;
                 curCfg.Custom = TreeToJSON(treeView1, new SubNode());
                 curCfg.Save();
