@@ -1111,7 +1111,7 @@
             this.crapDir.Size = new System.Drawing.Size(107, 20);
             this.crapDir.TabIndex = 6;
             this.crapDir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
-            this.crapDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
+            this.crapDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.DragEnter);
             this.crapDir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
             // 
             // crapDirLabel
@@ -1186,7 +1186,7 @@
             this.np2Dir.Size = new System.Drawing.Size(107, 20);
             this.np2Dir.TabIndex = 4;
             this.np2Dir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
-            this.np2Dir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
+            this.np2Dir.DragEnter += new System.Windows.Forms.DragEventHandler(this.DragEnter);
             this.np2Dir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
             // 
             // np2Label
@@ -1331,7 +1331,7 @@
             this.listView1.AfterLabelEdit += new System.Windows.Forms.LabelEditEventHandler(this.listView1_AfterLabelEdit);
             this.listView1.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listView1_ItemSelectionChanged);
             this.listView1.DragDrop += new System.Windows.Forms.DragEventHandler(this.listView1_DragDrop);
-            this.listView1.DragEnter += new System.Windows.Forms.DragEventHandler(this.listView1_DragEnter);
+            this.listView1.DragEnter += new System.Windows.Forms.DragEventHandler(this.DragEnter);
             this.listView1.DoubleClick += new System.EventHandler(this.listView1_DoubleClick);
             // 
             // customLabel
