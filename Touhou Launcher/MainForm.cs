@@ -378,16 +378,16 @@ namespace Touhou_Launcher
                     if (exists)
                     {
                         if (curCfg.gameCFG[game].customBanner && curCfg.gameCFG[game].bannerOn != "")
-                            btn.Image = Image.FromFile(curCfg.gameCFG[game].bannerOn);
+                            btn.BackgroundImage = Image.FromFile(curCfg.gameCFG[game].bannerOn);
                         else
-                            btn.Image = (System.Drawing.Bitmap)Touhou_Launcher.Properties.Resources.ResourceManager.GetObject((btn.Name == "btnIN" ? "_" : "") + btn.Name.Substring(3).ToLower());
+                            btn.BackgroundImage = (System.Drawing.Bitmap)Touhou_Launcher.Properties.Resources.ResourceManager.GetObject((btn.Name == "btnIN" ? "_" : "") + btn.Name.Substring(3).ToLower());
                     }
                     else
                     {
                         if (curCfg.gameCFG[game].customBanner && curCfg.gameCFG[game].bannerOff != "")
-                            btn.Image = Image.FromFile(curCfg.gameCFG[game].bannerOff);
+                            btn.BackgroundImage = Image.FromFile(curCfg.gameCFG[game].bannerOff);
                         else
-                            btn.Image = (System.Drawing.Bitmap)Touhou_Launcher.Properties.Resources.ResourceManager.GetObject((btn.Name == "btnIN" ? "_" : "") + btn.Name.Substring(3).ToLower() + "g");
+                            btn.BackgroundImage = (System.Drawing.Bitmap)Touhou_Launcher.Properties.Resources.ResourceManager.GetObject((btn.Name == "btnIN" ? "_" : "") + btn.Name.Substring(3).ToLower() + "g");
 
                     }
                 }

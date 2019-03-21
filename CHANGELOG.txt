@@ -1,6 +1,7 @@
 1.0-pre2
 Changed: Custom game categories no longer save their key name in the config (hopefully since they are no longer needed).
 Changed: The File Select Dialog will now start from the last place a file was selected.
+Changed: Custom banners now stretch to fit the button.
 Fixed: Background pictures for games being one pixel off.
 Fixed: Double Dealing Character typo.
 Fixed: Custom banner checkbox not saving.

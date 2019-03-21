@@ -420,6 +420,7 @@
             // btnHRtP
             // 
             this.btnHRtP.BackgroundImage = global::Touhou_Launcher.Properties.Resources.hrtpg;
+            this.btnHRtP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHRtP.ContextMenuStrip = this.gameContextMenu;
             this.btnHRtP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHRtP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -436,6 +437,7 @@
             // btnSoEW
             // 
             this.btnSoEW.BackgroundImage = global::Touhou_Launcher.Properties.Resources.soewg;
+            this.btnSoEW.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSoEW.ContextMenuStrip = this.gameContextMenu;
             this.btnSoEW.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSoEW.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -454,6 +456,7 @@
             // 
             this.btnRandom.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnRandom.BackgroundImage = global::Touhou_Launcher.Properties.Resources.random;
+            this.btnRandom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRandom.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRandom.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRandom.ForeColor = System.Drawing.SystemColors.Window;
@@ -470,6 +473,7 @@
             // btnPoDD
             // 
             this.btnPoDD.BackgroundImage = global::Touhou_Launcher.Properties.Resources.poddg;
+            this.btnPoDD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPoDD.ContextMenuStrip = this.gameContextMenu;
             this.btnPoDD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPoDD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -487,6 +491,7 @@
             // btnLLS
             // 
             this.btnLLS.BackgroundImage = global::Touhou_Launcher.Properties.Resources.llsg;
+            this.btnLLS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLLS.ContextMenuStrip = this.gameContextMenu;
             this.btnLLS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLLS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -504,6 +509,7 @@
             // btnMS
             // 
             this.btnMS.BackgroundImage = global::Touhou_Launcher.Properties.Resources.msg;
+            this.btnMS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMS.ContextMenuStrip = this.gameContextMenu;
             this.btnMS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -1420,6 +1426,7 @@
             // btnStB
             // 
             this.btnStB.BackgroundImage = global::Touhou_Launcher.Properties.Resources.stbg;
+            this.btnStB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnStB.ContextMenuStrip = this.gameContextMenu;
             this.btnStB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -1437,6 +1444,7 @@
             // btnDS
             // 
             this.btnDS.BackgroundImage = global::Touhou_Launcher.Properties.Resources.dsg;
+            this.btnDS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDS.ContextMenuStrip = this.gameContextMenu;
             this.btnDS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -1454,6 +1462,7 @@
             // btnGFW
             // 
             this.btnGFW.BackgroundImage = global::Touhou_Launcher.Properties.Resources.gfwg;
+            this.btnGFW.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnGFW.ContextMenuStrip = this.gameContextMenu;
             this.btnGFW.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGFW.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -1470,6 +1479,7 @@
             // btnISC
             // 
             this.btnISC.BackgroundImage = global::Touhou_Launcher.Properties.Resources.iscg;
+            this.btnISC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnISC.ContextMenuStrip = this.gameContextMenu;
             this.btnISC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnISC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -1487,6 +1497,7 @@
             // btnVD
             // 
             this.btnVD.BackgroundImage = global::Touhou_Launcher.Properties.Resources.vdg;
+            this.btnVD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnVD.ContextMenuStrip = this.gameContextMenu;
             this.btnVD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -1534,6 +1545,7 @@
             // btnIaMP
             // 
             this.btnIaMP.BackgroundImage = global::Touhou_Launcher.Properties.Resources.iampg;
+            this.btnIaMP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnIaMP.ContextMenuStrip = this.gameContextMenu;
             this.btnIaMP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIaMP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -1551,6 +1563,7 @@
             // btnSWR
             // 
             this.btnSWR.BackgroundImage = global::Touhou_Launcher.Properties.Resources.swrg;
+            this.btnSWR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSWR.ContextMenuStrip = this.gameContextMenu;
             this.btnSWR.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSWR.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -1568,6 +1581,7 @@
             // btnUoNL
             // 
             this.btnUoNL.BackgroundImage = global::Touhou_Launcher.Properties.Resources.uonlg;
+            this.btnUoNL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUoNL.ContextMenuStrip = this.gameContextMenu;
             this.btnUoNL.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUoNL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -1585,6 +1599,7 @@
             // btnHM
             // 
             this.btnHM.BackgroundImage = global::Touhou_Launcher.Properties.Resources.hmg;
+            this.btnHM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHM.ContextMenuStrip = this.gameContextMenu;
             this.btnHM.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHM.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -1602,6 +1617,7 @@
             // btnULiL
             // 
             this.btnULiL.BackgroundImage = global::Touhou_Launcher.Properties.Resources.ulilg;
+            this.btnULiL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnULiL.ContextMenuStrip = this.gameContextMenu;
             this.btnULiL.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnULiL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -1619,6 +1635,7 @@
             // btnAoCF
             // 
             this.btnAoCF.BackgroundImage = global::Touhou_Launcher.Properties.Resources.aocfg;
+            this.btnAoCF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAoCF.ContextMenuStrip = this.gameContextMenu;
             this.btnAoCF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAoCF.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -1676,6 +1693,7 @@
             // btnEoSD
             // 
             this.btnEoSD.BackgroundImage = global::Touhou_Launcher.Properties.Resources.eosdg;
+            this.btnEoSD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEoSD.ContextMenuStrip = this.gameContextMenu;
             this.btnEoSD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEoSD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -1693,6 +1711,7 @@
             // btnPCB
             // 
             this.btnPCB.BackgroundImage = global::Touhou_Launcher.Properties.Resources.pcbg;
+            this.btnPCB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPCB.ContextMenuStrip = this.gameContextMenu;
             this.btnPCB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPCB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -1710,6 +1729,7 @@
             // btnIN
             // 
             this.btnIN.BackgroundImage = global::Touhou_Launcher.Properties.Resources._ing;
+            this.btnIN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnIN.ContextMenuStrip = this.gameContextMenu;
             this.btnIN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -1727,6 +1747,7 @@
             // btnPoFV
             // 
             this.btnPoFV.BackgroundImage = global::Touhou_Launcher.Properties.Resources.pofvg;
+            this.btnPoFV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPoFV.ContextMenuStrip = this.gameContextMenu;
             this.btnPoFV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPoFV.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -1744,6 +1765,7 @@
             // btnMoF
             // 
             this.btnMoF.BackgroundImage = global::Touhou_Launcher.Properties.Resources.mofg;
+            this.btnMoF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMoF.ContextMenuStrip = this.gameContextMenu;
             this.btnMoF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMoF.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -1761,6 +1783,7 @@
             // btnSA
             // 
             this.btnSA.BackgroundImage = global::Touhou_Launcher.Properties.Resources.sag;
+            this.btnSA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSA.ContextMenuStrip = this.gameContextMenu;
             this.btnSA.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -1778,6 +1801,7 @@
             // btnUFO
             // 
             this.btnUFO.BackgroundImage = global::Touhou_Launcher.Properties.Resources.ufog;
+            this.btnUFO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUFO.ContextMenuStrip = this.gameContextMenu;
             this.btnUFO.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUFO.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -1795,6 +1819,7 @@
             // btnTD
             // 
             this.btnTD.BackgroundImage = global::Touhou_Launcher.Properties.Resources.tdg;
+            this.btnTD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTD.ContextMenuStrip = this.gameContextMenu;
             this.btnTD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -1812,6 +1837,7 @@
             // btnDDC
             // 
             this.btnDDC.BackgroundImage = global::Touhou_Launcher.Properties.Resources.ddcg;
+            this.btnDDC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDDC.ContextMenuStrip = this.gameContextMenu;
             this.btnDDC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDDC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -1829,6 +1855,7 @@
             // btnLoLK
             // 
             this.btnLoLK.BackgroundImage = global::Touhou_Launcher.Properties.Resources.lolkg;
+            this.btnLoLK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLoLK.ContextMenuStrip = this.gameContextMenu;
             this.btnLoLK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLoLK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -1846,6 +1873,7 @@
             // btnHSiFS
             // 
             this.btnHSiFS.BackgroundImage = global::Touhou_Launcher.Properties.Resources.hsifsg;
+            this.btnHSiFS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHSiFS.ContextMenuStrip = this.gameContextMenu;
             this.btnHSiFS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHSiFS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
