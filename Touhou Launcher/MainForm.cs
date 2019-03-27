@@ -454,8 +454,7 @@ namespace Touhou_Launcher
         private void btn_Click(object sender, EventArgs e)
         {
             int game = nameToID[((Button)sender).Name.Substring(3)];
-            string path = "";
-            string args = "";
+            ProcessStartInfo startInfo = new ProcessStartInfo();
             GameConfig curGame = curCfg.gameCFG[game];
             if (File.Exists(curGame.GameDir[curGame.DefaultDir]) || curGame.DefaultDir == 3)
             {
@@ -465,8 +464,9 @@ namespace Touhou_Launcher
                     {
                         if (File.Exists(curCfg.crapDir))
                         {
-                            path = curCfg.crapDir;
-                            args = "\"" + Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\" + curGame.crapCFG[1] + "\" " + curGame.crapCFG[0];
+                            startInfo.FileName = curCfg.crapDir;
+                            startInfo.Arguments = "\"" + Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\" + curGame.crapCFG[1] + "\" " + curGame.crapCFG[0];
+                            startInfo.WorkingDirectory = Path.GetDirectoryName(MainForm.curCfg.crapDir);
                         }
                         else
                         {
@@ -476,12 +476,12 @@ namespace Touhou_Launcher
                     }
                     else
                     {
-                        path = curGame.GameDir[curGame.DefaultDir];
+                        startInfo.FileName = curGame.GameDir[curGame.DefaultDir];
                     }
                     if (curGame.DefaultApplocale)
                     {
-                        args = "\"" + path + "\" " + "\"" + args + "\" \"/L0411\"";
-                        path = "C:\\Windows\\AppPatch\\AppLoc.exe";
+                        startInfo.Arguments = "\"" + startInfo.FileName + "\" " + "\"" + startInfo.Arguments + "\" \"/L0411\"";
+                        startInfo.FileName = "C:\\Windows\\AppPatch\\AppLoc.exe";
                     }
                 }
                 else
@@ -497,9 +497,9 @@ namespace Touhou_Launcher
                         return;
                     }
                     else
-                        path = curCfg.np2Dir;
+                        startInfo.FileName = curCfg.np2Dir;
                 }
-                Process.Start(path, args);
+                Process.Start(startInfo);
                 if (curCfg.autoClose)
                     Application.Exit();
             }
@@ -893,9 +893,10 @@ namespace Touhou_Launcher
         {
             if (curCfg.crapDir != "")
             {
-                string path = Path.GetDirectoryName(curCfg.crapDir) + "\\thcrap_configure.exe";
-                if (File.Exists(path))
-                    Process.Start(path);
+                ProcessStartInfo startInfo = new ProcessStartInfo(Path.GetDirectoryName(curCfg.crapDir) + "\\thcrap_configure.exe");
+                startInfo.WorkingDirectory = Path.GetDirectoryName(curCfg.crapDir);
+                if (File.Exists(startInfo.FileName))
+                    Process.Start(startInfo);
             }
         }
 

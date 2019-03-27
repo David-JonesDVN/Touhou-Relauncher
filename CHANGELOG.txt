@@ -10,6 +10,7 @@ Fixed: Tray icon's custom games list adding games to their parent category.
 Fixed: Not changing the name while renaming custom games/categories would result in an error.
 Fixed: Adding the same custom game multiple times. (As long as the path is the exact same)
 Fixed: Expanding/Collapsing a custom game category deselecting it.
+Fixed: thcrap's files appearing in the launcher's directory.
 Optimized code
 
 1.0-pre (06/03/2019)

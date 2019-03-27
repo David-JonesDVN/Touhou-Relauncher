@@ -223,19 +223,18 @@ namespace Touhou_Launcher
 
         private void launch_Click(object sender, EventArgs e)
         {
-            string path = windowsSettings.Controls.Find(((Button)sender).Name.ToLower().Substring(6) + "Dir", false).FirstOrDefault(n => n.GetType() == typeof(TextBox)).Text;
-            string args = "";
-            if (File.Exists(path))
+            ProcessStartInfo startInfo = new ProcessStartInfo(windowsSettings.Controls.Find(((Button)sender).Name.ToLower().Substring(6) + "Dir", false).FirstOrDefault(n => n.GetType() == typeof(TextBox)).Text);
+            if (File.Exists(startInfo.FileName))
             {
                 if (MainForm.curCfg.gameCFG[game].appLocale[MainForm.dirToNumber[((Button)sender).Name.ToLower().Substring(6)]] && File.Exists("C:\\Windows\\AppPatch\\AppLoc.exe"))
                 {
-                    args = "\"" + path + "\" \"/L0411\"";
-                    path = "C:\\Windows\\AppPatch\\AppLoc.exe";
-                    Process.Start(path, args);
+                    startInfo.Arguments = "\"" + startInfo.FileName + "\" \"/L0411\"";
+                    startInfo.FileName = "C:\\Windows\\AppPatch\\AppLoc.exe";
+                    Process.Start(startInfo);
                 }
                 else
                 {
-                    Process.Start(path, args);
+                    Process.Start(startInfo);
                 }
             }
             else
@@ -251,7 +250,11 @@ namespace Touhou_Launcher
             else if (MainForm.curCfg.gameCFG[game].crapCFG[0] == "None" || MainForm.curCfg.gameCFG[game].crapCFG[1] == "None")
                 MessageBox.Show(MainForm.rm.GetString("errorcrapConfigNotSet"));
             else
-                Process.Start(MainForm.curCfg.crapDir, "\"" + Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\" + MainForm.curCfg.gameCFG[game].crapCFG[1] + "\" " + MainForm.curCfg.gameCFG[game].crapCFG[0]);
+            {
+                ProcessStartInfo startInfo = new ProcessStartInfo(MainForm.curCfg.crapDir, "\"" + Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\" + MainForm.curCfg.gameCFG[game].crapCFG[1] + "\" " + MainForm.curCfg.gameCFG[game].crapCFG[0]);
+                startInfo.WorkingDirectory = Path.GetDirectoryName(MainForm.curCfg.crapDir);
+                Process.Start(startInfo);
+            }
         }
 
         private void defaultApplocale_CheckedChanged(object sender, EventArgs e)
