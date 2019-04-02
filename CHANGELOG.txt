@@ -1,4 +1,5 @@
 1.0-pre2
+Added: thcrap Profile Editor. Lets you select patches from a list and configure the game list manually. The repository search starts at a configurable Url.
 Changed: Custom game categories no longer save their key name in the config (hopefully since they are no longer needed).
 Changed: The File Select Dialog will now start from the last place a file was selected.
 Changed: Custom banners now stretch to fit the button.
@@ -12,6 +13,7 @@ Fixed: Adding the same custom game multiple times. (As long as the path is the e
 Fixed: Expanding/Collapsing a custom game category deselecting it.
 Fixed: thcrap's files appearing in the launcher's directory.
 Optimized code
+Updated localization files.
 
 1.0-pre (06/03/2019)
 Added: Replay downloader. Includes 3 websites + manual link input.

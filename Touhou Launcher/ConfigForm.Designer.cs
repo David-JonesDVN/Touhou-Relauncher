@@ -132,7 +132,7 @@
             // 
             // browseJP
             // 
-            this.browseJP.Location = new System.Drawing.Point(196, 32);
+            this.browseJP.Location = new System.Drawing.Point(196, 30);
             this.browseJP.Name = "browseJP";
             this.browseJP.Size = new System.Drawing.Size(62, 22);
             this.browseJP.TabIndex = 5;
@@ -179,7 +179,7 @@
             // 
             // browseEN
             // 
-            this.browseEN.Location = new System.Drawing.Point(196, 80);
+            this.browseEN.Location = new System.Drawing.Point(196, 78);
             this.browseEN.Name = "browseEN";
             this.browseEN.Size = new System.Drawing.Size(62, 22);
             this.browseEN.TabIndex = 11;
@@ -244,7 +244,7 @@
             // 
             // launchEN
             // 
-            this.launchEN.Location = new System.Drawing.Point(264, 80);
+            this.launchEN.Location = new System.Drawing.Point(264, 78);
             this.launchEN.Name = "launchEN";
             this.launchEN.Size = new System.Drawing.Size(55, 22);
             this.launchEN.TabIndex = 18;
@@ -254,7 +254,7 @@
             // 
             // launchJP
             // 
-            this.launchJP.Location = new System.Drawing.Point(264, 32);
+            this.launchJP.Location = new System.Drawing.Point(264, 30);
             this.launchJP.Name = "launchJP";
             this.launchJP.Size = new System.Drawing.Size(55, 22);
             this.launchJP.TabIndex = 19;
@@ -306,7 +306,7 @@
             // crapApplocale
             // 
             this.crapApplocale.AutoSize = true;
-            this.crapApplocale.Location = new System.Drawing.Point(221, 154);
+            this.crapApplocale.Location = new System.Drawing.Point(221, 152);
             this.crapApplocale.Name = "crapApplocale";
             this.crapApplocale.Size = new System.Drawing.Size(98, 17);
             this.crapApplocale.TabIndex = 26;

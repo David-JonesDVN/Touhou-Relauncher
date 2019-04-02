@@ -106,6 +106,9 @@
             this.chkLoLK = new System.Windows.Forms.CheckBox();
             this.chkHSiFS = new System.Windows.Forms.CheckBox();
             this.launcherSettings = new System.Windows.Forms.GroupBox();
+            this.crapResetStartingRepo = new System.Windows.Forms.Button();
+            this.crapStartingRepo = new System.Windows.Forms.TextBox();
+            this.crapStartingRepoLabel = new System.Windows.Forms.Label();
             this.crapConfigure = new System.Windows.Forms.Button();
             this.browsecrap = new System.Windows.Forms.Button();
             this.crapDir = new System.Windows.Forms.TextBox();
@@ -1071,6 +1074,9 @@
             // 
             // launcherSettings
             // 
+            this.launcherSettings.Controls.Add(this.crapResetStartingRepo);
+            this.launcherSettings.Controls.Add(this.crapStartingRepo);
+            this.launcherSettings.Controls.Add(this.crapStartingRepoLabel);
             this.launcherSettings.Controls.Add(this.crapConfigure);
             this.launcherSettings.Controls.Add(this.browsecrap);
             this.launcherSettings.Controls.Add(this.crapDir);
@@ -1090,9 +1096,36 @@
             this.launcherSettings.TabStop = false;
             this.launcherSettings.Text = "Launcher Settings";
             // 
+            // crapResetStartingRepo
+            // 
+            this.crapResetStartingRepo.Location = new System.Drawing.Point(119, 219);
+            this.crapResetStartingRepo.Name = "crapResetStartingRepo";
+            this.crapResetStartingRepo.Size = new System.Drawing.Size(75, 23);
+            this.crapResetStartingRepo.TabIndex = 12;
+            this.crapResetStartingRepo.Text = "Default";
+            this.crapResetStartingRepo.UseVisualStyleBackColor = true;
+            this.crapResetStartingRepo.Click += new System.EventHandler(this.crapResetStartingRepo_Click);
+            // 
+            // crapStartingRepo
+            // 
+            this.crapStartingRepo.Location = new System.Drawing.Point(6, 221);
+            this.crapStartingRepo.Name = "crapStartingRepo";
+            this.crapStartingRepo.Size = new System.Drawing.Size(107, 20);
+            this.crapStartingRepo.TabIndex = 9;
+            this.crapStartingRepo.LostFocus += new System.EventHandler(this.Dir_LostFocus);
+            // 
+            // crapStartingRepoLabel
+            // 
+            this.crapStartingRepoLabel.AutoSize = true;
+            this.crapStartingRepoLabel.Location = new System.Drawing.Point(6, 205);
+            this.crapStartingRepoLabel.Name = "crapStartingRepoLabel";
+            this.crapStartingRepoLabel.Size = new System.Drawing.Size(132, 13);
+            this.crapStartingRepoLabel.TabIndex = 11;
+            this.crapStartingRepoLabel.Text = "thcrap Starting Repository:";
+            // 
             // crapConfigure
             // 
-            this.crapConfigure.Location = new System.Drawing.Point(6, 207);
+            this.crapConfigure.Location = new System.Drawing.Point(6, 247);
             this.crapConfigure.Name = "crapConfigure";
             this.crapConfigure.Size = new System.Drawing.Size(188, 23);
             this.crapConfigure.TabIndex = 8;
@@ -2449,6 +2482,9 @@
         private System.Windows.Forms.Label crapDirLabel;
         private System.Windows.Forms.Button crapConfigure;
         private System.Windows.Forms.TextBox linkReplays;
+        private System.Windows.Forms.TextBox crapStartingRepo;
+        private System.Windows.Forms.Label crapStartingRepoLabel;
+        private System.Windows.Forms.Button crapResetStartingRepo;
     }
 }
 

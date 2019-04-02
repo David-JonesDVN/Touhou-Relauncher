@@ -69,6 +69,7 @@ namespace Touhou_Launcher
             public int language = 0;
             public string np2Dir = "";
             public string crapDir = "";
+            public string StartingRepo = @"https://mirrors.thpatch.net/nmlgc/";
             public bool autoClose = false;
             public View customView = View.LargeIcon;
             public SortOrder customSort = SortOrder.Ascending;
@@ -130,7 +131,7 @@ namespace Touhou_Launcher
             {"VD", 26}
         };
 
-        public IEnumerable<Control> GetAll(Control control, Type type)
+        public static IEnumerable<Control> GetAll(Control control, Type type)
         {
             var controls = control.Controls.Cast<Control>();
 
@@ -185,13 +186,13 @@ namespace Touhou_Launcher
         public static bool NekoProject(string hdi)
         {
             /* Code for dedicating a config file to each game
-             * if (File.Exists(Path.GetDirectoryName(curCfg.np2Dir + "\\np21nt." + game + ".ini")))
-             *     File.Copy(Path.GetDirectoryName(curCfg.np2Dir) + "\\np21nt" + game + ".ini", Path.GetDirectoryName(curCfg.np2Dir) + "\\np21nt.ini", true);
-             * else
-             * {
-             *     File.Copy(Path.GetDirectoryName(curCfg.np2Dir) + "\\np21nt.ini", Path.GetDirectoryName(curCfg.np2Dir) + "\\np21nt" + game + ".ini");
-             *     return NekoProject(hdi, game);
-             * }
+            if (File.Exists(Path.GetDirectoryName(curCfg.np2Dir + "\\np21nt." + game + ".ini")))
+                File.Copy(Path.GetDirectoryName(curCfg.np2Dir) + "\\np21nt" + game + ".ini", Path.GetDirectoryName(curCfg.np2Dir) + "\\np21nt.ini", true);
+            else
+            {
+                File.Copy(Path.GetDirectoryName(curCfg.np2Dir) + "\\np21nt.ini", Path.GetDirectoryName(curCfg.np2Dir) + "\\np21nt" + game + ".ini");
+                return NekoProject(hdi, game);
+            }
              */
             string[] config = File.ReadAllLines(Path.GetDirectoryName(curCfg.np2Dir) + "\\np21nt.ini", Encoding.Unicode);
             for (int i = 0; i < config.Length; i++)
@@ -271,6 +272,7 @@ namespace Touhou_Launcher
             showTray.Checked = curCfg.showTray;
             np2Dir.Text = curCfg.np2Dir;
             crapDir.Text = curCfg.crapDir;
+            crapStartingRepo.Text = curCfg.StartingRepo;
         }
 
         private void InitializeLanguage()
@@ -350,6 +352,8 @@ namespace Touhou_Launcher
             crapDirLabel.Text = rm.GetString("crapDirLabel");
             browseNP2.Text = rm.GetString("browse");
             browsecrap.Text = rm.GetString("browse");
+            crapStartingRepoLabel.Text = rm.GetString("crapStartingRepoLabel");
+            crapResetStartingRepo.Text = rm.GetString("crapResetStartingRepo");
             crapConfigure.Text = rm.GetString("crapConfigure");
             randomSettings.Text = rm.GetString("randomSettings");
             randomLabel.Text = rm.GetString("randomLabel");
@@ -872,15 +876,23 @@ namespace Touhou_Launcher
 
         private void Dir_LostFocus(object sender, EventArgs e)
         {
-            if (File.Exists(((TextBox)sender).Text) || ((TextBox)sender).Text == "")
+            if (File.Exists(((TextBox)sender).Text) || ((TextBox)sender).Text == "" || sender == crapStartingRepo)
             {
                 ((TextBox)sender).BackColor = SystemColors.Window;
                 curCfg.np2Dir = np2Dir.Text;
                 curCfg.crapDir = crapDir.Text;
+                curCfg.StartingRepo = crapStartingRepo.Text;
                 curCfg.Save();
             }
             else
                 ((TextBox)sender).BackColor = Color.Red;
+        }
+
+        private void crapResetStartingRepo_Click(object sender, EventArgs e)
+        {
+            crapStartingRepo.Text = @"https://mirrors.thpatch.net/nmlgc/";
+            curCfg.StartingRepo = @"https://mirrors.thpatch.net/nmlgc/";
+            curCfg.Save();
         }
 
         private void Dir_DragDrop(object sender, DragEventArgs e)

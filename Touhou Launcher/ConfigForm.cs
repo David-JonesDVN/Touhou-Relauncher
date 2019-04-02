@@ -45,30 +45,7 @@ namespace Touhou_Launcher
                 enApplocale.Checked = MainForm.curCfg.gameCFG[game].appLocale[1];
                 customDir.Text = MainForm.curCfg.gameCFG[game].GameDir[2];
                 customApplocale.Checked = MainForm.curCfg.gameCFG[game].appLocale[2];
-                if (MainForm.curCfg.crapDir != "")
-                {
-                    if (File.Exists(Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\games.js"))
-                    {
-                        crap = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\games.js"));
-                        foreach (KeyValuePair<string, string> line in crap)
-                        {
-                            if (Convert.ToInt32(new String(line.Key.Where(Char.IsDigit).ToArray())) == MainForm.idToNumber[game])
-                            {
-                                crapGame.Items.Add(line.Key);
-                            }
-                        }
-                    }
-                    foreach (string file in Directory.GetFiles(Path.GetDirectoryName(MainForm.curCfg.crapDir), "*.js").Where(n => !n.Contains("games.js") && !n.Contains("config.js")))
-                    {
-                        crapCfg.Items.Add(Path.GetFileName(file));
-                    }
-                }
-                crapGame.SelectedIndexChanged -= crapCfg_SelectedIndexChanged;
-                crapCfg.SelectedIndexChanged -= crapCfg_SelectedIndexChanged;
-                crapGame.SelectedItem = MainForm.curCfg.gameCFG[game].crapCFG[0];
-                crapCfg.SelectedItem = MainForm.curCfg.gameCFG[game].crapCFG[1];
-                crapGame.SelectedIndexChanged += crapCfg_SelectedIndexChanged;
-                crapCfg.SelectedIndexChanged += crapCfg_SelectedIndexChanged;
+                Refreshcrap();
                 crapApplocale.Checked = MainForm.curCfg.gameCFG[game].appLocale[3];
                 defaultExec.SelectedIndex = MainForm.curCfg.gameCFG[game].DefaultDir;
                 defaultApplocale.Checked = MainForm.curCfg.gameCFG[game].DefaultApplocale;
@@ -83,9 +60,44 @@ namespace Touhou_Launcher
             }
         }
 
+        public void Refreshcrap()
+        {
+            crapCfg.Items.Clear();
+            crapCfg.Items.Add("None");
+            crapGame.Items.Clear();
+            crapGame.Items.Add("None");
+            if (MainForm.curCfg.crapDir != "")
+            {
+                if (File.Exists(Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\games.js"))
+                {
+                    crap = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\games.js"));
+                    foreach (KeyValuePair<string, string> line in crap)
+                    {
+                        int number = Int32.TryParse(new String(line.Key.Where(Char.IsDigit).ToArray()), out number) ? number : 0;
+                        if (number == MainForm.idToNumber[game])
+                        {
+                            crapGame.Items.Add(line.Key);
+                        }
+                    }
+                }
+                foreach (string file in Directory.GetFiles(Path.GetDirectoryName(MainForm.curCfg.crapDir), "*.js").Where(n => !n.Contains("games.js") && !n.Contains("config.js")))
+                {
+                    crapCfg.Items.Add(Path.GetFileName(file));
+                }
+            }
+            if (MainForm.curCfg.crapDir != "")
+                crapCfg.Items.Add("Custom");
+            crapGame.SelectedIndexChanged -= crapCfg_SelectedIndexChanged;
+            crapCfg.SelectedIndexChanged -= crapCfg_SelectedIndexChanged;
+            crapGame.SelectedItem = MainForm.curCfg.gameCFG[game].crapCFG[0];
+            crapCfg.SelectedItem = MainForm.curCfg.gameCFG[game].crapCFG[1];
+            crapGame.SelectedIndexChanged += crapCfg_SelectedIndexChanged;
+            crapCfg.SelectedIndexChanged += crapCfg_SelectedIndexChanged;
+        }
+
         private void InitializeLanguage()
         {
-            foreach (Button btn in main.GetAll(this, typeof(Button)))
+            foreach (Button btn in MainForm.GetAll(this, typeof(Button)))
             {
                 if (btn.Name.Contains("browse"))
                     btn.Text = MainForm.rm.GetString("browse");
@@ -94,18 +106,18 @@ namespace Touhou_Launcher
                 else
                     btn.Text = MainForm.rm.GetString(btn.Name);
             }
-            foreach (CheckBox chk in main.GetAll(this, typeof(CheckBox)))
+            foreach (CheckBox chk in MainForm.GetAll(this, typeof(CheckBox)))
             {
                 if (chk.Name.Contains("Applocale"))
                     chk.Text = MainForm.rm.GetString("useApplocale");
                 else
                     chk.Text = MainForm.rm.GetString(chk.Name);
             }
-            foreach (Label lbl in main.GetAll(this, typeof(Label)))
+            foreach (Label lbl in MainForm.GetAll(this, typeof(Label)))
             {
                     lbl.Text = MainForm.rm.GetString(lbl.Name);
             }
-            foreach (GroupBox box in main.GetAll(this, typeof(GroupBox)))
+            foreach (GroupBox box in MainForm.GetAll(this, typeof(GroupBox)))
             {
                 box.Text = MainForm.rm.GetString(box.Name);
             }
@@ -352,7 +364,7 @@ namespace Touhou_Launcher
             string path = "";
             if (game > 4)
             {
-                foreach (TextBox dir in main.GetAll(windowsSettings, typeof(TextBox)))
+                foreach (TextBox dir in MainForm.GetAll(windowsSettings, typeof(TextBox)))
                 {
                     if (dir.Text != "")
                     {
@@ -387,7 +399,7 @@ namespace Touhou_Launcher
             }
             else
             {
-                foreach (TextBox dir in main.GetAll(windowsSettings, typeof(TextBox)))
+                foreach (TextBox dir in MainForm.GetAll(windowsSettings, typeof(TextBox)))
                 {
                     if (dir.Text != "")
                     {
@@ -441,9 +453,16 @@ namespace Touhou_Launcher
 
         private void crapCfg_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MainForm.curCfg.gameCFG[game].crapCFG[0] = (string)crapGame.SelectedItem;
-            MainForm.curCfg.gameCFG[game].crapCFG[1] = (string)crapCfg.SelectedItem;
-            MainForm.curCfg.gameCFG[game].GameDir[3] = MainForm.curCfg.gameCFG[game].crapCFG[0] != "None" ? crap[MainForm.curCfg.gameCFG[game].crapCFG[0]] : "";
+            MainForm.curCfg.gameCFG[game].crapCFG[0] = crapGame.SelectedItem.ToString();
+            if (crapCfg.SelectedItem.ToString() == "Custom")
+            {
+                thcrap profileConfig = new thcrap(this);
+                profileConfig.ShowDialog();
+            }
+            else
+                MainForm.curCfg.gameCFG[game].crapCFG[1] = crapCfg.SelectedItem.ToString();
+            if (crap.ContainsKey(MainForm.curCfg.gameCFG[game].crapCFG[0]))
+                MainForm.curCfg.gameCFG[game].GameDir[3] = MainForm.curCfg.gameCFG[game].crapCFG[0] != "None" ? crap[MainForm.curCfg.gameCFG[game].crapCFG[0]] : "";
         }
     }
 }
