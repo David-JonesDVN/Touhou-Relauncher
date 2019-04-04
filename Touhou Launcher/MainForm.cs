@@ -25,6 +25,11 @@ namespace Touhou_Launcher
             public bool customBanner = false;
             public string bannerOn = "";
             public string bannerOff = "";
+            public bool customText = false;
+            public int textColor = 0;
+            public bool showBanner = true;
+            public bool showText = true;
+            public int defaultTextColor = 0;
         }
 
         public class SubNode
@@ -217,6 +222,52 @@ namespace Touhou_Launcher
             return false;
         }
 
+        public static void launchHDI(string dir)
+        {
+            if (!File.Exists(curCfg.np2Dir))
+                MessageBox.Show(rm.GetString("errorNP2NotFound"));
+            else if (!NekoProject(dir))
+                MessageBox.Show(rm.GetString("errorInvalidNP2INI"));
+            else
+                Process.Start(curCfg.np2Dir);
+        }
+
+        public static void launchGame(int game, int dir, bool applocale)
+        {
+            ProcessStartInfo startInfo = new ProcessStartInfo(curCfg.gameCFG[game].GameDir[dir]);
+            if (File.Exists(startInfo.FileName))
+            {
+                if (applocale && File.Exists("C:\\Windows\\AppPatch\\AppLoc.exe"))
+                {
+                    startInfo.Arguments = "\"" + startInfo.FileName + "\" \"/L0411\"";
+                    startInfo.FileName = "C:\\Windows\\AppPatch\\AppLoc.exe";
+                    Process.Start(startInfo);
+                }
+                else
+                {
+                    Process.Start(startInfo);
+                }
+            }
+            else
+            {
+                MessageBox.Show(rm.GetString("errorGameNotFound"));
+            }
+        }
+
+        public static void launchcrap(int game)
+        {
+            if (!File.Exists(curCfg.crapDir))
+                MessageBox.Show(rm.GetString("errorcrapNotFound"));
+            else if (curCfg.gameCFG[game].crapCFG[0] == "None" || curCfg.gameCFG[game].crapCFG[1] == "None")
+                MessageBox.Show(rm.GetString("errorcrapConfigNotSet"));
+            else
+            {
+                ProcessStartInfo startInfo = new ProcessStartInfo(curCfg.crapDir, "\"" + Path.GetDirectoryName(curCfg.crapDir) + "\\" + curCfg.gameCFG[game].crapCFG[1] + "\" " + curCfg.gameCFG[game].crapCFG[0]);
+                startInfo.WorkingDirectory = Path.GetDirectoryName(curCfg.crapDir);
+                Process.Start(startInfo);
+            }
+        }
+
         public static string[] FileBrowser(string title, string filter, bool multiSelect = false)
         {
             OpenFileDialog browser = new OpenFileDialog();
@@ -261,7 +312,9 @@ namespace Touhou_Launcher
         private void LoadSettings()
         {
             InitializeLanguage();
-            RefreshGames();
+            foreach (Button btn in GetAll(games, typeof(Button)))
+                if (btn.Name != "btnRandom")
+                    RefreshButton(btn);
             JSONToTree(curCfg.Custom, treeView1.Nodes);
             JSONToTray(curCfg.Custom, trayCustom);
             languageBox.SelectedIndexChanged -= languageBox_SelectedIndexChanged;
@@ -305,7 +358,12 @@ namespace Touhou_Launcher
             }
             foreach (Button btn in GetAll(games, typeof(Button)))
             {
-                btn.Text = rm.GetString(btn.Name.Substring(3));
+                if (btn.Name == "btnRandom")
+                    btn.Text = rm.GetString(btn.Name.Substring(3));
+                else if (curCfg.gameCFG[nameToID[btn.Name.Substring(3)]].showText)
+                    btn.Text = rm.GetString(btn.Name.Substring(3));
+                else
+                    btn.Text = "";
                 toolTip.SetToolTip(btn, rm.GetString(btn.Name.Substring(3) + "Title"));
             }
             foreach (ToolStripMenuItem tMenu in customContextMenu.Items.OfType<ToolStripMenuItem>())
@@ -336,6 +394,9 @@ namespace Touhou_Launcher
             fightingGroup.Text = rm.GetString("fightingGroup");
             otherGroup.Text = rm.GetString("otherGroup");
             configureToolStripMenuItem.Text = rm.GetString("configureToolStripMenuItem");
+            buttonToolStripMenuItem.Text = rm.GetString("buttonToolStripMenuItem");
+            bannerToolStripMenuItem.Text = rm.GetString("bannerToolStripMenuItem");
+            textToolStripMenuItem.Text = rm.GetString("textToolStripMenuItem");
             customAdd.Text = rm.GetString("customAdd");
             newCategoryToolStripMenuItem.Text = rm.GetString("newCategoryToolStripMenuItem");
             renameCategoryToolStripMenuItem.Text = rm.GetString("renameCategoryToolStripMenuItem");
@@ -365,37 +426,38 @@ namespace Touhou_Launcher
             this.Text = rm.GetString("Title");
         }
 
-        public void RefreshGames()
+        public static void RefreshButton(Button btn)
         {
-            foreach (Button btn in GetAll(games, typeof(Button)))
+            int game = nameToID[btn.Name.Substring(3)];
+            btn.ForeColor = curCfg.gameCFG[game].customText ? Color.FromArgb(curCfg.gameCFG[game].textColor) : Color.FromArgb(curCfg.gameCFG[game].defaultTextColor);
+            if (curCfg.gameCFG[game].showBanner)
             {
-                if (btn.Name != "btnRandom")
+                bool exists = curCfg.gameCFG[game].crapCFG[0] != "None" && curCfg.gameCFG[game].crapCFG[1] != "None";
+                foreach (string dir in curCfg.gameCFG[game].GameDir)
+                    if (dir != "" && dir != curCfg.gameCFG[game].GameDir[3])
+                    {
+                        exists = true;
+                        break;
+                    }
+                if (exists)
                 {
-                    int game = nameToID[btn.Name.Substring(3)];
-                    bool exists = curCfg.gameCFG[game].crapCFG[0] != "None" && curCfg.gameCFG[game].crapCFG[1] != "None";
-                    foreach (string dir in curCfg.gameCFG[game].GameDir)
-                        if (dir != "" && dir != curCfg.gameCFG[game].GameDir[3])
-                        {
-                            exists = true;
-                            break;
-                        }
-                    if (exists)
-                    {
-                        if (curCfg.gameCFG[game].customBanner && curCfg.gameCFG[game].bannerOn != "")
-                            btn.BackgroundImage = Image.FromFile(curCfg.gameCFG[game].bannerOn);
-                        else
-                            btn.BackgroundImage = (System.Drawing.Bitmap)Touhou_Launcher.Properties.Resources.ResourceManager.GetObject((btn.Name == "btnIN" ? "_" : "") + btn.Name.Substring(3).ToLower());
-                    }
+                    if (curCfg.gameCFG[game].customBanner && curCfg.gameCFG[game].bannerOn != "")
+                        btn.BackgroundImage = Image.FromFile(curCfg.gameCFG[game].bannerOn);
                     else
-                    {
-                        if (curCfg.gameCFG[game].customBanner && curCfg.gameCFG[game].bannerOff != "")
-                            btn.BackgroundImage = Image.FromFile(curCfg.gameCFG[game].bannerOff);
-                        else
-                            btn.BackgroundImage = (System.Drawing.Bitmap)Touhou_Launcher.Properties.Resources.ResourceManager.GetObject((btn.Name == "btnIN" ? "_" : "") + btn.Name.Substring(3).ToLower() + "g");
+                        btn.BackgroundImage = (System.Drawing.Bitmap)Touhou_Launcher.Properties.Resources.ResourceManager.GetObject((btn.Name == "btnIN" ? "_" : "") + btn.Name.Substring(3).ToLower());
+                }
+                else
+                {
+                    if (curCfg.gameCFG[game].customBanner && curCfg.gameCFG[game].bannerOff != "")
+                        btn.BackgroundImage = Image.FromFile(curCfg.gameCFG[game].bannerOff);
+                    else
+                        btn.BackgroundImage = (System.Drawing.Bitmap)Touhou_Launcher.Properties.Resources.ResourceManager.GetObject((btn.Name == "btnIN" ? "_" : "") + btn.Name.Substring(3).ToLower() + "g");
 
-                    }
                 }
             }
+            else
+                btn.BackgroundImage = null;
+
         }
 
         private void customAddItem(string[] files)
@@ -424,6 +486,9 @@ namespace Touhou_Launcher
         public MainForm()
         {
             InitializeComponent();
+            foreach (Button btn in GetAll(games, typeof(Button)))
+                if (btn.Name != "btnRandom")
+                    curCfg.gameCFG[nameToID[btn.Name.Substring(3)]].defaultTextColor = btn.ForeColor.ToArgb();
             LoadSettings();
         }
 
@@ -465,28 +530,9 @@ namespace Touhou_Launcher
                 if (game > 4)
                 {
                     if (curGame.DefaultDir == 3)
-                    {
-                        if (File.Exists(curCfg.crapDir))
-                        {
-                            startInfo.FileName = curCfg.crapDir;
-                            startInfo.Arguments = "\"" + Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\" + curGame.crapCFG[1] + "\" " + curGame.crapCFG[0];
-                            startInfo.WorkingDirectory = Path.GetDirectoryName(MainForm.curCfg.crapDir);
-                        }
-                        else
-                        {
-                            MessageBox.Show(rm.GetString("errorcrapNotFound"));
-                            return;
-                        }
-                    }
+                        launchcrap(game);
                     else
-                    {
-                        startInfo.FileName = curGame.GameDir[curGame.DefaultDir];
-                    }
-                    if (curGame.DefaultApplocale)
-                    {
-                        startInfo.Arguments = "\"" + startInfo.FileName + "\" " + "\"" + startInfo.Arguments + "\" \"/L0411\"";
-                        startInfo.FileName = "C:\\Windows\\AppPatch\\AppLoc.exe";
-                    }
+                        launchGame(game, curCfg.gameCFG[game].DefaultDir, curCfg.gameCFG[game].DefaultApplocale);
                 }
                 else
                 {
@@ -543,8 +589,8 @@ namespace Touhou_Launcher
 
         private void configureToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int id = nameToID[((ContextMenuStrip)((ToolStripMenuItem)sender).GetCurrentParent()).SourceControl.Name.Substring(3)];
-            ConfigForm gameConfig = new ConfigForm(id, this);
+            Button btn = (Button)((ContextMenuStrip)((ToolStripMenuItem)sender).GetCurrentParent()).SourceControl;
+            ConfigForm gameConfig = new ConfigForm(btn);
             gameConfig.ShowDialog();
         }
 
@@ -920,6 +966,25 @@ namespace Touhou_Launcher
         private void trayExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void buttonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)((ContextMenuStrip)((ToolStripMenuItem)sender).OwnerItem.GetCurrentParent()).Tag;
+            int game = nameToID[btn.Name.Substring(3)];
+            curCfg.gameCFG[game].showText = textToolStripMenuItem.Checked;
+            curCfg.gameCFG[game].showBanner = bannerToolStripMenuItem.Checked;
+            curCfg.Save();
+            RefreshButton(btn);
+            btn.Text = curCfg.gameCFG[game].showText ? rm.GetString(btn.Name.Substring(3)) : "";
+        }
+
+        private void ContextMenu_Opening(object sender, CancelEventArgs e)
+        {
+            ((ContextMenuStrip)sender).Tag = ((ContextMenuStrip)sender).SourceControl;
+            int game = nameToID[((ContextMenuStrip)sender).SourceControl.Name.Substring(3)];
+            textToolStripMenuItem.Checked = curCfg.gameCFG[game].showText;
+            bannerToolStripMenuItem.Checked = curCfg.gameCFG[game].showBanner;
         }
     }
 }

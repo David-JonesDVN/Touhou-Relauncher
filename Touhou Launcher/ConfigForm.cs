@@ -16,18 +16,19 @@ namespace Touhou_Launcher
     {
         public int game;
         bool tr = false;
-        MainForm main;
+        Button parentButton;
         Dictionary<string, string> crap = new Dictionary<string,string>();
 
-        public ConfigForm(int id, MainForm parent)
+        public ConfigForm(Button parentBtn)
         {
             InitializeComponent();
-            game = id;
-            main = parent;
+            parentButton = parentBtn;
+            game = MainForm.nameToID[parentBtn.Name.Substring(3)];
             InitializeLanguage();
             chkCustomBanner.Checked = MainForm.curCfg.gameCFG[game].customBanner;
             bannerOffDir.Text = MainForm.curCfg.gameCFG[game].bannerOff;
             bannerOnDir.Text = MainForm.curCfg.gameCFG[game].bannerOn;
+            chkCustomText.Checked = MainForm.curCfg.gameCFG[game].customText;
             string trTest = Environment.SpecialFolder.ApplicationData + "\\ShaghaiAlice\\th" + MainForm.idToNumber[game].ToString("00");
             if (!Directory.Exists(trTest) && Directory.Exists(trTest + "tr"))
                 tr = true;
@@ -138,7 +139,7 @@ namespace Touhou_Launcher
                         break;
                     }
                 }
-            main.RefreshGames();
+            MainForm.RefreshButton(parentButton);
             MainForm.curCfg.Save();
         }
 
@@ -235,48 +236,18 @@ namespace Touhou_Launcher
 
         private void launch_Click(object sender, EventArgs e)
         {
-            ProcessStartInfo startInfo = new ProcessStartInfo(windowsSettings.Controls.Find(((Button)sender).Name.ToLower().Substring(6) + "Dir", false).FirstOrDefault(n => n.GetType() == typeof(TextBox)).Text);
-            if (File.Exists(startInfo.FileName))
-            {
-                if (MainForm.curCfg.gameCFG[game].appLocale[MainForm.dirToNumber[((Button)sender).Name.ToLower().Substring(6)]] && File.Exists("C:\\Windows\\AppPatch\\AppLoc.exe"))
-                {
-                    startInfo.Arguments = "\"" + startInfo.FileName + "\" \"/L0411\"";
-                    startInfo.FileName = "C:\\Windows\\AppPatch\\AppLoc.exe";
-                    Process.Start(startInfo);
-                }
-                else
-                {
-                    Process.Start(startInfo);
-                }
-            }
-            else
-            {
-                MessageBox.Show(MainForm.rm.GetString("errorGameNotFound"));
-            }
+            int dir = MainForm.dirToNumber[((Button)sender).Name.ToLower().Substring(6)];
+            MainForm.launchGame(game, dir, MainForm.curCfg.gameCFG[game].appLocale[dir]);
         }
 
         private void launchcrap_Click(object sender, EventArgs e)
         {
-            if (!File.Exists(MainForm.curCfg.crapDir))
-                MessageBox.Show(MainForm.rm.GetString("errorcrapNotFound"));
-            else if (MainForm.curCfg.gameCFG[game].crapCFG[0] == "None" || MainForm.curCfg.gameCFG[game].crapCFG[1] == "None")
-                MessageBox.Show(MainForm.rm.GetString("errorcrapConfigNotSet"));
-            else
-            {
-                ProcessStartInfo startInfo = new ProcessStartInfo(MainForm.curCfg.crapDir, "\"" + Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\" + MainForm.curCfg.gameCFG[game].crapCFG[1] + "\" " + MainForm.curCfg.gameCFG[game].crapCFG[0]);
-                startInfo.WorkingDirectory = Path.GetDirectoryName(MainForm.curCfg.crapDir);
-                Process.Start(startInfo);
-            }
+            MainForm.launchcrap(game);
         }
 
         private void defaultApplocale_CheckedChanged(object sender, EventArgs e)
         {
             MainForm.curCfg.gameCFG[game].DefaultApplocale = defaultApplocale.Checked;
-        }
-
-        private void chkCustomBanner_CheckedChanged(object sender, EventArgs e)
-        {
-            MainForm.curCfg.gameCFG[game].customBanner = chkCustomBanner.Checked;
         }
 
         private void browseBannerOn_Click(object sender, EventArgs e)
@@ -340,6 +311,16 @@ namespace Touhou_Launcher
                 MainForm.curCfg.gameCFG[game].bannerOff = ((TextBox)sender).Text;
         }
 
+        private void chkCustomBanner_CheckedChanged(object sender, EventArgs e)
+        {
+            MainForm.curCfg.gameCFG[game].customBanner = chkCustomBanner.Checked;
+        }
+
+        private void chkCustomText_CheckedChanged(object sender, EventArgs e)
+        {
+            MainForm.curCfg.gameCFG[game].customText = chkCustomText.Checked;
+        }
+
         private void browseHDI_Click(object sender, EventArgs e)
         {
             foreach (string file in MainForm.FileBrowser(MainForm.rm.GetString("hdiSelectTitle"), MainForm.rm.GetString("hdiFilter") + " (*.hdi)|*.hdi|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*"))
@@ -351,12 +332,7 @@ namespace Touhou_Launcher
 
         private void launchHDI_Click(object sender, EventArgs e)
         {
-            if (!File.Exists(MainForm.curCfg.np2Dir))
-                MessageBox.Show(MainForm.rm.GetString("errorNP2NotFound"));
-            else if (!MainForm.NekoProject(hdiDir.Text))
-                MessageBox.Show(MainForm.rm.GetString("errorInvalidNP2INI"));
-            else
-                Process.Start(MainForm.curCfg.np2Dir);
+            MainForm.launchHDI(MainForm.curCfg.gameCFG[game].GameDir[0]);
         }
 
         private void openFolder_Click(object sender, EventArgs e)
@@ -463,6 +439,14 @@ namespace Touhou_Launcher
                 MainForm.curCfg.gameCFG[game].crapCFG[1] = crapCfg.SelectedItem.ToString();
             if (crap.ContainsKey(MainForm.curCfg.gameCFG[game].crapCFG[0]))
                 MainForm.curCfg.gameCFG[game].GameDir[3] = MainForm.curCfg.gameCFG[game].crapCFG[0] != "None" ? crap[MainForm.curCfg.gameCFG[game].crapCFG[0]] : "";
+        }
+
+        private void btnCustomText_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorSet = new ColorDialog();
+            colorSet.Color = Color.FromArgb(MainForm.curCfg.gameCFG[game].textColor);
+            if (colorSet.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                MainForm.curCfg.gameCFG[game].textColor = colorSet.Color.ToArgb();
         }
     }
 }

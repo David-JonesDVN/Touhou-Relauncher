@@ -1,5 +1,6 @@
 1.0-pre2
 Added: thcrap Profile Editor. Lets you select patches from a list and configure the game list manually. The repository search starts at a configurable Url. Offline-only builds will also be released without this feature from now on.
+Added: Customizable text color for buttons + the ability to disable the text or banner entirely.
 Changed: Custom game categories no longer save their key name in the config (hopefully since they are no longer needed).
 Changed: The File Select Dialog will now start from the last place a file was selected.
 Changed: Custom banners now stretch to fit the button.
@@ -12,6 +13,8 @@ Fixed: Not changing the name while renaming custom games/categories would result
 Fixed: Adding the same custom game multiple times. (As long as the path is the exact same)
 Fixed: Expanding/Collapsing a custom game category deselecting it.
 Fixed: thcrap's files appearing in the launcher's directory.
+Fixed: Hisoutensoku and Double Spoiler having the wrong numbers.
+Fixed: The banner size label not showing up on the configuration form.
 Optimized code
 Updated localization files.
 

@@ -32,6 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.gameContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.configureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bannerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.largeIconsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -229,9 +232,11 @@
             // gameContextMenu
             // 
             this.gameContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.configureToolStripMenuItem});
+            this.configureToolStripMenuItem,
+            this.buttonToolStripMenuItem});
             this.gameContextMenu.Name = "contextMenuStrip1";
-            this.gameContextMenu.Size = new System.Drawing.Size(162, 26);
+            this.gameContextMenu.Size = new System.Drawing.Size(162, 70);
+            this.gameContextMenu.Opening += new System.ComponentModel.CancelEventHandler(this.ContextMenu_Opening);
             // 
             // configureToolStripMenuItem
             // 
@@ -239,6 +244,31 @@
             this.configureToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.configureToolStripMenuItem.Text = "Configure Game";
             this.configureToolStripMenuItem.Click += new System.EventHandler(this.configureToolStripMenuItem_Click);
+            // 
+            // buttonToolStripMenuItem
+            // 
+            this.buttonToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bannerToolStripMenuItem,
+            this.textToolStripMenuItem});
+            this.buttonToolStripMenuItem.Name = "buttonToolStripMenuItem";
+            this.buttonToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.buttonToolStripMenuItem.Text = "Edit Button";
+            // 
+            // bannerToolStripMenuItem
+            // 
+            this.bannerToolStripMenuItem.CheckOnClick = true;
+            this.bannerToolStripMenuItem.Name = "bannerToolStripMenuItem";
+            this.bannerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bannerToolStripMenuItem.Text = "Show Banner?";
+            this.bannerToolStripMenuItem.Click += new System.EventHandler(this.buttonToolStripMenuItem_Click);
+            // 
+            // textToolStripMenuItem
+            // 
+            this.textToolStripMenuItem.CheckOnClick = true;
+            this.textToolStripMenuItem.Name = "textToolStripMenuItem";
+            this.textToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.textToolStripMenuItem.Text = "Show Text?";
+            this.textToolStripMenuItem.Click += new System.EventHandler(this.buttonToolStripMenuItem_Click);
             // 
             // customContextMenu
             // 
@@ -2485,6 +2515,9 @@
         private System.Windows.Forms.TextBox crapStartingRepo;
         private System.Windows.Forms.Label crapStartingRepoLabel;
         private System.Windows.Forms.Button crapResetStartingRepo;
+        private System.Windows.Forms.ToolStripMenuItem buttonToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem textToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bannerToolStripMenuItem;
     }
 }
 
