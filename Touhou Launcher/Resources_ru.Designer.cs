@@ -169,6 +169,24 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to * 120 x 44.
+        /// </summary>
+        public static string bannerSize {
+            get {
+                return ResourceManager.GetString("bannerSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show banner?.
+        /// </summary>
+        public static string bannerToolStripMenuItem {
+            get {
+                return ResourceManager.GetString("bannerToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Обзор.
         /// </summary>
         public static string browse {
@@ -178,11 +196,38 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Set Color.
+        /// </summary>
+        public static string btnCustomText {
+            get {
+                return ResourceManager.GetString("btnCustomText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Button.
+        /// </summary>
+        public static string buttonToolStripMenuItem {
+            get {
+                return ResourceManager.GetString("buttonToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Кастомные обложки.
         /// </summary>
         public static string chkCustomBanner {
             get {
                 return ResourceManager.GetString("chkCustomBanner", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Use custom text color.
+        /// </summary>
+        public static string chkCustomText {
+            get {
+                return ResourceManager.GetString("chkCustomText", resourceCulture);
             }
         }
         
@@ -367,7 +412,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Touhou 12.3: Double Spoiler.
+        ///   Looks up a localized string similar to Touhou 12.5: Double Spoiler.
         /// </summary>
         public static string DSTitle {
             get {
@@ -1458,6 +1503,15 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Show Text?.
+        /// </summary>
+        public static string textToolStripMenuItem {
+            get {
+                return ResourceManager.GetString("textToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Плитка.
         /// </summary>
         public static string tileToolStripMenuItem {
@@ -1575,7 +1629,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Touhou 12.5: Hisoutensoku.
+        ///   Looks up a localized string similar to Touhou 12.3: Hisoutensoku.
         /// </summary>
         public static string UoNLTitle {
             get {

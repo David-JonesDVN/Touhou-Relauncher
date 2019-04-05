@@ -21,9 +21,12 @@ namespace Touhou_Launcher
 
         static System.Reflection.Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
         {
+            string str = "";
             if (args.Name.Contains("Newtonsoft.Json"))
+                str = "Touhou_Launcher.jsonnet.Newtonsoft.Json.dll";
+            if (str != "")
             {
-                using (var stream = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream("Touhou_Launcher.jsonnet.Newtonsoft.Json.dll"))
+                using (var stream = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream(str))
                 {
                     try
                     {

@@ -67,7 +67,9 @@
             this.browseHDI = new System.Windows.Forms.Button();
             this.hdiDir = new System.Windows.Forms.TextBox();
             this.bannerSettings = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.chkCustomText = new System.Windows.Forms.CheckBox();
+            this.btnCustomText = new System.Windows.Forms.Button();
+            this.bannerSize = new System.Windows.Forms.Label();
             this.windowsSettings = new System.Windows.Forms.GroupBox();
             this.crapCfg = new System.Windows.Forms.ComboBox();
             this.crapGame = new System.Windows.Forms.ComboBox();
@@ -132,7 +134,7 @@
             // 
             // browseJP
             // 
-            this.browseJP.Location = new System.Drawing.Point(196, 32);
+            this.browseJP.Location = new System.Drawing.Point(196, 30);
             this.browseJP.Name = "browseJP";
             this.browseJP.Size = new System.Drawing.Size(62, 22);
             this.browseJP.TabIndex = 5;
@@ -179,7 +181,7 @@
             // 
             // browseEN
             // 
-            this.browseEN.Location = new System.Drawing.Point(196, 80);
+            this.browseEN.Location = new System.Drawing.Point(196, 78);
             this.browseEN.Name = "browseEN";
             this.browseEN.Size = new System.Drawing.Size(62, 22);
             this.browseEN.TabIndex = 11;
@@ -244,7 +246,7 @@
             // 
             // launchEN
             // 
-            this.launchEN.Location = new System.Drawing.Point(264, 80);
+            this.launchEN.Location = new System.Drawing.Point(264, 78);
             this.launchEN.Name = "launchEN";
             this.launchEN.Size = new System.Drawing.Size(55, 22);
             this.launchEN.TabIndex = 18;
@@ -254,7 +256,7 @@
             // 
             // launchJP
             // 
-            this.launchJP.Location = new System.Drawing.Point(264, 32);
+            this.launchJP.Location = new System.Drawing.Point(264, 30);
             this.launchJP.Name = "launchJP";
             this.launchJP.Size = new System.Drawing.Size(55, 22);
             this.launchJP.TabIndex = 19;
@@ -306,7 +308,7 @@
             // crapApplocale
             // 
             this.crapApplocale.AutoSize = true;
-            this.crapApplocale.Location = new System.Drawing.Point(221, 154);
+            this.crapApplocale.Location = new System.Drawing.Point(221, 152);
             this.crapApplocale.Name = "crapApplocale";
             this.crapApplocale.Size = new System.Drawing.Size(98, 17);
             this.crapApplocale.TabIndex = 26;
@@ -369,7 +371,7 @@
             // bannerOffLabel
             // 
             this.bannerOffLabel.AutoSize = true;
-            this.bannerOffLabel.Location = new System.Drawing.Point(6, 64);
+            this.bannerOffLabel.Location = new System.Drawing.Point(6, 54);
             this.bannerOffLabel.Name = "bannerOffLabel";
             this.bannerOffLabel.Size = new System.Drawing.Size(69, 13);
             this.bannerOffLabel.TabIndex = 34;
@@ -377,7 +379,7 @@
             // 
             // browseBannerOff
             // 
-            this.browseBannerOff.Location = new System.Drawing.Point(176, 78);
+            this.browseBannerOff.Location = new System.Drawing.Point(176, 68);
             this.browseBannerOff.Name = "browseBannerOff";
             this.browseBannerOff.Size = new System.Drawing.Size(62, 22);
             this.browseBannerOff.TabIndex = 33;
@@ -388,7 +390,7 @@
             // bannerOffDir
             // 
             this.bannerOffDir.AllowDrop = true;
-            this.bannerOffDir.Location = new System.Drawing.Point(9, 80);
+            this.bannerOffDir.Location = new System.Drawing.Point(9, 70);
             this.bannerOffDir.Name = "bannerOffDir";
             this.bannerOffDir.Size = new System.Drawing.Size(161, 20);
             this.bannerOffDir.TabIndex = 32;
@@ -403,16 +405,16 @@
             this.pc98Settings.Controls.Add(this.hdiLabel);
             this.pc98Settings.Controls.Add(this.browseHDI);
             this.pc98Settings.Controls.Add(this.hdiDir);
-            this.pc98Settings.Location = new System.Drawing.Point(335, 119);
+            this.pc98Settings.Location = new System.Drawing.Point(335, 127);
             this.pc98Settings.Name = "pc98Settings";
-            this.pc98Settings.Size = new System.Drawing.Size(244, 115);
+            this.pc98Settings.Size = new System.Drawing.Size(244, 107);
             this.pc98Settings.TabIndex = 35;
             this.pc98Settings.TabStop = false;
             this.pc98Settings.Text = "PC-98 Game Settings";
             // 
             // openNP2Folder
             // 
-            this.openNP2Folder.Location = new System.Drawing.Point(9, 88);
+            this.openNP2Folder.Location = new System.Drawing.Point(9, 80);
             this.openNP2Folder.Name = "openNP2Folder";
             this.openNP2Folder.Size = new System.Drawing.Size(229, 23);
             this.openNP2Folder.TabIndex = 37;
@@ -422,7 +424,7 @@
             // 
             // launchHDI
             // 
-            this.launchHDI.Location = new System.Drawing.Point(183, 66);
+            this.launchHDI.Location = new System.Drawing.Point(183, 58);
             this.launchHDI.Name = "launchHDI";
             this.launchHDI.Size = new System.Drawing.Size(55, 22);
             this.launchHDI.TabIndex = 23;
@@ -433,7 +435,7 @@
             // hdiLabel
             // 
             this.hdiLabel.AutoSize = true;
-            this.hdiLabel.Location = new System.Drawing.Point(6, 24);
+            this.hdiLabel.Location = new System.Drawing.Point(6, 16);
             this.hdiLabel.Name = "hdiLabel";
             this.hdiLabel.Size = new System.Drawing.Size(60, 13);
             this.hdiLabel.TabIndex = 22;
@@ -441,7 +443,7 @@
             // 
             // browseHDI
             // 
-            this.browseHDI.Location = new System.Drawing.Point(9, 66);
+            this.browseHDI.Location = new System.Drawing.Point(9, 58);
             this.browseHDI.Name = "browseHDI";
             this.browseHDI.Size = new System.Drawing.Size(62, 22);
             this.browseHDI.TabIndex = 21;
@@ -452,7 +454,7 @@
             // hdiDir
             // 
             this.hdiDir.AllowDrop = true;
-            this.hdiDir.Location = new System.Drawing.Point(9, 40);
+            this.hdiDir.Location = new System.Drawing.Point(9, 32);
             this.hdiDir.Name = "hdiDir";
             this.hdiDir.Size = new System.Drawing.Size(229, 20);
             this.hdiDir.TabIndex = 20;
@@ -462,7 +464,9 @@
             // 
             // bannerSettings
             // 
-            this.bannerSettings.Controls.Add(this.label1);
+            this.bannerSettings.Controls.Add(this.chkCustomText);
+            this.bannerSettings.Controls.Add(this.btnCustomText);
+            this.bannerSettings.Controls.Add(this.bannerSize);
             this.bannerSettings.Controls.Add(this.bannerOnLabel);
             this.bannerSettings.Controls.Add(this.chkCustomBanner);
             this.bannerSettings.Controls.Add(this.bannerOffLabel);
@@ -472,19 +476,40 @@
             this.bannerSettings.Controls.Add(this.bannerOffDir);
             this.bannerSettings.Location = new System.Drawing.Point(335, 3);
             this.bannerSettings.Name = "bannerSettings";
-            this.bannerSettings.Size = new System.Drawing.Size(244, 110);
+            this.bannerSettings.Size = new System.Drawing.Size(244, 120);
             this.bannerSettings.TabIndex = 0;
             this.bannerSettings.TabStop = false;
             this.bannerSettings.Text = "Banner Settings";
             // 
-            // label1
+            // chkCustomText
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(183, 60);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 35;
-            this.label1.Text = "* 120 x 44";
+            this.chkCustomText.AutoSize = true;
+            this.chkCustomText.Location = new System.Drawing.Point(110, 97);
+            this.chkCustomText.Name = "chkCustomText";
+            this.chkCustomText.Size = new System.Drawing.Size(128, 17);
+            this.chkCustomText.TabIndex = 37;
+            this.chkCustomText.Text = "Use custom text color";
+            this.chkCustomText.UseVisualStyleBackColor = true;
+            this.chkCustomText.CheckedChanged += new System.EventHandler(this.chkCustomText_CheckedChanged);
+            // 
+            // btnCustomText
+            // 
+            this.btnCustomText.Location = new System.Drawing.Point(9, 93);
+            this.btnCustomText.Name = "btnCustomText";
+            this.btnCustomText.Size = new System.Drawing.Size(95, 22);
+            this.btnCustomText.TabIndex = 36;
+            this.btnCustomText.Text = "Set Color";
+            this.btnCustomText.UseVisualStyleBackColor = true;
+            this.btnCustomText.Click += new System.EventHandler(this.btnCustomText_Click);
+            // 
+            // bannerSize
+            // 
+            this.bannerSize.AutoSize = true;
+            this.bannerSize.Location = new System.Drawing.Point(183, 54);
+            this.bannerSize.Name = "bannerSize";
+            this.bannerSize.Size = new System.Drawing.Size(55, 13);
+            this.bannerSize.TabIndex = 35;
+            this.bannerSize.Text = "* 120 x 44";
             // 
             // windowsSettings
             // 
@@ -624,8 +649,10 @@
         private System.Windows.Forms.GroupBox windowsSettings;
         private System.Windows.Forms.Button openAppdata;
         private System.Windows.Forms.Button openNP2Folder;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label bannerSize;
         private System.Windows.Forms.ComboBox crapGame;
         private System.Windows.Forms.ComboBox crapCfg;
+        private System.Windows.Forms.CheckBox chkCustomText;
+        private System.Windows.Forms.Button btnCustomText;
     }
 }
