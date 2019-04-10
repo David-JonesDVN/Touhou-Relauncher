@@ -484,7 +484,7 @@
     <value>Hisoutensoku</value>
   </data>
   <data name="useApplocale" xml:space="preserve">
-    <value>Applocale</value>
+    <value>Вкл. Applocale</value>
   </data>
   <data name="VDShort" xml:space="preserve">
     <value>VD</value>
@@ -517,7 +517,7 @@
     <value>Детали</value>
   </data>
   <data name="errorAppdataNotFound" xml:space="preserve">
-    <value>Не удается найти папку Appdata</value>
+    <value>Не удаётся найти папку Appdata</value>
   </data>
   <data name="errorFileNotFound" xml:space="preserve">
     <value>Файл не найден</value>
@@ -648,18 +648,18 @@
     <value>* 120 x 44</value>
   </data>
   <data name="btnCustomText" xml:space="preserve">
-    <value>Set Color</value>
+    <value>Задать цвет</value>
   </data>
   <data name="chkCustomText" xml:space="preserve">
-    <value>Use custom text color</value>
+    <value>Кастомный цвет текста</value>
   </data>
   <data name="bannerToolStripMenuItem" xml:space="preserve">
-    <value>Show banner?</value>
+    <value>Отображать обложки?</value>
   </data>
   <data name="buttonToolStripMenuItem" xml:space="preserve">
-    <value>Edit Button</value>
+    <value>Кнопка Изменить</value>
   </data>
   <data name="textToolStripMenuItem" xml:space="preserve">
-    <value>Show Text?</value>
+    <value>Отображать текст?</value>
   </data>
 </root>
