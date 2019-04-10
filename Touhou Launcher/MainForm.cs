@@ -30,6 +30,7 @@ namespace Touhou_Launcher
             public bool showBanner = true;
             public bool showText = true;
             public int defaultTextColor = 0;
+            public bool randomCheck = true;
         }
 
         public class SubNode
@@ -71,14 +72,14 @@ namespace Touhou_Launcher
         {
             public GameConfig[] gameCFG = new GameConfig[27];
             public SubNode Custom = new SubNode();
+            public View customView = View.LargeIcon;
+            public SortOrder customSort = SortOrder.Ascending;
+            public bool autoClose = false;
+            public bool showTray = false;
+            public bool minimizeToTray = false;
             public int language = 0;
             public string np2Dir = "";
             public string crapDir = "";
-            public bool autoClose = false;
-            public View customView = View.LargeIcon;
-            public SortOrder customSort = SortOrder.Ascending;
-            public bool showTray = false;
-            public bool minimizeToTray = false;
             public Configs()
             {
                 for (int i = 0; i < gameCFG.Length ; i++)
@@ -324,6 +325,12 @@ namespace Touhou_Launcher
             showTray.Checked = curCfg.showTray;
             np2Dir.Text = curCfg.np2Dir;
             crapDir.Text = curCfg.crapDir;
+            foreach (CheckBox chk in GetAll(randomSettings, typeof(CheckBox)))
+            {
+                chk.CheckedChanged -= chkRandom_CheckedChanged;
+                chk.Checked = curCfg.gameCFG[nameToID[chk.Name.Substring(3)]].randomCheck;
+                chk.CheckedChanged += chkRandom_CheckedChanged;
+            }
         }
 
         private void InitializeLanguage()
@@ -508,6 +515,7 @@ namespace Touhou_Launcher
         {
             this.Focus();
             trayIcon.Visible = false;
+            curCfg.Save();
         }
 
         private void DragEnter(object sender, DragEventArgs e)
@@ -863,6 +871,28 @@ namespace Touhou_Launcher
             }
         }
 
+        private void mainControl_Deselected(object sender, TabControlEventArgs e)
+        {
+            if (e.TabPageIndex == 3)
+                curCfg.Save();
+        }
+
+        private void autoClose_CheckedChanged(object sender, EventArgs e)
+        {
+            curCfg.autoClose = autoClose.Checked;
+        }
+
+        private void minimizeToTray_CheckedChanged(object sender, EventArgs e)
+        {
+            curCfg.minimizeToTray = minimizeToTray.Checked;
+        }
+
+        private void showTray_CheckedChanged(object sender, EventArgs e)
+        {
+            curCfg.showTray = showTray.Checked;
+            trayIcon.Visible = showTray.Checked;
+        }
+
         private void languageBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             curCfg.language = languageBox.SelectedIndex;
@@ -885,22 +915,10 @@ namespace Touhou_Launcher
                 chk.Checked = false;
             }
         }
-        private void autoClose_CheckedChanged(object sender, EventArgs e)
-        {
-            curCfg.autoClose = autoClose.Checked;
-            curCfg.Save();
-        }
-        private void minimizeToTray_CheckedChanged(object sender, EventArgs e)
-        {
-            curCfg.minimizeToTray = minimizeToTray.Checked;
-            curCfg.Save();
-        }
 
-        private void showTray_CheckedChanged(object sender, EventArgs e)
+        private void chkRandom_CheckedChanged(object sender, EventArgs e)
         {
-            curCfg.showTray = showTray.Checked;
-            trayIcon.Visible = showTray.Checked;
-            curCfg.Save();
+            curCfg.gameCFG[nameToID[((CheckBox)sender).Name.Substring(3)]].randomCheck = ((CheckBox)sender).Checked;
         }
 
         private void browse_Click(object sender, EventArgs e)
@@ -912,7 +930,6 @@ namespace Touhou_Launcher
                 txtbox.Text = file;
                 curCfg.np2Dir = np2Dir.Text;
                 curCfg.crapDir = crapDir.Text;
-                curCfg.Save();
             }
         }
 
@@ -923,7 +940,6 @@ namespace Touhou_Launcher
                 ((TextBox)sender).BackColor = SystemColors.Window;
                 curCfg.np2Dir = np2Dir.Text;
                 curCfg.crapDir = crapDir.Text;
-                curCfg.Save();
             }
             else
                 ((TextBox)sender).BackColor = Color.Red;
