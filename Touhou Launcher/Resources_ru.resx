@@ -484,7 +484,7 @@
     <value>Hisoutensoku</value>
   </data>
   <data name="useApplocale" xml:space="preserve">
-    <value>Applocale</value>
+    <value>Вкл. Applocale</value>
   </data>
   <data name="VDShort" xml:space="preserve">
     <value>VD</value>
@@ -517,7 +517,7 @@
     <value>Детали</value>
   </data>
   <data name="errorAppdataNotFound" xml:space="preserve">
-    <value>Не удается найти папку Appdata</value>
+    <value>Не удаётся найти папку Appdata</value>
   </data>
   <data name="errorFileNotFound" xml:space="preserve">
     <value>Файл не найден</value>
@@ -526,7 +526,7 @@
     <value>Пожалуйста, укажите путь к Neko Project II</value>
   </data>
   <data name="errorOpenImage" xml:space="preserve">
-    <value>Неудаеться открыть изображение: </value>
+    <value>Не удаётся открыть изображение: </value>
   </data>
   <data name="errorReplaysNotFound" xml:space="preserve">
     <value>Папка повторов не найдена</value>
@@ -645,57 +645,57 @@
     <value>Случайная игра</value>
   </data>
   <data name="customRemove" xml:space="preserve">
-    <value>Remove Game</value>
+    <value>Удалить игру</value>
   </data>
   <data name="descriptionColumn" xml:space="preserve">
-    <value>Description</value>
+    <value>Описание</value>
   </data>
   <data name="gameGroup" xml:space="preserve">
-    <value>Game Profiles</value>
+    <value>Игровые профили</value>
   </data>
   <data name="gameIDColumn" xml:space="preserve">
-    <value>Game ID</value>
+    <value>ID игры</value>
   </data>
   <data name="idColumn" xml:space="preserve">
     <value>ID</value>
   </data>
   <data name="patchColumn" xml:space="preserve">
-    <value>Patch</value>
+    <value>Патч</value>
   </data>
   <data name="patchGroup" xml:space="preserve">
-    <value>Custom Profile</value>
+    <value>Кастомный профиль</value>
   </data>
   <data name="pathColumn" xml:space="preserve">
-    <value>Game Path</value>
+    <value>Путь игры</value>
   </data>
   <data name="thcrapTitle" xml:space="preserve">
-    <value>Profile Configuration: </value>
+    <value>Конфигурация профиля: </value>
   </data>
   <data name="titleColumn" xml:space="preserve">
-    <value>Title</value>
+    <value>Заглавие</value>
   </data>
   <data name="crapResetStartingRepo" xml:space="preserve">
-    <value>Default</value>
+    <value>По умолчанию</value>
   </data>
   <data name="crapStartingRepoLabel" xml:space="preserve">
-    <value>thcrap Starting Repository:</value>
+    <value>thcrap исходная папка: </value>
   </data>
   <data name="bannerSize" xml:space="preserve">
     <value>* 120 x 44</value>
   </data>
   <data name="btnCustomText" xml:space="preserve">
-    <value>Set Color</value>
+    <value>Задать цвет</value>
   </data>
   <data name="chkCustomText" xml:space="preserve">
-    <value>Use custom text color</value>
+    <value>Кастомный цвет текста</value>
   </data>
   <data name="bannerToolStripMenuItem" xml:space="preserve">
-    <value>Show banner?</value>
+    <value>Отображать обложки?</value>
   </data>
   <data name="buttonToolStripMenuItem" xml:space="preserve">
-    <value>Edit Button</value>
+    <value>Кнопка Изменить</value>
   </data>
   <data name="textToolStripMenuItem" xml:space="preserve">
-    <value>Show Text?</value>
+    <value>Отображать текст?</value>
   </data>
 </root>
