@@ -235,7 +235,7 @@
             this.configureToolStripMenuItem,
             this.buttonToolStripMenuItem});
             this.gameContextMenu.Name = "contextMenuStrip1";
-            this.gameContextMenu.Size = new System.Drawing.Size(162, 70);
+            this.gameContextMenu.Size = new System.Drawing.Size(162, 48);
             this.gameContextMenu.Opening += new System.ComponentModel.CancelEventHandler(this.ContextMenu_Opening);
             // 
             // configureToolStripMenuItem
@@ -258,7 +258,7 @@
             // 
             this.bannerToolStripMenuItem.CheckOnClick = true;
             this.bannerToolStripMenuItem.Name = "bannerToolStripMenuItem";
-            this.bannerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bannerToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.bannerToolStripMenuItem.Text = "Show Banner?";
             this.bannerToolStripMenuItem.Click += new System.EventHandler(this.buttonToolStripMenuItem_Click);
             // 
@@ -266,7 +266,7 @@
             // 
             this.textToolStripMenuItem.CheckOnClick = true;
             this.textToolStripMenuItem.Name = "textToolStripMenuItem";
-            this.textToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.textToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.textToolStripMenuItem.Text = "Show Text?";
             this.textToolStripMenuItem.Click += new System.EventHandler(this.buttonToolStripMenuItem_Click);
             // 
