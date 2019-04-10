@@ -232,7 +232,7 @@
             this.configureToolStripMenuItem,
             this.buttonToolStripMenuItem});
             this.gameContextMenu.Name = "contextMenuStrip1";
-            this.gameContextMenu.Size = new System.Drawing.Size(162, 70);
+            this.gameContextMenu.Size = new System.Drawing.Size(162, 48);
             this.gameContextMenu.Opening += new System.ComponentModel.CancelEventHandler(this.ContextMenu_Opening);
             // 
             // configureToolStripMenuItem
@@ -614,9 +614,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(9, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 24);
+            this.label1.Size = new System.Drawing.Size(261, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Touhou Launcher 1.0";
+            this.label1.Text = "Touhou Launcher 1.0 - Offline";
             // 
             // settings
             // 
