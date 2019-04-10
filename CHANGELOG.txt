@@ -1,9 +1,11 @@
 1.0-pre2
 Added: thcrap Profile Editor. Lets you select patches from a list and configure the game list manually. The repository search starts at a configurable Url. Offline-only builds will also be released without this feature from now on.
 Added: Customizable text color for buttons + the ability to disable the text or banner entirely.
+Added: Saved states for the random games list.
 Changed: Custom game categories no longer save their key name in the config (hopefully since they are no longer needed).
 Changed: The File Select Dialog will now start from the last place a file was selected.
 Changed: Custom banners now stretch to fit the button.
+Changed: The settings in the settings tab will now only save when switching tabs or closing the program.
 Fixed: Background pictures for games being one pixel off.
 Fixed: Double Dealing Character typo.
 Fixed: Custom banner checkbox not saving.

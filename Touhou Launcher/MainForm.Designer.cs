@@ -721,6 +721,7 @@
             this.chkStB.TabIndex = 0;
             this.chkStB.Text = "StB";
             this.chkStB.UseVisualStyleBackColor = true;
+            this.chkStB.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // chkDS
             // 
@@ -733,6 +734,7 @@
             this.chkDS.TabIndex = 1;
             this.chkDS.Text = "DS";
             this.chkDS.UseVisualStyleBackColor = true;
+            this.chkDS.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // chkGFW
             // 
@@ -745,6 +747,7 @@
             this.chkGFW.TabIndex = 2;
             this.chkGFW.Text = "GFW";
             this.chkGFW.UseVisualStyleBackColor = true;
+            this.chkGFW.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // chkISC
             // 
@@ -757,6 +760,7 @@
             this.chkISC.TabIndex = 3;
             this.chkISC.Text = "ISC";
             this.chkISC.UseVisualStyleBackColor = true;
+            this.chkISC.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // chkVD
             // 
@@ -769,6 +773,7 @@
             this.chkVD.TabIndex = 4;
             this.chkVD.Text = "VD";
             this.chkVD.UseVisualStyleBackColor = true;
+            this.chkVD.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // fightingRandom
             // 
@@ -810,6 +815,7 @@
             this.chkIaMP.TabIndex = 0;
             this.chkIaMP.Text = "IaMP";
             this.chkIaMP.UseVisualStyleBackColor = true;
+            this.chkIaMP.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // chkSWR
             // 
@@ -822,6 +828,7 @@
             this.chkSWR.TabIndex = 1;
             this.chkSWR.Text = "SWR";
             this.chkSWR.UseVisualStyleBackColor = true;
+            this.chkSWR.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // chkUoNL
             // 
@@ -834,6 +841,7 @@
             this.chkUoNL.TabIndex = 2;
             this.chkUoNL.Text = "Hisoutensoku";
             this.chkUoNL.UseVisualStyleBackColor = true;
+            this.chkUoNL.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // chkHM
             // 
@@ -846,6 +854,7 @@
             this.chkHM.TabIndex = 3;
             this.chkHM.Text = "HM";
             this.chkHM.UseVisualStyleBackColor = true;
+            this.chkHM.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // chkULiL
             // 
@@ -858,6 +867,7 @@
             this.chkULiL.TabIndex = 4;
             this.chkULiL.Text = "ULiL";
             this.chkULiL.UseVisualStyleBackColor = true;
+            this.chkULiL.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // chkAoCF
             // 
@@ -870,6 +880,7 @@
             this.chkAoCF.TabIndex = 5;
             this.chkAoCF.Text = "AoCF";
             this.chkAoCF.UseVisualStyleBackColor = true;
+            this.chkAoCF.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // mainRandom
             // 
@@ -921,6 +932,7 @@
             this.chkHRtP.TabIndex = 0;
             this.chkHRtP.Text = "HRtP";
             this.chkHRtP.UseVisualStyleBackColor = true;
+            this.chkHRtP.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // chkSoEW
             // 
@@ -933,6 +945,7 @@
             this.chkSoEW.TabIndex = 1;
             this.chkSoEW.Text = "SoEW";
             this.chkSoEW.UseVisualStyleBackColor = true;
+            this.chkSoEW.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // chkPoDD
             // 
@@ -945,6 +958,7 @@
             this.chkPoDD.TabIndex = 2;
             this.chkPoDD.Text = "PoDD";
             this.chkPoDD.UseVisualStyleBackColor = true;
+            this.chkPoDD.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // chkLLS
             // 
@@ -957,6 +971,7 @@
             this.chkLLS.TabIndex = 3;
             this.chkLLS.Text = "LLS";
             this.chkLLS.UseVisualStyleBackColor = true;
+            this.chkLLS.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // chkMS
             // 
@@ -969,6 +984,7 @@
             this.chkMS.TabIndex = 4;
             this.chkMS.Text = "MS";
             this.chkMS.UseVisualStyleBackColor = true;
+            this.chkMS.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // chkEoSD
             // 
@@ -981,6 +997,7 @@
             this.chkEoSD.TabIndex = 5;
             this.chkEoSD.Text = "EoSD";
             this.chkEoSD.UseVisualStyleBackColor = true;
+            this.chkEoSD.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // chkPCB
             // 
@@ -993,6 +1010,7 @@
             this.chkPCB.TabIndex = 6;
             this.chkPCB.Text = "PCB";
             this.chkPCB.UseVisualStyleBackColor = true;
+            this.chkPCB.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // chkIN
             // 
@@ -1005,6 +1023,7 @@
             this.chkIN.TabIndex = 7;
             this.chkIN.Text = "IN";
             this.chkIN.UseVisualStyleBackColor = true;
+            this.chkIN.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // chkPoFV
             // 
@@ -1017,6 +1036,7 @@
             this.chkPoFV.TabIndex = 8;
             this.chkPoFV.Text = "PoFV";
             this.chkPoFV.UseVisualStyleBackColor = true;
+            this.chkPoFV.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // chkMoF
             // 
@@ -1029,6 +1049,7 @@
             this.chkMoF.TabIndex = 9;
             this.chkMoF.Text = "MoF";
             this.chkMoF.UseVisualStyleBackColor = true;
+            this.chkMoF.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // chkSA
             // 
@@ -1041,6 +1062,7 @@
             this.chkSA.TabIndex = 10;
             this.chkSA.Text = "SA";
             this.chkSA.UseVisualStyleBackColor = true;
+            this.chkSA.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // chkUFO
             // 
@@ -1053,6 +1075,7 @@
             this.chkUFO.TabIndex = 11;
             this.chkUFO.Text = "UFO";
             this.chkUFO.UseVisualStyleBackColor = true;
+            this.chkUFO.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // chkTD
             // 
@@ -1065,6 +1088,7 @@
             this.chkTD.TabIndex = 12;
             this.chkTD.Text = "TD";
             this.chkTD.UseVisualStyleBackColor = true;
+            this.chkTD.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // chkDDC
             // 
@@ -1077,6 +1101,7 @@
             this.chkDDC.TabIndex = 13;
             this.chkDDC.Text = "DDC";
             this.chkDDC.UseVisualStyleBackColor = true;
+            this.chkDDC.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // chkLoLK
             // 
@@ -1089,6 +1114,7 @@
             this.chkLoLK.TabIndex = 14;
             this.chkLoLK.Text = "LoLK";
             this.chkLoLK.UseVisualStyleBackColor = true;
+            this.chkLoLK.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // chkHSiFS
             // 
@@ -1101,6 +1127,7 @@
             this.chkHSiFS.TabIndex = 15;
             this.chkHSiFS.Text = "HSiFS";
             this.chkHSiFS.UseVisualStyleBackColor = true;
+            this.chkHSiFS.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // launcherSettings
             // 
@@ -1442,6 +1469,7 @@
             this.mainControl.SelectedIndex = 0;
             this.mainControl.Size = new System.Drawing.Size(535, 561);
             this.mainControl.TabIndex = 0;
+            this.mainControl.Deselected += new System.Windows.Forms.TabControlEventHandler(this.mainControl_Deselected);
             // 
             // games
             // 
