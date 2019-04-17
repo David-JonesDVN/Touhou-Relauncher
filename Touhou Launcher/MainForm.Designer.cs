@@ -444,7 +444,7 @@
             this.autoClose.Location = new System.Drawing.Point(6, 19);
             this.autoClose.Name = "autoClose";
             this.autoClose.Size = new System.Drawing.Size(76, 17);
-            this.autoClose.TabIndex = 5;
+            this.autoClose.TabIndex = 0;
             this.autoClose.Text = "Auto-close";
             this.toolTip.SetToolTip(this.autoClose, "Automatically close the launcher after launching a game");
             this.autoClose.UseVisualStyleBackColor = true;
@@ -457,12 +457,11 @@
             this.btnHRtP.ContextMenuStrip = this.gameContextMenu;
             this.btnHRtP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHRtP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnHRtP.Image = global::Touhou_Launcher.Properties.Resources.hrtpg;
             this.btnHRtP.Location = new System.Drawing.Point(3, 3);
             this.btnHRtP.Name = "btnHRtP";
             this.btnHRtP.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnHRtP.Size = new System.Drawing.Size(120, 44);
-            this.btnHRtP.TabIndex = 2;
+            this.btnHRtP.TabIndex = 0;
             this.btnHRtP.Text = "Highly Responsive to Prayers";
             this.btnHRtP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHRtP.UseVisualStyleBackColor = true;
@@ -476,12 +475,11 @@
             this.btnSoEW.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSoEW.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSoEW.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnSoEW.Image = global::Touhou_Launcher.Properties.Resources.soewg;
             this.btnSoEW.Location = new System.Drawing.Point(129, 3);
             this.btnSoEW.Name = "btnSoEW";
             this.btnSoEW.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnSoEW.Size = new System.Drawing.Size(120, 44);
-            this.btnSoEW.TabIndex = 3;
+            this.btnSoEW.TabIndex = 1;
             this.btnSoEW.Text = "Story of Eastern Wonderland";
             this.btnSoEW.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSoEW.UseVisualStyleBackColor = true;
@@ -495,12 +493,11 @@
             this.btnRandom.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRandom.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRandom.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnRandom.Image = global::Touhou_Launcher.Properties.Resources.random;
             this.btnRandom.Location = new System.Drawing.Point(204, 488);
             this.btnRandom.Name = "btnRandom";
             this.btnRandom.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnRandom.Size = new System.Drawing.Size(120, 44);
-            this.btnRandom.TabIndex = 1;
+            this.btnRandom.TabIndex = 4;
             this.btnRandom.Text = "Random";
             this.btnRandom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRandom.UseVisualStyleBackColor = true;
@@ -514,12 +511,11 @@
             this.btnPoDD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPoDD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPoDD.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnPoDD.Image = global::Touhou_Launcher.Properties.Resources.poddg;
             this.btnPoDD.Location = new System.Drawing.Point(255, 3);
             this.btnPoDD.Name = "btnPoDD";
             this.btnPoDD.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnPoDD.Size = new System.Drawing.Size(120, 44);
-            this.btnPoDD.TabIndex = 4;
+            this.btnPoDD.TabIndex = 2;
             this.btnPoDD.Text = "Phantasmagoria of Dim. Dream";
             this.btnPoDD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPoDD.UseVisualStyleBackColor = true;
@@ -533,12 +529,11 @@
             this.btnLLS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLLS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLLS.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLLS.Image = global::Touhou_Launcher.Properties.Resources.llsg;
             this.btnLLS.Location = new System.Drawing.Point(381, 3);
             this.btnLLS.Name = "btnLLS";
             this.btnLLS.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnLLS.Size = new System.Drawing.Size(120, 44);
-            this.btnLLS.TabIndex = 5;
+            this.btnLLS.TabIndex = 3;
             this.btnLLS.Text = "Lotus Land Story";
             this.btnLLS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLLS.UseVisualStyleBackColor = true;
@@ -552,12 +547,11 @@
             this.btnMS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnMS.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnMS.Image = global::Touhou_Launcher.Properties.Resources.msg;
             this.btnMS.Location = new System.Drawing.Point(3, 53);
             this.btnMS.Name = "btnMS";
             this.btnMS.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnMS.Size = new System.Drawing.Size(120, 44);
-            this.btnMS.TabIndex = 6;
+            this.btnMS.TabIndex = 4;
             this.btnMS.Text = "Mystic Square";
             this.btnMS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMS.UseVisualStyleBackColor = true;
@@ -673,7 +667,7 @@
             this.randomNone.Location = new System.Drawing.Point(201, 49);
             this.randomNone.Name = "randomNone";
             this.randomNone.Size = new System.Drawing.Size(100, 25);
-            this.randomNone.TabIndex = 3;
+            this.randomNone.TabIndex = 1;
             this.randomNone.Text = "Select None";
             this.randomNone.UseVisualStyleBackColor = true;
             this.randomNone.Click += new System.EventHandler(this.randomNone_Click);
@@ -683,7 +677,7 @@
             this.randomAll.Location = new System.Drawing.Point(6, 49);
             this.randomAll.Name = "randomAll";
             this.randomAll.Size = new System.Drawing.Size(100, 25);
-            this.randomAll.TabIndex = 2;
+            this.randomAll.TabIndex = 0;
             this.randomAll.Text = "Select All";
             this.randomAll.UseVisualStyleBackColor = true;
             this.randomAll.Click += new System.EventHandler(this.randomAll_Click);
@@ -696,7 +690,7 @@
             this.otherRandom.Location = new System.Drawing.Point(6, 298);
             this.otherRandom.Name = "otherRandom";
             this.otherRandom.Size = new System.Drawing.Size(295, 66);
-            this.otherRandom.TabIndex = 1;
+            this.otherRandom.TabIndex = 4;
             this.otherRandom.TabStop = false;
             this.otherRandom.Text = "Other Games";
             // 
@@ -789,7 +783,7 @@
             this.fightingRandom.Location = new System.Drawing.Point(6, 219);
             this.fightingRandom.Name = "fightingRandom";
             this.fightingRandom.Size = new System.Drawing.Size(295, 68);
-            this.fightingRandom.TabIndex = 1;
+            this.fightingRandom.TabIndex = 3;
             this.fightingRandom.TabStop = false;
             this.fightingRandom.Text = "Fighting Games";
             // 
@@ -818,7 +812,7 @@
             this.chkIaMP.Location = new System.Drawing.Point(3, 3);
             this.chkIaMP.Name = "chkIaMP";
             this.chkIaMP.Size = new System.Drawing.Size(51, 17);
-            this.chkIaMP.TabIndex = 15;
+            this.chkIaMP.TabIndex = 0;
             this.chkIaMP.Text = "IaMP";
             this.chkIaMP.UseVisualStyleBackColor = true;
             this.chkIaMP.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
@@ -831,7 +825,7 @@
             this.chkSWR.Location = new System.Drawing.Point(60, 3);
             this.chkSWR.Name = "chkSWR";
             this.chkSWR.Size = new System.Drawing.Size(52, 17);
-            this.chkSWR.TabIndex = 16;
+            this.chkSWR.TabIndex = 1;
             this.chkSWR.Text = "SWR";
             this.chkSWR.UseVisualStyleBackColor = true;
             this.chkSWR.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
@@ -844,7 +838,7 @@
             this.chkUoNL.Location = new System.Drawing.Point(118, 3);
             this.chkUoNL.Name = "chkUoNL";
             this.chkUoNL.Size = new System.Drawing.Size(91, 17);
-            this.chkUoNL.TabIndex = 17;
+            this.chkUoNL.TabIndex = 2;
             this.chkUoNL.Text = "Hisoutensoku";
             this.chkUoNL.UseVisualStyleBackColor = true;
             this.chkUoNL.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
@@ -857,7 +851,7 @@
             this.chkHM.Location = new System.Drawing.Point(215, 3);
             this.chkHM.Name = "chkHM";
             this.chkHM.Size = new System.Drawing.Size(43, 17);
-            this.chkHM.TabIndex = 18;
+            this.chkHM.TabIndex = 3;
             this.chkHM.Text = "HM";
             this.chkHM.UseVisualStyleBackColor = true;
             this.chkHM.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
@@ -870,7 +864,7 @@
             this.chkULiL.Location = new System.Drawing.Point(3, 26);
             this.chkULiL.Name = "chkULiL";
             this.chkULiL.Size = new System.Drawing.Size(48, 17);
-            this.chkULiL.TabIndex = 19;
+            this.chkULiL.TabIndex = 4;
             this.chkULiL.Text = "ULiL";
             this.chkULiL.UseVisualStyleBackColor = true;
             this.chkULiL.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
@@ -883,7 +877,7 @@
             this.chkAoCF.Location = new System.Drawing.Point(57, 26);
             this.chkAoCF.Name = "chkAoCF";
             this.chkAoCF.Size = new System.Drawing.Size(52, 17);
-            this.chkAoCF.TabIndex = 20;
+            this.chkAoCF.TabIndex = 5;
             this.chkAoCF.Text = "AoCF";
             this.chkAoCF.UseVisualStyleBackColor = true;
             this.chkAoCF.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
@@ -896,7 +890,7 @@
             this.mainRandom.Location = new System.Drawing.Point(6, 80);
             this.mainRandom.Name = "mainRandom";
             this.mainRandom.Size = new System.Drawing.Size(295, 133);
-            this.mainRandom.TabIndex = 0;
+            this.mainRandom.TabIndex = 2;
             this.mainRandom.TabStop = false;
             this.mainRandom.Text = "Main Games";
             // 
@@ -1192,7 +1186,7 @@
             this.crapConfigure.Location = new System.Drawing.Point(6, 247);
             this.crapConfigure.Name = "crapConfigure";
             this.crapConfigure.Size = new System.Drawing.Size(188, 23);
-            this.crapConfigure.TabIndex = 11;
+            this.crapConfigure.TabIndex = 8;
             this.crapConfigure.Text = "Configure thcrap";
             this.crapConfigure.UseVisualStyleBackColor = true;
             this.crapConfigure.Click += new System.EventHandler(this.crapConfigure_Click);
@@ -1202,7 +1196,7 @@
             this.browsecrap.Location = new System.Drawing.Point(119, 179);
             this.browsecrap.Name = "browsecrap";
             this.browsecrap.Size = new System.Drawing.Size(75, 23);
-            this.browsecrap.TabIndex = 10;
+            this.browsecrap.TabIndex = 7;
             this.browsecrap.Text = "Browse";
             this.browsecrap.UseVisualStyleBackColor = true;
             this.browsecrap.Click += new System.EventHandler(this.browse_Click);
@@ -1212,7 +1206,7 @@
             this.crapDir.Location = new System.Drawing.Point(6, 181);
             this.crapDir.Name = "crapDir";
             this.crapDir.Size = new System.Drawing.Size(107, 20);
-            this.crapDir.TabIndex = 9;
+            this.crapDir.TabIndex = 6;
             this.crapDir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
             this.crapDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.DragEnter);
             this.crapDir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
@@ -1232,7 +1226,7 @@
             this.showTray.Location = new System.Drawing.Point(6, 65);
             this.showTray.Name = "showTray";
             this.showTray.Size = new System.Drawing.Size(130, 17);
-            this.showTray.TabIndex = 7;
+            this.showTray.TabIndex = 2;
             this.showTray.Text = "Always show tray icon";
             this.showTray.UseVisualStyleBackColor = true;
             this.showTray.CheckedChanged += new System.EventHandler(this.showTray_CheckedChanged);
@@ -1243,7 +1237,7 @@
             this.minimizeToTray.Location = new System.Drawing.Point(6, 42);
             this.minimizeToTray.Name = "minimizeToTray";
             this.minimizeToTray.Size = new System.Drawing.Size(98, 17);
-            this.minimizeToTray.TabIndex = 6;
+            this.minimizeToTray.TabIndex = 1;
             this.minimizeToTray.Text = "Minimize to tray";
             this.minimizeToTray.UseVisualStyleBackColor = true;
             this.minimizeToTray.CheckedChanged += new System.EventHandler(this.minimizeToTray_CheckedChanged);
@@ -1269,7 +1263,7 @@
             this.languageBox.Location = new System.Drawing.Point(6, 101);
             this.languageBox.Name = "languageBox";
             this.languageBox.Size = new System.Drawing.Size(188, 21);
-            this.languageBox.TabIndex = 0;
+            this.languageBox.TabIndex = 3;
             this.languageBox.SelectedIndexChanged += new System.EventHandler(this.languageBox_SelectedIndexChanged);
             // 
             // browseNP2
@@ -1277,7 +1271,7 @@
             this.browseNP2.Location = new System.Drawing.Point(119, 139);
             this.browseNP2.Name = "browseNP2";
             this.browseNP2.Size = new System.Drawing.Size(75, 23);
-            this.browseNP2.TabIndex = 4;
+            this.browseNP2.TabIndex = 5;
             this.browseNP2.Text = "Browse";
             this.browseNP2.UseVisualStyleBackColor = true;
             this.browseNP2.Click += new System.EventHandler(this.browse_Click);
@@ -1287,7 +1281,7 @@
             this.np2Dir.Location = new System.Drawing.Point(6, 141);
             this.np2Dir.Name = "np2Dir";
             this.np2Dir.Size = new System.Drawing.Size(107, 20);
-            this.np2Dir.TabIndex = 3;
+            this.np2Dir.TabIndex = 4;
             this.np2Dir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
             this.np2Dir.DragEnter += new System.Windows.Forms.DragEventHandler(this.DragEnter);
             this.np2Dir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
@@ -1322,7 +1316,7 @@
             this.replayBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.replayBrowser.Name = "replayBrowser";
             this.replayBrowser.Size = new System.Drawing.Size(524, 506);
-            this.replayBrowser.TabIndex = 4;
+            this.replayBrowser.TabIndex = 2;
             this.replayBrowser.Url = new System.Uri("http://replays.gensokyo.org", System.UriKind.Absolute);
             this.replayBrowser.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.replayBrowser_Navigating);
             // 
@@ -1338,7 +1332,7 @@
             this.replayPanel.Location = new System.Drawing.Point(0, 0);
             this.replayPanel.Name = "replayPanel";
             this.replayPanel.Size = new System.Drawing.Size(518, 29);
-            this.replayPanel.TabIndex = 3;
+            this.replayPanel.TabIndex = 1;
             // 
             // linkReplays
             // 
@@ -1411,7 +1405,7 @@
             this.customAdd.Location = new System.Drawing.Point(176, 6);
             this.customAdd.Name = "customAdd";
             this.customAdd.Size = new System.Drawing.Size(90, 23);
-            this.customAdd.TabIndex = 4;
+            this.customAdd.TabIndex = 2;
             this.customAdd.Text = "Add Game";
             this.customAdd.UseVisualStyleBackColor = true;
             this.customAdd.Click += new System.EventHandler(this.customAdd_Click);
@@ -1456,7 +1450,7 @@
             this.treeView1.Location = new System.Drawing.Point(3, 3);
             this.treeView1.Name = "treeView1";
             this.treeView1.Size = new System.Drawing.Size(167, 525);
-            this.treeView1.TabIndex = 0;
+            this.treeView1.TabIndex = 1;
             this.treeView1.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.treeView1_AfterLabelEdit);
             this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
             // 
@@ -1501,7 +1495,7 @@
             this.otherGroup.Location = new System.Drawing.Point(6, 363);
             this.otherGroup.Name = "otherGroup";
             this.otherGroup.Size = new System.Drawing.Size(512, 123);
-            this.otherGroup.TabIndex = 4;
+            this.otherGroup.TabIndex = 3;
             this.otherGroup.TabStop = false;
             this.otherGroup.Text = "Other Games";
             // 
@@ -1529,12 +1523,11 @@
             this.btnStB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnStB.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnStB.Image = global::Touhou_Launcher.Properties.Resources.stbg;
             this.btnStB.Location = new System.Drawing.Point(3, 3);
             this.btnStB.Name = "btnStB";
             this.btnStB.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnStB.Size = new System.Drawing.Size(120, 44);
-            this.btnStB.TabIndex = 2;
+            this.btnStB.TabIndex = 0;
             this.btnStB.Text = "Shoot the Bullet";
             this.btnStB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStB.UseVisualStyleBackColor = true;
@@ -1548,12 +1541,11 @@
             this.btnDS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDS.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnDS.Image = global::Touhou_Launcher.Properties.Resources.dsg;
             this.btnDS.Location = new System.Drawing.Point(129, 3);
             this.btnDS.Name = "btnDS";
             this.btnDS.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnDS.Size = new System.Drawing.Size(120, 44);
-            this.btnDS.TabIndex = 3;
+            this.btnDS.TabIndex = 1;
             this.btnDS.Text = "Double Spoiler";
             this.btnDS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDS.UseVisualStyleBackColor = true;
@@ -1566,12 +1558,11 @@
             this.btnGFW.ContextMenuStrip = this.gameContextMenu;
             this.btnGFW.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGFW.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGFW.Image = global::Touhou_Launcher.Properties.Resources.gfwg;
             this.btnGFW.Location = new System.Drawing.Point(255, 3);
             this.btnGFW.Name = "btnGFW";
             this.btnGFW.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnGFW.Size = new System.Drawing.Size(120, 44);
-            this.btnGFW.TabIndex = 4;
+            this.btnGFW.TabIndex = 2;
             this.btnGFW.Text = "Great Fairy Wars";
             this.btnGFW.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGFW.UseVisualStyleBackColor = true;
@@ -1585,12 +1576,11 @@
             this.btnISC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnISC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnISC.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnISC.Image = global::Touhou_Launcher.Properties.Resources.iscg;
             this.btnISC.Location = new System.Drawing.Point(381, 3);
             this.btnISC.Name = "btnISC";
             this.btnISC.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnISC.Size = new System.Drawing.Size(120, 44);
-            this.btnISC.TabIndex = 5;
+            this.btnISC.TabIndex = 3;
             this.btnISC.Text = "Impossible Spell Card";
             this.btnISC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnISC.UseVisualStyleBackColor = true;
@@ -1604,12 +1594,11 @@
             this.btnVD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVD.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnVD.Image = global::Touhou_Launcher.Properties.Resources.vdg;
             this.btnVD.Location = new System.Drawing.Point(3, 53);
             this.btnVD.Name = "btnVD";
             this.btnVD.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnVD.Size = new System.Drawing.Size(120, 44);
-            this.btnVD.TabIndex = 6;
+            this.btnVD.TabIndex = 4;
             this.btnVD.Text = "Violet Detector";
             this.btnVD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVD.UseVisualStyleBackColor = true;
@@ -1624,7 +1613,7 @@
             this.fightingGroup.Location = new System.Drawing.Point(6, 234);
             this.fightingGroup.Name = "fightingGroup";
             this.fightingGroup.Size = new System.Drawing.Size(512, 123);
-            this.fightingGroup.TabIndex = 3;
+            this.fightingGroup.TabIndex = 2;
             this.fightingGroup.TabStop = false;
             this.fightingGroup.Text = "Fighting Games";
             // 
@@ -1652,13 +1641,12 @@
             this.btnIaMP.ContextMenuStrip = this.gameContextMenu;
             this.btnIaMP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIaMP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIaMP.Image = global::Touhou_Launcher.Properties.Resources.iampg;
             this.btnIaMP.ForeColor = System.Drawing.SystemColors.Window;
             this.btnIaMP.Location = new System.Drawing.Point(3, 3);
             this.btnIaMP.Name = "btnIaMP";
             this.btnIaMP.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnIaMP.Size = new System.Drawing.Size(120, 44);
-            this.btnIaMP.TabIndex = 2;
+            this.btnIaMP.TabIndex = 0;
             this.btnIaMP.Text = "Immaterial and Missing Power";
             this.btnIaMP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnIaMP.UseVisualStyleBackColor = true;
@@ -1672,12 +1660,11 @@
             this.btnSWR.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSWR.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSWR.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnSWR.Image = global::Touhou_Launcher.Properties.Resources.swrg;
             this.btnSWR.Location = new System.Drawing.Point(129, 3);
             this.btnSWR.Name = "btnSWR";
             this.btnSWR.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnSWR.Size = new System.Drawing.Size(120, 44);
-            this.btnSWR.TabIndex = 3;
+            this.btnSWR.TabIndex = 1;
             this.btnSWR.Text = "Scarlet Weather Rhapsody";
             this.btnSWR.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSWR.UseVisualStyleBackColor = true;
@@ -1691,12 +1678,11 @@
             this.btnUoNL.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUoNL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUoNL.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnUoNL.Image = global::Touhou_Launcher.Properties.Resources.uonlg;
             this.btnUoNL.Location = new System.Drawing.Point(255, 3);
             this.btnUoNL.Name = "btnUoNL";
             this.btnUoNL.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnUoNL.Size = new System.Drawing.Size(120, 44);
-            this.btnUoNL.TabIndex = 4;
+            this.btnUoNL.TabIndex = 2;
             this.btnUoNL.Text = "Hisoutensoku";
             this.btnUoNL.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUoNL.UseVisualStyleBackColor = true;
@@ -1710,12 +1696,11 @@
             this.btnHM.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHM.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnHM.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnHM.Image = global::Touhou_Launcher.Properties.Resources.hmg;
             this.btnHM.Location = new System.Drawing.Point(381, 3);
             this.btnHM.Name = "btnHM";
             this.btnHM.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnHM.Size = new System.Drawing.Size(120, 44);
-            this.btnHM.TabIndex = 5;
+            this.btnHM.TabIndex = 3;
             this.btnHM.Text = "Hopeless Masquerade";
             this.btnHM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHM.UseVisualStyleBackColor = true;
@@ -1729,12 +1714,11 @@
             this.btnULiL.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnULiL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnULiL.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnULiL.Image = global::Touhou_Launcher.Properties.Resources.ulilg;
             this.btnULiL.Location = new System.Drawing.Point(3, 53);
             this.btnULiL.Name = "btnULiL";
             this.btnULiL.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnULiL.Size = new System.Drawing.Size(120, 44);
-            this.btnULiL.TabIndex = 6;
+            this.btnULiL.TabIndex = 4;
             this.btnULiL.Text = "Urban Legend in Limbo";
             this.btnULiL.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnULiL.UseVisualStyleBackColor = true;
@@ -1748,12 +1732,11 @@
             this.btnAoCF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAoCF.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAoCF.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnAoCF.Image = global::Touhou_Launcher.Properties.Resources.aocfg;
             this.btnAoCF.Location = new System.Drawing.Point(129, 53);
             this.btnAoCF.Name = "btnAoCF";
             this.btnAoCF.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnAoCF.Size = new System.Drawing.Size(120, 44);
-            this.btnAoCF.TabIndex = 7;
+            this.btnAoCF.TabIndex = 5;
             this.btnAoCF.Text = "Antinomy of Common Flowers";
             this.btnAoCF.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAoCF.UseVisualStyleBackColor = true;
@@ -1768,7 +1751,7 @@
             this.mainGroup.Location = new System.Drawing.Point(6, 6);
             this.mainGroup.Name = "mainGroup";
             this.mainGroup.Size = new System.Drawing.Size(512, 222);
-            this.mainGroup.TabIndex = 2;
+            this.mainGroup.TabIndex = 1;
             this.mainGroup.TabStop = false;
             this.mainGroup.Text = "Main Games";
             // 
@@ -1807,12 +1790,11 @@
             this.btnEoSD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEoSD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEoSD.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnEoSD.Image = global::Touhou_Launcher.Properties.Resources.eosdg;
             this.btnEoSD.Location = new System.Drawing.Point(129, 53);
             this.btnEoSD.Name = "btnEoSD";
             this.btnEoSD.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnEoSD.Size = new System.Drawing.Size(120, 44);
-            this.btnEoSD.TabIndex = 7;
+            this.btnEoSD.TabIndex = 5;
             this.btnEoSD.Text = "Embodiment of Scarlet Devil";
             this.btnEoSD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEoSD.UseVisualStyleBackColor = true;
@@ -1826,12 +1808,11 @@
             this.btnPCB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPCB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPCB.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnPCB.Image = global::Touhou_Launcher.Properties.Resources.pcbg;
             this.btnPCB.Location = new System.Drawing.Point(255, 53);
             this.btnPCB.Name = "btnPCB";
             this.btnPCB.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnPCB.Size = new System.Drawing.Size(120, 44);
-            this.btnPCB.TabIndex = 8;
+            this.btnPCB.TabIndex = 6;
             this.btnPCB.Text = "Perfect Cherry Blossom";
             this.btnPCB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPCB.UseVisualStyleBackColor = true;
@@ -1845,12 +1826,11 @@
             this.btnIN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIN.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnIN.Image = global::Touhou_Launcher.Properties.Resources._ing;
             this.btnIN.Location = new System.Drawing.Point(381, 53);
             this.btnIN.Name = "btnIN";
             this.btnIN.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnIN.Size = new System.Drawing.Size(120, 44);
-            this.btnIN.TabIndex = 9;
+            this.btnIN.TabIndex = 7;
             this.btnIN.Text = "Imperishable Night";
             this.btnIN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnIN.UseVisualStyleBackColor = true;
@@ -1864,12 +1844,11 @@
             this.btnPoFV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPoFV.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPoFV.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnPoFV.Image = global::Touhou_Launcher.Properties.Resources.pofvg;
             this.btnPoFV.Location = new System.Drawing.Point(3, 103);
             this.btnPoFV.Name = "btnPoFV";
             this.btnPoFV.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnPoFV.Size = new System.Drawing.Size(120, 44);
-            this.btnPoFV.TabIndex = 10;
+            this.btnPoFV.TabIndex = 8;
             this.btnPoFV.Text = "Phantasmagoria of Flower View";
             this.btnPoFV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPoFV.UseVisualStyleBackColor = true;
@@ -1883,12 +1862,11 @@
             this.btnMoF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMoF.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnMoF.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnMoF.Image = global::Touhou_Launcher.Properties.Resources.mofg;
             this.btnMoF.Location = new System.Drawing.Point(129, 103);
             this.btnMoF.Name = "btnMoF";
             this.btnMoF.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnMoF.Size = new System.Drawing.Size(120, 44);
-            this.btnMoF.TabIndex = 11;
+            this.btnMoF.TabIndex = 9;
             this.btnMoF.Text = "Mountain of Faith";
             this.btnMoF.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMoF.UseVisualStyleBackColor = true;
@@ -1902,12 +1880,11 @@
             this.btnSA.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSA.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnSA.Image = global::Touhou_Launcher.Properties.Resources.sag;
             this.btnSA.Location = new System.Drawing.Point(255, 103);
             this.btnSA.Name = "btnSA";
             this.btnSA.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnSA.Size = new System.Drawing.Size(120, 44);
-            this.btnSA.TabIndex = 12;
+            this.btnSA.TabIndex = 10;
             this.btnSA.Text = "Subterranean Animism";
             this.btnSA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSA.UseVisualStyleBackColor = true;
@@ -1921,12 +1898,11 @@
             this.btnUFO.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUFO.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUFO.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnUFO.Image = global::Touhou_Launcher.Properties.Resources.ufog;
             this.btnUFO.Location = new System.Drawing.Point(381, 103);
             this.btnUFO.Name = "btnUFO";
             this.btnUFO.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnUFO.Size = new System.Drawing.Size(120, 44);
-            this.btnUFO.TabIndex = 13;
+            this.btnUFO.TabIndex = 11;
             this.btnUFO.Text = "Undefined Fantastic Object";
             this.btnUFO.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUFO.UseVisualStyleBackColor = true;
@@ -1940,12 +1916,11 @@
             this.btnTD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTD.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnTD.Image = global::Touhou_Launcher.Properties.Resources.tdg;
             this.btnTD.Location = new System.Drawing.Point(3, 153);
             this.btnTD.Name = "btnTD";
             this.btnTD.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnTD.Size = new System.Drawing.Size(120, 44);
-            this.btnTD.TabIndex = 14;
+            this.btnTD.TabIndex = 12;
             this.btnTD.Text = "Ten Desires";
             this.btnTD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTD.UseVisualStyleBackColor = true;
@@ -1959,12 +1934,11 @@
             this.btnDDC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDDC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDDC.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnDDC.Image = global::Touhou_Launcher.Properties.Resources.ddcg;
             this.btnDDC.Location = new System.Drawing.Point(129, 153);
             this.btnDDC.Name = "btnDDC";
             this.btnDDC.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnDDC.Size = new System.Drawing.Size(120, 44);
-            this.btnDDC.TabIndex = 15;
+            this.btnDDC.TabIndex = 13;
             this.btnDDC.Text = "Double Dealing Character";
             this.btnDDC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDDC.UseVisualStyleBackColor = true;
@@ -1978,12 +1952,11 @@
             this.btnLoLK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLoLK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLoLK.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnLoLK.Image = global::Touhou_Launcher.Properties.Resources.lolkg;
             this.btnLoLK.Location = new System.Drawing.Point(255, 153);
             this.btnLoLK.Name = "btnLoLK";
             this.btnLoLK.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnLoLK.Size = new System.Drawing.Size(120, 44);
-            this.btnLoLK.TabIndex = 16;
+            this.btnLoLK.TabIndex = 14;
             this.btnLoLK.Text = "Legacy of Lunatic Kingdom";
             this.btnLoLK.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLoLK.UseVisualStyleBackColor = true;
@@ -1997,12 +1970,11 @@
             this.btnHSiFS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHSiFS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnHSiFS.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnHSiFS.Image = global::Touhou_Launcher.Properties.Resources.hsifsg;
             this.btnHSiFS.Location = new System.Drawing.Point(381, 153);
             this.btnHSiFS.Name = "btnHSiFS";
             this.btnHSiFS.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnHSiFS.Size = new System.Drawing.Size(120, 44);
-            this.btnHSiFS.TabIndex = 17;
+            this.btnHSiFS.TabIndex = 15;
             this.btnHSiFS.Text = "Hidden Star in Four Seasons";
             this.btnHSiFS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHSiFS.UseVisualStyleBackColor = true;
