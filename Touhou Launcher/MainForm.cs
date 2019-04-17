@@ -188,6 +188,13 @@ namespace Touhou_Launcher
             }
         }
 
+        public static Process startProcess(string dir, string args = "")
+        {
+            ProcessStartInfo startInfo = new ProcessStartInfo(dir, args);
+            startInfo.WorkingDirectory = Path.GetDirectoryName(startInfo.FileName);
+            return Process.Start(startInfo);
+        }
+
         public static bool NekoProject(string hdi)
         {
             /* Code for dedicating a config file to each game
@@ -229,23 +236,21 @@ namespace Touhou_Launcher
             else if (!NekoProject(dir))
                 MessageBox.Show(rm.GetString("errorInvalidNP2INI"));
             else
-                Process.Start(curCfg.np2Dir);
+                startProcess(curCfg.np2Dir);
         }
 
         public static void launchGame(int game, int dir, bool applocale)
         {
-            ProcessStartInfo startInfo = new ProcessStartInfo(curCfg.gameCFG[game].GameDir[dir]);
-            if (File.Exists(startInfo.FileName))
+            string gameDir = curCfg.gameCFG[game].GameDir[dir];
+            if (File.Exists(gameDir))
             {
                 if (applocale && File.Exists("C:\\Windows\\AppPatch\\AppLoc.exe"))
                 {
-                    startInfo.Arguments = "\"" + startInfo.FileName + "\" \"/L0411\"";
-                    startInfo.FileName = "C:\\Windows\\AppPatch\\AppLoc.exe";
-                    Process.Start(startInfo);
+                    startProcess("C:\\Windows\\AppPatch\\AppLoc.exe", "\"" + gameDir + "\" \"/L0411\"");
                 }
                 else
                 {
-                    Process.Start(startInfo);
+                    startProcess(gameDir);
                 }
             }
             else
@@ -262,9 +267,7 @@ namespace Touhou_Launcher
                 MessageBox.Show(rm.GetString("errorcrapConfigNotSet"));
             else
             {
-                ProcessStartInfo startInfo = new ProcessStartInfo(curCfg.crapDir, "\"" + Path.GetDirectoryName(curCfg.crapDir) + "\\" + curCfg.gameCFG[game].crapCFG[1] + "\" " + curCfg.gameCFG[game].crapCFG[0]);
-                startInfo.WorkingDirectory = Path.GetDirectoryName(curCfg.crapDir);
-                Process.Start(startInfo);
+                startProcess(curCfg.crapDir, "\"" + Path.GetDirectoryName(curCfg.crapDir) + "\\" + curCfg.gameCFG[game].crapCFG[1] + "\" " + curCfg.gameCFG[game].crapCFG[0]);
             }
         }
 
@@ -527,7 +530,6 @@ namespace Touhou_Launcher
         private void btn_Click(object sender, EventArgs e)
         {
             int game = nameToID[((Button)sender).Name.Substring(3)];
-            ProcessStartInfo startInfo = new ProcessStartInfo();
             GameConfig curGame = curCfg.gameCFG[game];
             if (File.Exists(curGame.GameDir[curGame.DefaultDir]) || curGame.DefaultDir == 3)
             {
@@ -540,20 +542,8 @@ namespace Touhou_Launcher
                 }
                 else
                 {
-                    if (!File.Exists(curCfg.np2Dir))
-                    {
-                        MessageBox.Show(rm.GetString("errorNP2NotFound"));
-                        return;
-                    }
-                    else if (!NekoProject(curGame.GameDir[0]))
-                    {
-                        MessageBox.Show(rm.GetString("errorInvalidNP2INI"));
-                        return;
-                    }
-                    else
-                        startInfo.FileName = curCfg.np2Dir;
+                    launchHDI(curGame.GameDir[0]);
                 }
-                Process.Start(startInfo);
                 if (curCfg.autoClose)
                     Application.Exit();
             }
@@ -582,7 +572,7 @@ namespace Touhou_Launcher
 
         private void trayCustom_Click(object sender, EventArgs e)
         {
-            Process.Start((string)((ToolStripItem)sender).Tag);
+            startProcess((string)((ToolStripItem)sender).Tag);
         }
 
         private void trayMenu_Opening(object sender, CancelEventArgs e)
@@ -696,7 +686,7 @@ namespace Touhou_Launcher
         {
             if (listView1.SelectedItems.Count > 0)
             {
-                Process.Start(listView1.SelectedItems[0].Name);
+                startProcess(listView1.SelectedItems[0].Name);
             }
         }
 
@@ -755,7 +745,7 @@ namespace Touhou_Launcher
         private void playRandomToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (listView1.Items.Count > 0)
-                Process.Start(listView1.Items[new Random().Next(listView1.Items.Count) - 1].Name);
+                startProcess(listView1.Items[new Random().Next(listView1.Items.Count) - 1].Name);
         }
 
         private void openFolderToolStripMenuItem_Click(object sender, EventArgs e)
@@ -767,7 +757,7 @@ namespace Touhou_Launcher
         {
             if (listView1.SelectedItems.Count > 0)
             {
-                Process.Start("C:\\Windows\\AppPatch\\AppLoc.exe", listView1.SelectedItems[0].Name + " /L");
+                startProcess("C:\\Windows\\AppPatch\\AppLoc.exe", listView1.SelectedItems[0].Name + " /L");
             }
         }
 
@@ -955,10 +945,9 @@ namespace Touhou_Launcher
         {
             if (curCfg.crapDir != "")
             {
-                ProcessStartInfo startInfo = new ProcessStartInfo(Path.GetDirectoryName(curCfg.crapDir) + "\\thcrap_configure.exe");
-                startInfo.WorkingDirectory = Path.GetDirectoryName(curCfg.crapDir);
-                if (File.Exists(startInfo.FileName))
-                    Process.Start(startInfo);
+                string procDir = Path.GetDirectoryName(curCfg.crapDir) + "\\thcrap_configure.exe";
+                if (File.Exists(procDir))
+                    startProcess(procDir);
             }
         }
 
