@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigForm));
             this.openFolder = new System.Windows.Forms.Button();
             this.openvpatch = new System.Windows.Forms.Button();
             this.jpDir = new System.Windows.Forms.TextBox();
