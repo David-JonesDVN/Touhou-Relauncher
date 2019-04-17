@@ -17,7 +17,9 @@ Fixed: Expanding/Collapsing a custom game category deselecting it.
 Fixed: thcrap's files appearing in the launcher's directory.
 Fixed: Hisoutensoku and Double Spoiler having the wrong numbers.
 Fixed: The banner size label not showing up on the configuration form.
+Fixed: Smaller buttons will now show a tooltip with the full text when translated text does not fit in them.
 Optimized code
+Optimized resources. Should reduce file size by 1.40MBs
 Updated localization files.
 
 1.0-pre (06/03/2019)

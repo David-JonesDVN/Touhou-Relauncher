@@ -49,6 +49,8 @@ namespace Touhou_Launcher
             }
             gameGroup.Text = MainForm.rm.GetString("gameGroup");
             patchGroup.Text = MainForm.rm.GetString("patchGroup");
+            gameID.Text = MainForm.rm.GetString("gameIDColumn") + ":";
+            gamePath.Text = MainForm.rm.GetString("pathColumn") + ":";
             browsePath.Text = MainForm.rm.GetString("browse");
             addGame.Text = MainForm.rm.GetString("customAdd");
             removeGame.Text = MainForm.rm.GetString("customRemove");

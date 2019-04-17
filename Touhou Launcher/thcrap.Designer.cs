@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(thcrap));
             this.repoList = new System.Windows.Forms.ListView();
             this.titleColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.idColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -39,6 +38,7 @@
             this.gameID = new System.Windows.Forms.Label();
             this.gamePath = new System.Windows.Forms.Label();
             this.gameGroup = new System.Windows.Forms.GroupBox();
+            this.id = new System.Windows.Forms.TextBox();
             this.removeGame = new System.Windows.Forms.Button();
             this.addGame = new System.Windows.Forms.Button();
             this.browsePath = new System.Windows.Forms.Button();
@@ -46,7 +46,6 @@
             this.patchList = new System.Windows.Forms.ListView();
             this.patchColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.descriptionColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.id = new System.Windows.Forms.TextBox();
             this.gameGroup.SuspendLayout();
             this.patchGroup.SuspendLayout();
             this.SuspendLayout();
@@ -155,6 +154,13 @@
             this.gameGroup.TabStop = false;
             this.gameGroup.Text = "Game Profiles";
             // 
+            // id
+            // 
+            this.id.Location = new System.Drawing.Point(290, 36);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(267, 20);
+            this.id.TabIndex = 1;
+            // 
             // removeGame
             // 
             this.removeGame.Location = new System.Drawing.Point(427, 111);
@@ -212,7 +218,7 @@
             this.patchList.Name = "patchList";
             this.patchList.ShowItemToolTips = true;
             this.patchList.Size = new System.Drawing.Size(273, 319);
-            this.patchList.TabIndex = 2;
+            this.patchList.TabIndex = 1;
             this.patchList.UseCompatibleStateImageBehavior = false;
             this.patchList.View = System.Windows.Forms.View.Details;
             // 
@@ -228,13 +234,6 @@
             this.descriptionColumn.Text = "Description";
             this.descriptionColumn.Width = 169;
             // 
-            // id
-            // 
-            this.id.Location = new System.Drawing.Point(290, 36);
-            this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(267, 20);
-            this.id.TabIndex = 7;
-            // 
             // thcrap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,7 +241,7 @@
             this.ClientSize = new System.Drawing.Size(584, 512);
             this.Controls.Add(this.patchGroup);
             this.Controls.Add(this.gameGroup);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Icon = global::Touhou_Launcher.Properties.Resources.thicon;
             this.Name = "thcrap";
             this.Text = "Profile Configuration: ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.thcrap_Closing);

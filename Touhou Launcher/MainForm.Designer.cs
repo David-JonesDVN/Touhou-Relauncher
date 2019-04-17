@@ -1155,6 +1155,7 @@
             // 
             // crapResetStartingRepo
             // 
+            this.crapResetStartingRepo.AutoEllipsis = true;
             this.crapResetStartingRepo.Location = new System.Drawing.Point(119, 219);
             this.crapResetStartingRepo.Name = "crapResetStartingRepo";
             this.crapResetStartingRepo.Size = new System.Drawing.Size(75, 23);
@@ -2320,7 +2321,7 @@
             // trayIcon
             // 
             this.trayIcon.ContextMenuStrip = this.trayMenu;
-            this.trayIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("trayIcon.Icon")));
+            this.trayIcon.Icon = global::Touhou_Launcher.Properties.Resources.thicon;
             this.trayIcon.Text = "Touhou Launcher";
             this.trayIcon.DoubleClick += new System.EventHandler(this.MainForm_Show);
             // 
@@ -2330,7 +2331,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 562);
             this.Controls.Add(this.mainControl);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Icon = global::Touhou_Launcher.Properties.Resources.thicon;
             this.MinimumSize = new System.Drawing.Size(550, 600);
             this.Name = "MainForm";
             this.Text = "Touhou Launcher";
