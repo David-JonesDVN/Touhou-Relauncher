@@ -593,7 +593,7 @@ namespace Touhou_Launcher
 
         private void configureToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Button btn = (Button)((ContextMenuStrip)((ToolStripMenuItem)sender).GetCurrentParent()).SourceControl;
+            Button btn = (Button)((ContextMenuStrip)((ToolStripMenuItem)sender).GetCurrentParent()).Tag;
             ConfigForm gameConfig = new ConfigForm(btn);
             gameConfig.ShowDialog();
         }
