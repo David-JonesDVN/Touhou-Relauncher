@@ -424,7 +424,7 @@
     <value>Папка повторов</value>
   </data>
   <data name="openvpatch" xml:space="preserve">
-    <value>vpatch.ini</value>
+    <value>Изм. vpatch.ini</value>
   </data>
   <data name="pc98Settings" xml:space="preserve">
     <value>Настройки игры PC-98</value>
@@ -606,7 +606,7 @@
     <value>Настройка игры: </value>
   </data>
   <data name="minimizeToTray" xml:space="preserve">
-    <value>Свернуть в трей</value>
+    <value>Сворачивать в трей</value>
   </data>
   <data name="showTray" xml:space="preserve">
     <value>Всегда отображать иконку в трее </value>

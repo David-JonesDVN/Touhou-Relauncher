@@ -178,7 +178,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Show banner?.
+        ///   Looks up a localized string similar to Отображать обложки?.
         /// </summary>
         public static string bannerToolStripMenuItem {
             get {
@@ -196,7 +196,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Set Color.
+        ///   Looks up a localized string similar to Задать цвет.
         /// </summary>
         public static string btnCustomText {
             get {
@@ -205,7 +205,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Edit Button.
+        ///   Looks up a localized string similar to Кнопка Изменить.
         /// </summary>
         public static string buttonToolStripMenuItem {
             get {
@@ -223,7 +223,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Use custom text color.
+        ///   Looks up a localized string similar to Кастомный цвет текста.
         /// </summary>
         public static string chkCustomText {
             get {
@@ -457,7 +457,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Не удается найти папку Appdata.
+        ///   Looks up a localized string similar to Не удаётся найти папку Appdata.
         /// </summary>
         public static string errorAppdataNotFound {
             get {
@@ -952,7 +952,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Свернуть в трей.
+        ///   Looks up a localized string similar to Сворачивать в трей.
         /// </summary>
         public static string minimizeToTray {
             get {
@@ -1087,7 +1087,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to vpatch.ini.
+        ///   Looks up a localized string similar to Изм. vpatch.ini.
         /// </summary>
         public static string openvpatch {
             get {
@@ -1503,7 +1503,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Show Text?.
+        ///   Looks up a localized string similar to Отображать текст?.
         /// </summary>
         public static string textToolStripMenuItem {
             get {
@@ -1638,7 +1638,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Applocale.
+        ///   Looks up a localized string similar to Вкл. Applocale.
         /// </summary>
         public static string useApplocale {
             get {
