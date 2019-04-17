@@ -756,7 +756,7 @@ namespace Touhou_Launcher
 
         private void openFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            startProcess(Path.GetDirectoryName(listView1.SelectedItems[0].Name));
+            Process.Start(Path.GetDirectoryName(listView1.SelectedItems[0].Name));
         }
 
         private void openWithApplocaleToolStripMenuItem_Click(object sender, EventArgs e)
