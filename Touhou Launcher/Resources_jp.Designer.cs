@@ -169,6 +169,24 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to * 120 x 44.
+        /// </summary>
+        public static string bannerSize {
+            get {
+                return ResourceManager.GetString("bannerSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show banner?.
+        /// </summary>
+        public static string bannerToolStripMenuItem {
+            get {
+                return ResourceManager.GetString("bannerToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Browse.
         /// </summary>
         public static string browse {
@@ -178,11 +196,38 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Set Color.
+        /// </summary>
+        public static string btnCustomText {
+            get {
+                return ResourceManager.GetString("btnCustomText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Button.
+        /// </summary>
+        public static string buttonToolStripMenuItem {
+            get {
+                return ResourceManager.GetString("buttonToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Use custom banner.
         /// </summary>
         public static string chkCustomBanner {
             get {
                 return ResourceManager.GetString("chkCustomBanner", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Use custom text color.
+        /// </summary>
+        public static string chkCustomText {
+            get {
+                return ResourceManager.GetString("chkCustomText", resourceCulture);
             }
         }
         
@@ -219,6 +264,24 @@ namespace Touhou_Launcher {
         public static string crapLabel {
             get {
                 return ResourceManager.GetString("crapLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Default.
+        /// </summary>
+        public static string crapResetStartingRepo {
+            get {
+                return ResourceManager.GetString("crapResetStartingRepo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to thcrap Starting Repository:.
+        /// </summary>
+        public static string crapStartingRepoLabel {
+            get {
+                return ResourceManager.GetString("crapStartingRepoLabel", resourceCulture);
             }
         }
         
@@ -264,6 +327,15 @@ namespace Touhou_Launcher {
         public static string customLabel {
             get {
                 return ResourceManager.GetString("customLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove Game.
+        /// </summary>
+        public static string customRemove {
+            get {
+                return ResourceManager.GetString("customRemove", resourceCulture);
             }
         }
         
@@ -336,6 +408,15 @@ namespace Touhou_Launcher {
         public static string descendingToolStripMenuItem {
             get {
                 return ResourceManager.GetString("descendingToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description.
+        /// </summary>
+        public static string descriptionColumn {
+            get {
+                return ResourceManager.GetString("descriptionColumn", resourceCulture);
             }
         }
         
@@ -539,6 +620,24 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Game Profiles.
+        /// </summary>
+        public static string gameGroup {
+            get {
+                return ResourceManager.GetString("gameGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game ID.
+        /// </summary>
+        public static string gameIDColumn {
+            get {
+                return ResourceManager.GetString("gameIDColumn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ゲーム.
         /// </summary>
         public static string games {
@@ -715,6 +814,15 @@ namespace Touhou_Launcher {
         public static string IaMPTitle {
             get {
                 return ResourceManager.GetString("IaMPTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ID.
+        /// </summary>
+        public static string idColumn {
+            get {
+                return ResourceManager.GetString("idColumn", resourceCulture);
             }
         }
         
@@ -1066,6 +1174,33 @@ namespace Touhou_Launcher {
         public static string otherGroup {
             get {
                 return ResourceManager.GetString("otherGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Patch.
+        /// </summary>
+        public static string patchColumn {
+            get {
+                return ResourceManager.GetString("patchColumn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Custom Profile.
+        /// </summary>
+        public static string patchGroup {
+            get {
+                return ResourceManager.GetString("patchGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game Path.
+        /// </summary>
+        public static string pathColumn {
+            get {
+                return ResourceManager.GetString("pathColumn", resourceCulture);
             }
         }
         
@@ -1460,6 +1595,24 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Show Text?.
+        /// </summary>
+        public static string textToolStripMenuItem {
+            get {
+                return ResourceManager.GetString("textToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profile Configuration: .
+        /// </summary>
+        public static string thcrapTitle {
+            get {
+                return ResourceManager.GetString("thcrapTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 並べて表示.
         /// </summary>
         public static string tileToolStripMenuItem {
@@ -1474,6 +1627,15 @@ namespace Touhou_Launcher {
         public static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Title.
+        /// </summary>
+        public static string titleColumn {
+            get {
+                return ResourceManager.GetString("titleColumn", resourceCulture);
             }
         }
         

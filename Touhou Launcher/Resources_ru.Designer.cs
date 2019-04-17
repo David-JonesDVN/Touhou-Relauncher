@@ -169,6 +169,24 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to * 120 x 44.
+        /// </summary>
+        public static string bannerSize {
+            get {
+                return ResourceManager.GetString("bannerSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Отображать обложки?.
+        /// </summary>
+        public static string bannerToolStripMenuItem {
+            get {
+                return ResourceManager.GetString("bannerToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Обзор.
         /// </summary>
         public static string browse {
@@ -178,11 +196,38 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Задать цвет.
+        /// </summary>
+        public static string btnCustomText {
+            get {
+                return ResourceManager.GetString("btnCustomText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Кнопка Изменить.
+        /// </summary>
+        public static string buttonToolStripMenuItem {
+            get {
+                return ResourceManager.GetString("buttonToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Кастомные обложки.
         /// </summary>
         public static string chkCustomBanner {
             get {
                 return ResourceManager.GetString("chkCustomBanner", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Кастомный цвет текста.
+        /// </summary>
+        public static string chkCustomText {
+            get {
+                return ResourceManager.GetString("chkCustomText", resourceCulture);
             }
         }
         
@@ -219,6 +264,24 @@ namespace Touhou_Launcher {
         public static string crapLabel {
             get {
                 return ResourceManager.GetString("crapLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to По умолчанию.
+        /// </summary>
+        public static string crapResetStartingRepo {
+            get {
+                return ResourceManager.GetString("crapResetStartingRepo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to thcrap исходная папка: .
+        /// </summary>
+        public static string crapStartingRepoLabel {
+            get {
+                return ResourceManager.GetString("crapStartingRepoLabel", resourceCulture);
             }
         }
         
@@ -268,7 +331,16 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Double Drealing Character.
+        ///   Looks up a localized string similar to Удалить игру.
+        /// </summary>
+        public static string customRemove {
+            get {
+                return ResourceManager.GetString("customRemove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Double Dealing Character.
         /// </summary>
         public static string DDC {
             get {
@@ -340,6 +412,15 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Описание.
+        /// </summary>
+        public static string descriptionColumn {
+            get {
+                return ResourceManager.GetString("descriptionColumn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Детали.
         /// </summary>
         public static string detailsToolStripMenuItem {
@@ -367,7 +448,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Touhou 12.3: Double Spoiler.
+        ///   Looks up a localized string similar to Touhou 12.5: Double Spoiler.
         /// </summary>
         public static string DSTitle {
             get {
@@ -412,7 +493,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Не удается найти папку Appdata.
+        ///   Looks up a localized string similar to Не удаётся найти папку Appdata.
         /// </summary>
         public static string errorAppdataNotFound {
             get {
@@ -475,7 +556,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Неудаеться открыть изображение: .
+        ///   Looks up a localized string similar to Не удаётся открыть изображение: .
         /// </summary>
         public static string errorOpenImage {
             get {
@@ -534,6 +615,24 @@ namespace Touhou_Launcher {
         public static string gameConfiguration {
             get {
                 return ResourceManager.GetString("gameConfiguration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Игровые профили.
+        /// </summary>
+        public static string gameGroup {
+            get {
+                return ResourceManager.GetString("gameGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ID игры.
+        /// </summary>
+        public static string gameIDColumn {
+            get {
+                return ResourceManager.GetString("gameIDColumn", resourceCulture);
             }
         }
         
@@ -714,6 +813,15 @@ namespace Touhou_Launcher {
         public static string IaMPTitle {
             get {
                 return ResourceManager.GetString("IaMPTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ID.
+        /// </summary>
+        public static string idColumn {
+            get {
+                return ResourceManager.GetString("idColumn", resourceCulture);
             }
         }
         
@@ -907,7 +1015,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Свернуть в трей.
+        ///   Looks up a localized string similar to Сворачивать в трей.
         /// </summary>
         public static string minimizeToTray {
             get {
@@ -1042,7 +1150,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to vpatch.ini.
+        ///   Looks up a localized string similar to Изм. vpatch.ini.
         /// </summary>
         public static string openvpatch {
             get {
@@ -1065,6 +1173,33 @@ namespace Touhou_Launcher {
         public static string otherGroup {
             get {
                 return ResourceManager.GetString("otherGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Патч.
+        /// </summary>
+        public static string patchColumn {
+            get {
+                return ResourceManager.GetString("patchColumn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Кастомный профиль.
+        /// </summary>
+        public static string patchGroup {
+            get {
+                return ResourceManager.GetString("patchGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Путь игры.
+        /// </summary>
+        public static string pathColumn {
+            get {
+                return ResourceManager.GetString("pathColumn", resourceCulture);
             }
         }
         
@@ -1458,6 +1593,24 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Отображать текст?.
+        /// </summary>
+        public static string textToolStripMenuItem {
+            get {
+                return ResourceManager.GetString("textToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Конфигурация профиля: .
+        /// </summary>
+        public static string thcrapTitle {
+            get {
+                return ResourceManager.GetString("thcrapTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Плитка.
         /// </summary>
         public static string tileToolStripMenuItem {
@@ -1472,6 +1625,15 @@ namespace Touhou_Launcher {
         public static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Заглавие.
+        /// </summary>
+        public static string titleColumn {
+            get {
+                return ResourceManager.GetString("titleColumn", resourceCulture);
             }
         }
         
@@ -1575,7 +1737,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Touhou 12.5: Hisoutensoku.
+        ///   Looks up a localized string similar to Touhou 12.3: Hisoutensoku.
         /// </summary>
         public static string UoNLTitle {
             get {
@@ -1584,7 +1746,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Applocale.
+        ///   Looks up a localized string similar to Вкл. Applocale.
         /// </summary>
         public static string useApplocale {
             get {

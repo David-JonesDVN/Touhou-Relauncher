@@ -84,6 +84,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources_ru.resx</DependentUpon>
     </Compile>
+    <Compile Include="thcrap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="thcrap.Designer.cs">
+      <DependentUpon>thcrap.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ConfigForm.resx">
       <DependentUpon>ConfigForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +117,9 @@
     <EmbeddedResource Include="Resources_ru.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources_ru.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="thcrap.resx">
+      <DependentUpon>thcrap.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>

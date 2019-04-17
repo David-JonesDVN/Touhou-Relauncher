@@ -25,14 +25,24 @@ namespace Touhou_Launcher
             public bool customBanner = false;
             public string bannerOn = "";
             public string bannerOff = "";
+            public bool customText = false;
+            public int textColor = 0;
+            public bool showBanner = true;
+            public bool showText = true;
+            public int defaultTextColor = 0;
+            public bool randomCheck = true;
         }
 
         public class SubNode
         {
-            public string Name { get; set; }
             public string Text { get; set; }
             public List<SubNode> Nodes = new List<SubNode>();
             public Dictionary<string, string> Games = new Dictionary<string, string>();
+            
+            public SubNode(string Text = "The root node")
+            {
+                this.Text = Text;
+            }
         }
 
         public class AppSettings<T> where T : new()
@@ -62,14 +72,15 @@ namespace Touhou_Launcher
         {
             public GameConfig[] gameCFG = new GameConfig[27];
             public SubNode Custom = new SubNode();
+            public View customView = View.LargeIcon;
+            public SortOrder customSort = SortOrder.Ascending;
+            public bool autoClose = false;
+            public bool showTray = false;
+            public bool minimizeToTray = false;
             public int language = 0;
             public string np2Dir = "";
             public string crapDir = "";
-            public bool autoClose = false;
-            public View customView = View.LargeIcon;
-            public SortOrder customSort = SortOrder.Ascending;
-            public bool showTray = false;
-            public bool minimizeToTray = false;
+            public string StartingRepo = @"https://mirrors.thpatch.net/nmlgc/";
             public Configs()
             {
                 for (int i = 0; i < gameCFG.Length ; i++)
@@ -126,7 +137,7 @@ namespace Touhou_Launcher
             {"VD", 26}
         };
 
-        public IEnumerable<Control> GetAll(Control control, Type type)
+        public static IEnumerable<Control> GetAll(Control control, Type type)
         {
             var controls = control.Controls.Cast<Control>();
 
@@ -140,55 +151,26 @@ namespace Touhou_Launcher
             return control.GetType().GetFields(System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic).Select(f => f.GetValue(this)).OfType<ContextMenuStrip>();
         }
 
-        private SubNode TreeToJSON(TreeNode parent, SubNode serializableTree)
+        private SubNode TreeToJSON(TreeNodeCollection parent, SubNode serializableTree)
         {
-            foreach (TreeNode node in parent.Nodes)
+            foreach (TreeNode node in parent)
             {
-                SubNode snode = new SubNode();
-                snode.Name = node.Name;
-                snode.Text = node.Text;
+                SubNode snode = new SubNode(node.Text);
                 if (node.Tag != null)
                     snode.Games = (Dictionary<string, string>)node.Tag;
                 serializableTree.Nodes.Add(snode);
-                TreeToJSON(node, snode);
+                TreeToJSON(node.Nodes, snode);
             }
             return serializableTree;
         }
 
-        private SubNode TreeToJSON(TreeView parent, SubNode serializableTree)
-        {
-            serializableTree.Name = "Root";
-            serializableTree.Text = "The root node";
-            foreach (TreeNode node in parent.Nodes)
-            {
-                SubNode snode = new SubNode();
-                snode.Name = node.Name;
-                snode.Text = node.Text;
-                if (node.Tag != null)
-                    snode.Games = (Dictionary<string, string>)node.Tag;
-                serializableTree.Nodes.Add(snode);
-                TreeToJSON(node, snode);
-            }
-            return serializableTree;
-        }
-
-        private void JSONToTree(SubNode nodeList, TreeView parent)
+        private void JSONToTree(SubNode nodeList, TreeNodeCollection parent)
         {
             for (int i = 0; i < nodeList.Nodes.Count; i++)
             {
-                TreeNode newNode = parent.Nodes.Add(nodeList.Nodes[i].Name, nodeList.Nodes[i].Text);
+                TreeNode newNode = parent.Add(nodeList.Nodes[i].Text);
                 newNode.Tag = nodeList.Nodes[i].Games;
-                JSONToTree(nodeList.Nodes[i], parent.Nodes[i]);
-            }
-        }
-
-        private void JSONToTree(SubNode nodeList, TreeNode parent)
-        {
-            for (int i = 0; i < nodeList.Nodes.Count; i++)
-            {
-                TreeNode newNode = parent.Nodes.Add(nodeList.Nodes[i].Name, nodeList.Nodes[i].Text);
-                newNode.Tag = nodeList.Nodes[i].Games;
-                JSONToTree(nodeList.Nodes[i], parent.Nodes[i]);
+                JSONToTree(nodeList.Nodes[i], parent[i].Nodes);
             }
         }
 
@@ -196,19 +178,28 @@ namespace Touhou_Launcher
         {
             for (int i = 0; i < nodeList.Nodes.Count; i++)
             {
-                parent.DropDownItems.Add(nodeList.Nodes[i].Text);
+                ToolStripMenuItem category = (ToolStripMenuItem)parent.DropDownItems.Add(nodeList.Nodes[i].Text);
+                JSONToTray(nodeList.Nodes[i], (ToolStripMenuItem)parent.DropDownItems[i]);
                 foreach (KeyValuePair<string, string> game in nodeList.Nodes[i].Games)
                 {
-                    ToolStripItem gameItem = parent.DropDownItems.Add(game.Value, Icon.ExtractAssociatedIcon(game.Key).ToBitmap(), trayCustom_Click);
+                    ToolStripItem gameItem = category.DropDownItems.Add(game.Value, Icon.ExtractAssociatedIcon(game.Key).ToBitmap(), trayCustom_Click);
                     gameItem.Tag = game.Key;
                     gameItem.ImageScaling = ToolStripItemImageScaling.None;
                 }
-                JSONToTray(nodeList.Nodes[i], (ToolStripMenuItem)parent.DropDownItems[i]);
             }
         }
 
         public static bool NekoProject(string hdi)
         {
+            /* Code for dedicating a config file to each game
+            if (File.Exists(Path.GetDirectoryName(curCfg.np2Dir + "\\np21nt." + game + ".ini")))
+                File.Copy(Path.GetDirectoryName(curCfg.np2Dir) + "\\np21nt" + game + ".ini", Path.GetDirectoryName(curCfg.np2Dir) + "\\np21nt.ini", true);
+            else
+            {
+                File.Copy(Path.GetDirectoryName(curCfg.np2Dir) + "\\np21nt.ini", Path.GetDirectoryName(curCfg.np2Dir) + "\\np21nt" + game + ".ini");
+                return NekoProject(hdi, game);
+            }
+             */
             string[] config = File.ReadAllLines(Path.GetDirectoryName(curCfg.np2Dir) + "\\np21nt.ini", Encoding.Unicode);
             for (int i = 0; i < config.Length; i++)
             {
@@ -216,8 +207,15 @@ namespace Touhou_Launcher
                 {
                     if (config[i] != "HDD1FILE=" + hdi)
                     {
-                        config[i] = "HDD1FILE=" + hdi;
-                        File.WriteAllLines(Path.GetDirectoryName(curCfg.np2Dir) + "\\np21nt.ini", config, Encoding.Unicode);
+                        try
+                        {
+                            config[i] = "HDD1FILE=" + hdi;
+                            File.WriteAllLines(Path.GetDirectoryName(curCfg.np2Dir) + "\\np21nt.ini", config, Encoding.Unicode);
+                        }
+                        catch (Exception ex)
+                        {
+                            return false;
+                        }
                     }
                     return true;
                 }
@@ -225,12 +223,57 @@ namespace Touhou_Launcher
             return false;
         }
 
+        public static void launchHDI(string dir)
+        {
+            if (!File.Exists(curCfg.np2Dir))
+                MessageBox.Show(rm.GetString("errorNP2NotFound"));
+            else if (!NekoProject(dir))
+                MessageBox.Show(rm.GetString("errorInvalidNP2INI"));
+            else
+                Process.Start(curCfg.np2Dir);
+        }
+
+        public static void launchGame(int game, int dir, bool applocale)
+        {
+            ProcessStartInfo startInfo = new ProcessStartInfo(curCfg.gameCFG[game].GameDir[dir]);
+            if (File.Exists(startInfo.FileName))
+            {
+                if (applocale && File.Exists("C:\\Windows\\AppPatch\\AppLoc.exe"))
+                {
+                    startInfo.Arguments = "\"" + startInfo.FileName + "\" \"/L0411\"";
+                    startInfo.FileName = "C:\\Windows\\AppPatch\\AppLoc.exe";
+                    Process.Start(startInfo);
+                }
+                else
+                {
+                    Process.Start(startInfo);
+                }
+            }
+            else
+            {
+                MessageBox.Show(rm.GetString("errorGameNotFound"));
+            }
+        }
+
+        public static void launchcrap(int game)
+        {
+            if (!File.Exists(curCfg.crapDir))
+                MessageBox.Show(rm.GetString("errorcrapNotFound"));
+            else if (curCfg.gameCFG[game].crapCFG[0] == "None" || curCfg.gameCFG[game].crapCFG[1] == "None")
+                MessageBox.Show(rm.GetString("errorcrapConfigNotSet"));
+            else
+            {
+                ProcessStartInfo startInfo = new ProcessStartInfo(curCfg.crapDir, "\"" + Path.GetDirectoryName(curCfg.crapDir) + "\\" + curCfg.gameCFG[game].crapCFG[1] + "\" " + curCfg.gameCFG[game].crapCFG[0]);
+                startInfo.WorkingDirectory = Path.GetDirectoryName(curCfg.crapDir);
+                Process.Start(startInfo);
+            }
+        }
+
         public static string[] FileBrowser(string title, string filter, bool multiSelect = false)
         {
             OpenFileDialog browser = new OpenFileDialog();
             browser.Filter = filter;
             browser.FilterIndex = 1;
-            browser.InitialDirectory = Directory.GetCurrentDirectory();
             browser.RestoreDirectory = false;
             browser.Multiselect = multiSelect;
             browser.Title = title;
@@ -270,8 +313,10 @@ namespace Touhou_Launcher
         private void LoadSettings()
         {
             InitializeLanguage();
-            RefreshGames();
-            JSONToTree(curCfg.Custom, treeView1);
+            foreach (Button btn in GetAll(games, typeof(Button)))
+                if (btn.Name != "btnRandom")
+                    RefreshButton(btn);
+            JSONToTree(curCfg.Custom, treeView1.Nodes);
             JSONToTray(curCfg.Custom, trayCustom);
             languageBox.SelectedIndexChanged -= languageBox_SelectedIndexChanged;
             languageBox.SelectedIndex = curCfg.language;
@@ -281,6 +326,13 @@ namespace Touhou_Launcher
             showTray.Checked = curCfg.showTray;
             np2Dir.Text = curCfg.np2Dir;
             crapDir.Text = curCfg.crapDir;
+            crapStartingRepo.Text = curCfg.StartingRepo;
+            foreach (CheckBox chk in GetAll(randomSettings, typeof(CheckBox)))
+            {
+                chk.CheckedChanged -= chkRandom_CheckedChanged;
+                chk.Checked = curCfg.gameCFG[nameToID[chk.Name.Substring(3)]].randomCheck;
+                chk.CheckedChanged += chkRandom_CheckedChanged;
+            }
         }
 
         private void InitializeLanguage()
@@ -313,7 +365,12 @@ namespace Touhou_Launcher
             }
             foreach (Button btn in GetAll(games, typeof(Button)))
             {
-                btn.Text = rm.GetString(btn.Name.Substring(3));
+                if (btn.Name == "btnRandom")
+                    btn.Text = rm.GetString(btn.Name.Substring(3));
+                else if (curCfg.gameCFG[nameToID[btn.Name.Substring(3)]].showText)
+                    btn.Text = rm.GetString(btn.Name.Substring(3));
+                else
+                    btn.Text = "";
                 toolTip.SetToolTip(btn, rm.GetString(btn.Name.Substring(3) + "Title"));
             }
             foreach (ToolStripMenuItem tMenu in customContextMenu.Items.OfType<ToolStripMenuItem>())
@@ -344,6 +401,9 @@ namespace Touhou_Launcher
             fightingGroup.Text = rm.GetString("fightingGroup");
             otherGroup.Text = rm.GetString("otherGroup");
             configureToolStripMenuItem.Text = rm.GetString("configureToolStripMenuItem");
+            buttonToolStripMenuItem.Text = rm.GetString("buttonToolStripMenuItem");
+            bannerToolStripMenuItem.Text = rm.GetString("bannerToolStripMenuItem");
+            textToolStripMenuItem.Text = rm.GetString("textToolStripMenuItem");
             customAdd.Text = rm.GetString("customAdd");
             newCategoryToolStripMenuItem.Text = rm.GetString("newCategoryToolStripMenuItem");
             renameCategoryToolStripMenuItem.Text = rm.GetString("renameCategoryToolStripMenuItem");
@@ -360,6 +420,8 @@ namespace Touhou_Launcher
             crapDirLabel.Text = rm.GetString("crapDirLabel");
             browseNP2.Text = rm.GetString("browse");
             browsecrap.Text = rm.GetString("browse");
+            crapStartingRepoLabel.Text = rm.GetString("crapStartingRepoLabel");
+            crapResetStartingRepo.Text = rm.GetString("crapResetStartingRepo");
             crapConfigure.Text = rm.GetString("crapConfigure");
             randomSettings.Text = rm.GetString("randomSettings");
             randomLabel.Text = rm.GetString("randomLabel");
@@ -371,37 +433,50 @@ namespace Touhou_Launcher
             this.Text = rm.GetString("Title");
         }
 
-        public void RefreshGames()
+        public static void RefreshButton(Button btn)
         {
-            foreach (Button btn in GetAll(games, typeof(Button)))
+            int game = nameToID[btn.Name.Substring(3)];
+            btn.ForeColor = curCfg.gameCFG[game].customText ? Color.FromArgb(curCfg.gameCFG[game].textColor) : Color.FromArgb(curCfg.gameCFG[game].defaultTextColor);
+            if (curCfg.gameCFG[game].showBanner)
             {
-                if (btn.Name != "btnRandom")
+                bool exists = curCfg.gameCFG[game].crapCFG[0] != "None" && curCfg.gameCFG[game].crapCFG[1] != "None";
+                foreach (string dir in curCfg.gameCFG[game].GameDir)
+                    if (dir != "" && dir != curCfg.gameCFG[game].GameDir[3])
+                    {
+                        exists = true;
+                        break;
+                    }
+                if (exists)
                 {
-                    int game = nameToID[btn.Name.Substring(3)];
-                    bool exists = curCfg.gameCFG[game].crapCFG[0] != "None" && curCfg.gameCFG[game].crapCFG[1] != "None";
-                    foreach (string dir in curCfg.gameCFG[game].GameDir)
-                        if (dir != "" && dir != curCfg.gameCFG[game].GameDir[3])
-                        {
-                            exists = true;
-                            break;
-                        }
-                    if (exists)
-                    {
-                        if (curCfg.gameCFG[game].customBanner && curCfg.gameCFG[game].bannerOn != "")
-                            btn.Image = Image.FromFile(curCfg.gameCFG[game].bannerOn);
-                        else
-                            btn.Image = (System.Drawing.Bitmap)Touhou_Launcher.Properties.Resources.ResourceManager.GetObject((btn.Name == "btnIN" ? "_" : "") + btn.Name.Substring(3).ToLower());
-                    }
+                    if (curCfg.gameCFG[game].customBanner && curCfg.gameCFG[game].bannerOn != "")
+                        btn.BackgroundImage = Image.FromFile(curCfg.gameCFG[game].bannerOn);
                     else
-                    {
-                        if (curCfg.gameCFG[game].customBanner && curCfg.gameCFG[game].bannerOff != "")
-                            btn.Image = Image.FromFile(curCfg.gameCFG[game].bannerOff);
-                        else
-                            btn.Image = (System.Drawing.Bitmap)Touhou_Launcher.Properties.Resources.ResourceManager.GetObject((btn.Name == "btnIN" ? "_" : "") + btn.Name.Substring(3).ToLower() + "g");
+                        btn.BackgroundImage = (System.Drawing.Bitmap)Touhou_Launcher.Properties.Resources.ResourceManager.GetObject((btn.Name == "btnIN" ? "_" : "") + btn.Name.Substring(3).ToLower());
+                }
+                else
+                {
+                    if (curCfg.gameCFG[game].customBanner && curCfg.gameCFG[game].bannerOff != "")
+                        btn.BackgroundImage = Image.FromFile(curCfg.gameCFG[game].bannerOff);
+                    else
+                        btn.BackgroundImage = (System.Drawing.Bitmap)Touhou_Launcher.Properties.Resources.ResourceManager.GetObject((btn.Name == "btnIN" ? "_" : "") + btn.Name.Substring(3).ToLower() + "g");
 
-                    }
                 }
             }
+            else
+                btn.BackgroundImage = null;
+
+        }
+
+        private void customAddItem(string[] files)
+        {
+            foreach (string file in files)
+            {
+                if (!((Dictionary<string, string>)treeView1.SelectedNode.Tag).ContainsKey(file))
+                    ((Dictionary<string, string>)treeView1.SelectedNode.Tag).Add(file, Path.GetFileNameWithoutExtension(file));
+            }
+            curCfg.Custom = TreeToJSON(treeView1.Nodes, new SubNode());
+            curCfg.Save();
+            RefreshList(ref listView1, (Dictionary<string, string>)treeView1.SelectedNode.Tag);
         }
 
         private void RefreshList(ref ListView list, Dictionary<string, string> files)
@@ -418,41 +493,54 @@ namespace Touhou_Launcher
         public MainForm()
         {
             InitializeComponent();
+            foreach (Button btn in GetAll(games, typeof(Button)))
+                if (btn.Name != "btnRandom")
+                    curCfg.gameCFG[nameToID[btn.Name.Substring(3)]].defaultTextColor = btn.ForeColor.ToArgb();
             LoadSettings();
+        }
+
+        private void MainForm_Show(object sender, EventArgs e)
+        {
+            this.Show();
+            this.WindowState = FormWindowState.Normal;
+            trayIcon.Visible = curCfg.showTray;
+        }
+
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized && curCfg.minimizeToTray)
+            {
+                trayIcon.Visible = true;
+                this.Hide();
+            }
+        }
+
+        private void MainForm_Closing(object sender, FormClosingEventArgs e)
+        {
+            this.Focus();
+            trayIcon.Visible = false;
+            curCfg.Save();
+        }
+
+        private void DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+                e.Effect = DragDropEffects.Copy;
         }
 
         private void btn_Click(object sender, EventArgs e)
         {
             int game = nameToID[((Button)sender).Name.Substring(3)];
-            string path = "";
-            string args = "";
+            ProcessStartInfo startInfo = new ProcessStartInfo();
             GameConfig curGame = curCfg.gameCFG[game];
             if (File.Exists(curGame.GameDir[curGame.DefaultDir]) || curGame.DefaultDir == 3)
             {
                 if (game > 4)
                 {
                     if (curGame.DefaultDir == 3)
-                    {
-                        if (File.Exists(curCfg.crapDir))
-                        {
-                            path = curCfg.crapDir;
-                            args = "\"" + Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\" + curGame.crapCFG[1] + "\" " + curGame.crapCFG[0];
-                        }
-                        else
-                        {
-                            MessageBox.Show(rm.GetString("errorcrapNotFound"));
-                            return;
-                        }
-                    }
+                        launchcrap(game);
                     else
-                    {
-                        path = curGame.GameDir[curGame.DefaultDir];
-                    }
-                    if (curGame.DefaultApplocale)
-                    {
-                        args = "\"" + path + "\" " + "\"" + args + "\" \"/L0411\"";
-                        path = "C:\\Windows\\AppPatch\\AppLoc.exe";
-                    }
+                        launchGame(game, curCfg.gameCFG[game].DefaultDir, curCfg.gameCFG[game].DefaultApplocale);
                 }
                 else
                 {
@@ -467,9 +555,9 @@ namespace Touhou_Launcher
                         return;
                     }
                     else
-                        path = curCfg.np2Dir;
+                        startInfo.FileName = curCfg.np2Dir;
                 }
-                Process.Start(path, args);
+                Process.Start(startInfo);
                 if (curCfg.autoClose)
                     Application.Exit();
             }
@@ -509,8 +597,8 @@ namespace Touhou_Launcher
 
         private void configureToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int id = nameToID[((ContextMenuStrip)((ToolStripMenuItem)sender).GetCurrentParent()).SourceControl.Name.Substring(3)];
-            ConfigForm gameConfig = new ConfigForm(id, this);
+            Button btn = (Button)((ContextMenuStrip)((ToolStripMenuItem)sender).GetCurrentParent()).SourceControl;
+            ConfigForm gameConfig = new ConfigForm(btn);
             gameConfig.ShowDialog();
         }
 
@@ -518,19 +606,13 @@ namespace Touhou_Launcher
         {
             if (treeView1.SelectedNode != null)
             {
-                foreach (string file in FileBrowser(rm.GetString("gameSelectTitle"), rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + rm.GetString("allFilter") + " (*.*)|*.*", true))
-                {
-                    ((Dictionary<string, string>)treeView1.SelectedNode.Tag).Add(file, Path.GetFileNameWithoutExtension(file));
-                }
-                curCfg.Custom = TreeToJSON(treeView1, new SubNode());
-                curCfg.Save();
-                RefreshList(ref listView1, (Dictionary<string, string>)treeView1.SelectedNode.Tag);
+                customAddItem(FileBrowser(rm.GetString("gameSelectTitle"), rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + rm.GetString("allFilter") + " (*.*)|*.*", true));
             }
         }
 
         private void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            if (e.Node.Bounds.Contains(new Point(e.X, e.Y)))
+            if (new Rectangle(e.Node.Bounds.X - 15, e.Node.Bounds.Y, e.Node.Bounds.Width + 15, e.Node.Bounds.Height).Contains(e.Location))
             {
                 treeView1.SelectedNode = e.Node;
                 RefreshList(ref listView1, (Dictionary<string, string>)e.Node.Tag);
@@ -544,20 +626,12 @@ namespace Touhou_Launcher
 
         private void treeView1_AfterLabelEdit(object sender, NodeLabelEditEventArgs e)
         {
-            int i = 0;
-        search:
-            foreach (TreeNode node in treeView1.Nodes)
+            if (e.Label != null)
             {
-                if (node.Name == e.Label.Replace(" ", "") + i)
-                {
-                    i++;
-                    goto search;
-                }
+                e.Node.Text = e.Label;
+                curCfg.Custom = TreeToJSON(treeView1.Nodes, new SubNode());
+                curCfg.Save();
             }
-            e.Node.Name = e.Label.Replace(" ", "") + i;
-            e.Node.Text = e.Label;
-            curCfg.Custom = TreeToJSON(treeView1, new SubNode());
-            curCfg.Save();
         }
 
         private void newCategoryToolStripMenuItem_Click(object sender, EventArgs e)
@@ -573,7 +647,7 @@ namespace Touhou_Launcher
                 TreeNode newNode = treeView1.Nodes.Add("New Category");
                 newNode.Tag = new Dictionary<string, string>();
             }
-            curCfg.Custom = TreeToJSON(treeView1, new SubNode());
+            curCfg.Custom = TreeToJSON(treeView1.Nodes, new SubNode());
             curCfg.Save();
         }
 
@@ -590,7 +664,7 @@ namespace Touhou_Launcher
                 if (MessageBox.Show(String.Format(rm.GetString("customCategoryDeleteConfirm"), treeView1.SelectedNode.Text), "", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                 {
                     treeView1.SelectedNode.Remove();
-                    curCfg.Custom = TreeToJSON(treeView1, new SubNode());
+                    curCfg.Custom = TreeToJSON(treeView1.Nodes, new SubNode());
                     curCfg.Save();
                     RefreshList(ref listView1, treeView1.SelectedNode != null ? (Dictionary<string, string>)treeView1.SelectedNode.Tag : new Dictionary<string, string>());
                 }
@@ -604,28 +678,22 @@ namespace Touhou_Launcher
             toolTip.SetToolTip(customLabel, text);
         }
 
-        private void listView1_DragEnter(object sender, DragEventArgs e)
-        {
-            if (e.Data.GetDataPresent(DataFormats.FileDrop))
-                e.Effect = DragDropEffects.Copy;
-        }
-
         private void listView1_DragDrop(object sender, DragEventArgs e)
         {
-            foreach (string file in (string[])e.Data.GetData(DataFormats.FileDrop))
+            if (treeView1.SelectedNode != null)
             {
-                ((Dictionary<string, string>)treeView1.SelectedNode.Tag).Add(file, Path.GetFileNameWithoutExtension(file));
+                customAddItem((string[])e.Data.GetData(DataFormats.FileDrop));
             }
-            curCfg.Custom = TreeToJSON(treeView1, new SubNode());
-            curCfg.Save();
-            RefreshList(ref listView1, (Dictionary<string, string>)treeView1.SelectedNode.Tag);
         }
 
         private void listView1_AfterLabelEdit(object sender, LabelEditEventArgs e)
         {
-            ((Dictionary<string, string>)treeView1.SelectedNode.Tag)[listView1.Items[e.Item].Name] = e.Label;
-            curCfg.Custom = TreeToJSON(treeView1, new SubNode());
-            curCfg.Save();
+            if (e.Label != null)
+            {
+                ((Dictionary<string, string>)treeView1.SelectedNode.Tag)[listView1.Items[e.Item].Name] = e.Label;
+                curCfg.Custom = TreeToJSON(treeView1.Nodes, new SubNode());
+                curCfg.Save();
+            }
         }
 
         private void listView1_DoubleClick(object sender, EventArgs e)
@@ -676,7 +744,7 @@ namespace Touhou_Launcher
                 {
                     listView1.Items.Remove(game);
                     ((Dictionary<string, string>)treeView1.SelectedNode.Tag).Remove(game.Name);
-                    curCfg.Custom = TreeToJSON(treeView1, new SubNode());
+                    curCfg.Custom = TreeToJSON(treeView1.Nodes, new SubNode());
                     curCfg.Save();
                     RefreshList(ref listView1, (Dictionary<string, string>)treeView1.SelectedNode.Tag);
                 }
@@ -807,11 +875,39 @@ namespace Touhou_Launcher
             }
         }
 
+        private void mainControl_Deselected(object sender, TabControlEventArgs e)
+        {
+            if (e.TabPageIndex == 3)
+                curCfg.Save();
+        }
+
+        private void autoClose_CheckedChanged(object sender, EventArgs e)
+        {
+            curCfg.autoClose = autoClose.Checked;
+        }
+
+        private void minimizeToTray_CheckedChanged(object sender, EventArgs e)
+        {
+            curCfg.minimizeToTray = minimizeToTray.Checked;
+        }
+
+        private void showTray_CheckedChanged(object sender, EventArgs e)
+        {
+            curCfg.showTray = showTray.Checked;
+            trayIcon.Visible = showTray.Checked;
+        }
+
         private void languageBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             curCfg.language = languageBox.SelectedIndex;
             curCfg.Save();
             InitializeLanguage();
+        }
+
+        private void crapResetStartingRepo_Click(object sender, EventArgs e)
+        {
+            crapStartingRepo.Text = @"https://mirrors.thpatch.net/nmlgc/";
+            curCfg.StartingRepo = @"https://mirrors.thpatch.net/nmlgc/";
         }
 
         private void randomAll_Click(object sender, EventArgs e)
@@ -829,22 +925,10 @@ namespace Touhou_Launcher
                 chk.Checked = false;
             }
         }
-        private void autoClose_CheckedChanged(object sender, EventArgs e)
-        {
-            curCfg.autoClose = autoClose.Checked;
-            curCfg.Save();
-        }
-        private void minimizeToTray_CheckedChanged(object sender, EventArgs e)
-        {
-            curCfg.minimizeToTray = minimizeToTray.Checked;
-            curCfg.Save();
-        }
 
-        private void showTray_CheckedChanged(object sender, EventArgs e)
+        private void chkRandom_CheckedChanged(object sender, EventArgs e)
         {
-            curCfg.showTray = showTray.Checked;
-            trayIcon.Visible = showTray.Checked;
-            curCfg.Save();
+            curCfg.gameCFG[nameToID[((CheckBox)sender).Name.Substring(3)]].randomCheck = ((CheckBox)sender).Checked;
         }
 
         private void browse_Click(object sender, EventArgs e)
@@ -856,27 +940,20 @@ namespace Touhou_Launcher
                 txtbox.Text = file;
                 curCfg.np2Dir = np2Dir.Text;
                 curCfg.crapDir = crapDir.Text;
-                curCfg.Save();
             }
         }
 
         private void Dir_LostFocus(object sender, EventArgs e)
         {
-            if (File.Exists(((TextBox)sender).Text) || ((TextBox)sender).Text == "")
+            if (File.Exists(((TextBox)sender).Text) || ((TextBox)sender).Text == "" || sender == crapStartingRepo)
             {
                 ((TextBox)sender).BackColor = SystemColors.Window;
                 curCfg.np2Dir = np2Dir.Text;
                 curCfg.crapDir = crapDir.Text;
-                curCfg.Save();
+                curCfg.StartingRepo = crapStartingRepo.Text;
             }
             else
                 ((TextBox)sender).BackColor = Color.Red;
-        }
-
-        private void Dir_DragEnter(object sender, DragEventArgs e)
-        {
-            if (e.Data.GetDataPresent(DataFormats.FileDrop))
-                e.Effect = DragDropEffects.Copy;
         }
 
         private void Dir_DragDrop(object sender, DragEventArgs e)
@@ -889,9 +966,10 @@ namespace Touhou_Launcher
         {
             if (curCfg.crapDir != "")
             {
-                string path = Path.GetDirectoryName(curCfg.crapDir) + "\\thcrap_configure.exe";
-                if (File.Exists(path))
-                    Process.Start(path);
+                ProcessStartInfo startInfo = new ProcessStartInfo(Path.GetDirectoryName(curCfg.crapDir) + "\\thcrap_configure.exe");
+                startInfo.WorkingDirectory = Path.GetDirectoryName(curCfg.crapDir);
+                if (File.Exists(startInfo.FileName))
+                    Process.Start(startInfo);
             }
         }
 
@@ -900,31 +978,28 @@ namespace Touhou_Launcher
             Process.Start("http://www.widdiful.co.uk/irc/touhou-launcher.htm");
         }
 
-        private void MainForm_Resize(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Minimized && curCfg.minimizeToTray)
-            {
-                trayIcon.Visible = true;
-                this.Hide();
-            }
-        }
-
-        private void MainForm_Closing(object sender, FormClosingEventArgs e)
-        {
-            this.Focus();
-            trayIcon.Visible = false;
-        }
-
-        private void MainForm_Show(object sender, EventArgs e)
-        {
-            this.Show();
-            this.WindowState = FormWindowState.Normal;
-            trayIcon.Visible = curCfg.showTray;
-        }
-
         private void trayExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void buttonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)((ContextMenuStrip)((ToolStripMenuItem)sender).OwnerItem.GetCurrentParent()).Tag;
+            int game = nameToID[btn.Name.Substring(3)];
+            curCfg.gameCFG[game].showText = textToolStripMenuItem.Checked;
+            curCfg.gameCFG[game].showBanner = bannerToolStripMenuItem.Checked;
+            curCfg.Save();
+            RefreshButton(btn);
+            btn.Text = curCfg.gameCFG[game].showText ? rm.GetString(btn.Name.Substring(3)) : "";
+        }
+
+        private void ContextMenu_Opening(object sender, CancelEventArgs e)
+        {
+            ((ContextMenuStrip)sender).Tag = ((ContextMenuStrip)sender).SourceControl;
+            int game = nameToID[((ContextMenuStrip)sender).SourceControl.Name.Substring(3)];
+            textToolStripMenuItem.Checked = curCfg.gameCFG[game].showText;
+            bannerToolStripMenuItem.Checked = curCfg.gameCFG[game].showBanner;
         }
     }
 }

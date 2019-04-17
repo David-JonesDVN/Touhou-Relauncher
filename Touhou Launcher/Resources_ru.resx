@@ -124,7 +124,7 @@
     <value>Touhou 15.5: Antinomy of Common Flowers</value>
   </data>
   <data name="DDC" xml:space="preserve">
-    <value>Double Drealing Character</value>
+    <value>Double Dealing Character</value>
   </data>
   <data name="DDCTitle" xml:space="preserve">
     <value>Touhou 14: Double Dealing Character</value>
@@ -133,7 +133,7 @@
     <value>Double Spoiler</value>
   </data>
   <data name="DSTitle" xml:space="preserve">
-    <value>Touhou 12.3: Double Spoiler</value>
+    <value>Touhou 12.5: Double Spoiler</value>
   </data>
   <data name="EoSD" xml:space="preserve">
     <value>Embodiment of Scarlet Devil</value>
@@ -271,7 +271,7 @@
     <value>Hisoutensoku</value>
   </data>
   <data name="UoNLTitle" xml:space="preserve">
-    <value>Touhou 12.5: Hisoutensoku</value>
+    <value>Touhou 12.3: Hisoutensoku</value>
   </data>
   <data name="VD" xml:space="preserve">
     <value>Violet Detector</value>
@@ -424,7 +424,7 @@
     <value>Папка повторов</value>
   </data>
   <data name="openvpatch" xml:space="preserve">
-    <value>vpatch.ini</value>
+    <value>Изм. vpatch.ini</value>
   </data>
   <data name="pc98Settings" xml:space="preserve">
     <value>Настройки игры PC-98</value>
@@ -484,7 +484,7 @@
     <value>Hisoutensoku</value>
   </data>
   <data name="useApplocale" xml:space="preserve">
-    <value>Applocale</value>
+    <value>Вкл. Applocale</value>
   </data>
   <data name="VDShort" xml:space="preserve">
     <value>VD</value>
@@ -517,7 +517,7 @@
     <value>Детали</value>
   </data>
   <data name="errorAppdataNotFound" xml:space="preserve">
-    <value>Не удается найти папку Appdata</value>
+    <value>Не удаётся найти папку Appdata</value>
   </data>
   <data name="errorFileNotFound" xml:space="preserve">
     <value>Файл не найден</value>
@@ -526,7 +526,7 @@
     <value>Пожалуйста, укажите путь к Neko Project II</value>
   </data>
   <data name="errorOpenImage" xml:space="preserve">
-    <value>Неудаеться открыть изображение: </value>
+    <value>Не удаётся открыть изображение: </value>
   </data>
   <data name="errorReplaysNotFound" xml:space="preserve">
     <value>Папка повторов не найдена</value>
@@ -606,7 +606,7 @@
     <value>Настройка игры: </value>
   </data>
   <data name="minimizeToTray" xml:space="preserve">
-    <value>Свернуть в трей</value>
+    <value>Сворачивать в трей</value>
   </data>
   <data name="showTray" xml:space="preserve">
     <value>Всегда отображать иконку в трее </value>
@@ -643,5 +643,59 @@
   </data>
   <data name="trayRandom" xml:space="preserve">
     <value>Случайная игра</value>
+  </data>
+  <data name="customRemove" xml:space="preserve">
+    <value>Удалить игру</value>
+  </data>
+  <data name="descriptionColumn" xml:space="preserve">
+    <value>Описание</value>
+  </data>
+  <data name="gameGroup" xml:space="preserve">
+    <value>Игровые профили</value>
+  </data>
+  <data name="gameIDColumn" xml:space="preserve">
+    <value>ID игры</value>
+  </data>
+  <data name="idColumn" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="patchColumn" xml:space="preserve">
+    <value>Патч</value>
+  </data>
+  <data name="patchGroup" xml:space="preserve">
+    <value>Кастомный профиль</value>
+  </data>
+  <data name="pathColumn" xml:space="preserve">
+    <value>Путь игры</value>
+  </data>
+  <data name="thcrapTitle" xml:space="preserve">
+    <value>Конфигурация профиля: </value>
+  </data>
+  <data name="titleColumn" xml:space="preserve">
+    <value>Заглавие</value>
+  </data>
+  <data name="crapResetStartingRepo" xml:space="preserve">
+    <value>По умолчанию</value>
+  </data>
+  <data name="crapStartingRepoLabel" xml:space="preserve">
+    <value>thcrap исходная папка: </value>
+  </data>
+  <data name="bannerSize" xml:space="preserve">
+    <value>* 120 x 44</value>
+  </data>
+  <data name="btnCustomText" xml:space="preserve">
+    <value>Задать цвет</value>
+  </data>
+  <data name="chkCustomText" xml:space="preserve">
+    <value>Кастомный цвет текста</value>
+  </data>
+  <data name="bannerToolStripMenuItem" xml:space="preserve">
+    <value>Отображать обложки?</value>
+  </data>
+  <data name="buttonToolStripMenuItem" xml:space="preserve">
+    <value>Кнопка Изменить</value>
+  </data>
+  <data name="textToolStripMenuItem" xml:space="preserve">
+    <value>Отображать текст?</value>
   </data>
 </root>

@@ -124,7 +124,7 @@
     <value>Touhou 15.5: Antinomy of Common Flowers</value>
   </data>
   <data name="DDC" xml:space="preserve">
-    <value>Double Drealing Character</value>
+    <value>Double Dealing Character</value>
   </data>
   <data name="DDCTitle" xml:space="preserve">
     <value>Touhou 14: Double Dealing Character</value>
@@ -133,7 +133,7 @@
     <value>Double Spoiler</value>
   </data>
   <data name="DSTitle" xml:space="preserve">
-    <value>Touhou 12.3: Double Spoiler</value>
+    <value>Touhou 12.5: Double Spoiler</value>
   </data>
   <data name="EoSD" xml:space="preserve">
     <value>Embodiment of Scarlet Devil</value>
@@ -271,7 +271,7 @@
     <value>Hisoutensoku</value>
   </data>
   <data name="UoNLTitle" xml:space="preserve">
-    <value>Touhou 12.5: Hisoutensoku</value>
+    <value>Touhou 12.3: Hisoutensoku</value>
   </data>
   <data name="VD" xml:space="preserve">
     <value>Violet Detector</value>
@@ -645,5 +645,59 @@ random game option:</value>
   </data>
   <data name="trayRandom" xml:space="preserve">
     <value>Random Game</value>
+  </data>
+  <data name="customRemove" xml:space="preserve">
+    <value>Remove Game</value>
+  </data>
+  <data name="descriptionColumn" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="gameGroup" xml:space="preserve">
+    <value>Game Profiles</value>
+  </data>
+  <data name="gameIDColumn" xml:space="preserve">
+    <value>Game ID</value>
+  </data>
+  <data name="idColumn" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="patchColumn" xml:space="preserve">
+    <value>Patch</value>
+  </data>
+  <data name="patchGroup" xml:space="preserve">
+    <value>Custom Profile</value>
+  </data>
+  <data name="pathColumn" xml:space="preserve">
+    <value>Game Path</value>
+  </data>
+  <data name="thcrapTitle" xml:space="preserve">
+    <value>Profile Configuration: </value>
+  </data>
+  <data name="titleColumn" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="crapResetStartingRepo" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="crapStartingRepoLabel" xml:space="preserve">
+    <value>thcrap Starting Repository:</value>
+  </data>
+  <data name="bannerSize" xml:space="preserve">
+    <value>* 120 x 44</value>
+  </data>
+  <data name="btnCustomText" xml:space="preserve">
+    <value>Set Color</value>
+  </data>
+  <data name="chkCustomText" xml:space="preserve">
+    <value>Use custom text color</value>
+  </data>
+  <data name="bannerToolStripMenuItem" xml:space="preserve">
+    <value>Show banner?</value>
+  </data>
+  <data name="buttonToolStripMenuItem" xml:space="preserve">
+    <value>Edit Button</value>
+  </data>
+  <data name="textToolStripMenuItem" xml:space="preserve">
+    <value>Show Text?</value>
   </data>
 </root>

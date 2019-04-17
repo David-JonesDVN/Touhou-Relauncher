@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigForm));
             this.openFolder = new System.Windows.Forms.Button();
             this.openvpatch = new System.Windows.Forms.Button();
             this.jpDir = new System.Windows.Forms.TextBox();
@@ -67,7 +66,9 @@
             this.browseHDI = new System.Windows.Forms.Button();
             this.hdiDir = new System.Windows.Forms.TextBox();
             this.bannerSettings = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.chkCustomText = new System.Windows.Forms.CheckBox();
+            this.btnCustomText = new System.Windows.Forms.Button();
+            this.bannerSize = new System.Windows.Forms.Label();
             this.windowsSettings = new System.Windows.Forms.GroupBox();
             this.crapCfg = new System.Windows.Forms.ComboBox();
             this.crapGame = new System.Windows.Forms.ComboBox();
@@ -82,17 +83,18 @@
             this.openFolder.Location = new System.Drawing.Point(337, 235);
             this.openFolder.Name = "openFolder";
             this.openFolder.Size = new System.Drawing.Size(242, 23);
-            this.openFolder.TabIndex = 0;
+            this.openFolder.TabIndex = 3;
             this.openFolder.Text = "Open Folder";
             this.openFolder.UseVisualStyleBackColor = true;
             this.openFolder.Click += new System.EventHandler(this.openFolder_Click);
             // 
             // openvpatch
             // 
+            this.openvpatch.AutoEllipsis = true;
             this.openvpatch.Location = new System.Drawing.Point(231, 227);
             this.openvpatch.Name = "openvpatch";
             this.openvpatch.Size = new System.Drawing.Size(91, 23);
-            this.openvpatch.TabIndex = 1;
+            this.openvpatch.TabIndex = 21;
             this.openvpatch.Text = "Edit vpatch.ini";
             this.openvpatch.UseVisualStyleBackColor = true;
             this.openvpatch.Click += new System.EventHandler(this.openvpatch_Click);
@@ -103,7 +105,7 @@
             this.jpDir.Location = new System.Drawing.Point(9, 32);
             this.jpDir.Name = "jpDir";
             this.jpDir.Size = new System.Drawing.Size(181, 20);
-            this.jpDir.TabIndex = 2;
+            this.jpDir.TabIndex = 1;
             this.jpDir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
             this.jpDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
             this.jpDir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
@@ -114,7 +116,7 @@
             this.enDir.Location = new System.Drawing.Point(9, 80);
             this.enDir.Name = "enDir";
             this.enDir.Size = new System.Drawing.Size(181, 20);
-            this.enDir.TabIndex = 3;
+            this.enDir.TabIndex = 5;
             this.enDir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
             this.enDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
             this.enDir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
@@ -125,17 +127,17 @@
             this.customDir.Location = new System.Drawing.Point(9, 128);
             this.customDir.Name = "customDir";
             this.customDir.Size = new System.Drawing.Size(181, 20);
-            this.customDir.TabIndex = 4;
+            this.customDir.TabIndex = 10;
             this.customDir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
             this.customDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
             this.customDir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
             // 
             // browseJP
             // 
-            this.browseJP.Location = new System.Drawing.Point(196, 32);
+            this.browseJP.Location = new System.Drawing.Point(196, 30);
             this.browseJP.Name = "browseJP";
             this.browseJP.Size = new System.Drawing.Size(62, 22);
-            this.browseJP.TabIndex = 5;
+            this.browseJP.TabIndex = 2;
             this.browseJP.Text = "Browse";
             this.browseJP.UseVisualStyleBackColor = true;
             this.browseJP.Click += new System.EventHandler(this.browse_Click);
@@ -169,20 +171,21 @@
             // 
             // openReplays
             // 
+            this.openReplays.AutoEllipsis = true;
             this.openReplays.Location = new System.Drawing.Point(106, 227);
             this.openReplays.Name = "openReplays";
             this.openReplays.Size = new System.Drawing.Size(119, 23);
-            this.openReplays.TabIndex = 9;
+            this.openReplays.TabIndex = 20;
             this.openReplays.Text = "Open Replays Folder";
             this.openReplays.UseVisualStyleBackColor = true;
             this.openReplays.Click += new System.EventHandler(this.openReplays_Click);
             // 
             // browseEN
             // 
-            this.browseEN.Location = new System.Drawing.Point(196, 80);
+            this.browseEN.Location = new System.Drawing.Point(196, 78);
             this.browseEN.Name = "browseEN";
             this.browseEN.Size = new System.Drawing.Size(62, 22);
-            this.browseEN.TabIndex = 11;
+            this.browseEN.TabIndex = 6;
             this.browseEN.Text = "Browse";
             this.browseEN.UseVisualStyleBackColor = true;
             this.browseEN.Click += new System.EventHandler(this.browse_Click);
@@ -192,7 +195,7 @@
             this.browseCustom.Location = new System.Drawing.Point(196, 126);
             this.browseCustom.Name = "browseCustom";
             this.browseCustom.Size = new System.Drawing.Size(62, 22);
-            this.browseCustom.TabIndex = 12;
+            this.browseCustom.TabIndex = 11;
             this.browseCustom.Text = "Browse";
             this.browseCustom.UseVisualStyleBackColor = true;
             this.browseCustom.Click += new System.EventHandler(this.browse_Click);
@@ -203,7 +206,7 @@
             this.jpApplocale.Location = new System.Drawing.Point(221, 12);
             this.jpApplocale.Name = "jpApplocale";
             this.jpApplocale.Size = new System.Drawing.Size(98, 17);
-            this.jpApplocale.TabIndex = 14;
+            this.jpApplocale.TabIndex = 0;
             this.jpApplocale.Text = "With Applocale";
             this.jpApplocale.UseVisualStyleBackColor = true;
             this.jpApplocale.CheckedChanged += new System.EventHandler(this.Applocale_CheckedChanged);
@@ -220,7 +223,7 @@
             this.defaultExec.Location = new System.Drawing.Point(109, 198);
             this.defaultExec.Name = "defaultExec";
             this.defaultExec.Size = new System.Drawing.Size(113, 21);
-            this.defaultExec.TabIndex = 15;
+            this.defaultExec.TabIndex = 17;
             this.defaultExec.SelectedIndexChanged += new System.EventHandler(this.defaultExec_SelectedIndexChanged);
             // 
             // defaultLabel
@@ -234,40 +237,44 @@
             // 
             // launchCustom
             // 
+            this.launchCustom.AutoEllipsis = true;
             this.launchCustom.Location = new System.Drawing.Point(264, 126);
             this.launchCustom.Name = "launchCustom";
             this.launchCustom.Size = new System.Drawing.Size(55, 22);
-            this.launchCustom.TabIndex = 17;
+            this.launchCustom.TabIndex = 12;
             this.launchCustom.Text = "Launch";
             this.launchCustom.UseVisualStyleBackColor = true;
             this.launchCustom.Click += new System.EventHandler(this.launch_Click);
             // 
             // launchEN
             // 
-            this.launchEN.Location = new System.Drawing.Point(264, 80);
+            this.launchEN.AutoEllipsis = true;
+            this.launchEN.Location = new System.Drawing.Point(264, 78);
             this.launchEN.Name = "launchEN";
             this.launchEN.Size = new System.Drawing.Size(55, 22);
-            this.launchEN.TabIndex = 18;
+            this.launchEN.TabIndex = 7;
             this.launchEN.Text = "Launch";
             this.launchEN.UseVisualStyleBackColor = true;
             this.launchEN.Click += new System.EventHandler(this.launch_Click);
             // 
             // launchJP
             // 
-            this.launchJP.Location = new System.Drawing.Point(264, 32);
+            this.launchJP.AutoEllipsis = true;
+            this.launchJP.Location = new System.Drawing.Point(264, 30);
             this.launchJP.Name = "launchJP";
             this.launchJP.Size = new System.Drawing.Size(55, 22);
-            this.launchJP.TabIndex = 19;
+            this.launchJP.TabIndex = 3;
             this.launchJP.Text = "Launch";
             this.launchJP.UseVisualStyleBackColor = true;
             this.launchJP.Click += new System.EventHandler(this.launch_Click);
             // 
             // launchcrap
             // 
+            this.launchcrap.AutoEllipsis = true;
             this.launchcrap.Location = new System.Drawing.Point(264, 171);
             this.launchcrap.Name = "launchcrap";
             this.launchcrap.Size = new System.Drawing.Size(55, 22);
-            this.launchcrap.TabIndex = 23;
+            this.launchcrap.TabIndex = 16;
             this.launchcrap.Text = "Launch";
             this.launchcrap.UseVisualStyleBackColor = true;
             this.launchcrap.Click += new System.EventHandler(this.launchcrap_Click);
@@ -287,7 +294,7 @@
             this.customApplocale.Location = new System.Drawing.Point(221, 108);
             this.customApplocale.Name = "customApplocale";
             this.customApplocale.Size = new System.Drawing.Size(98, 17);
-            this.customApplocale.TabIndex = 24;
+            this.customApplocale.TabIndex = 9;
             this.customApplocale.Text = "With Applocale";
             this.customApplocale.UseVisualStyleBackColor = true;
             this.customApplocale.CheckedChanged += new System.EventHandler(this.Applocale_CheckedChanged);
@@ -298,7 +305,7 @@
             this.defaultApplocale.Location = new System.Drawing.Point(228, 202);
             this.defaultApplocale.Name = "defaultApplocale";
             this.defaultApplocale.Size = new System.Drawing.Size(98, 17);
-            this.defaultApplocale.TabIndex = 25;
+            this.defaultApplocale.TabIndex = 18;
             this.defaultApplocale.Text = "With Applocale";
             this.defaultApplocale.UseVisualStyleBackColor = true;
             this.defaultApplocale.CheckedChanged += new System.EventHandler(this.defaultApplocale_CheckedChanged);
@@ -306,10 +313,10 @@
             // crapApplocale
             // 
             this.crapApplocale.AutoSize = true;
-            this.crapApplocale.Location = new System.Drawing.Point(221, 154);
+            this.crapApplocale.Location = new System.Drawing.Point(221, 152);
             this.crapApplocale.Name = "crapApplocale";
             this.crapApplocale.Size = new System.Drawing.Size(98, 17);
-            this.crapApplocale.TabIndex = 26;
+            this.crapApplocale.TabIndex = 13;
             this.crapApplocale.Text = "With Applocale";
             this.crapApplocale.UseVisualStyleBackColor = true;
             this.crapApplocale.CheckedChanged += new System.EventHandler(this.Applocale_CheckedChanged);
@@ -320,7 +327,7 @@
             this.enApplocale.Location = new System.Drawing.Point(221, 60);
             this.enApplocale.Name = "enApplocale";
             this.enApplocale.Size = new System.Drawing.Size(98, 17);
-            this.enApplocale.TabIndex = 27;
+            this.enApplocale.TabIndex = 4;
             this.enApplocale.Text = "With Applocale";
             this.enApplocale.UseVisualStyleBackColor = true;
             this.enApplocale.CheckedChanged += new System.EventHandler(this.Applocale_CheckedChanged);
@@ -331,9 +338,10 @@
             this.chkCustomBanner.Location = new System.Drawing.Point(120, 12);
             this.chkCustomBanner.Name = "chkCustomBanner";
             this.chkCustomBanner.Size = new System.Drawing.Size(118, 17);
-            this.chkCustomBanner.TabIndex = 28;
+            this.chkCustomBanner.TabIndex = 0;
             this.chkCustomBanner.Text = "Use custom banner";
             this.chkCustomBanner.UseVisualStyleBackColor = true;
+            this.chkCustomBanner.CheckedChanged += new System.EventHandler(this.chkCustomBanner_CheckedChanged);
             // 
             // bannerOnLabel
             // 
@@ -349,7 +357,7 @@
             this.browseBannerOn.Location = new System.Drawing.Point(176, 30);
             this.browseBannerOn.Name = "browseBannerOn";
             this.browseBannerOn.Size = new System.Drawing.Size(62, 22);
-            this.browseBannerOn.TabIndex = 30;
+            this.browseBannerOn.TabIndex = 2;
             this.browseBannerOn.Text = "Browse";
             this.browseBannerOn.UseVisualStyleBackColor = true;
             this.browseBannerOn.Click += new System.EventHandler(this.browseBannerOn_Click);
@@ -360,7 +368,7 @@
             this.bannerOnDir.Location = new System.Drawing.Point(9, 32);
             this.bannerOnDir.Name = "bannerOnDir";
             this.bannerOnDir.Size = new System.Drawing.Size(161, 20);
-            this.bannerOnDir.TabIndex = 29;
+            this.bannerOnDir.TabIndex = 1;
             this.bannerOnDir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
             this.bannerOnDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
             this.bannerOnDir.LostFocus += new System.EventHandler(this.bannerDir_LostFocus);
@@ -368,7 +376,7 @@
             // bannerOffLabel
             // 
             this.bannerOffLabel.AutoSize = true;
-            this.bannerOffLabel.Location = new System.Drawing.Point(6, 64);
+            this.bannerOffLabel.Location = new System.Drawing.Point(6, 54);
             this.bannerOffLabel.Name = "bannerOffLabel";
             this.bannerOffLabel.Size = new System.Drawing.Size(69, 13);
             this.bannerOffLabel.TabIndex = 34;
@@ -376,10 +384,10 @@
             // 
             // browseBannerOff
             // 
-            this.browseBannerOff.Location = new System.Drawing.Point(176, 78);
+            this.browseBannerOff.Location = new System.Drawing.Point(176, 68);
             this.browseBannerOff.Name = "browseBannerOff";
             this.browseBannerOff.Size = new System.Drawing.Size(62, 22);
-            this.browseBannerOff.TabIndex = 33;
+            this.browseBannerOff.TabIndex = 4;
             this.browseBannerOff.Text = "Browse";
             this.browseBannerOff.UseVisualStyleBackColor = true;
             this.browseBannerOff.Click += new System.EventHandler(this.browseBannerOff_Click);
@@ -387,10 +395,10 @@
             // bannerOffDir
             // 
             this.bannerOffDir.AllowDrop = true;
-            this.bannerOffDir.Location = new System.Drawing.Point(9, 80);
+            this.bannerOffDir.Location = new System.Drawing.Point(9, 70);
             this.bannerOffDir.Name = "bannerOffDir";
             this.bannerOffDir.Size = new System.Drawing.Size(161, 20);
-            this.bannerOffDir.TabIndex = 32;
+            this.bannerOffDir.TabIndex = 3;
             this.bannerOffDir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
             this.bannerOffDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
             this.bannerOffDir.LostFocus += new System.EventHandler(this.bannerDir_LostFocus);
@@ -402,29 +410,31 @@
             this.pc98Settings.Controls.Add(this.hdiLabel);
             this.pc98Settings.Controls.Add(this.browseHDI);
             this.pc98Settings.Controls.Add(this.hdiDir);
-            this.pc98Settings.Location = new System.Drawing.Point(335, 119);
+            this.pc98Settings.Location = new System.Drawing.Point(335, 127);
             this.pc98Settings.Name = "pc98Settings";
-            this.pc98Settings.Size = new System.Drawing.Size(244, 115);
-            this.pc98Settings.TabIndex = 35;
+            this.pc98Settings.Size = new System.Drawing.Size(244, 107);
+            this.pc98Settings.TabIndex = 2;
             this.pc98Settings.TabStop = false;
             this.pc98Settings.Text = "PC-98 Game Settings";
             // 
             // openNP2Folder
             // 
-            this.openNP2Folder.Location = new System.Drawing.Point(9, 88);
+            this.openNP2Folder.AutoEllipsis = true;
+            this.openNP2Folder.Location = new System.Drawing.Point(9, 80);
             this.openNP2Folder.Name = "openNP2Folder";
             this.openNP2Folder.Size = new System.Drawing.Size(229, 23);
-            this.openNP2Folder.TabIndex = 37;
+            this.openNP2Folder.TabIndex = 3;
             this.openNP2Folder.Text = "Open Neko Project II Folder";
             this.openNP2Folder.UseVisualStyleBackColor = true;
             this.openNP2Folder.Click += new System.EventHandler(this.openNP2Folder_Click);
             // 
             // launchHDI
             // 
-            this.launchHDI.Location = new System.Drawing.Point(183, 66);
+            this.launchHDI.AutoEllipsis = true;
+            this.launchHDI.Location = new System.Drawing.Point(183, 58);
             this.launchHDI.Name = "launchHDI";
             this.launchHDI.Size = new System.Drawing.Size(55, 22);
-            this.launchHDI.TabIndex = 23;
+            this.launchHDI.TabIndex = 2;
             this.launchHDI.Text = "Launch";
             this.launchHDI.UseVisualStyleBackColor = true;
             this.launchHDI.Click += new System.EventHandler(this.launchHDI_Click);
@@ -432,7 +442,7 @@
             // hdiLabel
             // 
             this.hdiLabel.AutoSize = true;
-            this.hdiLabel.Location = new System.Drawing.Point(6, 24);
+            this.hdiLabel.Location = new System.Drawing.Point(6, 16);
             this.hdiLabel.Name = "hdiLabel";
             this.hdiLabel.Size = new System.Drawing.Size(60, 13);
             this.hdiLabel.TabIndex = 22;
@@ -440,10 +450,10 @@
             // 
             // browseHDI
             // 
-            this.browseHDI.Location = new System.Drawing.Point(9, 66);
+            this.browseHDI.Location = new System.Drawing.Point(9, 58);
             this.browseHDI.Name = "browseHDI";
             this.browseHDI.Size = new System.Drawing.Size(62, 22);
-            this.browseHDI.TabIndex = 21;
+            this.browseHDI.TabIndex = 1;
             this.browseHDI.Text = "Browse";
             this.browseHDI.UseVisualStyleBackColor = true;
             this.browseHDI.Click += new System.EventHandler(this.browseHDI_Click);
@@ -451,17 +461,19 @@
             // hdiDir
             // 
             this.hdiDir.AllowDrop = true;
-            this.hdiDir.Location = new System.Drawing.Point(9, 40);
+            this.hdiDir.Location = new System.Drawing.Point(9, 32);
             this.hdiDir.Name = "hdiDir";
             this.hdiDir.Size = new System.Drawing.Size(229, 20);
-            this.hdiDir.TabIndex = 20;
+            this.hdiDir.TabIndex = 0;
             this.hdiDir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
             this.hdiDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
             this.hdiDir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
             // 
             // bannerSettings
             // 
-            this.bannerSettings.Controls.Add(this.label1);
+            this.bannerSettings.Controls.Add(this.chkCustomText);
+            this.bannerSettings.Controls.Add(this.btnCustomText);
+            this.bannerSettings.Controls.Add(this.bannerSize);
             this.bannerSettings.Controls.Add(this.bannerOnLabel);
             this.bannerSettings.Controls.Add(this.chkCustomBanner);
             this.bannerSettings.Controls.Add(this.bannerOffLabel);
@@ -471,19 +483,40 @@
             this.bannerSettings.Controls.Add(this.bannerOffDir);
             this.bannerSettings.Location = new System.Drawing.Point(335, 3);
             this.bannerSettings.Name = "bannerSettings";
-            this.bannerSettings.Size = new System.Drawing.Size(244, 110);
-            this.bannerSettings.TabIndex = 0;
+            this.bannerSettings.Size = new System.Drawing.Size(244, 120);
+            this.bannerSettings.TabIndex = 1;
             this.bannerSettings.TabStop = false;
             this.bannerSettings.Text = "Banner Settings";
             // 
-            // label1
+            // chkCustomText
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(183, 60);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 35;
-            this.label1.Text = "* 120 x 44";
+            this.chkCustomText.AutoSize = true;
+            this.chkCustomText.Location = new System.Drawing.Point(110, 97);
+            this.chkCustomText.Name = "chkCustomText";
+            this.chkCustomText.Size = new System.Drawing.Size(128, 17);
+            this.chkCustomText.TabIndex = 6;
+            this.chkCustomText.Text = "Use custom text color";
+            this.chkCustomText.UseVisualStyleBackColor = true;
+            this.chkCustomText.CheckedChanged += new System.EventHandler(this.chkCustomText_CheckedChanged);
+            // 
+            // btnCustomText
+            // 
+            this.btnCustomText.Location = new System.Drawing.Point(9, 93);
+            this.btnCustomText.Name = "btnCustomText";
+            this.btnCustomText.Size = new System.Drawing.Size(95, 22);
+            this.btnCustomText.TabIndex = 5;
+            this.btnCustomText.Text = "Set Color";
+            this.btnCustomText.UseVisualStyleBackColor = true;
+            this.btnCustomText.Click += new System.EventHandler(this.btnCustomText_Click);
+            // 
+            // bannerSize
+            // 
+            this.bannerSize.AutoSize = true;
+            this.bannerSize.Location = new System.Drawing.Point(183, 54);
+            this.bannerSize.Name = "bannerSize";
+            this.bannerSize.Size = new System.Drawing.Size(55, 13);
+            this.bannerSize.TabIndex = 35;
+            this.bannerSize.Text = "* 120 x 44";
             // 
             // windowsSettings
             // 
@@ -516,7 +549,7 @@
             this.windowsSettings.Location = new System.Drawing.Point(3, 3);
             this.windowsSettings.Name = "windowsSettings";
             this.windowsSettings.Size = new System.Drawing.Size(328, 255);
-            this.windowsSettings.TabIndex = 36;
+            this.windowsSettings.TabIndex = 0;
             this.windowsSettings.TabStop = false;
             this.windowsSettings.Text = "Windows Game Settings";
             // 
@@ -529,7 +562,7 @@
             this.crapCfg.Location = new System.Drawing.Point(128, 171);
             this.crapCfg.Name = "crapCfg";
             this.crapCfg.Size = new System.Drawing.Size(130, 21);
-            this.crapCfg.TabIndex = 30;
+            this.crapCfg.TabIndex = 15;
             this.crapCfg.SelectedIndexChanged += new System.EventHandler(this.crapCfg_SelectedIndexChanged);
             // 
             // crapGame
@@ -541,15 +574,16 @@
             this.crapGame.Location = new System.Drawing.Point(6, 171);
             this.crapGame.Name = "crapGame";
             this.crapGame.Size = new System.Drawing.Size(116, 21);
-            this.crapGame.TabIndex = 29;
+            this.crapGame.TabIndex = 14;
             this.crapGame.SelectedIndexChanged += new System.EventHandler(this.crapCfg_SelectedIndexChanged);
             // 
             // openAppdata
             // 
+            this.openAppdata.AutoEllipsis = true;
             this.openAppdata.Location = new System.Drawing.Point(9, 227);
             this.openAppdata.Name = "openAppdata";
             this.openAppdata.Size = new System.Drawing.Size(91, 23);
-            this.openAppdata.TabIndex = 28;
+            this.openAppdata.TabIndex = 19;
             this.openAppdata.Text = "Appdata Folder";
             this.openAppdata.UseVisualStyleBackColor = true;
             this.openAppdata.Click += new System.EventHandler(this.openAppdata_Click);
@@ -564,7 +598,7 @@
             this.Controls.Add(this.openFolder);
             this.Controls.Add(this.pc98Settings);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Icon = global::Touhou_Launcher.Properties.Resources.thicon;
             this.MaximizeBox = false;
             this.Name = "ConfigForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -623,8 +657,10 @@
         private System.Windows.Forms.GroupBox windowsSettings;
         private System.Windows.Forms.Button openAppdata;
         private System.Windows.Forms.Button openNP2Folder;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label bannerSize;
         private System.Windows.Forms.ComboBox crapGame;
         private System.Windows.Forms.ComboBox crapCfg;
+        private System.Windows.Forms.CheckBox chkCustomText;
+        private System.Windows.Forms.Button btnCustomText;
     }
 }
