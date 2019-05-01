@@ -700,4 +700,7 @@ random game option:</value>
   <data name="textToolStripMenuItem" xml:space="preserve">
     <value>Show Text?</value>
   </data>
+  <data name="selectedPatches" xml:space="preserve">
+    <value>Selected Patches</value>
+  </data>
 </root>

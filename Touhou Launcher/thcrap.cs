@@ -76,6 +76,7 @@ namespace Touhou_Launcher
 
         private void thcrap_Load(object sender, EventArgs e)
         {
+            repoList.Items.Add(MainForm.rm.GetString("selectedPatches"));
             if (File.Exists(gamejs))
             {
                 profileData profile = JsonConvert.DeserializeObject<profileData>(File.ReadAllText(gamejs));
@@ -177,11 +178,22 @@ namespace Touhou_Launcher
             if (repoList.SelectedItems.Count > 0)
             {
                 patchList.ItemChecked -= patchList_ItemCheck;
-                foreach (KeyValuePair<string, string> patch in repos[repoList.SelectedItems[0].SubItems[1].Text].patches)
+                if (repoList.SelectedIndices[0] == 0)
                 {
-                    ListViewItem title = patchList.Items.Add(patch.Key);
-                    title.SubItems.Add(patch.Value);
-                    title.Checked = patchStates.Contains(repoList.SelectedItems[0].SubItems[1].Text + "/" + patch.Key + "/");
+                    foreach (string patch in patchStates)
+                    {
+                        ListViewItem title = patchList.Items.Add(patch);
+                        title.Checked = true;
+                    }
+                }
+                else
+                {
+                    foreach (KeyValuePair<string, string> patch in repos[repoList.SelectedItems[0].SubItems[1].Text].patches)
+                    {
+                        ListViewItem title = patchList.Items.Add(patch.Key);
+                        title.SubItems.Add(patch.Value);
+                        title.Checked = patchStates.Contains(repoList.SelectedItems[0].SubItems[1].Text + "/" + patch.Key + "/");
+                    }
                 }
                 patchList.ItemChecked += patchList_ItemCheck;
             }
@@ -189,11 +201,15 @@ namespace Touhou_Launcher
 
         private void patchList_ItemCheck(object sender, ItemCheckedEventArgs e)
         {
-            string id = repoList.SelectedItems[0].SubItems[1].Text + "/" + e.Item.Text + "/";
+            string id = repoList.SelectedIndices[0] == 0 ? e.Item.Text : repoList.SelectedItems[0].SubItems[1].Text + "/" + e.Item.Text + "/";
             if (e.Item.Checked && !patchStates.Contains(id))
                 patchStates.Add(id);
             else if (patchStates.Contains(id))
+            {
                 patchStates.Remove(id);
+                if (repoList.SelectedIndices[0] == 0)
+                    e.Item.Remove();
+            }
         }
 
         private void browsePath_Click(object sender, EventArgs e)

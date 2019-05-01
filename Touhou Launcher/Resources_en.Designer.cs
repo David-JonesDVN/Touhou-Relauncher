@@ -1451,6 +1451,15 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Selected Patches.
+        /// </summary>
+        public static string selectedPatches {
+            get {
+                return ResourceManager.GetString("selectedPatches", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Settings.
         /// </summary>
         public static string settings {

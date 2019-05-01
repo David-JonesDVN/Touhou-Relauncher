@@ -698,4 +698,7 @@
   <data name="textToolStripMenuItem" xml:space="preserve">
     <value>Отображать текст?</value>
   </data>
+  <data name="selectedPatches" xml:space="preserve">
+    <value>Selected Patches</value>
+  </data>
 </root>
