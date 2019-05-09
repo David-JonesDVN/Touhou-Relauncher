@@ -76,14 +76,14 @@
             this.randomNone = new System.Windows.Forms.Button();
             this.randomAll = new System.Windows.Forms.Button();
             this.otherRandom = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
+            this.miscRandomPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.chkStB = new System.Windows.Forms.CheckBox();
             this.chkDS = new System.Windows.Forms.CheckBox();
             this.chkGFW = new System.Windows.Forms.CheckBox();
             this.chkISC = new System.Windows.Forms.CheckBox();
             this.chkVD = new System.Windows.Forms.CheckBox();
             this.fightingRandom = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
+            this.fightingRandomPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.chkIaMP = new System.Windows.Forms.CheckBox();
             this.chkSWR = new System.Windows.Forms.CheckBox();
             this.chkUoNL = new System.Windows.Forms.CheckBox();
@@ -91,7 +91,7 @@
             this.chkULiL = new System.Windows.Forms.CheckBox();
             this.chkAoCF = new System.Windows.Forms.CheckBox();
             this.mainRandom = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.mainRandomPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.chkHRtP = new System.Windows.Forms.CheckBox();
             this.chkSoEW = new System.Windows.Forms.CheckBox();
             this.chkPoDD = new System.Windows.Forms.CheckBox();
@@ -129,20 +129,20 @@
             this.gensokyoReplays = new System.Windows.Forms.RadioButton();
             this.customGames = new System.Windows.Forms.TabPage();
             this.customAdd = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.customList = new System.Windows.Forms.ListView();
             this.customLabel = new System.Windows.Forms.Label();
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.customTree = new System.Windows.Forms.TreeView();
             this.mainControl = new System.Windows.Forms.TabControl();
             this.games = new System.Windows.Forms.TabPage();
             this.otherGroup = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.miscLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.btnStB = new System.Windows.Forms.Button();
             this.btnDS = new System.Windows.Forms.Button();
             this.btnGFW = new System.Windows.Forms.Button();
             this.btnISC = new System.Windows.Forms.Button();
             this.btnVD = new System.Windows.Forms.Button();
             this.fightingGroup = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.fightingLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.btnIaMP = new System.Windows.Forms.Button();
             this.btnSWR = new System.Windows.Forms.Button();
             this.btnUoNL = new System.Windows.Forms.Button();
@@ -150,7 +150,7 @@
             this.btnULiL = new System.Windows.Forms.Button();
             this.btnAoCF = new System.Windows.Forms.Button();
             this.mainGroup = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.mainLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.btnEoSD = new System.Windows.Forms.Button();
             this.btnPCB = new System.Windows.Forms.Button();
             this.btnIN = new System.Windows.Forms.Button();
@@ -206,11 +206,11 @@
             this.settings.SuspendLayout();
             this.randomSettings.SuspendLayout();
             this.otherRandom.SuspendLayout();
-            this.flowLayoutPanel7.SuspendLayout();
+            this.miscRandomPanel.SuspendLayout();
             this.fightingRandom.SuspendLayout();
-            this.flowLayoutPanel6.SuspendLayout();
+            this.fightingRandomPanel.SuspendLayout();
             this.mainRandom.SuspendLayout();
-            this.flowLayoutPanel5.SuspendLayout();
+            this.mainRandomPanel.SuspendLayout();
             this.launcherSettings.SuspendLayout();
             this.replays.SuspendLayout();
             this.replayPanel.SuspendLayout();
@@ -218,11 +218,11 @@
             this.mainControl.SuspendLayout();
             this.games.SuspendLayout();
             this.otherGroup.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
+            this.miscLayoutPanel.SuspendLayout();
             this.fightingGroup.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
+            this.fightingLayoutPanel.SuspendLayout();
             this.mainGroup.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.mainLayoutPanel.SuspendLayout();
             this.trayMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -632,8 +632,7 @@
             // 
             // randomSettings
             // 
-            this.randomSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.randomSettings.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.randomSettings.Controls.Add(this.randomLabel);
             this.randomSettings.Controls.Add(this.randomNone);
@@ -643,7 +642,7 @@
             this.randomSettings.Controls.Add(this.mainRandom);
             this.randomSettings.Location = new System.Drawing.Point(214, 8);
             this.randomSettings.Name = "randomSettings";
-            this.randomSettings.Size = new System.Drawing.Size(307, 407);
+            this.randomSettings.Size = new System.Drawing.Size(307, 370);
             this.randomSettings.TabIndex = 2;
             this.randomSettings.TabStop = false;
             this.randomSettings.Text = "Random Game Settings";
@@ -661,9 +660,9 @@
             // randomNone
             // 
             this.randomNone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.randomNone.Location = new System.Drawing.Point(201, 49);
+            this.randomNone.Location = new System.Drawing.Point(211, 49);
             this.randomNone.Name = "randomNone";
-            this.randomNone.Size = new System.Drawing.Size(100, 25);
+            this.randomNone.Size = new System.Drawing.Size(90, 25);
             this.randomNone.TabIndex = 1;
             this.randomNone.Text = "Select None";
             this.randomNone.UseVisualStyleBackColor = true;
@@ -673,7 +672,7 @@
             // 
             this.randomAll.Location = new System.Drawing.Point(6, 49);
             this.randomAll.Name = "randomAll";
-            this.randomAll.Size = new System.Drawing.Size(100, 25);
+            this.randomAll.Size = new System.Drawing.Size(90, 25);
             this.randomAll.TabIndex = 0;
             this.randomAll.Text = "Select All";
             this.randomAll.UseVisualStyleBackColor = true;
@@ -683,7 +682,7 @@
             // 
             this.otherRandom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.otherRandom.Controls.Add(this.flowLayoutPanel7);
+            this.otherRandom.Controls.Add(this.miscRandomPanel);
             this.otherRandom.Location = new System.Drawing.Point(6, 298);
             this.otherRandom.Name = "otherRandom";
             this.otherRandom.Size = new System.Drawing.Size(295, 66);
@@ -691,21 +690,21 @@
             this.otherRandom.TabStop = false;
             this.otherRandom.Text = "Other Games";
             // 
-            // flowLayoutPanel7
+            // miscRandomPanel
             // 
-            this.flowLayoutPanel7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.miscRandomPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel7.Controls.Add(this.chkStB);
-            this.flowLayoutPanel7.Controls.Add(this.chkDS);
-            this.flowLayoutPanel7.Controls.Add(this.chkGFW);
-            this.flowLayoutPanel7.Controls.Add(this.chkISC);
-            this.flowLayoutPanel7.Controls.Add(this.chkVD);
-            this.flowLayoutPanel7.Location = new System.Drawing.Point(3, 16);
-            this.flowLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel7.Name = "flowLayoutPanel7";
-            this.flowLayoutPanel7.Size = new System.Drawing.Size(289, 47);
-            this.flowLayoutPanel7.TabIndex = 1;
+            this.miscRandomPanel.Controls.Add(this.chkStB);
+            this.miscRandomPanel.Controls.Add(this.chkDS);
+            this.miscRandomPanel.Controls.Add(this.chkGFW);
+            this.miscRandomPanel.Controls.Add(this.chkISC);
+            this.miscRandomPanel.Controls.Add(this.chkVD);
+            this.miscRandomPanel.Location = new System.Drawing.Point(3, 16);
+            this.miscRandomPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.miscRandomPanel.Name = "miscRandomPanel";
+            this.miscRandomPanel.Size = new System.Drawing.Size(289, 47);
+            this.miscRandomPanel.TabIndex = 1;
             // 
             // chkStB
             // 
@@ -776,7 +775,7 @@
             // 
             this.fightingRandom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.fightingRandom.Controls.Add(this.flowLayoutPanel6);
+            this.fightingRandom.Controls.Add(this.fightingRandomPanel);
             this.fightingRandom.Location = new System.Drawing.Point(6, 219);
             this.fightingRandom.Name = "fightingRandom";
             this.fightingRandom.Size = new System.Drawing.Size(295, 68);
@@ -784,22 +783,22 @@
             this.fightingRandom.TabStop = false;
             this.fightingRandom.Text = "Fighting Games";
             // 
-            // flowLayoutPanel6
+            // fightingRandomPanel
             // 
-            this.flowLayoutPanel6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.fightingRandomPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel6.Controls.Add(this.chkIaMP);
-            this.flowLayoutPanel6.Controls.Add(this.chkSWR);
-            this.flowLayoutPanel6.Controls.Add(this.chkUoNL);
-            this.flowLayoutPanel6.Controls.Add(this.chkHM);
-            this.flowLayoutPanel6.Controls.Add(this.chkULiL);
-            this.flowLayoutPanel6.Controls.Add(this.chkAoCF);
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(3, 16);
-            this.flowLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(289, 49);
-            this.flowLayoutPanel6.TabIndex = 1;
+            this.fightingRandomPanel.Controls.Add(this.chkIaMP);
+            this.fightingRandomPanel.Controls.Add(this.chkSWR);
+            this.fightingRandomPanel.Controls.Add(this.chkUoNL);
+            this.fightingRandomPanel.Controls.Add(this.chkHM);
+            this.fightingRandomPanel.Controls.Add(this.chkULiL);
+            this.fightingRandomPanel.Controls.Add(this.chkAoCF);
+            this.fightingRandomPanel.Location = new System.Drawing.Point(3, 16);
+            this.fightingRandomPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.fightingRandomPanel.Name = "fightingRandomPanel";
+            this.fightingRandomPanel.Size = new System.Drawing.Size(289, 49);
+            this.fightingRandomPanel.TabIndex = 1;
             // 
             // chkIaMP
             // 
@@ -883,7 +882,7 @@
             // 
             this.mainRandom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainRandom.Controls.Add(this.flowLayoutPanel5);
+            this.mainRandom.Controls.Add(this.mainRandomPanel);
             this.mainRandom.Location = new System.Drawing.Point(6, 80);
             this.mainRandom.Name = "mainRandom";
             this.mainRandom.Size = new System.Drawing.Size(295, 133);
@@ -891,32 +890,33 @@
             this.mainRandom.TabStop = false;
             this.mainRandom.Text = "Main Games";
             // 
-            // flowLayoutPanel5
+            // mainRandomPanel
             // 
-            this.flowLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.mainRandomPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel5.Controls.Add(this.chkHRtP);
-            this.flowLayoutPanel5.Controls.Add(this.chkSoEW);
-            this.flowLayoutPanel5.Controls.Add(this.chkPoDD);
-            this.flowLayoutPanel5.Controls.Add(this.chkLLS);
-            this.flowLayoutPanel5.Controls.Add(this.chkMS);
-            this.flowLayoutPanel5.Controls.Add(this.chkEoSD);
-            this.flowLayoutPanel5.Controls.Add(this.chkPCB);
-            this.flowLayoutPanel5.Controls.Add(this.chkIN);
-            this.flowLayoutPanel5.Controls.Add(this.chkPoFV);
-            this.flowLayoutPanel5.Controls.Add(this.chkMoF);
-            this.flowLayoutPanel5.Controls.Add(this.chkSA);
-            this.flowLayoutPanel5.Controls.Add(this.chkUFO);
-            this.flowLayoutPanel5.Controls.Add(this.chkTD);
-            this.flowLayoutPanel5.Controls.Add(this.chkDDC);
-            this.flowLayoutPanel5.Controls.Add(this.chkLoLK);
-            this.flowLayoutPanel5.Controls.Add(this.chkHSiFS);
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(3, 16);
-            this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(289, 114);
-            this.flowLayoutPanel5.TabIndex = 0;
+            this.mainRandomPanel.AutoScroll = true;
+            this.mainRandomPanel.Controls.Add(this.chkHRtP);
+            this.mainRandomPanel.Controls.Add(this.chkSoEW);
+            this.mainRandomPanel.Controls.Add(this.chkPoDD);
+            this.mainRandomPanel.Controls.Add(this.chkLLS);
+            this.mainRandomPanel.Controls.Add(this.chkMS);
+            this.mainRandomPanel.Controls.Add(this.chkEoSD);
+            this.mainRandomPanel.Controls.Add(this.chkPCB);
+            this.mainRandomPanel.Controls.Add(this.chkIN);
+            this.mainRandomPanel.Controls.Add(this.chkPoFV);
+            this.mainRandomPanel.Controls.Add(this.chkMoF);
+            this.mainRandomPanel.Controls.Add(this.chkSA);
+            this.mainRandomPanel.Controls.Add(this.chkUFO);
+            this.mainRandomPanel.Controls.Add(this.chkTD);
+            this.mainRandomPanel.Controls.Add(this.chkDDC);
+            this.mainRandomPanel.Controls.Add(this.chkLoLK);
+            this.mainRandomPanel.Controls.Add(this.chkHSiFS);
+            this.mainRandomPanel.Location = new System.Drawing.Point(3, 16);
+            this.mainRandomPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.mainRandomPanel.Name = "mainRandomPanel";
+            this.mainRandomPanel.Size = new System.Drawing.Size(289, 114);
+            this.mainRandomPanel.TabIndex = 0;
             // 
             // chkHRtP
             // 
@@ -1142,7 +1142,7 @@
             this.launcherSettings.Controls.Add(this.np2Label);
             this.launcherSettings.Location = new System.Drawing.Point(8, 8);
             this.launcherSettings.Name = "launcherSettings";
-            this.launcherSettings.Size = new System.Drawing.Size(200, 407);
+            this.launcherSettings.Size = new System.Drawing.Size(200, 370);
             this.launcherSettings.TabIndex = 1;
             this.launcherSettings.TabStop = false;
             this.launcherSettings.Text = "Launcher Settings";
@@ -1356,9 +1356,9 @@
             // 
             this.customGames.BackColor = System.Drawing.Color.Transparent;
             this.customGames.Controls.Add(this.customAdd);
-            this.customGames.Controls.Add(this.listView1);
+            this.customGames.Controls.Add(this.customList);
             this.customGames.Controls.Add(this.customLabel);
-            this.customGames.Controls.Add(this.treeView1);
+            this.customGames.Controls.Add(this.customTree);
             this.customGames.Location = new System.Drawing.Point(4, 22);
             this.customGames.Name = "customGames";
             this.customGames.Padding = new System.Windows.Forms.Padding(3);
@@ -1376,26 +1376,26 @@
             this.customAdd.UseVisualStyleBackColor = true;
             this.customAdd.Click += new System.EventHandler(this.customAdd_Click);
             // 
-            // listView1
+            // customList
             // 
-            this.listView1.AllowDrop = true;
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.customList.AllowDrop = true;
+            this.customList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.ContextMenuStrip = this.customContextMenu;
-            this.listView1.LabelEdit = true;
-            this.listView1.LargeImageList = this.customImages;
-            this.listView1.Location = new System.Drawing.Point(272, 3);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(246, 525);
-            this.listView1.SmallImageList = this.customImages;
-            this.listView1.TabIndex = 3;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.AfterLabelEdit += new System.Windows.Forms.LabelEditEventHandler(this.listView1_AfterLabelEdit);
-            this.listView1.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listView1_ItemSelectionChanged);
-            this.listView1.DragDrop += new System.Windows.Forms.DragEventHandler(this.listView1_DragDrop);
-            this.listView1.DragEnter += new System.Windows.Forms.DragEventHandler(this.DragEnter);
-            this.listView1.DoubleClick += new System.EventHandler(this.listView1_DoubleClick);
+            this.customList.ContextMenuStrip = this.customContextMenu;
+            this.customList.LabelEdit = true;
+            this.customList.LargeImageList = this.customImages;
+            this.customList.Location = new System.Drawing.Point(272, 3);
+            this.customList.Name = "customList";
+            this.customList.Size = new System.Drawing.Size(246, 525);
+            this.customList.SmallImageList = this.customImages;
+            this.customList.TabIndex = 3;
+            this.customList.UseCompatibleStateImageBehavior = false;
+            this.customList.AfterLabelEdit += new System.Windows.Forms.LabelEditEventHandler(this.customList_AfterLabelEdit);
+            this.customList.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.customList_ItemSelectionChanged);
+            this.customList.DragDrop += new System.Windows.Forms.DragEventHandler(this.customList_DragDrop);
+            this.customList.DragEnter += new System.Windows.Forms.DragEventHandler(this.DragEnter);
+            this.customList.DoubleClick += new System.EventHandler(this.customList_DoubleClick);
             // 
             // customLabel
             // 
@@ -1406,19 +1406,19 @@
             this.customLabel.Size = new System.Drawing.Size(0, 13);
             this.customLabel.TabIndex = 2;
             // 
-            // treeView1
+            // customTree
             // 
-            this.treeView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.customTree.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.treeView1.ContextMenuStrip = this.customFolderContextMenu;
-            this.treeView1.HideSelection = false;
-            this.treeView1.LabelEdit = true;
-            this.treeView1.Location = new System.Drawing.Point(3, 3);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(167, 525);
-            this.treeView1.TabIndex = 1;
-            this.treeView1.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.treeView1_AfterLabelEdit);
-            this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
+            this.customTree.ContextMenuStrip = this.customFolderContextMenu;
+            this.customTree.HideSelection = false;
+            this.customTree.LabelEdit = true;
+            this.customTree.Location = new System.Drawing.Point(3, 3);
+            this.customTree.Name = "customTree";
+            this.customTree.Size = new System.Drawing.Size(167, 525);
+            this.customTree.TabIndex = 1;
+            this.customTree.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.customTree_AfterLabelEdit);
+            this.customTree.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.customTree_NodeMouseClick);
             // 
             // mainControl
             // 
@@ -1454,10 +1454,9 @@
             // 
             // otherGroup
             // 
-            this.otherGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.otherGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.otherGroup.Controls.Add(this.flowLayoutPanel3);
+            this.otherGroup.Controls.Add(this.miscLayoutPanel);
             this.otherGroup.Location = new System.Drawing.Point(6, 363);
             this.otherGroup.Name = "otherGroup";
             this.otherGroup.Size = new System.Drawing.Size(512, 123);
@@ -1465,21 +1464,22 @@
             this.otherGroup.TabStop = false;
             this.otherGroup.Text = "Other Games";
             // 
-            // flowLayoutPanel3
+            // miscLayoutPanel
             // 
-            this.flowLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.miscLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel3.Controls.Add(this.btnStB);
-            this.flowLayoutPanel3.Controls.Add(this.btnDS);
-            this.flowLayoutPanel3.Controls.Add(this.btnGFW);
-            this.flowLayoutPanel3.Controls.Add(this.btnISC);
-            this.flowLayoutPanel3.Controls.Add(this.btnVD);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 16);
-            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(506, 104);
-            this.flowLayoutPanel3.TabIndex = 2;
+            this.miscLayoutPanel.AutoScroll = true;
+            this.miscLayoutPanel.Controls.Add(this.btnStB);
+            this.miscLayoutPanel.Controls.Add(this.btnDS);
+            this.miscLayoutPanel.Controls.Add(this.btnGFW);
+            this.miscLayoutPanel.Controls.Add(this.btnISC);
+            this.miscLayoutPanel.Controls.Add(this.btnVD);
+            this.miscLayoutPanel.Location = new System.Drawing.Point(3, 16);
+            this.miscLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.miscLayoutPanel.Name = "miscLayoutPanel";
+            this.miscLayoutPanel.Size = new System.Drawing.Size(506, 104);
+            this.miscLayoutPanel.TabIndex = 2;
             // 
             // btnStB
             // 
@@ -1572,10 +1572,9 @@
             // 
             // fightingGroup
             // 
-            this.fightingGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.fightingGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.fightingGroup.Controls.Add(this.flowLayoutPanel2);
+            this.fightingGroup.Controls.Add(this.fightingLayoutPanel);
             this.fightingGroup.Location = new System.Drawing.Point(6, 234);
             this.fightingGroup.Name = "fightingGroup";
             this.fightingGroup.Size = new System.Drawing.Size(512, 123);
@@ -1583,22 +1582,23 @@
             this.fightingGroup.TabStop = false;
             this.fightingGroup.Text = "Fighting Games";
             // 
-            // flowLayoutPanel2
+            // fightingLayoutPanel
             // 
-            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.fightingLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel2.Controls.Add(this.btnIaMP);
-            this.flowLayoutPanel2.Controls.Add(this.btnSWR);
-            this.flowLayoutPanel2.Controls.Add(this.btnUoNL);
-            this.flowLayoutPanel2.Controls.Add(this.btnHM);
-            this.flowLayoutPanel2.Controls.Add(this.btnULiL);
-            this.flowLayoutPanel2.Controls.Add(this.btnAoCF);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 16);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(506, 104);
-            this.flowLayoutPanel2.TabIndex = 2;
+            this.fightingLayoutPanel.AutoScroll = true;
+            this.fightingLayoutPanel.Controls.Add(this.btnIaMP);
+            this.fightingLayoutPanel.Controls.Add(this.btnSWR);
+            this.fightingLayoutPanel.Controls.Add(this.btnUoNL);
+            this.fightingLayoutPanel.Controls.Add(this.btnHM);
+            this.fightingLayoutPanel.Controls.Add(this.btnULiL);
+            this.fightingLayoutPanel.Controls.Add(this.btnAoCF);
+            this.fightingLayoutPanel.Location = new System.Drawing.Point(3, 16);
+            this.fightingLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.fightingLayoutPanel.Name = "fightingLayoutPanel";
+            this.fightingLayoutPanel.Size = new System.Drawing.Size(506, 104);
+            this.fightingLayoutPanel.TabIndex = 2;
             // 
             // btnIaMP
             // 
@@ -1713,7 +1713,7 @@
             this.mainGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainGroup.Controls.Add(this.flowLayoutPanel1);
+            this.mainGroup.Controls.Add(this.mainLayoutPanel);
             this.mainGroup.Location = new System.Drawing.Point(6, 6);
             this.mainGroup.Name = "mainGroup";
             this.mainGroup.Size = new System.Drawing.Size(512, 222);
@@ -1721,32 +1721,33 @@
             this.mainGroup.TabStop = false;
             this.mainGroup.Text = "Main Games";
             // 
-            // flowLayoutPanel1
+            // mainLayoutPanel
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.mainLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.Controls.Add(this.btnHRtP);
-            this.flowLayoutPanel1.Controls.Add(this.btnSoEW);
-            this.flowLayoutPanel1.Controls.Add(this.btnPoDD);
-            this.flowLayoutPanel1.Controls.Add(this.btnLLS);
-            this.flowLayoutPanel1.Controls.Add(this.btnMS);
-            this.flowLayoutPanel1.Controls.Add(this.btnEoSD);
-            this.flowLayoutPanel1.Controls.Add(this.btnPCB);
-            this.flowLayoutPanel1.Controls.Add(this.btnIN);
-            this.flowLayoutPanel1.Controls.Add(this.btnPoFV);
-            this.flowLayoutPanel1.Controls.Add(this.btnMoF);
-            this.flowLayoutPanel1.Controls.Add(this.btnSA);
-            this.flowLayoutPanel1.Controls.Add(this.btnUFO);
-            this.flowLayoutPanel1.Controls.Add(this.btnTD);
-            this.flowLayoutPanel1.Controls.Add(this.btnDDC);
-            this.flowLayoutPanel1.Controls.Add(this.btnLoLK);
-            this.flowLayoutPanel1.Controls.Add(this.btnHSiFS);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 16);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(506, 203);
-            this.flowLayoutPanel1.TabIndex = 2;
+            this.mainLayoutPanel.AutoScroll = true;
+            this.mainLayoutPanel.Controls.Add(this.btnHRtP);
+            this.mainLayoutPanel.Controls.Add(this.btnSoEW);
+            this.mainLayoutPanel.Controls.Add(this.btnPoDD);
+            this.mainLayoutPanel.Controls.Add(this.btnLLS);
+            this.mainLayoutPanel.Controls.Add(this.btnMS);
+            this.mainLayoutPanel.Controls.Add(this.btnEoSD);
+            this.mainLayoutPanel.Controls.Add(this.btnPCB);
+            this.mainLayoutPanel.Controls.Add(this.btnIN);
+            this.mainLayoutPanel.Controls.Add(this.btnPoFV);
+            this.mainLayoutPanel.Controls.Add(this.btnMoF);
+            this.mainLayoutPanel.Controls.Add(this.btnSA);
+            this.mainLayoutPanel.Controls.Add(this.btnUFO);
+            this.mainLayoutPanel.Controls.Add(this.btnTD);
+            this.mainLayoutPanel.Controls.Add(this.btnDDC);
+            this.mainLayoutPanel.Controls.Add(this.btnLoLK);
+            this.mainLayoutPanel.Controls.Add(this.btnHSiFS);
+            this.mainLayoutPanel.Location = new System.Drawing.Point(3, 16);
+            this.mainLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.mainLayoutPanel.Name = "mainLayoutPanel";
+            this.mainLayoutPanel.Size = new System.Drawing.Size(506, 203);
+            this.mainLayoutPanel.TabIndex = 2;
             // 
             // btnEoSD
             // 
@@ -2298,7 +2299,7 @@
             this.ClientSize = new System.Drawing.Size(534, 562);
             this.Controls.Add(this.mainControl);
             this.Icon = global::Touhou_Launcher.Properties.Resources.thicon;
-            this.MinimumSize = new System.Drawing.Size(550, 600);
+            this.MinimumSize = new System.Drawing.Size(440, 450);
             this.Name = "MainForm";
             this.Text = "Touhou Launcher";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_Closing);
@@ -2311,14 +2312,14 @@
             this.settings.ResumeLayout(false);
             this.randomSettings.ResumeLayout(false);
             this.otherRandom.ResumeLayout(false);
-            this.flowLayoutPanel7.ResumeLayout(false);
-            this.flowLayoutPanel7.PerformLayout();
+            this.miscRandomPanel.ResumeLayout(false);
+            this.miscRandomPanel.PerformLayout();
             this.fightingRandom.ResumeLayout(false);
-            this.flowLayoutPanel6.ResumeLayout(false);
-            this.flowLayoutPanel6.PerformLayout();
+            this.fightingRandomPanel.ResumeLayout(false);
+            this.fightingRandomPanel.PerformLayout();
             this.mainRandom.ResumeLayout(false);
-            this.flowLayoutPanel5.ResumeLayout(false);
-            this.flowLayoutPanel5.PerformLayout();
+            this.mainRandomPanel.ResumeLayout(false);
+            this.mainRandomPanel.PerformLayout();
             this.launcherSettings.ResumeLayout(false);
             this.launcherSettings.PerformLayout();
             this.replays.ResumeLayout(false);
@@ -2329,11 +2330,11 @@
             this.mainControl.ResumeLayout(false);
             this.games.ResumeLayout(false);
             this.otherGroup.ResumeLayout(false);
-            this.flowLayoutPanel3.ResumeLayout(false);
+            this.miscLayoutPanel.ResumeLayout(false);
             this.fightingGroup.ResumeLayout(false);
-            this.flowLayoutPanel2.ResumeLayout(false);
+            this.fightingLayoutPanel.ResumeLayout(false);
             this.mainGroup.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.mainLayoutPanel.ResumeLayout(false);
             this.trayMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -2374,14 +2375,14 @@
         private System.Windows.Forms.RadioButton gensokyoReplays;
         private System.Windows.Forms.TabPage customGames;
         private System.Windows.Forms.Button customAdd;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView customList;
         private System.Windows.Forms.Label customLabel;
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.TreeView customTree;
         private System.Windows.Forms.TabControl mainControl;
         private System.Windows.Forms.TabPage games;
         private System.Windows.Forms.GroupBox mainGroup;
         private System.Windows.Forms.Button btnHRtP;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel mainLayoutPanel;
         private System.Windows.Forms.Button btnSoEW;
         private System.Windows.Forms.Button btnRandom;
         private System.Windows.Forms.Button btnPoDD;
@@ -2399,7 +2400,7 @@
         private System.Windows.Forms.Button btnLoLK;
         private System.Windows.Forms.Button btnHSiFS;
         private System.Windows.Forms.GroupBox fightingGroup;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel fightingLayoutPanel;
         private System.Windows.Forms.Button btnIaMP;
         private System.Windows.Forms.Button btnSWR;
         private System.Windows.Forms.Button btnUoNL;
@@ -2407,7 +2408,7 @@
         private System.Windows.Forms.Button btnULiL;
         private System.Windows.Forms.Button btnAoCF;
         private System.Windows.Forms.GroupBox otherGroup;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.FlowLayoutPanel miscLayoutPanel;
         private System.Windows.Forms.Button btnStB;
         private System.Windows.Forms.Button btnDS;
         private System.Windows.Forms.Button btnGFW;
@@ -2420,14 +2421,14 @@
         private System.Windows.Forms.Button randomNone;
         private System.Windows.Forms.Button randomAll;
         private System.Windows.Forms.GroupBox otherRandom;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
+        private System.Windows.Forms.FlowLayoutPanel miscRandomPanel;
         private System.Windows.Forms.CheckBox chkStB;
         private System.Windows.Forms.CheckBox chkDS;
         private System.Windows.Forms.CheckBox chkGFW;
         private System.Windows.Forms.CheckBox chkISC;
         private System.Windows.Forms.CheckBox chkVD;
         private System.Windows.Forms.GroupBox fightingRandom;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
+        private System.Windows.Forms.FlowLayoutPanel fightingRandomPanel;
         private System.Windows.Forms.CheckBox chkIaMP;
         private System.Windows.Forms.CheckBox chkSWR;
         private System.Windows.Forms.CheckBox chkUoNL;
@@ -2435,7 +2436,7 @@
         private System.Windows.Forms.CheckBox chkULiL;
         private System.Windows.Forms.CheckBox chkAoCF;
         private System.Windows.Forms.GroupBox mainRandom;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
+        private System.Windows.Forms.FlowLayoutPanel mainRandomPanel;
         private System.Windows.Forms.CheckBox chkHRtP;
         private System.Windows.Forms.CheckBox chkSoEW;
         private System.Windows.Forms.CheckBox chkPoDD;
