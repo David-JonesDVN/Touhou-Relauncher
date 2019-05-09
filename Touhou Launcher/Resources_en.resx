@@ -703,4 +703,13 @@ random game option:</value>
   <data name="selectedPatches" xml:space="preserve">
     <value>Selected Patches</value>
   </data>
+  <data name="WBaWC" xml:space="preserve">
+    <value>Wily Beast and Weakest Creature</value>
+  </data>
+  <data name="WBaWCShort" xml:space="preserve">
+    <value>WBaWC</value>
+  </data>
+  <data name="WBaWCTitle" xml:space="preserve">
+    <value>Touhou 17: Wily Beast and Weakest Creature</value>
+  </data>
 </root>

@@ -94,6 +94,7 @@ namespace Touhou_Launcher
         }
 
         public static Configs curCfg = Configs.Load();
+        public const int backwardsCompatibilityGame = 16;
         public static System.Resources.ResourceManager rm;
         public static Dictionary<string, int> dirToNumber = new Dictionary<string, int>
         {
@@ -104,7 +105,7 @@ namespace Touhou_Launcher
         };
         public static List<int> idToNumber = new List<int>
         {
-            1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 75, 105, 123, 135, 145, 155, 95, 125, 128, 143, 165
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 75, 105, 123, 135, 145, 155, 95, 125, 128, 143, 165
         };
         public static Dictionary<string, int> nameToID = new Dictionary<string, int>
         {
@@ -124,17 +125,18 @@ namespace Touhou_Launcher
             {"DDC", 13},
             {"LoLK", 14},
             {"HSiFS", 15},
-            {"IaMP", 16},
-            {"SWR", 17},
-            {"UoNL", 18},
-            {"HM", 19},
-            {"ULiL", 20},
-            {"AoCF", 21},
-            {"StB", 22},
-            {"DS", 23},
-            {"GFW", 24},
-            {"ISC", 25},
-            {"VD", 26}
+            {"WBaWC", 16},
+            {"IaMP", 17},
+            {"SWR", 18},
+            {"UoNL", 19},
+            {"HM", 20},
+            {"ULiL", 21},
+            {"AoCF", 22},
+            {"StB", 23},
+            {"DS", 24},
+            {"GFW", 25},
+            {"ISC", 26},
+            {"VD", 27}
         };
 
         public static IEnumerable<Control> GetAll(Control control, Type type)
@@ -498,6 +500,18 @@ namespace Touhou_Launcher
         public MainForm()
         {
             InitializeComponent();
+            int count = new Configs().gameCFG.Length;
+            if (count > curCfg.gameCFG.Length)
+            {
+                GameConfig[] backwardsComp = new GameConfig[count];
+                Array.Copy(curCfg.gameCFG, backwardsComp, backwardsCompatibilityGame);
+                backwardsComp[backwardsCompatibilityGame] = new GameConfig();
+                backwardsComp[backwardsCompatibilityGame].GameDir = new List<string> { "", "", "", "" };
+                backwardsComp[backwardsCompatibilityGame].crapCFG = new List<string> { "None", "None" };
+                backwardsComp[backwardsCompatibilityGame].appLocale = new List<bool> { false, false, false, false };
+                Array.Copy(curCfg.gameCFG, backwardsCompatibilityGame, backwardsComp, backwardsCompatibilityGame + 1, count - (backwardsCompatibilityGame + 1));
+                curCfg.gameCFG = backwardsComp;
+            }
             foreach (Button btn in GetAll(games, typeof(Button)))
                 if (btn.Name != "btnRandom")
                     curCfg.gameCFG[nameToID[btn.Name.Substring(3)]].defaultTextColor = btn.ForeColor.ToArgb();
@@ -518,6 +532,7 @@ namespace Touhou_Launcher
                 trayIcon.Visible = true;
                 this.Hide();
             }
+            this.Size = this.Size;
         }
 
         private void MainForm_Closing(object sender, FormClosingEventArgs e)

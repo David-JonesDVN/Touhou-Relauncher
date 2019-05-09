@@ -168,11 +168,6 @@ namespace Touhou_Launcher
                 Dir_LostFocus(sender, new EventArgs());
         }
 
-        private void defaultExec_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            MainForm.curCfg.gameCFG[game].DefaultDir = defaultExec.SelectedIndex;
-        }
-
         private void Applocale_CheckedChanged(object sender, EventArgs e)
         {
             MainForm.curCfg.gameCFG[game].appLocale[MainForm.dirToNumber[((CheckBox)sender).Name.Replace("Applocale", "")]] = ((CheckBox)sender).Checked;
@@ -236,9 +231,28 @@ namespace Touhou_Launcher
             MainForm.launchGame(game, dir, MainForm.curCfg.gameCFG[game].appLocale[dir]);
         }
 
+        private void crapCfg_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MainForm.curCfg.gameCFG[game].crapCFG[0] = crapGame.SelectedItem.ToString();
+            if (crapCfg.SelectedItem.ToString() == "Custom")
+            {
+                thcrap profileConfig = new thcrap(this);
+                profileConfig.ShowDialog();
+            }
+            else
+                MainForm.curCfg.gameCFG[game].crapCFG[1] = crapCfg.SelectedItem.ToString();
+            if (crap.ContainsKey(MainForm.curCfg.gameCFG[game].crapCFG[0]))
+                MainForm.curCfg.gameCFG[game].GameDir[3] = MainForm.curCfg.gameCFG[game].crapCFG[0] != "None" ? crap[MainForm.curCfg.gameCFG[game].crapCFG[0]] : "";
+        }
+
         private void launchcrap_Click(object sender, EventArgs e)
         {
             MainForm.launchcrap(game);
+        }
+
+        private void defaultExec_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MainForm.curCfg.gameCFG[game].DefaultDir = defaultExec.SelectedIndex;
         }
 
         private void defaultApplocale_CheckedChanged(object sender, EventArgs e)
@@ -315,6 +329,14 @@ namespace Touhou_Launcher
         private void chkCustomText_CheckedChanged(object sender, EventArgs e)
         {
             MainForm.curCfg.gameCFG[game].customText = chkCustomText.Checked;
+        }
+
+        private void btnCustomText_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorSet = new ColorDialog();
+            colorSet.Color = Color.FromArgb(MainForm.curCfg.gameCFG[game].textColor);
+            if (colorSet.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                MainForm.curCfg.gameCFG[game].textColor = colorSet.Color.ToArgb();
         }
 
         private void browseHDI_Click(object sender, EventArgs e)
@@ -421,28 +443,6 @@ namespace Touhou_Launcher
                 Process.Start(path + "tr");
             else
                 MessageBox.Show(MainForm.rm.GetString("errorAppdataNotFound"));
-        }
-
-        private void crapCfg_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            MainForm.curCfg.gameCFG[game].crapCFG[0] = crapGame.SelectedItem.ToString();
-            if (crapCfg.SelectedItem.ToString() == "Custom")
-            {
-                thcrap profileConfig = new thcrap(this);
-                profileConfig.ShowDialog();
-            }
-            else
-                MainForm.curCfg.gameCFG[game].crapCFG[1] = crapCfg.SelectedItem.ToString();
-            if (crap.ContainsKey(MainForm.curCfg.gameCFG[game].crapCFG[0]))
-                MainForm.curCfg.gameCFG[game].GameDir[3] = MainForm.curCfg.gameCFG[game].crapCFG[0] != "None" ? crap[MainForm.curCfg.gameCFG[game].crapCFG[0]] : "";
-        }
-
-        private void btnCustomText_Click(object sender, EventArgs e)
-        {
-            ColorDialog colorSet = new ColorDialog();
-            colorSet.Color = Color.FromArgb(MainForm.curCfg.gameCFG[game].textColor);
-            if (colorSet.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                MainForm.curCfg.gameCFG[game].textColor = colorSet.Color.ToArgb();
         }
     }
 }

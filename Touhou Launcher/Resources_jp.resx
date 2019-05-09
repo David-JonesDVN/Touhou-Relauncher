@@ -703,4 +703,13 @@ random game option:</value>
   <data name="selectedPatches" xml:space="preserve">
     <value>Selected Patches</value>
   </data>
+  <data name="WBaWC" xml:space="preserve">
+    <value>東方鬼形獣</value>
+  </data>
+  <data name="WBaWCShort" xml:space="preserve">
+    <value>鬼形獣</value>
+  </data>
+  <data name="WBaWCTitle" xml:space="preserve">
+    <value>東方鬼形獣　～ Wily Beast and Weakest Creature</value>
+  </data>
 </root>
