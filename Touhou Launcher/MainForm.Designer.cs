@@ -162,6 +162,7 @@
             this.btnDDC = new System.Windows.Forms.Button();
             this.btnLoLK = new System.Windows.Forms.Button();
             this.btnHSiFS = new System.Windows.Forms.Button();
+            this.btnWBaWC = new System.Windows.Forms.Button();
             this.trayMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.trayMain = new System.Windows.Forms.ToolStripMenuItem();
             this.trayHRtP = new System.Windows.Forms.ToolStripMenuItem();
@@ -199,6 +200,7 @@
             this.trayOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.trayExit = new System.Windows.Forms.ToolStripMenuItem();
             this.trayIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.chkWBaWC = new System.Windows.Forms.CheckBox();
             this.gameContextMenu.SuspendLayout();
             this.customContextMenu.SuspendLayout();
             this.customFolderContextMenu.SuspendLayout();
@@ -490,7 +492,7 @@
             this.btnRandom.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRandom.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRandom.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnRandom.Location = new System.Drawing.Point(204, 488);
+            this.btnRandom.Location = new System.Drawing.Point(204, 538);
             this.btnRandom.Name = "btnRandom";
             this.btnRandom.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnRandom.Size = new System.Drawing.Size(120, 44);
@@ -565,7 +567,7 @@
             this.info.Location = new System.Drawing.Point(4, 22);
             this.info.Name = "info";
             this.info.Padding = new System.Windows.Forms.Padding(3);
-            this.info.Size = new System.Drawing.Size(527, 535);
+            this.info.Size = new System.Drawing.Size(527, 585);
             this.info.TabIndex = 5;
             this.info.Text = "Info";
             // 
@@ -626,7 +628,7 @@
             this.settings.Location = new System.Drawing.Point(4, 22);
             this.settings.Name = "settings";
             this.settings.Padding = new System.Windows.Forms.Padding(3);
-            this.settings.Size = new System.Drawing.Size(527, 535);
+            this.settings.Size = new System.Drawing.Size(527, 585);
             this.settings.TabIndex = 4;
             this.settings.Text = "Settings";
             // 
@@ -912,6 +914,7 @@
             this.mainRandomPanel.Controls.Add(this.chkDDC);
             this.mainRandomPanel.Controls.Add(this.chkLoLK);
             this.mainRandomPanel.Controls.Add(this.chkHSiFS);
+            this.mainRandomPanel.Controls.Add(this.chkWBaWC);
             this.mainRandomPanel.Location = new System.Drawing.Point(3, 16);
             this.mainRandomPanel.Margin = new System.Windows.Forms.Padding(0);
             this.mainRandomPanel.Name = "mainRandomPanel";
@@ -1269,7 +1272,7 @@
             this.replays.Location = new System.Drawing.Point(4, 22);
             this.replays.Name = "replays";
             this.replays.Padding = new System.Windows.Forms.Padding(3);
-            this.replays.Size = new System.Drawing.Size(527, 535);
+            this.replays.Size = new System.Drawing.Size(527, 585);
             this.replays.TabIndex = 3;
             this.replays.Text = "Replays";
             // 
@@ -1362,7 +1365,7 @@
             this.customGames.Location = new System.Drawing.Point(4, 22);
             this.customGames.Name = "customGames";
             this.customGames.Padding = new System.Windows.Forms.Padding(3);
-            this.customGames.Size = new System.Drawing.Size(527, 535);
+            this.customGames.Size = new System.Drawing.Size(527, 585);
             this.customGames.TabIndex = 1;
             this.customGames.Text = "Custom Games";
             // 
@@ -1434,7 +1437,7 @@
             this.mainControl.Margin = new System.Windows.Forms.Padding(1);
             this.mainControl.Name = "mainControl";
             this.mainControl.SelectedIndex = 0;
-            this.mainControl.Size = new System.Drawing.Size(535, 561);
+            this.mainControl.Size = new System.Drawing.Size(535, 611);
             this.mainControl.TabIndex = 0;
             this.mainControl.Deselected += new System.Windows.Forms.TabControlEventHandler(this.mainControl_Deselected);
             // 
@@ -1448,7 +1451,7 @@
             this.games.Location = new System.Drawing.Point(4, 22);
             this.games.Name = "games";
             this.games.Padding = new System.Windows.Forms.Padding(3);
-            this.games.Size = new System.Drawing.Size(527, 535);
+            this.games.Size = new System.Drawing.Size(527, 585);
             this.games.TabIndex = 6;
             this.games.Text = "Games";
             // 
@@ -1457,7 +1460,7 @@
             this.otherGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.otherGroup.Controls.Add(this.miscLayoutPanel);
-            this.otherGroup.Location = new System.Drawing.Point(6, 363);
+            this.otherGroup.Location = new System.Drawing.Point(6, 413);
             this.otherGroup.Name = "otherGroup";
             this.otherGroup.Size = new System.Drawing.Size(512, 123);
             this.otherGroup.TabIndex = 3;
@@ -1575,7 +1578,7 @@
             this.fightingGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.fightingGroup.Controls.Add(this.fightingLayoutPanel);
-            this.fightingGroup.Location = new System.Drawing.Point(6, 234);
+            this.fightingGroup.Location = new System.Drawing.Point(6, 284);
             this.fightingGroup.Name = "fightingGroup";
             this.fightingGroup.Size = new System.Drawing.Size(512, 123);
             this.fightingGroup.TabIndex = 2;
@@ -1716,7 +1719,7 @@
             this.mainGroup.Controls.Add(this.mainLayoutPanel);
             this.mainGroup.Location = new System.Drawing.Point(6, 6);
             this.mainGroup.Name = "mainGroup";
-            this.mainGroup.Size = new System.Drawing.Size(512, 222);
+            this.mainGroup.Size = new System.Drawing.Size(512, 272);
             this.mainGroup.TabIndex = 1;
             this.mainGroup.TabStop = false;
             this.mainGroup.Text = "Main Games";
@@ -1743,10 +1746,11 @@
             this.mainLayoutPanel.Controls.Add(this.btnDDC);
             this.mainLayoutPanel.Controls.Add(this.btnLoLK);
             this.mainLayoutPanel.Controls.Add(this.btnHSiFS);
+            this.mainLayoutPanel.Controls.Add(this.btnWBaWC);
             this.mainLayoutPanel.Location = new System.Drawing.Point(3, 16);
             this.mainLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
             this.mainLayoutPanel.Name = "mainLayoutPanel";
-            this.mainLayoutPanel.Size = new System.Drawing.Size(506, 203);
+            this.mainLayoutPanel.Size = new System.Drawing.Size(506, 253);
             this.mainLayoutPanel.TabIndex = 2;
             // 
             // btnEoSD
@@ -1946,6 +1950,23 @@
             this.btnHSiFS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHSiFS.UseVisualStyleBackColor = true;
             this.btnHSiFS.Click += new System.EventHandler(this.btn_Click);
+            // 
+            // btnWBaWC
+            // 
+            this.btnWBaWC.BackgroundImage = global::Touhou_Launcher.Properties.Resources.wbawcg;
+            this.btnWBaWC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnWBaWC.ContextMenuStrip = this.gameContextMenu;
+            this.btnWBaWC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnWBaWC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnWBaWC.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnWBaWC.Location = new System.Drawing.Point(3, 203);
+            this.btnWBaWC.Name = "btnWBaWC";
+            this.btnWBaWC.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnWBaWC.Size = new System.Drawing.Size(120, 44);
+            this.btnWBaWC.TabIndex = 16;
+            this.btnWBaWC.Text = "Wily Beast and Weakest Creature";
+            this.btnWBaWC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnWBaWC.UseVisualStyleBackColor = true;
             // 
             // trayMenu
             // 
@@ -2292,11 +2313,23 @@
             this.trayIcon.Text = "Touhou Launcher";
             this.trayIcon.DoubleClick += new System.EventHandler(this.MainForm_Show);
             // 
+            // chkWBaWC
+            // 
+            this.chkWBaWC.AutoSize = true;
+            this.chkWBaWC.Checked = true;
+            this.chkWBaWC.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkWBaWC.Location = new System.Drawing.Point(65, 72);
+            this.chkWBaWC.Name = "chkWBaWC";
+            this.chkWBaWC.Size = new System.Drawing.Size(68, 17);
+            this.chkWBaWC.TabIndex = 16;
+            this.chkWBaWC.Text = "WBaWC";
+            this.chkWBaWC.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 562);
+            this.ClientSize = new System.Drawing.Size(534, 612);
             this.Controls.Add(this.mainControl);
             this.Icon = global::Touhou_Launcher.Properties.Resources.thicon;
             this.MinimumSize = new System.Drawing.Size(440, 450);
@@ -2511,6 +2544,8 @@
         private System.Windows.Forms.ToolStripMenuItem buttonToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem textToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bannerToolStripMenuItem;
+        private System.Windows.Forms.Button btnWBaWC;
+        private System.Windows.Forms.CheckBox chkWBaWC;
     }
 }
 

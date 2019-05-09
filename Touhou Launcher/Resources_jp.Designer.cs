@@ -1685,6 +1685,33 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 東方鬼形獣.
+        /// </summary>
+        public static string WBaWC {
+            get {
+                return ResourceManager.GetString("WBaWC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 鬼形獣.
+        /// </summary>
+        public static string WBaWCShort {
+            get {
+                return ResourceManager.GetString("WBaWCShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方鬼形獣　～ Wily Beast and Weakest Creature.
+        /// </summary>
+        public static string WBaWCTitle {
+            get {
+                return ResourceManager.GetString("WBaWCTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Windows Game Settings.
         /// </summary>
         public static string windowsSettings {
