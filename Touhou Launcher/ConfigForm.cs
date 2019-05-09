@@ -15,7 +15,6 @@ namespace Touhou_Launcher
     public partial class ConfigForm : Form
     {
         public int game;
-        bool tr = false;
         Button parentButton;
         Dictionary<string, string> crap = new Dictionary<string,string>();
 
@@ -29,9 +28,6 @@ namespace Touhou_Launcher
             bannerOffDir.Text = MainForm.curCfg.gameCFG[game].bannerOff;
             bannerOnDir.Text = MainForm.curCfg.gameCFG[game].bannerOn;
             chkCustomText.Checked = MainForm.curCfg.gameCFG[game].customText;
-            string trTest = Environment.SpecialFolder.ApplicationData + "\\ShaghaiAlice\\th" + MainForm.idToNumber[game].ToString("00");
-            if (!Directory.Exists(trTest) && Directory.Exists(trTest + "tr"))
-                tr = true;
         }
 
         private void ConfigForm_Load(object sender, EventArgs e)
@@ -369,7 +365,7 @@ namespace Touhou_Launcher
             {
                 Process.Start(path + (MainForm.idToNumber[game]).ToString("00") + "\\replay");
             }
-            else if (tr)
+            else if (Directory.Exists(path + (MainForm.idToNumber[game]).ToString("00") + "tr\\replay"))
             {
                 Process.Start(path + MainForm.idToNumber[game].ToString("00") + "tr\\replay");
             }
@@ -419,10 +415,10 @@ namespace Touhou_Launcher
         private void openAppdata_Click(object sender, EventArgs e)
         {
             string path = Environment.SpecialFolder.ApplicationData + "\\Shanghai Alice\\th" + (MainForm.idToNumber[game]).ToString("00");
-            if (tr)
-                path += "tr";
             if (Directory.Exists(path))
                 Process.Start(path);
+            else if (Directory.Exists(path + "tr"))
+                Process.Start(path + "tr");
             else
                 MessageBox.Show(MainForm.rm.GetString("errorAppdataNotFound"));
         }

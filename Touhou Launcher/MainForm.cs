@@ -70,7 +70,7 @@ namespace Touhou_Launcher
 
         public class Configs : AppSettings<Configs>
         {
-            public GameConfig[] gameCFG = new GameConfig[27];
+            public GameConfig[] gameCFG = new GameConfig[28];
             public SubNode Custom = new SubNode();
             public View customView = View.LargeIcon;
             public SortOrder customSort = SortOrder.Ascending;
@@ -321,7 +321,7 @@ namespace Touhou_Launcher
             foreach (Button btn in GetAll(games, typeof(Button)))
                 if (btn.Name != "btnRandom")
                     RefreshButton(btn);
-            JSONToTree(curCfg.Custom, treeView1.Nodes);
+            JSONToTree(curCfg.Custom, customTree.Nodes);
             JSONToTray(curCfg.Custom, trayCustom);
             languageBox.SelectedIndexChanged -= languageBox_SelectedIndexChanged;
             languageBox.SelectedIndex = curCfg.language;
@@ -476,12 +476,12 @@ namespace Touhou_Launcher
         {
             foreach (string file in files)
             {
-                if (!((Dictionary<string, string>)treeView1.SelectedNode.Tag).ContainsKey(file))
-                    ((Dictionary<string, string>)treeView1.SelectedNode.Tag).Add(file, Path.GetFileNameWithoutExtension(file));
+                if (!((Dictionary<string, string>)customTree.SelectedNode.Tag).ContainsKey(file))
+                    ((Dictionary<string, string>)customTree.SelectedNode.Tag).Add(file, Path.GetFileNameWithoutExtension(file));
             }
-            curCfg.Custom = TreeToJSON(treeView1.Nodes, new SubNode());
+            curCfg.Custom = TreeToJSON(customTree.Nodes, new SubNode());
             curCfg.Save();
-            RefreshList(ref listView1, (Dictionary<string, string>)treeView1.SelectedNode.Tag);
+            RefreshList(ref customList, (Dictionary<string, string>)customTree.SelectedNode.Tag);
         }
 
         private void RefreshList(ref ListView list, Dictionary<string, string> files)
@@ -596,103 +596,103 @@ namespace Touhou_Launcher
 
         private void customAdd_Click(object sender, EventArgs e)
         {
-            if (treeView1.SelectedNode != null)
+            if (customTree.SelectedNode != null)
             {
                 customAddItem(FileBrowser(rm.GetString("gameSelectTitle"), rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + rm.GetString("allFilter") + " (*.*)|*.*", true));
             }
         }
 
-        private void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        private void customTree_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             if (new Rectangle(e.Node.Bounds.X - 15, e.Node.Bounds.Y, e.Node.Bounds.Width + 15, e.Node.Bounds.Height).Contains(e.Location))
             {
-                treeView1.SelectedNode = e.Node;
-                RefreshList(ref listView1, (Dictionary<string, string>)e.Node.Tag);
+                customTree.SelectedNode = e.Node;
+                RefreshList(ref customList, (Dictionary<string, string>)e.Node.Tag);
             }
             else
             {
-                treeView1.SelectedNode = null;
-                RefreshList(ref listView1, new Dictionary<string, string>());
+                customTree.SelectedNode = null;
+                RefreshList(ref customList, new Dictionary<string, string>());
             }
         }
 
-        private void treeView1_AfterLabelEdit(object sender, NodeLabelEditEventArgs e)
+        private void customTree_AfterLabelEdit(object sender, NodeLabelEditEventArgs e)
         {
             if (e.Label != null)
             {
                 e.Node.Text = e.Label;
-                curCfg.Custom = TreeToJSON(treeView1.Nodes, new SubNode());
+                curCfg.Custom = TreeToJSON(customTree.Nodes, new SubNode());
                 curCfg.Save();
             }
         }
 
         private void newCategoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (treeView1.SelectedNode != null)
+            if (customTree.SelectedNode != null)
             {
-                TreeNode newNode = treeView1.SelectedNode.Nodes.Add("New Category");
+                TreeNode newNode = customTree.SelectedNode.Nodes.Add("New Category");
                 newNode.Tag = new Dictionary<string, string>();
-                treeView1.SelectedNode.Expand();
+                customTree.SelectedNode.Expand();
             }
             else
             {
-                TreeNode newNode = treeView1.Nodes.Add("New Category");
+                TreeNode newNode = customTree.Nodes.Add("New Category");
                 newNode.Tag = new Dictionary<string, string>();
             }
-            curCfg.Custom = TreeToJSON(treeView1.Nodes, new SubNode());
+            curCfg.Custom = TreeToJSON(customTree.Nodes, new SubNode());
             curCfg.Save();
         }
 
         private void renameCategoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (treeView1.SelectedNode != null)
-                treeView1.SelectedNode.BeginEdit();
+            if (customTree.SelectedNode != null)
+                customTree.SelectedNode.BeginEdit();
         }
 
         private void deleteCategoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (treeView1.SelectedNode != null)
+            if (customTree.SelectedNode != null)
             {
-                if (MessageBox.Show(String.Format(rm.GetString("customCategoryDeleteConfirm"), treeView1.SelectedNode.Text), "", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                if (MessageBox.Show(String.Format(rm.GetString("customCategoryDeleteConfirm"), customTree.SelectedNode.Text), "", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                 {
-                    treeView1.SelectedNode.Remove();
-                    curCfg.Custom = TreeToJSON(treeView1.Nodes, new SubNode());
+                    customTree.SelectedNode.Remove();
+                    curCfg.Custom = TreeToJSON(customTree.Nodes, new SubNode());
                     curCfg.Save();
-                    RefreshList(ref listView1, treeView1.SelectedNode != null ? (Dictionary<string, string>)treeView1.SelectedNode.Tag : new Dictionary<string, string>());
+                    RefreshList(ref customList, customTree.SelectedNode != null ? (Dictionary<string, string>)customTree.SelectedNode.Tag : new Dictionary<string, string>());
                 }
             }
         }
 
-        private void listView1_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        private void customList_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
             string text = e.IsSelected ? e.Item.Name : null;
             customLabel.Text = text;
             toolTip.SetToolTip(customLabel, text);
         }
 
-        private void listView1_DragDrop(object sender, DragEventArgs e)
+        private void customList_DragDrop(object sender, DragEventArgs e)
         {
-            if (treeView1.SelectedNode != null)
+            if (customTree.SelectedNode != null)
             {
                 customAddItem((string[])e.Data.GetData(DataFormats.FileDrop));
             }
         }
 
-        private void listView1_AfterLabelEdit(object sender, LabelEditEventArgs e)
+        private void customList_AfterLabelEdit(object sender, LabelEditEventArgs e)
         {
             if (e.Label != null)
             {
-                ((Dictionary<string, string>)treeView1.SelectedNode.Tag)[listView1.Items[e.Item].Name] = e.Label;
-                curCfg.Custom = TreeToJSON(treeView1.Nodes, new SubNode());
+                ((Dictionary<string, string>)customTree.SelectedNode.Tag)[customList.Items[e.Item].Name] = e.Label;
+                curCfg.Custom = TreeToJSON(customTree.Nodes, new SubNode());
                 curCfg.Save();
             }
         }
 
-        private void listView1_DoubleClick(object sender, EventArgs e)
+        private void customList_DoubleClick(object sender, EventArgs e)
         {
-            if (listView1.SelectedItems.Count > 0)
+            if (customList.SelectedItems.Count > 0)
             {
-                startProcess(listView1.SelectedItems[0].Name);
+                startProcess(customList.SelectedItems[0].Name);
             }
         }
 
@@ -702,7 +702,7 @@ namespace Touhou_Launcher
             {
                 menu.Checked = false;
             }
-            switch (listView1.View)
+            switch (customList.View)
             {
                 case View.LargeIcon: largeIconsToolStripMenuItem.Checked = true;
                     break;
@@ -719,7 +719,7 @@ namespace Touhou_Launcher
             {
                 menu.Checked = false;
             }
-            switch (listView1.Sorting)
+            switch (customList.Sorting)
             {
                 case SortOrder.Ascending: ascendingToolStripMenuItem.Checked = true;
                     break;
@@ -730,82 +730,82 @@ namespace Touhou_Launcher
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            foreach (ListViewItem game in listView1.SelectedItems)
+            foreach (ListViewItem game in customList.SelectedItems)
             {
                 if (MessageBox.Show(String.Format(rm.GetString("customDeleteConfirm"), game.Text), "", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                 {
-                    listView1.Items.Remove(game);
-                    ((Dictionary<string, string>)treeView1.SelectedNode.Tag).Remove(game.Name);
-                    curCfg.Custom = TreeToJSON(treeView1.Nodes, new SubNode());
+                    customList.Items.Remove(game);
+                    ((Dictionary<string, string>)customTree.SelectedNode.Tag).Remove(game.Name);
+                    curCfg.Custom = TreeToJSON(customTree.Nodes, new SubNode());
                     curCfg.Save();
-                    RefreshList(ref listView1, (Dictionary<string, string>)treeView1.SelectedNode.Tag);
+                    RefreshList(ref customList, (Dictionary<string, string>)customTree.SelectedNode.Tag);
                 }
             }
         }
 
         private void renameToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            listView1.SelectedItems[0].BeginEdit();
+            customList.SelectedItems[0].BeginEdit();
         }
 
         private void playRandomToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (listView1.Items.Count > 0)
-                startProcess(listView1.Items[new Random().Next(listView1.Items.Count) - 1].Name);
+            if (customList.Items.Count > 0)
+                startProcess(customList.Items[new Random().Next(customList.Items.Count) - 1].Name);
         }
 
         private void openFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process.Start(Path.GetDirectoryName(listView1.SelectedItems[0].Name));
+            Process.Start(Path.GetDirectoryName(customList.SelectedItems[0].Name));
         }
 
         private void openWithApplocaleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (listView1.SelectedItems.Count > 0)
+            if (customList.SelectedItems.Count > 0)
             {
-                startProcess("C:\\Windows\\AppPatch\\AppLoc.exe", listView1.SelectedItems[0].Name + " /L");
+                startProcess("C:\\Windows\\AppPatch\\AppLoc.exe", customList.SelectedItems[0].Name + " /L");
             }
         }
 
         private void largeIconsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            listView1.View = View.LargeIcon;
+            customList.View = View.LargeIcon;
             curCfg.customView = View.LargeIcon;
         }
 
         private void smallIconsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            listView1.View = View.SmallIcon;
+            customList.View = View.SmallIcon;
             curCfg.customView = View.SmallIcon;
         }
 
         private void listToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            listView1.View = View.List;
+            customList.View = View.List;
             curCfg.customView = View.List;
         }
 
         private void detailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            listView1.View = View.Details;
+            customList.View = View.Details;
             curCfg.customView = View.Details;
         }
 
         private void tileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            listView1.View = View.Tile;
+            customList.View = View.Tile;
             curCfg.customView = View.Tile;
         }
 
         private void ascendingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            listView1.Sorting = SortOrder.Ascending;
+            customList.Sorting = SortOrder.Ascending;
             curCfg.customSort = SortOrder.Ascending;
         }
 
         private void descendingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            listView1.Sorting = SortOrder.Descending;
+            customList.Sorting = SortOrder.Descending;
             curCfg.customSort = SortOrder.Descending;
         }
 
@@ -832,10 +832,13 @@ namespace Touhou_Launcher
                 e.Cancel = true;
                 string name = e.Url.ToString().Substring(e.Url.ToString().LastIndexOf("/") + 1);
                 int game = Convert.ToInt32(name.Substring(2, name.LastIndexOf("_") - 2));
-                Console.WriteLine(name);
                 if (Directory.Exists(Environment.SpecialFolder.ApplicationData + "\\ShanghaiAlice\\th" + game))
                 {
                     downloadReplay(Environment.SpecialFolder.ApplicationData + "\\ShanghaiAlice\\th" + game, name, e.Url);
+                }
+                else if (Directory.Exists(Environment.SpecialFolder.ApplicationData + "\\ShanghaiAlice\\th" + game + "tr"))
+                {
+                    downloadReplay(Environment.SpecialFolder.ApplicationData + "\\ShanghaiAlice\\th" + game + "tr", name, e.Url);
                 }
                 else
                 {
