@@ -699,7 +699,7 @@
     <value>Отображать текст?</value>
   </data>
   <data name="selectedPatches" xml:space="preserve">
-    <value>Selected Patches</value>
+    <value>выбранные патчи</value>
   </data>
   <data name="WBaWC" xml:space="preserve">
     <value>Wily Beast and Weakest Creature</value>

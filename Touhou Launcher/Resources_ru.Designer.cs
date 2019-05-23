@@ -1449,7 +1449,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Selected Patches.
+        ///   Looks up a localized string similar to выбранные патчи.
         /// </summary>
         public static string selectedPatches {
             get {
