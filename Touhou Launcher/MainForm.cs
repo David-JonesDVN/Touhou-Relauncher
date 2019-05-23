@@ -93,6 +93,7 @@ namespace Touhou_Launcher
             }
         }
 
+        private FormWindowState lastState = FormWindowState.Normal;
         public static Configs curCfg = Configs.Load();
         public const int backwardsCompatibilityGame = 16;
         public static System.Resources.ResourceManager rm;
@@ -527,12 +528,26 @@ namespace Touhou_Launcher
 
         private void MainForm_Resize(object sender, EventArgs e)
         {
-            if (this.WindowState == FormWindowState.Minimized && curCfg.minimizeToTray)
+            if (this.WindowState == FormWindowState.Minimized)
             {
-                trayIcon.Visible = true;
-                this.Hide();
+                foreach (FlowLayoutPanel panel in GetAll(mainControl.SelectedTab, typeof(FlowLayoutPanel)))
+                {
+                    panel.AutoScroll = false;
+                }
+                if (curCfg.minimizeToTray)
+                {
+                    trayIcon.Visible = true;
+                    this.Hide();
+                }
             }
-            this.Size = this.Size;
+            else if (lastState == FormWindowState.Minimized)
+            {
+                foreach (FlowLayoutPanel panel in GetAll(mainControl.SelectedTab, typeof(FlowLayoutPanel)))
+                {
+                    panel.AutoScroll = true;
+                }
+            }
+            lastState = this.WindowState;
         }
 
         private void MainForm_Closing(object sender, FormClosingEventArgs e)
