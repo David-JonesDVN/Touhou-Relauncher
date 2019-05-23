@@ -92,6 +92,7 @@ namespace Touhou_Launcher
             }
         }
 
+        private FormWindowState lastState = FormWindowState.Normal;
         public static Configs curCfg = Configs.Load();
         public const int backwardsCompatibilityGame = 16;
         public static System.Resources.ResourceManager rm;
@@ -238,7 +239,9 @@ namespace Touhou_Launcher
             else if (!NekoProject(dir))
                 MessageBox.Show(rm.GetString("errorInvalidNP2INI"));
             else
+            {
                 startProcess(curCfg.np2Dir);
+            }
         }
 
         public static void launchGame(int game, int dir, bool applocale)
@@ -521,11 +524,26 @@ namespace Touhou_Launcher
 
         private void MainForm_Resize(object sender, EventArgs e)
         {
-            if (this.WindowState == FormWindowState.Minimized && curCfg.minimizeToTray)
+            if (this.WindowState == FormWindowState.Minimized)
             {
-                trayIcon.Visible = true;
-                this.Hide();
+                foreach (FlowLayoutPanel panel in GetAll(mainControl.SelectedTab, typeof(FlowLayoutPanel)))
+                {
+                    panel.AutoScroll = false;
+                }
+                if (curCfg.minimizeToTray)
+                {
+                    trayIcon.Visible = true;
+                    this.Hide();
+                }
             }
+            else if (lastState == FormWindowState.Minimized)
+            {
+                foreach (FlowLayoutPanel panel in GetAll(mainControl.SelectedTab, typeof(FlowLayoutPanel)))
+                {
+                    panel.AutoScroll = true;
+                }
+            }
+            lastState = this.WindowState;
         }
 
         private void MainForm_Closing(object sender, FormClosingEventArgs e)
@@ -840,7 +858,6 @@ namespace Touhou_Launcher
                 e.Cancel = true;
                 string name = e.Url.ToString().Substring(e.Url.ToString().LastIndexOf("/") + 1);
                 int game = Convert.ToInt32(name.Substring(2, name.LastIndexOf("_") - 2));
-                Console.WriteLine(name);
                 if (Directory.Exists(Environment.SpecialFolder.ApplicationData + "\\ShanghaiAlice\\th" + game))
                 {
                     downloadReplay(Environment.SpecialFolder.ApplicationData + "\\ShanghaiAlice\\th" + game, name, e.Url);

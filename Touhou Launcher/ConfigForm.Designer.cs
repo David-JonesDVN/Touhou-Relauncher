@@ -420,6 +420,7 @@
             // 
             // openNP2Folder
             // 
+            this.openNP2Folder.AutoEllipsis = true;
             this.openNP2Folder.Location = new System.Drawing.Point(9, 80);
             this.openNP2Folder.Name = "openNP2Folder";
             this.openNP2Folder.Size = new System.Drawing.Size(229, 23);
@@ -430,6 +431,7 @@
             // 
             // launchHDI
             // 
+            this.launchHDI.AutoEllipsis = true;
             this.launchHDI.Location = new System.Drawing.Point(183, 58);
             this.launchHDI.Name = "launchHDI";
             this.launchHDI.Size = new System.Drawing.Size(55, 22);
