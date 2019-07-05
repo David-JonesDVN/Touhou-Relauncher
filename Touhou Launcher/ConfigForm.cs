@@ -184,7 +184,7 @@ namespace Touhou_Launcher
                 string jpPath = Path.GetDirectoryName(path) + "\\th" + (MainForm.idToNumber[game]).ToString("00") + ".exe";
                 string enPath = Path.GetDirectoryName(path) + "\\th" + (MainForm.idToNumber[game]).ToString("00") + "e.exe";
                 string customPath = Path.GetDirectoryName(path);
-                customPath += game == 16 ? "\\Config.exe" : "\\custom.exe";
+                customPath += MainForm.idToNumber[game] == 75 ? "\\Config.exe" : "\\custom.exe";
                 switch (type)
                 {
                     case 0: if (File.Exists(enPath) && MainForm.curCfg.gameCFG[game].GameDir[1] == "")
@@ -380,16 +380,29 @@ namespace Touhou_Launcher
                 Process.Start(path);
         }
 
+        private void openAppdata_Click(object sender, EventArgs e)
+        {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData, Environment.SpecialFolderOption.DoNotVerify) + "\\ShanghaiAlice\\th" + (MainForm.idToNumber[game]).ToString("00");
+            if (Directory.Exists(path))
+                Process.Start(path);
+            else if (Directory.Exists(path + "tr"))
+                Process.Start(path + "tr");
+            else
+                MessageBox.Show(MainForm.rm.GetString("errorAppdataNotFound"));
+        }
+
         private void openReplays_Click(object sender, EventArgs e)
         {
-            string path = Environment.SpecialFolder.ApplicationData + "\\ShanghaiAlice\\th";
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData, Environment.SpecialFolderOption.DoNotVerify) + "\\ShanghaiAlice\\th";
             if (Directory.Exists(path + (MainForm.idToNumber[game]).ToString("00") + "\\replay"))
             {
                 Process.Start(path + (MainForm.idToNumber[game]).ToString("00") + "\\replay");
+                return;
             }
             else if (Directory.Exists(path + (MainForm.idToNumber[game]).ToString("00") + "tr\\replay"))
             {
                 Process.Start(path + MainForm.idToNumber[game].ToString("00") + "tr\\replay");
+                return;
             }
             else
             {
@@ -432,17 +445,6 @@ namespace Touhou_Launcher
                 Process.Start(Path.GetDirectoryName(MainForm.curCfg.np2Dir));
             else
                 MessageBox.Show(MainForm.rm.GetString("errorNP2NotFound"));
-        }
-
-        private void openAppdata_Click(object sender, EventArgs e)
-        {
-            string path = Environment.SpecialFolder.ApplicationData + "\\Shanghai Alice\\th" + (MainForm.idToNumber[game]).ToString("00");
-            if (Directory.Exists(path))
-                Process.Start(path);
-            else if (Directory.Exists(path + "tr"))
-                Process.Start(path + "tr");
-            else
-                MessageBox.Show(MainForm.rm.GetString("errorAppdataNotFound"));
         }
     }
 }

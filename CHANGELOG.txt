@@ -2,6 +2,7 @@
 Added: Selected patches list to show the order of installed patches.
 Added: Touhou 17 support.
 Changed: You can now resize the window to  smaller size than default. (buggy at the moment)
+Fixed: Appdata/Replay folder being undetectable.
 
 1.0-pre2 (18/04/2019)
 Added: thcrap Profile Editor. Lets you select patches from a list and configure the game list manually. The repository search starts at a configurable Url. Offline-only builds will also be released without this feature from now on.
