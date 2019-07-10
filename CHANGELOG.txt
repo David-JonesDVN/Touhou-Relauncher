@@ -1,7 +1,9 @@
 1.0-pre3
 Added: Selected patches list to show the order of installed patches.
 Added: Touhou 17 support.
+Added: Dependency search for patches.
 Changed: You can now resize the window to  smaller size than default. (buggy at the moment)
+Changed: Updates to the patch repositories are shown in real time.
 Fixed: Appdata/Replay folder being undetectable.
 Fixed: Infinite loop when searching for thcrap repositories.
 Fixed: local repositories having higher priority than thcrap.

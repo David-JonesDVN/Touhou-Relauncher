@@ -24,6 +24,15 @@ namespace Touhou_Launcher
             public string title;
         }
 
+        internal class patchData
+        {
+            public List<string> dependencies = new List<string>();
+            public string id;
+            public List<string> servers = new List<string>();
+            public string title;
+            public Dictionary<string, bool> fonts = new Dictionary<string, bool>();
+        }
+
         internal class profileData
         {
             public bool console = false;
@@ -34,7 +43,7 @@ namespace Touhou_Launcher
         ConfigForm cfgForm;
         string gamejs;
         Dictionary<string, repoData> repos = new Dictionary<string, repoData>();
-        List<string> patchStates = new List<string> { "nmlgc/base_tasofro/", "nmlgc/base_tsa/" };
+        List<string> patchStates = new List<string>();
         Dictionary<string, string> games = new Dictionary<string, string>();
 
         private void InitializeLanguage()
@@ -104,7 +113,7 @@ namespace Touhou_Launcher
 
         private void onJsonGet(object sender, DownloadStringCompletedEventArgs e)
         {
-            try
+            if (e.Error == null)
             {
                 string json = e.Result;
                 string[] args = (string[])e.UserState;
@@ -114,7 +123,7 @@ namespace Touhou_Launcher
                     searchRepo(args[0].Substring(0, args[0].LastIndexOf('/', args[0].LastIndexOf('/') - 1) + 1));
                 }
             }
-            catch (Exception ex)
+            else
             {
                 /* Code for exploring the thcrap mirror manually.
                 using (var reader = new StreamReader(WebRequest.Create(address).GetResponse().GetResponseStream()))
@@ -157,12 +166,51 @@ namespace Touhou_Launcher
                         ListViewItem title = repoList.Items[data.id];
                         title.Tag = offline;
                     }
+                    repoList_SelectedIndexChanged(this, new EventArgs());
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void onPatchGet(object sender, DownloadStringCompletedEventArgs e)
+        {
+            if (e.Error == null)
+            {
+                patchData patch = JsonConvert.DeserializeObject<patchData>(e.Result);
+                foreach (string dependency in patch.dependencies)
+                {
+                    string[] dependencySet = dependency.Split('/');
+                    string repository = "";
+                    if (dependencySet.Length == 1)
+                    {
+                        foreach (KeyValuePair<string, repoData> repo in repos)
+                        {
+                            if (repo.Value.patches.ContainsKey(dependencySet[0]))
+                            {
+                                repository = repo.Key;
+                            }
+                        }
+                    }
+                    else
+                        repository = dependencySet[0];
+                    addPatch(repository, dependencySet[dependencySet.Length - 1], true);
+                }
+            }
+        }
+
+        private void addPatch(string repo, string patch, bool dependency = false)
+        {
+            if (!patchStates.Contains(repo + "/" + patch + "/"))
+            {
+                patchStates.Insert(dependency ? 0 : patchStates.Count, repo + "/" + patch + "/");
+                repoList_SelectedIndexChanged(this, new EventArgs());
+            }
+            WebClient wc = new WebClient();
+            wc.DownloadStringCompleted += onPatchGet;
+            wc.DownloadStringAsync(new Uri(repos[repo].servers[0] + "/" + patch + "/patch.js"));
         }
 
         private void thcrap_Closing(object sender, FormClosingEventArgs e)
@@ -187,12 +235,14 @@ namespace Touhou_Launcher
             patchList.Items.Clear();
             if (repoList.SelectedItems.Count > 0)
             {
-                patchList.ItemChecked -= patchList_ItemCheck;
+                patchList.ItemChecked -= patchList_ItemChecked;
                 if (repoList.SelectedIndices[0] == 0)
                 {
                     foreach (string patch in patchStates)
                     {
+                        string[] patchSet = patch.Split('/');
                         ListViewItem title = patchList.Items.Add(patch);
+                        title.SubItems.Add(repos[patchSet[0]].patches[patchSet[1]]);
                         title.Checked = true;
                     }
                 }
@@ -205,16 +255,18 @@ namespace Touhou_Launcher
                         title.Checked = patchStates.Contains(repoList.SelectedItems[0].SubItems[1].Text + "/" + patch.Key + "/");
                     }
                 }
-                patchList.ItemChecked += patchList_ItemCheck;
+                patchList.ItemChecked += patchList_ItemChecked;
             }
         }
 
-        private void patchList_ItemCheck(object sender, ItemCheckedEventArgs e)
+        private void patchList_ItemChecked(object sender, ItemCheckedEventArgs e)
         {
             string id = repoList.SelectedIndices[0] == 0 ? e.Item.Text : repoList.SelectedItems[0].SubItems[1].Text + "/" + e.Item.Text + "/";
-            if (e.Item.Checked && !patchStates.Contains(id))
-                patchStates.Add(id);
-            else if (patchStates.Contains(id))
+            if (e.Item.Checked)
+            {
+                addPatch(repoList.SelectedItems[0].SubItems[1].Text, e.Item.Text);
+            }
+            else if (patchStates.Contains(id)) //I have no idea what this is
             {
                 patchStates.Remove(id);
                 if (repoList.SelectedIndices[0] == 0)
