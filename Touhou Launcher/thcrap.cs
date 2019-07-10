@@ -88,7 +88,7 @@ namespace Touhou_Launcher
             }
             foreach (string localRepo in Directory.GetFiles(Path.GetDirectoryName(MainForm.curCfg.crapDir), "repo.js", SearchOption.AllDirectories))
             {
-                addRepo(File.ReadAllText(localRepo));
+                addRepo(File.ReadAllText(localRepo), true);
             }
             searchRepo(MainForm.curCfg.StartingRepo);
             games = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\games.js"));
@@ -133,20 +133,30 @@ namespace Touhou_Launcher
             }
         }
 
-        private void addRepo(string repojs)
+        private void addRepo(string repojs, bool offline = false)
         {
             try
             {
                 repoData data = JsonConvert.DeserializeObject<repoData>(repojs);
-                foreach (string neighbor in data.neighbors)
+                if (!repoList.Items.ContainsKey(data.id) || (bool)repoList.Items[data.id].Tag == true)
                 {
-                    searchRepo(neighbor, true);
-                }
-                if (!repos.ContainsKey(data.id))
-                {
+                    foreach (string neighbor in data.neighbors)
+                    {
+                        searchRepo(neighbor, true);
+                    }
                     repos[data.id] = data;
-                    ListViewItem title = repoList.Items.Add(data.title);
-                    title.SubItems.Add(data.id);
+                    if (!repoList.Items.ContainsKey(data.id))
+                    {
+                        ListViewItem title = repoList.Items.Add(data.title);
+                        title.Name = data.id;
+                        title.Tag = offline;
+                        title.SubItems.Add(data.id);
+                    }
+                    else
+                    {
+                        ListViewItem title = repoList.Items[data.id];
+                        title.Tag = offline;
+                    }
                 }
             }
             catch (Exception ex)
