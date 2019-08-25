@@ -180,6 +180,9 @@ namespace Touhou_Launcher
             if (e.Error == null)
             {
                 patchData patch = JsonConvert.DeserializeObject<patchData>(e.Result);
+                string jsPath = Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\" + (string)e.UserState + "\\" + patch.id + "\\patch.js";
+                if (!File.Exists(jsPath))
+                    File.WriteAllText(jsPath, e.Result);
                 foreach (string dependency in patch.dependencies)
                 {
                     string[] dependencySet = dependency.Split('/');
@@ -210,7 +213,7 @@ namespace Touhou_Launcher
             }
             WebClient wc = new WebClient();
             wc.DownloadStringCompleted += onPatchGet;
-            wc.DownloadStringAsync(new Uri(repos[repo].servers[0] + "/" + patch + "/patch.js"));
+            wc.DownloadStringAsync(new Uri(repos[repo].servers[0] + "/" + patch + "/patch.js"), repo);
         }
 
         private void thcrap_Closing(object sender, FormClosingEventArgs e)
