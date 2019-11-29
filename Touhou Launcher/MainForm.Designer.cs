@@ -182,6 +182,7 @@
             this.trayDDC = new System.Windows.Forms.ToolStripMenuItem();
             this.trayLoLK = new System.Windows.Forms.ToolStripMenuItem();
             this.trayHSiFS = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayWBaWC = new System.Windows.Forms.ToolStripMenuItem();
             this.trayFighting = new System.Windows.Forms.ToolStripMenuItem();
             this.trayIaMP = new System.Windows.Forms.ToolStripMenuItem();
             this.traySWR = new System.Windows.Forms.ToolStripMenuItem();
@@ -201,7 +202,6 @@
             this.trayOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.trayExit = new System.Windows.Forms.ToolStripMenuItem();
             this.trayIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.trayWBaWC = new System.Windows.Forms.ToolStripMenuItem();
             this.gameContextMenu.SuspendLayout();
             this.customContextMenu.SuspendLayout();
             this.customFolderContextMenu.SuspendLayout();
@@ -1982,6 +1982,7 @@
             this.btnWBaWC.Text = "Wily Beast and Weakest Creature";
             this.btnWBaWC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnWBaWC.UseVisualStyleBackColor = true;
+            this.btnWBaWC.Click += new System.EventHandler(this.btn_Click);
             // 
             // trayMenu
             // 
@@ -1995,7 +1996,7 @@
             this.trayOpen,
             this.trayExit});
             this.trayMenu.Name = "contextMenuStrip1";
-            this.trayMenu.Size = new System.Drawing.Size(158, 186);
+            this.trayMenu.Size = new System.Drawing.Size(158, 164);
             this.trayMenu.Opening += new System.ComponentModel.CancelEventHandler(this.trayMenu_Opening);
             // 
             // trayMain
@@ -2166,6 +2167,14 @@
             this.trayHSiFS.Text = "Hidden Star in Four Seasons";
             this.trayHSiFS.Click += new System.EventHandler(this.tray_Click);
             // 
+            // trayWBaWC
+            // 
+            this.trayWBaWC.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayWBaWC.Name = "trayWBaWC";
+            this.trayWBaWC.Size = new System.Drawing.Size(262, 38);
+            this.trayWBaWC.Text = "Wily Beast and Weakest Creature";
+            this.trayWBaWC.Click += new System.EventHandler(this.tray_Click);
+            // 
             // trayFighting
             // 
             this.trayFighting.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -2328,14 +2337,6 @@
             this.trayIcon.Icon = global::Touhou_Launcher.Properties.Resources.thicon;
             this.trayIcon.Text = "Touhou Launcher";
             this.trayIcon.DoubleClick += new System.EventHandler(this.MainForm_Show);
-            // 
-            // trayWBaWC
-            // 
-            this.trayWBaWC.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayWBaWC.Name = "trayWBaWC";
-            this.trayWBaWC.Size = new System.Drawing.Size(262, 38);
-            this.trayWBaWC.Text = "Wily Beast and Weakest Creature";
-            this.trayWBaWC.Click += new System.EventHandler(this.tray_Click);
             // 
             // MainForm
             // 

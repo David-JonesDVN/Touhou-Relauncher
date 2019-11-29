@@ -340,7 +340,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Japanese/vpatch.ini, English (non-THCRAP), Custom.exe, thcrap.
+        ///   Looks up a localized string similar to 日本語/vpatch.ini, 英語 (non-THCRAP), Custom.exe, thcrap.
         /// </summary>
         public static string defaultExec {
             get {
