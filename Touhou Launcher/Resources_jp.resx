@@ -494,7 +494,7 @@ random game option:</value>
     <value>Windows Game Settings</value>
   </data>
   <data name="defaultExec" xml:space="preserve">
-    <value>Japanese/vpatch.ini, English (non-THCRAP), Custom.exe, thcrap</value>
+    <value>日本語/vpatch.ini, 英語 (non-THCRAP), Custom.exe, thcrap</value>
   </data>
   <data name="allFilter" xml:space="preserve">
     <value>All Files</value>

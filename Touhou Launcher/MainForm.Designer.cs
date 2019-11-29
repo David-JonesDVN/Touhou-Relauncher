@@ -2016,6 +2016,7 @@
             this.btnWBaWC.Text = "Wily Beast and Weakest Creature";
             this.btnWBaWC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnWBaWC.UseVisualStyleBackColor = true;
+            this.btnWBaWC.Click += new System.EventHandler(this.btn_Click);
             // 
             // trayMenu
             // 
