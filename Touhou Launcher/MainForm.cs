@@ -31,6 +31,17 @@ namespace Touhou_Launcher
             public bool showText = true;
             public int defaultTextColor = 0;
             public bool randomCheck = true;
+            public int category;
+
+            public GameConfig(int i)
+            {
+                if (i < mainGameCount)
+                    category = 0;
+                else if (i < mainGameCount + fightingGameCount)
+                    category = 1;
+                else
+                    category = 2;
+            }
         }
 
         public class SubNode
@@ -85,7 +96,7 @@ namespace Touhou_Launcher
             {
                 for (int i = 0; i < gameCFG.Length ; i++)
                 {
-                    gameCFG[i] = new GameConfig();
+                    gameCFG[i] = new GameConfig(i);
                     gameCFG[i].GameDir = new List<string> { "", "", "", "" };
                     gameCFG[i].crapCFG = new List<string> { "None", "None" };
                     gameCFG[i].appLocale = new List<bool> { false, false, false, false };
@@ -94,8 +105,10 @@ namespace Touhou_Launcher
         }
 
         private FormWindowState lastState = FormWindowState.Normal;
+        private const int mainGameCount = 17;
+        private const int fightingGameCount = 6;
+        private const int otherGameCount = 5;
         public static Configs curCfg = Configs.Load();
-        public const int backwardsCompatibilityGame = 16;
         public static System.Resources.ResourceManager rm;
         public static Dictionary<string, int> dirToNumber = new Dictionary<string, int>
         {
@@ -505,13 +518,38 @@ namespace Touhou_Launcher
             if (count > curCfg.gameCFG.Length)
             {
                 GameConfig[] backwardsComp = new GameConfig[count];
-                Array.Copy(curCfg.gameCFG, backwardsComp, backwardsCompatibilityGame);
-                backwardsComp[backwardsCompatibilityGame] = new GameConfig();
-                backwardsComp[backwardsCompatibilityGame].GameDir = new List<string> { "", "", "", "" };
-                backwardsComp[backwardsCompatibilityGame].crapCFG = new List<string> { "None", "None" };
-                backwardsComp[backwardsCompatibilityGame].appLocale = new List<bool> { false, false, false, false };
-                Array.Copy(curCfg.gameCFG, backwardsCompatibilityGame, backwardsComp, backwardsCompatibilityGame + 1, count - (backwardsCompatibilityGame + 1));
+                Array.Copy(curCfg.gameCFG, backwardsComp, mainGameCount - 1);
+                backwardsComp[mainGameCount - 1] = new GameConfig(mainGameCount - 1);
+                backwardsComp[mainGameCount - 1].GameDir = new List<string> { "", "", "", "" };
+                backwardsComp[mainGameCount - 1].crapCFG = new List<string> { "None", "None" };
+                backwardsComp[mainGameCount - 1].appLocale = new List<bool> { false, false, false, false };
+                Array.Copy(curCfg.gameCFG, mainGameCount - 1, backwardsComp, mainGameCount, count - (mainGameCount));
                 curCfg.gameCFG = backwardsComp;
+                //Superior backwards compatibility model. Will be switched in after the next version comes out.
+                /*GameConfig[] backwardsComp = new GameConfig[count];
+                int lastCat = 0, offset = 0;
+                for (int i = 0; i < curCfg.gameCFG.Length; i++)
+                {
+                    backwardsComp[i] = new GameConfig(i);
+                    backwardsComp[i].GameDir = new List<string> { "", "", "", "" };
+                    backwardsComp[i].crapCFG = new List<string> { "None", "None" };
+                    backwardsComp[i].appLocale = new List<bool> { false, false, false, false };
+
+                    if (curCfg.gameCFG[i].category != lastCat)
+                        offset = -i + (lastCat == 0 ? mainGameCount : mainGameCount + fightingGameCount);
+                    lastCat = curCfg.gameCFG[i].category;
+                    backwardsComp[i] = curCfg.gameCFG[i + offset];
+                }
+                curCfg.gameCFG = backwardsComp;*/
+            }
+            for (int i = 0; i < curCfg.gameCFG.Length; i++) //Intermediary backwards compatibility. Will remove in the next version.
+            {
+                if (i < mainGameCount)
+                    curCfg.gameCFG[i].category = 0;
+                else if (i < mainGameCount + fightingGameCount)
+                    curCfg.gameCFG[i].category = 1;
+                else
+                    curCfg.gameCFG[i].category = 2;
             }
             foreach (Button btn in GetAll(games, typeof(Button)))
                 if (btn.Name != "btnRandom")
