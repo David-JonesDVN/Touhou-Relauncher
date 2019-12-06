@@ -514,15 +514,6 @@ namespace Touhou_Launcher
             if (count > curCfg.gameCFG.Length)
             {
                 GameConfig[] backwardsComp = new GameConfig[count];
-                Array.Copy(curCfg.gameCFG, backwardsComp, mainGameCount - 1);
-                backwardsComp[mainGameCount - 1] = new GameConfig(mainGameCount - 1);
-                backwardsComp[mainGameCount - 1].GameDir = new List<string> { "", "", "", "" };
-                backwardsComp[mainGameCount - 1].crapCFG = new List<string> { "None", "None" };
-                backwardsComp[mainGameCount - 1].appLocale = new List<bool> { false, false, false, false };
-                Array.Copy(curCfg.gameCFG, mainGameCount - 1, backwardsComp, mainGameCount, count - (mainGameCount));
-                curCfg.gameCFG = backwardsComp;
-                //Superior backwards compatibility model. Will be switched in after the next version comes out.
-                /*GameConfig[] backwardsComp = new GameConfig[count];
                 int lastCat = 0, offset = 0;
                 for (int i = 0; i < curCfg.gameCFG.Length; i++)
                 {
@@ -536,16 +527,7 @@ namespace Touhou_Launcher
                     lastCat = curCfg.gameCFG[i].category;
                     backwardsComp[i] = curCfg.gameCFG[i + offset];
                 }
-                curCfg.gameCFG = backwardsComp;*/
-            }
-            for (int i = 0; i < curCfg.gameCFG.Length; i++) //Intermediary backwards compatibility. Will remove in the next version.
-            {
-                if (i < mainGameCount)
-                    curCfg.gameCFG[i].category = 0;
-                else if (i < mainGameCount + fightingGameCount)
-                    curCfg.gameCFG[i].category = 1;
-                else
-                    curCfg.gameCFG[i].category = 2;
+                curCfg.gameCFG = backwardsComp;
             }
             foreach (Button btn in GetAll(games, typeof(Button)))
                 if (btn.Name != "btnRandom")
