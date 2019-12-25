@@ -2169,6 +2169,7 @@
             // 
             // trayWBaWC
             // 
+            this.trayWBaWC.Image = global::Touhou_Launcher.Properties.Resources.Icon_th17;
             this.trayWBaWC.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.trayWBaWC.Name = "trayWBaWC";
             this.trayWBaWC.Size = new System.Drawing.Size(262, 38);

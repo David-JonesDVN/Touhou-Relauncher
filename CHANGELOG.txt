@@ -1,4 +1,5 @@
 1.0-pre4 (06/12/2019)
+Added: Tray icon for Touhou 17.
 Changed: The backwards compatibility code has been rewritten. Unfortunately this breaks compatibility with older versions. An intermediary version called pre3.5 is provided for conversion of settings.json to the new format.
 
 1.0-pre3 (13/08/2019)
