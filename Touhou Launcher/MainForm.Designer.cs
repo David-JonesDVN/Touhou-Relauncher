@@ -1333,9 +1333,9 @@
             this.replayBrowser.Location = new System.Drawing.Point(0, 29);
             this.replayBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.replayBrowser.Name = "replayBrowser";
-            this.replayBrowser.Size = new System.Drawing.Size(524, 456);
+            this.replayBrowser.Size = new System.Drawing.Size(524, 556);
             this.replayBrowser.TabIndex = 2;
-            this.replayBrowser.Url = new System.Uri("http://replays.gensokyo.org", System.UriKind.Absolute);
+            this.replayBrowser.Url = new System.Uri("", System.UriKind.Relative);
             this.replayBrowser.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.replayBrowser_Navigating);
             // 
             // replayPanel
@@ -1354,9 +1354,9 @@
             // 
             // linkReplays
             // 
-            this.linkReplays.Location = new System.Drawing.Point(373, 3);
+            this.linkReplays.Location = new System.Drawing.Point(406, 3);
             this.linkReplays.Name = "linkReplays";
-            this.linkReplays.Size = new System.Drawing.Size(142, 20);
+            this.linkReplays.Size = new System.Drawing.Size(109, 20);
             this.linkReplays.TabIndex = 3;
             this.linkReplays.KeyDown += new System.Windows.Forms.KeyEventHandler(this.linkReplays_KeyDown);
             // 
@@ -1365,7 +1365,7 @@
             this.appspotReplays.Appearance = System.Windows.Forms.Appearance.Button;
             this.appspotReplays.AutoSize = true;
             this.appspotReplays.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.appspotReplays.Location = new System.Drawing.Point(243, 3);
+            this.appspotReplays.Location = new System.Drawing.Point(277, 3);
             this.appspotReplays.Name = "appspotReplays";
             this.appspotReplays.Size = new System.Drawing.Size(123, 23);
             this.appspotReplays.TabIndex = 2;
@@ -1379,7 +1379,7 @@
             this.royalflareReplays.Appearance = System.Windows.Forms.Appearance.Button;
             this.royalflareReplays.AutoSize = true;
             this.royalflareReplays.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.royalflareReplays.Location = new System.Drawing.Point(129, 3);
+            this.royalflareReplays.Location = new System.Drawing.Point(163, 3);
             this.royalflareReplays.Name = "royalflareReplays";
             this.royalflareReplays.Size = new System.Drawing.Size(108, 23);
             this.royalflareReplays.TabIndex = 1;
@@ -1392,14 +1392,13 @@
             // 
             this.gensokyoReplays.Appearance = System.Windows.Forms.Appearance.Button;
             this.gensokyoReplays.AutoSize = true;
-            this.gensokyoReplays.Checked = true;
             this.gensokyoReplays.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gensokyoReplays.Location = new System.Drawing.Point(6, 3);
             this.gensokyoReplays.Name = "gensokyoReplays";
-            this.gensokyoReplays.Size = new System.Drawing.Size(117, 23);
+            this.gensokyoReplays.Size = new System.Drawing.Size(151, 23);
             this.gensokyoReplays.TabIndex = 0;
             this.gensokyoReplays.TabStop = true;
-            this.gensokyoReplays.Text = "replays.gensokyo.org";
+            this.gensokyoReplays.Text = "maribelhearn.com/gensokyo";
             this.gensokyoReplays.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.gensokyoReplays.UseVisualStyleBackColor = true;
             this.gensokyoReplays.CheckedChanged += new System.EventHandler(this.Replays_CheckedChanged);

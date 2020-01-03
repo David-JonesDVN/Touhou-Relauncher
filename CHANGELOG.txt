@@ -1,6 +1,8 @@
 1.0-pre4 (06/12/2019)
 Added: Tray icon for Touhou 17.
 Changed: The backwards compatibility code has been rewritten. Unfortunately this breaks compatibility with older versions. An intermediary version called pre3.5 is provided for conversion of settings.json to the new format.
+Changed: The browser will no longer start on a webpage.
+Changed: replays.gensokyo.org was changed to maribelhearn.com/gensokyo as the former is no longer accessible.
 Fixed: The tray icon's Main Games menu not working (no idea when that broke).
 
 1.0-pre3 (13/08/2019)
