@@ -15,7 +15,6 @@ namespace Touhou_Launcher
     public partial class ConfigForm : Form
     {
         public int game;
-        bool tr = false;
         Button parentButton;
         Dictionary<string, string> crap = new Dictionary<string,string>();
 
@@ -29,9 +28,6 @@ namespace Touhou_Launcher
             bannerOffDir.Text = MainForm.curCfg.gameCFG[game].bannerOff;
             bannerOnDir.Text = MainForm.curCfg.gameCFG[game].bannerOn;
             chkCustomText.Checked = MainForm.curCfg.gameCFG[game].customText;
-            string trTest = Environment.SpecialFolder.ApplicationData + "\\ShaghaiAlice\\th" + MainForm.idToNumber[game].ToString("00");
-            if (!Directory.Exists(trTest) && Directory.Exists(trTest + "tr"))
-                tr = true;
         }
 
         private void ConfigForm_Load(object sender, EventArgs e)
@@ -172,11 +168,6 @@ namespace Touhou_Launcher
                 Dir_LostFocus(sender, new EventArgs());
         }
 
-        private void defaultExec_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            MainForm.curCfg.gameCFG[game].DefaultDir = defaultExec.SelectedIndex;
-        }
-
         private void Applocale_CheckedChanged(object sender, EventArgs e)
         {
             MainForm.curCfg.gameCFG[game].appLocale[MainForm.dirToNumber[((CheckBox)sender).Name.Replace("Applocale", "")]] = ((CheckBox)sender).Checked;
@@ -193,7 +184,7 @@ namespace Touhou_Launcher
                 string jpPath = Path.GetDirectoryName(path) + "\\th" + (MainForm.idToNumber[game]).ToString("00") + ".exe";
                 string enPath = Path.GetDirectoryName(path) + "\\th" + (MainForm.idToNumber[game]).ToString("00") + "e.exe";
                 string customPath = Path.GetDirectoryName(path);
-                customPath += game == 16 ? "\\Config.exe" : "\\custom.exe";
+                customPath += MainForm.idToNumber[game] == 75 ? "\\Config.exe" : "\\custom.exe";
                 switch (type)
                 {
                     case 0: if (File.Exists(enPath) && MainForm.curCfg.gameCFG[game].GameDir[1] == "")
@@ -240,9 +231,28 @@ namespace Touhou_Launcher
             MainForm.launchGame(game, dir, MainForm.curCfg.gameCFG[game].appLocale[dir]);
         }
 
+        private void crapCfg_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MainForm.curCfg.gameCFG[game].crapCFG[0] = crapGame.SelectedItem.ToString();
+            if (crapCfg.SelectedItem.ToString() == "Custom")
+            {
+                thcrap profileConfig = new thcrap(this);
+                profileConfig.ShowDialog();
+            }
+            else
+                MainForm.curCfg.gameCFG[game].crapCFG[1] = crapCfg.SelectedItem.ToString();
+            if (crap.ContainsKey(MainForm.curCfg.gameCFG[game].crapCFG[0]))
+                MainForm.curCfg.gameCFG[game].GameDir[3] = MainForm.curCfg.gameCFG[game].crapCFG[0] != "None" ? crap[MainForm.curCfg.gameCFG[game].crapCFG[0]] : "";
+        }
+
         private void launchcrap_Click(object sender, EventArgs e)
         {
             MainForm.launchcrap(game);
+        }
+
+        private void defaultExec_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MainForm.curCfg.gameCFG[game].DefaultDir = defaultExec.SelectedIndex;
         }
 
         private void defaultApplocale_CheckedChanged(object sender, EventArgs e)
@@ -321,6 +331,14 @@ namespace Touhou_Launcher
             MainForm.curCfg.gameCFG[game].customText = chkCustomText.Checked;
         }
 
+        private void btnCustomText_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorSet = new ColorDialog();
+            colorSet.Color = Color.FromArgb(MainForm.curCfg.gameCFG[game].textColor);
+            if (colorSet.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                MainForm.curCfg.gameCFG[game].textColor = colorSet.Color.ToArgb();
+        }
+
         private void browseHDI_Click(object sender, EventArgs e)
         {
             foreach (string file in MainForm.FileBrowser(MainForm.rm.GetString("hdiSelectTitle"), MainForm.rm.GetString("hdiFilter") + " (*.hdi)|*.hdi|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*"))
@@ -362,16 +380,29 @@ namespace Touhou_Launcher
                 Process.Start(path);
         }
 
+        private void openAppdata_Click(object sender, EventArgs e)
+        {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData, Environment.SpecialFolderOption.DoNotVerify) + "\\ShanghaiAlice\\th" + (MainForm.idToNumber[game]).ToString("00");
+            if (Directory.Exists(path))
+                Process.Start(path);
+            else if (Directory.Exists(path + "tr"))
+                Process.Start(path + "tr");
+            else
+                MessageBox.Show(MainForm.rm.GetString("errorAppdataNotFound"));
+        }
+
         private void openReplays_Click(object sender, EventArgs e)
         {
-            string path = Environment.SpecialFolder.ApplicationData + "\\ShanghaiAlice\\th";
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData, Environment.SpecialFolderOption.DoNotVerify) + "\\ShanghaiAlice\\th";
             if (Directory.Exists(path + (MainForm.idToNumber[game]).ToString("00") + "\\replay"))
             {
                 Process.Start(path + (MainForm.idToNumber[game]).ToString("00") + "\\replay");
+                return;
             }
-            else if (tr)
+            else if (Directory.Exists(path + (MainForm.idToNumber[game]).ToString("00") + "tr\\replay"))
             {
                 Process.Start(path + MainForm.idToNumber[game].ToString("00") + "tr\\replay");
+                return;
             }
             else
             {
@@ -414,39 +445,6 @@ namespace Touhou_Launcher
                 Process.Start(Path.GetDirectoryName(MainForm.curCfg.np2Dir));
             else
                 MessageBox.Show(MainForm.rm.GetString("errorNP2NotFound"));
-        }
-
-        private void openAppdata_Click(object sender, EventArgs e)
-        {
-            string path = Environment.SpecialFolder.ApplicationData + "\\Shanghai Alice\\th" + (MainForm.idToNumber[game]).ToString("00");
-            if (tr)
-                path += "tr";
-            if (Directory.Exists(path))
-                Process.Start(path);
-            else
-                MessageBox.Show(MainForm.rm.GetString("errorAppdataNotFound"));
-        }
-
-        private void crapCfg_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            MainForm.curCfg.gameCFG[game].crapCFG[0] = crapGame.SelectedItem.ToString();
-            if (crapCfg.SelectedItem.ToString() == "Custom")
-            {
-                thcrap profileConfig = new thcrap(this);
-                profileConfig.ShowDialog();
-            }
-            else
-                MainForm.curCfg.gameCFG[game].crapCFG[1] = crapCfg.SelectedItem.ToString();
-            if (crap.ContainsKey(MainForm.curCfg.gameCFG[game].crapCFG[0]))
-                MainForm.curCfg.gameCFG[game].GameDir[3] = MainForm.curCfg.gameCFG[game].crapCFG[0] != "None" ? crap[MainForm.curCfg.gameCFG[game].crapCFG[0]] : "";
-        }
-
-        private void btnCustomText_Click(object sender, EventArgs e)
-        {
-            ColorDialog colorSet = new ColorDialog();
-            colorSet.Color = Color.FromArgb(MainForm.curCfg.gameCFG[game].textColor);
-            if (colorSet.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                MainForm.curCfg.gameCFG[game].textColor = colorSet.Color.ToArgb();
         }
     }
 }

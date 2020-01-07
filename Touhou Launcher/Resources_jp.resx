@@ -494,7 +494,7 @@ random game option:</value>
     <value>Windows Game Settings</value>
   </data>
   <data name="defaultExec" xml:space="preserve">
-    <value>Japanese/vpatch.ini, English (non-THCRAP), Custom.exe, thcrap</value>
+    <value>日本語/vpatch.ini, 英語 (non-THCRAP), Custom.exe, thcrap</value>
   </data>
   <data name="allFilter" xml:space="preserve">
     <value>All Files</value>
@@ -699,5 +699,17 @@ random game option:</value>
   </data>
   <data name="textToolStripMenuItem" xml:space="preserve">
     <value>Show Text?</value>
+  </data>
+  <data name="selectedPatches" xml:space="preserve">
+    <value>Selected Patches</value>
+  </data>
+  <data name="WBaWC" xml:space="preserve">
+    <value>東方鬼形獣</value>
+  </data>
+  <data name="WBaWCShort" xml:space="preserve">
+    <value>鬼形獣</value>
+  </data>
+  <data name="WBaWCTitle" xml:space="preserve">
+    <value>東方鬼形獣　～ Wily Beast and Weakest Creature</value>
   </data>
 </root>

@@ -76,14 +76,14 @@
             this.randomNone = new System.Windows.Forms.Button();
             this.randomAll = new System.Windows.Forms.Button();
             this.otherRandom = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
+            this.miscRandomPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.chkStB = new System.Windows.Forms.CheckBox();
             this.chkDS = new System.Windows.Forms.CheckBox();
             this.chkGFW = new System.Windows.Forms.CheckBox();
             this.chkISC = new System.Windows.Forms.CheckBox();
             this.chkVD = new System.Windows.Forms.CheckBox();
             this.fightingRandom = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
+            this.fightingRandomPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.chkIaMP = new System.Windows.Forms.CheckBox();
             this.chkSWR = new System.Windows.Forms.CheckBox();
             this.chkUoNL = new System.Windows.Forms.CheckBox();
@@ -91,7 +91,7 @@
             this.chkULiL = new System.Windows.Forms.CheckBox();
             this.chkAoCF = new System.Windows.Forms.CheckBox();
             this.mainRandom = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.mainRandomPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.chkHRtP = new System.Windows.Forms.CheckBox();
             this.chkSoEW = new System.Windows.Forms.CheckBox();
             this.chkPoDD = new System.Windows.Forms.CheckBox();
@@ -108,6 +108,7 @@
             this.chkDDC = new System.Windows.Forms.CheckBox();
             this.chkLoLK = new System.Windows.Forms.CheckBox();
             this.chkHSiFS = new System.Windows.Forms.CheckBox();
+            this.chkWBaWC = new System.Windows.Forms.CheckBox();
             this.launcherSettings = new System.Windows.Forms.GroupBox();
             this.crapResetStartingRepo = new System.Windows.Forms.Button();
             this.crapStartingRepo = new System.Windows.Forms.TextBox();
@@ -132,20 +133,20 @@
             this.gensokyoReplays = new System.Windows.Forms.RadioButton();
             this.customGames = new System.Windows.Forms.TabPage();
             this.customAdd = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.customList = new System.Windows.Forms.ListView();
             this.customLabel = new System.Windows.Forms.Label();
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.customTree = new System.Windows.Forms.TreeView();
             this.mainControl = new System.Windows.Forms.TabControl();
             this.games = new System.Windows.Forms.TabPage();
             this.otherGroup = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.miscLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.btnStB = new System.Windows.Forms.Button();
             this.btnDS = new System.Windows.Forms.Button();
             this.btnGFW = new System.Windows.Forms.Button();
             this.btnISC = new System.Windows.Forms.Button();
             this.btnVD = new System.Windows.Forms.Button();
             this.fightingGroup = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.fightingLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.btnIaMP = new System.Windows.Forms.Button();
             this.btnSWR = new System.Windows.Forms.Button();
             this.btnUoNL = new System.Windows.Forms.Button();
@@ -153,7 +154,7 @@
             this.btnULiL = new System.Windows.Forms.Button();
             this.btnAoCF = new System.Windows.Forms.Button();
             this.mainGroup = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.mainLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.btnEoSD = new System.Windows.Forms.Button();
             this.btnPCB = new System.Windows.Forms.Button();
             this.btnIN = new System.Windows.Forms.Button();
@@ -165,24 +166,9 @@
             this.btnDDC = new System.Windows.Forms.Button();
             this.btnLoLK = new System.Windows.Forms.Button();
             this.btnHSiFS = new System.Windows.Forms.Button();
+            this.btnWBaWC = new System.Windows.Forms.Button();
             this.trayMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.trayMain = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayHRtP = new System.Windows.Forms.ToolStripMenuItem();
-            this.traySoEW = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayPoDD = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayLLS = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayMS = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayEoSD = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayPCB = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayIN = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayPoFV = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayMoF = new System.Windows.Forms.ToolStripMenuItem();
-            this.traySA = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayUFO = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayTD = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayDDC = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayLoLK = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayHSiFS = new System.Windows.Forms.ToolStripMenuItem();
             this.trayFighting = new System.Windows.Forms.ToolStripMenuItem();
             this.trayIaMP = new System.Windows.Forms.ToolStripMenuItem();
             this.traySWR = new System.Windows.Forms.ToolStripMenuItem();
@@ -201,7 +187,24 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.trayOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.trayExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayHRtP = new System.Windows.Forms.ToolStripMenuItem();
+            this.traySoEW = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayPoDD = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayLLS = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayMS = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayEoSD = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayPCB = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayIN = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayPoFV = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayMoF = new System.Windows.Forms.ToolStripMenuItem();
+            this.traySA = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayUFO = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTD = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayDDC = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayLoLK = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayHSiFS = new System.Windows.Forms.ToolStripMenuItem();
             this.trayIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.trayWBaWC = new System.Windows.Forms.ToolStripMenuItem();
             this.gameContextMenu.SuspendLayout();
             this.customContextMenu.SuspendLayout();
             this.customFolderContextMenu.SuspendLayout();
@@ -209,11 +212,11 @@
             this.settings.SuspendLayout();
             this.randomSettings.SuspendLayout();
             this.otherRandom.SuspendLayout();
-            this.flowLayoutPanel7.SuspendLayout();
+            this.miscRandomPanel.SuspendLayout();
             this.fightingRandom.SuspendLayout();
-            this.flowLayoutPanel6.SuspendLayout();
+            this.fightingRandomPanel.SuspendLayout();
             this.mainRandom.SuspendLayout();
-            this.flowLayoutPanel5.SuspendLayout();
+            this.mainRandomPanel.SuspendLayout();
             this.launcherSettings.SuspendLayout();
             this.replays.SuspendLayout();
             this.replayPanel.SuspendLayout();
@@ -221,11 +224,11 @@
             this.mainControl.SuspendLayout();
             this.games.SuspendLayout();
             this.otherGroup.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
+            this.miscLayoutPanel.SuspendLayout();
             this.fightingGroup.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
+            this.fightingLayoutPanel.SuspendLayout();
             this.mainGroup.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.mainLayoutPanel.SuspendLayout();
             this.trayMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -493,7 +496,7 @@
             this.btnRandom.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRandom.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRandom.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnRandom.Location = new System.Drawing.Point(204, 488);
+            this.btnRandom.Location = new System.Drawing.Point(204, 538);
             this.btnRandom.Name = "btnRandom";
             this.btnRandom.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnRandom.Size = new System.Drawing.Size(120, 44);
@@ -568,7 +571,7 @@
             this.info.Location = new System.Drawing.Point(4, 22);
             this.info.Name = "info";
             this.info.Padding = new System.Windows.Forms.Padding(3);
-            this.info.Size = new System.Drawing.Size(527, 535);
+            this.info.Size = new System.Drawing.Size(527, 585);
             this.info.TabIndex = 5;
             this.info.Text = "Info";
             // 
@@ -629,14 +632,13 @@
             this.settings.Location = new System.Drawing.Point(4, 22);
             this.settings.Name = "settings";
             this.settings.Padding = new System.Windows.Forms.Padding(3);
-            this.settings.Size = new System.Drawing.Size(527, 535);
+            this.settings.Size = new System.Drawing.Size(527, 585);
             this.settings.TabIndex = 4;
             this.settings.Text = "Settings";
             // 
             // randomSettings
             // 
-            this.randomSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.randomSettings.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.randomSettings.Controls.Add(this.randomLabel);
             this.randomSettings.Controls.Add(this.randomNone);
@@ -646,7 +648,7 @@
             this.randomSettings.Controls.Add(this.mainRandom);
             this.randomSettings.Location = new System.Drawing.Point(214, 8);
             this.randomSettings.Name = "randomSettings";
-            this.randomSettings.Size = new System.Drawing.Size(307, 407);
+            this.randomSettings.Size = new System.Drawing.Size(307, 370);
             this.randomSettings.TabIndex = 2;
             this.randomSettings.TabStop = false;
             this.randomSettings.Text = "Random Game Settings";
@@ -664,9 +666,9 @@
             // randomNone
             // 
             this.randomNone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.randomNone.Location = new System.Drawing.Point(201, 49);
+            this.randomNone.Location = new System.Drawing.Point(211, 49);
             this.randomNone.Name = "randomNone";
-            this.randomNone.Size = new System.Drawing.Size(100, 25);
+            this.randomNone.Size = new System.Drawing.Size(90, 25);
             this.randomNone.TabIndex = 1;
             this.randomNone.Text = "Select None";
             this.randomNone.UseVisualStyleBackColor = true;
@@ -676,7 +678,7 @@
             // 
             this.randomAll.Location = new System.Drawing.Point(6, 49);
             this.randomAll.Name = "randomAll";
-            this.randomAll.Size = new System.Drawing.Size(100, 25);
+            this.randomAll.Size = new System.Drawing.Size(90, 25);
             this.randomAll.TabIndex = 0;
             this.randomAll.Text = "Select All";
             this.randomAll.UseVisualStyleBackColor = true;
@@ -686,7 +688,7 @@
             // 
             this.otherRandom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.otherRandom.Controls.Add(this.flowLayoutPanel7);
+            this.otherRandom.Controls.Add(this.miscRandomPanel);
             this.otherRandom.Location = new System.Drawing.Point(6, 298);
             this.otherRandom.Name = "otherRandom";
             this.otherRandom.Size = new System.Drawing.Size(295, 66);
@@ -694,21 +696,22 @@
             this.otherRandom.TabStop = false;
             this.otherRandom.Text = "Other Games";
             // 
-            // flowLayoutPanel7
+            // miscRandomPanel
             // 
-            this.flowLayoutPanel7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.miscRandomPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel7.Controls.Add(this.chkStB);
-            this.flowLayoutPanel7.Controls.Add(this.chkDS);
-            this.flowLayoutPanel7.Controls.Add(this.chkGFW);
-            this.flowLayoutPanel7.Controls.Add(this.chkISC);
-            this.flowLayoutPanel7.Controls.Add(this.chkVD);
-            this.flowLayoutPanel7.Location = new System.Drawing.Point(3, 16);
-            this.flowLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel7.Name = "flowLayoutPanel7";
-            this.flowLayoutPanel7.Size = new System.Drawing.Size(289, 47);
-            this.flowLayoutPanel7.TabIndex = 1;
+            this.miscRandomPanel.AutoScroll = true;
+            this.miscRandomPanel.Controls.Add(this.chkStB);
+            this.miscRandomPanel.Controls.Add(this.chkDS);
+            this.miscRandomPanel.Controls.Add(this.chkGFW);
+            this.miscRandomPanel.Controls.Add(this.chkISC);
+            this.miscRandomPanel.Controls.Add(this.chkVD);
+            this.miscRandomPanel.Location = new System.Drawing.Point(3, 16);
+            this.miscRandomPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.miscRandomPanel.Name = "miscRandomPanel";
+            this.miscRandomPanel.Size = new System.Drawing.Size(289, 47);
+            this.miscRandomPanel.TabIndex = 1;
             // 
             // chkStB
             // 
@@ -779,7 +782,7 @@
             // 
             this.fightingRandom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.fightingRandom.Controls.Add(this.flowLayoutPanel6);
+            this.fightingRandom.Controls.Add(this.fightingRandomPanel);
             this.fightingRandom.Location = new System.Drawing.Point(6, 219);
             this.fightingRandom.Name = "fightingRandom";
             this.fightingRandom.Size = new System.Drawing.Size(295, 68);
@@ -787,22 +790,23 @@
             this.fightingRandom.TabStop = false;
             this.fightingRandom.Text = "Fighting Games";
             // 
-            // flowLayoutPanel6
+            // fightingRandomPanel
             // 
-            this.flowLayoutPanel6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.fightingRandomPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel6.Controls.Add(this.chkIaMP);
-            this.flowLayoutPanel6.Controls.Add(this.chkSWR);
-            this.flowLayoutPanel6.Controls.Add(this.chkUoNL);
-            this.flowLayoutPanel6.Controls.Add(this.chkHM);
-            this.flowLayoutPanel6.Controls.Add(this.chkULiL);
-            this.flowLayoutPanel6.Controls.Add(this.chkAoCF);
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(3, 16);
-            this.flowLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(289, 49);
-            this.flowLayoutPanel6.TabIndex = 1;
+            this.fightingRandomPanel.AutoScroll = true;
+            this.fightingRandomPanel.Controls.Add(this.chkIaMP);
+            this.fightingRandomPanel.Controls.Add(this.chkSWR);
+            this.fightingRandomPanel.Controls.Add(this.chkUoNL);
+            this.fightingRandomPanel.Controls.Add(this.chkHM);
+            this.fightingRandomPanel.Controls.Add(this.chkULiL);
+            this.fightingRandomPanel.Controls.Add(this.chkAoCF);
+            this.fightingRandomPanel.Location = new System.Drawing.Point(3, 16);
+            this.fightingRandomPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.fightingRandomPanel.Name = "fightingRandomPanel";
+            this.fightingRandomPanel.Size = new System.Drawing.Size(289, 49);
+            this.fightingRandomPanel.TabIndex = 1;
             // 
             // chkIaMP
             // 
@@ -886,7 +890,7 @@
             // 
             this.mainRandom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainRandom.Controls.Add(this.flowLayoutPanel5);
+            this.mainRandom.Controls.Add(this.mainRandomPanel);
             this.mainRandom.Location = new System.Drawing.Point(6, 80);
             this.mainRandom.Name = "mainRandom";
             this.mainRandom.Size = new System.Drawing.Size(295, 133);
@@ -894,32 +898,34 @@
             this.mainRandom.TabStop = false;
             this.mainRandom.Text = "Main Games";
             // 
-            // flowLayoutPanel5
+            // mainRandomPanel
             // 
-            this.flowLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.mainRandomPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel5.Controls.Add(this.chkHRtP);
-            this.flowLayoutPanel5.Controls.Add(this.chkSoEW);
-            this.flowLayoutPanel5.Controls.Add(this.chkPoDD);
-            this.flowLayoutPanel5.Controls.Add(this.chkLLS);
-            this.flowLayoutPanel5.Controls.Add(this.chkMS);
-            this.flowLayoutPanel5.Controls.Add(this.chkEoSD);
-            this.flowLayoutPanel5.Controls.Add(this.chkPCB);
-            this.flowLayoutPanel5.Controls.Add(this.chkIN);
-            this.flowLayoutPanel5.Controls.Add(this.chkPoFV);
-            this.flowLayoutPanel5.Controls.Add(this.chkMoF);
-            this.flowLayoutPanel5.Controls.Add(this.chkSA);
-            this.flowLayoutPanel5.Controls.Add(this.chkUFO);
-            this.flowLayoutPanel5.Controls.Add(this.chkTD);
-            this.flowLayoutPanel5.Controls.Add(this.chkDDC);
-            this.flowLayoutPanel5.Controls.Add(this.chkLoLK);
-            this.flowLayoutPanel5.Controls.Add(this.chkHSiFS);
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(3, 16);
-            this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(289, 114);
-            this.flowLayoutPanel5.TabIndex = 0;
+            this.mainRandomPanel.AutoScroll = true;
+            this.mainRandomPanel.Controls.Add(this.chkHRtP);
+            this.mainRandomPanel.Controls.Add(this.chkSoEW);
+            this.mainRandomPanel.Controls.Add(this.chkPoDD);
+            this.mainRandomPanel.Controls.Add(this.chkLLS);
+            this.mainRandomPanel.Controls.Add(this.chkMS);
+            this.mainRandomPanel.Controls.Add(this.chkEoSD);
+            this.mainRandomPanel.Controls.Add(this.chkPCB);
+            this.mainRandomPanel.Controls.Add(this.chkIN);
+            this.mainRandomPanel.Controls.Add(this.chkPoFV);
+            this.mainRandomPanel.Controls.Add(this.chkMoF);
+            this.mainRandomPanel.Controls.Add(this.chkSA);
+            this.mainRandomPanel.Controls.Add(this.chkUFO);
+            this.mainRandomPanel.Controls.Add(this.chkTD);
+            this.mainRandomPanel.Controls.Add(this.chkDDC);
+            this.mainRandomPanel.Controls.Add(this.chkLoLK);
+            this.mainRandomPanel.Controls.Add(this.chkHSiFS);
+            this.mainRandomPanel.Controls.Add(this.chkWBaWC);
+            this.mainRandomPanel.Location = new System.Drawing.Point(3, 16);
+            this.mainRandomPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.mainRandomPanel.Name = "mainRandomPanel";
+            this.mainRandomPanel.Size = new System.Drawing.Size(289, 114);
+            this.mainRandomPanel.TabIndex = 0;
             // 
             // chkHRtP
             // 
@@ -1129,6 +1135,18 @@
             this.chkHSiFS.UseVisualStyleBackColor = true;
             this.chkHSiFS.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
+            // chkWBaWC
+            // 
+            this.chkWBaWC.AutoSize = true;
+            this.chkWBaWC.Checked = true;
+            this.chkWBaWC.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkWBaWC.Location = new System.Drawing.Point(65, 72);
+            this.chkWBaWC.Name = "chkWBaWC";
+            this.chkWBaWC.Size = new System.Drawing.Size(68, 17);
+            this.chkWBaWC.TabIndex = 16;
+            this.chkWBaWC.Text = "WBaWC";
+            this.chkWBaWC.UseVisualStyleBackColor = true;
+            // 
             // launcherSettings
             // 
             this.launcherSettings.Controls.Add(this.crapResetStartingRepo);
@@ -1148,7 +1166,7 @@
             this.launcherSettings.Controls.Add(this.np2Label);
             this.launcherSettings.Location = new System.Drawing.Point(8, 8);
             this.launcherSettings.Name = "launcherSettings";
-            this.launcherSettings.Size = new System.Drawing.Size(200, 407);
+            this.launcherSettings.Size = new System.Drawing.Size(200, 370);
             this.launcherSettings.TabIndex = 1;
             this.launcherSettings.TabStop = false;
             this.launcherSettings.Text = "Launcher Settings";
@@ -1303,7 +1321,7 @@
             this.replays.Location = new System.Drawing.Point(4, 22);
             this.replays.Name = "replays";
             this.replays.Padding = new System.Windows.Forms.Padding(3);
-            this.replays.Size = new System.Drawing.Size(527, 535);
+            this.replays.Size = new System.Drawing.Size(527, 585);
             this.replays.TabIndex = 3;
             this.replays.Text = "Replays";
             // 
@@ -1315,7 +1333,7 @@
             this.replayBrowser.Location = new System.Drawing.Point(0, 29);
             this.replayBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.replayBrowser.Name = "replayBrowser";
-            this.replayBrowser.Size = new System.Drawing.Size(524, 506);
+            this.replayBrowser.Size = new System.Drawing.Size(524, 456);
             this.replayBrowser.TabIndex = 2;
             this.replayBrowser.Url = new System.Uri("http://replays.gensokyo.org", System.UriKind.Absolute);
             this.replayBrowser.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.replayBrowser_Navigating);
@@ -1390,13 +1408,13 @@
             // 
             this.customGames.BackColor = System.Drawing.Color.Transparent;
             this.customGames.Controls.Add(this.customAdd);
-            this.customGames.Controls.Add(this.listView1);
+            this.customGames.Controls.Add(this.customList);
             this.customGames.Controls.Add(this.customLabel);
-            this.customGames.Controls.Add(this.treeView1);
+            this.customGames.Controls.Add(this.customTree);
             this.customGames.Location = new System.Drawing.Point(4, 22);
             this.customGames.Name = "customGames";
             this.customGames.Padding = new System.Windows.Forms.Padding(3);
-            this.customGames.Size = new System.Drawing.Size(527, 535);
+            this.customGames.Size = new System.Drawing.Size(527, 585);
             this.customGames.TabIndex = 1;
             this.customGames.Text = "Custom Games";
             // 
@@ -1410,49 +1428,49 @@
             this.customAdd.UseVisualStyleBackColor = true;
             this.customAdd.Click += new System.EventHandler(this.customAdd_Click);
             // 
-            // listView1
+            // customList
             // 
-            this.listView1.AllowDrop = true;
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.customList.AllowDrop = true;
+            this.customList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.ContextMenuStrip = this.customContextMenu;
-            this.listView1.LabelEdit = true;
-            this.listView1.LargeImageList = this.customImages;
-            this.listView1.Location = new System.Drawing.Point(272, 3);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(246, 525);
-            this.listView1.SmallImageList = this.customImages;
-            this.listView1.TabIndex = 3;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.AfterLabelEdit += new System.Windows.Forms.LabelEditEventHandler(this.listView1_AfterLabelEdit);
-            this.listView1.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listView1_ItemSelectionChanged);
-            this.listView1.DragDrop += new System.Windows.Forms.DragEventHandler(this.listView1_DragDrop);
-            this.listView1.DragEnter += new System.Windows.Forms.DragEventHandler(this.DragEnter);
-            this.listView1.DoubleClick += new System.EventHandler(this.listView1_DoubleClick);
+            this.customList.ContextMenuStrip = this.customContextMenu;
+            this.customList.LabelEdit = true;
+            this.customList.LargeImageList = this.customImages;
+            this.customList.Location = new System.Drawing.Point(272, 3);
+            this.customList.Name = "customList";
+            this.customList.Size = new System.Drawing.Size(246, 475);
+            this.customList.SmallImageList = this.customImages;
+            this.customList.TabIndex = 3;
+            this.customList.UseCompatibleStateImageBehavior = false;
+            this.customList.AfterLabelEdit += new System.Windows.Forms.LabelEditEventHandler(this.customList_AfterLabelEdit);
+            this.customList.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.customList_ItemSelectionChanged);
+            this.customList.DragDrop += new System.Windows.Forms.DragEventHandler(this.customList_DragDrop);
+            this.customList.DragEnter += new System.Windows.Forms.DragEventHandler(this.DragEnter);
+            this.customList.DoubleClick += new System.EventHandler(this.customList_DoubleClick);
             // 
             // customLabel
             // 
             this.customLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.customLabel.AutoSize = true;
-            this.customLabel.Location = new System.Drawing.Point(3, 737);
+            this.customLabel.Location = new System.Drawing.Point(3, 687);
             this.customLabel.Name = "customLabel";
             this.customLabel.Size = new System.Drawing.Size(0, 13);
             this.customLabel.TabIndex = 2;
             // 
-            // treeView1
+            // customTree
             // 
-            this.treeView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.customTree.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.treeView1.ContextMenuStrip = this.customFolderContextMenu;
-            this.treeView1.HideSelection = false;
-            this.treeView1.LabelEdit = true;
-            this.treeView1.Location = new System.Drawing.Point(3, 3);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(167, 525);
-            this.treeView1.TabIndex = 1;
-            this.treeView1.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.treeView1_AfterLabelEdit);
-            this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
+            this.customTree.ContextMenuStrip = this.customFolderContextMenu;
+            this.customTree.HideSelection = false;
+            this.customTree.LabelEdit = true;
+            this.customTree.Location = new System.Drawing.Point(3, 3);
+            this.customTree.Name = "customTree";
+            this.customTree.Size = new System.Drawing.Size(167, 475);
+            this.customTree.TabIndex = 1;
+            this.customTree.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.customTree_AfterLabelEdit);
+            this.customTree.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.customTree_NodeMouseClick);
             // 
             // mainControl
             // 
@@ -1468,7 +1486,7 @@
             this.mainControl.Margin = new System.Windows.Forms.Padding(1);
             this.mainControl.Name = "mainControl";
             this.mainControl.SelectedIndex = 0;
-            this.mainControl.Size = new System.Drawing.Size(535, 561);
+            this.mainControl.Size = new System.Drawing.Size(535, 611);
             this.mainControl.TabIndex = 0;
             this.mainControl.Deselected += new System.Windows.Forms.TabControlEventHandler(this.mainControl_Deselected);
             // 
@@ -1482,38 +1500,38 @@
             this.games.Location = new System.Drawing.Point(4, 22);
             this.games.Name = "games";
             this.games.Padding = new System.Windows.Forms.Padding(3);
-            this.games.Size = new System.Drawing.Size(527, 535);
+            this.games.Size = new System.Drawing.Size(527, 585);
             this.games.TabIndex = 6;
             this.games.Text = "Games";
             // 
             // otherGroup
             // 
-            this.otherGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.otherGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.otherGroup.Controls.Add(this.flowLayoutPanel3);
-            this.otherGroup.Location = new System.Drawing.Point(6, 363);
+            this.otherGroup.Controls.Add(this.miscLayoutPanel);
+            this.otherGroup.Location = new System.Drawing.Point(6, 413);
             this.otherGroup.Name = "otherGroup";
             this.otherGroup.Size = new System.Drawing.Size(512, 123);
             this.otherGroup.TabIndex = 3;
             this.otherGroup.TabStop = false;
             this.otherGroup.Text = "Other Games";
             // 
-            // flowLayoutPanel3
+            // miscLayoutPanel
             // 
-            this.flowLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.miscLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel3.Controls.Add(this.btnStB);
-            this.flowLayoutPanel3.Controls.Add(this.btnDS);
-            this.flowLayoutPanel3.Controls.Add(this.btnGFW);
-            this.flowLayoutPanel3.Controls.Add(this.btnISC);
-            this.flowLayoutPanel3.Controls.Add(this.btnVD);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 16);
-            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(506, 104);
-            this.flowLayoutPanel3.TabIndex = 2;
+            this.miscLayoutPanel.AutoScroll = true;
+            this.miscLayoutPanel.Controls.Add(this.btnStB);
+            this.miscLayoutPanel.Controls.Add(this.btnDS);
+            this.miscLayoutPanel.Controls.Add(this.btnGFW);
+            this.miscLayoutPanel.Controls.Add(this.btnISC);
+            this.miscLayoutPanel.Controls.Add(this.btnVD);
+            this.miscLayoutPanel.Location = new System.Drawing.Point(3, 16);
+            this.miscLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.miscLayoutPanel.Name = "miscLayoutPanel";
+            this.miscLayoutPanel.Size = new System.Drawing.Size(506, 104);
+            this.miscLayoutPanel.TabIndex = 2;
             // 
             // btnStB
             // 
@@ -1606,33 +1624,33 @@
             // 
             // fightingGroup
             // 
-            this.fightingGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.fightingGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.fightingGroup.Controls.Add(this.flowLayoutPanel2);
-            this.fightingGroup.Location = new System.Drawing.Point(6, 234);
+            this.fightingGroup.Controls.Add(this.fightingLayoutPanel);
+            this.fightingGroup.Location = new System.Drawing.Point(6, 284);
             this.fightingGroup.Name = "fightingGroup";
             this.fightingGroup.Size = new System.Drawing.Size(512, 123);
             this.fightingGroup.TabIndex = 2;
             this.fightingGroup.TabStop = false;
             this.fightingGroup.Text = "Fighting Games";
             // 
-            // flowLayoutPanel2
+            // fightingLayoutPanel
             // 
-            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.fightingLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel2.Controls.Add(this.btnIaMP);
-            this.flowLayoutPanel2.Controls.Add(this.btnSWR);
-            this.flowLayoutPanel2.Controls.Add(this.btnUoNL);
-            this.flowLayoutPanel2.Controls.Add(this.btnHM);
-            this.flowLayoutPanel2.Controls.Add(this.btnULiL);
-            this.flowLayoutPanel2.Controls.Add(this.btnAoCF);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 16);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(506, 104);
-            this.flowLayoutPanel2.TabIndex = 2;
+            this.fightingLayoutPanel.AutoScroll = true;
+            this.fightingLayoutPanel.Controls.Add(this.btnIaMP);
+            this.fightingLayoutPanel.Controls.Add(this.btnSWR);
+            this.fightingLayoutPanel.Controls.Add(this.btnUoNL);
+            this.fightingLayoutPanel.Controls.Add(this.btnHM);
+            this.fightingLayoutPanel.Controls.Add(this.btnULiL);
+            this.fightingLayoutPanel.Controls.Add(this.btnAoCF);
+            this.fightingLayoutPanel.Location = new System.Drawing.Point(3, 16);
+            this.fightingLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.fightingLayoutPanel.Name = "fightingLayoutPanel";
+            this.fightingLayoutPanel.Size = new System.Drawing.Size(506, 104);
+            this.fightingLayoutPanel.TabIndex = 2;
             // 
             // btnIaMP
             // 
@@ -1747,40 +1765,42 @@
             this.mainGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainGroup.Controls.Add(this.flowLayoutPanel1);
+            this.mainGroup.Controls.Add(this.mainLayoutPanel);
             this.mainGroup.Location = new System.Drawing.Point(6, 6);
             this.mainGroup.Name = "mainGroup";
-            this.mainGroup.Size = new System.Drawing.Size(512, 222);
+            this.mainGroup.Size = new System.Drawing.Size(512, 272);
             this.mainGroup.TabIndex = 1;
             this.mainGroup.TabStop = false;
             this.mainGroup.Text = "Main Games";
             // 
-            // flowLayoutPanel1
+            // mainLayoutPanel
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.mainLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.Controls.Add(this.btnHRtP);
-            this.flowLayoutPanel1.Controls.Add(this.btnSoEW);
-            this.flowLayoutPanel1.Controls.Add(this.btnPoDD);
-            this.flowLayoutPanel1.Controls.Add(this.btnLLS);
-            this.flowLayoutPanel1.Controls.Add(this.btnMS);
-            this.flowLayoutPanel1.Controls.Add(this.btnEoSD);
-            this.flowLayoutPanel1.Controls.Add(this.btnPCB);
-            this.flowLayoutPanel1.Controls.Add(this.btnIN);
-            this.flowLayoutPanel1.Controls.Add(this.btnPoFV);
-            this.flowLayoutPanel1.Controls.Add(this.btnMoF);
-            this.flowLayoutPanel1.Controls.Add(this.btnSA);
-            this.flowLayoutPanel1.Controls.Add(this.btnUFO);
-            this.flowLayoutPanel1.Controls.Add(this.btnTD);
-            this.flowLayoutPanel1.Controls.Add(this.btnDDC);
-            this.flowLayoutPanel1.Controls.Add(this.btnLoLK);
-            this.flowLayoutPanel1.Controls.Add(this.btnHSiFS);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 16);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(506, 203);
-            this.flowLayoutPanel1.TabIndex = 2;
+            this.mainLayoutPanel.AutoScroll = true;
+            this.mainLayoutPanel.Controls.Add(this.btnHRtP);
+            this.mainLayoutPanel.Controls.Add(this.btnSoEW);
+            this.mainLayoutPanel.Controls.Add(this.btnPoDD);
+            this.mainLayoutPanel.Controls.Add(this.btnLLS);
+            this.mainLayoutPanel.Controls.Add(this.btnMS);
+            this.mainLayoutPanel.Controls.Add(this.btnEoSD);
+            this.mainLayoutPanel.Controls.Add(this.btnPCB);
+            this.mainLayoutPanel.Controls.Add(this.btnIN);
+            this.mainLayoutPanel.Controls.Add(this.btnPoFV);
+            this.mainLayoutPanel.Controls.Add(this.btnMoF);
+            this.mainLayoutPanel.Controls.Add(this.btnSA);
+            this.mainLayoutPanel.Controls.Add(this.btnUFO);
+            this.mainLayoutPanel.Controls.Add(this.btnTD);
+            this.mainLayoutPanel.Controls.Add(this.btnDDC);
+            this.mainLayoutPanel.Controls.Add(this.btnLoLK);
+            this.mainLayoutPanel.Controls.Add(this.btnHSiFS);
+            this.mainLayoutPanel.Controls.Add(this.btnWBaWC);
+            this.mainLayoutPanel.Location = new System.Drawing.Point(3, 16);
+            this.mainLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.mainLayoutPanel.Name = "mainLayoutPanel";
+            this.mainLayoutPanel.Size = new System.Drawing.Size(506, 253);
+            this.mainLayoutPanel.TabIndex = 2;
             // 
             // btnEoSD
             // 
@@ -1980,6 +2000,24 @@
             this.btnHSiFS.UseVisualStyleBackColor = true;
             this.btnHSiFS.Click += new System.EventHandler(this.btn_Click);
             // 
+            // btnWBaWC
+            // 
+            this.btnWBaWC.BackgroundImage = global::Touhou_Launcher.Properties.Resources.wbawcg;
+            this.btnWBaWC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnWBaWC.ContextMenuStrip = this.gameContextMenu;
+            this.btnWBaWC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnWBaWC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnWBaWC.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnWBaWC.Location = new System.Drawing.Point(3, 203);
+            this.btnWBaWC.Name = "btnWBaWC";
+            this.btnWBaWC.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnWBaWC.Size = new System.Drawing.Size(120, 44);
+            this.btnWBaWC.TabIndex = 16;
+            this.btnWBaWC.Text = "Wily Beast and Weakest Creature";
+            this.btnWBaWC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnWBaWC.UseVisualStyleBackColor = true;
+            this.btnWBaWC.Click += new System.EventHandler(this.btn_Click);
+            // 
             // trayMenu
             // 
             this.trayMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -1997,170 +2035,9 @@
             // 
             // trayMain
             // 
-            this.trayMain.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.trayHRtP,
-            this.traySoEW,
-            this.trayPoDD,
-            this.trayLLS,
-            this.trayMS,
-            this.trayEoSD,
-            this.trayPCB,
-            this.trayIN,
-            this.trayPoFV,
-            this.trayMoF,
-            this.traySA,
-            this.trayUFO,
-            this.trayTD,
-            this.trayDDC,
-            this.trayLoLK,
-            this.trayHSiFS});
             this.trayMain.Name = "trayMain";
             this.trayMain.Size = new System.Drawing.Size(157, 22);
             this.trayMain.Text = "Main Games";
-            // 
-            // trayHRtP
-            // 
-            this.trayHRtP.Image = global::Touhou_Launcher.Properties.Resources.Icon_th01;
-            this.trayHRtP.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayHRtP.Name = "trayHRtP";
-            this.trayHRtP.Size = new System.Drawing.Size(256, 38);
-            this.trayHRtP.Text = "Highly Responsive to Prayers";
-            this.trayHRtP.Click += new System.EventHandler(this.tray_Click);
-            // 
-            // traySoEW
-            // 
-            this.traySoEW.Image = global::Touhou_Launcher.Properties.Resources.Icon_th02;
-            this.traySoEW.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.traySoEW.Name = "traySoEW";
-            this.traySoEW.Size = new System.Drawing.Size(256, 38);
-            this.traySoEW.Text = "Story of Eastern Wonderland";
-            this.traySoEW.Click += new System.EventHandler(this.tray_Click);
-            // 
-            // trayPoDD
-            // 
-            this.trayPoDD.Image = global::Touhou_Launcher.Properties.Resources.Icon_th03;
-            this.trayPoDD.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayPoDD.Name = "trayPoDD";
-            this.trayPoDD.Size = new System.Drawing.Size(256, 38);
-            this.trayPoDD.Text = "Phantasmagoria of Dim. Dream";
-            this.trayPoDD.Click += new System.EventHandler(this.tray_Click);
-            // 
-            // trayLLS
-            // 
-            this.trayLLS.Image = global::Touhou_Launcher.Properties.Resources.Icon_th04;
-            this.trayLLS.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayLLS.Name = "trayLLS";
-            this.trayLLS.Size = new System.Drawing.Size(256, 38);
-            this.trayLLS.Text = "Lotus Land Story";
-            this.trayLLS.Click += new System.EventHandler(this.tray_Click);
-            // 
-            // trayMS
-            // 
-            this.trayMS.Image = global::Touhou_Launcher.Properties.Resources.Icon_th05;
-            this.trayMS.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayMS.Name = "trayMS";
-            this.trayMS.Size = new System.Drawing.Size(256, 38);
-            this.trayMS.Text = "Mystic Square";
-            this.trayMS.Click += new System.EventHandler(this.tray_Click);
-            // 
-            // trayEoSD
-            // 
-            this.trayEoSD.Image = global::Touhou_Launcher.Properties.Resources.Icon_th06;
-            this.trayEoSD.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayEoSD.Name = "trayEoSD";
-            this.trayEoSD.Size = new System.Drawing.Size(256, 38);
-            this.trayEoSD.Text = "Embodiment of Scarlet Devil";
-            this.trayEoSD.Click += new System.EventHandler(this.tray_Click);
-            // 
-            // trayPCB
-            // 
-            this.trayPCB.Image = global::Touhou_Launcher.Properties.Resources.Icon_th07;
-            this.trayPCB.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayPCB.Name = "trayPCB";
-            this.trayPCB.Size = new System.Drawing.Size(256, 38);
-            this.trayPCB.Text = "Perfect Cherry Blossom";
-            this.trayPCB.Click += new System.EventHandler(this.tray_Click);
-            // 
-            // trayIN
-            // 
-            this.trayIN.Image = global::Touhou_Launcher.Properties.Resources.Icon_th08;
-            this.trayIN.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayIN.Name = "trayIN";
-            this.trayIN.Size = new System.Drawing.Size(256, 38);
-            this.trayIN.Text = "Imperishable Night";
-            this.trayIN.Click += new System.EventHandler(this.tray_Click);
-            // 
-            // trayPoFV
-            // 
-            this.trayPoFV.Image = global::Touhou_Launcher.Properties.Resources.Icon_th09;
-            this.trayPoFV.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayPoFV.Name = "trayPoFV";
-            this.trayPoFV.Size = new System.Drawing.Size(256, 38);
-            this.trayPoFV.Text = "Phantasmagoria of Flower View";
-            this.trayPoFV.Click += new System.EventHandler(this.tray_Click);
-            // 
-            // trayMoF
-            // 
-            this.trayMoF.Image = global::Touhou_Launcher.Properties.Resources.Icon_th10;
-            this.trayMoF.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayMoF.Name = "trayMoF";
-            this.trayMoF.Size = new System.Drawing.Size(256, 38);
-            this.trayMoF.Text = "Mountain of Faith";
-            this.trayMoF.Click += new System.EventHandler(this.tray_Click);
-            // 
-            // traySA
-            // 
-            this.traySA.Image = global::Touhou_Launcher.Properties.Resources.Icon_th11;
-            this.traySA.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.traySA.Name = "traySA";
-            this.traySA.Size = new System.Drawing.Size(256, 38);
-            this.traySA.Text = "Subterranean Animism";
-            this.traySA.Click += new System.EventHandler(this.tray_Click);
-            // 
-            // trayUFO
-            // 
-            this.trayUFO.Image = global::Touhou_Launcher.Properties.Resources.Icon_th12;
-            this.trayUFO.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayUFO.Name = "trayUFO";
-            this.trayUFO.Size = new System.Drawing.Size(256, 38);
-            this.trayUFO.Text = "Undefined Fantastic Object";
-            this.trayUFO.Click += new System.EventHandler(this.tray_Click);
-            // 
-            // trayTD
-            // 
-            this.trayTD.Image = global::Touhou_Launcher.Properties.Resources.Icon_th13;
-            this.trayTD.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayTD.Name = "trayTD";
-            this.trayTD.Size = new System.Drawing.Size(256, 38);
-            this.trayTD.Text = "Ten Desires";
-            this.trayTD.Click += new System.EventHandler(this.tray_Click);
-            // 
-            // trayDDC
-            // 
-            this.trayDDC.Image = global::Touhou_Launcher.Properties.Resources.Icon_th14;
-            this.trayDDC.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayDDC.Name = "trayDDC";
-            this.trayDDC.Size = new System.Drawing.Size(256, 38);
-            this.trayDDC.Text = "Double Dealing Character";
-            this.trayDDC.Click += new System.EventHandler(this.tray_Click);
-            // 
-            // trayLoLK
-            // 
-            this.trayLoLK.Image = global::Touhou_Launcher.Properties.Resources.Icon_th15;
-            this.trayLoLK.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayLoLK.Name = "trayLoLK";
-            this.trayLoLK.Size = new System.Drawing.Size(256, 38);
-            this.trayLoLK.Text = "Legacy of Lunatic Kingdom";
-            this.trayLoLK.Click += new System.EventHandler(this.tray_Click);
-            // 
-            // trayHSiFS
-            // 
-            this.trayHSiFS.Image = global::Touhou_Launcher.Properties.Resources.Icon_th16;
-            this.trayHSiFS.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayHSiFS.Name = "trayHSiFS";
-            this.trayHSiFS.Size = new System.Drawing.Size(256, 38);
-            this.trayHSiFS.Text = "Hidden Star in Four Seasons";
-            this.trayHSiFS.Click += new System.EventHandler(this.tray_Click);
             // 
             // trayFighting
             // 
@@ -2318,6 +2195,150 @@
             this.trayExit.Text = "Exit";
             this.trayExit.Click += new System.EventHandler(this.trayExit_Click);
             // 
+            // trayHRtP
+            // 
+            this.trayHRtP.Image = global::Touhou_Launcher.Properties.Resources.Icon_th01;
+            this.trayHRtP.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayHRtP.Name = "trayHRtP";
+            this.trayHRtP.Size = new System.Drawing.Size(262, 38);
+            this.trayHRtP.Text = "Highly Responsive to Prayers";
+            this.trayHRtP.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // traySoEW
+            // 
+            this.traySoEW.Image = global::Touhou_Launcher.Properties.Resources.Icon_th02;
+            this.traySoEW.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.traySoEW.Name = "traySoEW";
+            this.traySoEW.Size = new System.Drawing.Size(262, 38);
+            this.traySoEW.Text = "Story of Eastern Wonderland";
+            this.traySoEW.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayPoDD
+            // 
+            this.trayPoDD.Image = global::Touhou_Launcher.Properties.Resources.Icon_th03;
+            this.trayPoDD.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayPoDD.Name = "trayPoDD";
+            this.trayPoDD.Size = new System.Drawing.Size(262, 38);
+            this.trayPoDD.Text = "Phantasmagoria of Dim. Dream";
+            this.trayPoDD.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayLLS
+            // 
+            this.trayLLS.Image = global::Touhou_Launcher.Properties.Resources.Icon_th04;
+            this.trayLLS.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayLLS.Name = "trayLLS";
+            this.trayLLS.Size = new System.Drawing.Size(262, 38);
+            this.trayLLS.Text = "Lotus Land Story";
+            this.trayLLS.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayMS
+            // 
+            this.trayMS.Image = global::Touhou_Launcher.Properties.Resources.Icon_th05;
+            this.trayMS.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayMS.Name = "trayMS";
+            this.trayMS.Size = new System.Drawing.Size(262, 38);
+            this.trayMS.Text = "Mystic Square";
+            this.trayMS.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayEoSD
+            // 
+            this.trayEoSD.Image = global::Touhou_Launcher.Properties.Resources.Icon_th06;
+            this.trayEoSD.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayEoSD.Name = "trayEoSD";
+            this.trayEoSD.Size = new System.Drawing.Size(262, 38);
+            this.trayEoSD.Text = "Embodiment of Scarlet Devil";
+            this.trayEoSD.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayPCB
+            // 
+            this.trayPCB.Image = global::Touhou_Launcher.Properties.Resources.Icon_th07;
+            this.trayPCB.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayPCB.Name = "trayPCB";
+            this.trayPCB.Size = new System.Drawing.Size(262, 38);
+            this.trayPCB.Text = "Perfect Cherry Blossom";
+            this.trayPCB.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayIN
+            // 
+            this.trayIN.Image = global::Touhou_Launcher.Properties.Resources.Icon_th08;
+            this.trayIN.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayIN.Name = "trayIN";
+            this.trayIN.Size = new System.Drawing.Size(262, 38);
+            this.trayIN.Text = "Imperishable Night";
+            this.trayIN.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayPoFV
+            // 
+            this.trayPoFV.Image = global::Touhou_Launcher.Properties.Resources.Icon_th09;
+            this.trayPoFV.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayPoFV.Name = "trayPoFV";
+            this.trayPoFV.Size = new System.Drawing.Size(262, 38);
+            this.trayPoFV.Text = "Phantasmagoria of Flower View";
+            this.trayPoFV.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayMoF
+            // 
+            this.trayMoF.Image = global::Touhou_Launcher.Properties.Resources.Icon_th10;
+            this.trayMoF.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayMoF.Name = "trayMoF";
+            this.trayMoF.Size = new System.Drawing.Size(262, 38);
+            this.trayMoF.Text = "Mountain of Faith";
+            this.trayMoF.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // traySA
+            // 
+            this.traySA.Image = global::Touhou_Launcher.Properties.Resources.Icon_th11;
+            this.traySA.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.traySA.Name = "traySA";
+            this.traySA.Size = new System.Drawing.Size(262, 38);
+            this.traySA.Text = "Subterranean Animism";
+            this.traySA.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayUFO
+            // 
+            this.trayUFO.Image = global::Touhou_Launcher.Properties.Resources.Icon_th12;
+            this.trayUFO.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayUFO.Name = "trayUFO";
+            this.trayUFO.Size = new System.Drawing.Size(262, 38);
+            this.trayUFO.Text = "Undefined Fantastic Object";
+            this.trayUFO.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayTD
+            // 
+            this.trayTD.Image = global::Touhou_Launcher.Properties.Resources.Icon_th13;
+            this.trayTD.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTD.Name = "trayTD";
+            this.trayTD.Size = new System.Drawing.Size(262, 38);
+            this.trayTD.Text = "Ten Desires";
+            this.trayTD.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayDDC
+            // 
+            this.trayDDC.Image = global::Touhou_Launcher.Properties.Resources.Icon_th14;
+            this.trayDDC.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayDDC.Name = "trayDDC";
+            this.trayDDC.Size = new System.Drawing.Size(262, 38);
+            this.trayDDC.Text = "Double Dealing Character";
+            this.trayDDC.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayLoLK
+            // 
+            this.trayLoLK.Image = global::Touhou_Launcher.Properties.Resources.Icon_th15;
+            this.trayLoLK.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayLoLK.Name = "trayLoLK";
+            this.trayLoLK.Size = new System.Drawing.Size(262, 38);
+            this.trayLoLK.Text = "Legacy of Lunatic Kingdom";
+            this.trayLoLK.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // trayHSiFS
+            // 
+            this.trayHSiFS.Image = global::Touhou_Launcher.Properties.Resources.Icon_th16;
+            this.trayHSiFS.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayHSiFS.Name = "trayHSiFS";
+            this.trayHSiFS.Size = new System.Drawing.Size(262, 38);
+            this.trayHSiFS.Text = "Hidden Star in Four Seasons";
+            this.trayHSiFS.Click += new System.EventHandler(this.tray_Click);
+            // 
             // trayIcon
             // 
             this.trayIcon.ContextMenuStrip = this.trayMenu;
@@ -2325,14 +2346,22 @@
             this.trayIcon.Text = "Touhou Launcher";
             this.trayIcon.DoubleClick += new System.EventHandler(this.MainForm_Show);
             // 
+            // trayWBaWC
+            // 
+            this.trayWBaWC.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayWBaWC.Name = "trayWBaWC";
+            this.trayWBaWC.Size = new System.Drawing.Size(262, 38);
+            this.trayWBaWC.Text = "Wily Beast and Weakest Creature";
+            this.trayWBaWC.Click += new System.EventHandler(this.tray_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 562);
+            this.ClientSize = new System.Drawing.Size(534, 612);
             this.Controls.Add(this.mainControl);
             this.Icon = global::Touhou_Launcher.Properties.Resources.thicon;
-            this.MinimumSize = new System.Drawing.Size(550, 600);
+            this.MinimumSize = new System.Drawing.Size(440, 450);
             this.Name = "MainForm";
             this.Text = "Touhou Launcher";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_Closing);
@@ -2345,14 +2374,14 @@
             this.settings.ResumeLayout(false);
             this.randomSettings.ResumeLayout(false);
             this.otherRandom.ResumeLayout(false);
-            this.flowLayoutPanel7.ResumeLayout(false);
-            this.flowLayoutPanel7.PerformLayout();
+            this.miscRandomPanel.ResumeLayout(false);
+            this.miscRandomPanel.PerformLayout();
             this.fightingRandom.ResumeLayout(false);
-            this.flowLayoutPanel6.ResumeLayout(false);
-            this.flowLayoutPanel6.PerformLayout();
+            this.fightingRandomPanel.ResumeLayout(false);
+            this.fightingRandomPanel.PerformLayout();
             this.mainRandom.ResumeLayout(false);
-            this.flowLayoutPanel5.ResumeLayout(false);
-            this.flowLayoutPanel5.PerformLayout();
+            this.mainRandomPanel.ResumeLayout(false);
+            this.mainRandomPanel.PerformLayout();
             this.launcherSettings.ResumeLayout(false);
             this.launcherSettings.PerformLayout();
             this.replays.ResumeLayout(false);
@@ -2363,11 +2392,11 @@
             this.mainControl.ResumeLayout(false);
             this.games.ResumeLayout(false);
             this.otherGroup.ResumeLayout(false);
-            this.flowLayoutPanel3.ResumeLayout(false);
+            this.miscLayoutPanel.ResumeLayout(false);
             this.fightingGroup.ResumeLayout(false);
-            this.flowLayoutPanel2.ResumeLayout(false);
+            this.fightingLayoutPanel.ResumeLayout(false);
             this.mainGroup.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.mainLayoutPanel.ResumeLayout(false);
             this.trayMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -2408,14 +2437,14 @@
         private System.Windows.Forms.RadioButton gensokyoReplays;
         private System.Windows.Forms.TabPage customGames;
         private System.Windows.Forms.Button customAdd;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView customList;
         private System.Windows.Forms.Label customLabel;
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.TreeView customTree;
         private System.Windows.Forms.TabControl mainControl;
         private System.Windows.Forms.TabPage games;
         private System.Windows.Forms.GroupBox mainGroup;
         private System.Windows.Forms.Button btnHRtP;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel mainLayoutPanel;
         private System.Windows.Forms.Button btnSoEW;
         private System.Windows.Forms.Button btnRandom;
         private System.Windows.Forms.Button btnPoDD;
@@ -2433,7 +2462,7 @@
         private System.Windows.Forms.Button btnLoLK;
         private System.Windows.Forms.Button btnHSiFS;
         private System.Windows.Forms.GroupBox fightingGroup;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel fightingLayoutPanel;
         private System.Windows.Forms.Button btnIaMP;
         private System.Windows.Forms.Button btnSWR;
         private System.Windows.Forms.Button btnUoNL;
@@ -2441,7 +2470,7 @@
         private System.Windows.Forms.Button btnULiL;
         private System.Windows.Forms.Button btnAoCF;
         private System.Windows.Forms.GroupBox otherGroup;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.FlowLayoutPanel miscLayoutPanel;
         private System.Windows.Forms.Button btnStB;
         private System.Windows.Forms.Button btnDS;
         private System.Windows.Forms.Button btnGFW;
@@ -2454,14 +2483,14 @@
         private System.Windows.Forms.Button randomNone;
         private System.Windows.Forms.Button randomAll;
         private System.Windows.Forms.GroupBox otherRandom;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
+        private System.Windows.Forms.FlowLayoutPanel miscRandomPanel;
         private System.Windows.Forms.CheckBox chkStB;
         private System.Windows.Forms.CheckBox chkDS;
         private System.Windows.Forms.CheckBox chkGFW;
         private System.Windows.Forms.CheckBox chkISC;
         private System.Windows.Forms.CheckBox chkVD;
         private System.Windows.Forms.GroupBox fightingRandom;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
+        private System.Windows.Forms.FlowLayoutPanel fightingRandomPanel;
         private System.Windows.Forms.CheckBox chkIaMP;
         private System.Windows.Forms.CheckBox chkSWR;
         private System.Windows.Forms.CheckBox chkUoNL;
@@ -2469,7 +2498,7 @@
         private System.Windows.Forms.CheckBox chkULiL;
         private System.Windows.Forms.CheckBox chkAoCF;
         private System.Windows.Forms.GroupBox mainRandom;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
+        private System.Windows.Forms.FlowLayoutPanel mainRandomPanel;
         private System.Windows.Forms.CheckBox chkHRtP;
         private System.Windows.Forms.CheckBox chkSoEW;
         private System.Windows.Forms.CheckBox chkPoDD;
@@ -2547,6 +2576,9 @@
         private System.Windows.Forms.ToolStripMenuItem buttonToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem textToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bannerToolStripMenuItem;
+        private System.Windows.Forms.Button btnWBaWC;
+        private System.Windows.Forms.CheckBox chkWBaWC;
+        private System.Windows.Forms.ToolStripMenuItem trayWBaWC;
     }
 }
 
