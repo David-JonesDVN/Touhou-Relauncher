@@ -65,19 +65,19 @@ namespace Touhou_Launcher
             crapGame.Items.Add("None");
             if (MainForm.curCfg.crapDir != "")
             {
-                if (File.Exists(Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\games.js"))
+                if (File.Exists(MainForm.curCfg.crapDir + "\\config\\games.js"))
                 {
-                    crap = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\games.js"));
+                    crap = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(MainForm.curCfg.crapDir + "\\config\\games.js"));
                     foreach (KeyValuePair<string, string> line in crap)
                     {
                         int number = Int32.TryParse(new String(line.Key.Where(Char.IsDigit).ToArray()), out number) ? number : 0;
-                        if (number == MainForm.idToNumber[game])
+                        if (number == MainForm.idToNumber[game] || !line.Key.StartsWith("th"))
                         {
                             crapGame.Items.Add(line.Key);
                         }
                     }
                 }
-                foreach (string file in Directory.GetFiles(Path.GetDirectoryName(MainForm.curCfg.crapDir), "*.js").Where(n => !n.Contains("games.js") && !n.Contains("config.js")))
+                foreach (string file in Directory.GetFiles(MainForm.curCfg.crapDir + "\\config", "*.js").Where(n => !n.Contains("games.js") && !n.Contains("config.js")))
                 {
                     crapCfg.Items.Add(Path.GetFileName(file));
                 }
@@ -185,41 +185,20 @@ namespace Touhou_Launcher
                 string enPath = Path.GetDirectoryName(path) + "\\th" + (MainForm.idToNumber[game]).ToString("00") + "e.exe";
                 string customPath = Path.GetDirectoryName(path);
                 customPath += MainForm.idToNumber[game] == 75 ? "\\Config.exe" : "\\custom.exe";
-                switch (type)
+                if (type != 0 && File.Exists(jpPath) && MainForm.curCfg.gameCFG[game].GameDir[0] == "")
                 {
-                    case 0: if (File.Exists(enPath) && MainForm.curCfg.gameCFG[game].GameDir[1] == "")
-                        {
-                            enDir.Text = enPath;
-                            MainForm.curCfg.gameCFG[game].GameDir[1] = enPath;
-                        }
-                        if (File.Exists(customPath) && MainForm.curCfg.gameCFG[game].GameDir[2] == "")
-                        {
-                            customDir.Text = customPath;
-                            MainForm.curCfg.gameCFG[game].GameDir[2] = customPath;
-                        }
-                        break;
-                    case 1: if (File.Exists(jpPath) && MainForm.curCfg.gameCFG[game].GameDir[0] == "")
-                        {
-                            jpDir.Text = jpPath;
-                            MainForm.curCfg.gameCFG[game].GameDir[0] = jpPath;
-                        }
-                        if (File.Exists(customPath) && MainForm.curCfg.gameCFG[game].GameDir[2] == "")
-                        {
-                            customDir.Text = customPath;
-                            MainForm.curCfg.gameCFG[game].GameDir[2] = customPath;
-                        }
-                        break;
-                    case 2: if (File.Exists(jpPath) && MainForm.curCfg.gameCFG[game].GameDir[0] == "")
-                        {
-                            jpDir.Text = jpPath;
-                            MainForm.curCfg.gameCFG[game].GameDir[0] = jpPath;
-                        }
-                        if (File.Exists(enPath) && MainForm.curCfg.gameCFG[game].GameDir[1] == "")
-                        {
-                            enDir.Text = enPath;
-                            MainForm.curCfg.gameCFG[game].GameDir[1] = enPath;
-                        }
-                        break;
+                    jpDir.Text = jpPath;
+                    MainForm.curCfg.gameCFG[game].GameDir[0] = jpPath;
+                }
+                if (type != 1 && File.Exists(enPath) && MainForm.curCfg.gameCFG[game].GameDir[1] == "")
+                {
+                    enDir.Text = enPath;
+                    MainForm.curCfg.gameCFG[game].GameDir[1] = enPath;
+                }
+                if (type != 2 && File.Exists(customPath) && MainForm.curCfg.gameCFG[game].GameDir[2] == "")
+                {
+                    customDir.Text = customPath;
+                    MainForm.curCfg.gameCFG[game].GameDir[2] = customPath;
                 }
                 break;
             }

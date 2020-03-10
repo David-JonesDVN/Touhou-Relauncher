@@ -280,13 +280,13 @@ namespace Touhou_Launcher
 
         public static void launchcrap(int game)
         {
-            if (!File.Exists(curCfg.crapDir))
+            if (!File.Exists(curCfg.crapDir + "\\bin\\thcrap_loader.exe"))
                 MessageBox.Show(rm.GetString("errorcrapNotFound"));
             else if (curCfg.gameCFG[game].crapCFG[0] == "None" || curCfg.gameCFG[game].crapCFG[1] == "None")
                 MessageBox.Show(rm.GetString("errorcrapConfigNotSet"));
             else
             {
-                startProcess(curCfg.crapDir, "\"" + Path.GetDirectoryName(curCfg.crapDir) + "\\" + curCfg.gameCFG[game].crapCFG[1] + "\" " + curCfg.gameCFG[game].crapCFG[0]);
+                startProcess(curCfg.crapDir + "\\bin\\thcrap_loader.exe", "\"" + curCfg.crapDir + "\\config\\" + curCfg.gameCFG[game].crapCFG[1] + "\" " + curCfg.gameCFG[game].crapCFG[0]);
             }
         }
 
@@ -346,7 +346,7 @@ namespace Touhou_Launcher
             minimizeToTray.Checked = curCfg.minimizeToTray;
             showTray.Checked = curCfg.showTray;
             np2Dir.Text = curCfg.np2Dir;
-            crapDir.Text = curCfg.crapDir;
+            crapDir.Text = curCfg.crapDir + "\\bin\\thcrap_loader.exe";
             crapStartingRepo.Text = curCfg.StartingRepo;
             foreach (CheckBox chk in GetAll(randomSettings, typeof(CheckBox)))
             {
@@ -984,7 +984,7 @@ namespace Touhou_Launcher
                 txtbox.BackColor = SystemColors.Window;
                 txtbox.Text = file;
                 curCfg.np2Dir = np2Dir.Text;
-                curCfg.crapDir = crapDir.Text;
+                curCfg.crapDir = Path.GetDirectoryName(crapDir.Text).TrimEnd("\\bin".ToCharArray());
             }
         }
 
@@ -994,7 +994,7 @@ namespace Touhou_Launcher
             {
                 ((TextBox)sender).BackColor = SystemColors.Window;
                 curCfg.np2Dir = np2Dir.Text;
-                curCfg.crapDir = crapDir.Text;
+                curCfg.crapDir = Path.GetDirectoryName(crapDir.Text).TrimEnd("\\bin".ToCharArray());
                 curCfg.StartingRepo = crapStartingRepo.Text;
             }
             else
@@ -1011,7 +1011,7 @@ namespace Touhou_Launcher
         {
             if (curCfg.crapDir != "")
             {
-                string procDir = Path.GetDirectoryName(curCfg.crapDir) + "\\thcrap_configure.exe";
+                string procDir = curCfg.crapDir + "\\bin\\thcrap_configure.exe";
                 if (File.Exists(procDir))
                     startProcess(procDir);
             }

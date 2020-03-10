@@ -78,7 +78,7 @@ namespace Touhou_Launcher
         public thcrap(ConfigForm cfg)
         {
             cfgForm = cfg;
-            gamejs = Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\launcher" + MainForm.idToNumber[cfg.game] + ".js";
+            gamejs = MainForm.curCfg.crapDir + "\\config\\launcher" + MainForm.idToNumber[cfg.game] + ".js";
             InitializeComponent();
             InitializeLanguage();
         }
@@ -95,12 +95,20 @@ namespace Touhou_Launcher
                         patchStates.Add(patch["archive"]);
                 }
             }
-            foreach (string localRepo in Directory.GetFiles(Path.GetDirectoryName(MainForm.curCfg.crapDir), "repo.js", SearchOption.AllDirectories))
+            foreach (string localRepo in Directory.GetFiles(MainForm.curCfg.crapDir + "\\repos", "repo.js", SearchOption.AllDirectories))
             {
                 addRepo(File.ReadAllText(localRepo), true);
             }
             searchRepo(MainForm.curCfg.StartingRepo);
-            games = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\games.js"));
+            games = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(MainForm.curCfg.crapDir + "\\config\\games.js"));
+            for (int i = 0; i < 3; i += 2)
+            {
+                if (MainForm.curCfg.gameCFG[cfgForm.game].GameDir[i] != "" && !games.ContainsValue(MainForm.curCfg.gameCFG[cfgForm.game].GameDir[i].Replace("\\", "/")))
+                {
+                    string augment = i == 2 ? "_custom" : "";
+                    games.Add("th" + (MainForm.idToNumber[cfgForm.game]).ToString("00") + augment, MainForm.curCfg.gameCFG[cfgForm.game].GameDir[i].Replace("\\", "/"));
+                }
+            }
             RefreshProfiles();
         }
 
@@ -113,7 +121,7 @@ namespace Touhou_Launcher
 
         private void onJsonGet(object sender, DownloadStringCompletedEventArgs e)
         {
-            if (e.Error == null)
+            if (e.Error == null && !e.Cancelled)
             {
                 string json = e.Result;
                 string[] args = (string[])e.UserState;
@@ -180,7 +188,7 @@ namespace Touhou_Launcher
             if (e.Error == null)
             {
                 patchData patch = JsonConvert.DeserializeObject<patchData>(e.Result);
-                string jsPath = Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\" + (string)e.UserState + "\\" + patch.id + "\\patch.js";
+                string jsPath = MainForm.curCfg.crapDir + "\\repos\\" + (string)e.UserState + "\\" + patch.id + "\\patch.js";
                 if (!File.Exists(jsPath))
                     File.WriteAllText(jsPath, e.Result);
                 foreach (string dependency in patch.dependencies)
@@ -229,7 +237,7 @@ namespace Touhou_Launcher
             {
                 games[game.Text] = game.SubItems[1].Text;
             }
-            File.WriteAllText(Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\games.js", JsonConvert.SerializeObject(games, Formatting.Indented));
+            File.WriteAllText(MainForm.curCfg.crapDir + "\\config\\games.js", JsonConvert.SerializeObject(games, Formatting.Indented));
             cfgForm.Refreshcrap();
         }
 
