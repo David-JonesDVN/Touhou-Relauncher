@@ -92,7 +92,7 @@ namespace Touhou_Launcher
                 foreach (Dictionary<string, string> patch in profile.patches)
                 {
                     if (!patchStates.Contains(patch["archive"]))
-                        patchStates.Add(patch["archive"]);
+                        patchStates.Add(patch["archive"].Substring(6));
                 }
             }
             foreach (string localRepo in Directory.GetFiles(MainForm.curCfg.crapDir + "\\repos", "repo.js", SearchOption.AllDirectories))
@@ -229,7 +229,7 @@ namespace Touhou_Launcher
             profileData profile = new profileData();
             foreach (string patch in patchStates)
             {
-                profile.patches.Add(new Dictionary<string, string> { {"archive", patch} });
+                profile.patches.Add(new Dictionary<string, string> { {"archive", "repos/" + patch} });
             }
             File.WriteAllText(gamejs, JsonConvert.SerializeObject(profile, Formatting.Indented));
             Dictionary<string, string> games = new Dictionary<string, string>();
