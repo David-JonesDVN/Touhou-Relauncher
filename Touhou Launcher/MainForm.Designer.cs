@@ -1438,7 +1438,7 @@
             this.customList.LargeImageList = this.customImages;
             this.customList.Location = new System.Drawing.Point(272, 3);
             this.customList.Name = "customList";
-            this.customList.Size = new System.Drawing.Size(246, 475);
+            this.customList.Size = new System.Drawing.Size(246, 579);
             this.customList.SmallImageList = this.customImages;
             this.customList.TabIndex = 3;
             this.customList.UseCompatibleStateImageBehavior = false;
@@ -1466,7 +1466,7 @@
             this.customTree.LabelEdit = true;
             this.customTree.Location = new System.Drawing.Point(3, 3);
             this.customTree.Name = "customTree";
-            this.customTree.Size = new System.Drawing.Size(167, 475);
+            this.customTree.Size = new System.Drawing.Size(167, 579);
             this.customTree.TabIndex = 1;
             this.customTree.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.customTree_AfterLabelEdit);
             this.customTree.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.customTree_NodeMouseClick);

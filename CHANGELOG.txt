@@ -6,7 +6,10 @@ Changed: replays.gensokyo.org was changed to maribelhearn.com/gensokyo as the fo
 Changed: Updated thcrap interaction to be compatible with the 2019-10-05 update. You may need to set your thcrap_loader path again.
 Changed: The profile editor will now fill in missing game profiles with paths that you have already filled automatically when launching it.
 Changed: You can now set arbitrary names for game profile IDs as long as they don't start with "th".
+Changed: Enlarged the custom games list.
+Changed: Upgraded to Visual Studio 2017 from 2012. Hopefully shouldn't change anything.
 Fixed: The tray icon's Main Games menu not working (no idea when that broke).
+Fixed: thcrap's encoding for patches not using UTF-8.
 
 1.0-pre3 (13/08/2019)
 Added: Selected patches list to show the order of installed patches.

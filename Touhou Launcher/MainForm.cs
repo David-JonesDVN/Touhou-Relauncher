@@ -81,7 +81,7 @@ namespace Touhou_Launcher
 
         public class Configs : AppSettings<Configs>
         {
-            public GameConfig[] gameCFG = new GameConfig[28];
+            public GameConfig[] gameCFG = new GameConfig[totalGameCount];
             public SubNode Custom = new SubNode();
             public View customView = View.LargeIcon;
             public SortOrder customSort = SortOrder.Ascending;
@@ -108,6 +108,7 @@ namespace Touhou_Launcher
         private const int mainGameCount = 17;
         private const int fightingGameCount = 6;
         private const int otherGameCount = 5;
+        private const int totalGameCount = mainGameCount + fightingGameCount + otherGameCount;
         public static Configs curCfg = Configs.Load();
         public static System.Resources.ResourceManager rm;
         public static Dictionary<string, int> dirToNumber = new Dictionary<string, int>
@@ -514,22 +515,21 @@ namespace Touhou_Launcher
         public MainForm()
         {
             InitializeComponent();
-            int count = new Configs().gameCFG.Length;
-            if (count > curCfg.gameCFG.Length)
+            if (totalGameCount > curCfg.gameCFG.Length)
             {
-                GameConfig[] backwardsComp = new GameConfig[count];
-                int lastCat = 0, offset = 0;
-                for (int i = 0; i < curCfg.gameCFG.Length; i++)
+                GameConfig[] backwardsComp = new GameConfig[totalGameCount];
+                int offset = 0;
+                for (int i = 0; i < backwardsComp.Length; i++)
                 {
                     backwardsComp[i] = new GameConfig(i);
                     backwardsComp[i].GameDir = new List<string> { "", "", "", "" };
                     backwardsComp[i].crapCFG = new List<string> { "None", "None" };
                     backwardsComp[i].appLocale = new List<bool> { false, false, false, false };
 
-                    if (curCfg.gameCFG[i].category != lastCat)
-                        offset = -i + (lastCat == 0 ? mainGameCount : mainGameCount + fightingGameCount);
-                    lastCat = curCfg.gameCFG[i].category;
-                    backwardsComp[i] = curCfg.gameCFG[i + offset];
+                    if (curCfg.gameCFG[i - offset].category == backwardsComp[i].category)
+                        backwardsComp[i] = curCfg.gameCFG[i - offset];
+                    else
+                        offset++;
                 }
                 curCfg.gameCFG = backwardsComp;
             }

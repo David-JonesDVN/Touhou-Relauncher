@@ -115,6 +115,7 @@ namespace Touhou_Launcher
         private void searchRepo(string address, bool child = false)
         {
             WebClient wc = new WebClient();
+            wc.Encoding = Encoding.UTF8;
             wc.DownloadStringCompleted += onJsonGet;
             wc.DownloadStringAsync(new Uri(address + "/repo.js"), new string[] { address, child.ToString() });
         }
@@ -188,9 +189,12 @@ namespace Touhou_Launcher
             if (e.Error == null)
             {
                 patchData patch = JsonConvert.DeserializeObject<patchData>(e.Result);
-                string jsPath = MainForm.curCfg.crapDir + "\\repos\\" + (string)e.UserState + "\\" + patch.id + "\\patch.js";
-                if (!File.Exists(jsPath))
-                    File.WriteAllText(jsPath, e.Result);
+                FileInfo jsPath = new FileInfo(MainForm.curCfg.crapDir + "\\repos\\" + (string)e.UserState + "\\" + patch.id + "\\patch.js");
+                if (!jsPath.Exists)
+                {
+                    jsPath.Directory.Create();
+                    File.WriteAllText(jsPath.FullName, e.Result);
+                }
                 foreach (string dependency in patch.dependencies)
                 {
                     string[] dependencySet = dependency.Split('/');
@@ -220,6 +224,7 @@ namespace Touhou_Launcher
                 repoList_SelectedIndexChanged(this, new EventArgs());
             }
             WebClient wc = new WebClient();
+            wc.Encoding = Encoding.UTF8;
             wc.DownloadStringCompleted += onPatchGet;
             wc.DownloadStringAsync(new Uri(repos[repo].servers[0] + "/" + patch + "/patch.js"), repo);
         }
