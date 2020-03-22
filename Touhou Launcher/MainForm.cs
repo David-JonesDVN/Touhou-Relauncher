@@ -522,10 +522,11 @@ namespace Touhou_Launcher
                     backwardsComp[i].crapCFG = new List<string> { "None", "None" };
                     backwardsComp[i].appLocale = new List<bool> { false, false, false, false };
 
-                    if (curCfg.gameCFG[i - offset].category == backwardsComp[i].category)
-                        backwardsComp[i] = curCfg.gameCFG[i - offset];
-                    else
-                        offset++;
+                    if (i - offset < curCfg.gameCFG.Length)
+                        if (curCfg.gameCFG[i - offset].category == backwardsComp[i].category)
+                            backwardsComp[i] = curCfg.gameCFG[i - offset];
+                        else
+                            offset++;
                 }
                 curCfg.gameCFG = backwardsComp;
             }
