@@ -95,9 +95,9 @@ namespace Touhou_Launcher
                         patchStates.Add(patch["archive"].Substring(6));
                 }
             }
-            foreach (string localRepo in Directory.GetFiles(MainForm.curCfg.crapDir + "\\repos", "repo.js", SearchOption.AllDirectories))
+            foreach (FileInfo localRepo in new DirectoryInfo(MainForm.curCfg.crapDir).CreateSubdirectory("repos").GetFiles("repo.js", SearchOption.AllDirectories))
             {
-                addRepo(File.ReadAllText(localRepo), true);
+                addRepo(File.ReadAllText(localRepo.FullName), true);
             }
             searchRepo(MainForm.curCfg.StartingRepo);
             games = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(MainForm.curCfg.crapDir + "\\config\\games.js"));
@@ -211,16 +211,18 @@ namespace Touhou_Launcher
                     }
                     else
                         repository = dependencySet[0];
-                    addPatch(repository, dependencySet[dependencySet.Length - 1], true);
+                    addPatch(repository, dependencySet[dependencySet.Length - 1], (string)e.UserState + "/" + patch.id + "/");
                 }
             }
         }
 
-        private void addPatch(string repo, string patch, bool dependency = false)
+        private void addPatch(string repo, string patch, string dependent = "")
         {
             if (!patchStates.Contains(repo + "/" + patch + "/"))
             {
-                patchStates.Insert(dependency ? 0 : patchStates.Count, repo + "/" + patch + "/");
+                int depIndex = patchStates.IndexOf(dependent);
+                depIndex = depIndex == -1 || dependent == "" ? patchStates.Count : depIndex;
+                patchStates.Insert(depIndex, repo + "/" + patch + "/");
                 repoList_SelectedIndexChanged(this, new EventArgs());
             }
             WebClient wc = new WebClient();

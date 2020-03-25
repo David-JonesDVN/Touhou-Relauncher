@@ -8,6 +8,8 @@ Changed: The profile editor will now fill in missing game profiles with paths th
 Changed: You can now set arbitrary names for game profile IDs as long as they don't start with "th".
 Changed: Enlarged the custom games list.
 Changed: Upgraded to Visual Studio 2017 from 2012. Hopefully shouldn't change anything.
+Changed: Dependencies will now appear only above the patches that depend on them.
+Changed: Required thcrap directories will now be created automatically if they do not exist.
 Fixed: The tray icon's Main Games menu not working (no idea when that broke).
 Fixed: thcrap's encoding for patches not using UTF-8.
 Fixed: Error if patch directory does not exist.

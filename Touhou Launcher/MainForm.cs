@@ -347,7 +347,8 @@ namespace Touhou_Launcher
             minimizeToTray.Checked = curCfg.minimizeToTray;
             showTray.Checked = curCfg.showTray;
             np2Dir.Text = curCfg.np2Dir;
-            crapDir.Text = curCfg.crapDir + "\\bin\\thcrap_loader.exe";
+            if (curCfg.crapDir != "")
+                crapDir.Text = curCfg.crapDir + "\\bin\\thcrap_loader.exe";
             crapStartingRepo.Text = curCfg.StartingRepo;
             foreach (CheckBox chk in GetAll(randomSettings, typeof(CheckBox)))
             {
@@ -995,7 +996,8 @@ namespace Touhou_Launcher
             {
                 ((TextBox)sender).BackColor = SystemColors.Window;
                 curCfg.np2Dir = np2Dir.Text;
-                curCfg.crapDir = Path.GetDirectoryName(crapDir.Text).TrimEnd("\\bin".ToCharArray());
+                string crapPath = Path.GetDirectoryName(crapDir.Text);
+                curCfg.crapDir = Directory.Exists(crapPath + "\\bin") ? crapPath : crapPath.TrimEnd("\\bin".ToCharArray());
                 curCfg.StartingRepo = crapStartingRepo.Text;
             }
             else

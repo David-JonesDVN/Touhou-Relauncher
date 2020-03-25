@@ -77,9 +77,9 @@ namespace Touhou_Launcher
                         }
                     }
                 }
-                foreach (string file in Directory.GetFiles(MainForm.curCfg.crapDir + "\\config", "*.js").Where(n => !n.Contains("games.js") && !n.Contains("config.js")))
+                foreach (FileInfo file in new DirectoryInfo(MainForm.curCfg.crapDir).CreateSubdirectory("config").GetFiles("*.js").Where(n => n.Name != "games.js" && n.Name != "config.js"))
                 {
-                    crapCfg.Items.Add(Path.GetFileName(file));
+                    crapCfg.Items.Add(file.Name);
                 }
             }
             if (MainForm.curCfg.crapDir != "")
@@ -373,12 +373,12 @@ namespace Touhou_Launcher
         private void openReplays_Click(object sender, EventArgs e)
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData, Environment.SpecialFolderOption.DoNotVerify) + "\\ShanghaiAlice\\th";
-            if (Directory.Exists(path + (MainForm.idToNumber[game]).ToString("00") + "\\replay"))
+            if (Directory.Exists(path + MainForm.idToNumber[game].ToString("00") + "\\replay"))
             {
-                Process.Start(path + (MainForm.idToNumber[game]).ToString("00") + "\\replay");
+                Process.Start(path + MainForm.idToNumber[game].ToString("00") + "\\replay");
                 return;
             }
-            else if (Directory.Exists(path + (MainForm.idToNumber[game]).ToString("00") + "tr\\replay"))
+            else if (Directory.Exists(path + MainForm.idToNumber[game].ToString("00") + "tr\\replay"))
             {
                 Process.Start(path + MainForm.idToNumber[game].ToString("00") + "tr\\replay");
                 return;
