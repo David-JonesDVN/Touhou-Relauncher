@@ -31,6 +31,17 @@ namespace Touhou_Launcher
             public bool showText = true;
             public int defaultTextColor = 0;
             public bool randomCheck = true;
+            public int category;
+
+            public GameConfig(int i)
+            {
+                if (i < mainGameCount)
+                    category = 0;
+                else if (i < mainGameCount + fightingGameCount)
+                    category = 1;
+                else
+                    category = 2;
+            }
         }
 
         public class SubNode
@@ -70,7 +81,7 @@ namespace Touhou_Launcher
 
         public class Configs : AppSettings<Configs>
         {
-            public GameConfig[] gameCFG = new GameConfig[28];
+            public GameConfig[] gameCFG = new GameConfig[totalGameCount];
             public SubNode Custom = new SubNode();
             public View customView = View.LargeIcon;
             public SortOrder customSort = SortOrder.Ascending;
@@ -85,7 +96,7 @@ namespace Touhou_Launcher
             {
                 for (int i = 0; i < gameCFG.Length ; i++)
                 {
-                    gameCFG[i] = new GameConfig();
+                    gameCFG[i] = new GameConfig(i);
                     gameCFG[i].GameDir = new List<string> { "", "", "", "" };
                     gameCFG[i].crapCFG = new List<string> { "None", "None" };
                     gameCFG[i].appLocale = new List<bool> { false, false, false, false };
@@ -94,8 +105,11 @@ namespace Touhou_Launcher
         }
 
         private FormWindowState lastState = FormWindowState.Normal;
+        private const int mainGameCount = 17;
+        private const int fightingGameCount = 6;
+        private const int otherGameCount = 5;
+        private const int totalGameCount = mainGameCount + fightingGameCount + otherGameCount;
         public static Configs curCfg = Configs.Load();
-        public const int backwardsCompatibilityGame = 16;
         public static System.Resources.ResourceManager rm;
         public static Dictionary<string, int> dirToNumber = new Dictionary<string, int>
         {
@@ -267,13 +281,13 @@ namespace Touhou_Launcher
 
         public static void launchcrap(int game)
         {
-            if (!File.Exists(curCfg.crapDir))
+            if (!File.Exists(curCfg.crapDir + "\\bin\\thcrap_loader.exe"))
                 MessageBox.Show(rm.GetString("errorcrapNotFound"));
             else if (curCfg.gameCFG[game].crapCFG[0] == "None" || curCfg.gameCFG[game].crapCFG[1] == "None")
                 MessageBox.Show(rm.GetString("errorcrapConfigNotSet"));
             else
             {
-                startProcess(curCfg.crapDir, "\"" + Path.GetDirectoryName(curCfg.crapDir) + "\\" + curCfg.gameCFG[game].crapCFG[1] + "\" " + curCfg.gameCFG[game].crapCFG[0]);
+                startProcess(curCfg.crapDir + "\\bin\\thcrap_loader.exe", "\"" + curCfg.crapDir + "\\config\\" + curCfg.gameCFG[game].crapCFG[1] + "\" " + curCfg.gameCFG[game].crapCFG[0]);
             }
         }
 
@@ -333,7 +347,8 @@ namespace Touhou_Launcher
             minimizeToTray.Checked = curCfg.minimizeToTray;
             showTray.Checked = curCfg.showTray;
             np2Dir.Text = curCfg.np2Dir;
-            crapDir.Text = curCfg.crapDir;
+            if (curCfg.crapDir != "")
+                crapDir.Text = curCfg.crapDir + "\\bin\\thcrap_loader.exe";
             crapStartingRepo.Text = curCfg.StartingRepo;
             foreach (CheckBox chk in GetAll(randomSettings, typeof(CheckBox)))
             {
@@ -501,16 +516,23 @@ namespace Touhou_Launcher
         public MainForm()
         {
             InitializeComponent();
-            int count = new Configs().gameCFG.Length;
-            if (count > curCfg.gameCFG.Length)
+            if (totalGameCount > curCfg.gameCFG.Length)
             {
-                GameConfig[] backwardsComp = new GameConfig[count];
-                Array.Copy(curCfg.gameCFG, backwardsComp, backwardsCompatibilityGame);
-                backwardsComp[backwardsCompatibilityGame] = new GameConfig();
-                backwardsComp[backwardsCompatibilityGame].GameDir = new List<string> { "", "", "", "" };
-                backwardsComp[backwardsCompatibilityGame].crapCFG = new List<string> { "None", "None" };
-                backwardsComp[backwardsCompatibilityGame].appLocale = new List<bool> { false, false, false, false };
-                Array.Copy(curCfg.gameCFG, backwardsCompatibilityGame, backwardsComp, backwardsCompatibilityGame + 1, count - (backwardsCompatibilityGame + 1));
+                GameConfig[] backwardsComp = new GameConfig[totalGameCount];
+                int offset = 0;
+                for (int i = 0; i < backwardsComp.Length; i++)
+                {
+                    backwardsComp[i] = new GameConfig(i);
+                    backwardsComp[i].GameDir = new List<string> { "", "", "", "" };
+                    backwardsComp[i].crapCFG = new List<string> { "None", "None" };
+                    backwardsComp[i].appLocale = new List<bool> { false, false, false, false };
+
+                    if (i - offset < curCfg.gameCFG.Length)
+                        if (curCfg.gameCFG[i - offset].category == backwardsComp[i].category)
+                            backwardsComp[i] = curCfg.gameCFG[i - offset];
+                        else
+                            offset++;
+                }
                 curCfg.gameCFG = backwardsComp;
             }
             foreach (Button btn in GetAll(games, typeof(Button)))
@@ -964,7 +986,7 @@ namespace Touhou_Launcher
                 txtbox.BackColor = SystemColors.Window;
                 txtbox.Text = file;
                 curCfg.np2Dir = np2Dir.Text;
-                curCfg.crapDir = crapDir.Text;
+                curCfg.crapDir = Path.GetDirectoryName(crapDir.Text).TrimEnd("\\bin".ToCharArray());
             }
         }
 
@@ -974,7 +996,8 @@ namespace Touhou_Launcher
             {
                 ((TextBox)sender).BackColor = SystemColors.Window;
                 curCfg.np2Dir = np2Dir.Text;
-                curCfg.crapDir = crapDir.Text;
+                string crapPath = crapDir.Text == "" ? "" : Path.GetDirectoryName(crapDir.Text);
+                curCfg.crapDir = Directory.Exists(crapPath + "\\bin") ? crapPath : crapPath.TrimEnd("\\bin".ToCharArray());
                 curCfg.StartingRepo = crapStartingRepo.Text;
             }
             else
@@ -991,7 +1014,7 @@ namespace Touhou_Launcher
         {
             if (curCfg.crapDir != "")
             {
-                string procDir = Path.GetDirectoryName(curCfg.crapDir) + "\\thcrap_configure.exe";
+                string procDir = curCfg.crapDir + "\\bin\\thcrap_configure.exe";
                 if (File.Exists(procDir))
                     startProcess(procDir);
             }

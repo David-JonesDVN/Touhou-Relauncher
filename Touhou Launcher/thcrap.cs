@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -78,7 +78,7 @@ namespace Touhou_Launcher
         public thcrap(ConfigForm cfg)
         {
             cfgForm = cfg;
-            gamejs = Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\launcher" + MainForm.idToNumber[cfg.game] + ".js";
+            gamejs = MainForm.curCfg.crapDir + "\\config\\launcher" + MainForm.idToNumber[cfg.game] + ".js";
             InitializeComponent();
             InitializeLanguage();
         }
@@ -92,32 +92,41 @@ namespace Touhou_Launcher
                 foreach (Dictionary<string, string> patch in profile.patches)
                 {
                     if (!patchStates.Contains(patch["archive"]))
-                        patchStates.Add(patch["archive"]);
+                        patchStates.Add(patch["archive"].Substring(6));
                 }
             }
-            foreach (string localRepo in Directory.GetFiles(Path.GetDirectoryName(MainForm.curCfg.crapDir), "repo.js", SearchOption.AllDirectories))
+            foreach (FileInfo localRepo in new DirectoryInfo(MainForm.curCfg.crapDir).CreateSubdirectory("repos").GetFiles("repo.js", SearchOption.AllDirectories))
             {
-                addRepo(File.ReadAllText(localRepo), true);
+                addRepo(File.ReadAllText(localRepo.FullName), true);
             }
             searchRepo(MainForm.curCfg.StartingRepo);
-            games = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\games.js"));
+            if (File.Exists(MainForm.curCfg.crapDir + "\\config\\games.js"))
+                games = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(MainForm.curCfg.crapDir + "\\config\\games.js"));
+            for (int i = 0; i < 3; i += 2)
+            {
+                if (MainForm.curCfg.gameCFG[cfgForm.game].GameDir[i] != "" && !games.ContainsValue(MainForm.curCfg.gameCFG[cfgForm.game].GameDir[i].Replace("\\", "/")))
+                {
+                    string augment = i == 2 ? "_custom" : "";
+                    games.Add("th" + (MainForm.idToNumber[cfgForm.game]).ToString("00") + augment, MainForm.curCfg.gameCFG[cfgForm.game].GameDir[i].Replace("\\", "/"));
+                }
+            }
             RefreshProfiles();
         }
 
         private void searchRepo(string address, bool child = false)
         {
             WebClient wc = new WebClient();
+            wc.Encoding = Encoding.UTF8;
             wc.DownloadStringCompleted += onJsonGet;
             wc.DownloadStringAsync(new Uri(address + "/repo.js"), new string[] { address, child.ToString() });
         }
 
         private void onJsonGet(object sender, DownloadStringCompletedEventArgs e)
         {
-            if (e.Error == null)
+            if (e.Error == null && !e.Cancelled)
             {
-                string json = e.Result;
                 string[] args = (string[])e.UserState;
-                addRepo(json);
+                addRepo(e.Result);
                 if (!bool.Parse(args[1]))
                 {
                     searchRepo(args[0].Substring(0, args[0].LastIndexOf('/', args[0].LastIndexOf('/') - 1) + 1));
@@ -147,6 +156,9 @@ namespace Touhou_Launcher
             try
             {
                 repoData data = JsonConvert.DeserializeObject<repoData>(repojs);
+                FileInfo jsPath = new FileInfo(MainForm.curCfg.crapDir + "\\repos\\" + data.id + "\\repo.js");
+                jsPath.Directory.Create();
+                File.WriteAllText(jsPath.FullName, repojs);
                 if (!repoList.Items.ContainsKey(data.id) || (bool)repoList.Items[data.id].Tag == true)
                 {
                     foreach (string neighbor in data.neighbors)
@@ -166,7 +178,7 @@ namespace Touhou_Launcher
                         ListViewItem title = repoList.Items[data.id];
                         title.Tag = offline;
                     }
-                    repoList_SelectedIndexChanged(this, new EventArgs());
+                    repoList_SelectedIndexChanged(repoList.Items[data.id], new EventArgs());
                 }
             }
             catch (Exception ex)
@@ -180,9 +192,9 @@ namespace Touhou_Launcher
             if (e.Error == null)
             {
                 patchData patch = JsonConvert.DeserializeObject<patchData>(e.Result);
-                string jsPath = Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\" + (string)e.UserState + "\\" + patch.id + "\\patch.js";
-                if (!File.Exists(jsPath))
-                    File.WriteAllText(jsPath, e.Result);
+                FileInfo jsPath = new FileInfo(MainForm.curCfg.crapDir + "\\repos\\" + (string)e.UserState + "\\" + patch.id + "\\patch.js");
+                    jsPath.Directory.Create();
+                    File.WriteAllText(jsPath.FullName, e.Result);
                 foreach (string dependency in patch.dependencies)
                 {
                     string[] dependencySet = dependency.Split('/');
@@ -199,19 +211,20 @@ namespace Touhou_Launcher
                     }
                     else
                         repository = dependencySet[0];
-                    addPatch(repository, dependencySet[dependencySet.Length - 1], true);
+                    addPatch(repository, dependencySet[dependencySet.Length - 1], patchStates.IndexOf((string)e.UserState + "/" + patch.id + "/"));
                 }
             }
         }
 
-        private void addPatch(string repo, string patch, bool dependency = false)
+        private void addPatch(string repo, string patch, int dependent = -1)
         {
             if (!patchStates.Contains(repo + "/" + patch + "/"))
             {
-                patchStates.Insert(dependency ? 0 : patchStates.Count, repo + "/" + patch + "/");
-                repoList_SelectedIndexChanged(this, new EventArgs());
+                patchStates.Insert(dependent == -1 ? patchStates.Count : dependent, repo + "/" + patch + "/");
+                repoList_SelectedIndexChanged(repoList.Items[repo], new EventArgs());
             }
             WebClient wc = new WebClient();
+            wc.Encoding = Encoding.UTF8;
             wc.DownloadStringCompleted += onPatchGet;
             wc.DownloadStringAsync(new Uri(repos[repo].servers[0] + "/" + patch + "/patch.js"), repo);
         }
@@ -221,7 +234,7 @@ namespace Touhou_Launcher
             profileData profile = new profileData();
             foreach (string patch in patchStates)
             {
-                profile.patches.Add(new Dictionary<string, string> { {"archive", patch} });
+                profile.patches.Add(new Dictionary<string, string> { {"archive", "repos/" + patch} });
             }
             File.WriteAllText(gamejs, JsonConvert.SerializeObject(profile, Formatting.Indented));
             Dictionary<string, string> games = new Dictionary<string, string>();
@@ -229,12 +242,14 @@ namespace Touhou_Launcher
             {
                 games[game.Text] = game.SubItems[1].Text;
             }
-            File.WriteAllText(Path.GetDirectoryName(MainForm.curCfg.crapDir) + "\\games.js", JsonConvert.SerializeObject(games, Formatting.Indented));
+            File.WriteAllText(MainForm.curCfg.crapDir + "\\config\\games.js", JsonConvert.SerializeObject(games, Formatting.Indented));
             cfgForm.Refreshcrap();
         }
 
         private void repoList_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (sender == repoList || repoList.SelectedItems.Contains((ListViewItem)sender) || repoList.SelectedIndices.Contains(0))
+            {
             patchList.Items.Clear();
             if (repoList.SelectedItems.Count > 0)
             {
@@ -261,6 +276,7 @@ namespace Touhou_Launcher
                 patchList.ItemChecked += patchList_ItemChecked;
             }
         }
+        }
 
         private void patchList_ItemChecked(object sender, ItemCheckedEventArgs e)
         {
@@ -269,7 +285,7 @@ namespace Touhou_Launcher
             {
                 addPatch(repoList.SelectedItems[0].SubItems[1].Text, e.Item.Text);
             }
-            else if (patchStates.Contains(id)) //I have no idea what this is
+            else
             {
                 patchStates.Remove(id);
                 if (repoList.SelectedIndices[0] == 0)

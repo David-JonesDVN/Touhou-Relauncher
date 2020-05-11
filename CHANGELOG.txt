@@ -1,4 +1,24 @@
-1.0-pre3 (30/11/2019)
+1.0-pre4 (06/12/2019)
+Added: Tray icon for Touhou 17.
+Changed: The backwards compatibility code has been rewritten. Unfortunately this breaks compatibility with older versions. An intermediary version called pre3.5 is provided for conversion of settings.json to the new format.
+Changed: The browser will no longer start on a webpage.
+Changed: replays.gensokyo.org was changed to maribelhearn.com/gensokyo as the former is no longer accessible.
+Changed: Updated thcrap interaction to be compatible with the 2019-10-05 update. You may need to set your thcrap_loader path again.
+Changed: The profile editor will now fill in missing game profiles with paths that you have already filled automatically when launching it.
+Changed: You can now set arbitrary names for game profile IDs as long as they don't start with "th".
+Changed: Enlarged the custom games list.
+Changed: Upgraded to Visual Studio 2017 from 2012. Hopefully shouldn't change anything.
+Changed: Dependencies will now appear only above the patches that depend on them.
+Changed: Required thcrap directories will now be created automatically if they do not exist.
+Changed: Repository descriptor json files will now be saved upon visiting the patch menu.
+Changed: Patch descriptor json files will now be updated whenever they're fetched from the repositories.
+Changed: The patch list will no longer lose focus on every repository check.
+Fixed: The tray icon's Main Games menu not working (no idea when that broke).
+Fixed: thcrap's encoding for patches not using UTF-8.
+Fixed: Error if patch directory does not exist.
+Fixed: Error when games.js does not exist.
+
+1.0-pre3 (13/08/2019)
 Added: Selected patches list to show the order of installed patches.
 Added: Touhou 17 support.
 Added: Dependency search for patches.
