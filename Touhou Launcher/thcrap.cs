@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -100,7 +100,8 @@ namespace Touhou_Launcher
                 addRepo(File.ReadAllText(localRepo.FullName), true);
             }
             searchRepo(MainForm.curCfg.StartingRepo);
-            games = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(MainForm.curCfg.crapDir + "\\config\\games.js"));
+            if (File.Exists(MainForm.curCfg.crapDir + "\\config\\games.js"))
+                games = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(MainForm.curCfg.crapDir + "\\config\\games.js"));
             for (int i = 0; i < 3; i += 2)
             {
                 if (MainForm.curCfg.gameCFG[cfgForm.game].GameDir[i] != "" && !games.ContainsValue(MainForm.curCfg.gameCFG[cfgForm.game].GameDir[i].Replace("\\", "/")))
@@ -124,9 +125,8 @@ namespace Touhou_Launcher
         {
             if (e.Error == null && !e.Cancelled)
             {
-                string json = e.Result;
                 string[] args = (string[])e.UserState;
-                addRepo(json);
+                addRepo(e.Result);
                 if (!bool.Parse(args[1]))
                 {
                     searchRepo(args[0].Substring(0, args[0].LastIndexOf('/', args[0].LastIndexOf('/') - 1) + 1));
@@ -156,6 +156,9 @@ namespace Touhou_Launcher
             try
             {
                 repoData data = JsonConvert.DeserializeObject<repoData>(repojs);
+                FileInfo jsPath = new FileInfo(MainForm.curCfg.crapDir + "\\repos\\" + data.id + "\\repo.js");
+                jsPath.Directory.Create();
+                File.WriteAllText(jsPath.FullName, repojs);
                 if (!repoList.Items.ContainsKey(data.id) || (bool)repoList.Items[data.id].Tag == true)
                 {
                     foreach (string neighbor in data.neighbors)
@@ -175,7 +178,7 @@ namespace Touhou_Launcher
                         ListViewItem title = repoList.Items[data.id];
                         title.Tag = offline;
                     }
-                    repoList_SelectedIndexChanged(this, new EventArgs());
+                    repoList_SelectedIndexChanged(repoList.Items[data.id], new EventArgs());
                 }
             }
             catch (Exception ex)
@@ -190,11 +193,8 @@ namespace Touhou_Launcher
             {
                 patchData patch = JsonConvert.DeserializeObject<patchData>(e.Result);
                 FileInfo jsPath = new FileInfo(MainForm.curCfg.crapDir + "\\repos\\" + (string)e.UserState + "\\" + patch.id + "\\patch.js");
-                if (!jsPath.Exists)
-                {
                     jsPath.Directory.Create();
                     File.WriteAllText(jsPath.FullName, e.Result);
-                }
                 foreach (string dependency in patch.dependencies)
                 {
                     string[] dependencySet = dependency.Split('/');
@@ -211,19 +211,17 @@ namespace Touhou_Launcher
                     }
                     else
                         repository = dependencySet[0];
-                    addPatch(repository, dependencySet[dependencySet.Length - 1], (string)e.UserState + "/" + patch.id + "/");
+                    addPatch(repository, dependencySet[dependencySet.Length - 1], patchStates.IndexOf((string)e.UserState + "/" + patch.id + "/"));
                 }
             }
         }
 
-        private void addPatch(string repo, string patch, string dependent = "")
+        private void addPatch(string repo, string patch, int dependent = -1)
         {
             if (!patchStates.Contains(repo + "/" + patch + "/"))
             {
-                int depIndex = patchStates.IndexOf(dependent);
-                depIndex = depIndex == -1 || dependent == "" ? patchStates.Count : depIndex;
-                patchStates.Insert(depIndex, repo + "/" + patch + "/");
-                repoList_SelectedIndexChanged(this, new EventArgs());
+                patchStates.Insert(dependent == -1 ? patchStates.Count : dependent, repo + "/" + patch + "/");
+                repoList_SelectedIndexChanged(repoList.Items[repo], new EventArgs());
             }
             WebClient wc = new WebClient();
             wc.Encoding = Encoding.UTF8;
@@ -250,6 +248,8 @@ namespace Touhou_Launcher
 
         private void repoList_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (sender == repoList || repoList.SelectedItems.Contains((ListViewItem)sender) || repoList.SelectedIndices.Contains(0))
+            {
             patchList.Items.Clear();
             if (repoList.SelectedItems.Count > 0)
             {
@@ -276,6 +276,7 @@ namespace Touhou_Launcher
                 patchList.ItemChecked += patchList_ItemChecked;
             }
         }
+        }
 
         private void patchList_ItemChecked(object sender, ItemCheckedEventArgs e)
         {
@@ -284,7 +285,7 @@ namespace Touhou_Launcher
             {
                 addPatch(repoList.SelectedItems[0].SubItems[1].Text, e.Item.Text);
             }
-            else if (patchStates.Contains(id)) //I have no idea what this is
+            else
             {
                 patchStates.Remove(id);
                 if (repoList.SelectedIndices[0] == 0)
