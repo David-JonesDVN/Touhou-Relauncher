@@ -996,7 +996,7 @@ namespace Touhou_Launcher
             {
                 ((TextBox)sender).BackColor = SystemColors.Window;
                 curCfg.np2Dir = np2Dir.Text;
-                string crapPath = Path.GetDirectoryName(crapDir.Text);
+                string crapPath = crapDir.Text == "" ? "" : Path.GetDirectoryName(crapDir.Text);
                 curCfg.crapDir = Directory.Exists(crapPath + "\\bin") ? crapPath : crapPath.TrimEnd("\\bin".ToCharArray());
                 curCfg.StartingRepo = crapStartingRepo.Text;
             }
