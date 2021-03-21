@@ -673,4 +673,13 @@ random game option:</value>
   <data name="WBaWCTitle" xml:space="preserve">
     <value>Touhou 17: Wily Beast and Weakest Creature</value>
   </data>
+  <data name="UM" xml:space="preserve">
+    <value>Unconnected Marketeers</value>
+  </data>
+  <data name="UMShort" xml:space="preserve">
+    <value>UM</value>
+  </data>
+  <data name="UMTitle" xml:space="preserve">
+    <value>Touhou 18: Unconnected Marketeers</value>
+  </data>
 </root>
