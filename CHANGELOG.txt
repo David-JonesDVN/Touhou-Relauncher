@@ -29,7 +29,7 @@ Fixed: Infinite loop when searching for thcrap repositories.
 Fixed: local repositories having higher priority than thcrap.
 Fixed: thcrap complaining about patch.js not existing.
 
-1.0-pre2 (18/04/2019)
+1.0-pre2 (17/04/2019)
 Added: thcrap Profile Editor. Lets you select patches from a list and configure the game list manually. The repository search starts at a configurable Url. Offline-only builds will also be released without this feature from now on.
 Added: Customizable text color for buttons + the ability to disable the text or banner entirely.
 Added: Saved states for the random games list.

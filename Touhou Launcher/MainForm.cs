@@ -141,17 +141,17 @@ namespace Touhou_Launcher
             {"HSiFS", 15},
             {"WBaWC", 16},
             {"UM", 17},
-            {"IaMP", 17},
-            {"SWR", 18},
-            {"UoNL", 19},
-            {"HM", 20},
-            {"ULiL", 21},
-            {"AoCF", 22},
-            {"StB", 23},
-            {"DS", 24},
-            {"GFW", 25},
-            {"ISC", 26},
-            {"VD", 27}
+            {"IaMP", 18},
+            {"SWR", 19},
+            {"UoNL", 20},
+            {"HM", 21},
+            {"ULiL", 22},
+            {"AoCF", 23},
+            {"StB", 24},
+            {"DS", 25},
+            {"GFW", 26},
+            {"ISC", 27},
+            {"VD", 28}
         };
 
         public static IEnumerable<Control> GetAll(Control control, Type type)
