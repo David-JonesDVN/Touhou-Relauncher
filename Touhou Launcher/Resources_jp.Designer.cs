@@ -19,7 +19,7 @@ namespace Touhou_Launcher {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources_jp {
@@ -367,7 +367,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Japanese/vpatch.ini, English (non-THCRAP), Custom.exe, thcrap.
+        ///   Looks up a localized string similar to 日本語/vpatch.ini, 英語 (non-THCRAP), Custom.exe, thcrap.
         /// </summary>
         public static string defaultExec {
             get {
@@ -1726,6 +1726,33 @@ namespace Touhou_Launcher {
         public static string ULiLTitle {
             get {
                 return ResourceManager.GetString("ULiLTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方虹龍洞.
+        /// </summary>
+        public static string UM {
+            get {
+                return ResourceManager.GetString("UM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 虹龍洞.
+        /// </summary>
+        public static string UMShort {
+            get {
+                return ResourceManager.GetString("UMShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方虹龍洞 ～ Unconnected Marketeers.
+        /// </summary>
+        public static string UMTitle {
+            get {
+                return ResourceManager.GetString("UMTitle", resourceCulture);
             }
         }
         

@@ -1,8 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -16,20 +13,20 @@ namespace Touhou_Launcher
     {
         internal class repoData
         {
-            public string contact;
-            public string id;
+            public string contact = "";
+            public string id = "";
             public List<string> neighbors = new List<string>();
             public Dictionary<string, string> patches = new Dictionary<string, string>();
             public List<string> servers = new List<string>();
-            public string title;
+            public string title = "";
         }
 
         internal class patchData
         {
             public List<string> dependencies = new List<string>();
-            public string id;
+            public string id = "";
             public List<string> servers = new List<string>();
-            public string title;
+            public string title = "";
             public Dictionary<string, bool> fonts = new Dictionary<string, bool>();
         }
 
@@ -193,8 +190,8 @@ namespace Touhou_Launcher
             {
                 patchData patch = JsonConvert.DeserializeObject<patchData>(e.Result);
                 FileInfo jsPath = new FileInfo(MainForm.curCfg.crapDir + "\\repos\\" + (string)e.UserState + "\\" + patch.id + "\\patch.js");
-                    jsPath.Directory.Create();
-                    File.WriteAllText(jsPath.FullName, e.Result);
+                jsPath.Directory.Create();
+                File.WriteAllText(jsPath.FullName, e.Result);
                 foreach (string dependency in patch.dependencies)
                 {
                     string[] dependencySet = dependency.Split('/');
@@ -250,32 +247,32 @@ namespace Touhou_Launcher
         {
             if (sender == repoList || repoList.SelectedItems.Contains((ListViewItem)sender) || repoList.SelectedIndices.Contains(0))
             {
-            patchList.Items.Clear();
-            if (repoList.SelectedItems.Count > 0)
-            {
-                patchList.ItemChecked -= patchList_ItemChecked;
-                if (repoList.SelectedIndices[0] == 0)
+                patchList.Items.Clear();
+                if (repoList.SelectedItems.Count > 0)
                 {
-                    foreach (string patch in patchStates)
+                    patchList.ItemChecked -= patchList_ItemChecked;
+                    if (repoList.SelectedIndices[0] == 0)
                     {
-                        string[] patchSet = patch.Split('/');
-                        ListViewItem title = patchList.Items.Add(patch);
-                        title.SubItems.Add(repos[patchSet[0]].patches[patchSet[1]]);
-                        title.Checked = true;
+                        foreach (string patch in patchStates)
+                        {
+                            string[] patchSet = patch.Split('/');
+                            ListViewItem title = patchList.Items.Add(patch);
+                            title.SubItems.Add(repos[patchSet[0]].patches[patchSet[1]]);
+                            title.Checked = true;
+                        }
                     }
-                }
-                else
-                {
-                    foreach (KeyValuePair<string, string> patch in repos[repoList.SelectedItems[0].SubItems[1].Text].patches)
+                    else
                     {
-                        ListViewItem title = patchList.Items.Add(patch.Key);
-                        title.SubItems.Add(patch.Value);
-                        title.Checked = patchStates.Contains(repoList.SelectedItems[0].SubItems[1].Text + "/" + patch.Key + "/");
+                        foreach (KeyValuePair<string, string> patch in repos[repoList.SelectedItems[0].SubItems[1].Text].patches)
+                        {
+                            ListViewItem title = patchList.Items.Add(patch.Key);
+                            title.SubItems.Add(patch.Value);
+                            title.Checked = patchStates.Contains(repoList.SelectedItems[0].SubItems[1].Text + "/" + patch.Key + "/");
+                        }
                     }
+                    patchList.ItemChecked += patchList_ItemChecked;
                 }
-                patchList.ItemChecked += patchList_ItemChecked;
             }
-        }
         }
 
         private void patchList_ItemChecked(object sender, ItemCheckedEventArgs e)

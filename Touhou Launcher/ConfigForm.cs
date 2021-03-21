@@ -287,7 +287,7 @@ namespace Touhou_Launcher
                     ((TextBox)sender).BackColor = SystemColors.Window;
                     MessageBox.Show(MainForm.rm.GetString("errorOpenImage") + ex);
                 }
-                catch (FileNotFoundException ex)
+                catch (FileNotFoundException)
                 {
                     ((TextBox)sender).BackColor = Color.Red;
                 }

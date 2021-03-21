@@ -72,10 +72,9 @@ namespace Touhou_Launcher
 
             public static T Load(string fileName = DEFAULT_FILENAME)
             {
-                T t = new T();
                 if (File.Exists(fileName))
-                    t = JsonConvert.DeserializeObject<T>(File.ReadAllText(fileName));
-                return t;
+                    return JsonConvert.DeserializeObject<T>(File.ReadAllText(fileName));
+                else return new T();
             }
         }
 
@@ -105,7 +104,7 @@ namespace Touhou_Launcher
         }
 
         private FormWindowState lastState = FormWindowState.Normal;
-        private const int mainGameCount = 17;
+        private const int mainGameCount = 18;
         private const int fightingGameCount = 6;
         private const int otherGameCount = 5;
         private const int totalGameCount = mainGameCount + fightingGameCount + otherGameCount;
@@ -120,7 +119,7 @@ namespace Touhou_Launcher
         };
         public static List<int> idToNumber = new List<int>
         {
-            1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 75, 105, 123, 135, 145, 155, 95, 125, 128, 143, 165
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 75, 105, 123, 135, 145, 155, 95, 125, 128, 143, 165
         };
         public static Dictionary<string, int> nameToID = new Dictionary<string, int>
         {
@@ -141,6 +140,7 @@ namespace Touhou_Launcher
             {"LoLK", 14},
             {"HSiFS", 15},
             {"WBaWC", 16},
+            {"UM", 17},
             {"IaMP", 17},
             {"SWR", 18},
             {"UoNL", 19},
@@ -236,7 +236,7 @@ namespace Touhou_Launcher
                             config[i] = "HDD1FILE=" + hdi;
                             File.WriteAllLines(Path.GetDirectoryName(curCfg.np2Dir) + "\\np21nt.ini", config, Encoding.Unicode);
                         }
-                        catch (Exception ex)
+                        catch (Exception)
                         {
                             return false;
                         }
@@ -254,9 +254,7 @@ namespace Touhou_Launcher
             else if (!NekoProject(dir))
                 MessageBox.Show(rm.GetString("errorInvalidNP2INI"));
             else
-            {
                 startProcess(curCfg.np2Dir);
-            }
         }
 
         public static void launchGame(int game, int dir, bool applocale)
@@ -319,7 +317,7 @@ namespace Touhou_Launcher
                 {
                     wc.DownloadFile(url, path + name);
                 }
-                else if (confirm == System.Windows.Forms.DialogResult.No)
+                else if (confirm == DialogResult.No)
                 {
                     SaveFileDialog browser = new SaveFileDialog();
                     browser.Filter = rm.GetString("replayFilter") + " (*.rpy)|*.rpy|" + rm.GetString("allFilter") + " (*.*)|*.*";
@@ -464,24 +462,26 @@ namespace Touhou_Launcher
             {
                 bool exists = curCfg.gameCFG[game].crapCFG[0] != "None" && curCfg.gameCFG[game].crapCFG[1] != "None";
                 foreach (string dir in curCfg.gameCFG[game].GameDir)
+                {
                     if (dir != "" && dir != curCfg.gameCFG[game].GameDir[3])
                     {
                         exists = true;
                         break;
                     }
+                }
                 if (exists)
                 {
                     if (curCfg.gameCFG[game].customBanner && curCfg.gameCFG[game].bannerOn != "")
                         btn.BackgroundImage = Image.FromFile(curCfg.gameCFG[game].bannerOn);
                     else
-                        btn.BackgroundImage = (System.Drawing.Bitmap)Touhou_Launcher.Properties.Resources.ResourceManager.GetObject((btn.Name == "btnIN" ? "_" : "") + btn.Name.Substring(3).ToLower());
+                        btn.BackgroundImage = (Bitmap)Touhou_Launcher.Properties.Resources.ResourceManager.GetObject((btn.Name == "btnIN" ? "_" : "") + btn.Name.Substring(3).ToLower());
                 }
                 else
                 {
                     if (curCfg.gameCFG[game].customBanner && curCfg.gameCFG[game].bannerOff != "")
                         btn.BackgroundImage = Image.FromFile(curCfg.gameCFG[game].bannerOff);
                     else
-                        btn.BackgroundImage = (System.Drawing.Bitmap)Touhou_Launcher.Properties.Resources.ResourceManager.GetObject((btn.Name == "btnIN" ? "_" : "") + btn.Name.Substring(3).ToLower() + "g");
+                        btn.BackgroundImage = (Bitmap)Touhou_Launcher.Properties.Resources.ResourceManager.GetObject((btn.Name == "btnIN" ? "_" : "") + btn.Name.Substring(3).ToLower() + "g");
 
                 }
             }
@@ -522,16 +522,20 @@ namespace Touhou_Launcher
                 int offset = 0;
                 for (int i = 0; i < backwardsComp.Length; i++)
                 {
+                    if (i - offset < curCfg.gameCFG.Length)
+                    {
+                        if (curCfg.gameCFG[i - offset].category == backwardsComp[i].category)
+                        {
+                            backwardsComp[i] = curCfg.gameCFG[i - offset];
+                            continue;
+                        }
+                        else
+                            offset++;
+                    }
                     backwardsComp[i] = new GameConfig(i);
                     backwardsComp[i].GameDir = new List<string> { "", "", "", "" };
                     backwardsComp[i].crapCFG = new List<string> { "None", "None" };
                     backwardsComp[i].appLocale = new List<bool> { false, false, false, false };
-
-                    if (i - offset < curCfg.gameCFG.Length)
-                        if (curCfg.gameCFG[i - offset].category == backwardsComp[i].category)
-                            backwardsComp[i] = curCfg.gameCFG[i - offset];
-                        else
-                            offset++;
                 }
                 curCfg.gameCFG = backwardsComp;
             }

@@ -167,6 +167,7 @@
             this.btnLoLK = new System.Windows.Forms.Button();
             this.btnHSiFS = new System.Windows.Forms.Button();
             this.btnWBaWC = new System.Windows.Forms.Button();
+            this.btnUM = new System.Windows.Forms.Button();
             this.trayMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.trayMain = new System.Windows.Forms.ToolStripMenuItem();
             this.trayHRtP = new System.Windows.Forms.ToolStripMenuItem();
@@ -1434,6 +1435,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.customList.ContextMenuStrip = this.customContextMenu;
+            this.customList.HideSelection = false;
             this.customList.LabelEdit = true;
             this.customList.LargeImageList = this.customImages;
             this.customList.Location = new System.Drawing.Point(272, 3);
@@ -1795,6 +1797,7 @@
             this.mainLayoutPanel.Controls.Add(this.btnLoLK);
             this.mainLayoutPanel.Controls.Add(this.btnHSiFS);
             this.mainLayoutPanel.Controls.Add(this.btnWBaWC);
+            this.mainLayoutPanel.Controls.Add(this.btnUM);
             this.mainLayoutPanel.Location = new System.Drawing.Point(3, 16);
             this.mainLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
             this.mainLayoutPanel.Name = "mainLayoutPanel";
@@ -2016,6 +2019,24 @@
             this.btnWBaWC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnWBaWC.UseVisualStyleBackColor = true;
             this.btnWBaWC.Click += new System.EventHandler(this.btn_Click);
+            // 
+            // btnUM
+            // 
+            this.btnUM.BackgroundImage = global::Touhou_Launcher.Properties.Resources.umg;
+            this.btnUM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUM.ContextMenuStrip = this.gameContextMenu;
+            this.btnUM.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUM.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUM.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnUM.Location = new System.Drawing.Point(129, 203);
+            this.btnUM.Name = "btnUM";
+            this.btnUM.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnUM.Size = new System.Drawing.Size(120, 44);
+            this.btnUM.TabIndex = 17;
+            this.btnUM.Text = "Unconnected Marketeers";
+            this.btnUM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUM.UseVisualStyleBackColor = true;
+            this.btnUM.Click += new System.EventHandler(this.btn_Click);
             // 
             // trayMenu
             // 
@@ -2597,6 +2618,7 @@
         private System.Windows.Forms.Button btnWBaWC;
         private System.Windows.Forms.CheckBox chkWBaWC;
         private System.Windows.Forms.ToolStripMenuItem trayWBaWC;
+        private System.Windows.Forms.Button btnUM;
     }
 }
 
