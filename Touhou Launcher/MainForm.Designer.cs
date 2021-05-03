@@ -2089,8 +2089,8 @@
             this.trayDDC,
             this.trayLoLK,
             this.trayHSiFS,
-            this.trayUM,
-            this.trayWBaWC});
+            this.trayWBaWC,
+            this.trayUM});
             this.trayMain.Name = "trayMain";
             this.trayMain.Size = new System.Drawing.Size(157, 22);
             this.trayMain.Text = "Main Games";
