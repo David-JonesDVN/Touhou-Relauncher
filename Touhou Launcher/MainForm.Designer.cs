@@ -109,6 +109,7 @@
             this.chkLoLK = new System.Windows.Forms.CheckBox();
             this.chkHSiFS = new System.Windows.Forms.CheckBox();
             this.chkWBaWC = new System.Windows.Forms.CheckBox();
+            this.chkUM = new System.Windows.Forms.CheckBox();
             this.launcherSettings = new System.Windows.Forms.GroupBox();
             this.crapResetStartingRepo = new System.Windows.Forms.Button();
             this.crapStartingRepo = new System.Windows.Forms.TextBox();
@@ -206,7 +207,7 @@
             this.trayOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.trayExit = new System.Windows.Forms.ToolStripMenuItem();
             this.trayIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.chkUM = new System.Windows.Forms.CheckBox();
+            this.trayUM = new System.Windows.Forms.ToolStripMenuItem();
             this.gameContextMenu.SuspendLayout();
             this.customContextMenu.SuspendLayout();
             this.customFolderContextMenu.SuspendLayout();
@@ -1151,6 +1152,19 @@
             this.chkWBaWC.UseVisualStyleBackColor = true;
             this.chkWBaWC.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
+            // chkUM
+            // 
+            this.chkUM.AutoSize = true;
+            this.chkUM.Checked = true;
+            this.chkUM.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkUM.Location = new System.Drawing.Point(139, 72);
+            this.chkUM.Name = "chkUM";
+            this.chkUM.Size = new System.Drawing.Size(43, 17);
+            this.chkUM.TabIndex = 17;
+            this.chkUM.Text = "UM";
+            this.chkUM.UseVisualStyleBackColor = true;
+            this.chkUM.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            // 
             // launcherSettings
             // 
             this.launcherSettings.Controls.Add(this.crapResetStartingRepo);
@@ -2075,6 +2089,7 @@
             this.trayDDC,
             this.trayLoLK,
             this.trayHSiFS,
+            this.trayUM,
             this.trayWBaWC});
             this.trayMain.Name = "trayMain";
             this.trayMain.Size = new System.Drawing.Size(157, 22);
@@ -2396,18 +2411,14 @@
             this.trayIcon.Text = "Touhou Launcher";
             this.trayIcon.DoubleClick += new System.EventHandler(this.MainForm_Show);
             // 
-            // chkUM
+            // trayUM
             // 
-            this.chkUM.AutoSize = true;
-            this.chkUM.Checked = true;
-            this.chkUM.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkUM.Location = new System.Drawing.Point(139, 72);
-            this.chkUM.Name = "chkUM";
-            this.chkUM.Size = new System.Drawing.Size(43, 17);
-            this.chkUM.TabIndex = 17;
-            this.chkUM.Text = "UM";
-            this.chkUM.UseVisualStyleBackColor = true;
-            this.chkUM.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.trayUM.Image = global::Touhou_Launcher.Properties.Resources.Icon_th18;
+            this.trayUM.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayUM.Name = "trayUM";
+            this.trayUM.Size = new System.Drawing.Size(262, 38);
+            this.trayUM.Text = "Unconnected Marketeers";
+            this.trayUM.Click += new System.EventHandler(this.tray_Click);
             // 
             // MainForm
             // 
@@ -2636,6 +2647,7 @@
         private System.Windows.Forms.ToolStripMenuItem trayWBaWC;
         private System.Windows.Forms.Button btnUM;
         private System.Windows.Forms.CheckBox chkUM;
+        private System.Windows.Forms.ToolStripMenuItem trayUM;
     }
 }
 
