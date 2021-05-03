@@ -206,6 +206,7 @@
             this.trayOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.trayExit = new System.Windows.Forms.ToolStripMenuItem();
             this.trayIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.chkUM = new System.Windows.Forms.CheckBox();
             this.gameContextMenu.SuspendLayout();
             this.customContextMenu.SuspendLayout();
             this.customFolderContextMenu.SuspendLayout();
@@ -922,6 +923,7 @@
             this.mainRandomPanel.Controls.Add(this.chkLoLK);
             this.mainRandomPanel.Controls.Add(this.chkHSiFS);
             this.mainRandomPanel.Controls.Add(this.chkWBaWC);
+            this.mainRandomPanel.Controls.Add(this.chkUM);
             this.mainRandomPanel.Location = new System.Drawing.Point(3, 16);
             this.mainRandomPanel.Margin = new System.Windows.Forms.Padding(0);
             this.mainRandomPanel.Name = "mainRandomPanel";
@@ -1147,6 +1149,7 @@
             this.chkWBaWC.TabIndex = 16;
             this.chkWBaWC.Text = "WBaWC";
             this.chkWBaWC.UseVisualStyleBackColor = true;
+            this.chkWBaWC.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // launcherSettings
             // 
@@ -2393,6 +2396,19 @@
             this.trayIcon.Text = "Touhou Launcher";
             this.trayIcon.DoubleClick += new System.EventHandler(this.MainForm_Show);
             // 
+            // chkUM
+            // 
+            this.chkUM.AutoSize = true;
+            this.chkUM.Checked = true;
+            this.chkUM.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkUM.Location = new System.Drawing.Point(139, 72);
+            this.chkUM.Name = "chkUM";
+            this.chkUM.Size = new System.Drawing.Size(43, 17);
+            this.chkUM.TabIndex = 17;
+            this.chkUM.Text = "UM";
+            this.chkUM.UseVisualStyleBackColor = true;
+            this.chkUM.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2619,6 +2635,7 @@
         private System.Windows.Forms.CheckBox chkWBaWC;
         private System.Windows.Forms.ToolStripMenuItem trayWBaWC;
         private System.Windows.Forms.Button btnUM;
+        private System.Windows.Forms.CheckBox chkUM;
     }
 }
 
