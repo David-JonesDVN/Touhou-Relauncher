@@ -35,12 +35,7 @@ namespace Touhou_Launcher
 
             public GameConfig(int i)
             {
-                if (i < mainGameCount)
-                    category = 0;
-                else if (i < mainGameCount + fightingGameCount)
-                    category = 1;
-                else
-                    category = 2;
+                category = i;
             }
         }
 
@@ -94,7 +89,15 @@ namespace Touhou_Launcher
             {
                 for (int i = 0; i < gameCFG.Length ; i++)
                 {
-                    gameCFG[i] = new GameConfig(i);
+                    int category;
+                    if (i < mainGameCount)
+                        category = 0;
+                    else if (i < mainGameCount + fightingGameCount)
+                        category = 1;
+                    else
+                        category = 2;
+
+                    gameCFG[i] = new GameConfig(category);
                     gameCFG[i].GameDir = new List<string> { "", "", "", "" };
                     gameCFG[i].crapCFG = new List<string> { "None", "None" };
                     gameCFG[i].appLocale = new List<bool> { false, false, false, false };
@@ -518,9 +521,17 @@ namespace Touhou_Launcher
                 int offset = 0;
                 for (int i = 0; i < backwardsComp.Length; i++)
                 {
+                    int category;
+                    if (i < mainGameCount)
+                        category = 0;
+                    else if (i < mainGameCount + fightingGameCount)
+                        category = 1;
+                    else
+                        category = 2;
+
                     if (i - offset < curCfg.gameCFG.Length)
                     {
-                        if (curCfg.gameCFG[i - offset].category == backwardsComp[i].category)
+                        if (curCfg.gameCFG[i - offset].category == category)
                         {
                             backwardsComp[i] = curCfg.gameCFG[i - offset];
                             continue;
@@ -528,7 +539,7 @@ namespace Touhou_Launcher
                         else
                             offset++;
                     }
-                    backwardsComp[i] = new GameConfig(i);
+                    backwardsComp[i] = new GameConfig(category);
                     backwardsComp[i].GameDir = new List<string> { "", "", "", "" };
                     backwardsComp[i].crapCFG = new List<string> { "None", "None" };
                     backwardsComp[i].appLocale = new List<bool> { false, false, false, false };
