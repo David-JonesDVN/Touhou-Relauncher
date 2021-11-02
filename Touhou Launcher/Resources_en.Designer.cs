@@ -629,6 +629,33 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Gouyoku Ibun.
+        /// </summary>
+        public static string GI {
+            get {
+                return ResourceManager.GetString("GI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GI.
+        /// </summary>
+        public static string GIShort {
+            get {
+                return ResourceManager.GetString("GIShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 17.5: Gouyoku Ibun.
+        /// </summary>
+        public static string GITitle {
+            get {
+                return ResourceManager.GetString("GITitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hard Disk Image Files.
         /// </summary>
         public static string hdiFilter {

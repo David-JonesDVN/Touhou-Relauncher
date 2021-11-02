@@ -520,7 +520,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Неудаеться открыть изображение: .
+        ///   Looks up a localized string similar to Не удаётся открыть изображение: .
         /// </summary>
         public static string errorOpenImage {
             get {
@@ -624,6 +624,33 @@ namespace Touhou_Launcher {
         public static string GFWTitle {
             get {
                 return ResourceManager.GetString("GFWTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gouyoku Ibun.
+        /// </summary>
+        public static string GI {
+            get {
+                return ResourceManager.GetString("GI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GI.
+        /// </summary>
+        public static string GIShort {
+            get {
+                return ResourceManager.GetString("GIShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 17.5: Gouyoku Ibun.
+        /// </summary>
+        public static string GITitle {
+            get {
+                return ResourceManager.GetString("GITitle", resourceCulture);
             }
         }
         

@@ -682,4 +682,13 @@ random game option:</value>
   <data name="UMTitle" xml:space="preserve">
     <value>Touhou 18: Unconnected Marketeers</value>
   </data>
+  <data name="GI" xml:space="preserve">
+    <value>Gouyoku Ibun</value>
+  </data>
+  <data name="GIShort" xml:space="preserve">
+    <value>GI</value>
+  </data>
+  <data name="GITitle" xml:space="preserve">
+    <value>Touhou 17.5: Gouyoku Ibun</value>
+  </data>
 </root>

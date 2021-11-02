@@ -82,6 +82,7 @@
             this.chkGFW = new System.Windows.Forms.CheckBox();
             this.chkISC = new System.Windows.Forms.CheckBox();
             this.chkVD = new System.Windows.Forms.CheckBox();
+            this.chkGI = new System.Windows.Forms.CheckBox();
             this.fightingRandom = new System.Windows.Forms.GroupBox();
             this.fightingRandomPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.chkIaMP = new System.Windows.Forms.CheckBox();
@@ -143,6 +144,7 @@
             this.btnGFW = new System.Windows.Forms.Button();
             this.btnISC = new System.Windows.Forms.Button();
             this.btnVD = new System.Windows.Forms.Button();
+            this.btnGI = new System.Windows.Forms.Button();
             this.fightingGroup = new System.Windows.Forms.GroupBox();
             this.fightingLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.btnIaMP = new System.Windows.Forms.Button();
@@ -185,6 +187,7 @@
             this.trayLoLK = new System.Windows.Forms.ToolStripMenuItem();
             this.trayHSiFS = new System.Windows.Forms.ToolStripMenuItem();
             this.trayWBaWC = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayUM = new System.Windows.Forms.ToolStripMenuItem();
             this.trayFighting = new System.Windows.Forms.ToolStripMenuItem();
             this.trayIaMP = new System.Windows.Forms.ToolStripMenuItem();
             this.traySWR = new System.Windows.Forms.ToolStripMenuItem();
@@ -198,13 +201,13 @@
             this.trayGFW = new System.Windows.Forms.ToolStripMenuItem();
             this.trayISC = new System.Windows.Forms.ToolStripMenuItem();
             this.trayVD = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayGI = new System.Windows.Forms.ToolStripMenuItem();
             this.trayCustom = new System.Windows.Forms.ToolStripMenuItem();
             this.trayRandom = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.trayOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.trayExit = new System.Windows.Forms.ToolStripMenuItem();
             this.trayIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.trayUM = new System.Windows.Forms.ToolStripMenuItem();
             this.gameContextMenu.SuspendLayout();
             this.customContextMenu.SuspendLayout();
             this.customFolderContextMenu.SuspendLayout();
@@ -707,6 +710,7 @@
             this.miscRandomPanel.Controls.Add(this.chkGFW);
             this.miscRandomPanel.Controls.Add(this.chkISC);
             this.miscRandomPanel.Controls.Add(this.chkVD);
+            this.miscRandomPanel.Controls.Add(this.chkGI);
             this.miscRandomPanel.Location = new System.Drawing.Point(3, 16);
             this.miscRandomPanel.Margin = new System.Windows.Forms.Padding(0);
             this.miscRandomPanel.Name = "miscRandomPanel";
@@ -777,6 +781,19 @@
             this.chkVD.Text = "VD";
             this.chkVD.UseVisualStyleBackColor = true;
             this.chkVD.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            // 
+            // chkGI
+            // 
+            this.chkGI.AutoSize = true;
+            this.chkGI.Checked = true;
+            this.chkGI.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkGI.Location = new System.Drawing.Point(3, 26);
+            this.chkGI.Name = "chkGI";
+            this.chkGI.Size = new System.Drawing.Size(37, 17);
+            this.chkGI.TabIndex = 5;
+            this.chkGI.Text = "GI";
+            this.chkGI.UseVisualStyleBackColor = true;
+            this.chkGI.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // fightingRandom
             // 
@@ -1511,6 +1528,7 @@
             this.miscLayoutPanel.Controls.Add(this.btnGFW);
             this.miscLayoutPanel.Controls.Add(this.btnISC);
             this.miscLayoutPanel.Controls.Add(this.btnVD);
+            this.miscLayoutPanel.Controls.Add(this.btnGI);
             this.miscLayoutPanel.Location = new System.Drawing.Point(3, 16);
             this.miscLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
             this.miscLayoutPanel.Name = "miscLayoutPanel";
@@ -1605,6 +1623,24 @@
             this.btnVD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVD.UseVisualStyleBackColor = true;
             this.btnVD.Click += new System.EventHandler(this.btn_Click);
+            // 
+            // btnGI
+            // 
+            this.btnGI.BackgroundImage = global::Touhou_Launcher.Properties.Resources.gig;
+            this.btnGI.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGI.ContextMenuStrip = this.gameContextMenu;
+            this.btnGI.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGI.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGI.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnGI.Location = new System.Drawing.Point(129, 53);
+            this.btnGI.Name = "btnGI";
+            this.btnGI.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnGI.Size = new System.Drawing.Size(120, 44);
+            this.btnGI.TabIndex = 5;
+            this.btnGI.Text = "Gouyoku Ibun";
+            this.btnGI.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGI.UseVisualStyleBackColor = true;
+            this.btnGI.Click += new System.EventHandler(this.btn_Click);
             // 
             // fightingGroup
             // 
@@ -2214,6 +2250,15 @@
             this.trayWBaWC.Text = "Wily Beast and Weakest Creature";
             this.trayWBaWC.Click += new System.EventHandler(this.tray_Click);
             // 
+            // trayUM
+            // 
+            this.trayUM.Image = global::Touhou_Launcher.Properties.Resources.Icon_th18;
+            this.trayUM.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayUM.Name = "trayUM";
+            this.trayUM.Size = new System.Drawing.Size(262, 38);
+            this.trayUM.Text = "Unconnected Marketeers";
+            this.trayUM.Click += new System.EventHandler(this.tray_Click);
+            // 
             // trayFighting
             // 
             this.trayFighting.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -2288,7 +2333,8 @@
             this.trayDS,
             this.trayGFW,
             this.trayISC,
-            this.trayVD});
+            this.trayVD,
+            this.trayGI});
             this.trayOther.Name = "trayOther";
             this.trayOther.Size = new System.Drawing.Size(157, 22);
             this.trayOther.Text = "Other Games";
@@ -2338,6 +2384,15 @@
             this.trayVD.Text = "Violet Detector";
             this.trayVD.Click += new System.EventHandler(this.tray_Click);
             // 
+            // trayGI
+            // 
+            this.trayGI.Image = global::Touhou_Launcher.Properties.Resources.Icon_th175;
+            this.trayGI.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayGI.Name = "trayGI";
+            this.trayGI.Size = new System.Drawing.Size(203, 38);
+            this.trayGI.Text = "Gouyoku Ibun";
+            this.trayGI.Click += new System.EventHandler(this.tray_Click);
+            // 
             // trayCustom
             // 
             this.trayCustom.Name = "trayCustom";
@@ -2376,15 +2431,6 @@
             this.trayIcon.Icon = global::Touhou_Launcher.Properties.Resources.thicon;
             this.trayIcon.Text = "Touhou Launcher";
             this.trayIcon.DoubleClick += new System.EventHandler(this.MainForm_Show);
-            // 
-            // trayUM
-            // 
-            this.trayUM.Image = global::Touhou_Launcher.Properties.Resources.Icon_th18;
-            this.trayUM.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayUM.Name = "trayUM";
-            this.trayUM.Size = new System.Drawing.Size(262, 38);
-            this.trayUM.Text = "Unconnected Marketeers";
-            this.trayUM.Click += new System.EventHandler(this.tray_Click);
             // 
             // MainForm
             // 
@@ -2611,6 +2657,9 @@
         private System.Windows.Forms.Button btnUM;
         private System.Windows.Forms.CheckBox chkUM;
         private System.Windows.Forms.ToolStripMenuItem trayUM;
+        private System.Windows.Forms.CheckBox chkGI;
+        private System.Windows.Forms.Button btnGI;
+        private System.Windows.Forms.ToolStripMenuItem trayGI;
     }
 }
 

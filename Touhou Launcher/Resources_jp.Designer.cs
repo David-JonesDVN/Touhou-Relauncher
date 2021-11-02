@@ -629,6 +629,33 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 東方剛欲異聞.
+        /// </summary>
+        public static string GI {
+            get {
+                return ResourceManager.GetString("GI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 剛欲異聞.
+        /// </summary>
+        public static string GIShort {
+            get {
+                return ResourceManager.GetString("GIShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方剛欲異聞　～ 水没した沈愁地獄.
+        /// </summary>
+        public static string GITitle {
+            get {
+                return ResourceManager.GetString("GITitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hard Disk Image Files.
         /// </summary>
         public static string hdiFilter {

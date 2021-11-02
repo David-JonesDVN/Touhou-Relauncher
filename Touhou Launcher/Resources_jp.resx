@@ -682,4 +682,13 @@ random game option:</value>
   <data name="UMTitle" xml:space="preserve">
     <value>東方虹龍洞 ～ Unconnected Marketeers</value>
   </data>
+  <data name="GI" xml:space="preserve">
+    <value>東方剛欲異聞</value>
+  </data>
+  <data name="GIShort" xml:space="preserve">
+    <value>剛欲異聞</value>
+  </data>
+  <data name="GITitle" xml:space="preserve">
+    <value>東方剛欲異聞　～ 水没した沈愁地獄</value>
+  </data>
 </root>

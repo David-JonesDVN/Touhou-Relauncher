@@ -69,7 +69,7 @@ namespace Touhou_Launcher
             {
                 if (File.Exists(fileName))
                     return JsonConvert.DeserializeObject<T>(File.ReadAllText(fileName));
-                return new T();
+                else return new T();
             }
         }
 
@@ -108,7 +108,7 @@ namespace Touhou_Launcher
         private FormWindowState lastState = FormWindowState.Normal;
         private const int mainGameCount = 18;
         private const int fightingGameCount = 6;
-        private const int otherGameCount = 5;
+        private const int otherGameCount = 6;
         private const int totalGameCount = mainGameCount + fightingGameCount + otherGameCount;
         public static Configs curCfg = Configs.Load();
         public static System.Resources.ResourceManager rm;
@@ -121,7 +121,7 @@ namespace Touhou_Launcher
         };
         public static List<int> idToNumber = new List<int>
         {
-            1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 75, 105, 123, 135, 145, 155, 95, 125, 128, 143, 165
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 75, 105, 123, 135, 145, 155, 95, 125, 128, 143, 165, 175
         };
         public static Dictionary<string, int> nameToID = new Dictionary<string, int>
         {
@@ -153,7 +153,8 @@ namespace Touhou_Launcher
             {"DS", 25},
             {"GFW", 26},
             {"ISC", 27},
-            {"VD", 28}
+            {"VD", 28},
+            {"GI", 29}
         };
 
         public static IEnumerable<Control> GetAll(Control control, Type type)
