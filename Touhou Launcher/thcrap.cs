@@ -40,6 +40,7 @@ namespace Touhou_Launcher
         ConfigForm cfgForm;
         string gamejs;
         Dictionary<string, repoData> repos = new Dictionary<string, repoData>();
+        List<string> checkedRepos = new List<string>();
         List<string> patchStates = new List<string>();
         Dictionary<string, string> games = new Dictionary<string, string>();
 
@@ -112,10 +113,14 @@ namespace Touhou_Launcher
 
         private void searchRepo(string address, bool child = false)
         {
-            WebClient wc = new WebClient();
-            wc.Encoding = Encoding.UTF8;
-            wc.DownloadStringCompleted += onJsonGet;
-            wc.DownloadStringAsync(new Uri(address + "/repo.js"), new string[] { address, child.ToString() });
+            if (!checkedRepos.Contains(address))
+            {
+                checkedRepos.Add(address);
+                WebClient wc = new WebClient();
+                wc.Encoding = Encoding.UTF8;
+                wc.DownloadStringCompleted += onJsonGet;
+                wc.DownloadStringAsync(new Uri(address + "/repo.js"), new string[] { address, child.ToString() });
+            }
         }
 
         private void onJsonGet(object sender, DownloadStringCompletedEventArgs e)

@@ -519,6 +519,8 @@ namespace Touhou_Launcher
 
         public MainForm()
         {
+            System.Net.ServicePointManager.Expect100Continue = true;
+            System.Net.ServicePointManager.SecurityProtocol = (System.Net.SecurityProtocolType)3072;
             InitializeComponent();
             if (totalGameCount > curCfg.gameCFG.Length)
             {
@@ -886,8 +888,7 @@ namespace Touhou_Launcher
         {
             if (e.KeyCode == Keys.Enter)
             {
-                gensokyoReplays.Checked = false;
-                royalflareReplays.Checked = false;
+                maribelReplays.Checked = false;
                 appspotReplays.Checked = false;
                 Replays_CheckedChanged(sender, new EventArgs());
             }

@@ -131,8 +131,7 @@
             this.replayPanel = new System.Windows.Forms.Panel();
             this.linkReplays = new System.Windows.Forms.TextBox();
             this.appspotReplays = new System.Windows.Forms.RadioButton();
-            this.royalflareReplays = new System.Windows.Forms.RadioButton();
-            this.gensokyoReplays = new System.Windows.Forms.RadioButton();
+            this.maribelReplays = new System.Windows.Forms.RadioButton();
             this.customGames = new System.Windows.Forms.TabPage();
             this.customAdd = new System.Windows.Forms.Button();
             this.customList = new System.Windows.Forms.ListView();
@@ -626,9 +625,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(9, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 24);
+            this.label1.Size = new System.Drawing.Size(202, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Touhou Launcher 1.0";
+            this.label1.Text = "Touhou Launcher 1.01";
             // 
             // settings
             // 
@@ -1380,8 +1379,7 @@
             this.replayPanel.BackColor = System.Drawing.Color.Transparent;
             this.replayPanel.Controls.Add(this.linkReplays);
             this.replayPanel.Controls.Add(this.appspotReplays);
-            this.replayPanel.Controls.Add(this.royalflareReplays);
-            this.replayPanel.Controls.Add(this.gensokyoReplays);
+            this.replayPanel.Controls.Add(this.maribelReplays);
             this.replayPanel.Location = new System.Drawing.Point(0, 0);
             this.replayPanel.Name = "replayPanel";
             this.replayPanel.Size = new System.Drawing.Size(518, 29);
@@ -1389,9 +1387,9 @@
             // 
             // linkReplays
             // 
-            this.linkReplays.Location = new System.Drawing.Point(406, 3);
+            this.linkReplays.Location = new System.Drawing.Point(241, 3);
             this.linkReplays.Name = "linkReplays";
-            this.linkReplays.Size = new System.Drawing.Size(109, 20);
+            this.linkReplays.Size = new System.Drawing.Size(274, 20);
             this.linkReplays.TabIndex = 3;
             this.linkReplays.KeyDown += new System.Windows.Forms.KeyEventHandler(this.linkReplays_KeyDown);
             // 
@@ -1400,7 +1398,7 @@
             this.appspotReplays.Appearance = System.Windows.Forms.Appearance.Button;
             this.appspotReplays.AutoSize = true;
             this.appspotReplays.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.appspotReplays.Location = new System.Drawing.Point(277, 3);
+            this.appspotReplays.Location = new System.Drawing.Point(112, 3);
             this.appspotReplays.Name = "appspotReplays";
             this.appspotReplays.Size = new System.Drawing.Size(123, 23);
             this.appspotReplays.TabIndex = 2;
@@ -1409,34 +1407,20 @@
             this.appspotReplays.UseVisualStyleBackColor = true;
             this.appspotReplays.CheckedChanged += new System.EventHandler(this.Replays_CheckedChanged);
             // 
-            // royalflareReplays
+            // maribelReplays
             // 
-            this.royalflareReplays.Appearance = System.Windows.Forms.Appearance.Button;
-            this.royalflareReplays.AutoSize = true;
-            this.royalflareReplays.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.royalflareReplays.Location = new System.Drawing.Point(163, 3);
-            this.royalflareReplays.Name = "royalflareReplays";
-            this.royalflareReplays.Size = new System.Drawing.Size(108, 23);
-            this.royalflareReplays.TabIndex = 1;
-            this.royalflareReplays.Text = "replay.royalflare.net";
-            this.royalflareReplays.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.royalflareReplays.UseVisualStyleBackColor = true;
-            this.royalflareReplays.CheckedChanged += new System.EventHandler(this.Replays_CheckedChanged);
-            // 
-            // gensokyoReplays
-            // 
-            this.gensokyoReplays.Appearance = System.Windows.Forms.Appearance.Button;
-            this.gensokyoReplays.AutoSize = true;
-            this.gensokyoReplays.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.gensokyoReplays.Location = new System.Drawing.Point(6, 3);
-            this.gensokyoReplays.Name = "gensokyoReplays";
-            this.gensokyoReplays.Size = new System.Drawing.Size(151, 23);
-            this.gensokyoReplays.TabIndex = 0;
-            this.gensokyoReplays.TabStop = true;
-            this.gensokyoReplays.Text = "maribelhearn.com/gensokyo";
-            this.gensokyoReplays.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.gensokyoReplays.UseVisualStyleBackColor = true;
-            this.gensokyoReplays.CheckedChanged += new System.EventHandler(this.Replays_CheckedChanged);
+            this.maribelReplays.Appearance = System.Windows.Forms.Appearance.Button;
+            this.maribelReplays.AutoSize = true;
+            this.maribelReplays.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.maribelReplays.Location = new System.Drawing.Point(6, 3);
+            this.maribelReplays.Name = "maribelReplays";
+            this.maribelReplays.Size = new System.Drawing.Size(100, 23);
+            this.maribelReplays.TabIndex = 0;
+            this.maribelReplays.TabStop = true;
+            this.maribelReplays.Text = "maribelhearn.com";
+            this.maribelReplays.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.maribelReplays.UseVisualStyleBackColor = true;
+            this.maribelReplays.CheckedChanged += new System.EventHandler(this.Replays_CheckedChanged);
             // 
             // customGames
             // 
@@ -2545,8 +2529,7 @@
         private System.Windows.Forms.WebBrowser replayBrowser;
         private System.Windows.Forms.Panel replayPanel;
         private System.Windows.Forms.RadioButton appspotReplays;
-        private System.Windows.Forms.RadioButton royalflareReplays;
-        private System.Windows.Forms.RadioButton gensokyoReplays;
+        private System.Windows.Forms.RadioButton maribelReplays;
         private System.Windows.Forms.TabPage customGames;
         private System.Windows.Forms.Button customAdd;
         private System.Windows.Forms.ListView customList;
