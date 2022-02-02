@@ -1003,7 +1003,8 @@ namespace Touhou_Launcher
                 txtbox.BackColor = SystemColors.Window;
                 txtbox.Text = file;
                 curCfg.np2Dir = np2Dir.Text;
-                curCfg.crapDir = Path.GetDirectoryName(crapDir.Text).TrimEnd("\\bin".ToCharArray());
+                string crapPath = Path.GetDirectoryName(crapDir.Text);
+                curCfg.crapDir = (Directory.Exists(crapPath + "\\bin") || !crapPath.EndsWith("\\bin")) ? crapPath : crapPath.Substring(0, crapPath.LastIndexOf("\\bin"));
             }
         }
 
@@ -1013,8 +1014,8 @@ namespace Touhou_Launcher
             {
                 ((TextBox)sender).BackColor = SystemColors.Window;
                 curCfg.np2Dir = np2Dir.Text;
-                string crapPath = crapDir.Text == "" ? "" : Path.GetDirectoryName(crapDir.Text);
-                curCfg.crapDir = Directory.Exists(crapPath + "\\bin") ? crapPath : crapPath.TrimEnd("\\bin".ToCharArray());
+                string crapPath = Path.GetDirectoryName(crapDir.Text);
+                curCfg.crapDir = (Directory.Exists(crapPath + "\\bin") || !crapPath.EndsWith("\\bin")) ? crapPath : crapPath.Substring(0, crapPath.LastIndexOf("\\bin"));
                 curCfg.StartingRepo = crapStartingRepo.Text;
             }
             else
@@ -1032,7 +1033,9 @@ namespace Touhou_Launcher
             if (curCfg.crapDir != "")
             {
                 string procDir = curCfg.crapDir + "\\bin\\thcrap_configure.exe";
-                if (File.Exists(procDir))
+                if (!File.Exists(procDir))
+                    MessageBox.Show(rm.GetString("errorcrapNotFound"));
+                else
                     startProcess(procDir);
             }
         }
