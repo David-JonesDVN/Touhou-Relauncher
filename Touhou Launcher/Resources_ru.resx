@@ -589,7 +589,7 @@
     <value>Файлы "ini" Neko Project II недействителен</value>
   </data>
   <data name="errorGameNotFound" xml:space="preserve">
-    <value>Игра не найдена</value>
+    <value>Игра не найдена. Please check the path in the right click menu.</value>
   </data>
   <data name="replayFilter" xml:space="preserve">
     <value>Файл повтров</value>
@@ -727,5 +727,8 @@
   </data>
   <data name="GITitle" xml:space="preserve">
     <value>Touhou 17.5: Gouyoku Ibun</value>
+  </data>
+  <data name="errorNoCategorySelected" xml:space="preserve">
+    <value>Не выбрана ни одна категория</value>
   </data>
 </root>
