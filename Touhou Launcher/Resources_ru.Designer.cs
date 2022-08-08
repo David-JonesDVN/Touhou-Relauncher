@@ -493,7 +493,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Игра не найдена.
+        ///   Looks up a localized string similar to Игра не найдена. Please check the path in the right click menu..
         /// </summary>
         public static string errorGameNotFound {
             get {
@@ -507,6 +507,15 @@ namespace Touhou_Launcher {
         public static string errorInvalidNP2INI {
             get {
                 return ResourceManager.GetString("errorInvalidNP2INI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Не выбрана ни одна категория.
+        /// </summary>
+        public static string errorNoCategorySelected {
+            get {
+                return ResourceManager.GetString("errorNoCategorySelected", resourceCulture);
             }
         }
         

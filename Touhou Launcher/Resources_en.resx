@@ -591,7 +591,7 @@ random game option:</value>
     <value>Neko Project II's configuration ini is not valid.</value>
   </data>
   <data name="errorGameNotFound" xml:space="preserve">
-    <value>Cannot find game</value>
+    <value>Cannot find game. Please check the path in the right click menu.</value>
   </data>
   <data name="replayFilter" xml:space="preserve">
     <value>Replay Files</value>
@@ -690,5 +690,8 @@ random game option:</value>
   </data>
   <data name="GITitle" xml:space="preserve">
     <value>Touhou 17.5: Gouyoku Ibun</value>
+  </data>
+  <data name="errorNoCategorySelected" xml:space="preserve">
+    <value>No Category Selected</value>
   </data>
 </root>

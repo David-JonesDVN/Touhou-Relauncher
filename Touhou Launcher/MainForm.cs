@@ -666,6 +666,10 @@ namespace Touhou_Launcher
             {
                 customAddItem(FileBrowser(rm.GetString("gameSelectTitle"), rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + rm.GetString("allFilter") + " (*.*)|*.*", true));
             }
+            else
+            {
+                MessageBox.Show(rm.GetString("errorNoCategorySelected"));
+            }
         }
 
         private void customTree_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
