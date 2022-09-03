@@ -85,7 +85,7 @@ namespace Touhou_Launcher
             public int language = 0;
             public string np2Dir = "";
             public string crapDir = "";
-            public string StartingRepo = @"https://mirrors.thpatch.net/nmlgc/";
+            public string StartingRepo = @"https://srv.thpatch.net/";
             public Configs()
             {
                 for (int i = 0; i < gameCFG.Length ; i++)

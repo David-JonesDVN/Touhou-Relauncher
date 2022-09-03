@@ -43,6 +43,7 @@ namespace Touhou_Launcher
         List<string> checkedRepos = new List<string>();
         List<string> patchStates = new List<string>();
         Dictionary<string, string> games = new Dictionary<string, string>();
+        Queue<string> repoQueue = new Queue<string>();
 
         private void InitializeLanguage()
         {
@@ -111,45 +112,42 @@ namespace Touhou_Launcher
             RefreshProfiles();
         }
 
-        private void searchRepo(string address, bool child = false)
+        private async void searchRepo(string address)
         {
-            if (!checkedRepos.Contains(address))
+            WebClient wc = new WebClient();
+            wc.Encoding = Encoding.UTF8;
+            while (true)
             {
-                checkedRepos.Add(address);
-                WebClient wc = new WebClient();
-                wc.Encoding = Encoding.UTF8;
-                wc.DownloadStringCompleted += onJsonGet;
-                wc.DownloadStringAsync(new Uri(address + "/repo.js"), new string[] { address, child.ToString() });
-            }
-        }
-
-        private void onJsonGet(object sender, DownloadStringCompletedEventArgs e)
-        {
-            if (e.Error == null && !e.Cancelled)
-            {
-                string[] args = (string[])e.UserState;
-                addRepo(e.Result);
-                if (!bool.Parse(args[1]))
+                if (!checkedRepos.Contains(address))
                 {
-                    searchRepo(args[0].Substring(0, args[0].LastIndexOf('/', args[0].LastIndexOf('/') - 1) + 1));
-                }
-            }
-            else
-            {
-                /* Code for exploring the thcrap mirror manually.
-                using (var reader = new StreamReader(WebRequest.Create(address).GetResponse().GetResponseStream()))
-                {
-                    string result = reader.ReadToEnd();
-                    System.Text.RegularExpressions.MatchCollection matches = new System.Text.RegularExpressions.Regex("<a href=\".*\">(?<name>.*)</a>").Matches(result);
-                    //Alt Regex: <a\s+(?:[^>]*?\s+)?href=(["'])(.*?)\1
-                    foreach (System.Text.RegularExpressions.Match match in matches)
+                    try
                     {
-                        if (!match.Success) { continue; }
-                        if (match.Groups["name"].Value.EndsWith("/"))
-                            searchRepo(address + match.Groups["name"].Value, true);
+                        addRepo(await wc.DownloadStringTaskAsync(address + "/repo.js"));
+                        checkedRepos.Add(address);
+                    }
+                    catch (Exception ex)
+                    {
+                        /* Code for exploring the thcrap mirror manually.
+                        using (var reader = new StreamReader(WebRequest.Create(address).GetResponse().GetResponseStream()))
+                        {
+                            string result = reader.ReadToEnd();
+                            System.Text.RegularExpressions.MatchCollection matches = new System.Text.RegularExpressions.Regex("<a href=\".*\">(?<name>.*)</a>").Matches(result);
+                            //Alt Regex: <a\s+(?:[^>]*?\s+)?href=(["'])(.*?)\1
+                            foreach (System.Text.RegularExpressions.Match match in matches)
+                            {
+                                if (!match.Success) { continue; }
+                                if (match.Groups["name"].Value.EndsWith("/"))
+                                    searchRepo(address + match.Groups["name"].Value, true);
+                            }
+                        }
+                        */
                     }
                 }
-                */
+                if (repoQueue.Count > 0)
+                {
+                    address = repoQueue.Dequeue();
+                }
+                else break;
             }
         }
 
@@ -165,7 +163,7 @@ namespace Touhou_Launcher
                 {
                     foreach (string neighbor in data.neighbors)
                     {
-                        searchRepo(neighbor, true);
+                        repoQueue.Enqueue(neighbor);
                     }
                     repos[data.id] = data;
                     if (!repoList.Items.ContainsKey(data.id))
