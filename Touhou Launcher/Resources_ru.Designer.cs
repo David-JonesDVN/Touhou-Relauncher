@@ -664,6 +664,33 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 100th Black Market.
+        /// </summary>
+        public static string HBM {
+            get {
+                return ResourceManager.GetString("HBM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 100BM.
+        /// </summary>
+        public static string HBMShort {
+            get {
+                return ResourceManager.GetString("HBMShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 18.5: 100th Black Market.
+        /// </summary>
+        public static string HBMTitle {
+            get {
+                return ResourceManager.GetString("HBMTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Файлы образов жесткого диска.
         /// </summary>
         public static string hdiFilter {

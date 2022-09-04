@@ -108,7 +108,7 @@ namespace Touhou_Launcher
         private FormWindowState lastState = FormWindowState.Normal;
         private const int mainGameCount = 18;
         private const int fightingGameCount = 6;
-        private const int otherGameCount = 6;
+        private const int otherGameCount = 7;
         private const int totalGameCount = mainGameCount + fightingGameCount + otherGameCount;
         public static Configs curCfg = Configs.Load();
         public static System.Resources.ResourceManager rm;
@@ -121,7 +121,7 @@ namespace Touhou_Launcher
         };
         public static List<int> idToNumber = new List<int>
         {
-            1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 75, 105, 123, 135, 145, 155, 95, 125, 128, 143, 165, 175
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 75, 105, 123, 135, 145, 155, 95, 125, 128, 143, 165, 175, 185
         };
         public static Dictionary<string, int> nameToID = new Dictionary<string, int>
         {
@@ -154,7 +154,8 @@ namespace Touhou_Launcher
             {"GFW", 26},
             {"ISC", 27},
             {"VD", 28},
-            {"GI", 29}
+            {"GI", 29},
+            {"HBM", 30}
         };
 
         public static IEnumerable<Control> GetAll(Control control, Type type)
