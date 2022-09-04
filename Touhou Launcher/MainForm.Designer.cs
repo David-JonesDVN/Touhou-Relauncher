@@ -210,6 +210,9 @@
             this.trayOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.trayExit = new System.Windows.Forms.ToolStripMenuItem();
             this.trayIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.btnHBM = new System.Windows.Forms.Button();
+            this.trayHBM = new System.Windows.Forms.ToolStripMenuItem();
+            this.chkHBM = new System.Windows.Forms.CheckBox();
             this.gameContextMenu.SuspendLayout();
             this.customContextMenu.SuspendLayout();
             this.customFolderContextMenu.SuspendLayout();
@@ -713,6 +716,7 @@
             this.miscRandomPanel.Controls.Add(this.chkISC);
             this.miscRandomPanel.Controls.Add(this.chkVD);
             this.miscRandomPanel.Controls.Add(this.chkGI);
+            this.miscRandomPanel.Controls.Add(this.chkHBM);
             this.miscRandomPanel.Location = new System.Drawing.Point(3, 16);
             this.miscRandomPanel.Margin = new System.Windows.Forms.Padding(0);
             this.miscRandomPanel.Name = "miscRandomPanel";
@@ -1547,6 +1551,7 @@
             this.miscLayoutPanel.Controls.Add(this.btnISC);
             this.miscLayoutPanel.Controls.Add(this.btnVD);
             this.miscLayoutPanel.Controls.Add(this.btnGI);
+            this.miscLayoutPanel.Controls.Add(this.btnHBM);
             this.miscLayoutPanel.Location = new System.Drawing.Point(3, 16);
             this.miscLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
             this.miscLayoutPanel.Name = "miscLayoutPanel";
@@ -2352,7 +2357,8 @@
             this.trayGFW,
             this.trayISC,
             this.trayVD,
-            this.trayGI});
+            this.trayGI,
+            this.trayHBM});
             this.trayOther.Name = "trayOther";
             this.trayOther.Size = new System.Drawing.Size(157, 22);
             this.trayOther.Text = "Other Games";
@@ -2449,6 +2455,46 @@
             this.trayIcon.Icon = global::Touhou_Launcher.Properties.Resources.thicon;
             this.trayIcon.Text = "Touhou Launcher";
             this.trayIcon.DoubleClick += new System.EventHandler(this.MainForm_Show);
+            // 
+            // btnHBM
+            // 
+            this.btnHBM.BackgroundImage = global::Touhou_Launcher.Properties.Resources.hbmg;
+            this.btnHBM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHBM.ContextMenuStrip = this.gameContextMenu;
+            this.btnHBM.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHBM.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnHBM.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnHBM.Location = new System.Drawing.Point(255, 53);
+            this.btnHBM.Name = "btnHBM";
+            this.btnHBM.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnHBM.Size = new System.Drawing.Size(120, 44);
+            this.btnHBM.TabIndex = 6;
+            this.btnHBM.Text = "100th Black Market";
+            this.btnHBM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHBM.UseVisualStyleBackColor = true;
+            this.btnHBM.Click += new System.EventHandler(this.btn_Click);
+            // 
+            // trayHBM
+            // 
+            this.trayHBM.Image = global::Touhou_Launcher.Properties.Resources.Icon_th185;
+            this.trayHBM.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayHBM.Name = "trayHBM";
+            this.trayHBM.Size = new System.Drawing.Size(203, 38);
+            this.trayHBM.Text = "100th Black Market";
+            this.trayHBM.Click += new System.EventHandler(this.tray_Click);
+            // 
+            // chkHBM
+            // 
+            this.chkHBM.AutoSize = true;
+            this.chkHBM.Checked = true;
+            this.chkHBM.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkHBM.Location = new System.Drawing.Point(46, 26);
+            this.chkHBM.Name = "chkHBM";
+            this.chkHBM.Size = new System.Drawing.Size(60, 17);
+            this.chkHBM.TabIndex = 6;
+            this.chkHBM.Text = "100BM";
+            this.chkHBM.UseVisualStyleBackColor = true;
+            this.chkHBM.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // MainForm
             // 
@@ -2680,6 +2726,9 @@
         private System.Windows.Forms.CheckBox chkGI;
         private System.Windows.Forms.Button btnGI;
         private System.Windows.Forms.ToolStripMenuItem trayGI;
+        private System.Windows.Forms.Button btnHBM;
+        private System.Windows.Forms.ToolStripMenuItem trayHBM;
+        private System.Windows.Forms.CheckBox chkHBM;
     }
 }
 

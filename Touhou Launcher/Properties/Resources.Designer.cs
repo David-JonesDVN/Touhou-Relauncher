@@ -203,6 +203,26 @@ namespace Touhou_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap hbm {
+            get {
+                object obj = ResourceManager.GetObject("hbm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap hbmg {
+            get {
+                object obj = ResourceManager.GetObject("hbmg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap hm {
             get {
                 object obj = ResourceManager.GetObject("hm", resourceCulture);
@@ -586,6 +606,16 @@ namespace Touhou_Launcher.Properties {
         public static System.Drawing.Bitmap Icon_th18 {
             get {
                 object obj = ResourceManager.GetObject("Icon_th18", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Icon_th185 {
+            get {
+                object obj = ResourceManager.GetObject("Icon_th185", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

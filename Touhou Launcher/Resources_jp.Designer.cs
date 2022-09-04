@@ -719,6 +719,33 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to バレットフィリア達の闇市場.
+        /// </summary>
+        public static string HBM {
+            get {
+                return ResourceManager.GetString("HBM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to バレットフィリア.
+        /// </summary>
+        public static string HBMShort {
+            get {
+                return ResourceManager.GetString("HBMShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to バレットフィリア達の闇市場　〜 100th Black Market.
+        /// </summary>
+        public static string HBMTitle {
+            get {
+                return ResourceManager.GetString("HBMTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hard Disk Image Files.
         /// </summary>
         public static string hdiFilter {

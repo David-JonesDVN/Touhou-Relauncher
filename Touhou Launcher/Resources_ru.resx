@@ -731,4 +731,13 @@
   <data name="errorNoCategorySelected" xml:space="preserve">
     <value>Не выбрана ни одна категория</value>
   </data>
+  <data name="HBM" xml:space="preserve">
+    <value>100th Black Market</value>
+  </data>
+  <data name="HBMShort" xml:space="preserve">
+    <value>100BM</value>
+  </data>
+  <data name="HBMTitle" xml:space="preserve">
+    <value>Touhou 18.5: 100th Black Market</value>
+  </data>
 </root>
