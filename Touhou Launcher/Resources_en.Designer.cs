@@ -611,15 +611,6 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fighting Games.
-        /// </summary>
-        public static string fightingGroup {
-            get {
-                return ResourceManager.GetString("fightingGroup", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Game Configuration: .
         /// </summary>
         public static string gameConfiguration {
@@ -1232,15 +1223,6 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Other Games.
-        /// </summary>
-        public static string otherGroup {
-            get {
-                return ResourceManager.GetString("otherGroup", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Patch.
         /// </summary>
         public static string patchColumn {
@@ -1264,6 +1246,15 @@ namespace Touhou_Launcher {
         public static string pathColumn {
             get {
                 return ResourceManager.GetString("pathColumn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PC-98 Games.
+        /// </summary>
+        public static string pc98Group {
+            get {
+                return ResourceManager.GetString("pc98Group", resourceCulture);
             }
         }
         
@@ -1586,6 +1577,15 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Spinoffs.
+        /// </summary>
+        public static string spinoffGroup {
+            get {
+                return ResourceManager.GetString("spinoffGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Shoot the Bullet.
         /// </summary>
         public static string StB {
@@ -1636,6 +1636,15 @@ namespace Touhou_Launcher {
         public static string SWRTitle {
             get {
                 return ResourceManager.GetString("SWRTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Twilight Frontier Games.
+        /// </summary>
+        public static string tasofroGroup {
+            get {
+                return ResourceManager.GetString("tasofroGroup", resourceCulture);
             }
         }
         
