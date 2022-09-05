@@ -375,15 +375,19 @@ namespace Touhou_Launcher
                         languageBox.SelectedIndex = 0;
                     break;
             }
+            foreach (ToolStripMenuItem tMenu in trayPC98.DropDownItems)
+            {
+                tMenu.Text = rm.GetString(tMenu.Name.Substring(4));
+            }
             foreach (ToolStripMenuItem tMenu in trayMain.DropDownItems)
             {
                 tMenu.Text = rm.GetString(tMenu.Name.Substring(4));
             }
-            foreach (ToolStripMenuItem tMenu in trayFighting.DropDownItems)
+            foreach (ToolStripMenuItem tMenu in traySpinoff.DropDownItems)
             {
                 tMenu.Text = rm.GetString(tMenu.Name.Substring(4));
             }
-            foreach (ToolStripMenuItem tMenu in trayOther.DropDownItems)
+            foreach (ToolStripMenuItem tMenu in trayTasofro.DropDownItems)
             {
                 tMenu.Text = rm.GetString(tMenu.Name.Substring(4));
             }
@@ -414,16 +418,18 @@ namespace Touhou_Launcher
             {
                 tab.Text = rm.GetString(tab.Name);
             }
+            trayPC98.Text = rm.GetString("pc98Group");
             trayMain.Text = rm.GetString("mainGroup");
-            trayFighting.Text = rm.GetString("fightingGroup");
-            trayOther.Text = rm.GetString("otherGroup");
+            traySpinoff.Text = rm.GetString("spinoffGroup");
+            trayTasofro.Text = rm.GetString("tasofroGroup");
             trayCustom.Text = rm.GetString("customGames");
             trayRandom.Text = rm.GetString("trayRandom");
             trayOpen.Text = rm.GetString("trayOpen");
             trayExit.Text = rm.GetString("trayExit");
+            pc98Group.Text = rm.GetString("pc98Group");
             mainGroup.Text = rm.GetString("mainGroup");
-            fightingGroup.Text = rm.GetString("fightingGroup");
-            otherGroup.Text = rm.GetString("otherGroup");
+            spinoffGroup.Text = rm.GetString("spinoffGroup");
+            tasofroGroup.Text = rm.GetString("tasofroGroup");
             configureToolStripMenuItem.Text = rm.GetString("configureToolStripMenuItem");
             buttonToolStripMenuItem.Text = rm.GetString("buttonToolStripMenuItem");
             bannerToolStripMenuItem.Text = rm.GetString("bannerToolStripMenuItem");
@@ -449,9 +455,10 @@ namespace Touhou_Launcher
             randomLabel.Text = rm.GetString("randomLabel");
             randomAll.Text = rm.GetString("randomAll");
             randomNone.Text = rm.GetString("randomNone");
+            pc98Random.Text = rm.GetString("pc98Group");
             mainRandom.Text = rm.GetString("mainGroup");
-            fightingRandom.Text = rm.GetString("fightingGroup");
-            otherRandom.Text = rm.GetString("otherGroup");
+            spinoffRandom.Text = rm.GetString("spinoffGroup");
+            tasofroRandom.Text = rm.GetString("tasofroGroup");
             this.Text = rm.GetString("Title");
         }
 

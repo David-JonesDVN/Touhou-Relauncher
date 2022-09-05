@@ -288,14 +288,14 @@
   <data name="Title" xml:space="preserve">
     <value>Touhou Launcher</value>
   </data>
-  <data name="fightingGroup" xml:space="preserve">
-    <value>Fighting Games</value>
+  <data name="tasofroGroup" xml:space="preserve">
+    <value>Twilight Frontier Games</value>
   </data>
   <data name="mainGroup" xml:space="preserve">
     <value>Main Games</value>
   </data>
-  <data name="otherGroup" xml:space="preserve">
-    <value>Other Games</value>
+  <data name="pc98Group" xml:space="preserve">
+    <value>PC-98 Games</value>
   </data>
   <data name="AoCFShort" xml:space="preserve">
     <value>AoCF</value>
@@ -702,5 +702,8 @@ random game option:</value>
   </data>
   <data name="HBMTitle" xml:space="preserve">
     <value>Touhou 18.5: 100th Black Market</value>
+  </data>
+  <data name="spinoffGroup" xml:space="preserve">
+    <value>Spinoffs</value>
   </data>
 </root>
