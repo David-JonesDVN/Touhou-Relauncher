@@ -115,10 +115,12 @@
     <EmbeddedResource Include="Resources_jp.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources_jp.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources_ru.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources_ru.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="thcrap.resx">
       <DependentUpon>thcrap.cs</DependentUpon>
