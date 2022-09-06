@@ -288,14 +288,14 @@
   <data name="Title" xml:space="preserve">
     <value>東方ランチャー</value>
   </data>
-  <data name="fightingGroup" xml:space="preserve">
-    <value>格闘ゲーム</value>
+  <data name="tasofroGroup" xml:space="preserve">
+    <value>黄昏フロンティアとの共同作品</value>
   </data>
   <data name="mainGroup" xml:space="preserve">
     <value>整数作品</value>
   </data>
-  <data name="otherGroup" xml:space="preserve">
-    <value>その他</value>
+  <data name="pc98Group" xml:space="preserve">
+    <value>旧作</value>
   </data>
   <data name="AoCFShort" xml:space="preserve">
     <value>憑依華</value>
@@ -590,7 +590,7 @@
     <value>Neko Project IIのコンフィグiniは有効ではありません。</value>
   </data>
   <data name="errorGameNotFound" xml:space="preserve">
-    <value>ゲームファイルが見つからない</value>
+    <value>ゲームファイルが見つからない。右クリックメニューでパスを指定してください。</value>
   </data>
   <data name="replayFilter" xml:space="preserve">
     <value>リプレイファイル</value>
@@ -719,5 +719,29 @@
   </data>
   <data name="UMTitle" xml:space="preserve">
     <value>東方虹龍洞 ～ Unconnected Marketeers</value>
+  </data>
+  <data name="GI" xml:space="preserve">
+    <value>東方剛欲異聞</value>
+  </data>
+  <data name="GIShort" xml:space="preserve">
+    <value>剛欲異聞</value>
+  </data>
+  <data name="GITitle" xml:space="preserve">
+    <value>東方剛欲異聞　～ 水没した沈愁地獄</value>
+  </data>
+  <data name="errorNoCategorySelected" xml:space="preserve">
+    <value>No Category Selected</value>
+  </data>
+  <data name="HBM" xml:space="preserve">
+    <value>バレットフィリア達の闇市場</value>
+  </data>
+  <data name="HBMShort" xml:space="preserve">
+    <value>バレットフィリア</value>
+  </data>
+  <data name="HBMTitle" xml:space="preserve">
+    <value>バレットフィリア達の闇市場　〜 100th Black Market</value>
+  </data>
+  <data name="spinoffGroup" xml:space="preserve">
+    <value>その他</value>
   </data>
 </root>

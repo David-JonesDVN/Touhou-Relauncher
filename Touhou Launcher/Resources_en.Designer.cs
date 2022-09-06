@@ -529,7 +529,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cannot find game.
+        ///   Looks up a localized string similar to Cannot find game. Please check the path in the right click menu..
         /// </summary>
         public static string errorGameNotFound {
             get {
@@ -543,6 +543,15 @@ namespace Touhou_Launcher {
         public static string errorInvalidNP2INI {
             get {
                 return ResourceManager.GetString("errorInvalidNP2INI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Category Selected.
+        /// </summary>
+        public static string errorNoCategorySelected {
+            get {
+                return ResourceManager.GetString("errorNoCategorySelected", resourceCulture);
             }
         }
         
@@ -598,15 +607,6 @@ namespace Touhou_Launcher {
         public static string executableFilter {
             get {
                 return ResourceManager.GetString("executableFilter", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Fighting Games.
-        /// </summary>
-        public static string fightingGroup {
-            get {
-                return ResourceManager.GetString("fightingGroup", resourceCulture);
             }
         }
         
@@ -679,6 +679,60 @@ namespace Touhou_Launcher {
         public static string GFWTitle {
             get {
                 return ResourceManager.GetString("GFWTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gouyoku Ibun.
+        /// </summary>
+        public static string GI {
+            get {
+                return ResourceManager.GetString("GI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GI.
+        /// </summary>
+        public static string GIShort {
+            get {
+                return ResourceManager.GetString("GIShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 17.5: Gouyoku Ibun.
+        /// </summary>
+        public static string GITitle {
+            get {
+                return ResourceManager.GetString("GITitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 100th Black Market.
+        /// </summary>
+        public static string HBM {
+            get {
+                return ResourceManager.GetString("HBM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 100BM.
+        /// </summary>
+        public static string HBMShort {
+            get {
+                return ResourceManager.GetString("HBMShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 18.5: 100th Black Market.
+        /// </summary>
+        public static string HBMTitle {
+            get {
+                return ResourceManager.GetString("HBMTitle", resourceCulture);
             }
         }
         
@@ -1169,15 +1223,6 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Other Games.
-        /// </summary>
-        public static string otherGroup {
-            get {
-                return ResourceManager.GetString("otherGroup", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Patch.
         /// </summary>
         public static string patchColumn {
@@ -1201,6 +1246,15 @@ namespace Touhou_Launcher {
         public static string pathColumn {
             get {
                 return ResourceManager.GetString("pathColumn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PC-98 Games.
+        /// </summary>
+        public static string pc98Group {
+            get {
+                return ResourceManager.GetString("pc98Group", resourceCulture);
             }
         }
         
@@ -1523,6 +1577,15 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Spinoffs.
+        /// </summary>
+        public static string spinoffGroup {
+            get {
+                return ResourceManager.GetString("spinoffGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Shoot the Bullet.
         /// </summary>
         public static string StB {
@@ -1573,6 +1636,15 @@ namespace Touhou_Launcher {
         public static string SWRTitle {
             get {
                 return ResourceManager.GetString("SWRTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Twilight Frontier Games.
+        /// </summary>
+        public static string tasofroGroup {
+            get {
+                return ResourceManager.GetString("tasofroGroup", resourceCulture);
             }
         }
         
