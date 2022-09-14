@@ -288,14 +288,14 @@
   <data name="Title" xml:space="preserve">
     <value>Touhou Launcher</value>
   </data>
-  <data name="fightingGroup" xml:space="preserve">
-    <value>Fighting Games</value>
+  <data name="tasofroGroup" xml:space="preserve">
+    <value>Twilight Frontier Games</value>
   </data>
   <data name="mainGroup" xml:space="preserve">
     <value>Main Games</value>
   </data>
-  <data name="otherGroup" xml:space="preserve">
-    <value>Other Games</value>
+  <data name="pc98Group" xml:space="preserve">
+    <value>PC-98 Games</value>
   </data>
   <data name="AoCFShort" xml:space="preserve">
     <value>AoCF</value>
@@ -591,7 +591,7 @@ random game option:</value>
     <value>Neko Project II's configuration ini is not valid.</value>
   </data>
   <data name="errorGameNotFound" xml:space="preserve">
-    <value>Cannot find game</value>
+    <value>Cannot find game. Please check the path in the right click menu.</value>
   </data>
   <data name="replayFilter" xml:space="preserve">
     <value>Replay Files</value>
@@ -720,5 +720,29 @@ random game option:</value>
   </data>
   <data name="UMTitle" xml:space="preserve">
     <value>Touhou 18: Unconnected Marketeers</value>
+  </data>
+  <data name="GI" xml:space="preserve">
+    <value>Gouyoku Ibun</value>
+  </data>
+  <data name="GIShort" xml:space="preserve">
+    <value>GI</value>
+  </data>
+  <data name="GITitle" xml:space="preserve">
+    <value>Touhou 17.5: Gouyoku Ibun</value>
+  </data>
+  <data name="errorNoCategorySelected" xml:space="preserve">
+    <value>No Category Selected</value>
+  </data>
+  <data name="HBM" xml:space="preserve">
+    <value>100th Black Market</value>
+  </data>
+  <data name="HBMShort" xml:space="preserve">
+    <value>100BM</value>
+  </data>
+  <data name="HBMTitle" xml:space="preserve">
+    <value>Touhou 18.5: 100th Black Market</value>
+  </data>
+  <data name="spinoffGroup" xml:space="preserve">
+    <value>Spinoffs</value>
   </data>
 </root>

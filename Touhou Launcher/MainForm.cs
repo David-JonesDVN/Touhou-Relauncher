@@ -85,7 +85,7 @@ namespace Touhou_Launcher
             public int language = 0;
             public string np2Dir = "";
             public string crapDir = "";
-            public string StartingRepo = @"https://mirrors.thpatch.net/nmlgc/";
+            public string StartingRepo = @"https://srv.thpatch.net/";
             public Configs()
             {
                 for (int i = 0; i < gameCFG.Length ; i++)
@@ -109,7 +109,7 @@ namespace Touhou_Launcher
         private FormWindowState lastState = FormWindowState.Normal;
         private const int mainGameCount = 18;
         private const int fightingGameCount = 6;
-        private const int otherGameCount = 5;
+        private const int otherGameCount = 7;
         private const int totalGameCount = mainGameCount + fightingGameCount + otherGameCount;
         public static Configs curCfg = Configs.Load();
         public static System.Resources.ResourceManager rm;
@@ -122,7 +122,7 @@ namespace Touhou_Launcher
         };
         public static List<int> idToNumber = new List<int>
         {
-            1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 75, 105, 123, 135, 145, 155, 95, 125, 128, 143, 165
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 75, 105, 123, 135, 145, 155, 95, 125, 128, 143, 165, 175, 185
         };
         public static Dictionary<string, int> nameToID = new Dictionary<string, int>
         {
@@ -154,7 +154,9 @@ namespace Touhou_Launcher
             {"DS", 25},
             {"GFW", 26},
             {"ISC", 27},
-            {"VD", 28}
+            {"VD", 28},
+            {"GI", 29},
+            {"HBM", 30}
         };
 
         public static IEnumerable<Control> GetAll(Control control, Type type)
@@ -375,15 +377,19 @@ namespace Touhou_Launcher
                         languageBox.SelectedIndex = 0;
                     break;
             }
+            foreach (ToolStripMenuItem tMenu in trayPC98.DropDownItems)
+            {
+                tMenu.Text = rm.GetString(tMenu.Name.Substring(4));
+            }
             foreach (ToolStripMenuItem tMenu in trayMain.DropDownItems)
             {
                 tMenu.Text = rm.GetString(tMenu.Name.Substring(4));
             }
-            foreach (ToolStripMenuItem tMenu in trayFighting.DropDownItems)
+            foreach (ToolStripMenuItem tMenu in traySpinoff.DropDownItems)
             {
                 tMenu.Text = rm.GetString(tMenu.Name.Substring(4));
             }
-            foreach (ToolStripMenuItem tMenu in trayOther.DropDownItems)
+            foreach (ToolStripMenuItem tMenu in trayTasofro.DropDownItems)
             {
                 tMenu.Text = rm.GetString(tMenu.Name.Substring(4));
             }
@@ -414,16 +420,18 @@ namespace Touhou_Launcher
             {
                 tab.Text = rm.GetString(tab.Name);
             }
+            trayPC98.Text = rm.GetString("pc98Group");
             trayMain.Text = rm.GetString("mainGroup");
-            trayFighting.Text = rm.GetString("fightingGroup");
-            trayOther.Text = rm.GetString("otherGroup");
+            traySpinoff.Text = rm.GetString("spinoffGroup");
+            trayTasofro.Text = rm.GetString("tasofroGroup");
             trayCustom.Text = rm.GetString("customGames");
             trayRandom.Text = rm.GetString("trayRandom");
             trayOpen.Text = rm.GetString("trayOpen");
             trayExit.Text = rm.GetString("trayExit");
+            pc98Group.Text = rm.GetString("pc98Group");
             mainGroup.Text = rm.GetString("mainGroup");
-            fightingGroup.Text = rm.GetString("fightingGroup");
-            otherGroup.Text = rm.GetString("otherGroup");
+            spinoffGroup.Text = rm.GetString("spinoffGroup");
+            tasofroGroup.Text = rm.GetString("tasofroGroup");
             configureToolStripMenuItem.Text = rm.GetString("configureToolStripMenuItem");
             buttonToolStripMenuItem.Text = rm.GetString("buttonToolStripMenuItem");
             bannerToolStripMenuItem.Text = rm.GetString("bannerToolStripMenuItem");
@@ -451,9 +459,10 @@ namespace Touhou_Launcher
             randomLabel.Text = rm.GetString("randomLabel");
             randomAll.Text = rm.GetString("randomAll");
             randomNone.Text = rm.GetString("randomNone");
+            pc98Random.Text = rm.GetString("pc98Group");
             mainRandom.Text = rm.GetString("mainGroup");
-            fightingRandom.Text = rm.GetString("fightingGroup");
-            otherRandom.Text = rm.GetString("otherGroup");
+            spinoffRandom.Text = rm.GetString("spinoffGroup");
+            tasofroRandom.Text = rm.GetString("tasofroGroup");
             this.Text = rm.GetString("Title");
         }
 
@@ -518,6 +527,8 @@ namespace Touhou_Launcher
 
         public MainForm()
         {
+            System.Net.ServicePointManager.Expect100Continue = true;
+            System.Net.ServicePointManager.SecurityProtocol = (System.Net.SecurityProtocolType)3072;
             InitializeComponent();
             if (totalGameCount > curCfg.gameCFG.Length)
             {
@@ -667,6 +678,10 @@ namespace Touhou_Launcher
             {
                 customAddItem(FileBrowser(rm.GetString("gameSelectTitle"), rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + rm.GetString("allFilter") + " (*.*)|*.*", true));
             }
+			else
+			{
+				MessageBox.Show(rm.GetString("errorNoCategorySelected"));
+			}
         }
 
         private void customTree_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
@@ -885,8 +900,7 @@ namespace Touhou_Launcher
         {
             if (e.KeyCode == Keys.Enter)
             {
-                gensokyoReplays.Checked = false;
-                royalflareReplays.Checked = false;
+                maribelReplays.Checked = false;
                 appspotReplays.Checked = false;
                 Replays_CheckedChanged(sender, new EventArgs());
             }
@@ -1001,7 +1015,8 @@ namespace Touhou_Launcher
                 txtbox.BackColor = SystemColors.Window;
                 txtbox.Text = file;
                 curCfg.np2Dir = np2Dir.Text;
-                curCfg.crapDir = Path.GetDirectoryName(crapDir.Text).TrimEnd("\\bin".ToCharArray());
+                string crapPath = Path.GetDirectoryName(crapDir.Text);
+                curCfg.crapDir = (Directory.Exists(crapPath + "\\bin") || !crapPath.EndsWith("\\bin")) ? crapPath : crapPath.Substring(0, crapPath.LastIndexOf("\\bin"));
             }
         }
 
@@ -1011,8 +1026,8 @@ namespace Touhou_Launcher
             {
                 ((TextBox)sender).BackColor = SystemColors.Window;
                 curCfg.np2Dir = np2Dir.Text;
-                string crapPath = crapDir.Text == "" ? "" : Path.GetDirectoryName(crapDir.Text);
-                curCfg.crapDir = Directory.Exists(crapPath + "\\bin") ? crapPath : crapPath.TrimEnd("\\bin".ToCharArray());
+                string crapPath = Path.GetDirectoryName(crapDir.Text);
+                curCfg.crapDir = (Directory.Exists(crapPath + "\\bin") || !crapPath.EndsWith("\\bin")) ? crapPath : crapPath.Substring(0, crapPath.LastIndexOf("\\bin"));
                 curCfg.StartingRepo = crapStartingRepo.Text;
             }
             else
@@ -1030,7 +1045,9 @@ namespace Touhou_Launcher
             if (curCfg.crapDir != "")
             {
                 string procDir = curCfg.crapDir + "\\bin\\thcrap_configure.exe";
-                if (File.Exists(procDir))
+                if (!File.Exists(procDir))
+                    MessageBox.Show(rm.GetString("errorcrapNotFound"));
+                else
                     startProcess(procDir);
             }
         }

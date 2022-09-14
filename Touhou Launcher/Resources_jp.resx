@@ -178,7 +178,7 @@
     <value>東方永夜抄　～ Imperishable Night</value>
   </data>
   <data name="ISC" xml:space="preserve">
-    <value>弾幕アマノジャク</value>
+    <value>アマノジャク</value>
   </data>
   <data name="ISCTitle" xml:space="preserve">
     <value>弾幕アマノジャク　～ Impossible Spell Card</value>
@@ -280,46 +280,76 @@
     <value>秘封ナイトメアダイアリー　〜 Violet Detector</value>
   </data>
   <data name="Random" xml:space="preserve">
-    <value>Random</value>
+    <value>ランダム</value>
   </data>
   <data name="RandomTitle" xml:space="preserve">
-    <value>ランダムゲームを実行する</value>
+    <value>ランダムでゲームを起動します</value>
   </data>
   <data name="Title" xml:space="preserve">
     <value>東方ランチャー</value>
   </data>
-  <data name="fightingGroup" xml:space="preserve">
-    <value>格闘ゲーム</value>
+  <data name="tasofroGroup" xml:space="preserve">
+    <value>黄昏フロンティア作</value>
   </data>
   <data name="mainGroup" xml:space="preserve">
-    <value>メインゲーム</value>
+    <value>整数作</value>
   </data>
-  <data name="otherGroup" xml:space="preserve">
-    <value>他のゲーム</value>
+  <data name="pc98Group" xml:space="preserve">
+    <value>旧作</value>
   </data>
   <data name="AoCFShort" xml:space="preserve">
     <value>憑依華</value>
   </data>
+  <data name="autoClose" xml:space="preserve">
+    <value>自動終了</value>
+  </data>
+  <data name="autoCloseToolTip" xml:space="preserve">
+    <value>ゲームを起動した後、自動的にランチャーを閉じます</value>
+  </data>
+  <data name="bannerOffLabel" xml:space="preserve">
+    <value>バナー（白黒）</value>
+  </data>
+  <data name="bannerOnLabel" xml:space="preserve">
+    <value>バナー</value>
+  </data>
+  <data name="bannerSettings" xml:space="preserve">
+    <value>バナーの設定</value>
+  </data>
   <data name="browse" xml:space="preserve">
-    <value>Browse</value>
+    <value>参照</value>
+  </data>
+  <data name="chkCustomBanner" xml:space="preserve">
+    <value>カスタムバナーを使用</value>
   </data>
   <data name="configureToolStripMenuItem" xml:space="preserve">
-    <value>Configure Game</value>
+    <value>設定</value>
+  </data>
+  <data name="crapLabel" xml:space="preserve">
+    <value>thcrapプロファイル:</value>
   </data>
   <data name="customAdd" xml:space="preserve">
-    <value>ゲームを足す</value>
+    <value>ゲームを追加</value>
   </data>
   <data name="customGames" xml:space="preserve">
-    <value>Custom Games</value>
+    <value>同人ゲーム</value>
+  </data>
+  <data name="customLabel" xml:space="preserve">
+    <value>Custom.exe:</value>
   </data>
   <data name="DDCShort" xml:space="preserve">
     <value>輝針城</value>
   </data>
+  <data name="defaultLabel" xml:space="preserve">
+    <value>デフォルトで開く:</value>
+  </data>
   <data name="deleteCategoryToolStripMenuItem" xml:space="preserve">
-    <value>Delete Category</value>
+    <value>削除</value>
   </data>
   <data name="DSShort" xml:space="preserve">
     <value>ダブルスポイラー</value>
+  </data>
+  <data name="enLabel" xml:space="preserve">
+    <value>English Executable:</value>
   </data>
   <data name="EoSDShort" xml:space="preserve">
     <value>紅魔郷</value>
@@ -329,6 +359,9 @@
   </data>
   <data name="GFWShort" xml:space="preserve">
     <value>妖精大戦争</value>
+  </data>
+  <data name="hdiLabel" xml:space="preserve">
+    <value>HDIファイル:</value>
   </data>
   <data name="HMShort" xml:space="preserve">
     <value>心綺楼</value>
@@ -343,7 +376,7 @@
     <value>萃夢想</value>
   </data>
   <data name="info" xml:space="preserve">
-    <value>Info</value>
+    <value>東方ランチャーについて</value>
   </data>
   <data name="INShort" xml:space="preserve">
     <value>永夜抄</value>
@@ -351,8 +384,17 @@
   <data name="ISCShort" xml:space="preserve">
     <value>アマノジャク</value>
   </data>
+  <data name="jpLabel" xml:space="preserve">
+    <value>実行ファイルの場所：</value>
+  </data>
+  <data name="langLabel" xml:space="preserve">
+    <value>言語：</value>
+  </data>
+  <data name="launch" xml:space="preserve">
+    <value>起動</value>
+  </data>
   <data name="launcherSettings" xml:space="preserve">
-    <value>Launcher Settings</value>
+    <value>全般</value>
   </data>
   <data name="LLSShort" xml:space="preserve">
     <value>幻想郷</value>
@@ -367,7 +409,25 @@
     <value>怪綺談</value>
   </data>
   <data name="newCategoryToolStripMenuItem" xml:space="preserve">
-    <value>怪綺談</value>
+    <value>新規作成</value>
+  </data>
+  <data name="np2Label" xml:space="preserve">
+    <value>Neko Project IIの場所：</value>
+  </data>
+  <data name="openFolder" xml:space="preserve">
+    <value>フォルダを開く</value>
+  </data>
+  <data name="openNP2Folder" xml:space="preserve">
+    <value>Neko Project IIのフォルダを開く</value>
+  </data>
+  <data name="openReplays" xml:space="preserve">
+    <value>replayフォルダ</value>
+  </data>
+  <data name="openvpatch" xml:space="preserve">
+    <value>vpatch.iniを編集</value>
+  </data>
+  <data name="pc98Settings" xml:space="preserve">
+    <value>PC-98版用</value>
   </data>
   <data name="PCBShort" xml:space="preserve">
     <value>妖々夢</value>
@@ -379,16 +439,19 @@
     <value>花映塚</value>
   </data>
   <data name="randomAll" xml:space="preserve">
-    <value>全部</value>
+    <value>すべて</value>
+  </data>
+  <data name="randomLabel" xml:space="preserve">
+    <value>ランダムで起動したいゲームを選んでください</value>
   </data>
   <data name="randomNone" xml:space="preserve">
     <value>なし</value>
   </data>
   <data name="randomSettings" xml:space="preserve">
-    <value>Random Game Settings</value>
+    <value>ランダム起動</value>
   </data>
   <data name="renameCategoryToolStripMenuItem" xml:space="preserve">
-    <value>Rename Category</value>
+    <value>名前の変更</value>
   </data>
   <data name="replays" xml:space="preserve">
     <value>リプレイ</value>
@@ -420,96 +483,32 @@
   <data name="UoNLShort" xml:space="preserve">
     <value>非想天則</value>
   </data>
+  <data name="useApplocale" xml:space="preserve">
+    <value>AppLocaleで実行</value>
+  </data>
   <data name="VDShort" xml:space="preserve">
     <value>ナイトメアダイアリー</value>
   </data>
-  <data name="launch" xml:space="preserve">
-    <value>Launch</value>
-  </data>
-  <data name="autoClose" xml:space="preserve">
-    <value>Auto-Close</value>
-  </data>
-  <data name="autoCloseToolTip" xml:space="preserve">
-    <value>Automatically close the launcher after launching a game</value>
-  </data>
-  <data name="bannerOffLabel" xml:space="preserve">
-    <value>灰色画像</value>
-  </data>
-  <data name="bannerOnLabel" xml:space="preserve">
-    <value>Colored Banner</value>
-  </data>
-  <data name="bannerSettings" xml:space="preserve">
-    <value>Banner Settings</value>
-  </data>
-  <data name="chkCustomBanner" xml:space="preserve">
-    <value>Use custom banner</value>
-  </data>
-  <data name="crapLabel" xml:space="preserve">
-    <value>thcrap Profile:</value>
-  </data>
-  <data name="customLabel" xml:space="preserve">
-    <value>Custom.exe:</value>
-  </data>
-  <data name="defaultLabel" xml:space="preserve">
-    <value>Default Executable:</value>
-  </data>
-  <data name="enLabel" xml:space="preserve">
-    <value>English Executable:</value>
-  </data>
-  <data name="hdiLabel" xml:space="preserve">
-    <value>Game HDI:</value>
-  </data>
-  <data name="jpLabel" xml:space="preserve">
-    <value>Japanese/vpatch Executable:</value>
-  </data>
-  <data name="langLabel" xml:space="preserve">
-    <value>語：</value>
-  </data>
-  <data name="np2Label" xml:space="preserve">
-    <value>Neko Project II Location:</value>
-  </data>
-  <data name="openFolder" xml:space="preserve">
-    <value>Open Folder</value>
-  </data>
-  <data name="openAppdata" xml:space="preserve">
-    <value>Appdata Folder</value>
-  </data>
-  <data name="openReplays" xml:space="preserve">
-    <value>Open Replays Folder</value>
-  </data>
-  <data name="openvpatch" xml:space="preserve">
-    <value>vpatch.iniを編集する</value>
-  </data>
-  <data name="pc98Settings" xml:space="preserve">
-    <value>PC-98 Game Settings</value>
-  </data>
-  <data name="randomLabel" xml:space="preserve">
-    <value>Games that will be included in the
-random game option:</value>
-  </data>
-  <data name="useApplocale" xml:space="preserve">
-    <value>AppLocaleで</value>
-  </data>
   <data name="windowsSettings" xml:space="preserve">
-    <value>Windows Game Settings</value>
-  </data>
-  <data name="defaultExec" xml:space="preserve">
-    <value>日本語/vpatch.ini, 英語 (non-THCRAP), Custom.exe, thcrap</value>
+    <value>Windows版用</value>
   </data>
   <data name="allFilter" xml:space="preserve">
-    <value>All Files</value>
+    <value>すべてのファイル</value>
   </data>
   <data name="ascendingToolStripMenuItem" xml:space="preserve">
     <value>昇順</value>
   </data>
   <data name="bannerOffSelectTitle" xml:space="preserve">
-    <value>Select the grey banner</value>
+    <value>バナー（白黒）を指定する</value>
   </data>
   <data name="bannerOnSelectTitle" xml:space="preserve">
-    <value>Select the colored banner</value>
+    <value>バナーを指定する</value>
+  </data>
+  <data name="defaultExec" xml:space="preserve">
+    <value>日本語/vpatch.ini, 英語 (non-THCRAP), Custom.exe, thcrap</value>
   </data>
   <data name="deleteToolStripMenuItem" xml:space="preserve">
-    <value>消す</value>
+    <value>削除</value>
   </data>
   <data name="descendingToolStripMenuItem" xml:space="preserve">
     <value>降順</value>
@@ -518,65 +517,65 @@ random game option:</value>
     <value>詳細</value>
   </data>
   <data name="errorAppdataNotFound" xml:space="preserve">
-    <value>Cannot find Appdata Folder</value>
+    <value>Appdataフォルダが見つりません</value>
   </data>
   <data name="errorFileNotFound" xml:space="preserve">
-    <value>File could not be found</value>
+    <value>ファイルが見つかりません</value>
   </data>
   <data name="errorNP2NotFound" xml:space="preserve">
-    <value>Please set Neko Project 2's location</value>
+    <value>Neko Project 2のパスを指定してください</value>
   </data>
   <data name="errorOpenImage" xml:space="preserve">
-    <value>Cannot open file as image:
+    <value>画像ファイルではありません：
 </value>
   </data>
   <data name="errorReplaysNotFound" xml:space="preserve">
-    <value>Cannot find Replays folder</value>
+    <value>replayフォルダが見つかりません</value>
   </data>
   <data name="errorvpatchNotFound" xml:space="preserve">
-    <value>Cannot find vpatch.ini</value>
+    <value>vpatch.iniが見つかりません</value>
   </data>
   <data name="executableFilter" xml:space="preserve">
-    <value>Executable Files</value>
+    <value>実行ファイル</value>
   </data>
   <data name="gameSelectTitle" xml:space="preserve">
-    <value>Select Executable</value>
+    <value>ゲームの実行ファイルを指定する</value>
   </data>
   <data name="hdiFilter" xml:space="preserve">
-    <value>Hard Disk Image Files</value>
+    <value>HDIファイル</value>
   </data>
   <data name="hdiSelectTitle" xml:space="preserve">
-    <value>Select the game's HDI</value>
+    <value>ゲームのHDIファイルを指定する</value>
   </data>
   <data name="imageFilter" xml:space="preserve">
-    <value>Image Files</value>
+    <value>画像ファイル</value>
   </data>
   <data name="largeIconsToolStripMenuItem" xml:space="preserve">
-    <value>Large Icons</value>
+    <value>大アイコン</value>
   </data>
   <data name="listToolStripMenuItem" xml:space="preserve">
-    <value>List</value>
+    <value>一覧</value>
   </data>
   <data name="np2SelectTitle" xml:space="preserve">
-    <value>Select Neko Project II's executable</value>
+    <value>Neko Project IIの実行ファイルを指定する</value>
+  </data>
+  <data name="openAppdata" xml:space="preserve">
+    <value>Appdataフォルダ</value>
   </data>
   <data name="openFolderToolStripMenuItem" xml:space="preserve">
-    <value>Open Folder</value>
-  </data>
-  <data name="openNP2Folder" xml:space="preserve">
-    <value>Open Neko Project II Folder</value>
+    <value>フォルダを開く</value>
   </data>
   <data name="openWithApplocaleToolStripMenuItem" xml:space="preserve">
-    <value>Open With Applocale</value>
+    <value>Applocaleで開く</value>
   </data>
   <data name="playRandomToolStripMenuItem" xml:space="preserve">
-    <value>Play Random</value>
+    <value>ランダムでゲームを起動</value>
   </data>
   <data name="renameToolStripMenuItem" xml:space="preserve">
-    <value>Rename</value>
+    <value>名前の変更</value>
   </data>
   <data name="smallIconsToolStripMenuItem" xml:space="preserve">
-    <value>Small Icons</value>
+    <value>小アイコン</value>
   </data>
   <data name="sortToolStripMenuItem" xml:space="preserve">
     <value>並べ替え</value>
@@ -588,120 +587,119 @@ random game option:</value>
     <value>表示</value>
   </data>
   <data name="errorInvalidNP2INI" xml:space="preserve">
-    <value>Neko Project II's configuration ini is not valid.</value>
+    <value>Neko Project IIのコンフィグiniは有効ではありません。</value>
   </data>
   <data name="errorGameNotFound" xml:space="preserve">
-    <value>Cannot find game</value>
+    <value>ゲームファイルが見つからない。右クリックメニューでパスを指定してください。</value>
   </data>
   <data name="replayFilter" xml:space="preserve">
-    <value>Replay Files</value>
+    <value>リプレイファイル</value>
   </data>
   <data name="replayDownload" xml:space="preserve">
-    <value>Download '{0}' to:
-{1}</value>
+    <value>'{1}'に'{0}'をダウンロードします</value>
   </data>
   <data name="replayFull" xml:space="preserve">
-    <value>Player replays full and Touhou 10 does not support user replays.
+    <value>リプレイリストがいっぱいです。（風神録はユーザーリプレイをサポートしていません）
 </value>
   </data>
   <data name="gameConfiguration" xml:space="preserve">
-    <value>Game Configuration: </value>
+    <value>ゲームの設定：</value>
   </data>
   <data name="minimizeToTray" xml:space="preserve">
-    <value>Minimize to tray</value>
+    <value>トレイに最小化</value>
   </data>
   <data name="showTray" xml:space="preserve">
     <value>トレイアイコンを常に表示する</value>
   </data>
   <data name="customCategoryDeleteConfirm" xml:space="preserve">
-    <value>Delete Category '{0}' and all of its contents?</value>
+    <value>「{0}」とその中にいるすべてを削除しますか？</value>
   </data>
   <data name="customDeleteConfirm" xml:space="preserve">
-    <value>'{0}'を消すか？</value>
+    <value>「{0}」を削除しますか？</value>
   </data>
   <data name="errorcrapNotFound" xml:space="preserve">
-    <value>Please set thcrap's location</value>
+    <value>thcrapのパスを指定してください</value>
   </data>
   <data name="crapConfigure" xml:space="preserve">
-    <value>Configure thcrap</value>
+    <value>thcrapの設定</value>
   </data>
   <data name="crapDirLabel" xml:space="preserve">
-    <value>thcrap_loader Location:</value>
+    <value>thcrap_loaderの場所：</value>
   </data>
   <data name="errorcrapConfigNotSet" xml:space="preserve">
-    <value>Please set thcrap's profile</value>
+    <value>thcrapのプロファイルを設定してください</value>
   </data>
   <data name="errorRandomListEmpty" xml:space="preserve">
-    <value>No Games Selected</value>
+    <value>ゲームが選択されていません</value>
   </data>
   <data name="replayDownloadTitle" xml:space="preserve">
-    <value>Download Replay?</value>
+    <value>リプレイをダウンロードしますか？</value>
   </data>
   <data name="trayExit" xml:space="preserve">
-    <value>Exit</value>
+    <value>終了</value>
   </data>
   <data name="trayOpen" xml:space="preserve">
-    <value>Open</value>
+    <value>表示</value>
   </data>
   <data name="trayRandom" xml:space="preserve">
-    <value>Random Game</value>
+    <value>ランダムでゲームを起動</value>
   </data>
   <data name="customRemove" xml:space="preserve">
-    <value>Remove Game</value>
+    <value>ゲームを削除する</value>
   </data>
   <data name="descriptionColumn" xml:space="preserve">
-    <value>Description</value>
+    <value>説明</value>
   </data>
   <data name="gameGroup" xml:space="preserve">
-    <value>Game Profiles</value>
+    <value>ゲームプロファイル</value>
   </data>
   <data name="gameIDColumn" xml:space="preserve">
-    <value>Game ID</value>
+    <value>ゲームID</value>
   </data>
   <data name="idColumn" xml:space="preserve">
     <value>ID</value>
   </data>
   <data name="patchColumn" xml:space="preserve">
-    <value>Patch</value>
+    <value>パッチ</value>
   </data>
   <data name="patchGroup" xml:space="preserve">
-    <value>Custom Profile</value>
+    <value>カスタムプロファイル</value>
   </data>
   <data name="pathColumn" xml:space="preserve">
-    <value>Game Path</value>
+    <value>ゲームパス</value>
   </data>
   <data name="thcrapTitle" xml:space="preserve">
-    <value>Profile Configuration: </value>
+    <value>プロファイルの設定：</value>
   </data>
   <data name="titleColumn" xml:space="preserve">
-    <value>Title</value>
+    <value>タイトル</value>
   </data>
   <data name="crapResetStartingRepo" xml:space="preserve">
-    <value>Default</value>
+    <value>デフォルト</value>
   </data>
   <data name="crapStartingRepoLabel" xml:space="preserve">
-    <value>thcrap Starting Repository:</value>
+    <value>thcrap起動用リポジトリ:</value>
   </data>
   <data name="bannerSize" xml:space="preserve">
     <value>* 120 x 44</value>
   </data>
   <data name="btnCustomText" xml:space="preserve">
-    <value>Set Color</value>
+    <value>色を指定</value>
   </data>
   <data name="chkCustomText" xml:space="preserve">
-    <value>Use custom text color</value>
+    <value>指定した色を使用</value>
   </data>
   <data name="bannerToolStripMenuItem" xml:space="preserve">
-    <value>Show banner?</value>
+    <value>バナーの表示</value>
   </data>
   <data name="buttonToolStripMenuItem" xml:space="preserve">
-    <value>Edit Button</value>
+    <value>表示</value>
   </data>
   <data name="textToolStripMenuItem" xml:space="preserve">
-    <value>Show Text?</value>
+    <value>タイトルの表示</value>
   </data>
   <data name="selectedPatches" xml:space="preserve">
-    <value>Selected Patches</value>
+    <value>選択されたパッチ</value>
   </data>
   <data name="WBaWC" xml:space="preserve">
     <value>東方鬼形獣</value>
@@ -720,5 +718,29 @@ random game option:</value>
   </data>
   <data name="UMTitle" xml:space="preserve">
     <value>東方虹龍洞 ～ Unconnected Marketeers</value>
+  </data>
+  <data name="GI" xml:space="preserve">
+    <value>東方剛欲異聞</value>
+  </data>
+  <data name="GIShort" xml:space="preserve">
+    <value>剛欲異聞</value>
+  </data>
+  <data name="GITitle" xml:space="preserve">
+    <value>東方剛欲異聞　～ 水没した沈愁地獄</value>
+  </data>
+  <data name="errorNoCategorySelected" xml:space="preserve">
+    <value>カテゴリーが選択されていません</value>
+  </data>
+  <data name="HBM" xml:space="preserve">
+    <value>バレットフィリア達の闇市場</value>
+  </data>
+  <data name="HBMShort" xml:space="preserve">
+    <value>バレットフィリア</value>
+  </data>
+  <data name="HBMTitle" xml:space="preserve">
+    <value>バレットフィリア達の闇市場　〜 100th Black Market</value>
+  </data>
+  <data name="spinoffGroup" xml:space="preserve">
+    <value>小数点作</value>
   </data>
 </root>
