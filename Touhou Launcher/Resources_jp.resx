@@ -535,7 +535,7 @@
   <data name="errorvpatchNotFound" xml:space="preserve">
     <value>vpatch.iniが見つかりません</value>
   </data>
-  <data name="exzecutableFilter" xml:space="preserve">
+  <data name="executableFilter" xml:space="preserve">
     <value>実行ファイル</value>
   </data>
   <data name="gameSelectTitle" xml:space="preserve">

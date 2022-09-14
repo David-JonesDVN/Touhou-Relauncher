@@ -385,6 +385,10 @@ namespace Touhou_Launcher
             {
                 tMenu.Text = rm.GetString(tMenu.Name.Substring(4));
             }
+            foreach (ToolStripMenuItem tMenu in traySpinoff.DropDownItems)
+            {
+                tMenu.Text = rm.GetString(tMenu.Name.Substring(4));
+            }
             foreach (ToolStripMenuItem tMenu in trayTasofro.DropDownItems)
             {
                 tMenu.Text = rm.GetString(tMenu.Name.Substring(4));
