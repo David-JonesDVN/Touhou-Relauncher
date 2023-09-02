@@ -743,4 +743,13 @@
   <data name="spinoffGroup" xml:space="preserve">
     <value>Спиноффы</value>
   </data>
+  <data name="UDoALG" xml:space="preserve">
+    <value>Unfinished Dream of All Living Ghost</value>
+  </data>
+  <data name="UDoALGShort" xml:space="preserve">
+    <value>UDoALG</value>
+  </data>
+  <data name="UDoALGTitle" xml:space="preserve">
+    <value>Touhou 19: Unfinished Dream of All Living Ghost</value>
+  </data>
 </root>

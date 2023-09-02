@@ -1,3 +1,32 @@
+1.03 (03/09/2023)
+Added: Touhou 19 support.
+
+1.02 (14/09/2022)
+Added: Touhou 18.5 support.
+Added: Complete Japanese translation. (Courtesy of HoengSaan)
+Added: Error when adding custom game without a category.
+Added: Queue for fetching repos so servers aren't overloaded. Lowers refresh speed.
+Changed: Rearranged the game categories: Separated the PC-98 games into their own category and renamed the fighting category to games by Twilight Frontier.
+Changed: Moved Gouyoku Ibun to the Twilight Frontier category.
+Changed: Made instructions more clear when launching a game that isn't set up. (Russian translation pending)
+Changed: Updated .Net Framework target to 4.8
+Changed: Simplified repo search to use tasks.
+Changed: Changed default repo to the official server on the Touhou Patch Center.
+Removed: Upwards repository crawl.
+
+1.01 (02/02/2022)
+Changed: Removed Royalflare's link in the replays tab in light of its approaching shutdown.
+Changed: Maribel Hearn's replay link now points to the site's top page.
+Changed: Switched to TLS 1.2 to fix thcrap/replay links that don't support older TLS versions.
+Changed: Added a check for repo crawling to prevent repeated requests.
+Fixed: The launcher creating another directory for thcrap sometimes.
+
+1.0 (02/11/2021)
+Added: Touhou 17.5 support.
+
+1.0-pre5 (04/06/2021)
+Added: Touhou 18 support.
+
 1.0-pre4 (06/12/2019)
 Added: Tray icon for Touhou 17.
 Changed: The backwards compatibility code has been rewritten. Unfortunately this breaks compatibility with older versions. An intermediary version called pre3.5 is provided for conversion of settings.json to the new format.
