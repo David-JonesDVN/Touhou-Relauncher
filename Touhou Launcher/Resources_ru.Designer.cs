@@ -19,7 +19,7 @@ namespace Touhou_Launcher {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources_ru {
@@ -1625,6 +1625,33 @@ namespace Touhou_Launcher {
         public static string trayRandom {
             get {
                 return ResourceManager.GetString("trayRandom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unfinished Dream of All Living Ghost.
+        /// </summary>
+        public static string UDoALG {
+            get {
+                return ResourceManager.GetString("UDoALG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UDoALG.
+        /// </summary>
+        public static string UDoALGShort {
+            get {
+                return ResourceManager.GetString("UDoALGShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 19: Unfinished Dream of All Living Ghost.
+        /// </summary>
+        public static string UDoALGTitle {
+            get {
+                return ResourceManager.GetString("UDoALGTitle", resourceCulture);
             }
         }
         

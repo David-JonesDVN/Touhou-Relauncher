@@ -106,7 +106,7 @@ namespace Touhou_Launcher
         }
 
         private FormWindowState lastState = FormWindowState.Normal;
-        private const int mainGameCount = 18;
+        private const int mainGameCount = 19;
         private const int fightingGameCount = 6;
         private const int otherGameCount = 7;
         private const int totalGameCount = mainGameCount + fightingGameCount + otherGameCount;
@@ -121,7 +121,7 @@ namespace Touhou_Launcher
         };
         public static List<int> idToNumber = new List<int>
         {
-            1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 75, 105, 123, 135, 145, 155, 95, 125, 128, 143, 165, 175, 185
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 75, 105, 123, 135, 145, 155, 95, 125, 128, 143, 165, 175, 185
         };
         public static Dictionary<string, int> nameToID = new Dictionary<string, int>
         {
@@ -143,19 +143,20 @@ namespace Touhou_Launcher
             {"HSiFS", 15},
             {"WBaWC", 16},
             {"UM", 17},
-            {"IaMP", 18},
-            {"SWR", 19},
-            {"UoNL", 20},
-            {"HM", 21},
-            {"ULiL", 22},
-            {"AoCF", 23},
-            {"StB", 24},
-            {"DS", 25},
-            {"GFW", 26},
-            {"ISC", 27},
-            {"VD", 28},
-            {"GI", 29},
-            {"HBM", 30}
+            {"UDoALG", 18},
+            {"IaMP", 19},
+            {"SWR", 20},
+            {"UoNL", 21},
+            {"HM", 22},
+            {"ULiL", 23},
+            {"AoCF", 24},
+            {"StB", 25},
+            {"DS", 26},
+            {"GFW", 27},
+            {"ISC", 28},
+            {"VD", 29},
+            {"GI", 30},
+            {"HBM", 31}
         };
 
         public static IEnumerable<Control> GetAll(Control control, Type type)
