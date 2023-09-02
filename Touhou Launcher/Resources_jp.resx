@@ -743,4 +743,13 @@
   <data name="spinoffGroup" xml:space="preserve">
     <value>小数点作</value>
   </data>
+  <data name="UDoALG" xml:space="preserve">
+    <value>東方獣王園</value>
+  </data>
+  <data name="UDoALGShort" xml:space="preserve">
+    <value>獣王園</value>
+  </data>
+  <data name="UDoALGTitle" xml:space="preserve">
+    <value>東方獣王園　〜 Unfinished Dream of All Living Ghost</value>
+  </data>
 </root>
