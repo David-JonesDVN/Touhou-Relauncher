@@ -983,8 +983,8 @@ namespace Touhou_Launcher
 
         private void crapResetStartingRepo_Click(object sender, EventArgs e)
         {
-            crapStartingRepo.Text = @"https://mirrors.thpatch.net/nmlgc/";
-            curCfg.StartingRepo = @"https://mirrors.thpatch.net/nmlgc/";
+            curCfg.StartingRepo = @"https://srv.thpatch.net/";
+            crapStartingRepo.Text = curCfg.StartingRepo;
         }
 
         private void randomAll_Click(object sender, EventArgs e)
