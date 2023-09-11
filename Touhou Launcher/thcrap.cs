@@ -234,7 +234,7 @@ namespace Touhou_Launcher
             profileData profile = new profileData();
             foreach (string patch in patchStates)
             {
-                profile.patches.Add(new Dictionary<string, string> { {"archive", "repos/" + patch} });
+                profile.patches.Add(new Dictionary<string, string> { { "archive", "repos/" + patch } });
             }
             File.WriteAllText(gamejs, JsonConvert.SerializeObject(profile, Formatting.Indented));
             Dictionary<string, string> games = new Dictionary<string, string>();

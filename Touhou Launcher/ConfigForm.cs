@@ -16,7 +16,7 @@ namespace Touhou_Launcher
     {
         public int game;
         Button parentButton;
-        Dictionary<string, string> crap = new Dictionary<string,string>();
+        Dictionary<string, string> crap = new Dictionary<string, string>();
 
         public ConfigForm(Button parentBtn)
         {
@@ -112,14 +112,14 @@ namespace Touhou_Launcher
             }
             foreach (Label lbl in MainForm.GetAll(this, typeof(Label)))
             {
-                    lbl.Text = MainForm.rm.GetString(lbl.Name);
+                lbl.Text = MainForm.rm.GetString(lbl.Name);
             }
             foreach (GroupBox box in MainForm.GetAll(this, typeof(GroupBox)))
             {
                 box.Text = MainForm.rm.GetString(box.Name);
             }
             defaultExec.Items.Clear();
-            defaultExec.Items.AddRange(MainForm.rm.GetString("defaultExec").Split(new string[] {", "}, 4, StringSplitOptions.None));
+            defaultExec.Items.AddRange(MainForm.rm.GetString("defaultExec").Split(new string[] { ", " }, 4, StringSplitOptions.None));
             this.Text = MainForm.rm.GetString("gameConfiguration") + MainForm.rm.GetString(MainForm.nameToID.FirstOrDefault(t => t.Value == game).Key);
         }
 

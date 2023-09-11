@@ -44,7 +44,7 @@ namespace Touhou_Launcher
             public string Text { get; set; }
             public List<SubNode> Nodes = new List<SubNode>();
             public Dictionary<string, string> Games = new Dictionary<string, string>();
-            
+
             public SubNode(string Text = "The root node")
             {
                 this.Text = Text;
@@ -88,7 +88,7 @@ namespace Touhou_Launcher
             public string StartingRepo = @"https://srv.thpatch.net/";
             public Configs()
             {
-                for (int i = 0; i < gameCFG.Length ; i++)
+                for (int i = 0; i < gameCFG.Length; i++)
                 {
                     int category;
                     if (i < mainGameCount)
@@ -366,13 +366,17 @@ namespace Touhou_Launcher
         {
             switch (curCfg.language)
             {
-                case 0: rm = new System.Resources.ResourceManager("Touhou_Launcher.Resources_en", System.Reflection.Assembly.GetExecutingAssembly());
+                case 0:
+                    rm = new System.Resources.ResourceManager("Touhou_Launcher.Resources_en", System.Reflection.Assembly.GetExecutingAssembly());
                     break;
-                case 1: rm = new System.Resources.ResourceManager("Touhou_Launcher.Resources_jp", System.Reflection.Assembly.GetExecutingAssembly());
+                case 1:
+                    rm = new System.Resources.ResourceManager("Touhou_Launcher.Resources_jp", System.Reflection.Assembly.GetExecutingAssembly());
                     break;
-                case 2: rm = new System.Resources.ResourceManager("Touhou_Launcher.Resources_ru", System.Reflection.Assembly.GetExecutingAssembly());
+                case 2:
+                    rm = new System.Resources.ResourceManager("Touhou_Launcher.Resources_ru", System.Reflection.Assembly.GetExecutingAssembly());
                     break;
-                case 3: if (File.Exists(Path.GetDirectoryName(Application.ExecutablePath) + "\\Resources_custom.resources"))
+                case 3:
+                    if (File.Exists(Path.GetDirectoryName(Application.ExecutablePath) + "\\Resources_custom.resources"))
                         rm = System.Resources.ResourceManager.CreateFileBasedResourceManager("Resources_custom", Path.GetDirectoryName(Application.ExecutablePath), null);
                     else
                         languageBox.SelectedIndex = 0;
@@ -679,10 +683,10 @@ namespace Touhou_Launcher
             {
                 customAddItem(FileBrowser(rm.GetString("gameSelectTitle"), rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + rm.GetString("allFilter") + " (*.*)|*.*", true));
             }
-			else
-			{
-				MessageBox.Show(rm.GetString("errorNoCategorySelected"));
-			}
+            else
+            {
+                MessageBox.Show(rm.GetString("errorNoCategorySelected"));
+            }
         }
 
         private void customTree_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
@@ -787,15 +791,20 @@ namespace Touhou_Launcher
             }
             switch (customList.View)
             {
-                case View.LargeIcon: largeIconsToolStripMenuItem.Checked = true;
+                case View.LargeIcon:
+                    largeIconsToolStripMenuItem.Checked = true;
                     break;
-                case View.SmallIcon: smallIconsToolStripMenuItem.Checked = true;
+                case View.SmallIcon:
+                    smallIconsToolStripMenuItem.Checked = true;
                     break;
-                case View.List: listToolStripMenuItem.Checked = true;
+                case View.List:
+                    listToolStripMenuItem.Checked = true;
                     break;
-                case View.Details: detailsToolStripMenuItem.Checked = true;
+                case View.Details:
+                    detailsToolStripMenuItem.Checked = true;
                     break;
-                case View.Tile: tileToolStripMenuItem.Checked = true;
+                case View.Tile:
+                    tileToolStripMenuItem.Checked = true;
                     break;
             }
             foreach (ToolStripMenuItem menu in sortToolStripMenuItem.DropDownItems)
@@ -804,9 +813,11 @@ namespace Touhou_Launcher
             }
             switch (customList.Sorting)
             {
-                case SortOrder.Ascending: ascendingToolStripMenuItem.Checked = true;
+                case SortOrder.Ascending:
+                    ascendingToolStripMenuItem.Checked = true;
                     break;
-                case SortOrder.Descending: descendingToolStripMenuItem.Checked = true;
+                case SortOrder.Descending:
+                    descendingToolStripMenuItem.Checked = true;
                     break;
             }
         }
@@ -906,7 +917,7 @@ namespace Touhou_Launcher
                 Replays_CheckedChanged(sender, new EventArgs());
             }
         }
-        
+
         private void replayBrowser_Navigating(object sender, WebBrowserNavigatingEventArgs e)
         {
             if (e.Url.ToString().EndsWith(".rpy"))
