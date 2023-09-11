@@ -1027,8 +1027,22 @@ namespace Touhou_Launcher
             {
                 ((TextBox)sender).BackColor = SystemColors.Window;
                 curCfg.np2Dir = np2Dir.Text;
-                string crapPath = Path.GetDirectoryName(crapDir.Text);
-                curCfg.crapDir = (Directory.Exists(crapPath + "\\bin") || !crapPath.EndsWith("\\bin")) ? crapPath : crapPath.Substring(0, crapPath.LastIndexOf("\\bin"));
+                if (crapDir.Text == "")
+                {
+                    curCfg.crapDir = crapDir.Text;
+                }
+                else
+                {
+                    try
+                    {
+                        string crapPath = Path.GetDirectoryName(crapDir.Text);
+                        curCfg.crapDir = (Directory.Exists(crapPath + "\\bin") || !crapPath.EndsWith("\\bin")) ? crapPath : crapPath.Substring(0, crapPath.LastIndexOf("\\bin"));
+                    }
+                    catch (ArgumentException) // In case crapDir.Text is invalid as a path
+                    {
+
+                    }
+                }
                 curCfg.StartingRepo = crapStartingRepo.Text;
             }
             else
