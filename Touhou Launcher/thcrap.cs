@@ -211,10 +211,12 @@ namespace Touhou_Launcher
             try
             {
                 HttpClient client = MainForm.client;
-                using HttpResponseMessage response = await client.GetAsync(repos[repo].servers[0] + "/" + patch + "/patch.js");
-                response.EnsureSuccessStatusCode();
-                string content = await response.Content.ReadAsStringAsync();
-                onPatchGet(content, repo);
+                using (HttpResponseMessage response = await client.GetAsync(repos[repo].servers[0] + "/" + patch + "/patch.js"))
+                {
+                    response.EnsureSuccessStatusCode();
+                    string content = await response.Content.ReadAsStringAsync();
+                    onPatchGet(content, repo);
+                }
             }
             catch (Exception)
             {
