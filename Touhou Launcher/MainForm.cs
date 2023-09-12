@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Windows.Forms;
 
@@ -113,6 +114,7 @@ namespace Touhou_Launcher
         private const int totalGameCount = mainGameCount + fightingGameCount + otherGameCount;
         public static Configs curCfg = Configs.Load();
         public static System.Resources.ResourceManager rm;
+        public static HttpClient client = new HttpClient();
         public static Dictionary<string, int> dirToNumber = new Dictionary<string, int>
         {
             {"jp", 0},
@@ -295,7 +297,7 @@ namespace Touhou_Launcher
             }
         }
 
-        public static string[] FileBrowser(string title, string filter, bool multiSelect = false)
+        public static string[] FileBrowser(IWin32Window owner, string title, string filter, bool multiSelect = false)
         {
             OpenFileDialog browser = new OpenFileDialog();
             browser.Filter = filter;
@@ -303,9 +305,9 @@ namespace Touhou_Launcher
             browser.RestoreDirectory = false;
             browser.Multiselect = multiSelect;
             browser.Title = title;
-            if (browser.ShowDialog() == DialogResult.OK)
+            if (browser.ShowDialog(owner) == DialogResult.OK)
                 return browser.FileNames;
-            else return new string[0];
+            else return Array.Empty<string>();
         }
 
         private void downloadReplay(string path, string name, Uri url, bool th10full = false)
@@ -317,23 +319,26 @@ namespace Touhou_Launcher
                 message = rm.GetString("replayFull") + message;
             }
             DialogResult confirm = MessageBox.Show(message, rm.GetString("replayDownloadTitle"), MessageBoxButtons.YesNoCancel);
-            using (System.Net.WebClient wc = new System.Net.WebClient())
+            if (confirm == DialogResult.Yes)
             {
-                if (confirm == DialogResult.Yes)
-                {
-                    wc.DownloadFile(url, path + name);
-                }
-                else if (confirm == DialogResult.No)
-                {
-                    SaveFileDialog browser = new SaveFileDialog();
-                    browser.Filter = rm.GetString("replayFilter") + " (*.rpy)|*.rpy|" + rm.GetString("allFilter") + " (*.*)|*.*";
-                    browser.InitialDirectory = path;
-                    browser.RestoreDirectory = true;
-                    browser.FileName = name;
-                    if (browser.ShowDialog() == DialogResult.OK)
-                        wc.DownloadFile(url, browser.FileName);
-                }
+                DownloadFile(url, path + name);
             }
+            else if (confirm == DialogResult.No)
+            {
+                SaveFileDialog browser = new SaveFileDialog();
+                browser.Filter = rm.GetString("replayFilter") + " (*.rpy)|*.rpy|" + rm.GetString("allFilter") + " (*.*)|*.*";
+                browser.InitialDirectory = path;
+                browser.RestoreDirectory = true;
+                browser.FileName = name;
+                if (browser.ShowDialog(this) == DialogResult.OK)
+                    DownloadFile(url, browser.FileName);
+            }
+        }
+
+        private async void DownloadFile(Uri uri, string path)
+        {
+            byte[] bytes = await client.GetByteArrayAsync(uri);
+            File.WriteAllBytes(path, bytes);
         }
 
         private void LoadSettings()
@@ -674,14 +679,14 @@ namespace Touhou_Launcher
         {
             Button btn = (Button)((ContextMenuStrip)((ToolStripMenuItem)sender).GetCurrentParent()).Tag;
             ConfigForm gameConfig = new ConfigForm(btn);
-            gameConfig.ShowDialog();
+            gameConfig.ShowDialog(this);
         }
 
         private void customAdd_Click(object sender, EventArgs e)
         {
             if (customTree.SelectedNode != null)
             {
-                customAddItem(FileBrowser(rm.GetString("gameSelectTitle"), rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + rm.GetString("allFilter") + " (*.*)|*.*", true));
+                customAddItem(FileBrowser(this, rm.GetString("gameSelectTitle"), rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + rm.GetString("allFilter") + " (*.*)|*.*"));
             }
             else
             {
@@ -1022,7 +1027,7 @@ namespace Touhou_Launcher
         private void browse_Click(object sender, EventArgs e)
         {
             TextBox txtbox = (TextBox)launcherSettings.Controls.Find(((Button)sender).Name.Substring(6).ToLower() + "Dir", false).FirstOrDefault(n => n.GetType() == typeof(TextBox));
-            foreach (string file in MainForm.FileBrowser(MainForm.rm.GetString(((Button)sender).Name.Substring(6).ToLower() + "SelectTitle"), MainForm.rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*"))
+            foreach (string file in MainForm.FileBrowser(this, MainForm.rm.GetString(((Button)sender).Name.Substring(6).ToLower() + "SelectTitle"), MainForm.rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*"))
             {
                 txtbox.BackColor = SystemColors.Window;
                 txtbox.Text = file;
@@ -1051,7 +1056,6 @@ namespace Touhou_Launcher
                     }
                     catch (ArgumentException) // In case crapDir.Text is invalid as a path
                     {
-
                     }
                 }
                 curCfg.StartingRepo = crapStartingRepo.Text;
