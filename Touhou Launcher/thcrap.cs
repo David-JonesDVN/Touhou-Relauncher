@@ -105,8 +105,12 @@ namespace Touhou_Launcher
             {
                 if (MainForm.curCfg.gameCFG[cfgForm.game].GameDir[i] != "" && !games.ContainsValue(MainForm.curCfg.gameCFG[cfgForm.game].GameDir[i].Replace("\\", "/")))
                 {
+                    string thId = "th" + (MainForm.idToNumber[cfgForm.game]).ToString("00");
                     string augment = i == 2 ? "_custom" : "";
-                    games.Add("th" + (MainForm.idToNumber[cfgForm.game]).ToString("00") + augment, MainForm.curCfg.gameCFG[cfgForm.game].GameDir[i].Replace("\\", "/"));
+                    if (!games.ContainsKey(thId + augment))
+                    {
+                        games.Add(thId + augment, MainForm.curCfg.gameCFG[cfgForm.game].GameDir[i].Replace("\\", "/"));
+                    }
                 }
             }
             RefreshProfiles();
@@ -125,7 +129,7 @@ namespace Touhou_Launcher
                         addRepo(await wc.DownloadStringTaskAsync(address + "/repo.js"));
                         checkedRepos.Add(address);
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         /* Code for exploring the thcrap mirror manually.
                         using (var reader = new StreamReader(WebRequest.Create(address).GetResponse().GetResponseStream()))
