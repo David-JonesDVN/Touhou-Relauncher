@@ -296,17 +296,32 @@ namespace Touhou_Launcher
             }
         }
 
-        public static string[] FileBrowser(IWin32Window owner, string title, string filter, bool multiSelect = false)
+        public static string[] FileBrowser(IWin32Window owner, string title, string filter, string initialDirectory = "", bool multiSelect = false)
         {
-            OpenFileDialog browser = new OpenFileDialog();
-            browser.Filter = filter;
-            browser.FilterIndex = 1;
-            browser.RestoreDirectory = false;
-            browser.Multiselect = multiSelect;
-            browser.Title = title;
-            if (browser.ShowDialog(owner) == DialogResult.OK)
-                return browser.FileNames;
-            else return Array.Empty<string>();
+            using (OpenFileDialog browser = new OpenFileDialog())
+            {
+                browser.Filter = filter;
+                browser.FilterIndex = 1;
+                browser.InitialDirectory = initialDirectory;
+                browser.RestoreDirectory = false;
+                browser.Multiselect = multiSelect;
+                browser.Title = title;
+                if (browser.ShowDialog(owner) == DialogResult.OK)
+                    return browser.FileNames;
+                else return Array.Empty<string>();
+            }
+        }
+
+        public static string FolderBrowser(IWin32Window owner, string title, string rootFolder = "")
+        {
+            using (FolderBrowserDialog browser = new FolderBrowserDialog())
+            {
+                browser.SelectedPath = rootFolder; // Sets the initial folder
+                browser.Description = title;
+                if (browser.ShowDialog(owner) == DialogResult.OK)
+                    return browser.SelectedPath;
+                else return null;
+            }
         }
 
         private void downloadReplay(string path, string name, Uri url, bool th10full = false)
@@ -355,8 +370,7 @@ namespace Touhou_Launcher
             minimizeToTray.Checked = curCfg.minimizeToTray;
             showTray.Checked = curCfg.showTray;
             np2Dir.Text = curCfg.np2Dir;
-            if (curCfg.crapDir != "")
-                crapDir.Text = curCfg.crapDir + "\\bin\\thcrap_loader.exe";
+            crapDir.Text = curCfg.crapDir;
             crapStartingRepo.Text = curCfg.StartingRepo;
             foreach (CheckBox chk in GetAll(randomSettings, typeof(CheckBox)))
             {
@@ -1023,44 +1037,49 @@ namespace Touhou_Launcher
             curCfg.gameCFG[nameToID[((CheckBox)sender).Name.Substring(3)]].randomCheck = ((CheckBox)sender).Checked;
         }
 
-        private void browse_Click(object sender, EventArgs e)
+        private void browseFile_Click(object sender, EventArgs e)
         {
             TextBox txtbox = (TextBox)launcherSettings.Controls.Find(((Button)sender).Name.Substring(6).ToLower() + "Dir", false).FirstOrDefault(n => n.GetType() == typeof(TextBox));
             foreach (string file in MainForm.FileBrowser(this, MainForm.rm.GetString(((Button)sender).Name.Substring(6).ToLower() + "SelectTitle"), MainForm.rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*"))
             {
                 txtbox.BackColor = SystemColors.Window;
                 txtbox.Text = file;
-                curCfg.np2Dir = np2Dir.Text;
-                string crapPath = Path.GetDirectoryName(crapDir.Text);
-                curCfg.crapDir = (Directory.Exists(crapPath + "\\bin") || !crapPath.EndsWith("\\bin")) ? crapPath : crapPath.Substring(0, crapPath.LastIndexOf("\\bin"));
+                if (sender == np2Dir)
+                    curCfg.np2Dir = np2Dir.Text;
             }
+        }
+
+        private void browseFolder_Click(object sender, EventArgs e)
+        {
+            TextBox txtbox = (TextBox)launcherSettings.Controls.Find(((Button)sender).Name.Substring(6).ToLower() + "Dir", false).FirstOrDefault(n => n.GetType() == typeof(TextBox));
+            string folder = MainForm.FolderBrowser(this, MainForm.rm.GetString(((Button)sender).Name.Substring(6).ToLower() + "SelectTitle"), curCfg.crapDir);
+            txtbox.BackColor = SystemColors.Window;
+            if (folder != null)
+                txtbox.Text = folder;
+            if (sender == crapDir)
+                curCfg.crapDir = crapDir.Text;
         }
 
         private void Dir_LostFocus(object sender, EventArgs e)
         {
-            if (File.Exists(((TextBox)sender).Text) || ((TextBox)sender).Text == "" || sender == crapStartingRepo)
-            {
-                ((TextBox)sender).BackColor = SystemColors.Window;
-                curCfg.np2Dir = np2Dir.Text;
-                if (crapDir.Text == "")
+            if (sender == np2Dir)
+                if (File.Exists(np2Dir.Text) || np2Dir.Text == "")
                 {
+                    np2Dir.BackColor = SystemColors.Window;
+                    curCfg.np2Dir = np2Dir.Text;
+                }
+                else
+                    np2Dir.BackColor = Color.Red;
+            else if (sender == crapDir)
+                if (Directory.Exists(crapDir.Text) || crapDir.Text == "")
+                {
+                    crapDir.BackColor = SystemColors.Window;
                     curCfg.crapDir = crapDir.Text;
                 }
                 else
-                {
-                    try
-                    {
-                        string crapPath = Path.GetDirectoryName(crapDir.Text);
-                        curCfg.crapDir = (Directory.Exists(crapPath + "\\bin") || !crapPath.EndsWith("\\bin")) ? crapPath : crapPath.Substring(0, crapPath.LastIndexOf("\\bin"));
-                    }
-                    catch (ArgumentException) // In case crapDir.Text is invalid as a path
-                    {
-                    }
-                }
+                    crapDir.BackColor = Color.Red;
+            else if (sender == crapStartingRepo)
                 curCfg.StartingRepo = crapStartingRepo.Text;
-            }
-            else
-                ((TextBox)sender).BackColor = Color.Red;
         }
 
         private void Dir_DragDrop(object sender, DragEventArgs e)
@@ -1073,7 +1092,10 @@ namespace Touhou_Launcher
         {
             if (curCfg.crapDir != "")
             {
-                string procDir = curCfg.crapDir + "\\bin\\thcrap_configure.exe";
+                // Check for thcrap_configure_v3 first
+                string procDir = curCfg.crapDir + "\\bin\\thcrap_configure_v3.exe";
+                if (!File.Exists(procDir))
+                    procDir = curCfg.crapDir + "\\bin\\thcrap_configure.exe";
                 if (!File.Exists(procDir))
                     MessageBox.Show(rm.GetString("errorcrapNotFound"));
                 else

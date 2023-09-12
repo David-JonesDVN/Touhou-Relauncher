@@ -99,6 +99,7 @@
     <EmbeddedResource Include="Resources_en.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources_en.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources_jp.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

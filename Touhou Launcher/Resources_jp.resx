@@ -624,7 +624,7 @@
     <value>thcrapの設定</value>
   </data>
   <data name="crapDirLabel" xml:space="preserve">
-    <value>thcrap_loaderの場所：</value>
+    <value>thcrapの場所：</value>
   </data>
   <data name="errorcrapConfigNotSet" xml:space="preserve">
     <value>thcrapのプロファイルを設定してください</value>

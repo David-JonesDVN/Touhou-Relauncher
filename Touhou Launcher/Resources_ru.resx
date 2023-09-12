@@ -624,7 +624,7 @@
     <value>Настройка thcrap</value>
   </data>
   <data name="crapDirLabel" xml:space="preserve">
-    <value>Путь к thcrap_loader: </value>
+    <value>Путь к thcrap: </value>
   </data>
   <data name="errorcrapConfigNotSet" xml:space="preserve">
     <value>Пожалуйста, укажите профиль thcrap</value>

@@ -1306,7 +1306,7 @@
             this.browsecrap.TabIndex = 7;
             this.browsecrap.Text = "Browse";
             this.browsecrap.UseVisualStyleBackColor = true;
-            this.browsecrap.Click += new System.EventHandler(this.browse_Click);
+            this.browsecrap.Click += new System.EventHandler(this.browseFolder_Click);
             // 
             // crapDir
             // 
@@ -1325,7 +1325,7 @@
             this.crapDirLabel.Name = "crapDirLabel";
             this.crapDirLabel.Size = new System.Drawing.Size(119, 13);
             this.crapDirLabel.TabIndex = 8;
-            this.crapDirLabel.Text = "thcrap_loader Location:";
+            this.crapDirLabel.Text = "thcrap Location:";
             // 
             // showTray
             // 
@@ -1381,7 +1381,7 @@
             this.browseNP2.TabIndex = 5;
             this.browseNP2.Text = "Browse";
             this.browseNP2.UseVisualStyleBackColor = true;
-            this.browseNP2.Click += new System.EventHandler(this.browse_Click);
+            this.browseNP2.Click += new System.EventHandler(this.browseFile_Click);
             // 
             // np2Dir
             // 

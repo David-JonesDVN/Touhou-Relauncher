@@ -250,7 +250,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to thcrap_loader Location:.
+        ///   Looks up a localized string similar to thcrap Location:.
         /// </summary>
         public static string crapDirLabel {
             get {
