@@ -68,8 +68,8 @@ namespace Touhou_Launcher
                     crap = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(MainForm.curCfg.crapDir + "\\config\\games.js"));
                     foreach (KeyValuePair<string, string> line in crap)
                     {
-                        int number = Int32.TryParse(new String(line.Key.Where(Char.IsDigit).ToArray()), out number) ? number : 0;
-                        if (number == MainForm.idToNumber[game] || !line.Key.StartsWith("th"))
+                        string number = new String(line.Key.Where(Char.IsDigit).ToArray());
+                        if (number == MainForm.FormatGameNumber(MainForm.idToNumber[game]) || !line.Key.StartsWith("th"))
                         {
                             crapGame.Items.Add(line.Key);
                         }
@@ -180,10 +180,10 @@ namespace Touhou_Launcher
             {
                 txtBox.Text = path;
                 MainForm.curCfg.gameCFG[game].GameDir[type] = path;
-                string jpPath = Path.GetDirectoryName(path) + "\\th" + (MainForm.idToNumber[game]).ToString("00") + ".exe";
-                string enPath = Path.GetDirectoryName(path) + "\\th" + (MainForm.idToNumber[game]).ToString("00") + "e.exe";
+                string jpPath = Path.GetDirectoryName(path) + "\\th" + MainForm.FormatGameNumber(MainForm.idToNumber[game]) + ".exe";
+                string enPath = Path.GetDirectoryName(path) + "\\th" + MainForm.FormatGameNumber(MainForm.idToNumber[game]) + "e.exe";
                 string customPath = Path.GetDirectoryName(path);
-                customPath += MainForm.idToNumber[game] == 75 ? "\\Config.exe" : "\\custom.exe";
+                customPath += MainForm.idToNumber[game] == 7.5 ? "\\Config.exe" : "\\custom.exe";
                 if (type != 0 && File.Exists(jpPath) && MainForm.curCfg.gameCFG[game].GameDir[0] == "")
                 {
                     jpDir.Text = jpPath;
@@ -360,7 +360,7 @@ namespace Touhou_Launcher
 
         private void openAppdata_Click(object sender, EventArgs e)
         {
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData, Environment.SpecialFolderOption.DoNotVerify) + "\\ShanghaiAlice\\th" + (MainForm.idToNumber[game]).ToString("00");
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData, Environment.SpecialFolderOption.DoNotVerify) + "\\ShanghaiAlice\\th" + MainForm.FormatGameNumber(MainForm.idToNumber[game]);
             if (Directory.Exists(path))
                 Process.Start(path);
             else if (Directory.Exists(path + "tr"))
@@ -372,14 +372,14 @@ namespace Touhou_Launcher
         private void openReplays_Click(object sender, EventArgs e)
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData, Environment.SpecialFolderOption.DoNotVerify) + "\\ShanghaiAlice\\th";
-            if (Directory.Exists(path + MainForm.idToNumber[game].ToString("00") + "\\replay"))
+            if (Directory.Exists(path + MainForm.FormatGameNumber(MainForm.idToNumber[game]) + "\\replay"))
             {
-                Process.Start(path + MainForm.idToNumber[game].ToString("00") + "\\replay");
+                Process.Start(path + MainForm.FormatGameNumber(MainForm.idToNumber[game]) + "\\replay");
                 return;
             }
-            else if (Directory.Exists(path + MainForm.idToNumber[game].ToString("00") + "tr\\replay"))
+            else if (Directory.Exists(path + MainForm.FormatGameNumber(MainForm.idToNumber[game]) + "tr\\replay"))
             {
-                Process.Start(path + MainForm.idToNumber[game].ToString("00") + "tr\\replay");
+                Process.Start(path + MainForm.FormatGameNumber(MainForm.idToNumber[game]) + "tr\\replay");
                 return;
             }
             else

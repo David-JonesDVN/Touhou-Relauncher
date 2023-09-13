@@ -122,9 +122,9 @@ namespace Touhou_Launcher
             {"custom", 2},
             {"crap", 3}
         };
-        public static List<int> idToNumber = new List<int>
+        public static List<double> idToNumber = new List<double>
         {
-            1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 75, 105, 123, 135, 145, 155, 95, 125, 128, 143, 165, 175, 185
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 7.5, 10.5, 12.3, 13.5, 14.5, 15.5, 9.5, 12.5, 12.8, 14.3, 16.5, 17.5, 18.5
         };
         public static Dictionary<string, int> nameToID = new Dictionary<string, int>
         {
@@ -161,6 +161,33 @@ namespace Touhou_Launcher
             {"GI", 30},
             {"HBM", 31}
         };
+
+        public static string FormatGameNumber(double gameNumber)
+        {
+            string formatted = gameNumber.ToString("00.0");
+            if (formatted.EndsWith(".0"))
+                formatted = formatted.Replace(".0", "");
+            else
+                formatted = formatted.Replace(".", "");
+
+            return formatted;
+        }
+
+        public static double UnformatGameNumber(string formatted)
+        {
+            // Replay sites don't prefix the game numbers with 0s, so these two games have to be checked manually.
+            // As long as ZUN doesn't make 75 mainline Touhou games, this should work properly.
+            if (formatted == "75")
+                return 7.5;
+            else if (formatted == "95")
+                return 9.5;
+
+            double number = Convert.ToDouble(formatted);
+            if (formatted.Length == 3)
+                number /= 10;
+
+            return number;
+        }
 
         public static IEnumerable<Control> GetAll(Control control, Type type)
         {
@@ -942,7 +969,8 @@ namespace Touhou_Launcher
             {
                 e.Cancel = true;
                 string name = e.Url.ToString().Substring(e.Url.ToString().LastIndexOf("/") + 1);
-                int game = Convert.ToInt32(name.Substring(2, name.LastIndexOf("_") - 2));
+                string game = name.Substring(2, name.LastIndexOf("_") - 2);
+                double gameNum = UnformatGameNumber(game);
                 if (Directory.Exists(Environment.SpecialFolder.ApplicationData + "\\ShanghaiAlice\\th" + game))
                 {
                     downloadReplay(Environment.SpecialFolder.ApplicationData + "\\ShanghaiAlice\\th" + game, name, e.Url);
@@ -953,11 +981,11 @@ namespace Touhou_Launcher
                 }
                 else
                 {
-                    foreach (string dir in curCfg.gameCFG[idToNumber.IndexOf(game)].GameDir)
+                    foreach (string dir in curCfg.gameCFG[idToNumber.IndexOf(gameNum)].GameDir)
                     {
                         if (dir == "")
                             continue;
-                        if (game == 9)
+                        if (gameNum == 9)
                         {
                             for (int i = 1; i < 26; i++)
                             {
