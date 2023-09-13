@@ -985,7 +985,7 @@ namespace Touhou_Launcher
                     {
                         if (dir == "")
                             continue;
-                        if (gameNum == 9)
+                        if (gameNum == 10)
                         {
                             for (int i = 1; i < 26; i++)
                             {
