@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace Touhou_Launcher
@@ -172,10 +173,11 @@ namespace Touhou_Launcher
 
         private void browse_Click(object sender, EventArgs e)
         {
-            Control txtBox = windowsSettings.Controls.Find(((Button)sender).Name.ToLower().Substring(6) + "Dir", false).FirstOrDefault(n => n.GetType() == typeof(TextBox));
-            foreach (string path in MainForm.FileBrowser(this, MainForm.rm.GetString("gameSelectTitle"), MainForm.rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*"))
+            Control txtBox = windowsSettings.Controls.Find(((Button)sender).Name.Substring(6).ToLower() + "Dir", false).FirstOrDefault(n => n.GetType() == typeof(TextBox));
+            int type = MainForm.dirToNumber[txtBox.Name.Replace("Dir", "")];
+            string initialDirectory = Path.GetDirectoryName(MainForm.curCfg.gameCFG[game].GameDir[type]);
+            foreach (string path in MainForm.FileBrowser(this, MainForm.rm.GetString("gameSelectTitle"), MainForm.rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*", initialDirectory))
             {
-                int type = MainForm.dirToNumber[txtBox.Name.Replace("Dir", "")];
                 txtBox.Text = path;
                 MainForm.curCfg.gameCFG[game].GameDir[type] = path;
                 string jpPath = Path.GetDirectoryName(path) + "\\th" + (MainForm.idToNumber[game]).ToString("00") + ".exe";
@@ -238,7 +240,7 @@ namespace Touhou_Launcher
 
         private void browseBannerOn_Click(object sender, EventArgs e)
         {
-            foreach (string file in MainForm.FileBrowser(this, MainForm.rm.GetString("bannerOnSelectTitle"), MainForm.rm.GetString("imageFilter") + " (*.png, *.jpg, *.bmp)|*.png;*.jpg;*.bmp|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*"))
+            foreach (string file in MainForm.FileBrowser(this, MainForm.rm.GetString("bannerOnSelectTitle"), MainForm.rm.GetString("imageFilter") + " (*.png, *.jpg, *.bmp)|*.png;*.jpg;*.bmp|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*", Path.GetDirectoryName(MainForm.curCfg.gameCFG[game].bannerOn)))
             {
                 try
                 {
@@ -255,7 +257,7 @@ namespace Touhou_Launcher
 
         private void browseBannerOff_Click(object sender, EventArgs e)
         {
-            foreach (string file in MainForm.FileBrowser(this, MainForm.rm.GetString("bannerOffSelectTitle"), MainForm.rm.GetString("imageFilter") + " (*.png, *.jpg, *.bmp)|*.png;*.jpg;*.bmp|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*"))
+            foreach (string file in MainForm.FileBrowser(this, MainForm.rm.GetString("bannerOffSelectTitle"), MainForm.rm.GetString("imageFilter") + " (*.png, *.jpg, *.bmp)|*.png;*.jpg;*.bmp|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*", Path.GetDirectoryName(MainForm.curCfg.gameCFG[game].bannerOff)))
             {
                 try
                 {
@@ -317,7 +319,7 @@ namespace Touhou_Launcher
 
         private void browseHDI_Click(object sender, EventArgs e)
         {
-            foreach (string file in MainForm.FileBrowser(this, MainForm.rm.GetString("hdiSelectTitle"), MainForm.rm.GetString("hdiFilter") + " (*.hdi)|*.hdi|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*"))
+            foreach (string file in MainForm.FileBrowser(this, MainForm.rm.GetString("hdiSelectTitle"), MainForm.rm.GetString("hdiFilter") + " (*.hdi)|*.hdi|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*", Path.GetDirectoryName(MainForm.curCfg.gameCFG[game].GameDir[0])))
             {
                 hdiDir.Text = file;
                 MainForm.curCfg.gameCFG[game].GameDir[0] = file;

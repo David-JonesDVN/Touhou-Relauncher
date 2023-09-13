@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
 
@@ -303,7 +304,6 @@ namespace Touhou_Launcher
                 browser.Filter = filter;
                 browser.FilterIndex = 1;
                 browser.InitialDirectory = initialDirectory;
-                browser.RestoreDirectory = false;
                 browser.Multiselect = multiSelect;
                 browser.Title = title;
                 if (browser.ShowDialog(owner) == DialogResult.OK)
@@ -1039,25 +1039,31 @@ namespace Touhou_Launcher
 
         private void browseFile_Click(object sender, EventArgs e)
         {
-            TextBox txtbox = (TextBox)launcherSettings.Controls.Find(((Button)sender).Name.Substring(6).ToLower() + "Dir", false).FirstOrDefault(n => n.GetType() == typeof(TextBox));
-            foreach (string file in MainForm.FileBrowser(this, MainForm.rm.GetString(((Button)sender).Name.Substring(6).ToLower() + "SelectTitle"), MainForm.rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*"))
+            string controlName = ((Button)sender).Name.Substring(6).ToLower() + "Dir";
+            FieldInfo field = curCfg.GetType().GetField(controlName);
+            string initialDirectory = field == null ? null : Path.GetDirectoryName((string)(field.GetValue(curCfg)));
+            TextBox txtbox = (TextBox)launcherSettings.Controls.Find(controlName, false).FirstOrDefault(n => n.GetType() == typeof(TextBox));
+            foreach (string file in MainForm.FileBrowser(this, MainForm.rm.GetString(((Button)sender).Name.Substring(6).ToLower() + "SelectTitle"), MainForm.rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*", initialDirectory))
             {
                 txtbox.BackColor = SystemColors.Window;
                 txtbox.Text = file;
-                if (sender == np2Dir)
-                    curCfg.np2Dir = np2Dir.Text;
+                field?.SetValue(curCfg, txtbox.Text);
             }
         }
 
         private void browseFolder_Click(object sender, EventArgs e)
         {
-            TextBox txtbox = (TextBox)launcherSettings.Controls.Find(((Button)sender).Name.Substring(6).ToLower() + "Dir", false).FirstOrDefault(n => n.GetType() == typeof(TextBox));
-            string folder = MainForm.FolderBrowser(this, MainForm.rm.GetString(((Button)sender).Name.Substring(6).ToLower() + "SelectTitle"), curCfg.crapDir);
-            txtbox.BackColor = SystemColors.Window;
+            string controlName = ((Button)sender).Name.Substring(6).ToLower() + "Dir";
+            FieldInfo field = curCfg.GetType().GetField(controlName);
+            string rootFolder = (string)(field?.GetValue(curCfg));
+            TextBox txtbox = (TextBox)launcherSettings.Controls.Find(controlName, false).FirstOrDefault(n => n.GetType() == typeof(TextBox));
+            string folder = MainForm.FolderBrowser(this, MainForm.rm.GetString(((Button)sender).Name.Substring(6).ToLower() + "SelectTitle"), rootFolder);
             if (folder != null)
+            {
+                txtbox.BackColor = SystemColors.Window;
                 txtbox.Text = folder;
-            if (sender == crapDir)
-                curCfg.crapDir = crapDir.Text;
+                field?.SetValue(curCfg, txtbox.Text);
+            }
         }
 
         private void Dir_LostFocus(object sender, EventArgs e)
