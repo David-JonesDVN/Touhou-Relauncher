@@ -931,7 +931,7 @@ namespace Touhou_Launcher
             if (e.KeyCode == Keys.Enter)
             {
                 maribelReplays.Checked = false;
-                appspotReplays.Checked = false;
+                lunarcastReplays.Checked = false;
                 Replays_CheckedChanged(sender, new EventArgs());
             }
         }

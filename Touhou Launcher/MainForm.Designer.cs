@@ -133,7 +133,7 @@
             this.replayBrowser = new System.Windows.Forms.WebBrowser();
             this.replayPanel = new System.Windows.Forms.Panel();
             this.linkReplays = new System.Windows.Forms.TextBox();
-            this.appspotReplays = new System.Windows.Forms.RadioButton();
+            this.lunarcastReplays = new System.Windows.Forms.RadioButton();
             this.maribelReplays = new System.Windows.Forms.RadioButton();
             this.customGames = new System.Windows.Forms.TabPage();
             this.customAdd = new System.Windows.Forms.Button();
@@ -1433,7 +1433,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.replayPanel.BackColor = System.Drawing.Color.Transparent;
             this.replayPanel.Controls.Add(this.linkReplays);
-            this.replayPanel.Controls.Add(this.appspotReplays);
+            this.replayPanel.Controls.Add(this.lunarcastReplays);
             this.replayPanel.Controls.Add(this.maribelReplays);
             this.replayPanel.Location = new System.Drawing.Point(0, 0);
             this.replayPanel.Name = "replayPanel";
@@ -1450,17 +1450,17 @@
             // 
             // appspotReplays
             // 
-            this.appspotReplays.Appearance = System.Windows.Forms.Appearance.Button;
-            this.appspotReplays.AutoSize = true;
-            this.appspotReplays.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.appspotReplays.Location = new System.Drawing.Point(112, 3);
-            this.appspotReplays.Name = "appspotReplays";
-            this.appspotReplays.Size = new System.Drawing.Size(123, 23);
-            this.appspotReplays.TabIndex = 2;
-            this.appspotReplays.Text = "threplays.appspot.com";
-            this.appspotReplays.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.appspotReplays.UseVisualStyleBackColor = true;
-            this.appspotReplays.CheckedChanged += new System.EventHandler(this.Replays_CheckedChanged);
+            this.lunarcastReplays.Appearance = System.Windows.Forms.Appearance.Button;
+            this.lunarcastReplays.AutoSize = true;
+            this.lunarcastReplays.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lunarcastReplays.Location = new System.Drawing.Point(112, 3);
+            this.lunarcastReplays.Name = "appspotReplays";
+            this.lunarcastReplays.Size = new System.Drawing.Size(123, 23);
+            this.lunarcastReplays.TabIndex = 2;
+            this.lunarcastReplays.Text = "replay.lunarcast.net";
+            this.lunarcastReplays.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lunarcastReplays.UseVisualStyleBackColor = true;
+            this.lunarcastReplays.CheckedChanged += new System.EventHandler(this.Replays_CheckedChanged);
             // 
             // maribelReplays
             // 
@@ -2691,7 +2691,7 @@
         private System.Windows.Forms.TabPage replays;
         private System.Windows.Forms.WebBrowser replayBrowser;
         private System.Windows.Forms.Panel replayPanel;
-        private System.Windows.Forms.RadioButton appspotReplays;
+        private System.Windows.Forms.RadioButton lunarcastReplays;
         private System.Windows.Forms.RadioButton maribelReplays;
         private System.Windows.Forms.TabPage customGames;
         private System.Windows.Forms.Button customAdd;
