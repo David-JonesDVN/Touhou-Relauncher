@@ -18,7 +18,7 @@ Custom language support for testing purposes if you're interested in translating
 Almost all of the features from the original Touhou Launcher.
 
 # How To Use
-First of all, fill in Neko Project II/thcrap_loader's paths in the settings tab.\
+First of all, fill in Neko Project II/thcrap's paths in the settings tab.\
 You can then fill in the games' paths by right-clicking on their buttons.\
 If you're not using the offline build, you can choose the "Custom" option from the thcrap dropdown menu on a game's configuration screen to configure patches for that game.
 
