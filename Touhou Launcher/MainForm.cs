@@ -259,24 +259,28 @@ namespace Touhou_Launcher
                 return NekoProject(hdi, game);
             }
              */
-            string[] config = File.ReadAllLines(Path.GetDirectoryName(curCfg.np2Dir) + "\\np21nt.ini", Encoding.Unicode);
-            for (int i = 0; i < config.Length; i++)
+            string iniFilePath = Path.GetDirectoryName(curCfg.np2Dir) + "\\" + Path.GetFileNameWithoutExtension(curCfg.np2Dir) + ".ini";
+            if (File.Exists(iniFilePath))
             {
-                if (config[i].Contains("HDD1FILE="))
+                string[] config = File.ReadAllLines(iniFilePath, Encoding.Unicode);
+                for (int i = 0; i < config.Length; i++)
                 {
-                    if (config[i] != "HDD1FILE=" + hdi)
+                    if (config[i].Contains("HDD1FILE="))
                     {
-                        try
+                        if (config[i] != "HDD1FILE=" + hdi)
                         {
-                            config[i] = "HDD1FILE=" + hdi;
-                            File.WriteAllLines(Path.GetDirectoryName(curCfg.np2Dir) + "\\np21nt.ini", config, Encoding.Unicode);
+                            try
+                            {
+                                config[i] = "HDD1FILE=" + hdi;
+                                File.WriteAllLines(iniFilePath, config, Encoding.Unicode);
+                            }
+                            catch (Exception)
+                            {
+                                return false;
+                            }
                         }
-                        catch (Exception)
-                        {
-                            return false;
-                        }
+                        return true;
                     }
-                    return true;
                 }
             }
             return false;
@@ -286,9 +290,8 @@ namespace Touhou_Launcher
         {
             if (!File.Exists(curCfg.np2Dir))
                 MessageBox.Show(rm.GetString("errorNP2NotFound"));
-            // This was used back when np2Dir was stored as a directory and not as a file, so it does not work anymore.
-            /*else if (!NekoProject(dir))
-                MessageBox.Show(rm.GetString("errorInvalidNP2INI"));*/
+            else if (!NekoProject(dir))
+                MessageBox.Show(rm.GetString("errorInvalidNP2INI"));
             else
                 startProcess(curCfg.np2Dir);
         }
