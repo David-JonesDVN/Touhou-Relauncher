@@ -46,7 +46,7 @@ namespace Touhou_Launcher
 
         private void InitializeLanguage()
         {
-            this.Text = MainForm.rm.GetString("thcrapTitle") + MainForm.rm.GetString(MainForm.nameToID.ElementAtOrDefault(cfgForm.game));
+            this.Text = MainForm.rm.GetString("thcrapTitle") + MainForm.rm.GetString(MainForm.gameNames.ElementAtOrDefault(cfgForm.game));
             foreach (ListView list in MainForm.GetAll(this, typeof(ListView)))
             {
                 foreach (ColumnHeader column in list.Columns)
@@ -76,7 +76,7 @@ namespace Touhou_Launcher
         public thcrap(ConfigForm cfg)
         {
             cfgForm = cfg;
-            gamejs = MainForm.curCfg.crapDir + "\\config\\launcher" + MainForm.FormatGameNumber(MainForm.idToNumber[cfg.game]) + ".js";
+            gamejs = MainForm.curCfg.crapDir + "\\config\\launcher" + MainForm.FormatGameNumber(MainForm.gameNumbers[cfg.game]) + ".js";
             InitializeComponent();
             InitializeLanguage();
         }
@@ -104,7 +104,7 @@ namespace Touhou_Launcher
             {
                 if (MainForm.curCfg.gameCFG[cfgForm.game].GameDir[i] != "" && !games.ContainsValue(MainForm.curCfg.gameCFG[cfgForm.game].GameDir[i].Replace("\\", "/")))
                 {
-                    string thId = "th" + MainForm.FormatGameNumber(MainForm.idToNumber[cfgForm.game]);
+                    string thId = "th" + MainForm.FormatGameNumber(MainForm.gameNumbers[cfgForm.game]);
                     string augment = i == 2 ? "_custom" : "";
                     if (!games.ContainsKey(thId + augment))
                     {

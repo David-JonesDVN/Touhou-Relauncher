@@ -115,18 +115,18 @@ namespace Touhou_Launcher
         public static Configs curCfg = Configs.Load();
         public static System.Resources.ResourceManager rm;
         public static HttpClient client = new HttpClient();
-        public static List<string> dirToNumber = new List<string>
+        public static List<string> defaultExeOptions = new List<string>
         {
             "jp",
             "en",
             "custom",
             "crap"
         };
-        public static List<double> idToNumber = new List<double>
+        public static List<double> gameNumbers = new List<double>
         {
             1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 7.5, 10.5, 12.3, 13.5, 14.5, 15.5, 9.5, 12.5, 12.8, 14.3, 16.5, 17.5, 18.5
         };
-        public static List<string> nameToID = new List<string>
+        public static List<string> gameNames = new List<string>
         {
             "HRtP",
             "SoEW",
@@ -403,7 +403,7 @@ namespace Touhou_Launcher
             foreach (CheckBox chk in GetAll(randomSettings, typeof(CheckBox)))
             {
                 chk.CheckedChanged -= chkRandom_CheckedChanged;
-                chk.Checked = curCfg.gameCFG[nameToID.IndexOf(chk.Name.Substring(3))].randomCheck;
+                chk.Checked = curCfg.gameCFG[gameNames.IndexOf(chk.Name.Substring(3))].randomCheck;
                 chk.CheckedChanged += chkRandom_CheckedChanged;
             }
         }
@@ -448,7 +448,7 @@ namespace Touhou_Launcher
             {
                 if (btn.Name == "btnRandom")
                     btn.Text = rm.GetString(btn.Name.Substring(3));
-                else if (curCfg.gameCFG[nameToID.IndexOf(btn.Name.Substring(3))].showText)
+                else if (curCfg.gameCFG[gameNames.IndexOf(btn.Name.Substring(3))].showText)
                     btn.Text = rm.GetString(btn.Name.Substring(3));
                 else
                     btn.Text = "";
@@ -519,7 +519,7 @@ namespace Touhou_Launcher
 
         public static void RefreshButton(Button btn)
         {
-            int game = nameToID.IndexOf(btn.Name.Substring(3));
+            int game = gameNames.IndexOf(btn.Name.Substring(3));
             btn.ForeColor = curCfg.gameCFG[game].customText ? Color.FromArgb(curCfg.gameCFG[game].textColor) : Color.FromArgb(curCfg.gameCFG[game].defaultTextColor);
             if (curCfg.gameCFG[game].showBanner)
             {
@@ -614,7 +614,7 @@ namespace Touhou_Launcher
             }
             foreach (Button btn in GetAll(games, typeof(Button)))
                 if (btn.Name != "btnRandom")
-                    curCfg.gameCFG[nameToID.IndexOf(btn.Name.Substring(3))].defaultTextColor = btn.ForeColor.ToArgb();
+                    curCfg.gameCFG[gameNames.IndexOf(btn.Name.Substring(3))].defaultTextColor = btn.ForeColor.ToArgb();
             LoadSettings();
         }
 
@@ -664,7 +664,7 @@ namespace Touhou_Launcher
 
         private void btn_Click(object sender, EventArgs e)
         {
-            int game = nameToID.IndexOf(((Button)sender).Name.Substring(3));
+            int game = gameNames.IndexOf(((Button)sender).Name.Substring(3));
             GameConfig curGame = curCfg.gameCFG[game];
             if (File.Exists(curGame.GameDir[curGame.DefaultDir]) || curGame.DefaultDir == 3)
             {
@@ -982,7 +982,7 @@ namespace Touhou_Launcher
                 }
                 else
                 {
-                    foreach (string dir in curCfg.gameCFG[idToNumber.IndexOf(gameNum)].GameDir)
+                    foreach (string dir in curCfg.gameCFG[gameNumbers.IndexOf(gameNum)].GameDir)
                     {
                         if (dir == "")
                             continue;
@@ -1063,7 +1063,7 @@ namespace Touhou_Launcher
 
         private void chkRandom_CheckedChanged(object sender, EventArgs e)
         {
-            curCfg.gameCFG[nameToID.IndexOf(((CheckBox)sender).Name.Substring(3))].randomCheck = ((CheckBox)sender).Checked;
+            curCfg.gameCFG[gameNames.IndexOf(((CheckBox)sender).Name.Substring(3))].randomCheck = ((CheckBox)sender).Checked;
         }
 
         private void browseFile_Click(object sender, EventArgs e)
@@ -1151,7 +1151,7 @@ namespace Touhou_Launcher
         private void buttonToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Button btn = (Button)((ContextMenuStrip)((ToolStripMenuItem)sender).OwnerItem.GetCurrentParent()).Tag;
-            int game = nameToID.IndexOf(btn.Name.Substring(3));
+            int game = gameNames.IndexOf(btn.Name.Substring(3));
             curCfg.gameCFG[game].showText = textToolStripMenuItem.Checked;
             curCfg.gameCFG[game].showBanner = bannerToolStripMenuItem.Checked;
             curCfg.Save();
@@ -1162,7 +1162,7 @@ namespace Touhou_Launcher
         private void ContextMenu_Opening(object sender, CancelEventArgs e)
         {
             ((ContextMenuStrip)sender).Tag = ((ContextMenuStrip)sender).SourceControl;
-            int game = nameToID.IndexOf(((ContextMenuStrip)sender).SourceControl.Name.Substring(3));
+            int game = gameNames.IndexOf(((ContextMenuStrip)sender).SourceControl.Name.Substring(3));
             textToolStripMenuItem.Checked = curCfg.gameCFG[game].showText;
             bannerToolStripMenuItem.Checked = curCfg.gameCFG[game].showBanner;
         }
