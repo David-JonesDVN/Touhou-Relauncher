@@ -1069,7 +1069,7 @@ namespace Touhou_Launcher
         private void browseFile_Click(object sender, EventArgs e)
         {
             string controlName = ((Button)sender).Name.Substring(6).ToLower() + "Dir";
-            FieldInfo field = curCfg.GetType().GetField(controlName);
+            FieldInfo field = typeof(Configs).GetField(controlName);
             string initialDirectory = field == null ? null : Path.GetDirectoryName((string)(field.GetValue(curCfg)));
             TextBox txtbox = (TextBox)launcherSettings.Controls.Find(controlName, false).FirstOrDefault(n => n.GetType() == typeof(TextBox));
             foreach (string file in MainForm.FileBrowser(this, MainForm.rm.GetString(((Button)sender).Name.Substring(6).ToLower() + "SelectTitle"), MainForm.rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*", initialDirectory))
@@ -1083,7 +1083,7 @@ namespace Touhou_Launcher
         private void browseFolder_Click(object sender, EventArgs e)
         {
             string controlName = ((Button)sender).Name.Substring(6).ToLower() + "Dir";
-            FieldInfo field = curCfg.GetType().GetField(controlName);
+            FieldInfo field = typeof(Configs).GetField(controlName);
             string rootFolder = (string)(field?.GetValue(curCfg));
             TextBox txtbox = (TextBox)launcherSettings.Controls.Find(controlName, false).FirstOrDefault(n => n.GetType() == typeof(TextBox));
             string folder = MainForm.FolderBrowser(this, MainForm.rm.GetString(((Button)sender).Name.Substring(6).ToLower() + "SelectTitle"), rootFolder);
