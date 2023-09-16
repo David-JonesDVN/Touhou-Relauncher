@@ -46,7 +46,7 @@ namespace Touhou_Launcher
 
         private void InitializeLanguage()
         {
-            this.Text = MainForm.rm.GetString("thcrapTitle") + MainForm.rm.GetString(MainForm.nameToID.FirstOrDefault(t => t.Value == cfgForm.game).Key);
+            this.Text = MainForm.rm.GetString("thcrapTitle") + MainForm.rm.GetString(MainForm.nameToID.ElementAtOrDefault(cfgForm.game));
             foreach (ListView list in MainForm.GetAll(this, typeof(ListView)))
             {
                 foreach (ColumnHeader column in list.Columns)

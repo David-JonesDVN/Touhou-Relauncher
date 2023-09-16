@@ -19,7 +19,7 @@ namespace Touhou_Launcher
         {
             InitializeComponent();
             parentButton = parentBtn;
-            game = MainForm.nameToID[parentBtn.Name.Substring(3)];
+            game = MainForm.nameToID.IndexOf(parentBtn.Name.Substring(3));
             InitializeLanguage();
             chkCustomBanner.Checked = MainForm.curCfg.gameCFG[game].customBanner;
             bannerOffDir.Text = MainForm.curCfg.gameCFG[game].bannerOff;
@@ -117,7 +117,7 @@ namespace Touhou_Launcher
             }
             defaultExec.Items.Clear();
             defaultExec.Items.AddRange(MainForm.rm.GetString("defaultExec").Split(new string[] { ", " }, 4, StringSplitOptions.None));
-            this.Text = MainForm.rm.GetString("gameConfiguration") + MainForm.rm.GetString(MainForm.nameToID.FirstOrDefault(t => t.Value == game).Key);
+            this.Text = MainForm.rm.GetString("gameConfiguration") + MainForm.rm.GetString(MainForm.nameToID.ElementAtOrDefault(game));
         }
 
         private void ConfigForm_Closing(object sender, FormClosingEventArgs e)
@@ -141,7 +141,7 @@ namespace Touhou_Launcher
             if (File.Exists(((TextBox)sender).Text) || ((TextBox)sender).Text == "")
             {
                 ((TextBox)sender).BackColor = SystemColors.Window;
-                int dirID = game > 4 ? MainForm.dirToNumber[((TextBox)sender).Name.Replace("Dir", "")] : 0;
+                int dirID = game > 4 ? MainForm.dirToNumber.IndexOf(((TextBox)sender).Name.Replace("Dir", "")) : 0;
                 MainForm.curCfg.gameCFG[game].GameDir[dirID] = ((TextBox)sender).Text;
             }
             else
@@ -167,13 +167,13 @@ namespace Touhou_Launcher
 
         private void Applocale_CheckedChanged(object sender, EventArgs e)
         {
-            MainForm.curCfg.gameCFG[game].appLocale[MainForm.dirToNumber[((CheckBox)sender).Name.Replace("Applocale", "")]] = ((CheckBox)sender).Checked;
+            MainForm.curCfg.gameCFG[game].appLocale[MainForm.dirToNumber.IndexOf(((CheckBox)sender).Name.Replace("Applocale", ""))] = ((CheckBox)sender).Checked;
         }
 
         private void browse_Click(object sender, EventArgs e)
         {
             Control txtBox = windowsSettings.Controls.Find(((Button)sender).Name.Substring(6).ToLower() + "Dir", false).FirstOrDefault(n => n.GetType() == typeof(TextBox));
-            int type = MainForm.dirToNumber[txtBox.Name.Replace("Dir", "")];
+            int type = MainForm.dirToNumber.IndexOf(txtBox.Name.Replace("Dir", ""));
             string initialDirectory = Path.GetDirectoryName(MainForm.curCfg.gameCFG[game].GameDir[type]);
             foreach (string path in MainForm.FileBrowser(this, MainForm.rm.GetString("gameSelectTitle"), MainForm.rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*", initialDirectory))
             {
@@ -204,7 +204,7 @@ namespace Touhou_Launcher
 
         private void launch_Click(object sender, EventArgs e)
         {
-            int dir = MainForm.dirToNumber[((Button)sender).Name.ToLower().Substring(6)];
+            int dir = MainForm.dirToNumber.IndexOf(((Button)sender).Name.ToLower().Substring(6));
             MainForm.launchGame(game, dir, MainForm.curCfg.gameCFG[game].appLocale[dir]);
         }
 
