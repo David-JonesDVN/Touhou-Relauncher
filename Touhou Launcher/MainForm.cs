@@ -286,8 +286,9 @@ namespace Touhou_Launcher
         {
             if (!File.Exists(curCfg.np2Dir))
                 MessageBox.Show(rm.GetString("errorNP2NotFound"));
-            else if (!NekoProject(dir))
-                MessageBox.Show(rm.GetString("errorInvalidNP2INI"));
+            // This was used back when np2Dir was stored as a directory and not as a file, so it does not work anymore.
+            /*else if (!NekoProject(dir))
+                MessageBox.Show(rm.GetString("errorInvalidNP2INI"));*/
             else
                 startProcess(curCfg.np2Dir);
         }
