@@ -24,11 +24,11 @@ namespace Touhou_Launcher
                 str = "Touhou_Launcher.jsonnet.Newtonsoft.Json.dll";
             if (str != "")
             {
-                using (var stream = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream(str))
+                using (System.IO.Stream stream = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream(str))
                 {
                     try
                     {
-                        var assemblyData = new Byte[stream.Length];
+                        byte[] assemblyData = new byte[stream.Length];
                         stream.Read(assemblyData, 0, assemblyData.Length);
                         return System.Reflection.Assembly.Load(assemblyData);
                     }
