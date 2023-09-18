@@ -200,7 +200,7 @@ namespace Touhou_Launcher
 
         private IEnumerable<ContextMenuStrip> GetContextMenus(Control control)
         {
-            return control.GetType().GetFields(System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic).Select(f => f.GetValue(this)).OfType<ContextMenuStrip>();
+            return control.GetType().GetFields(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic).Select(f => f.GetValue(this)).OfType<ContextMenuStrip>();
         }
 
         private SubNode TreeToJSON(TreeNodeCollection parent, SubNode serializableTree)
@@ -416,13 +416,13 @@ namespace Touhou_Launcher
             switch (curCfg.language)
             {
                 case 0:
-                    rm = new System.Resources.ResourceManager("Touhou_Launcher.Resources_en", System.Reflection.Assembly.GetExecutingAssembly());
+                    rm = new System.Resources.ResourceManager("Touhou_Launcher.Resources_en", Assembly.GetExecutingAssembly());
                     break;
                 case 1:
-                    rm = new System.Resources.ResourceManager("Touhou_Launcher.Resources_jp", System.Reflection.Assembly.GetExecutingAssembly());
+                    rm = new System.Resources.ResourceManager("Touhou_Launcher.Resources_jp", Assembly.GetExecutingAssembly());
                     break;
                 case 2:
-                    rm = new System.Resources.ResourceManager("Touhou_Launcher.Resources_ru", System.Reflection.Assembly.GetExecutingAssembly());
+                    rm = new System.Resources.ResourceManager("Touhou_Launcher.Resources_ru", Assembly.GetExecutingAssembly());
                     break;
                 case 3:
                     if (File.Exists(Path.GetDirectoryName(Application.ExecutablePath) + "\\Resources_custom.resources"))
@@ -540,14 +540,14 @@ namespace Touhou_Launcher
                     if (curCfg.gameCFG[game].customBanner && curCfg.gameCFG[game].bannerOn != "")
                         btn.BackgroundImage = Image.FromFile(curCfg.gameCFG[game].bannerOn);
                     else
-                        btn.BackgroundImage = (Bitmap)Touhou_Launcher.Properties.Resources.ResourceManager.GetObject((btn.Name == "btnIN" ? "_" : "") + btn.Name.Substring(3).ToLower());
+                        btn.BackgroundImage = (Bitmap)Properties.Resources.ResourceManager.GetObject((btn.Name == "btnIN" ? "_" : "") + btn.Name.Substring(3).ToLower());
                 }
                 else
                 {
                     if (curCfg.gameCFG[game].customBanner && curCfg.gameCFG[game].bannerOff != "")
                         btn.BackgroundImage = Image.FromFile(curCfg.gameCFG[game].bannerOff);
                     else
-                        btn.BackgroundImage = (Bitmap)Touhou_Launcher.Properties.Resources.ResourceManager.GetObject((btn.Name == "btnIN" ? "_" : "") + btn.Name.Substring(3).ToLower() + "g");
+                        btn.BackgroundImage = (Bitmap)Properties.Resources.ResourceManager.GetObject((btn.Name == "btnIN" ? "_" : "") + btn.Name.Substring(3).ToLower() + "g");
 
                 }
             }
@@ -789,7 +789,7 @@ namespace Touhou_Launcher
         {
             if (customTree.SelectedNode != null)
             {
-                if (MessageBox.Show(String.Format(rm.GetString("customCategoryDeleteConfirm"), customTree.SelectedNode.Text), "", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                if (MessageBox.Show(String.Format(rm.GetString("customCategoryDeleteConfirm"), customTree.SelectedNode.Text), "", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     customTree.SelectedNode.Remove();
                     curCfg.Custom = TreeToJSON(customTree.Nodes, new SubNode());
@@ -875,7 +875,7 @@ namespace Touhou_Launcher
         {
             foreach (ListViewItem game in customList.SelectedItems)
             {
-                if (MessageBox.Show(String.Format(rm.GetString("customDeleteConfirm"), game.Text), "", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                if (MessageBox.Show(String.Format(rm.GetString("customDeleteConfirm"), game.Text), "", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     customList.Items.Remove(game);
                     ((Dictionary<string, string>)customTree.SelectedNode.Tag).Remove(game.Name);
@@ -1075,7 +1075,7 @@ namespace Touhou_Launcher
             FieldInfo field = typeof(Configs).GetField(controlName);
             string initialDirectory = field == null ? null : Path.GetDirectoryName((string)(field.GetValue(curCfg)));
             TextBox txtbox = (TextBox)launcherSettings.Controls.Find(controlName, false).FirstOrDefault(n => n.GetType() == typeof(TextBox));
-            foreach (string file in MainForm.FileBrowser(this, MainForm.rm.GetString(((Button)sender).Name.Substring(6).ToLower() + "SelectTitle"), MainForm.rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*", initialDirectory))
+            foreach (string file in FileBrowser(this, rm.GetString(((Button)sender).Name.Substring(6).ToLower() + "SelectTitle"), rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + rm.GetString("allFilter") + " (*.*)|*.*", initialDirectory))
             {
                 txtbox.BackColor = SystemColors.Window;
                 txtbox.Text = file;
@@ -1089,7 +1089,7 @@ namespace Touhou_Launcher
             FieldInfo field = typeof(Configs).GetField(controlName);
             string rootFolder = (string)(field?.GetValue(curCfg));
             TextBox txtbox = (TextBox)launcherSettings.Controls.Find(controlName, false).FirstOrDefault(n => n.GetType() == typeof(TextBox));
-            string folder = MainForm.FolderBrowser(this, MainForm.rm.GetString(((Button)sender).Name.Substring(6).ToLower() + "SelectTitle"), rootFolder);
+            string folder = FolderBrowser(this, rm.GetString(((Button)sender).Name.Substring(6).ToLower() + "SelectTitle"), rootFolder);
             if (folder != null)
             {
                 txtbox.BackColor = SystemColors.Window;

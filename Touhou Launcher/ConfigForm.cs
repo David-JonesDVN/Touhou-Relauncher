@@ -312,7 +312,7 @@ namespace Touhou_Launcher
         {
             ColorDialog colorSet = new ColorDialog();
             colorSet.Color = Color.FromArgb(MainForm.curCfg.gameCFG[game].textColor);
-            if (colorSet.ShowDialog(this) == System.Windows.Forms.DialogResult.OK)
+            if (colorSet.ShowDialog(this) == DialogResult.OK)
                 MainForm.curCfg.gameCFG[game].textColor = colorSet.Color.ToArgb();
         }
 
