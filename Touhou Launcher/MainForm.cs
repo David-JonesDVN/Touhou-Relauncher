@@ -342,11 +342,11 @@ namespace Touhou_Launcher
             }
         }
 
-        public static string FolderBrowser(IWin32Window owner, string title, string rootFolder = "")
+        public static string FolderBrowser(IWin32Window owner, string title, string initialDirectory = "")
         {
             using (FolderBrowserDialog browser = new FolderBrowserDialog())
             {
-                browser.SelectedPath = rootFolder; // Sets the initial folder
+                browser.SelectedPath = initialDirectory; // Sets the initial folder
                 browser.Description = title;
                 if (browser.ShowDialog(owner) == DialogResult.OK)
                     return browser.SelectedPath;
@@ -1066,7 +1066,7 @@ namespace Touhou_Launcher
         {
             string controlName = ((Button)sender).Name.Substring(6).ToLower() + "Dir";
             FieldInfo field = typeof(Configs).GetField(controlName);
-            string initialDirectory = field == null ? null : Path.GetDirectoryName((string)(field.GetValue(curCfg)));
+            string initialDirectory = field == null || (string)field.GetValue(curCfg) == "" ? null : Path.GetDirectoryName((string)(field.GetValue(curCfg)));
             TextBox txtbox = (TextBox)launcherSettings.Controls.Find(controlName, false).FirstOrDefault(n => n.GetType() == typeof(TextBox));
             foreach (string file in FileBrowser(this, rm.GetString(((Button)sender).Name.Substring(6).ToLower() + "SelectTitle"), rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + rm.GetString("allFilter") + " (*.*)|*.*", initialDirectory))
             {
@@ -1080,9 +1080,9 @@ namespace Touhou_Launcher
         {
             string controlName = ((Button)sender).Name.Substring(6).ToLower() + "Dir";
             FieldInfo field = typeof(Configs).GetField(controlName);
-            string rootFolder = (string)(field?.GetValue(curCfg));
+            string initialDirectory = (string)(field?.GetValue(curCfg));
             TextBox txtbox = (TextBox)launcherSettings.Controls.Find(controlName, false).FirstOrDefault(n => n.GetType() == typeof(TextBox));
-            string folder = FolderBrowser(this, rm.GetString(((Button)sender).Name.Substring(6).ToLower() + "SelectTitle"), rootFolder);
+            string folder = FolderBrowser(this, rm.GetString(((Button)sender).Name.Substring(6).ToLower() + "SelectTitle"), initialDirectory);
             if (folder != null)
             {
                 txtbox.BackColor = SystemColors.Window;
