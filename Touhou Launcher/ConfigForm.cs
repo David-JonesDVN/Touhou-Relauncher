@@ -91,7 +91,7 @@ namespace Touhou_Launcher
 
         private void InitializeLanguage()
         {
-            foreach (Button btn in MainForm.GetAll(this, typeof(Button)))
+            foreach (Button btn in MainForm.GetAll<Button>(this))
             {
                 if (btn.Name.Contains("browse"))
                     btn.Text = MainForm.rm.GetString("browse");
@@ -100,18 +100,18 @@ namespace Touhou_Launcher
                 else
                     btn.Text = MainForm.rm.GetString(btn.Name);
             }
-            foreach (CheckBox chk in MainForm.GetAll(this, typeof(CheckBox)))
+            foreach (CheckBox chk in MainForm.GetAll<CheckBox>(this))
             {
                 if (chk.Name.Contains("Applocale"))
                     chk.Text = MainForm.rm.GetString("useApplocale");
                 else
                     chk.Text = MainForm.rm.GetString(chk.Name);
             }
-            foreach (Label lbl in MainForm.GetAll(this, typeof(Label)))
+            foreach (Label lbl in MainForm.GetAll<Label>(this))
             {
                 lbl.Text = MainForm.rm.GetString(lbl.Name);
             }
-            foreach (GroupBox box in MainForm.GetAll(this, typeof(GroupBox)))
+            foreach (GroupBox box in MainForm.GetAll<GroupBox>(this))
             {
                 box.Text = MainForm.rm.GetString(box.Name);
             }
@@ -335,7 +335,7 @@ namespace Touhou_Launcher
             string path = "";
             if (game > 4)
             {
-                foreach (TextBox dir in MainForm.GetAll(windowsSettings, typeof(TextBox)))
+                foreach (TextBox dir in MainForm.GetAll<TextBox>(windowsSettings))
                 {
                     if (dir.Text != "")
                     {
@@ -383,7 +383,7 @@ namespace Touhou_Launcher
             }
             else
             {
-                foreach (TextBox dir in MainForm.GetAll(windowsSettings, typeof(TextBox)))
+                foreach (TextBox dir in MainForm.GetAll<TextBox>(windowsSettings))
                 {
                     if (dir.Text != "")
                     {

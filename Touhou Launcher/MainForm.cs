@@ -189,13 +189,12 @@ namespace Touhou_Launcher
             return number;
         }
 
-        public static IEnumerable<Control> GetAll(Control control, Type type)
+        public static IEnumerable<T> GetAll<T>(Control control) where T : Control
         {
-            var controls = control.Controls.Cast<Control>();
+            IEnumerable<Control> controls = control.Controls.Cast<Control>();
 
-            return controls.SelectMany(ctrl => GetAll(ctrl, type))
-                                      .Concat(controls)
-                                      .Where(c => c.GetType() == type);
+            return controls.SelectMany(ctrl => GetAll<T>(ctrl))
+                                      .Concat(controls).OfType<T>();
         }
 
         private IEnumerable<ContextMenuStrip> GetContextMenus(Control control)
@@ -389,7 +388,7 @@ namespace Touhou_Launcher
         private void LoadSettings()
         {
             InitializeLanguage();
-            foreach (Button btn in GetAll(games, typeof(Button)))
+            foreach (Button btn in GetAll<Button>(games))
                 if (btn.Name != "btnRandom")
                     RefreshButton(btn);
             JSONToTree(curCfg.Custom, customTree.Nodes);
@@ -403,7 +402,7 @@ namespace Touhou_Launcher
             np2Dir.Text = curCfg.np2Dir;
             crapDir.Text = curCfg.crapDir;
             crapStartingRepo.Text = curCfg.StartingRepo;
-            foreach (CheckBox chk in GetAll(randomSettings, typeof(CheckBox)))
+            foreach (CheckBox chk in GetAll<CheckBox>(randomSettings))
             {
                 chk.CheckedChanged -= chkRandom_CheckedChanged;
                 chk.Checked = curCfg.gameCFG[gameNames.IndexOf(chk.Name.Substring(3))].randomCheck;
@@ -447,7 +446,7 @@ namespace Touhou_Launcher
             {
                 tMenu.Text = rm.GetString(tMenu.Name.Substring(4));
             }
-            foreach (Button btn in GetAll(games, typeof(Button)))
+            foreach (Button btn in GetAll<Button>(games))
             {
                 if (btn.Name == "btnRandom")
                     btn.Text = rm.GetString(btn.Name.Substring(3));
@@ -465,7 +464,7 @@ namespace Touhou_Launcher
             {
                 tMenu.Text = rm.GetString(tMenu.Name);
             }
-            foreach (CheckBox chk in GetAll(randomSettings, typeof(CheckBox)))
+            foreach (CheckBox chk in GetAll<CheckBox>(randomSettings))
             {
                 chk.Text = rm.GetString(chk.Name.Substring(3) + "Short");
                 toolTip.SetToolTip(chk, rm.GetString(chk.Name.Substring(3) + "Title"));
@@ -615,7 +614,7 @@ namespace Touhou_Launcher
                 }
                 curCfg.gameCFG = backwardsComp;
             }
-            foreach (Button btn in GetAll(games, typeof(Button)))
+            foreach (Button btn in GetAll<Button>(games))
                 if (btn.Name != "btnRandom")
                     curCfg.gameCFG[gameNames.IndexOf(btn.Name.Substring(3))].defaultTextColor = btn.ForeColor.ToArgb();
             LoadSettings();
@@ -632,7 +631,7 @@ namespace Touhou_Launcher
         {
             if (this.WindowState == FormWindowState.Minimized)
             {
-                foreach (FlowLayoutPanel panel in GetAll(mainControl.SelectedTab, typeof(FlowLayoutPanel)))
+                foreach (FlowLayoutPanel panel in GetAll<FlowLayoutPanel>(mainControl.SelectedTab))
                 {
                     panel.AutoScroll = false;
                 }
@@ -644,7 +643,7 @@ namespace Touhou_Launcher
             }
             else if (lastState == FormWindowState.Minimized)
             {
-                foreach (FlowLayoutPanel panel in GetAll(mainControl.SelectedTab, typeof(FlowLayoutPanel)))
+                foreach (FlowLayoutPanel panel in GetAll<FlowLayoutPanel>(mainControl.SelectedTab))
                 {
                     panel.AutoScroll = true;
                 }
@@ -686,7 +685,7 @@ namespace Touhou_Launcher
         private void btnRandom_Click(object sender, EventArgs e)
         {
             List<string> gameList = new List<string>();
-            foreach (CheckBox box in GetAll(randomSettings, typeof(CheckBox)))
+            foreach (CheckBox box in GetAll<CheckBox>(randomSettings))
             {
                 if (box.Checked)
                     gameList.Add(box.Name.Substring(3));
@@ -1044,7 +1043,7 @@ namespace Touhou_Launcher
 
         private void randomAll_Click(object sender, EventArgs e)
         {
-            foreach (CheckBox chk in GetAll(randomSettings, typeof(CheckBox)))
+            foreach (CheckBox chk in GetAll<CheckBox>(randomSettings))
             {
                 chk.Checked = true;
             }
@@ -1052,7 +1051,7 @@ namespace Touhou_Launcher
 
         private void randomNone_Click(object sender, EventArgs e)
         {
-            foreach (CheckBox chk in GetAll(randomSettings, typeof(CheckBox)))
+            foreach (CheckBox chk in GetAll<CheckBox>(randomSettings))
             {
                 chk.Checked = false;
             }
