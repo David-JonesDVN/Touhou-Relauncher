@@ -67,7 +67,7 @@ namespace Touhou_Launcher
                     crap = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(MainForm.curCfg.crapDir + "\\config\\games.js"));
                     foreach (KeyValuePair<string, string> line in crap)
                     {
-                        string number = new String(line.Key.Where(Char.IsDigit).ToArray());
+                        string number = new string(line.Key.Where(char.IsDigit).ToArray());
                         if (number == MainForm.FormatGameNumber(MainForm.gameNumbers[game]) || !line.Key.StartsWith("th"))
                         {
                             crapGame.Items.Add(line.Key);

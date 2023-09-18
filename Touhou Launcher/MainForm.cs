@@ -357,7 +357,7 @@ namespace Touhou_Launcher
 
         private void downloadReplay(string path, string name, Uri url, bool th10full = false)
         {
-            string message = String.Format(rm.GetString("replayDownload"), name, path);
+            string message = string.Format(rm.GetString("replayDownload"), name, path);
             Console.WriteLine(rm.GetString("replayDownload"));
             if (th10full)
             {
@@ -783,7 +783,7 @@ namespace Touhou_Launcher
         {
             if (customTree.SelectedNode != null)
             {
-                if (MessageBox.Show(String.Format(rm.GetString("customCategoryDeleteConfirm"), customTree.SelectedNode.Text), "", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show(string.Format(rm.GetString("customCategoryDeleteConfirm"), customTree.SelectedNode.Text), "", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     customTree.SelectedNode.Remove();
                     curCfg.Custom = TreeToJSON(customTree.Nodes, new SubNode());
@@ -869,7 +869,7 @@ namespace Touhou_Launcher
         {
             foreach (ListViewItem game in customList.SelectedItems)
             {
-                if (MessageBox.Show(String.Format(rm.GetString("customDeleteConfirm"), game.Text), "", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show(string.Format(rm.GetString("customDeleteConfirm"), game.Text), "", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     customList.Items.Remove(game);
                     ((Dictionary<string, string>)customTree.SelectedNode.Tag).Remove(game.Name);
