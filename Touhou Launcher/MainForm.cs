@@ -240,14 +240,14 @@ namespace Touhou_Launcher
             }
         }
 
-        public static Process startProcess(string dir, string args = "")
+        public static Process startProcess(string file, string args = "")
         {
-            ProcessStartInfo startInfo = new ProcessStartInfo(dir, args);
+            ProcessStartInfo startInfo = new ProcessStartInfo(file, args);
             startInfo.WorkingDirectory = Path.GetDirectoryName(startInfo.FileName);
             return Process.Start(startInfo);
         }
 
-        public static bool NekoProject(string hdi)
+        public static bool NekoProject(string hdiFile)
         {
             /* Code for dedicating a config file to each game
             if (File.Exists(Path.GetDirectoryName(curCfg.np2Dir + "\\np21nt." + game + ".ini")))
@@ -266,11 +266,11 @@ namespace Touhou_Launcher
                 {
                     if (config[i].Contains("HDD1FILE="))
                     {
-                        if (config[i] != "HDD1FILE=" + hdi)
+                        if (config[i] != "HDD1FILE=" + hdiFile)
                         {
                             try
                             {
-                                config[i] = "HDD1FILE=" + hdi;
+                                config[i] = "HDD1FILE=" + hdiFile;
                                 File.WriteAllLines(iniFilePath, config, Encoding.Unicode);
                             }
                             catch (Exception)
@@ -285,28 +285,28 @@ namespace Touhou_Launcher
             return false;
         }
 
-        public static void launchHDI(string dir)
+        public static void launchHDI(string file)
         {
             if (!File.Exists(curCfg.np2Dir))
                 MessageBox.Show(rm.GetString("errorNP2NotFound"));
-            else if (!NekoProject(dir))
+            else if (!NekoProject(file))
                 MessageBox.Show(rm.GetString("errorInvalidNP2INI"));
             else
                 startProcess(curCfg.np2Dir);
         }
 
-        public static void launchGame(int game, int dir, bool applocale)
+        public static void launchGame(int game, int defaultExe, bool applocale)
         {
-            string gameDir = curCfg.gameCFG[game].GameDir[dir];
-            if (File.Exists(gameDir))
+            string gameFile = curCfg.gameCFG[game].GameDir[defaultExe];
+            if (File.Exists(gameFile))
             {
                 if (applocale && File.Exists("C:\\Windows\\AppPatch\\AppLoc.exe"))
                 {
-                    startProcess("C:\\Windows\\AppPatch\\AppLoc.exe", "\"" + gameDir + "\" \"/L0411\"");
+                    startProcess("C:\\Windows\\AppPatch\\AppLoc.exe", "\"" + gameFile + "\" \"/L0411\"");
                 }
                 else
                 {
-                    startProcess(gameDir);
+                    startProcess(gameFile);
                 }
             }
             else
@@ -526,9 +526,9 @@ namespace Touhou_Launcher
             if (curCfg.gameCFG[game].showBanner)
             {
                 bool exists = curCfg.gameCFG[game].crapCFG[0] != "None" && curCfg.gameCFG[game].crapCFG[1] != "None";
-                foreach (string dir in curCfg.gameCFG[game].GameDir)
+                foreach (string exe in curCfg.gameCFG[game].GameDir)
                 {
-                    if (dir != "" && dir != curCfg.gameCFG[game].GameDir[3])
+                    if (exe != "" && exe != curCfg.gameCFG[game].GameDir[3])
                     {
                         exists = true;
                         break;
@@ -978,26 +978,26 @@ namespace Touhou_Launcher
                 }
                 else
                 {
-                    foreach (string dir in curCfg.gameCFG[gameNumbers.IndexOf(gameNum)].GameDir)
+                    foreach (string exe in curCfg.gameCFG[gameNumbers.IndexOf(gameNum)].GameDir)
                     {
-                        if (dir == "")
+                        if (exe == "")
                             continue;
                         if (gameNum == 10)
                         {
                             for (int i = 1; i < 26; i++)
                             {
-                                if (!File.Exists(Path.GetDirectoryName(dir) + "\\replay\\th10_" + i.ToString("00") + ".rpy"))
+                                if (!File.Exists(Path.GetDirectoryName(exe) + "\\replay\\th10_" + i.ToString("00") + ".rpy"))
                                 {
                                     name = "th10_" + i.ToString("00") + ".rpy";
-                                    downloadReplay(Path.GetDirectoryName(dir) + "\\replay\\", "th10_" + i.ToString("00") + ".rpy", e.Url);
+                                    downloadReplay(Path.GetDirectoryName(exe) + "\\replay\\", "th10_" + i.ToString("00") + ".rpy", e.Url);
                                     return;
                                 }
                             }
-                            downloadReplay(Path.GetDirectoryName(dir) + "\\replay\\", name, e.Url, true);
+                            downloadReplay(Path.GetDirectoryName(exe) + "\\replay\\", name, e.Url, true);
                         }
                         else
                         {
-                            downloadReplay(Path.GetDirectoryName(dir) + "\\replay\\", name, e.Url);
+                            downloadReplay(Path.GetDirectoryName(exe) + "\\replay\\", name, e.Url);
                             return;
                         }
                     }
@@ -1064,7 +1064,7 @@ namespace Touhou_Launcher
 
         private void browseFile_Click(object sender, EventArgs e)
         {
-            string controlName = ((Button)sender).Name.Substring(6).ToLower() + "Dir";
+            string controlName = ((Button)sender).Name.Substring(6).ToLower() + "Dir"; // Needs to stay as "Dir" because it references the settings
             FieldInfo field = typeof(Configs).GetField(controlName);
             string initialDirectory = field == null || (string)field.GetValue(curCfg) == "" ? null : Path.GetDirectoryName((string)(field.GetValue(curCfg)));
             TextBox txtbox = (TextBox)launcherSettings.Controls.Find(controlName, false).FirstOrDefault(n => n.GetType() == typeof(TextBox));
@@ -1091,7 +1091,7 @@ namespace Touhou_Launcher
             }
         }
 
-        private void Dir_LostFocus(object sender, EventArgs e)
+        private void Path_LostFocus(object sender, EventArgs e)
         {
             if (sender == np2Dir)
                 if (File.Exists(np2Dir.Text) || np2Dir.Text == "")
@@ -1113,16 +1113,22 @@ namespace Touhou_Launcher
                 curCfg.StartingRepo = crapStartingRepo.Text;
         }
 
-        private void Dir_DragEnter(object sender, DragEventArgs e)
+        private void Path_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
                 e.Effect = DragDropEffects.Copy;
         }
 
-        private void Dir_DragDrop(object sender, DragEventArgs e)
+        private void File_DragDrop(object sender, DragEventArgs e)
         {
             ((TextBox)sender).Text = ((string[])e.Data.GetData(DataFormats.FileDrop)).FirstOrDefault(n => File.Exists(n));
-            Dir_LostFocus(sender, new EventArgs());
+            Path_LostFocus(sender, new EventArgs());
+        }
+
+        private void Dir_DragDrop(object sender, DragEventArgs e)
+        {
+            ((TextBox)sender).Text = ((string[])e.Data.GetData(DataFormats.FileDrop)).FirstOrDefault(n => Directory.Exists(n));
+            Path_LostFocus(sender, new EventArgs());
         }
 
         private void crapConfigure_Click(object sender, EventArgs e)
@@ -1130,13 +1136,13 @@ namespace Touhou_Launcher
             if (curCfg.crapDir != "")
             {
                 // Check for thcrap_configure_v3 first
-                string procDir = curCfg.crapDir + "\\bin\\thcrap_configure_v3.exe";
-                if (!File.Exists(procDir))
-                    procDir = curCfg.crapDir + "\\bin\\thcrap_configure.exe";
-                if (!File.Exists(procDir))
+                string processFile = curCfg.crapDir + "\\bin\\thcrap_configure_v3.exe";
+                if (!File.Exists(processFile))
+                    processFile = curCfg.crapDir + "\\bin\\thcrap_configure.exe";
+                if (!File.Exists(processFile))
                     MessageBox.Show(rm.GetString("errorcrapNotFound"));
                 else
-                    startProcess(procDir);
+                    startProcess(processFile);
             }
         }
 

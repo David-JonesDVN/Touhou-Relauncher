@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigForm));
             this.openFolder = new System.Windows.Forms.Button();
             this.openvpatch = new System.Windows.Forms.Button();
-            this.jpDir = new System.Windows.Forms.TextBox();
-            this.enDir = new System.Windows.Forms.TextBox();
-            this.customDir = new System.Windows.Forms.TextBox();
+            this.jpExe = new System.Windows.Forms.TextBox();
+            this.enExe = new System.Windows.Forms.TextBox();
+            this.customExe = new System.Windows.Forms.TextBox();
             this.browseJP = new System.Windows.Forms.Button();
             this.jpLabel = new System.Windows.Forms.Label();
             this.enLabel = new System.Windows.Forms.Label();
@@ -56,16 +56,16 @@
             this.chkCustomBanner = new System.Windows.Forms.CheckBox();
             this.bannerOnLabel = new System.Windows.Forms.Label();
             this.browseBannerOn = new System.Windows.Forms.Button();
-            this.bannerOnDir = new System.Windows.Forms.TextBox();
+            this.bannerOnFile = new System.Windows.Forms.TextBox();
             this.bannerOffLabel = new System.Windows.Forms.Label();
             this.browseBannerOff = new System.Windows.Forms.Button();
-            this.bannerOffDir = new System.Windows.Forms.TextBox();
+            this.bannerOffFile = new System.Windows.Forms.TextBox();
             this.pc98Settings = new System.Windows.Forms.GroupBox();
             this.openNP2Folder = new System.Windows.Forms.Button();
             this.launchHDI = new System.Windows.Forms.Button();
             this.hdiLabel = new System.Windows.Forms.Label();
             this.browseHDI = new System.Windows.Forms.Button();
-            this.hdiDir = new System.Windows.Forms.TextBox();
+            this.hdiFile = new System.Windows.Forms.TextBox();
             this.bannerSettings = new System.Windows.Forms.GroupBox();
             this.chkCustomText = new System.Windows.Forms.CheckBox();
             this.btnCustomText = new System.Windows.Forms.Button();
@@ -100,38 +100,38 @@
             this.openvpatch.UseVisualStyleBackColor = true;
             this.openvpatch.Click += new System.EventHandler(this.openvpatch_Click);
             // 
-            // jpDir
+            // jpExe
             // 
-            this.jpDir.AllowDrop = true;
-            this.jpDir.Location = new System.Drawing.Point(9, 32);
-            this.jpDir.Name = "jpDir";
-            this.jpDir.Size = new System.Drawing.Size(181, 20);
-            this.jpDir.TabIndex = 1;
-            this.jpDir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
-            this.jpDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
-            this.jpDir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
+            this.jpExe.AllowDrop = true;
+            this.jpExe.Location = new System.Drawing.Point(9, 32);
+            this.jpExe.Name = "jpExe";
+            this.jpExe.Size = new System.Drawing.Size(181, 20);
+            this.jpExe.TabIndex = 1;
+            this.jpExe.DragDrop += new System.Windows.Forms.DragEventHandler(this.File_DragDrop);
+            this.jpExe.DragEnter += new System.Windows.Forms.DragEventHandler(this.Path_DragEnter);
+            this.jpExe.LostFocus += new System.EventHandler(this.File_LostFocus);
             // 
-            // enDir
+            // enExe
             // 
-            this.enDir.AllowDrop = true;
-            this.enDir.Location = new System.Drawing.Point(9, 80);
-            this.enDir.Name = "enDir";
-            this.enDir.Size = new System.Drawing.Size(181, 20);
-            this.enDir.TabIndex = 5;
-            this.enDir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
-            this.enDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
-            this.enDir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
+            this.enExe.AllowDrop = true;
+            this.enExe.Location = new System.Drawing.Point(9, 80);
+            this.enExe.Name = "enExe";
+            this.enExe.Size = new System.Drawing.Size(181, 20);
+            this.enExe.TabIndex = 5;
+            this.enExe.DragDrop += new System.Windows.Forms.DragEventHandler(this.File_DragDrop);
+            this.enExe.DragEnter += new System.Windows.Forms.DragEventHandler(this.Path_DragEnter);
+            this.enExe.LostFocus += new System.EventHandler(this.File_LostFocus);
             // 
-            // customDir
+            // customExe
             // 
-            this.customDir.AllowDrop = true;
-            this.customDir.Location = new System.Drawing.Point(9, 128);
-            this.customDir.Name = "customDir";
-            this.customDir.Size = new System.Drawing.Size(181, 20);
-            this.customDir.TabIndex = 10;
-            this.customDir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
-            this.customDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
-            this.customDir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
+            this.customExe.AllowDrop = true;
+            this.customExe.Location = new System.Drawing.Point(9, 128);
+            this.customExe.Name = "customExe";
+            this.customExe.Size = new System.Drawing.Size(181, 20);
+            this.customExe.TabIndex = 10;
+            this.customExe.DragDrop += new System.Windows.Forms.DragEventHandler(this.File_DragDrop);
+            this.customExe.DragEnter += new System.Windows.Forms.DragEventHandler(this.Path_DragEnter);
+            this.customExe.LostFocus += new System.EventHandler(this.File_LostFocus);
             // 
             // browseJP
             // 
@@ -363,16 +363,16 @@
             this.browseBannerOn.UseVisualStyleBackColor = true;
             this.browseBannerOn.Click += new System.EventHandler(this.browseBannerOn_Click);
             // 
-            // bannerOnDir
+            // bannerOnFile
             // 
-            this.bannerOnDir.AllowDrop = true;
-            this.bannerOnDir.Location = new System.Drawing.Point(9, 32);
-            this.bannerOnDir.Name = "bannerOnDir";
-            this.bannerOnDir.Size = new System.Drawing.Size(161, 20);
-            this.bannerOnDir.TabIndex = 1;
-            this.bannerOnDir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
-            this.bannerOnDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
-            this.bannerOnDir.LostFocus += new System.EventHandler(this.bannerDir_LostFocus);
+            this.bannerOnFile.AllowDrop = true;
+            this.bannerOnFile.Location = new System.Drawing.Point(9, 32);
+            this.bannerOnFile.Name = "bannerOnFile";
+            this.bannerOnFile.Size = new System.Drawing.Size(161, 20);
+            this.bannerOnFile.TabIndex = 1;
+            this.bannerOnFile.DragDrop += new System.Windows.Forms.DragEventHandler(this.File_DragDrop);
+            this.bannerOnFile.DragEnter += new System.Windows.Forms.DragEventHandler(this.Path_DragEnter);
+            this.bannerOnFile.LostFocus += new System.EventHandler(this.bannerFile_LostFocus);
             // 
             // bannerOffLabel
             // 
@@ -393,16 +393,16 @@
             this.browseBannerOff.UseVisualStyleBackColor = true;
             this.browseBannerOff.Click += new System.EventHandler(this.browseBannerOff_Click);
             // 
-            // bannerOffDir
+            // bannerOffFile
             // 
-            this.bannerOffDir.AllowDrop = true;
-            this.bannerOffDir.Location = new System.Drawing.Point(9, 70);
-            this.bannerOffDir.Name = "bannerOffDir";
-            this.bannerOffDir.Size = new System.Drawing.Size(161, 20);
-            this.bannerOffDir.TabIndex = 3;
-            this.bannerOffDir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
-            this.bannerOffDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
-            this.bannerOffDir.LostFocus += new System.EventHandler(this.bannerDir_LostFocus);
+            this.bannerOffFile.AllowDrop = true;
+            this.bannerOffFile.Location = new System.Drawing.Point(9, 70);
+            this.bannerOffFile.Name = "bannerOffFile";
+            this.bannerOffFile.Size = new System.Drawing.Size(161, 20);
+            this.bannerOffFile.TabIndex = 3;
+            this.bannerOffFile.DragDrop += new System.Windows.Forms.DragEventHandler(this.File_DragDrop);
+            this.bannerOffFile.DragEnter += new System.Windows.Forms.DragEventHandler(this.Path_DragEnter);
+            this.bannerOffFile.LostFocus += new System.EventHandler(this.bannerFile_LostFocus);
             // 
             // pc98Settings
             // 
@@ -410,7 +410,7 @@
             this.pc98Settings.Controls.Add(this.launchHDI);
             this.pc98Settings.Controls.Add(this.hdiLabel);
             this.pc98Settings.Controls.Add(this.browseHDI);
-            this.pc98Settings.Controls.Add(this.hdiDir);
+            this.pc98Settings.Controls.Add(this.hdiFile);
             this.pc98Settings.Location = new System.Drawing.Point(335, 127);
             this.pc98Settings.Name = "pc98Settings";
             this.pc98Settings.Size = new System.Drawing.Size(244, 107);
@@ -459,16 +459,16 @@
             this.browseHDI.UseVisualStyleBackColor = true;
             this.browseHDI.Click += new System.EventHandler(this.browseHDI_Click);
             // 
-            // hdiDir
+            // hdiFile
             // 
-            this.hdiDir.AllowDrop = true;
-            this.hdiDir.Location = new System.Drawing.Point(9, 32);
-            this.hdiDir.Name = "hdiDir";
-            this.hdiDir.Size = new System.Drawing.Size(229, 20);
-            this.hdiDir.TabIndex = 0;
-            this.hdiDir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
-            this.hdiDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
-            this.hdiDir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
+            this.hdiFile.AllowDrop = true;
+            this.hdiFile.Location = new System.Drawing.Point(9, 32);
+            this.hdiFile.Name = "hdiFile";
+            this.hdiFile.Size = new System.Drawing.Size(229, 20);
+            this.hdiFile.TabIndex = 0;
+            this.hdiFile.DragDrop += new System.Windows.Forms.DragEventHandler(this.File_DragDrop);
+            this.hdiFile.DragEnter += new System.Windows.Forms.DragEventHandler(this.Path_DragEnter);
+            this.hdiFile.LostFocus += new System.EventHandler(this.File_LostFocus);
             // 
             // bannerSettings
             // 
@@ -478,10 +478,10 @@
             this.bannerSettings.Controls.Add(this.bannerOnLabel);
             this.bannerSettings.Controls.Add(this.chkCustomBanner);
             this.bannerSettings.Controls.Add(this.bannerOffLabel);
-            this.bannerSettings.Controls.Add(this.bannerOnDir);
+            this.bannerSettings.Controls.Add(this.bannerOnFile);
             this.bannerSettings.Controls.Add(this.browseBannerOff);
             this.bannerSettings.Controls.Add(this.browseBannerOn);
-            this.bannerSettings.Controls.Add(this.bannerOffDir);
+            this.bannerSettings.Controls.Add(this.bannerOffFile);
             this.bannerSettings.Location = new System.Drawing.Point(335, 3);
             this.bannerSettings.Name = "bannerSettings";
             this.bannerSettings.Size = new System.Drawing.Size(244, 120);
@@ -527,11 +527,11 @@
             this.windowsSettings.Controls.Add(this.jpLabel);
             this.windowsSettings.Controls.Add(this.openvpatch);
             this.windowsSettings.Controls.Add(this.enApplocale);
-            this.windowsSettings.Controls.Add(this.jpDir);
+            this.windowsSettings.Controls.Add(this.jpExe);
             this.windowsSettings.Controls.Add(this.crapApplocale);
-            this.windowsSettings.Controls.Add(this.enDir);
+            this.windowsSettings.Controls.Add(this.enExe);
             this.windowsSettings.Controls.Add(this.defaultApplocale);
-            this.windowsSettings.Controls.Add(this.customDir);
+            this.windowsSettings.Controls.Add(this.customExe);
             this.windowsSettings.Controls.Add(this.customApplocale);
             this.windowsSettings.Controls.Add(this.browseJP);
             this.windowsSettings.Controls.Add(this.launchcrap);
@@ -620,9 +620,9 @@
 
         private System.Windows.Forms.Button openFolder;
         private System.Windows.Forms.Button openvpatch;
-        private System.Windows.Forms.TextBox jpDir;
-        private System.Windows.Forms.TextBox enDir;
-        private System.Windows.Forms.TextBox customDir;
+        private System.Windows.Forms.TextBox jpExe;
+        private System.Windows.Forms.TextBox enExe;
+        private System.Windows.Forms.TextBox customExe;
         private System.Windows.Forms.Button browseJP;
         private System.Windows.Forms.Label jpLabel;
         private System.Windows.Forms.Label enLabel;
@@ -645,15 +645,15 @@
         private System.Windows.Forms.CheckBox chkCustomBanner;
         private System.Windows.Forms.Label bannerOnLabel;
         private System.Windows.Forms.Button browseBannerOn;
-        private System.Windows.Forms.TextBox bannerOnDir;
+        private System.Windows.Forms.TextBox bannerOnFile;
         private System.Windows.Forms.Label bannerOffLabel;
         private System.Windows.Forms.Button browseBannerOff;
-        private System.Windows.Forms.TextBox bannerOffDir;
+        private System.Windows.Forms.TextBox bannerOffFile;
         private System.Windows.Forms.GroupBox pc98Settings;
         private System.Windows.Forms.Button launchHDI;
         private System.Windows.Forms.Label hdiLabel;
         private System.Windows.Forms.Button browseHDI;
-        private System.Windows.Forms.TextBox hdiDir;
+        private System.Windows.Forms.TextBox hdiFile;
         private System.Windows.Forms.GroupBox bannerSettings;
         private System.Windows.Forms.GroupBox windowsSettings;
         private System.Windows.Forms.Button openAppdata;
