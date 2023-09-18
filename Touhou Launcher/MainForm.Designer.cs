@@ -1310,12 +1310,13 @@
             // 
             // crapDir
             // 
+            this.crapDir.AllowDrop = true;
             this.crapDir.Location = new System.Drawing.Point(6, 181);
             this.crapDir.Name = "crapDir";
             this.crapDir.Size = new System.Drawing.Size(107, 20);
             this.crapDir.TabIndex = 6;
             this.crapDir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
-            this.crapDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.DragEnter);
+            this.crapDir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
             this.crapDir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
             // 
             // crapDirLabel
@@ -1385,12 +1386,13 @@
             // 
             // np2Dir
             // 
+            this.np2Dir.AllowDrop = true;
             this.np2Dir.Location = new System.Drawing.Point(6, 141);
             this.np2Dir.Name = "np2Dir";
             this.np2Dir.Size = new System.Drawing.Size(107, 20);
             this.np2Dir.TabIndex = 4;
             this.np2Dir.DragDrop += new System.Windows.Forms.DragEventHandler(this.Dir_DragDrop);
-            this.np2Dir.DragEnter += new System.Windows.Forms.DragEventHandler(this.DragEnter);
+            this.np2Dir.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
             this.np2Dir.LostFocus += new System.EventHandler(this.Dir_LostFocus);
             // 
             // np2Label
@@ -1520,7 +1522,7 @@
             this.customList.AfterLabelEdit += new System.Windows.Forms.LabelEditEventHandler(this.customList_AfterLabelEdit);
             this.customList.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.customList_ItemSelectionChanged);
             this.customList.DragDrop += new System.Windows.Forms.DragEventHandler(this.customList_DragDrop);
-            this.customList.DragEnter += new System.Windows.Forms.DragEventHandler(this.DragEnter);
+            this.customList.DragEnter += new System.Windows.Forms.DragEventHandler(this.Dir_DragEnter);
             this.customList.DoubleClick += new System.EventHandler(this.customList_DoubleClick);
             // 
             // customLabel
