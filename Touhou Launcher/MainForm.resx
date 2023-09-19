@@ -143,9 +143,10 @@ Touhou belongs to Team Shanghai Alice
 Thank you for using this program.
 I hope you'll enjoy it as much as I enjoyed making it.
 
-I guess I have a github now: https://github.com/David-JonesDVN/Touhou-Relauncher
+I guess I have a GitHub now: https://github.com/David-JonesDVN/Touhou-Relauncher
 Use that if you have any feature requests, bug reports, etc.
-You can also probably find me in the touhou-launcher Discord/IRC server:</value>
+    
+Json.NET used under the MIT license.</value>
   </data>
   <metadata name="trayMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>148, 56</value>
