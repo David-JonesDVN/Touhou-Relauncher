@@ -110,10 +110,12 @@ namespace Touhou_Launcher
         }
 
         private FormWindowState lastState = FormWindowState.Normal;
-        private const int mainGameCount = 19;
-        private const int fightingGameCount = 6;
-        private const int otherGameCount = 7;
-        private const int totalGameCount = mainGameCount + fightingGameCount + otherGameCount;
+        public const int pc98GameCount = 5;
+        public const int mainWindowsGameCount = 14;
+        public const int mainGameCount = pc98GameCount + mainWindowsGameCount;
+        public const int fightingGameCount = 6;
+        public const int otherGameCount = 7;
+        public const int totalGameCount = mainGameCount + fightingGameCount + otherGameCount;
         public static Configs curCfg = Configs.Load();
         public static System.Resources.ResourceManager rm;
         public static HttpClient client = new HttpClient();
@@ -649,16 +651,16 @@ namespace Touhou_Launcher
             GameConfig curGame = curCfg.gameCFG[game];
             if (File.Exists(curGame.GameDir[curGame.DefaultDir]) || curGame.DefaultDir == 3)
             {
-                if (game > 4)
+                if (game < pc98GameCount)
+                {
+                    launchHDI(curGame.GameDir[0]);
+                }
+                else
                 {
                     if (curGame.DefaultDir == 3)
                         launchcrap(game);
                     else
                         launchGame(game, curCfg.gameCFG[game].DefaultDir, curCfg.gameCFG[game].DefaultApplocale);
-                }
-                else
-                {
-                    launchHDI(curGame.GameDir[0]);
                 }
                 if (curCfg.autoClose)
                     Application.Exit();

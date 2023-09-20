@@ -29,7 +29,15 @@ namespace Touhou_Launcher
 
         private void ConfigForm_Load(object sender, EventArgs e)
         {
-            if (game > 4)
+            if (game < MainForm.pc98GameCount)
+            {
+                foreach (Control ctrl in windowsSettings.Controls)
+                {
+                    ctrl.Enabled = false;
+                }
+                hdiFile.Text = MainForm.curCfg.gameCFG[game].GameDir[0];
+            }
+            else
             {
                 foreach (Control ctrl in pc98Settings.Controls)
                     ctrl.Enabled = false;
@@ -43,14 +51,6 @@ namespace Touhou_Launcher
                 crapApplocale.Checked = MainForm.curCfg.gameCFG[game].appLocale[3];
                 defaultExec.SelectedIndex = MainForm.curCfg.gameCFG[game].DefaultDir;
                 defaultApplocale.Checked = MainForm.curCfg.gameCFG[game].DefaultApplocale;
-            }
-            else
-            {
-                foreach (Control ctrl in windowsSettings.Controls)
-                {
-                    ctrl.Enabled = false;
-                }
-                hdiFile.Text = MainForm.curCfg.gameCFG[game].GameDir[0];
             }
         }
 
@@ -141,7 +141,7 @@ namespace Touhou_Launcher
             if (File.Exists(((TextBox)sender).Text) || ((TextBox)sender).Text == "")
             {
                 ((TextBox)sender).BackColor = SystemColors.Window;
-                int defaultExe = game > 4 ? MainForm.defaultExeOptions.IndexOf(((TextBox)sender).Name.Replace("Exe", "")) : 0;
+                int defaultExe = game < MainForm.pc98GameCount ? 0 : MainForm.defaultExeOptions.IndexOf(((TextBox)sender).Name.Replace("Exe", ""));
                 MainForm.curCfg.gameCFG[game].GameDir[defaultExe] = ((TextBox)sender).Text;
             }
             else
@@ -340,7 +340,15 @@ namespace Touhou_Launcher
         private void openFolder_Click(object sender, EventArgs e)
         {
             string path = "";
-            if (game > 4)
+            if (game < MainForm.pc98GameCount)
+            {
+                if (hdiFile.Text != "")
+                {
+                    if (Directory.Exists(Path.GetDirectoryName(hdiFile.Text)))
+                        path = Path.GetDirectoryName(hdiFile.Text);
+                }
+            }
+            else
             {
                 foreach (TextBox file in MainForm.GetAll<TextBox>(windowsSettings))
                 {
@@ -350,14 +358,6 @@ namespace Touhou_Launcher
                         if (Directory.Exists(path))
                             break;
                     }
-                }
-            }
-            else
-            {
-                if (hdiFile.Text != "")
-                {
-                    if (Directory.Exists(Path.GetDirectoryName(hdiFile.Text)))
-                        path = Path.GetDirectoryName(hdiFile.Text);
                 }
             }
             if (path != "")
