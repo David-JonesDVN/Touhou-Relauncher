@@ -58,12 +58,12 @@
             this.renameCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.autoClose = new System.Windows.Forms.CheckBox();
-            this.btnHRtP = new System.Windows.Forms.Button();
-            this.btnSoEW = new System.Windows.Forms.Button();
+            this.btnTh01 = new System.Windows.Forms.Button();
+            this.btnTh02 = new System.Windows.Forms.Button();
             this.btnRandom = new System.Windows.Forms.Button();
-            this.btnPoDD = new System.Windows.Forms.Button();
-            this.btnLLS = new System.Windows.Forms.Button();
-            this.btnMS = new System.Windows.Forms.Button();
+            this.btnTh03 = new System.Windows.Forms.Button();
+            this.btnTh04 = new System.Windows.Forms.Button();
+            this.btnTh05 = new System.Windows.Forms.Button();
             this.info = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -71,46 +71,46 @@
             this.randomSettings = new System.Windows.Forms.GroupBox();
             this.spinoffRandom = new System.Windows.Forms.GroupBox();
             this.spinoffRandomPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.chkStB = new System.Windows.Forms.CheckBox();
-            this.chkDS = new System.Windows.Forms.CheckBox();
-            this.chkGFW = new System.Windows.Forms.CheckBox();
-            this.chkISC = new System.Windows.Forms.CheckBox();
-            this.chkVD = new System.Windows.Forms.CheckBox();
-            this.chkHBM = new System.Windows.Forms.CheckBox();
+            this.chkTh095 = new System.Windows.Forms.CheckBox();
+            this.chkTh125 = new System.Windows.Forms.CheckBox();
+            this.chkTh128 = new System.Windows.Forms.CheckBox();
+            this.chkTh143 = new System.Windows.Forms.CheckBox();
+            this.chkTh165 = new System.Windows.Forms.CheckBox();
+            this.chkTh185 = new System.Windows.Forms.CheckBox();
             this.randomLabel = new System.Windows.Forms.Label();
             this.randomNone = new System.Windows.Forms.Button();
             this.randomAll = new System.Windows.Forms.Button();
             this.tasofroRandom = new System.Windows.Forms.GroupBox();
             this.tasofroRandomPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.chkIaMP = new System.Windows.Forms.CheckBox();
-            this.chkSWR = new System.Windows.Forms.CheckBox();
-            this.chkUoNL = new System.Windows.Forms.CheckBox();
-            this.chkHM = new System.Windows.Forms.CheckBox();
-            this.chkULiL = new System.Windows.Forms.CheckBox();
-            this.chkAoCF = new System.Windows.Forms.CheckBox();
-            this.chkGI = new System.Windows.Forms.CheckBox();
+            this.chkTh075 = new System.Windows.Forms.CheckBox();
+            this.chkTh105 = new System.Windows.Forms.CheckBox();
+            this.chkTh123 = new System.Windows.Forms.CheckBox();
+            this.chkTh135 = new System.Windows.Forms.CheckBox();
+            this.chkTh145 = new System.Windows.Forms.CheckBox();
+            this.chkTh155 = new System.Windows.Forms.CheckBox();
+            this.chkTh175 = new System.Windows.Forms.CheckBox();
             this.mainRandom = new System.Windows.Forms.GroupBox();
             this.mainRandomPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.chkEoSD = new System.Windows.Forms.CheckBox();
-            this.chkPCB = new System.Windows.Forms.CheckBox();
-            this.chkIN = new System.Windows.Forms.CheckBox();
-            this.chkPoFV = new System.Windows.Forms.CheckBox();
-            this.chkMoF = new System.Windows.Forms.CheckBox();
-            this.chkSA = new System.Windows.Forms.CheckBox();
-            this.chkUFO = new System.Windows.Forms.CheckBox();
-            this.chkTD = new System.Windows.Forms.CheckBox();
-            this.chkDDC = new System.Windows.Forms.CheckBox();
-            this.chkLoLK = new System.Windows.Forms.CheckBox();
-            this.chkHSiFS = new System.Windows.Forms.CheckBox();
-            this.chkWBaWC = new System.Windows.Forms.CheckBox();
-            this.chkUM = new System.Windows.Forms.CheckBox();
+            this.chkTh06 = new System.Windows.Forms.CheckBox();
+            this.chkTh07 = new System.Windows.Forms.CheckBox();
+            this.chkTh08 = new System.Windows.Forms.CheckBox();
+            this.chkTh09 = new System.Windows.Forms.CheckBox();
+            this.chkTh10 = new System.Windows.Forms.CheckBox();
+            this.chkTh11 = new System.Windows.Forms.CheckBox();
+            this.chkTh12 = new System.Windows.Forms.CheckBox();
+            this.chkTh13 = new System.Windows.Forms.CheckBox();
+            this.chkTh14 = new System.Windows.Forms.CheckBox();
+            this.chkTh15 = new System.Windows.Forms.CheckBox();
+            this.chkTh16 = new System.Windows.Forms.CheckBox();
+            this.chkTh17 = new System.Windows.Forms.CheckBox();
+            this.chkTh18 = new System.Windows.Forms.CheckBox();
             this.pc98Random = new System.Windows.Forms.GroupBox();
             this.pc98RandomPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.chkHRtP = new System.Windows.Forms.CheckBox();
-            this.chkSoEW = new System.Windows.Forms.CheckBox();
-            this.chkPoDD = new System.Windows.Forms.CheckBox();
-            this.chkLLS = new System.Windows.Forms.CheckBox();
-            this.chkMS = new System.Windows.Forms.CheckBox();
+            this.chkTh01 = new System.Windows.Forms.CheckBox();
+            this.chkTh02 = new System.Windows.Forms.CheckBox();
+            this.chkTh03 = new System.Windows.Forms.CheckBox();
+            this.chkTh04 = new System.Windows.Forms.CheckBox();
+            this.chkTh05 = new System.Windows.Forms.CheckBox();
             this.launcherSettings = new System.Windows.Forms.GroupBox();
             this.crapResetStartingRepo = new System.Windows.Forms.Button();
             this.crapStartingRepo = new System.Windows.Forms.TextBox();
@@ -141,83 +141,83 @@
             this.games = new System.Windows.Forms.TabPage();
             this.spinoffGroup = new System.Windows.Forms.GroupBox();
             this.spinoffLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnStB = new System.Windows.Forms.Button();
-            this.btnDS = new System.Windows.Forms.Button();
-            this.btnGFW = new System.Windows.Forms.Button();
-            this.btnISC = new System.Windows.Forms.Button();
-            this.btnVD = new System.Windows.Forms.Button();
-            this.btnHBM = new System.Windows.Forms.Button();
+            this.btnTh095 = new System.Windows.Forms.Button();
+            this.btnTh125 = new System.Windows.Forms.Button();
+            this.btnTh128 = new System.Windows.Forms.Button();
+            this.btnTh143 = new System.Windows.Forms.Button();
+            this.btnTh165 = new System.Windows.Forms.Button();
+            this.btnTh185 = new System.Windows.Forms.Button();
             this.tasofroGroup = new System.Windows.Forms.GroupBox();
             this.tasofroLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnIaMP = new System.Windows.Forms.Button();
-            this.btnSWR = new System.Windows.Forms.Button();
-            this.btnUoNL = new System.Windows.Forms.Button();
-            this.btnHM = new System.Windows.Forms.Button();
-            this.btnULiL = new System.Windows.Forms.Button();
-            this.btnAoCF = new System.Windows.Forms.Button();
-            this.btnGI = new System.Windows.Forms.Button();
+            this.btnTh075 = new System.Windows.Forms.Button();
+            this.btnTh105 = new System.Windows.Forms.Button();
+            this.btnTh123 = new System.Windows.Forms.Button();
+            this.btnTh135 = new System.Windows.Forms.Button();
+            this.btnTh145 = new System.Windows.Forms.Button();
+            this.btnTh155 = new System.Windows.Forms.Button();
+            this.btnTh175 = new System.Windows.Forms.Button();
             this.mainGroup = new System.Windows.Forms.GroupBox();
             this.mainLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnEoSD = new System.Windows.Forms.Button();
-            this.btnPCB = new System.Windows.Forms.Button();
-            this.btnIN = new System.Windows.Forms.Button();
-            this.btnPoFV = new System.Windows.Forms.Button();
-            this.btnMoF = new System.Windows.Forms.Button();
-            this.btnSA = new System.Windows.Forms.Button();
-            this.btnUFO = new System.Windows.Forms.Button();
-            this.btnTD = new System.Windows.Forms.Button();
-            this.btnDDC = new System.Windows.Forms.Button();
-            this.btnLoLK = new System.Windows.Forms.Button();
-            this.btnHSiFS = new System.Windows.Forms.Button();
-            this.btnWBaWC = new System.Windows.Forms.Button();
-            this.btnUM = new System.Windows.Forms.Button();
+            this.btnTh06 = new System.Windows.Forms.Button();
+            this.btnTh07 = new System.Windows.Forms.Button();
+            this.btnTh08 = new System.Windows.Forms.Button();
+            this.btnTh09 = new System.Windows.Forms.Button();
+            this.btnTh10 = new System.Windows.Forms.Button();
+            this.btnTh11 = new System.Windows.Forms.Button();
+            this.btnTh12 = new System.Windows.Forms.Button();
+            this.btnTh13 = new System.Windows.Forms.Button();
+            this.btnTh14 = new System.Windows.Forms.Button();
+            this.btnTh15 = new System.Windows.Forms.Button();
+            this.btnTh16 = new System.Windows.Forms.Button();
+            this.btnTh17 = new System.Windows.Forms.Button();
+            this.btnTh18 = new System.Windows.Forms.Button();
             this.pc98Group = new System.Windows.Forms.GroupBox();
             this.pc98LayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.trayMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.trayPC98 = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayHRtP = new System.Windows.Forms.ToolStripMenuItem();
-            this.traySoEW = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayPoDD = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayLLS = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayMS = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh01 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh02 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh03 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh04 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh05 = new System.Windows.Forms.ToolStripMenuItem();
             this.trayMain = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayEoSD = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayPCB = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayIN = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayPoFV = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayMoF = new System.Windows.Forms.ToolStripMenuItem();
-            this.traySA = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayUFO = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayTD = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayDDC = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayLoLK = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayHSiFS = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayWBaWC = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayUM = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh06 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh07 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh08 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh09 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh10 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh11 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh12 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh13 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh14 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh15 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh16 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh17 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh18 = new System.Windows.Forms.ToolStripMenuItem();
             this.traySpinoff = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayStB = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayDS = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayGFW = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayISC = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayVD = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayHBM = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh095 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh125 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh128 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh143 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh165 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh185 = new System.Windows.Forms.ToolStripMenuItem();
             this.trayTasofro = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayIaMP = new System.Windows.Forms.ToolStripMenuItem();
-            this.traySWR = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayUoNL = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayHM = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayULiL = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayAoCF = new System.Windows.Forms.ToolStripMenuItem();
-            this.trayGI = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh075 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh105 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh123 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh135 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh145 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh155 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh175 = new System.Windows.Forms.ToolStripMenuItem();
             this.trayCustom = new System.Windows.Forms.ToolStripMenuItem();
             this.trayRandom = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.trayOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.trayExit = new System.Windows.Forms.ToolStripMenuItem();
             this.trayIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.btnUDoALG = new System.Windows.Forms.Button();
-            this.chkUDoALG = new System.Windows.Forms.CheckBox();
-            this.trayUDoALG = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnTh19 = new System.Windows.Forms.Button();
+            this.chkTh19 = new System.Windows.Forms.CheckBox();
+            this.trayTh19 = new System.Windows.Forms.ToolStripMenuItem();
             this.gameContextMenu.SuspendLayout();
             this.customContextMenu.SuspendLayout();
             this.customFolderContextMenu.SuspendLayout();
@@ -470,40 +470,40 @@
             this.autoClose.UseVisualStyleBackColor = true;
             this.autoClose.CheckedChanged += new System.EventHandler(this.autoClose_CheckedChanged);
             // 
-            // btnHRtP
+            // btnTh01
             // 
-            this.btnHRtP.BackgroundImage = global::Touhou_Launcher.Properties.Resources.hrtpg;
-            this.btnHRtP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnHRtP.ContextMenuStrip = this.gameContextMenu;
-            this.btnHRtP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHRtP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnHRtP.Location = new System.Drawing.Point(3, 3);
-            this.btnHRtP.Name = "btnHRtP";
-            this.btnHRtP.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnHRtP.Size = new System.Drawing.Size(120, 44);
-            this.btnHRtP.TabIndex = 0;
-            this.btnHRtP.Text = "Highly Responsive to Prayers";
-            this.btnHRtP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHRtP.UseVisualStyleBackColor = true;
-            this.btnHRtP.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh01.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th01_off;
+            this.btnTh01.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh01.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh01.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh01.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh01.Location = new System.Drawing.Point(3, 3);
+            this.btnTh01.Name = "btnTh01";
+            this.btnTh01.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh01.Size = new System.Drawing.Size(120, 44);
+            this.btnTh01.TabIndex = 0;
+            this.btnTh01.Text = "Highly Responsive to Prayers";
+            this.btnTh01.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh01.UseVisualStyleBackColor = true;
+            this.btnTh01.Click += new System.EventHandler(this.btn_Click);
             // 
-            // btnSoEW
+            // btnTh02
             // 
-            this.btnSoEW.BackgroundImage = global::Touhou_Launcher.Properties.Resources.soewg;
-            this.btnSoEW.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSoEW.ContextMenuStrip = this.gameContextMenu;
-            this.btnSoEW.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSoEW.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSoEW.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnSoEW.Location = new System.Drawing.Point(3, 53);
-            this.btnSoEW.Name = "btnSoEW";
-            this.btnSoEW.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnSoEW.Size = new System.Drawing.Size(120, 44);
-            this.btnSoEW.TabIndex = 1;
-            this.btnSoEW.Text = "Story of Eastern Wonderland";
-            this.btnSoEW.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSoEW.UseVisualStyleBackColor = true;
-            this.btnSoEW.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh02.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th02_off;
+            this.btnTh02.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh02.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh02.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh02.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh02.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnTh02.Location = new System.Drawing.Point(3, 53);
+            this.btnTh02.Name = "btnTh02";
+            this.btnTh02.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh02.Size = new System.Drawing.Size(120, 44);
+            this.btnTh02.TabIndex = 1;
+            this.btnTh02.Text = "Story of Eastern Wonderland";
+            this.btnTh02.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh02.UseVisualStyleBackColor = true;
+            this.btnTh02.Click += new System.EventHandler(this.btn_Click);
             // 
             // btnRandom
             // 
@@ -523,59 +523,59 @@
             this.btnRandom.UseVisualStyleBackColor = true;
             this.btnRandom.Click += new System.EventHandler(this.btnRandom_Click);
             // 
-            // btnPoDD
+            // btnTh03
             // 
-            this.btnPoDD.BackgroundImage = global::Touhou_Launcher.Properties.Resources.poddg;
-            this.btnPoDD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPoDD.ContextMenuStrip = this.gameContextMenu;
-            this.btnPoDD.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPoDD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPoDD.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnPoDD.Location = new System.Drawing.Point(3, 103);
-            this.btnPoDD.Name = "btnPoDD";
-            this.btnPoDD.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnPoDD.Size = new System.Drawing.Size(120, 44);
-            this.btnPoDD.TabIndex = 2;
-            this.btnPoDD.Text = "Phantasmagoria of Dim. Dream";
-            this.btnPoDD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPoDD.UseVisualStyleBackColor = true;
-            this.btnPoDD.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh03.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th03_off;
+            this.btnTh03.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh03.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh03.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh03.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh03.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnTh03.Location = new System.Drawing.Point(3, 103);
+            this.btnTh03.Name = "btnTh03";
+            this.btnTh03.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh03.Size = new System.Drawing.Size(120, 44);
+            this.btnTh03.TabIndex = 2;
+            this.btnTh03.Text = "Phantasmagoria of Dim. Dream";
+            this.btnTh03.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh03.UseVisualStyleBackColor = true;
+            this.btnTh03.Click += new System.EventHandler(this.btn_Click);
             // 
-            // btnLLS
+            // btnTh04
             // 
-            this.btnLLS.BackgroundImage = global::Touhou_Launcher.Properties.Resources.llsg;
-            this.btnLLS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLLS.ContextMenuStrip = this.gameContextMenu;
-            this.btnLLS.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLLS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLLS.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLLS.Location = new System.Drawing.Point(3, 153);
-            this.btnLLS.Name = "btnLLS";
-            this.btnLLS.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnLLS.Size = new System.Drawing.Size(120, 44);
-            this.btnLLS.TabIndex = 3;
-            this.btnLLS.Text = "Lotus Land Story";
-            this.btnLLS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLLS.UseVisualStyleBackColor = true;
-            this.btnLLS.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh04.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th04_off;
+            this.btnTh04.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh04.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh04.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh04.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh04.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTh04.Location = new System.Drawing.Point(3, 153);
+            this.btnTh04.Name = "btnTh04";
+            this.btnTh04.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh04.Size = new System.Drawing.Size(120, 44);
+            this.btnTh04.TabIndex = 3;
+            this.btnTh04.Text = "Lotus Land Story";
+            this.btnTh04.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh04.UseVisualStyleBackColor = true;
+            this.btnTh04.Click += new System.EventHandler(this.btn_Click);
             // 
-            // btnMS
+            // btnTh05
             // 
-            this.btnMS.BackgroundImage = global::Touhou_Launcher.Properties.Resources.msg;
-            this.btnMS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMS.ContextMenuStrip = this.gameContextMenu;
-            this.btnMS.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnMS.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnMS.Location = new System.Drawing.Point(3, 203);
-            this.btnMS.Name = "btnMS";
-            this.btnMS.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnMS.Size = new System.Drawing.Size(120, 44);
-            this.btnMS.TabIndex = 4;
-            this.btnMS.Text = "Mystic Square";
-            this.btnMS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMS.UseVisualStyleBackColor = true;
-            this.btnMS.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh05.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th05_off;
+            this.btnTh05.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh05.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh05.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh05.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh05.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnTh05.Location = new System.Drawing.Point(3, 203);
+            this.btnTh05.Name = "btnTh05";
+            this.btnTh05.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh05.Size = new System.Drawing.Size(120, 44);
+            this.btnTh05.TabIndex = 4;
+            this.btnTh05.Text = "Mystic Square";
+            this.btnTh05.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh05.UseVisualStyleBackColor = true;
+            this.btnTh05.Click += new System.EventHandler(this.btn_Click);
             // 
             // info
             // 
@@ -656,95 +656,95 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.spinoffRandomPanel.AutoScroll = true;
-            this.spinoffRandomPanel.Controls.Add(this.chkStB);
-            this.spinoffRandomPanel.Controls.Add(this.chkDS);
-            this.spinoffRandomPanel.Controls.Add(this.chkGFW);
-            this.spinoffRandomPanel.Controls.Add(this.chkISC);
-            this.spinoffRandomPanel.Controls.Add(this.chkVD);
-            this.spinoffRandomPanel.Controls.Add(this.chkHBM);
+            this.spinoffRandomPanel.Controls.Add(this.chkTh095);
+            this.spinoffRandomPanel.Controls.Add(this.chkTh125);
+            this.spinoffRandomPanel.Controls.Add(this.chkTh128);
+            this.spinoffRandomPanel.Controls.Add(this.chkTh143);
+            this.spinoffRandomPanel.Controls.Add(this.chkTh165);
+            this.spinoffRandomPanel.Controls.Add(this.chkTh185);
             this.spinoffRandomPanel.Location = new System.Drawing.Point(3, 16);
             this.spinoffRandomPanel.Margin = new System.Windows.Forms.Padding(0);
             this.spinoffRandomPanel.Name = "spinoffRandomPanel";
             this.spinoffRandomPanel.Size = new System.Drawing.Size(299, 49);
             this.spinoffRandomPanel.TabIndex = 1;
             // 
-            // chkStB
+            // chkTh095
             // 
-            this.chkStB.AutoSize = true;
-            this.chkStB.Checked = true;
-            this.chkStB.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkStB.Location = new System.Drawing.Point(3, 3);
-            this.chkStB.Name = "chkStB";
-            this.chkStB.Size = new System.Drawing.Size(43, 17);
-            this.chkStB.TabIndex = 0;
-            this.chkStB.Text = "StB";
-            this.chkStB.UseVisualStyleBackColor = true;
-            this.chkStB.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh095.AutoSize = true;
+            this.chkTh095.Checked = true;
+            this.chkTh095.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh095.Location = new System.Drawing.Point(3, 3);
+            this.chkTh095.Name = "chkTh095";
+            this.chkTh095.Size = new System.Drawing.Size(43, 17);
+            this.chkTh095.TabIndex = 0;
+            this.chkTh095.Text = "StB";
+            this.chkTh095.UseVisualStyleBackColor = true;
+            this.chkTh095.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
-            // chkDS
+            // chkTh125
             // 
-            this.chkDS.AutoSize = true;
-            this.chkDS.Checked = true;
-            this.chkDS.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkDS.Location = new System.Drawing.Point(52, 3);
-            this.chkDS.Name = "chkDS";
-            this.chkDS.Size = new System.Drawing.Size(41, 17);
-            this.chkDS.TabIndex = 1;
-            this.chkDS.Text = "DS";
-            this.chkDS.UseVisualStyleBackColor = true;
-            this.chkDS.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh125.AutoSize = true;
+            this.chkTh125.Checked = true;
+            this.chkTh125.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh125.Location = new System.Drawing.Point(52, 3);
+            this.chkTh125.Name = "chkTh125";
+            this.chkTh125.Size = new System.Drawing.Size(41, 17);
+            this.chkTh125.TabIndex = 1;
+            this.chkTh125.Text = "DS";
+            this.chkTh125.UseVisualStyleBackColor = true;
+            this.chkTh125.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
-            // chkGFW
+            // chkTh128
             // 
-            this.chkGFW.AutoSize = true;
-            this.chkGFW.Checked = true;
-            this.chkGFW.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkGFW.Location = new System.Drawing.Point(99, 3);
-            this.chkGFW.Name = "chkGFW";
-            this.chkGFW.Size = new System.Drawing.Size(51, 17);
-            this.chkGFW.TabIndex = 2;
-            this.chkGFW.Text = "GFW";
-            this.chkGFW.UseVisualStyleBackColor = true;
-            this.chkGFW.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh128.AutoSize = true;
+            this.chkTh128.Checked = true;
+            this.chkTh128.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh128.Location = new System.Drawing.Point(99, 3);
+            this.chkTh128.Name = "chkTh128";
+            this.chkTh128.Size = new System.Drawing.Size(51, 17);
+            this.chkTh128.TabIndex = 2;
+            this.chkTh128.Text = "GFW";
+            this.chkTh128.UseVisualStyleBackColor = true;
+            this.chkTh128.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
-            // chkISC
+            // chkTh143
             // 
-            this.chkISC.AutoSize = true;
-            this.chkISC.Checked = true;
-            this.chkISC.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkISC.Location = new System.Drawing.Point(156, 3);
-            this.chkISC.Name = "chkISC";
-            this.chkISC.Size = new System.Drawing.Size(43, 17);
-            this.chkISC.TabIndex = 3;
-            this.chkISC.Text = "ISC";
-            this.chkISC.UseVisualStyleBackColor = true;
-            this.chkISC.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh143.AutoSize = true;
+            this.chkTh143.Checked = true;
+            this.chkTh143.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh143.Location = new System.Drawing.Point(156, 3);
+            this.chkTh143.Name = "chkTh143";
+            this.chkTh143.Size = new System.Drawing.Size(43, 17);
+            this.chkTh143.TabIndex = 3;
+            this.chkTh143.Text = "ISC";
+            this.chkTh143.UseVisualStyleBackColor = true;
+            this.chkTh143.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
-            // chkVD
+            // chkTh165
             // 
-            this.chkVD.AutoSize = true;
-            this.chkVD.Checked = true;
-            this.chkVD.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkVD.Location = new System.Drawing.Point(205, 3);
-            this.chkVD.Name = "chkVD";
-            this.chkVD.Size = new System.Drawing.Size(41, 17);
-            this.chkVD.TabIndex = 4;
-            this.chkVD.Text = "VD";
-            this.chkVD.UseVisualStyleBackColor = true;
-            this.chkVD.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh165.AutoSize = true;
+            this.chkTh165.Checked = true;
+            this.chkTh165.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh165.Location = new System.Drawing.Point(205, 3);
+            this.chkTh165.Name = "chkTh165";
+            this.chkTh165.Size = new System.Drawing.Size(41, 17);
+            this.chkTh165.TabIndex = 4;
+            this.chkTh165.Text = "VD";
+            this.chkTh165.UseVisualStyleBackColor = true;
+            this.chkTh165.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
-            // chkHBM
+            // chkTh185
             // 
-            this.chkHBM.AutoSize = true;
-            this.chkHBM.Checked = true;
-            this.chkHBM.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkHBM.Location = new System.Drawing.Point(3, 26);
-            this.chkHBM.Name = "chkHBM";
-            this.chkHBM.Size = new System.Drawing.Size(60, 17);
-            this.chkHBM.TabIndex = 18;
-            this.chkHBM.Text = "100BM";
-            this.chkHBM.UseVisualStyleBackColor = true;
-            this.chkHBM.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh185.AutoSize = true;
+            this.chkTh185.Checked = true;
+            this.chkTh185.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh185.Location = new System.Drawing.Point(3, 26);
+            this.chkTh185.Name = "chkTh185";
+            this.chkTh185.Size = new System.Drawing.Size(60, 17);
+            this.chkTh185.TabIndex = 18;
+            this.chkTh185.Text = "100BM";
+            this.chkTh185.UseVisualStyleBackColor = true;
+            this.chkTh185.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // randomLabel
             // 
@@ -795,109 +795,109 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tasofroRandomPanel.AutoScroll = true;
-            this.tasofroRandomPanel.Controls.Add(this.chkIaMP);
-            this.tasofroRandomPanel.Controls.Add(this.chkSWR);
-            this.tasofroRandomPanel.Controls.Add(this.chkUoNL);
-            this.tasofroRandomPanel.Controls.Add(this.chkHM);
-            this.tasofroRandomPanel.Controls.Add(this.chkULiL);
-            this.tasofroRandomPanel.Controls.Add(this.chkAoCF);
-            this.tasofroRandomPanel.Controls.Add(this.chkGI);
+            this.tasofroRandomPanel.Controls.Add(this.chkTh075);
+            this.tasofroRandomPanel.Controls.Add(this.chkTh105);
+            this.tasofroRandomPanel.Controls.Add(this.chkTh123);
+            this.tasofroRandomPanel.Controls.Add(this.chkTh135);
+            this.tasofroRandomPanel.Controls.Add(this.chkTh145);
+            this.tasofroRandomPanel.Controls.Add(this.chkTh155);
+            this.tasofroRandomPanel.Controls.Add(this.chkTh175);
             this.tasofroRandomPanel.Location = new System.Drawing.Point(3, 16);
             this.tasofroRandomPanel.Margin = new System.Windows.Forms.Padding(0);
             this.tasofroRandomPanel.Name = "tasofroRandomPanel";
             this.tasofroRandomPanel.Size = new System.Drawing.Size(299, 47);
             this.tasofroRandomPanel.TabIndex = 1;
             // 
-            // chkIaMP
+            // chkTh075
             // 
-            this.chkIaMP.AutoSize = true;
-            this.chkIaMP.Checked = true;
-            this.chkIaMP.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkIaMP.Location = new System.Drawing.Point(3, 3);
-            this.chkIaMP.Name = "chkIaMP";
-            this.chkIaMP.Size = new System.Drawing.Size(51, 17);
-            this.chkIaMP.TabIndex = 0;
-            this.chkIaMP.Text = "IaMP";
-            this.chkIaMP.UseVisualStyleBackColor = true;
-            this.chkIaMP.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh075.AutoSize = true;
+            this.chkTh075.Checked = true;
+            this.chkTh075.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh075.Location = new System.Drawing.Point(3, 3);
+            this.chkTh075.Name = "chkTh075";
+            this.chkTh075.Size = new System.Drawing.Size(51, 17);
+            this.chkTh075.TabIndex = 0;
+            this.chkTh075.Text = "IaMP";
+            this.chkTh075.UseVisualStyleBackColor = true;
+            this.chkTh075.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
-            // chkSWR
+            // chkTh105
             // 
-            this.chkSWR.AutoSize = true;
-            this.chkSWR.Checked = true;
-            this.chkSWR.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkSWR.Location = new System.Drawing.Point(60, 3);
-            this.chkSWR.Name = "chkSWR";
-            this.chkSWR.Size = new System.Drawing.Size(52, 17);
-            this.chkSWR.TabIndex = 1;
-            this.chkSWR.Text = "SWR";
-            this.chkSWR.UseVisualStyleBackColor = true;
-            this.chkSWR.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh105.AutoSize = true;
+            this.chkTh105.Checked = true;
+            this.chkTh105.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh105.Location = new System.Drawing.Point(60, 3);
+            this.chkTh105.Name = "chkTh105";
+            this.chkTh105.Size = new System.Drawing.Size(52, 17);
+            this.chkTh105.TabIndex = 1;
+            this.chkTh105.Text = "SWR";
+            this.chkTh105.UseVisualStyleBackColor = true;
+            this.chkTh105.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
-            // chkUoNL
+            // chkTh123
             // 
-            this.chkUoNL.AutoSize = true;
-            this.chkUoNL.Checked = true;
-            this.chkUoNL.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkUoNL.Location = new System.Drawing.Point(118, 3);
-            this.chkUoNL.Name = "chkUoNL";
-            this.chkUoNL.Size = new System.Drawing.Size(91, 17);
-            this.chkUoNL.TabIndex = 2;
-            this.chkUoNL.Text = "Hisoutensoku";
-            this.chkUoNL.UseVisualStyleBackColor = true;
-            this.chkUoNL.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh123.AutoSize = true;
+            this.chkTh123.Checked = true;
+            this.chkTh123.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh123.Location = new System.Drawing.Point(118, 3);
+            this.chkTh123.Name = "chkTh123";
+            this.chkTh123.Size = new System.Drawing.Size(91, 17);
+            this.chkTh123.TabIndex = 2;
+            this.chkTh123.Text = "Hisoutensoku";
+            this.chkTh123.UseVisualStyleBackColor = true;
+            this.chkTh123.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
-            // chkHM
+            // chkTh135
             // 
-            this.chkHM.AutoSize = true;
-            this.chkHM.Checked = true;
-            this.chkHM.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkHM.Location = new System.Drawing.Point(215, 3);
-            this.chkHM.Name = "chkHM";
-            this.chkHM.Size = new System.Drawing.Size(43, 17);
-            this.chkHM.TabIndex = 3;
-            this.chkHM.Text = "HM";
-            this.chkHM.UseVisualStyleBackColor = true;
-            this.chkHM.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh135.AutoSize = true;
+            this.chkTh135.Checked = true;
+            this.chkTh135.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh135.Location = new System.Drawing.Point(215, 3);
+            this.chkTh135.Name = "chkTh135";
+            this.chkTh135.Size = new System.Drawing.Size(43, 17);
+            this.chkTh135.TabIndex = 3;
+            this.chkTh135.Text = "HM";
+            this.chkTh135.UseVisualStyleBackColor = true;
+            this.chkTh135.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
-            // chkULiL
+            // chkTh145
             // 
-            this.chkULiL.AutoSize = true;
-            this.chkULiL.Checked = true;
-            this.chkULiL.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkULiL.Location = new System.Drawing.Point(3, 26);
-            this.chkULiL.Name = "chkULiL";
-            this.chkULiL.Size = new System.Drawing.Size(48, 17);
-            this.chkULiL.TabIndex = 4;
-            this.chkULiL.Text = "ULiL";
-            this.chkULiL.UseVisualStyleBackColor = true;
-            this.chkULiL.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh145.AutoSize = true;
+            this.chkTh145.Checked = true;
+            this.chkTh145.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh145.Location = new System.Drawing.Point(3, 26);
+            this.chkTh145.Name = "chkTh145";
+            this.chkTh145.Size = new System.Drawing.Size(48, 17);
+            this.chkTh145.TabIndex = 4;
+            this.chkTh145.Text = "ULiL";
+            this.chkTh145.UseVisualStyleBackColor = true;
+            this.chkTh145.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
-            // chkAoCF
+            // chkTh155
             // 
-            this.chkAoCF.AutoSize = true;
-            this.chkAoCF.Checked = true;
-            this.chkAoCF.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkAoCF.Location = new System.Drawing.Point(57, 26);
-            this.chkAoCF.Name = "chkAoCF";
-            this.chkAoCF.Size = new System.Drawing.Size(52, 17);
-            this.chkAoCF.TabIndex = 5;
-            this.chkAoCF.Text = "AoCF";
-            this.chkAoCF.UseVisualStyleBackColor = true;
-            this.chkAoCF.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh155.AutoSize = true;
+            this.chkTh155.Checked = true;
+            this.chkTh155.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh155.Location = new System.Drawing.Point(57, 26);
+            this.chkTh155.Name = "chkTh155";
+            this.chkTh155.Size = new System.Drawing.Size(52, 17);
+            this.chkTh155.TabIndex = 5;
+            this.chkTh155.Text = "AoCF";
+            this.chkTh155.UseVisualStyleBackColor = true;
+            this.chkTh155.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
-            // chkGI
+            // chkTh175
             // 
-            this.chkGI.AutoSize = true;
-            this.chkGI.Checked = true;
-            this.chkGI.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkGI.Location = new System.Drawing.Point(115, 26);
-            this.chkGI.Name = "chkGI";
-            this.chkGI.Size = new System.Drawing.Size(37, 17);
-            this.chkGI.TabIndex = 6;
-            this.chkGI.Text = "GI";
-            this.chkGI.UseVisualStyleBackColor = true;
-            this.chkGI.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh175.AutoSize = true;
+            this.chkTh175.Checked = true;
+            this.chkTh175.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh175.Location = new System.Drawing.Point(115, 26);
+            this.chkTh175.Name = "chkTh175";
+            this.chkTh175.Size = new System.Drawing.Size(37, 17);
+            this.chkTh175.TabIndex = 6;
+            this.chkTh175.Text = "GI";
+            this.chkTh175.UseVisualStyleBackColor = true;
+            this.chkTh175.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // mainRandom
             // 
@@ -917,194 +917,194 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mainRandomPanel.AutoScroll = true;
-            this.mainRandomPanel.Controls.Add(this.chkEoSD);
-            this.mainRandomPanel.Controls.Add(this.chkPCB);
-            this.mainRandomPanel.Controls.Add(this.chkIN);
-            this.mainRandomPanel.Controls.Add(this.chkPoFV);
-            this.mainRandomPanel.Controls.Add(this.chkMoF);
-            this.mainRandomPanel.Controls.Add(this.chkSA);
-            this.mainRandomPanel.Controls.Add(this.chkUFO);
-            this.mainRandomPanel.Controls.Add(this.chkTD);
-            this.mainRandomPanel.Controls.Add(this.chkDDC);
-            this.mainRandomPanel.Controls.Add(this.chkLoLK);
-            this.mainRandomPanel.Controls.Add(this.chkHSiFS);
-            this.mainRandomPanel.Controls.Add(this.chkWBaWC);
-            this.mainRandomPanel.Controls.Add(this.chkUM);
-            this.mainRandomPanel.Controls.Add(this.chkUDoALG);
+            this.mainRandomPanel.Controls.Add(this.chkTh06);
+            this.mainRandomPanel.Controls.Add(this.chkTh07);
+            this.mainRandomPanel.Controls.Add(this.chkTh08);
+            this.mainRandomPanel.Controls.Add(this.chkTh09);
+            this.mainRandomPanel.Controls.Add(this.chkTh10);
+            this.mainRandomPanel.Controls.Add(this.chkTh11);
+            this.mainRandomPanel.Controls.Add(this.chkTh12);
+            this.mainRandomPanel.Controls.Add(this.chkTh13);
+            this.mainRandomPanel.Controls.Add(this.chkTh14);
+            this.mainRandomPanel.Controls.Add(this.chkTh15);
+            this.mainRandomPanel.Controls.Add(this.chkTh16);
+            this.mainRandomPanel.Controls.Add(this.chkTh17);
+            this.mainRandomPanel.Controls.Add(this.chkTh18);
+            this.mainRandomPanel.Controls.Add(this.chkTh19);
             this.mainRandomPanel.Location = new System.Drawing.Point(3, 16);
             this.mainRandomPanel.Margin = new System.Windows.Forms.Padding(0);
             this.mainRandomPanel.Name = "mainRandomPanel";
             this.mainRandomPanel.Size = new System.Drawing.Size(299, 71);
             this.mainRandomPanel.TabIndex = 1;
             // 
-            // chkEoSD
+            // chkTh06
             // 
-            this.chkEoSD.AutoSize = true;
-            this.chkEoSD.Checked = true;
-            this.chkEoSD.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkEoSD.Location = new System.Drawing.Point(3, 3);
-            this.chkEoSD.Name = "chkEoSD";
-            this.chkEoSD.Size = new System.Drawing.Size(54, 17);
-            this.chkEoSD.TabIndex = 0;
-            this.chkEoSD.Text = "EoSD";
-            this.chkEoSD.UseVisualStyleBackColor = true;
-            this.chkEoSD.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh06.AutoSize = true;
+            this.chkTh06.Checked = true;
+            this.chkTh06.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh06.Location = new System.Drawing.Point(3, 3);
+            this.chkTh06.Name = "chkTh06";
+            this.chkTh06.Size = new System.Drawing.Size(54, 17);
+            this.chkTh06.TabIndex = 0;
+            this.chkTh06.Text = "EoSD";
+            this.chkTh06.UseVisualStyleBackColor = true;
+            this.chkTh06.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
-            // chkPCB
+            // chkTh07
             // 
-            this.chkPCB.AutoSize = true;
-            this.chkPCB.Checked = true;
-            this.chkPCB.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkPCB.Location = new System.Drawing.Point(63, 3);
-            this.chkPCB.Name = "chkPCB";
-            this.chkPCB.Size = new System.Drawing.Size(47, 17);
-            this.chkPCB.TabIndex = 1;
-            this.chkPCB.Text = "PCB";
-            this.chkPCB.UseVisualStyleBackColor = true;
-            this.chkPCB.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh07.AutoSize = true;
+            this.chkTh07.Checked = true;
+            this.chkTh07.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh07.Location = new System.Drawing.Point(63, 3);
+            this.chkTh07.Name = "chkTh07";
+            this.chkTh07.Size = new System.Drawing.Size(47, 17);
+            this.chkTh07.TabIndex = 1;
+            this.chkTh07.Text = "PCB";
+            this.chkTh07.UseVisualStyleBackColor = true;
+            this.chkTh07.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
-            // chkIN
+            // chkTh08
             // 
-            this.chkIN.AutoSize = true;
-            this.chkIN.Checked = true;
-            this.chkIN.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkIN.Location = new System.Drawing.Point(116, 3);
-            this.chkIN.Name = "chkIN";
-            this.chkIN.Size = new System.Drawing.Size(37, 17);
-            this.chkIN.TabIndex = 2;
-            this.chkIN.Text = "IN";
-            this.chkIN.UseVisualStyleBackColor = true;
-            this.chkIN.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh08.AutoSize = true;
+            this.chkTh08.Checked = true;
+            this.chkTh08.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh08.Location = new System.Drawing.Point(116, 3);
+            this.chkTh08.Name = "chkTh08";
+            this.chkTh08.Size = new System.Drawing.Size(37, 17);
+            this.chkTh08.TabIndex = 2;
+            this.chkTh08.Text = "IN";
+            this.chkTh08.UseVisualStyleBackColor = true;
+            this.chkTh08.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
-            // chkPoFV
+            // chkTh09
             // 
-            this.chkPoFV.AutoSize = true;
-            this.chkPoFV.Checked = true;
-            this.chkPoFV.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkPoFV.Location = new System.Drawing.Point(159, 3);
-            this.chkPoFV.Name = "chkPoFV";
-            this.chkPoFV.Size = new System.Drawing.Size(52, 17);
-            this.chkPoFV.TabIndex = 3;
-            this.chkPoFV.Text = "PoFV";
-            this.chkPoFV.UseVisualStyleBackColor = true;
-            this.chkPoFV.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh09.AutoSize = true;
+            this.chkTh09.Checked = true;
+            this.chkTh09.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh09.Location = new System.Drawing.Point(159, 3);
+            this.chkTh09.Name = "chkTh09";
+            this.chkTh09.Size = new System.Drawing.Size(52, 17);
+            this.chkTh09.TabIndex = 3;
+            this.chkTh09.Text = "PoFV";
+            this.chkTh09.UseVisualStyleBackColor = true;
+            this.chkTh09.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
-            // chkMoF
+            // chkTh10
             // 
-            this.chkMoF.AutoSize = true;
-            this.chkMoF.Checked = true;
-            this.chkMoF.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkMoF.Location = new System.Drawing.Point(217, 3);
-            this.chkMoF.Name = "chkMoF";
-            this.chkMoF.Size = new System.Drawing.Size(47, 17);
-            this.chkMoF.TabIndex = 4;
-            this.chkMoF.Text = "MoF";
-            this.chkMoF.UseVisualStyleBackColor = true;
-            this.chkMoF.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh10.AutoSize = true;
+            this.chkTh10.Checked = true;
+            this.chkTh10.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh10.Location = new System.Drawing.Point(217, 3);
+            this.chkTh10.Name = "chkTh10";
+            this.chkTh10.Size = new System.Drawing.Size(47, 17);
+            this.chkTh10.TabIndex = 4;
+            this.chkTh10.Text = "MoF";
+            this.chkTh10.UseVisualStyleBackColor = true;
+            this.chkTh10.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
-            // chkSA
+            // chkTh11
             // 
-            this.chkSA.AutoSize = true;
-            this.chkSA.Checked = true;
-            this.chkSA.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkSA.Location = new System.Drawing.Point(3, 26);
-            this.chkSA.Name = "chkSA";
-            this.chkSA.Size = new System.Drawing.Size(40, 17);
-            this.chkSA.TabIndex = 5;
-            this.chkSA.Text = "SA";
-            this.chkSA.UseVisualStyleBackColor = true;
-            this.chkSA.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh11.AutoSize = true;
+            this.chkTh11.Checked = true;
+            this.chkTh11.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh11.Location = new System.Drawing.Point(3, 26);
+            this.chkTh11.Name = "chkTh11";
+            this.chkTh11.Size = new System.Drawing.Size(40, 17);
+            this.chkTh11.TabIndex = 5;
+            this.chkTh11.Text = "SA";
+            this.chkTh11.UseVisualStyleBackColor = true;
+            this.chkTh11.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
-            // chkUFO
+            // chkTh12
             // 
-            this.chkUFO.AutoSize = true;
-            this.chkUFO.Checked = true;
-            this.chkUFO.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkUFO.Location = new System.Drawing.Point(49, 26);
-            this.chkUFO.Name = "chkUFO";
-            this.chkUFO.Size = new System.Drawing.Size(48, 17);
-            this.chkUFO.TabIndex = 6;
-            this.chkUFO.Text = "UFO";
-            this.chkUFO.UseVisualStyleBackColor = true;
-            this.chkUFO.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh12.AutoSize = true;
+            this.chkTh12.Checked = true;
+            this.chkTh12.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh12.Location = new System.Drawing.Point(49, 26);
+            this.chkTh12.Name = "chkTh12";
+            this.chkTh12.Size = new System.Drawing.Size(48, 17);
+            this.chkTh12.TabIndex = 6;
+            this.chkTh12.Text = "UFO";
+            this.chkTh12.UseVisualStyleBackColor = true;
+            this.chkTh12.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
-            // chkTD
+            // chkTh13
             // 
-            this.chkTD.AutoSize = true;
-            this.chkTD.Checked = true;
-            this.chkTD.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkTD.Location = new System.Drawing.Point(103, 26);
-            this.chkTD.Name = "chkTD";
-            this.chkTD.Size = new System.Drawing.Size(41, 17);
-            this.chkTD.TabIndex = 7;
-            this.chkTD.Text = "TD";
-            this.chkTD.UseVisualStyleBackColor = true;
-            this.chkTD.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh13.AutoSize = true;
+            this.chkTh13.Checked = true;
+            this.chkTh13.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh13.Location = new System.Drawing.Point(103, 26);
+            this.chkTh13.Name = "chkTh13";
+            this.chkTh13.Size = new System.Drawing.Size(41, 17);
+            this.chkTh13.TabIndex = 7;
+            this.chkTh13.Text = "TD";
+            this.chkTh13.UseVisualStyleBackColor = true;
+            this.chkTh13.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
-            // chkDDC
+            // chkTh14
             // 
-            this.chkDDC.AutoSize = true;
-            this.chkDDC.Checked = true;
-            this.chkDDC.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkDDC.Location = new System.Drawing.Point(150, 26);
-            this.chkDDC.Name = "chkDDC";
-            this.chkDDC.Size = new System.Drawing.Size(49, 17);
-            this.chkDDC.TabIndex = 8;
-            this.chkDDC.Text = "DDC";
-            this.chkDDC.UseVisualStyleBackColor = true;
-            this.chkDDC.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh14.AutoSize = true;
+            this.chkTh14.Checked = true;
+            this.chkTh14.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh14.Location = new System.Drawing.Point(150, 26);
+            this.chkTh14.Name = "chkTh14";
+            this.chkTh14.Size = new System.Drawing.Size(49, 17);
+            this.chkTh14.TabIndex = 8;
+            this.chkTh14.Text = "DDC";
+            this.chkTh14.UseVisualStyleBackColor = true;
+            this.chkTh14.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
-            // chkLoLK
+            // chkTh15
             // 
-            this.chkLoLK.AutoSize = true;
-            this.chkLoLK.Checked = true;
-            this.chkLoLK.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkLoLK.Location = new System.Drawing.Point(205, 26);
-            this.chkLoLK.Name = "chkLoLK";
-            this.chkLoLK.Size = new System.Drawing.Size(51, 17);
-            this.chkLoLK.TabIndex = 9;
-            this.chkLoLK.Text = "LoLK";
-            this.chkLoLK.UseVisualStyleBackColor = true;
-            this.chkLoLK.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh15.AutoSize = true;
+            this.chkTh15.Checked = true;
+            this.chkTh15.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh15.Location = new System.Drawing.Point(205, 26);
+            this.chkTh15.Name = "chkTh15";
+            this.chkTh15.Size = new System.Drawing.Size(51, 17);
+            this.chkTh15.TabIndex = 9;
+            this.chkTh15.Text = "LoLK";
+            this.chkTh15.UseVisualStyleBackColor = true;
+            this.chkTh15.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
-            // chkHSiFS
+            // chkTh16
             // 
-            this.chkHSiFS.AutoSize = true;
-            this.chkHSiFS.Checked = true;
-            this.chkHSiFS.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkHSiFS.Location = new System.Drawing.Point(3, 49);
-            this.chkHSiFS.Name = "chkHSiFS";
-            this.chkHSiFS.Size = new System.Drawing.Size(56, 17);
-            this.chkHSiFS.TabIndex = 10;
-            this.chkHSiFS.Text = "HSiFS";
-            this.chkHSiFS.UseVisualStyleBackColor = true;
-            this.chkHSiFS.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh16.AutoSize = true;
+            this.chkTh16.Checked = true;
+            this.chkTh16.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh16.Location = new System.Drawing.Point(3, 49);
+            this.chkTh16.Name = "chkTh16";
+            this.chkTh16.Size = new System.Drawing.Size(56, 17);
+            this.chkTh16.TabIndex = 10;
+            this.chkTh16.Text = "HSiFS";
+            this.chkTh16.UseVisualStyleBackColor = true;
+            this.chkTh16.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
-            // chkWBaWC
+            // chkTh17
             // 
-            this.chkWBaWC.AutoSize = true;
-            this.chkWBaWC.Checked = true;
-            this.chkWBaWC.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkWBaWC.Location = new System.Drawing.Point(65, 49);
-            this.chkWBaWC.Name = "chkWBaWC";
-            this.chkWBaWC.Size = new System.Drawing.Size(68, 17);
-            this.chkWBaWC.TabIndex = 11;
-            this.chkWBaWC.Text = "WBaWC";
-            this.chkWBaWC.UseVisualStyleBackColor = true;
-            this.chkWBaWC.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh17.AutoSize = true;
+            this.chkTh17.Checked = true;
+            this.chkTh17.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh17.Location = new System.Drawing.Point(65, 49);
+            this.chkTh17.Name = "chkTh17";
+            this.chkTh17.Size = new System.Drawing.Size(68, 17);
+            this.chkTh17.TabIndex = 11;
+            this.chkTh17.Text = "WBaWC";
+            this.chkTh17.UseVisualStyleBackColor = true;
+            this.chkTh17.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
-            // chkUM
+            // chkTh18
             // 
-            this.chkUM.AutoSize = true;
-            this.chkUM.Checked = true;
-            this.chkUM.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkUM.Location = new System.Drawing.Point(139, 49);
-            this.chkUM.Name = "chkUM";
-            this.chkUM.Size = new System.Drawing.Size(43, 17);
-            this.chkUM.TabIndex = 12;
-            this.chkUM.Text = "UM";
-            this.chkUM.UseVisualStyleBackColor = true;
-            this.chkUM.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh18.AutoSize = true;
+            this.chkTh18.Checked = true;
+            this.chkTh18.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh18.Location = new System.Drawing.Point(139, 49);
+            this.chkTh18.Name = "chkTh18";
+            this.chkTh18.Size = new System.Drawing.Size(43, 17);
+            this.chkTh18.TabIndex = 12;
+            this.chkTh18.Text = "UM";
+            this.chkTh18.UseVisualStyleBackColor = true;
+            this.chkTh18.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // pc98Random
             // 
@@ -1124,81 +1124,81 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pc98RandomPanel.AutoScroll = true;
-            this.pc98RandomPanel.Controls.Add(this.chkHRtP);
-            this.pc98RandomPanel.Controls.Add(this.chkSoEW);
-            this.pc98RandomPanel.Controls.Add(this.chkPoDD);
-            this.pc98RandomPanel.Controls.Add(this.chkLLS);
-            this.pc98RandomPanel.Controls.Add(this.chkMS);
+            this.pc98RandomPanel.Controls.Add(this.chkTh01);
+            this.pc98RandomPanel.Controls.Add(this.chkTh02);
+            this.pc98RandomPanel.Controls.Add(this.chkTh03);
+            this.pc98RandomPanel.Controls.Add(this.chkTh04);
+            this.pc98RandomPanel.Controls.Add(this.chkTh05);
             this.pc98RandomPanel.Location = new System.Drawing.Point(3, 16);
             this.pc98RandomPanel.Margin = new System.Windows.Forms.Padding(0);
             this.pc98RandomPanel.Name = "pc98RandomPanel";
             this.pc98RandomPanel.Size = new System.Drawing.Size(299, 23);
             this.pc98RandomPanel.TabIndex = 0;
             // 
-            // chkHRtP
+            // chkTh01
             // 
-            this.chkHRtP.AutoSize = true;
-            this.chkHRtP.Checked = true;
-            this.chkHRtP.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkHRtP.Location = new System.Drawing.Point(3, 3);
-            this.chkHRtP.Name = "chkHRtP";
-            this.chkHRtP.Size = new System.Drawing.Size(52, 17);
-            this.chkHRtP.TabIndex = 0;
-            this.chkHRtP.Text = "HRtP";
-            this.chkHRtP.UseVisualStyleBackColor = true;
-            this.chkHRtP.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh01.AutoSize = true;
+            this.chkTh01.Checked = true;
+            this.chkTh01.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh01.Location = new System.Drawing.Point(3, 3);
+            this.chkTh01.Name = "chkTh01";
+            this.chkTh01.Size = new System.Drawing.Size(52, 17);
+            this.chkTh01.TabIndex = 0;
+            this.chkTh01.Text = "HRtP";
+            this.chkTh01.UseVisualStyleBackColor = true;
+            this.chkTh01.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
-            // chkSoEW
+            // chkTh02
             // 
-            this.chkSoEW.AutoSize = true;
-            this.chkSoEW.Checked = true;
-            this.chkSoEW.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkSoEW.Location = new System.Drawing.Point(61, 3);
-            this.chkSoEW.Name = "chkSoEW";
-            this.chkSoEW.Size = new System.Drawing.Size(57, 17);
-            this.chkSoEW.TabIndex = 1;
-            this.chkSoEW.Text = "SoEW";
-            this.chkSoEW.UseVisualStyleBackColor = true;
-            this.chkSoEW.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh02.AutoSize = true;
+            this.chkTh02.Checked = true;
+            this.chkTh02.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh02.Location = new System.Drawing.Point(61, 3);
+            this.chkTh02.Name = "chkTh02";
+            this.chkTh02.Size = new System.Drawing.Size(57, 17);
+            this.chkTh02.TabIndex = 1;
+            this.chkTh02.Text = "SoEW";
+            this.chkTh02.UseVisualStyleBackColor = true;
+            this.chkTh02.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
-            // chkPoDD
+            // chkTh03
             // 
-            this.chkPoDD.AutoSize = true;
-            this.chkPoDD.Checked = true;
-            this.chkPoDD.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkPoDD.Location = new System.Drawing.Point(124, 3);
-            this.chkPoDD.Name = "chkPoDD";
-            this.chkPoDD.Size = new System.Drawing.Size(55, 17);
-            this.chkPoDD.TabIndex = 2;
-            this.chkPoDD.Text = "PoDD";
-            this.chkPoDD.UseVisualStyleBackColor = true;
-            this.chkPoDD.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh03.AutoSize = true;
+            this.chkTh03.Checked = true;
+            this.chkTh03.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh03.Location = new System.Drawing.Point(124, 3);
+            this.chkTh03.Name = "chkTh03";
+            this.chkTh03.Size = new System.Drawing.Size(55, 17);
+            this.chkTh03.TabIndex = 2;
+            this.chkTh03.Text = "PoDD";
+            this.chkTh03.UseVisualStyleBackColor = true;
+            this.chkTh03.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
-            // chkLLS
+            // chkTh04
             // 
-            this.chkLLS.AutoSize = true;
-            this.chkLLS.Checked = true;
-            this.chkLLS.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkLLS.Location = new System.Drawing.Point(185, 3);
-            this.chkLLS.Name = "chkLLS";
-            this.chkLLS.Size = new System.Drawing.Size(45, 17);
-            this.chkLLS.TabIndex = 3;
-            this.chkLLS.Text = "LLS";
-            this.chkLLS.UseVisualStyleBackColor = true;
-            this.chkLLS.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh04.AutoSize = true;
+            this.chkTh04.Checked = true;
+            this.chkTh04.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh04.Location = new System.Drawing.Point(185, 3);
+            this.chkTh04.Name = "chkTh04";
+            this.chkTh04.Size = new System.Drawing.Size(45, 17);
+            this.chkTh04.TabIndex = 3;
+            this.chkTh04.Text = "LLS";
+            this.chkTh04.UseVisualStyleBackColor = true;
+            this.chkTh04.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
-            // chkMS
+            // chkTh05
             // 
-            this.chkMS.AutoSize = true;
-            this.chkMS.Checked = true;
-            this.chkMS.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkMS.Location = new System.Drawing.Point(236, 3);
-            this.chkMS.Name = "chkMS";
-            this.chkMS.Size = new System.Drawing.Size(42, 17);
-            this.chkMS.TabIndex = 4;
-            this.chkMS.Text = "MS";
-            this.chkMS.UseVisualStyleBackColor = true;
-            this.chkMS.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh05.AutoSize = true;
+            this.chkTh05.Checked = true;
+            this.chkTh05.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh05.Location = new System.Drawing.Point(236, 3);
+            this.chkTh05.Name = "chkTh05";
+            this.chkTh05.Size = new System.Drawing.Size(42, 17);
+            this.chkTh05.TabIndex = 4;
+            this.chkTh05.Text = "MS";
+            this.chkTh05.UseVisualStyleBackColor = true;
+            this.chkTh05.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // launcherSettings
             // 
@@ -1562,124 +1562,124 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.spinoffLayoutPanel.AutoScroll = true;
-            this.spinoffLayoutPanel.Controls.Add(this.btnStB);
-            this.spinoffLayoutPanel.Controls.Add(this.btnDS);
-            this.spinoffLayoutPanel.Controls.Add(this.btnGFW);
-            this.spinoffLayoutPanel.Controls.Add(this.btnISC);
-            this.spinoffLayoutPanel.Controls.Add(this.btnVD);
-            this.spinoffLayoutPanel.Controls.Add(this.btnHBM);
+            this.spinoffLayoutPanel.Controls.Add(this.btnTh095);
+            this.spinoffLayoutPanel.Controls.Add(this.btnTh125);
+            this.spinoffLayoutPanel.Controls.Add(this.btnTh128);
+            this.spinoffLayoutPanel.Controls.Add(this.btnTh143);
+            this.spinoffLayoutPanel.Controls.Add(this.btnTh165);
+            this.spinoffLayoutPanel.Controls.Add(this.btnTh185);
             this.spinoffLayoutPanel.Location = new System.Drawing.Point(3, 16);
             this.spinoffLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
             this.spinoffLayoutPanel.Name = "spinoffLayoutPanel";
             this.spinoffLayoutPanel.Size = new System.Drawing.Size(253, 204);
             this.spinoffLayoutPanel.TabIndex = 2;
             // 
-            // btnStB
+            // btnTh095
             // 
-            this.btnStB.BackgroundImage = global::Touhou_Launcher.Properties.Resources.stbg;
-            this.btnStB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnStB.ContextMenuStrip = this.gameContextMenu;
-            this.btnStB.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnStB.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnStB.Location = new System.Drawing.Point(3, 3);
-            this.btnStB.Name = "btnStB";
-            this.btnStB.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnStB.Size = new System.Drawing.Size(120, 44);
-            this.btnStB.TabIndex = 0;
-            this.btnStB.Text = "Shoot the Bullet";
-            this.btnStB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStB.UseVisualStyleBackColor = true;
-            this.btnStB.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh095.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th095_off;
+            this.btnTh095.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh095.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh095.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh095.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh095.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnTh095.Location = new System.Drawing.Point(3, 3);
+            this.btnTh095.Name = "btnTh095";
+            this.btnTh095.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh095.Size = new System.Drawing.Size(120, 44);
+            this.btnTh095.TabIndex = 0;
+            this.btnTh095.Text = "Shoot the Bullet";
+            this.btnTh095.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh095.UseVisualStyleBackColor = true;
+            this.btnTh095.Click += new System.EventHandler(this.btn_Click);
             // 
-            // btnDS
+            // btnTh125
             // 
-            this.btnDS.BackgroundImage = global::Touhou_Launcher.Properties.Resources.dsg;
-            this.btnDS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDS.ContextMenuStrip = this.gameContextMenu;
-            this.btnDS.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDS.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnDS.Location = new System.Drawing.Point(129, 3);
-            this.btnDS.Name = "btnDS";
-            this.btnDS.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnDS.Size = new System.Drawing.Size(120, 44);
-            this.btnDS.TabIndex = 1;
-            this.btnDS.Text = "Double Spoiler";
-            this.btnDS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDS.UseVisualStyleBackColor = true;
-            this.btnDS.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh125.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th125_off;
+            this.btnTh125.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh125.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh125.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh125.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh125.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnTh125.Location = new System.Drawing.Point(129, 3);
+            this.btnTh125.Name = "btnTh125";
+            this.btnTh125.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh125.Size = new System.Drawing.Size(120, 44);
+            this.btnTh125.TabIndex = 1;
+            this.btnTh125.Text = "Double Spoiler";
+            this.btnTh125.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh125.UseVisualStyleBackColor = true;
+            this.btnTh125.Click += new System.EventHandler(this.btn_Click);
             // 
-            // btnGFW
+            // btnTh128
             // 
-            this.btnGFW.BackgroundImage = global::Touhou_Launcher.Properties.Resources.gfwg;
-            this.btnGFW.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGFW.ContextMenuStrip = this.gameContextMenu;
-            this.btnGFW.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGFW.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGFW.Location = new System.Drawing.Point(3, 53);
-            this.btnGFW.Name = "btnGFW";
-            this.btnGFW.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnGFW.Size = new System.Drawing.Size(120, 44);
-            this.btnGFW.TabIndex = 2;
-            this.btnGFW.Text = "Great Fairy Wars";
-            this.btnGFW.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGFW.UseVisualStyleBackColor = true;
-            this.btnGFW.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh128.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th128_off;
+            this.btnTh128.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh128.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh128.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh128.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh128.Location = new System.Drawing.Point(3, 53);
+            this.btnTh128.Name = "btnTh128";
+            this.btnTh128.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh128.Size = new System.Drawing.Size(120, 44);
+            this.btnTh128.TabIndex = 2;
+            this.btnTh128.Text = "Great Fairy Wars";
+            this.btnTh128.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh128.UseVisualStyleBackColor = true;
+            this.btnTh128.Click += new System.EventHandler(this.btn_Click);
             // 
-            // btnISC
+            // btnTh143
             // 
-            this.btnISC.BackgroundImage = global::Touhou_Launcher.Properties.Resources.iscg;
-            this.btnISC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnISC.ContextMenuStrip = this.gameContextMenu;
-            this.btnISC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnISC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnISC.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnISC.Location = new System.Drawing.Point(129, 53);
-            this.btnISC.Name = "btnISC";
-            this.btnISC.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnISC.Size = new System.Drawing.Size(120, 44);
-            this.btnISC.TabIndex = 3;
-            this.btnISC.Text = "Impossible Spell Card";
-            this.btnISC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnISC.UseVisualStyleBackColor = true;
-            this.btnISC.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh143.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th143_off;
+            this.btnTh143.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh143.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh143.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh143.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh143.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnTh143.Location = new System.Drawing.Point(129, 53);
+            this.btnTh143.Name = "btnTh143";
+            this.btnTh143.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh143.Size = new System.Drawing.Size(120, 44);
+            this.btnTh143.TabIndex = 3;
+            this.btnTh143.Text = "Impossible Spell Card";
+            this.btnTh143.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh143.UseVisualStyleBackColor = true;
+            this.btnTh143.Click += new System.EventHandler(this.btn_Click);
             // 
-            // btnVD
+            // btnTh165
             // 
-            this.btnVD.BackgroundImage = global::Touhou_Launcher.Properties.Resources.vdg;
-            this.btnVD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnVD.ContextMenuStrip = this.gameContextMenu;
-            this.btnVD.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnVD.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnVD.Location = new System.Drawing.Point(3, 103);
-            this.btnVD.Name = "btnVD";
-            this.btnVD.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnVD.Size = new System.Drawing.Size(120, 44);
-            this.btnVD.TabIndex = 4;
-            this.btnVD.Text = "Violet Detector";
-            this.btnVD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVD.UseVisualStyleBackColor = true;
-            this.btnVD.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh165.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th165_off;
+            this.btnTh165.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh165.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh165.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh165.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh165.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnTh165.Location = new System.Drawing.Point(3, 103);
+            this.btnTh165.Name = "btnTh165";
+            this.btnTh165.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh165.Size = new System.Drawing.Size(120, 44);
+            this.btnTh165.TabIndex = 4;
+            this.btnTh165.Text = "Violet Detector";
+            this.btnTh165.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh165.UseVisualStyleBackColor = true;
+            this.btnTh165.Click += new System.EventHandler(this.btn_Click);
             // 
-            // btnHBM
+            // btnTh185
             // 
-            this.btnHBM.BackgroundImage = global::Touhou_Launcher.Properties.Resources.hbmg;
-            this.btnHBM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnHBM.ContextMenuStrip = this.gameContextMenu;
-            this.btnHBM.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHBM.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnHBM.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnHBM.Location = new System.Drawing.Point(129, 103);
-            this.btnHBM.Name = "btnHBM";
-            this.btnHBM.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnHBM.Size = new System.Drawing.Size(120, 44);
-            this.btnHBM.TabIndex = 5;
-            this.btnHBM.Text = "100th Black Market";
-            this.btnHBM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHBM.UseVisualStyleBackColor = true;
-            this.btnHBM.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh185.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th185_off;
+            this.btnTh185.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh185.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh185.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh185.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh185.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTh185.Location = new System.Drawing.Point(129, 103);
+            this.btnTh185.Name = "btnTh185";
+            this.btnTh185.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh185.Size = new System.Drawing.Size(120, 44);
+            this.btnTh185.TabIndex = 5;
+            this.btnTh185.Text = "100th Black Market";
+            this.btnTh185.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh185.UseVisualStyleBackColor = true;
+            this.btnTh185.Click += new System.EventHandler(this.btn_Click);
             // 
             // tasofroGroup
             // 
@@ -1699,144 +1699,144 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tasofroLayoutPanel.AutoScroll = true;
-            this.tasofroLayoutPanel.Controls.Add(this.btnIaMP);
-            this.tasofroLayoutPanel.Controls.Add(this.btnSWR);
-            this.tasofroLayoutPanel.Controls.Add(this.btnUoNL);
-            this.tasofroLayoutPanel.Controls.Add(this.btnHM);
-            this.tasofroLayoutPanel.Controls.Add(this.btnULiL);
-            this.tasofroLayoutPanel.Controls.Add(this.btnAoCF);
-            this.tasofroLayoutPanel.Controls.Add(this.btnGI);
+            this.tasofroLayoutPanel.Controls.Add(this.btnTh075);
+            this.tasofroLayoutPanel.Controls.Add(this.btnTh105);
+            this.tasofroLayoutPanel.Controls.Add(this.btnTh123);
+            this.tasofroLayoutPanel.Controls.Add(this.btnTh135);
+            this.tasofroLayoutPanel.Controls.Add(this.btnTh145);
+            this.tasofroLayoutPanel.Controls.Add(this.btnTh155);
+            this.tasofroLayoutPanel.Controls.Add(this.btnTh175);
             this.tasofroLayoutPanel.Location = new System.Drawing.Point(3, 16);
             this.tasofroLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
             this.tasofroLayoutPanel.Name = "tasofroLayoutPanel";
             this.tasofroLayoutPanel.Size = new System.Drawing.Size(253, 204);
             this.tasofroLayoutPanel.TabIndex = 2;
             // 
-            // btnIaMP
+            // btnTh075
             // 
-            this.btnIaMP.BackgroundImage = global::Touhou_Launcher.Properties.Resources.iampg;
-            this.btnIaMP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnIaMP.ContextMenuStrip = this.gameContextMenu;
-            this.btnIaMP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIaMP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIaMP.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnIaMP.Location = new System.Drawing.Point(3, 3);
-            this.btnIaMP.Name = "btnIaMP";
-            this.btnIaMP.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnIaMP.Size = new System.Drawing.Size(120, 44);
-            this.btnIaMP.TabIndex = 0;
-            this.btnIaMP.Text = "Immaterial and Missing Power";
-            this.btnIaMP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIaMP.UseVisualStyleBackColor = true;
-            this.btnIaMP.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh075.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th075_off;
+            this.btnTh075.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh075.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh075.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh075.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh075.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnTh075.Location = new System.Drawing.Point(3, 3);
+            this.btnTh075.Name = "btnTh075";
+            this.btnTh075.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh075.Size = new System.Drawing.Size(120, 44);
+            this.btnTh075.TabIndex = 0;
+            this.btnTh075.Text = "Immaterial and Missing Power";
+            this.btnTh075.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh075.UseVisualStyleBackColor = true;
+            this.btnTh075.Click += new System.EventHandler(this.btn_Click);
             // 
-            // btnSWR
+            // btnTh105
             // 
-            this.btnSWR.BackgroundImage = global::Touhou_Launcher.Properties.Resources.swrg;
-            this.btnSWR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSWR.ContextMenuStrip = this.gameContextMenu;
-            this.btnSWR.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSWR.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSWR.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnSWR.Location = new System.Drawing.Point(129, 3);
-            this.btnSWR.Name = "btnSWR";
-            this.btnSWR.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnSWR.Size = new System.Drawing.Size(120, 44);
-            this.btnSWR.TabIndex = 1;
-            this.btnSWR.Text = "Scarlet Weather Rhapsody";
-            this.btnSWR.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSWR.UseVisualStyleBackColor = true;
-            this.btnSWR.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh105.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th105_off;
+            this.btnTh105.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh105.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh105.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh105.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh105.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnTh105.Location = new System.Drawing.Point(129, 3);
+            this.btnTh105.Name = "btnTh105";
+            this.btnTh105.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh105.Size = new System.Drawing.Size(120, 44);
+            this.btnTh105.TabIndex = 1;
+            this.btnTh105.Text = "Scarlet Weather Rhapsody";
+            this.btnTh105.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh105.UseVisualStyleBackColor = true;
+            this.btnTh105.Click += new System.EventHandler(this.btn_Click);
             // 
-            // btnUoNL
+            // btnTh123
             // 
-            this.btnUoNL.BackgroundImage = global::Touhou_Launcher.Properties.Resources.uonlg;
-            this.btnUoNL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnUoNL.ContextMenuStrip = this.gameContextMenu;
-            this.btnUoNL.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUoNL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnUoNL.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnUoNL.Location = new System.Drawing.Point(3, 53);
-            this.btnUoNL.Name = "btnUoNL";
-            this.btnUoNL.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnUoNL.Size = new System.Drawing.Size(120, 44);
-            this.btnUoNL.TabIndex = 2;
-            this.btnUoNL.Text = "Hisoutensoku";
-            this.btnUoNL.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUoNL.UseVisualStyleBackColor = true;
-            this.btnUoNL.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh123.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th123_off;
+            this.btnTh123.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh123.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh123.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh123.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh123.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnTh123.Location = new System.Drawing.Point(3, 53);
+            this.btnTh123.Name = "btnTh123";
+            this.btnTh123.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh123.Size = new System.Drawing.Size(120, 44);
+            this.btnTh123.TabIndex = 2;
+            this.btnTh123.Text = "Hisoutensoku";
+            this.btnTh123.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh123.UseVisualStyleBackColor = true;
+            this.btnTh123.Click += new System.EventHandler(this.btn_Click);
             // 
-            // btnHM
+            // btnTh135
             // 
-            this.btnHM.BackgroundImage = global::Touhou_Launcher.Properties.Resources.hmg;
-            this.btnHM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnHM.ContextMenuStrip = this.gameContextMenu;
-            this.btnHM.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHM.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnHM.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnHM.Location = new System.Drawing.Point(129, 53);
-            this.btnHM.Name = "btnHM";
-            this.btnHM.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnHM.Size = new System.Drawing.Size(120, 44);
-            this.btnHM.TabIndex = 3;
-            this.btnHM.Text = "Hopeless Masquerade";
-            this.btnHM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHM.UseVisualStyleBackColor = true;
-            this.btnHM.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh135.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th135_off;
+            this.btnTh135.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh135.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh135.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh135.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh135.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnTh135.Location = new System.Drawing.Point(129, 53);
+            this.btnTh135.Name = "btnTh135";
+            this.btnTh135.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh135.Size = new System.Drawing.Size(120, 44);
+            this.btnTh135.TabIndex = 3;
+            this.btnTh135.Text = "Hopeless Masquerade";
+            this.btnTh135.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh135.UseVisualStyleBackColor = true;
+            this.btnTh135.Click += new System.EventHandler(this.btn_Click);
             // 
-            // btnULiL
+            // btnTh145
             // 
-            this.btnULiL.BackgroundImage = global::Touhou_Launcher.Properties.Resources.ulilg;
-            this.btnULiL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnULiL.ContextMenuStrip = this.gameContextMenu;
-            this.btnULiL.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnULiL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnULiL.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnULiL.Location = new System.Drawing.Point(3, 103);
-            this.btnULiL.Name = "btnULiL";
-            this.btnULiL.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnULiL.Size = new System.Drawing.Size(120, 44);
-            this.btnULiL.TabIndex = 4;
-            this.btnULiL.Text = "Urban Legend in Limbo";
-            this.btnULiL.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnULiL.UseVisualStyleBackColor = true;
-            this.btnULiL.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh145.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th145_off;
+            this.btnTh145.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh145.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh145.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh145.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh145.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnTh145.Location = new System.Drawing.Point(3, 103);
+            this.btnTh145.Name = "btnTh145";
+            this.btnTh145.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh145.Size = new System.Drawing.Size(120, 44);
+            this.btnTh145.TabIndex = 4;
+            this.btnTh145.Text = "Urban Legend in Limbo";
+            this.btnTh145.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh145.UseVisualStyleBackColor = true;
+            this.btnTh145.Click += new System.EventHandler(this.btn_Click);
             // 
-            // btnAoCF
+            // btnTh155
             // 
-            this.btnAoCF.BackgroundImage = global::Touhou_Launcher.Properties.Resources.aocfg;
-            this.btnAoCF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAoCF.ContextMenuStrip = this.gameContextMenu;
-            this.btnAoCF.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAoCF.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAoCF.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnAoCF.Location = new System.Drawing.Point(129, 103);
-            this.btnAoCF.Name = "btnAoCF";
-            this.btnAoCF.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnAoCF.Size = new System.Drawing.Size(120, 44);
-            this.btnAoCF.TabIndex = 5;
-            this.btnAoCF.Text = "Antinomy of Common Flowers";
-            this.btnAoCF.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAoCF.UseVisualStyleBackColor = true;
-            this.btnAoCF.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh155.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th155_off;
+            this.btnTh155.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh155.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh155.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh155.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh155.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnTh155.Location = new System.Drawing.Point(129, 103);
+            this.btnTh155.Name = "btnTh155";
+            this.btnTh155.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh155.Size = new System.Drawing.Size(120, 44);
+            this.btnTh155.TabIndex = 5;
+            this.btnTh155.Text = "Antinomy of Common Flowers";
+            this.btnTh155.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh155.UseVisualStyleBackColor = true;
+            this.btnTh155.Click += new System.EventHandler(this.btn_Click);
             // 
-            // btnGI
+            // btnTh175
             // 
-            this.btnGI.BackgroundImage = global::Touhou_Launcher.Properties.Resources.gig;
-            this.btnGI.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGI.ContextMenuStrip = this.gameContextMenu;
-            this.btnGI.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGI.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGI.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnGI.Location = new System.Drawing.Point(3, 153);
-            this.btnGI.Name = "btnGI";
-            this.btnGI.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnGI.Size = new System.Drawing.Size(120, 44);
-            this.btnGI.TabIndex = 6;
-            this.btnGI.Text = "Gouyoku Ibun";
-            this.btnGI.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGI.UseVisualStyleBackColor = true;
-            this.btnGI.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh175.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th175_off;
+            this.btnTh175.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh175.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh175.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh175.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh175.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnTh175.Location = new System.Drawing.Point(3, 153);
+            this.btnTh175.Name = "btnTh175";
+            this.btnTh175.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh175.Size = new System.Drawing.Size(120, 44);
+            this.btnTh175.TabIndex = 6;
+            this.btnTh175.Text = "Gouyoku Ibun";
+            this.btnTh175.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh175.UseVisualStyleBackColor = true;
+            this.btnTh175.Click += new System.EventHandler(this.btn_Click);
             // 
             // mainGroup
             // 
@@ -1857,259 +1857,259 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mainLayoutPanel.AutoScroll = true;
-            this.mainLayoutPanel.Controls.Add(this.btnEoSD);
-            this.mainLayoutPanel.Controls.Add(this.btnPCB);
-            this.mainLayoutPanel.Controls.Add(this.btnIN);
-            this.mainLayoutPanel.Controls.Add(this.btnPoFV);
-            this.mainLayoutPanel.Controls.Add(this.btnMoF);
-            this.mainLayoutPanel.Controls.Add(this.btnSA);
-            this.mainLayoutPanel.Controls.Add(this.btnUFO);
-            this.mainLayoutPanel.Controls.Add(this.btnTD);
-            this.mainLayoutPanel.Controls.Add(this.btnDDC);
-            this.mainLayoutPanel.Controls.Add(this.btnLoLK);
-            this.mainLayoutPanel.Controls.Add(this.btnHSiFS);
-            this.mainLayoutPanel.Controls.Add(this.btnWBaWC);
-            this.mainLayoutPanel.Controls.Add(this.btnUM);
-            this.mainLayoutPanel.Controls.Add(this.btnUDoALG);
+            this.mainLayoutPanel.Controls.Add(this.btnTh06);
+            this.mainLayoutPanel.Controls.Add(this.btnTh07);
+            this.mainLayoutPanel.Controls.Add(this.btnTh08);
+            this.mainLayoutPanel.Controls.Add(this.btnTh09);
+            this.mainLayoutPanel.Controls.Add(this.btnTh10);
+            this.mainLayoutPanel.Controls.Add(this.btnTh11);
+            this.mainLayoutPanel.Controls.Add(this.btnTh12);
+            this.mainLayoutPanel.Controls.Add(this.btnTh13);
+            this.mainLayoutPanel.Controls.Add(this.btnTh14);
+            this.mainLayoutPanel.Controls.Add(this.btnTh15);
+            this.mainLayoutPanel.Controls.Add(this.btnTh16);
+            this.mainLayoutPanel.Controls.Add(this.btnTh17);
+            this.mainLayoutPanel.Controls.Add(this.btnTh18);
+            this.mainLayoutPanel.Controls.Add(this.btnTh19);
             this.mainLayoutPanel.Location = new System.Drawing.Point(3, 16);
             this.mainLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
             this.mainLayoutPanel.Name = "mainLayoutPanel";
             this.mainLayoutPanel.Size = new System.Drawing.Size(379, 254);
             this.mainLayoutPanel.TabIndex = 2;
             // 
-            // btnEoSD
+            // btnTh06
             // 
-            this.btnEoSD.BackgroundImage = global::Touhou_Launcher.Properties.Resources.eosdg;
-            this.btnEoSD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEoSD.ContextMenuStrip = this.gameContextMenu;
-            this.btnEoSD.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEoSD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEoSD.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnEoSD.Location = new System.Drawing.Point(3, 3);
-            this.btnEoSD.Name = "btnEoSD";
-            this.btnEoSD.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnEoSD.Size = new System.Drawing.Size(120, 44);
-            this.btnEoSD.TabIndex = 0;
-            this.btnEoSD.Text = "Embodiment of Scarlet Devil";
-            this.btnEoSD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEoSD.UseVisualStyleBackColor = true;
-            this.btnEoSD.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh06.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th06_off;
+            this.btnTh06.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh06.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh06.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh06.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh06.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnTh06.Location = new System.Drawing.Point(3, 3);
+            this.btnTh06.Name = "btnTh06";
+            this.btnTh06.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh06.Size = new System.Drawing.Size(120, 44);
+            this.btnTh06.TabIndex = 0;
+            this.btnTh06.Text = "Embodiment of Scarlet Devil";
+            this.btnTh06.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh06.UseVisualStyleBackColor = true;
+            this.btnTh06.Click += new System.EventHandler(this.btn_Click);
             // 
-            // btnPCB
+            // btnTh07
             // 
-            this.btnPCB.BackgroundImage = global::Touhou_Launcher.Properties.Resources.pcbg;
-            this.btnPCB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPCB.ContextMenuStrip = this.gameContextMenu;
-            this.btnPCB.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPCB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPCB.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnPCB.Location = new System.Drawing.Point(129, 3);
-            this.btnPCB.Name = "btnPCB";
-            this.btnPCB.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnPCB.Size = new System.Drawing.Size(120, 44);
-            this.btnPCB.TabIndex = 1;
-            this.btnPCB.Text = "Perfect Cherry Blossom";
-            this.btnPCB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPCB.UseVisualStyleBackColor = true;
-            this.btnPCB.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh07.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th07_off;
+            this.btnTh07.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh07.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh07.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh07.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh07.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnTh07.Location = new System.Drawing.Point(129, 3);
+            this.btnTh07.Name = "btnTh07";
+            this.btnTh07.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh07.Size = new System.Drawing.Size(120, 44);
+            this.btnTh07.TabIndex = 1;
+            this.btnTh07.Text = "Perfect Cherry Blossom";
+            this.btnTh07.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh07.UseVisualStyleBackColor = true;
+            this.btnTh07.Click += new System.EventHandler(this.btn_Click);
             // 
-            // btnIN
+            // btnTh08
             // 
-            this.btnIN.BackgroundImage = global::Touhou_Launcher.Properties.Resources._ing;
-            this.btnIN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnIN.ContextMenuStrip = this.gameContextMenu;
-            this.btnIN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIN.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnIN.Location = new System.Drawing.Point(255, 3);
-            this.btnIN.Name = "btnIN";
-            this.btnIN.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnIN.Size = new System.Drawing.Size(120, 44);
-            this.btnIN.TabIndex = 2;
-            this.btnIN.Text = "Imperishable Night";
-            this.btnIN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIN.UseVisualStyleBackColor = true;
-            this.btnIN.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh08.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th08_off;
+            this.btnTh08.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh08.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh08.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh08.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh08.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnTh08.Location = new System.Drawing.Point(255, 3);
+            this.btnTh08.Name = "btnTh08";
+            this.btnTh08.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh08.Size = new System.Drawing.Size(120, 44);
+            this.btnTh08.TabIndex = 2;
+            this.btnTh08.Text = "Imperishable Night";
+            this.btnTh08.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh08.UseVisualStyleBackColor = true;
+            this.btnTh08.Click += new System.EventHandler(this.btn_Click);
             // 
-            // btnPoFV
+            // btnTh09
             // 
-            this.btnPoFV.BackgroundImage = global::Touhou_Launcher.Properties.Resources.pofvg;
-            this.btnPoFV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPoFV.ContextMenuStrip = this.gameContextMenu;
-            this.btnPoFV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPoFV.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPoFV.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnPoFV.Location = new System.Drawing.Point(3, 53);
-            this.btnPoFV.Name = "btnPoFV";
-            this.btnPoFV.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnPoFV.Size = new System.Drawing.Size(120, 44);
-            this.btnPoFV.TabIndex = 3;
-            this.btnPoFV.Text = "Phantasmagoria of Flower View";
-            this.btnPoFV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPoFV.UseVisualStyleBackColor = true;
-            this.btnPoFV.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh09.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th09_off;
+            this.btnTh09.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh09.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh09.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh09.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh09.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnTh09.Location = new System.Drawing.Point(3, 53);
+            this.btnTh09.Name = "btnTh09";
+            this.btnTh09.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh09.Size = new System.Drawing.Size(120, 44);
+            this.btnTh09.TabIndex = 3;
+            this.btnTh09.Text = "Phantasmagoria of Flower View";
+            this.btnTh09.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh09.UseVisualStyleBackColor = true;
+            this.btnTh09.Click += new System.EventHandler(this.btn_Click);
             // 
-            // btnMoF
+            // btnTh10
             // 
-            this.btnMoF.BackgroundImage = global::Touhou_Launcher.Properties.Resources.mofg;
-            this.btnMoF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMoF.ContextMenuStrip = this.gameContextMenu;
-            this.btnMoF.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMoF.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnMoF.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnMoF.Location = new System.Drawing.Point(129, 53);
-            this.btnMoF.Name = "btnMoF";
-            this.btnMoF.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnMoF.Size = new System.Drawing.Size(120, 44);
-            this.btnMoF.TabIndex = 4;
-            this.btnMoF.Text = "Mountain of Faith";
-            this.btnMoF.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMoF.UseVisualStyleBackColor = true;
-            this.btnMoF.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh10.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th10_off;
+            this.btnTh10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh10.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh10.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnTh10.Location = new System.Drawing.Point(129, 53);
+            this.btnTh10.Name = "btnTh10";
+            this.btnTh10.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh10.Size = new System.Drawing.Size(120, 44);
+            this.btnTh10.TabIndex = 4;
+            this.btnTh10.Text = "Mountain of Faith";
+            this.btnTh10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh10.UseVisualStyleBackColor = true;
+            this.btnTh10.Click += new System.EventHandler(this.btn_Click);
             // 
-            // btnSA
+            // btnTh11
             // 
-            this.btnSA.BackgroundImage = global::Touhou_Launcher.Properties.Resources.sag;
-            this.btnSA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSA.ContextMenuStrip = this.gameContextMenu;
-            this.btnSA.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSA.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnSA.Location = new System.Drawing.Point(255, 53);
-            this.btnSA.Name = "btnSA";
-            this.btnSA.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnSA.Size = new System.Drawing.Size(120, 44);
-            this.btnSA.TabIndex = 5;
-            this.btnSA.Text = "Subterranean Animism";
-            this.btnSA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSA.UseVisualStyleBackColor = true;
-            this.btnSA.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh11.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th11_off;
+            this.btnTh11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh11.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh11.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnTh11.Location = new System.Drawing.Point(255, 53);
+            this.btnTh11.Name = "btnTh11";
+            this.btnTh11.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh11.Size = new System.Drawing.Size(120, 44);
+            this.btnTh11.TabIndex = 5;
+            this.btnTh11.Text = "Subterranean Animism";
+            this.btnTh11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh11.UseVisualStyleBackColor = true;
+            this.btnTh11.Click += new System.EventHandler(this.btn_Click);
             // 
-            // btnUFO
+            // btnTh12
             // 
-            this.btnUFO.BackgroundImage = global::Touhou_Launcher.Properties.Resources.ufog;
-            this.btnUFO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnUFO.ContextMenuStrip = this.gameContextMenu;
-            this.btnUFO.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUFO.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnUFO.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnUFO.Location = new System.Drawing.Point(3, 103);
-            this.btnUFO.Name = "btnUFO";
-            this.btnUFO.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnUFO.Size = new System.Drawing.Size(120, 44);
-            this.btnUFO.TabIndex = 6;
-            this.btnUFO.Text = "Undefined Fantastic Object";
-            this.btnUFO.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUFO.UseVisualStyleBackColor = true;
-            this.btnUFO.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh12.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th12_off;
+            this.btnTh12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh12.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh12.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTh12.Location = new System.Drawing.Point(3, 103);
+            this.btnTh12.Name = "btnTh12";
+            this.btnTh12.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh12.Size = new System.Drawing.Size(120, 44);
+            this.btnTh12.TabIndex = 6;
+            this.btnTh12.Text = "Undefined Fantastic Object";
+            this.btnTh12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh12.UseVisualStyleBackColor = true;
+            this.btnTh12.Click += new System.EventHandler(this.btn_Click);
             // 
-            // btnTD
+            // btnTh13
             // 
-            this.btnTD.BackgroundImage = global::Touhou_Launcher.Properties.Resources.tdg;
-            this.btnTD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTD.ContextMenuStrip = this.gameContextMenu;
-            this.btnTD.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTD.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnTD.Location = new System.Drawing.Point(129, 103);
-            this.btnTD.Name = "btnTD";
-            this.btnTD.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnTD.Size = new System.Drawing.Size(120, 44);
-            this.btnTD.TabIndex = 7;
-            this.btnTD.Text = "Ten Desires";
-            this.btnTD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTD.UseVisualStyleBackColor = true;
-            this.btnTD.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh13.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th13_off;
+            this.btnTh13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh13.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh13.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnTh13.Location = new System.Drawing.Point(129, 103);
+            this.btnTh13.Name = "btnTh13";
+            this.btnTh13.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh13.Size = new System.Drawing.Size(120, 44);
+            this.btnTh13.TabIndex = 7;
+            this.btnTh13.Text = "Ten Desires";
+            this.btnTh13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh13.UseVisualStyleBackColor = true;
+            this.btnTh13.Click += new System.EventHandler(this.btn_Click);
             // 
-            // btnDDC
+            // btnTh14
             // 
-            this.btnDDC.BackgroundImage = global::Touhou_Launcher.Properties.Resources.ddcg;
-            this.btnDDC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDDC.ContextMenuStrip = this.gameContextMenu;
-            this.btnDDC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDDC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDDC.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnDDC.Location = new System.Drawing.Point(255, 103);
-            this.btnDDC.Name = "btnDDC";
-            this.btnDDC.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnDDC.Size = new System.Drawing.Size(120, 44);
-            this.btnDDC.TabIndex = 8;
-            this.btnDDC.Text = "Double Dealing Character";
-            this.btnDDC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDDC.UseVisualStyleBackColor = true;
-            this.btnDDC.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh14.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th14_off;
+            this.btnTh14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh14.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh14.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh14.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnTh14.Location = new System.Drawing.Point(255, 103);
+            this.btnTh14.Name = "btnTh14";
+            this.btnTh14.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh14.Size = new System.Drawing.Size(120, 44);
+            this.btnTh14.TabIndex = 8;
+            this.btnTh14.Text = "Double Dealing Character";
+            this.btnTh14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh14.UseVisualStyleBackColor = true;
+            this.btnTh14.Click += new System.EventHandler(this.btn_Click);
             // 
-            // btnLoLK
+            // btnTh15
             // 
-            this.btnLoLK.BackgroundImage = global::Touhou_Launcher.Properties.Resources.lolkg;
-            this.btnLoLK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLoLK.ContextMenuStrip = this.gameContextMenu;
-            this.btnLoLK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLoLK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLoLK.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnLoLK.Location = new System.Drawing.Point(3, 153);
-            this.btnLoLK.Name = "btnLoLK";
-            this.btnLoLK.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnLoLK.Size = new System.Drawing.Size(120, 44);
-            this.btnLoLK.TabIndex = 9;
-            this.btnLoLK.Text = "Legacy of Lunatic Kingdom";
-            this.btnLoLK.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLoLK.UseVisualStyleBackColor = true;
-            this.btnLoLK.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh15.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th15_off;
+            this.btnTh15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh15.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh15.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh15.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnTh15.Location = new System.Drawing.Point(3, 153);
+            this.btnTh15.Name = "btnTh15";
+            this.btnTh15.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh15.Size = new System.Drawing.Size(120, 44);
+            this.btnTh15.TabIndex = 9;
+            this.btnTh15.Text = "Legacy of Lunatic Kingdom";
+            this.btnTh15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh15.UseVisualStyleBackColor = true;
+            this.btnTh15.Click += new System.EventHandler(this.btn_Click);
             // 
-            // btnHSiFS
+            // btnTh16
             // 
-            this.btnHSiFS.BackgroundImage = global::Touhou_Launcher.Properties.Resources.hsifsg;
-            this.btnHSiFS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnHSiFS.ContextMenuStrip = this.gameContextMenu;
-            this.btnHSiFS.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHSiFS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnHSiFS.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnHSiFS.Location = new System.Drawing.Point(129, 153);
-            this.btnHSiFS.Name = "btnHSiFS";
-            this.btnHSiFS.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnHSiFS.Size = new System.Drawing.Size(120, 44);
-            this.btnHSiFS.TabIndex = 10;
-            this.btnHSiFS.Text = "Hidden Star in Four Seasons";
-            this.btnHSiFS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHSiFS.UseVisualStyleBackColor = true;
-            this.btnHSiFS.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh16.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th16_off;
+            this.btnTh16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh16.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh16.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh16.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh16.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnTh16.Location = new System.Drawing.Point(129, 153);
+            this.btnTh16.Name = "btnTh16";
+            this.btnTh16.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh16.Size = new System.Drawing.Size(120, 44);
+            this.btnTh16.TabIndex = 10;
+            this.btnTh16.Text = "Hidden Star in Four Seasons";
+            this.btnTh16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh16.UseVisualStyleBackColor = true;
+            this.btnTh16.Click += new System.EventHandler(this.btn_Click);
             // 
-            // btnWBaWC
+            // btnTh17
             // 
-            this.btnWBaWC.BackgroundImage = global::Touhou_Launcher.Properties.Resources.wbawcg;
-            this.btnWBaWC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnWBaWC.ContextMenuStrip = this.gameContextMenu;
-            this.btnWBaWC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnWBaWC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnWBaWC.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnWBaWC.Location = new System.Drawing.Point(255, 153);
-            this.btnWBaWC.Name = "btnWBaWC";
-            this.btnWBaWC.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnWBaWC.Size = new System.Drawing.Size(120, 44);
-            this.btnWBaWC.TabIndex = 11;
-            this.btnWBaWC.Text = "Wily Beast and Weakest Creature";
-            this.btnWBaWC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnWBaWC.UseVisualStyleBackColor = true;
-            this.btnWBaWC.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh17.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th17_off;
+            this.btnTh17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh17.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh17.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh17.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh17.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTh17.Location = new System.Drawing.Point(255, 153);
+            this.btnTh17.Name = "btnTh17";
+            this.btnTh17.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh17.Size = new System.Drawing.Size(120, 44);
+            this.btnTh17.TabIndex = 11;
+            this.btnTh17.Text = "Wily Beast and Weakest Creature";
+            this.btnTh17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh17.UseVisualStyleBackColor = true;
+            this.btnTh17.Click += new System.EventHandler(this.btn_Click);
             // 
-            // btnUM
+            // btnTh18
             // 
-            this.btnUM.BackgroundImage = global::Touhou_Launcher.Properties.Resources.umg;
-            this.btnUM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnUM.ContextMenuStrip = this.gameContextMenu;
-            this.btnUM.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUM.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnUM.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnUM.Location = new System.Drawing.Point(3, 203);
-            this.btnUM.Name = "btnUM";
-            this.btnUM.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnUM.Size = new System.Drawing.Size(120, 44);
-            this.btnUM.TabIndex = 12;
-            this.btnUM.Text = "Unconnected Marketeers";
-            this.btnUM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUM.UseVisualStyleBackColor = true;
-            this.btnUM.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh18.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th18_off;
+            this.btnTh18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh18.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh18.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh18.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh18.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTh18.Location = new System.Drawing.Point(3, 203);
+            this.btnTh18.Name = "btnTh18";
+            this.btnTh18.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh18.Size = new System.Drawing.Size(120, 44);
+            this.btnTh18.TabIndex = 12;
+            this.btnTh18.Text = "Unconnected Marketeers";
+            this.btnTh18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh18.UseVisualStyleBackColor = true;
+            this.btnTh18.Click += new System.EventHandler(this.btn_Click);
             // 
             // pc98Group
             // 
@@ -2129,11 +2129,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pc98LayoutPanel.AutoScroll = true;
-            this.pc98LayoutPanel.Controls.Add(this.btnHRtP);
-            this.pc98LayoutPanel.Controls.Add(this.btnSoEW);
-            this.pc98LayoutPanel.Controls.Add(this.btnPoDD);
-            this.pc98LayoutPanel.Controls.Add(this.btnLLS);
-            this.pc98LayoutPanel.Controls.Add(this.btnMS);
+            this.pc98LayoutPanel.Controls.Add(this.btnTh01);
+            this.pc98LayoutPanel.Controls.Add(this.btnTh02);
+            this.pc98LayoutPanel.Controls.Add(this.btnTh03);
+            this.pc98LayoutPanel.Controls.Add(this.btnTh04);
+            this.pc98LayoutPanel.Controls.Add(this.btnTh05);
             this.pc98LayoutPanel.Location = new System.Drawing.Point(3, 16);
             this.pc98LayoutPanel.Margin = new System.Windows.Forms.Padding(0);
             this.pc98LayoutPanel.Name = "pc98LayoutPanel";
@@ -2159,341 +2159,341 @@
             // trayPC98
             // 
             this.trayPC98.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.trayHRtP,
-            this.traySoEW,
-            this.trayPoDD,
-            this.trayLLS,
-            this.trayMS});
+            this.trayTh01,
+            this.trayTh02,
+            this.trayTh03,
+            this.trayTh04,
+            this.trayTh05});
             this.trayPC98.Name = "trayPC98";
             this.trayPC98.Size = new System.Drawing.Size(198, 22);
             this.trayPC98.Text = "PC-98 Games";
             // 
-            // trayHRtP
+            // trayTh01
             // 
-            this.trayHRtP.Image = global::Touhou_Launcher.Properties.Resources.Icon_th01;
-            this.trayHRtP.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayHRtP.Name = "trayHRtP";
-            this.trayHRtP.Size = new System.Drawing.Size(256, 38);
-            this.trayHRtP.Text = "Highly Responsive to Prayers";
-            this.trayHRtP.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh01.Image = global::Touhou_Launcher.Properties.Resources.Icon_th01;
+            this.trayTh01.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh01.Name = "trayTh01";
+            this.trayTh01.Size = new System.Drawing.Size(256, 38);
+            this.trayTh01.Text = "Highly Responsive to Prayers";
+            this.trayTh01.Click += new System.EventHandler(this.tray_Click);
             // 
-            // traySoEW
+            // trayTh02
             // 
-            this.traySoEW.Image = global::Touhou_Launcher.Properties.Resources.Icon_th02;
-            this.traySoEW.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.traySoEW.Name = "traySoEW";
-            this.traySoEW.Size = new System.Drawing.Size(256, 38);
-            this.traySoEW.Text = "Story of Eastern Wonderland";
-            this.traySoEW.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh02.Image = global::Touhou_Launcher.Properties.Resources.Icon_th02;
+            this.trayTh02.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh02.Name = "trayTh02";
+            this.trayTh02.Size = new System.Drawing.Size(256, 38);
+            this.trayTh02.Text = "Story of Eastern Wonderland";
+            this.trayTh02.Click += new System.EventHandler(this.tray_Click);
             // 
-            // trayPoDD
+            // trayTh03
             // 
-            this.trayPoDD.Image = global::Touhou_Launcher.Properties.Resources.Icon_th03;
-            this.trayPoDD.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayPoDD.Name = "trayPoDD";
-            this.trayPoDD.Size = new System.Drawing.Size(256, 38);
-            this.trayPoDD.Text = "Phantasmagoria of Dim. Dream";
-            this.trayPoDD.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh03.Image = global::Touhou_Launcher.Properties.Resources.Icon_th03;
+            this.trayTh03.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh03.Name = "trayTh03";
+            this.trayTh03.Size = new System.Drawing.Size(256, 38);
+            this.trayTh03.Text = "Phantasmagoria of Dim. Dream";
+            this.trayTh03.Click += new System.EventHandler(this.tray_Click);
             // 
-            // trayLLS
+            // trayTh04
             // 
-            this.trayLLS.Image = global::Touhou_Launcher.Properties.Resources.Icon_th04;
-            this.trayLLS.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayLLS.Name = "trayLLS";
-            this.trayLLS.Size = new System.Drawing.Size(256, 38);
-            this.trayLLS.Text = "Lotus Land Story";
-            this.trayLLS.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh04.Image = global::Touhou_Launcher.Properties.Resources.Icon_th04;
+            this.trayTh04.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh04.Name = "trayTh04";
+            this.trayTh04.Size = new System.Drawing.Size(256, 38);
+            this.trayTh04.Text = "Lotus Land Story";
+            this.trayTh04.Click += new System.EventHandler(this.tray_Click);
             // 
-            // trayMS
+            // trayTh05
             // 
-            this.trayMS.Image = global::Touhou_Launcher.Properties.Resources.Icon_th05;
-            this.trayMS.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayMS.Name = "trayMS";
-            this.trayMS.Size = new System.Drawing.Size(256, 38);
-            this.trayMS.Text = "Mystic Square";
-            this.trayMS.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh05.Image = global::Touhou_Launcher.Properties.Resources.Icon_th05;
+            this.trayTh05.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh05.Name = "trayTh05";
+            this.trayTh05.Size = new System.Drawing.Size(256, 38);
+            this.trayTh05.Text = "Mystic Square";
+            this.trayTh05.Click += new System.EventHandler(this.tray_Click);
             // 
             // trayMain
             // 
             this.trayMain.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.trayEoSD,
-            this.trayPCB,
-            this.trayIN,
-            this.trayPoFV,
-            this.trayMoF,
-            this.traySA,
-            this.trayUFO,
-            this.trayTD,
-            this.trayDDC,
-            this.trayLoLK,
-            this.trayHSiFS,
-            this.trayWBaWC,
-            this.trayUM,
-            this.trayUDoALG});
+            this.trayTh06,
+            this.trayTh07,
+            this.trayTh08,
+            this.trayTh09,
+            this.trayTh10,
+            this.trayTh11,
+            this.trayTh12,
+            this.trayTh13,
+            this.trayTh14,
+            this.trayTh15,
+            this.trayTh16,
+            this.trayTh17,
+            this.trayTh18,
+            this.trayTh19});
             this.trayMain.Name = "trayMain";
             this.trayMain.Size = new System.Drawing.Size(198, 22);
             this.trayMain.Text = "Main Games";
             // 
-            // trayEoSD
+            // trayTh06
             // 
-            this.trayEoSD.Image = global::Touhou_Launcher.Properties.Resources.Icon_th06;
-            this.trayEoSD.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayEoSD.Name = "trayEoSD";
-            this.trayEoSD.Size = new System.Drawing.Size(285, 38);
-            this.trayEoSD.Text = "Embodiment of Scarlet Devil";
-            this.trayEoSD.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh06.Image = global::Touhou_Launcher.Properties.Resources.Icon_th06;
+            this.trayTh06.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh06.Name = "trayTh06";
+            this.trayTh06.Size = new System.Drawing.Size(285, 38);
+            this.trayTh06.Text = "Embodiment of Scarlet Devil";
+            this.trayTh06.Click += new System.EventHandler(this.tray_Click);
             // 
-            // trayPCB
+            // trayTh07
             // 
-            this.trayPCB.Image = global::Touhou_Launcher.Properties.Resources.Icon_th07;
-            this.trayPCB.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayPCB.Name = "trayPCB";
-            this.trayPCB.Size = new System.Drawing.Size(285, 38);
-            this.trayPCB.Text = "Perfect Cherry Blossom";
-            this.trayPCB.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh07.Image = global::Touhou_Launcher.Properties.Resources.Icon_th07;
+            this.trayTh07.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh07.Name = "trayTh07";
+            this.trayTh07.Size = new System.Drawing.Size(285, 38);
+            this.trayTh07.Text = "Perfect Cherry Blossom";
+            this.trayTh07.Click += new System.EventHandler(this.tray_Click);
             // 
-            // trayIN
+            // trayTh08
             // 
-            this.trayIN.Image = global::Touhou_Launcher.Properties.Resources.Icon_th08;
-            this.trayIN.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayIN.Name = "trayIN";
-            this.trayIN.Size = new System.Drawing.Size(285, 38);
-            this.trayIN.Text = "Imperishable Night";
-            this.trayIN.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh08.Image = global::Touhou_Launcher.Properties.Resources.Icon_th08;
+            this.trayTh08.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh08.Name = "trayTh08";
+            this.trayTh08.Size = new System.Drawing.Size(285, 38);
+            this.trayTh08.Text = "Imperishable Night";
+            this.trayTh08.Click += new System.EventHandler(this.tray_Click);
             // 
-            // trayPoFV
+            // trayTh09
             // 
-            this.trayPoFV.Image = global::Touhou_Launcher.Properties.Resources.Icon_th09;
-            this.trayPoFV.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayPoFV.Name = "trayPoFV";
-            this.trayPoFV.Size = new System.Drawing.Size(285, 38);
-            this.trayPoFV.Text = "Phantasmagoria of Flower View";
-            this.trayPoFV.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh09.Image = global::Touhou_Launcher.Properties.Resources.Icon_th09;
+            this.trayTh09.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh09.Name = "trayTh09";
+            this.trayTh09.Size = new System.Drawing.Size(285, 38);
+            this.trayTh09.Text = "Phantasmagoria of Flower View";
+            this.trayTh09.Click += new System.EventHandler(this.tray_Click);
             // 
-            // trayMoF
+            // trayTh10
             // 
-            this.trayMoF.Image = global::Touhou_Launcher.Properties.Resources.Icon_th10;
-            this.trayMoF.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayMoF.Name = "trayMoF";
-            this.trayMoF.Size = new System.Drawing.Size(285, 38);
-            this.trayMoF.Text = "Mountain of Faith";
-            this.trayMoF.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh10.Image = global::Touhou_Launcher.Properties.Resources.Icon_th10;
+            this.trayTh10.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh10.Name = "trayTh10";
+            this.trayTh10.Size = new System.Drawing.Size(285, 38);
+            this.trayTh10.Text = "Mountain of Faith";
+            this.trayTh10.Click += new System.EventHandler(this.tray_Click);
             // 
-            // traySA
+            // trayTh11
             // 
-            this.traySA.Image = global::Touhou_Launcher.Properties.Resources.Icon_th11;
-            this.traySA.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.traySA.Name = "traySA";
-            this.traySA.Size = new System.Drawing.Size(285, 38);
-            this.traySA.Text = "Subterranean Animism";
-            this.traySA.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh11.Image = global::Touhou_Launcher.Properties.Resources.Icon_th11;
+            this.trayTh11.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh11.Name = "trayTh11";
+            this.trayTh11.Size = new System.Drawing.Size(285, 38);
+            this.trayTh11.Text = "Subterranean Animism";
+            this.trayTh11.Click += new System.EventHandler(this.tray_Click);
             // 
-            // trayUFO
+            // trayTh12
             // 
-            this.trayUFO.Image = global::Touhou_Launcher.Properties.Resources.Icon_th12;
-            this.trayUFO.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayUFO.Name = "trayUFO";
-            this.trayUFO.Size = new System.Drawing.Size(285, 38);
-            this.trayUFO.Text = "Undefined Fantastic Object";
-            this.trayUFO.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh12.Image = global::Touhou_Launcher.Properties.Resources.Icon_th12;
+            this.trayTh12.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh12.Name = "trayTh12";
+            this.trayTh12.Size = new System.Drawing.Size(285, 38);
+            this.trayTh12.Text = "Undefined Fantastic Object";
+            this.trayTh12.Click += new System.EventHandler(this.tray_Click);
             // 
-            // trayTD
+            // trayTh13
             // 
-            this.trayTD.Image = global::Touhou_Launcher.Properties.Resources.Icon_th13;
-            this.trayTD.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayTD.Name = "trayTD";
-            this.trayTD.Size = new System.Drawing.Size(285, 38);
-            this.trayTD.Text = "Ten Desires";
-            this.trayTD.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh13.Image = global::Touhou_Launcher.Properties.Resources.Icon_th13;
+            this.trayTh13.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh13.Name = "trayTh13";
+            this.trayTh13.Size = new System.Drawing.Size(285, 38);
+            this.trayTh13.Text = "Ten Desires";
+            this.trayTh13.Click += new System.EventHandler(this.tray_Click);
             // 
-            // trayDDC
+            // trayTh14
             // 
-            this.trayDDC.Image = global::Touhou_Launcher.Properties.Resources.Icon_th14;
-            this.trayDDC.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayDDC.Name = "trayDDC";
-            this.trayDDC.Size = new System.Drawing.Size(285, 38);
-            this.trayDDC.Text = "Double Dealing Character";
-            this.trayDDC.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh14.Image = global::Touhou_Launcher.Properties.Resources.Icon_th14;
+            this.trayTh14.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh14.Name = "trayTh14";
+            this.trayTh14.Size = new System.Drawing.Size(285, 38);
+            this.trayTh14.Text = "Double Dealing Character";
+            this.trayTh14.Click += new System.EventHandler(this.tray_Click);
             // 
-            // trayLoLK
+            // trayTh15
             // 
-            this.trayLoLK.Image = global::Touhou_Launcher.Properties.Resources.Icon_th15;
-            this.trayLoLK.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayLoLK.Name = "trayLoLK";
-            this.trayLoLK.Size = new System.Drawing.Size(285, 38);
-            this.trayLoLK.Text = "Legacy of Lunatic Kingdom";
-            this.trayLoLK.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh15.Image = global::Touhou_Launcher.Properties.Resources.Icon_th15;
+            this.trayTh15.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh15.Name = "trayTh15";
+            this.trayTh15.Size = new System.Drawing.Size(285, 38);
+            this.trayTh15.Text = "Legacy of Lunatic Kingdom";
+            this.trayTh15.Click += new System.EventHandler(this.tray_Click);
             // 
-            // trayHSiFS
+            // trayTh16
             // 
-            this.trayHSiFS.Image = global::Touhou_Launcher.Properties.Resources.Icon_th16;
-            this.trayHSiFS.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayHSiFS.Name = "trayHSiFS";
-            this.trayHSiFS.Size = new System.Drawing.Size(285, 38);
-            this.trayHSiFS.Text = "Hidden Star in Four Seasons";
-            this.trayHSiFS.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh16.Image = global::Touhou_Launcher.Properties.Resources.Icon_th16;
+            this.trayTh16.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh16.Name = "trayTh16";
+            this.trayTh16.Size = new System.Drawing.Size(285, 38);
+            this.trayTh16.Text = "Hidden Star in Four Seasons";
+            this.trayTh16.Click += new System.EventHandler(this.tray_Click);
             // 
-            // trayWBaWC
+            // trayTh17
             // 
-            this.trayWBaWC.Image = global::Touhou_Launcher.Properties.Resources.Icon_th17;
-            this.trayWBaWC.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayWBaWC.Name = "trayWBaWC";
-            this.trayWBaWC.Size = new System.Drawing.Size(285, 38);
-            this.trayWBaWC.Text = "Wily Beast and Weakest Creature";
-            this.trayWBaWC.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh17.Image = global::Touhou_Launcher.Properties.Resources.Icon_th17;
+            this.trayTh17.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh17.Name = "trayTh17";
+            this.trayTh17.Size = new System.Drawing.Size(285, 38);
+            this.trayTh17.Text = "Wily Beast and Weakest Creature";
+            this.trayTh17.Click += new System.EventHandler(this.tray_Click);
             // 
-            // trayUM
+            // trayTh18
             // 
-            this.trayUM.Image = global::Touhou_Launcher.Properties.Resources.Icon_th18;
-            this.trayUM.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayUM.Name = "trayUM";
-            this.trayUM.Size = new System.Drawing.Size(285, 38);
-            this.trayUM.Text = "Unconnected Marketeers";
-            this.trayUM.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh18.Image = global::Touhou_Launcher.Properties.Resources.Icon_th18;
+            this.trayTh18.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh18.Name = "trayTh18";
+            this.trayTh18.Size = new System.Drawing.Size(285, 38);
+            this.trayTh18.Text = "Unconnected Marketeers";
+            this.trayTh18.Click += new System.EventHandler(this.tray_Click);
             // 
             // traySpinoff
             // 
             this.traySpinoff.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.trayStB,
-            this.trayDS,
-            this.trayGFW,
-            this.trayISC,
-            this.trayVD,
-            this.trayHBM});
+            this.trayTh095,
+            this.trayTh125,
+            this.trayTh128,
+            this.trayTh143,
+            this.trayTh165,
+            this.trayTh185});
             this.traySpinoff.Name = "traySpinoff";
             this.traySpinoff.Size = new System.Drawing.Size(198, 22);
             this.traySpinoff.Text = "Spinoffs";
             // 
-            // trayStB
+            // trayTh095
             // 
-            this.trayStB.Image = global::Touhou_Launcher.Properties.Resources.Icon_th095;
-            this.trayStB.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayStB.Name = "trayStB";
-            this.trayStB.Size = new System.Drawing.Size(203, 38);
-            this.trayStB.Text = "Shoot the Bullet";
-            this.trayStB.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh095.Image = global::Touhou_Launcher.Properties.Resources.Icon_th095;
+            this.trayTh095.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh095.Name = "trayTh095";
+            this.trayTh095.Size = new System.Drawing.Size(203, 38);
+            this.trayTh095.Text = "Shoot the Bullet";
+            this.trayTh095.Click += new System.EventHandler(this.tray_Click);
             // 
-            // trayDS
+            // trayTh125
             // 
-            this.trayDS.Image = global::Touhou_Launcher.Properties.Resources.Icon_th125;
-            this.trayDS.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayDS.Name = "trayDS";
-            this.trayDS.Size = new System.Drawing.Size(203, 38);
-            this.trayDS.Text = "Double Spoiler";
-            this.trayDS.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh125.Image = global::Touhou_Launcher.Properties.Resources.Icon_th125;
+            this.trayTh125.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh125.Name = "trayTh125";
+            this.trayTh125.Size = new System.Drawing.Size(203, 38);
+            this.trayTh125.Text = "Double Spoiler";
+            this.trayTh125.Click += new System.EventHandler(this.tray_Click);
             // 
-            // trayGFW
+            // trayTh128
             // 
-            this.trayGFW.Image = global::Touhou_Launcher.Properties.Resources.Icon_th128;
-            this.trayGFW.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayGFW.Name = "trayGFW";
-            this.trayGFW.Size = new System.Drawing.Size(203, 38);
-            this.trayGFW.Text = "Great Fairy Wars";
-            this.trayGFW.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh128.Image = global::Touhou_Launcher.Properties.Resources.Icon_th128;
+            this.trayTh128.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh128.Name = "trayTh128";
+            this.trayTh128.Size = new System.Drawing.Size(203, 38);
+            this.trayTh128.Text = "Great Fairy Wars";
+            this.trayTh128.Click += new System.EventHandler(this.tray_Click);
             // 
-            // trayISC
+            // trayTh143
             // 
-            this.trayISC.Image = global::Touhou_Launcher.Properties.Resources.Icon_th143;
-            this.trayISC.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayISC.Name = "trayISC";
-            this.trayISC.Size = new System.Drawing.Size(203, 38);
-            this.trayISC.Text = "Impossible Spell Card";
-            this.trayISC.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh143.Image = global::Touhou_Launcher.Properties.Resources.Icon_th143;
+            this.trayTh143.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh143.Name = "trayTh143";
+            this.trayTh143.Size = new System.Drawing.Size(203, 38);
+            this.trayTh143.Text = "Impossible Spell Card";
+            this.trayTh143.Click += new System.EventHandler(this.tray_Click);
             // 
-            // trayVD
+            // trayTh165
             // 
-            this.trayVD.Image = global::Touhou_Launcher.Properties.Resources.Icon_th165;
-            this.trayVD.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayVD.Name = "trayVD";
-            this.trayVD.Size = new System.Drawing.Size(203, 38);
-            this.trayVD.Text = "Violet Detector";
-            this.trayVD.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh165.Image = global::Touhou_Launcher.Properties.Resources.Icon_th165;
+            this.trayTh165.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh165.Name = "trayTh165";
+            this.trayTh165.Size = new System.Drawing.Size(203, 38);
+            this.trayTh165.Text = "Violet Detector";
+            this.trayTh165.Click += new System.EventHandler(this.tray_Click);
             // 
-            // trayHBM
+            // trayTh185
             // 
-            this.trayHBM.Image = global::Touhou_Launcher.Properties.Resources.Icon_th185;
-            this.trayHBM.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayHBM.Name = "trayHBM";
-            this.trayHBM.Size = new System.Drawing.Size(203, 38);
-            this.trayHBM.Text = "100th Black Market";
-            this.trayHBM.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh185.Image = global::Touhou_Launcher.Properties.Resources.Icon_th185;
+            this.trayTh185.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh185.Name = "trayTh185";
+            this.trayTh185.Size = new System.Drawing.Size(203, 38);
+            this.trayTh185.Text = "100th Black Market";
+            this.trayTh185.Click += new System.EventHandler(this.tray_Click);
             // 
             // trayTasofro
             // 
             this.trayTasofro.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.trayIaMP,
-            this.traySWR,
-            this.trayUoNL,
-            this.trayHM,
-            this.trayULiL,
-            this.trayAoCF,
-            this.trayGI});
+            this.trayTh075,
+            this.trayTh105,
+            this.trayTh123,
+            this.trayTh135,
+            this.trayTh145,
+            this.trayTh155,
+            this.trayTh175});
             this.trayTasofro.Name = "trayTasofro";
             this.trayTasofro.Size = new System.Drawing.Size(198, 22);
             this.trayTasofro.Text = "Twilight Frontier Games";
             // 
-            // trayIaMP
+            // trayTh075
             // 
-            this.trayIaMP.Image = global::Touhou_Launcher.Properties.Resources.Icon_th075;
-            this.trayIaMP.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayIaMP.Name = "trayIaMP";
-            this.trayIaMP.Size = new System.Drawing.Size(254, 38);
-            this.trayIaMP.Text = "Immaterial and Missing Power";
-            this.trayIaMP.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh075.Image = global::Touhou_Launcher.Properties.Resources.Icon_th075;
+            this.trayTh075.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh075.Name = "trayTh075";
+            this.trayTh075.Size = new System.Drawing.Size(254, 38);
+            this.trayTh075.Text = "Immaterial and Missing Power";
+            this.trayTh075.Click += new System.EventHandler(this.tray_Click);
             // 
-            // traySWR
+            // trayTh105
             // 
-            this.traySWR.Image = global::Touhou_Launcher.Properties.Resources.Icon_th105;
-            this.traySWR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.traySWR.Name = "traySWR";
-            this.traySWR.Size = new System.Drawing.Size(254, 38);
-            this.traySWR.Text = "Scarlet Weather Rhapsody";
-            this.traySWR.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh105.Image = global::Touhou_Launcher.Properties.Resources.Icon_th105;
+            this.trayTh105.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh105.Name = "trayTh105";
+            this.trayTh105.Size = new System.Drawing.Size(254, 38);
+            this.trayTh105.Text = "Scarlet Weather Rhapsody";
+            this.trayTh105.Click += new System.EventHandler(this.tray_Click);
             // 
-            // trayUoNL
+            // trayTh123
             // 
-            this.trayUoNL.Image = global::Touhou_Launcher.Properties.Resources.Icon_th123;
-            this.trayUoNL.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayUoNL.Name = "trayUoNL";
-            this.trayUoNL.Size = new System.Drawing.Size(254, 38);
-            this.trayUoNL.Text = "Hisoutensoku";
-            this.trayUoNL.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh123.Image = global::Touhou_Launcher.Properties.Resources.Icon_th123;
+            this.trayTh123.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh123.Name = "trayTh123";
+            this.trayTh123.Size = new System.Drawing.Size(254, 38);
+            this.trayTh123.Text = "Hisoutensoku";
+            this.trayTh123.Click += new System.EventHandler(this.tray_Click);
             // 
-            // trayHM
+            // trayTh135
             // 
-            this.trayHM.Image = global::Touhou_Launcher.Properties.Resources.Icon_th135;
-            this.trayHM.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayHM.Name = "trayHM";
-            this.trayHM.Size = new System.Drawing.Size(254, 38);
-            this.trayHM.Text = "Hopeless Masquerade";
-            this.trayHM.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh135.Image = global::Touhou_Launcher.Properties.Resources.Icon_th135;
+            this.trayTh135.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh135.Name = "trayTh135";
+            this.trayTh135.Size = new System.Drawing.Size(254, 38);
+            this.trayTh135.Text = "Hopeless Masquerade";
+            this.trayTh135.Click += new System.EventHandler(this.tray_Click);
             // 
-            // trayULiL
+            // trayTh145
             // 
-            this.trayULiL.Image = global::Touhou_Launcher.Properties.Resources.Icon_th145;
-            this.trayULiL.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayULiL.Name = "trayULiL";
-            this.trayULiL.Size = new System.Drawing.Size(254, 38);
-            this.trayULiL.Text = "Urban Legend in Limbo";
-            this.trayULiL.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh145.Image = global::Touhou_Launcher.Properties.Resources.Icon_th145;
+            this.trayTh145.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh145.Name = "trayTh145";
+            this.trayTh145.Size = new System.Drawing.Size(254, 38);
+            this.trayTh145.Text = "Urban Legend in Limbo";
+            this.trayTh145.Click += new System.EventHandler(this.tray_Click);
             // 
-            // trayAoCF
+            // trayTh155
             // 
-            this.trayAoCF.Image = global::Touhou_Launcher.Properties.Resources.Icon_th155;
-            this.trayAoCF.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayAoCF.Name = "trayAoCF";
-            this.trayAoCF.Size = new System.Drawing.Size(254, 38);
-            this.trayAoCF.Text = "Antinomy of Common Flowers";
-            this.trayAoCF.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh155.Image = global::Touhou_Launcher.Properties.Resources.Icon_th155;
+            this.trayTh155.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh155.Name = "trayTh155";
+            this.trayTh155.Size = new System.Drawing.Size(254, 38);
+            this.trayTh155.Text = "Antinomy of Common Flowers";
+            this.trayTh155.Click += new System.EventHandler(this.tray_Click);
             // 
-            // trayGI
+            // trayTh175
             // 
-            this.trayGI.Image = global::Touhou_Launcher.Properties.Resources.Icon_th175;
-            this.trayGI.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayGI.Name = "trayGI";
-            this.trayGI.Size = new System.Drawing.Size(254, 38);
-            this.trayGI.Text = "Gouyoku Ibun";
-            this.trayGI.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh175.Image = global::Touhou_Launcher.Properties.Resources.Icon_th175;
+            this.trayTh175.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh175.Name = "trayTh175";
+            this.trayTh175.Size = new System.Drawing.Size(254, 38);
+            this.trayTh175.Text = "Gouyoku Ibun";
+            this.trayTh175.Click += new System.EventHandler(this.tray_Click);
             // 
             // trayCustom
             // 
@@ -2534,45 +2534,45 @@
             this.trayIcon.Text = "Touhou Launcher";
             this.trayIcon.DoubleClick += new System.EventHandler(this.MainForm_Show);
             // 
-            // btnUDoALG
+            // btnTh19
             // 
-            this.btnUDoALG.BackgroundImage = global::Touhou_Launcher.Properties.Resources.udoalgg;
-            this.btnUDoALG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnUDoALG.ContextMenuStrip = this.gameContextMenu;
-            this.btnUDoALG.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUDoALG.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnUDoALG.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnUDoALG.Location = new System.Drawing.Point(129, 203);
-            this.btnUDoALG.Name = "btnUDoALG";
-            this.btnUDoALG.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnUDoALG.Size = new System.Drawing.Size(120, 44);
-            this.btnUDoALG.TabIndex = 13;
-            this.btnUDoALG.Text = "Unfinished Dream of All Living Ghost";
-            this.btnUDoALG.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUDoALG.UseVisualStyleBackColor = true;
-            this.btnUDoALG.Click += new System.EventHandler(this.btn_Click);
+            this.btnTh19.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th19_off;
+            this.btnTh19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh19.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh19.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh19.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh19.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnTh19.Location = new System.Drawing.Point(129, 203);
+            this.btnTh19.Name = "btnTh19";
+            this.btnTh19.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh19.Size = new System.Drawing.Size(120, 44);
+            this.btnTh19.TabIndex = 13;
+            this.btnTh19.Text = "Unfinished Dream of All Living Ghost";
+            this.btnTh19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh19.UseVisualStyleBackColor = true;
+            this.btnTh19.Click += new System.EventHandler(this.btn_Click);
             // 
-            // chkUDoALG
+            // chkTh19
             // 
-            this.chkUDoALG.AutoSize = true;
-            this.chkUDoALG.Checked = true;
-            this.chkUDoALG.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkUDoALG.Location = new System.Drawing.Point(188, 49);
-            this.chkUDoALG.Name = "chkUDoALG";
-            this.chkUDoALG.Size = new System.Drawing.Size(69, 17);
-            this.chkUDoALG.TabIndex = 13;
-            this.chkUDoALG.Text = "UDoALG";
-            this.chkUDoALG.UseVisualStyleBackColor = true;
-            this.chkUDoALG.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            this.chkTh19.AutoSize = true;
+            this.chkTh19.Checked = true;
+            this.chkTh19.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh19.Location = new System.Drawing.Point(188, 49);
+            this.chkTh19.Name = "chkTh19";
+            this.chkTh19.Size = new System.Drawing.Size(69, 17);
+            this.chkTh19.TabIndex = 13;
+            this.chkTh19.Text = "UDoALG";
+            this.chkTh19.UseVisualStyleBackColor = true;
+            this.chkTh19.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
-            // trayUDoALG
+            // trayTh19
             // 
-            this.trayUDoALG.Image = global::Touhou_Launcher.Properties.Resources.Icon_th19;
-            this.trayUDoALG.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayUDoALG.Name = "trayUDoALG";
-            this.trayUDoALG.Size = new System.Drawing.Size(285, 38);
-            this.trayUDoALG.Text = "Unfinished Dream of All Living Ghost";
-            this.trayUDoALG.Click += new System.EventHandler(this.tray_Click);
+            this.trayTh19.Image = global::Touhou_Launcher.Properties.Resources.Icon_th19;
+            this.trayTh19.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh19.Name = "trayTh19";
+            this.trayTh19.Size = new System.Drawing.Size(285, 38);
+            this.trayTh19.Text = "Unfinished Dream of All Living Ghost";
+            this.trayTh19.Click += new System.EventHandler(this.tray_Click);
             // 
             // MainForm
             // 
@@ -2667,39 +2667,39 @@
         private System.Windows.Forms.TabControl mainControl;
         private System.Windows.Forms.TabPage games;
         private System.Windows.Forms.GroupBox pc98Group;
-        private System.Windows.Forms.Button btnHRtP;
+        private System.Windows.Forms.Button btnTh01;
         private System.Windows.Forms.FlowLayoutPanel pc98LayoutPanel;
-        private System.Windows.Forms.Button btnSoEW;
+        private System.Windows.Forms.Button btnTh02;
         private System.Windows.Forms.Button btnRandom;
-        private System.Windows.Forms.Button btnPoDD;
-        private System.Windows.Forms.Button btnLLS;
-        private System.Windows.Forms.Button btnMS;
-        private System.Windows.Forms.Button btnEoSD;
-        private System.Windows.Forms.Button btnPCB;
-        private System.Windows.Forms.Button btnIN;
-        private System.Windows.Forms.Button btnPoFV;
-        private System.Windows.Forms.Button btnMoF;
-        private System.Windows.Forms.Button btnSA;
-        private System.Windows.Forms.Button btnUFO;
-        private System.Windows.Forms.Button btnTD;
-        private System.Windows.Forms.Button btnDDC;
-        private System.Windows.Forms.Button btnLoLK;
-        private System.Windows.Forms.Button btnHSiFS;
+        private System.Windows.Forms.Button btnTh03;
+        private System.Windows.Forms.Button btnTh04;
+        private System.Windows.Forms.Button btnTh05;
+        private System.Windows.Forms.Button btnTh06;
+        private System.Windows.Forms.Button btnTh07;
+        private System.Windows.Forms.Button btnTh08;
+        private System.Windows.Forms.Button btnTh09;
+        private System.Windows.Forms.Button btnTh10;
+        private System.Windows.Forms.Button btnTh11;
+        private System.Windows.Forms.Button btnTh12;
+        private System.Windows.Forms.Button btnTh13;
+        private System.Windows.Forms.Button btnTh14;
+        private System.Windows.Forms.Button btnTh15;
+        private System.Windows.Forms.Button btnTh16;
         private System.Windows.Forms.GroupBox mainGroup;
         private System.Windows.Forms.FlowLayoutPanel mainLayoutPanel;
-        private System.Windows.Forms.Button btnIaMP;
-        private System.Windows.Forms.Button btnSWR;
-        private System.Windows.Forms.Button btnUoNL;
-        private System.Windows.Forms.Button btnHM;
-        private System.Windows.Forms.Button btnULiL;
-        private System.Windows.Forms.Button btnAoCF;
+        private System.Windows.Forms.Button btnTh075;
+        private System.Windows.Forms.Button btnTh105;
+        private System.Windows.Forms.Button btnTh123;
+        private System.Windows.Forms.Button btnTh135;
+        private System.Windows.Forms.Button btnTh145;
+        private System.Windows.Forms.Button btnTh155;
         private System.Windows.Forms.GroupBox tasofroGroup;
         private System.Windows.Forms.FlowLayoutPanel tasofroLayoutPanel;
-        private System.Windows.Forms.Button btnStB;
-        private System.Windows.Forms.Button btnDS;
-        private System.Windows.Forms.Button btnGFW;
-        private System.Windows.Forms.Button btnISC;
-        private System.Windows.Forms.Button btnVD;
+        private System.Windows.Forms.Button btnTh095;
+        private System.Windows.Forms.Button btnTh125;
+        private System.Windows.Forms.Button btnTh128;
+        private System.Windows.Forms.Button btnTh143;
+        private System.Windows.Forms.Button btnTh165;
         private System.Windows.Forms.GroupBox launcherSettings;
         private System.Windows.Forms.Label langLabel;
         private System.Windows.Forms.ComboBox languageBox;
@@ -2708,37 +2708,37 @@
         private System.Windows.Forms.Button randomAll;
         private System.Windows.Forms.GroupBox tasofroRandom;
         private System.Windows.Forms.FlowLayoutPanel tasofroRandomPanel;
-        private System.Windows.Forms.CheckBox chkStB;
-        private System.Windows.Forms.CheckBox chkDS;
-        private System.Windows.Forms.CheckBox chkGFW;
-        private System.Windows.Forms.CheckBox chkISC;
-        private System.Windows.Forms.CheckBox chkVD;
+        private System.Windows.Forms.CheckBox chkTh095;
+        private System.Windows.Forms.CheckBox chkTh125;
+        private System.Windows.Forms.CheckBox chkTh128;
+        private System.Windows.Forms.CheckBox chkTh143;
+        private System.Windows.Forms.CheckBox chkTh165;
         private System.Windows.Forms.GroupBox mainRandom;
         private System.Windows.Forms.FlowLayoutPanel mainRandomPanel;
-        private System.Windows.Forms.CheckBox chkIaMP;
-        private System.Windows.Forms.CheckBox chkSWR;
-        private System.Windows.Forms.CheckBox chkUoNL;
-        private System.Windows.Forms.CheckBox chkHM;
-        private System.Windows.Forms.CheckBox chkULiL;
-        private System.Windows.Forms.CheckBox chkAoCF;
+        private System.Windows.Forms.CheckBox chkTh075;
+        private System.Windows.Forms.CheckBox chkTh105;
+        private System.Windows.Forms.CheckBox chkTh123;
+        private System.Windows.Forms.CheckBox chkTh135;
+        private System.Windows.Forms.CheckBox chkTh145;
+        private System.Windows.Forms.CheckBox chkTh155;
         private System.Windows.Forms.GroupBox pc98Random;
         private System.Windows.Forms.FlowLayoutPanel pc98RandomPanel;
-        private System.Windows.Forms.CheckBox chkHRtP;
-        private System.Windows.Forms.CheckBox chkSoEW;
-        private System.Windows.Forms.CheckBox chkPoDD;
-        private System.Windows.Forms.CheckBox chkLLS;
-        private System.Windows.Forms.CheckBox chkMS;
-        private System.Windows.Forms.CheckBox chkEoSD;
-        private System.Windows.Forms.CheckBox chkPCB;
-        private System.Windows.Forms.CheckBox chkIN;
-        private System.Windows.Forms.CheckBox chkPoFV;
-        private System.Windows.Forms.CheckBox chkMoF;
-        private System.Windows.Forms.CheckBox chkSA;
-        private System.Windows.Forms.CheckBox chkUFO;
-        private System.Windows.Forms.CheckBox chkTD;
-        private System.Windows.Forms.CheckBox chkDDC;
-        private System.Windows.Forms.CheckBox chkLoLK;
-        private System.Windows.Forms.CheckBox chkHSiFS;
+        private System.Windows.Forms.CheckBox chkTh01;
+        private System.Windows.Forms.CheckBox chkTh02;
+        private System.Windows.Forms.CheckBox chkTh03;
+        private System.Windows.Forms.CheckBox chkTh04;
+        private System.Windows.Forms.CheckBox chkTh05;
+        private System.Windows.Forms.CheckBox chkTh06;
+        private System.Windows.Forms.CheckBox chkTh07;
+        private System.Windows.Forms.CheckBox chkTh08;
+        private System.Windows.Forms.CheckBox chkTh09;
+        private System.Windows.Forms.CheckBox chkTh10;
+        private System.Windows.Forms.CheckBox chkTh11;
+        private System.Windows.Forms.CheckBox chkTh12;
+        private System.Windows.Forms.CheckBox chkTh13;
+        private System.Windows.Forms.CheckBox chkTh14;
+        private System.Windows.Forms.CheckBox chkTh15;
+        private System.Windows.Forms.CheckBox chkTh16;
         private System.Windows.Forms.Label randomLabel;
         private System.Windows.Forms.Label np2Label;
         private System.Windows.Forms.TextBox np2Dir;
@@ -2748,11 +2748,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ContextMenuStrip trayMenu;
         private System.Windows.Forms.ToolStripMenuItem trayPC98;
-        private System.Windows.Forms.ToolStripMenuItem trayHRtP;
-        private System.Windows.Forms.ToolStripMenuItem traySoEW;
-        private System.Windows.Forms.ToolStripMenuItem trayPoDD;
-        private System.Windows.Forms.ToolStripMenuItem trayLLS;
-        private System.Windows.Forms.ToolStripMenuItem trayMS;
+        private System.Windows.Forms.ToolStripMenuItem trayTh01;
+        private System.Windows.Forms.ToolStripMenuItem trayTh02;
+        private System.Windows.Forms.ToolStripMenuItem trayTh03;
+        private System.Windows.Forms.ToolStripMenuItem trayTh04;
+        private System.Windows.Forms.ToolStripMenuItem trayTh05;
         private System.Windows.Forms.ToolStripMenuItem trayMain;
         private System.Windows.Forms.ToolStripMenuItem trayTasofro;
         private System.Windows.Forms.ToolStripMenuItem trayCustom;
@@ -2775,48 +2775,48 @@
         private System.Windows.Forms.ToolStripMenuItem buttonToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem textToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bannerToolStripMenuItem;
-        private System.Windows.Forms.Button btnWBaWC;
-        private System.Windows.Forms.CheckBox chkWBaWC;
-        private System.Windows.Forms.Button btnUM;
-        private System.Windows.Forms.CheckBox chkUM;
-        private System.Windows.Forms.CheckBox chkGI;
-        private System.Windows.Forms.Button btnGI;
-        private System.Windows.Forms.ToolStripMenuItem trayGI;
-        private System.Windows.Forms.Button btnHBM;
-        private System.Windows.Forms.CheckBox chkHBM;
-        private System.Windows.Forms.ToolStripMenuItem trayEoSD;
-        private System.Windows.Forms.ToolStripMenuItem trayPCB;
-        private System.Windows.Forms.ToolStripMenuItem trayIN;
-        private System.Windows.Forms.ToolStripMenuItem trayPoFV;
-        private System.Windows.Forms.ToolStripMenuItem trayMoF;
-        private System.Windows.Forms.ToolStripMenuItem traySA;
-        private System.Windows.Forms.ToolStripMenuItem trayUFO;
-        private System.Windows.Forms.ToolStripMenuItem trayTD;
-        private System.Windows.Forms.ToolStripMenuItem trayDDC;
-        private System.Windows.Forms.ToolStripMenuItem trayLoLK;
-        private System.Windows.Forms.ToolStripMenuItem trayHSiFS;
-        private System.Windows.Forms.ToolStripMenuItem trayWBaWC;
-        private System.Windows.Forms.ToolStripMenuItem trayUM;
-        private System.Windows.Forms.ToolStripMenuItem trayIaMP;
-        private System.Windows.Forms.ToolStripMenuItem traySWR;
-        private System.Windows.Forms.ToolStripMenuItem trayUoNL;
-        private System.Windows.Forms.ToolStripMenuItem trayHM;
-        private System.Windows.Forms.ToolStripMenuItem trayULiL;
-        private System.Windows.Forms.ToolStripMenuItem trayAoCF;
+        private System.Windows.Forms.Button btnTh17;
+        private System.Windows.Forms.CheckBox chkTh17;
+        private System.Windows.Forms.Button btnTh18;
+        private System.Windows.Forms.CheckBox chkTh18;
+        private System.Windows.Forms.CheckBox chkTh175;
+        private System.Windows.Forms.Button btnTh175;
+        private System.Windows.Forms.ToolStripMenuItem trayTh175;
+        private System.Windows.Forms.Button btnTh185;
+        private System.Windows.Forms.CheckBox chkTh185;
+        private System.Windows.Forms.ToolStripMenuItem trayTh06;
+        private System.Windows.Forms.ToolStripMenuItem trayTh07;
+        private System.Windows.Forms.ToolStripMenuItem trayTh08;
+        private System.Windows.Forms.ToolStripMenuItem trayTh09;
+        private System.Windows.Forms.ToolStripMenuItem trayTh10;
+        private System.Windows.Forms.ToolStripMenuItem trayTh11;
+        private System.Windows.Forms.ToolStripMenuItem trayTh12;
+        private System.Windows.Forms.ToolStripMenuItem trayTh13;
+        private System.Windows.Forms.ToolStripMenuItem trayTh14;
+        private System.Windows.Forms.ToolStripMenuItem trayTh15;
+        private System.Windows.Forms.ToolStripMenuItem trayTh16;
+        private System.Windows.Forms.ToolStripMenuItem trayTh17;
+        private System.Windows.Forms.ToolStripMenuItem trayTh18;
+        private System.Windows.Forms.ToolStripMenuItem trayTh075;
+        private System.Windows.Forms.ToolStripMenuItem trayTh105;
+        private System.Windows.Forms.ToolStripMenuItem trayTh123;
+        private System.Windows.Forms.ToolStripMenuItem trayTh135;
+        private System.Windows.Forms.ToolStripMenuItem trayTh145;
+        private System.Windows.Forms.ToolStripMenuItem trayTh155;
         private System.Windows.Forms.GroupBox spinoffGroup;
         private System.Windows.Forms.FlowLayoutPanel spinoffLayoutPanel;
         private System.Windows.Forms.GroupBox spinoffRandom;
         private System.Windows.Forms.FlowLayoutPanel spinoffRandomPanel;
         private System.Windows.Forms.ToolStripMenuItem traySpinoff;
-        private System.Windows.Forms.ToolStripMenuItem trayStB;
-        private System.Windows.Forms.ToolStripMenuItem trayDS;
-        private System.Windows.Forms.ToolStripMenuItem trayGFW;
-        private System.Windows.Forms.ToolStripMenuItem trayISC;
-        private System.Windows.Forms.ToolStripMenuItem trayVD;
-        private System.Windows.Forms.ToolStripMenuItem trayHBM;
-        private System.Windows.Forms.Button btnUDoALG;
-        private System.Windows.Forms.CheckBox chkUDoALG;
-        private System.Windows.Forms.ToolStripMenuItem trayUDoALG;
+        private System.Windows.Forms.ToolStripMenuItem trayTh095;
+        private System.Windows.Forms.ToolStripMenuItem trayTh125;
+        private System.Windows.Forms.ToolStripMenuItem trayTh128;
+        private System.Windows.Forms.ToolStripMenuItem trayTh143;
+        private System.Windows.Forms.ToolStripMenuItem trayTh165;
+        private System.Windows.Forms.ToolStripMenuItem trayTh185;
+        private System.Windows.Forms.Button btnTh19;
+        private System.Windows.Forms.CheckBox chkTh19;
+        private System.Windows.Forms.ToolStripMenuItem trayTh19;
     }
 }
 

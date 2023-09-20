@@ -117,166 +117,166 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AoCF" xml:space="preserve">
+  <data name="Th155" xml:space="preserve">
     <value>東方憑依華</value>
   </data>
-  <data name="AoCFTitle" xml:space="preserve">
+  <data name="Th155Title" xml:space="preserve">
     <value>東方憑依華　～ Antinomy of Common Flowers</value>
   </data>
-  <data name="DDC" xml:space="preserve">
+  <data name="Th14" xml:space="preserve">
     <value>東方輝針城</value>
   </data>
-  <data name="DDCTitle" xml:space="preserve">
+  <data name="Th14Title" xml:space="preserve">
     <value>東方輝針城　～ Double Dealing Character</value>
   </data>
-  <data name="DS" xml:space="preserve">
+  <data name="Th125" xml:space="preserve">
     <value>ダブルスポイラー</value>
   </data>
-  <data name="DSTitle" xml:space="preserve">
+  <data name="Th125Title" xml:space="preserve">
     <value>ダブルスポイラー　～ 東方文花帖</value>
   </data>
-  <data name="EoSD" xml:space="preserve">
+  <data name="Th06" xml:space="preserve">
     <value>東方紅魔郷</value>
   </data>
-  <data name="EoSDTitle" xml:space="preserve">
+  <data name="Th06Title" xml:space="preserve">
     <value>東方紅魔郷　～ the Embodiment of Scarlet Devil</value>
   </data>
-  <data name="GFW" xml:space="preserve">
+  <data name="Th128" xml:space="preserve">
     <value>妖精大戦争</value>
   </data>
-  <data name="GFWTitle" xml:space="preserve">
+  <data name="Th128Title" xml:space="preserve">
     <value>妖精大戦争　～ 東方三月精</value>
   </data>
-  <data name="HM" xml:space="preserve">
+  <data name="Th135" xml:space="preserve">
     <value>東方心綺楼</value>
   </data>
-  <data name="HMTitle" xml:space="preserve">
+  <data name="Th135Title" xml:space="preserve">
     <value>東方心綺楼　～ Hopeless Masquerade</value>
   </data>
-  <data name="HRtP" xml:space="preserve">
+  <data name="Th01" xml:space="preserve">
     <value>東方靈異伝</value>
   </data>
-  <data name="HRtPTitle" xml:space="preserve">
+  <data name="Th01Title" xml:space="preserve">
     <value>東方靈異伝　～ Highly Responsive to Prayers</value>
   </data>
-  <data name="HSiFS" xml:space="preserve">
+  <data name="Th16" xml:space="preserve">
     <value>東方天空璋</value>
   </data>
-  <data name="HSiFSTitle" xml:space="preserve">
+  <data name="Th16Title" xml:space="preserve">
     <value>東方天空璋　～ Hidden Star in Four Seasons</value>
   </data>
-  <data name="IaMP" xml:space="preserve">
+  <data name="Th075" xml:space="preserve">
     <value>東方萃夢想</value>
   </data>
-  <data name="IaMPTitle" xml:space="preserve">
+  <data name="Th075Title" xml:space="preserve">
     <value>東方萃夢想　～ Immaterial and Missing Power</value>
   </data>
-  <data name="IN" xml:space="preserve">
+  <data name="Th08" xml:space="preserve">
     <value>東方永夜抄</value>
   </data>
-  <data name="INTitle" xml:space="preserve">
+  <data name="Th08Title" xml:space="preserve">
     <value>東方永夜抄　～ Imperishable Night</value>
   </data>
-  <data name="ISC" xml:space="preserve">
+  <data name="Th143" xml:space="preserve">
     <value>アマノジャク</value>
   </data>
-  <data name="ISCTitle" xml:space="preserve">
+  <data name="Th143Title" xml:space="preserve">
     <value>弾幕アマノジャク　～ Impossible Spell Card</value>
   </data>
-  <data name="LLS" xml:space="preserve">
+  <data name="Th04" xml:space="preserve">
     <value>東方幻想郷</value>
   </data>
-  <data name="LLSTitle" xml:space="preserve">
+  <data name="Th04Title" xml:space="preserve">
     <value>東方幻想郷　～ Lotus Land Story</value>
   </data>
-  <data name="LoLK" xml:space="preserve">
+  <data name="Th15" xml:space="preserve">
     <value>東方紺珠伝</value>
   </data>
-  <data name="LoLKTitle" xml:space="preserve">
+  <data name="Th15Title" xml:space="preserve">
     <value>東方紺珠伝　～ Legacy of Lunatic Kingdom</value>
   </data>
-  <data name="MoF" xml:space="preserve">
+  <data name="Th10" xml:space="preserve">
     <value>東方風神録</value>
   </data>
-  <data name="MoFTitle" xml:space="preserve">
+  <data name="Th10Title" xml:space="preserve">
     <value>東方風神録　～ Mountain of Faith</value>
   </data>
-  <data name="MS" xml:space="preserve">
+  <data name="Th05" xml:space="preserve">
     <value>東方怪綺談</value>
   </data>
-  <data name="MSTitle" xml:space="preserve">
+  <data name="Th05Title" xml:space="preserve">
     <value>東方怪綺談　～ Mystic Square</value>
   </data>
-  <data name="PCB" xml:space="preserve">
+  <data name="Th07" xml:space="preserve">
     <value>東方妖々夢</value>
   </data>
-  <data name="PCBTitle" xml:space="preserve">
+  <data name="Th07Title" xml:space="preserve">
     <value>東方妖々夢　～ Perfect Cherry Blossom</value>
   </data>
-  <data name="PoDD" xml:space="preserve">
+  <data name="Th03" xml:space="preserve">
     <value>東方夢時空</value>
   </data>
-  <data name="PoDDTitle" xml:space="preserve">
+  <data name="Th03Title" xml:space="preserve">
     <value>東方夢時空　～ Phantasmagoria of Dim.Dream</value>
   </data>
-  <data name="PoFV" xml:space="preserve">
+  <data name="Th09" xml:space="preserve">
     <value>東方花映塚</value>
   </data>
-  <data name="PoFVTitle" xml:space="preserve">
+  <data name="Th09Title" xml:space="preserve">
     <value>東方花映塚　～ Phantasmagoria of Flower View</value>
   </data>
-  <data name="SA" xml:space="preserve">
+  <data name="Th11" xml:space="preserve">
     <value>東方地霊殿</value>
   </data>
-  <data name="SATitle" xml:space="preserve">
+  <data name="Th11Title" xml:space="preserve">
     <value>東方地霊殿　～ Subterranean Animism</value>
   </data>
-  <data name="SoEW" xml:space="preserve">
+  <data name="Th02" xml:space="preserve">
     <value>東方封魔録</value>
   </data>
-  <data name="SoEWTitle" xml:space="preserve">
+  <data name="Th02Title" xml:space="preserve">
     <value>東方封魔録　～ the Story of Eastern Wonderland</value>
   </data>
-  <data name="StB" xml:space="preserve">
+  <data name="Th095" xml:space="preserve">
     <value>東方文花帖</value>
   </data>
-  <data name="StBTitle" xml:space="preserve">
+  <data name="Th095Title" xml:space="preserve">
     <value>東方文花帖　～ Shoot the Bullet</value>
   </data>
-  <data name="SWR" xml:space="preserve">
+  <data name="Th105" xml:space="preserve">
     <value>東方緋想天</value>
   </data>
-  <data name="SWRTitle" xml:space="preserve">
+  <data name="Th105Title" xml:space="preserve">
     <value>東方緋想天 ～ Scarlet Weather Rhapsody</value>
   </data>
-  <data name="TD" xml:space="preserve">
+  <data name="Th13" xml:space="preserve">
     <value>東方神霊廟</value>
   </data>
-  <data name="TDTitle" xml:space="preserve">
+  <data name="Th13Title" xml:space="preserve">
     <value>東方神霊廟　～ Ten Desires</value>
   </data>
-  <data name="UFO" xml:space="preserve">
+  <data name="Th12" xml:space="preserve">
     <value>東方星蓮船</value>
   </data>
-  <data name="UFOTitle" xml:space="preserve">
+  <data name="Th12Title" xml:space="preserve">
     <value>東方星蓮船　～ Undefined Fantastic Object</value>
   </data>
-  <data name="ULiL" xml:space="preserve">
+  <data name="Th145" xml:space="preserve">
     <value>東方深秘録</value>
   </data>
-  <data name="ULiLTitle" xml:space="preserve">
+  <data name="Th145Title" xml:space="preserve">
     <value>東方深秘録　～ Urban Legend in Limbo</value>
   </data>
-  <data name="UoNL" xml:space="preserve">
+  <data name="Th123" xml:space="preserve">
     <value>東方非想天則</value>
   </data>
-  <data name="UoNLTitle" xml:space="preserve">
+  <data name="Th123Title" xml:space="preserve">
     <value>東方非想天則　～ 超弩級ギニョルの謎を追え</value>
   </data>
-  <data name="VD" xml:space="preserve">
+  <data name="Th165" xml:space="preserve">
     <value>秘封ナイトメアダイアリー</value>
   </data>
-  <data name="VDTitle" xml:space="preserve">
+  <data name="Th165Title" xml:space="preserve">
     <value>秘封ナイトメアダイアリー　〜 Violet Detector</value>
   </data>
   <data name="Random" xml:space="preserve">
@@ -297,7 +297,7 @@
   <data name="pc98Group" xml:space="preserve">
     <value>旧作</value>
   </data>
-  <data name="AoCFShort" xml:space="preserve">
+  <data name="Th155Short" xml:space="preserve">
     <value>憑依華</value>
   </data>
   <data name="autoClose" xml:space="preserve">
@@ -336,7 +336,7 @@
   <data name="customLabel" xml:space="preserve">
     <value>Custom.exe:</value>
   </data>
-  <data name="DDCShort" xml:space="preserve">
+  <data name="Th14Short" xml:space="preserve">
     <value>輝針城</value>
   </data>
   <data name="defaultLabel" xml:space="preserve">
@@ -345,43 +345,43 @@
   <data name="deleteCategoryToolStripMenuItem" xml:space="preserve">
     <value>削除</value>
   </data>
-  <data name="DSShort" xml:space="preserve">
+  <data name="Th125Short" xml:space="preserve">
     <value>ダブルスポイラー</value>
   </data>
   <data name="enLabel" xml:space="preserve">
     <value>English Executable:</value>
   </data>
-  <data name="EoSDShort" xml:space="preserve">
+  <data name="Th06Short" xml:space="preserve">
     <value>紅魔郷</value>
   </data>
   <data name="games" xml:space="preserve">
     <value>ゲーム</value>
   </data>
-  <data name="GFWShort" xml:space="preserve">
+  <data name="Th128Short" xml:space="preserve">
     <value>妖精大戦争</value>
   </data>
   <data name="hdiLabel" xml:space="preserve">
     <value>HDIファイル:</value>
   </data>
-  <data name="HMShort" xml:space="preserve">
+  <data name="Th135Short" xml:space="preserve">
     <value>心綺楼</value>
   </data>
-  <data name="HRtPShort" xml:space="preserve">
+  <data name="Th01Short" xml:space="preserve">
     <value>靈異伝</value>
   </data>
-  <data name="HSiFSShort" xml:space="preserve">
+  <data name="Th16Short" xml:space="preserve">
     <value>天空璋</value>
   </data>
-  <data name="IaMPShort" xml:space="preserve">
+  <data name="Th075Short" xml:space="preserve">
     <value>萃夢想</value>
   </data>
   <data name="info" xml:space="preserve">
     <value>東方ランチャーについて</value>
   </data>
-  <data name="INShort" xml:space="preserve">
+  <data name="Th08Short" xml:space="preserve">
     <value>永夜抄</value>
   </data>
-  <data name="ISCShort" xml:space="preserve">
+  <data name="Th143Short" xml:space="preserve">
     <value>アマノジャク</value>
   </data>
   <data name="jpLabel" xml:space="preserve">
@@ -396,16 +396,16 @@
   <data name="launcherSettings" xml:space="preserve">
     <value>全般</value>
   </data>
-  <data name="LLSShort" xml:space="preserve">
+  <data name="Th04Short" xml:space="preserve">
     <value>幻想郷</value>
   </data>
-  <data name="LoLKShort" xml:space="preserve">
+  <data name="Th15Short" xml:space="preserve">
     <value>紺珠伝</value>
   </data>
-  <data name="MoFShort" xml:space="preserve">
+  <data name="Th10Short" xml:space="preserve">
     <value>風神録</value>
   </data>
-  <data name="MSShort" xml:space="preserve">
+  <data name="Th05Short" xml:space="preserve">
     <value>怪綺談</value>
   </data>
   <data name="newCategoryToolStripMenuItem" xml:space="preserve">
@@ -429,13 +429,13 @@
   <data name="pc98Settings" xml:space="preserve">
     <value>PC-98版用</value>
   </data>
-  <data name="PCBShort" xml:space="preserve">
+  <data name="Th07Short" xml:space="preserve">
     <value>妖々夢</value>
   </data>
-  <data name="PoDDShort" xml:space="preserve">
+  <data name="Th03Short" xml:space="preserve">
     <value>夢時空</value>
   </data>
-  <data name="PoFVShort" xml:space="preserve">
+  <data name="Th09Short" xml:space="preserve">
     <value>花映塚</value>
   </data>
   <data name="randomAll" xml:space="preserve">
@@ -456,37 +456,37 @@
   <data name="replays" xml:space="preserve">
     <value>リプレイ</value>
   </data>
-  <data name="SAShort" xml:space="preserve">
+  <data name="Th11Short" xml:space="preserve">
     <value>地霊殿</value>
   </data>
   <data name="settings" xml:space="preserve">
     <value>設定</value>
   </data>
-  <data name="SoEWShort" xml:space="preserve">
+  <data name="Th02Short" xml:space="preserve">
     <value>封魔録</value>
   </data>
-  <data name="StBShort" xml:space="preserve">
+  <data name="Th095Short" xml:space="preserve">
     <value>文花帖</value>
   </data>
-  <data name="SWRShort" xml:space="preserve">
+  <data name="Th105Short" xml:space="preserve">
     <value>緋想天</value>
   </data>
-  <data name="TDShort" xml:space="preserve">
+  <data name="Th13Short" xml:space="preserve">
     <value>神霊廟</value>
   </data>
-  <data name="UFOShort" xml:space="preserve">
+  <data name="Th12Short" xml:space="preserve">
     <value>星蓮船</value>
   </data>
-  <data name="ULiLShort" xml:space="preserve">
+  <data name="Th145Short" xml:space="preserve">
     <value>深秘録</value>
   </data>
-  <data name="UoNLShort" xml:space="preserve">
+  <data name="Th123Short" xml:space="preserve">
     <value>非想天則</value>
   </data>
   <data name="useApplocale" xml:space="preserve">
     <value>AppLocaleで実行</value>
   </data>
-  <data name="VDShort" xml:space="preserve">
+  <data name="Th165Short" xml:space="preserve">
     <value>ナイトメアダイアリー</value>
   </data>
   <data name="windowsSettings" xml:space="preserve">
@@ -701,55 +701,55 @@
   <data name="selectedPatches" xml:space="preserve">
     <value>選択されたパッチ</value>
   </data>
-  <data name="WBaWC" xml:space="preserve">
+  <data name="Th17" xml:space="preserve">
     <value>東方鬼形獣</value>
   </data>
-  <data name="WBaWCShort" xml:space="preserve">
+  <data name="Th17Short" xml:space="preserve">
     <value>鬼形獣</value>
   </data>
-  <data name="WBaWCTitle" xml:space="preserve">
+  <data name="Th17Title" xml:space="preserve">
     <value>東方鬼形獣　～ Wily Beast and Weakest Creature</value>
   </data>
-  <data name="UM" xml:space="preserve">
+  <data name="Th18" xml:space="preserve">
     <value>東方虹龍洞</value>
   </data>
-  <data name="UMShort" xml:space="preserve">
+  <data name="Th18Short" xml:space="preserve">
     <value>虹龍洞</value>
   </data>
-  <data name="UMTitle" xml:space="preserve">
+  <data name="Th18Title" xml:space="preserve">
     <value>東方虹龍洞 ～ Unconnected Marketeers</value>
   </data>
-  <data name="GI" xml:space="preserve">
+  <data name="Th175" xml:space="preserve">
     <value>東方剛欲異聞</value>
   </data>
-  <data name="GIShort" xml:space="preserve">
+  <data name="Th175Short" xml:space="preserve">
     <value>剛欲異聞</value>
   </data>
-  <data name="GITitle" xml:space="preserve">
+  <data name="Th175Title" xml:space="preserve">
     <value>東方剛欲異聞　～ 水没した沈愁地獄</value>
   </data>
   <data name="errorNoCategorySelected" xml:space="preserve">
     <value>カテゴリーが選択されていません</value>
   </data>
-  <data name="HBM" xml:space="preserve">
+  <data name="Th185" xml:space="preserve">
     <value>バレットフィリア達の闇市場</value>
   </data>
-  <data name="HBMShort" xml:space="preserve">
+  <data name="Th185Short" xml:space="preserve">
     <value>バレットフィリア</value>
   </data>
-  <data name="HBMTitle" xml:space="preserve">
+  <data name="Th185Title" xml:space="preserve">
     <value>バレットフィリア達の闇市場　〜 100th Black Market</value>
   </data>
   <data name="spinoffGroup" xml:space="preserve">
     <value>小数点作</value>
   </data>
-  <data name="UDoALG" xml:space="preserve">
+  <data name="Th19" xml:space="preserve">
     <value>東方獣王園</value>
   </data>
-  <data name="UDoALGShort" xml:space="preserve">
+  <data name="Th19Short" xml:space="preserve">
     <value>獣王園</value>
   </data>
-  <data name="UDoALGTitle" xml:space="preserve">
+  <data name="Th19Title" xml:space="preserve">
     <value>東方獣王園　〜 Unfinished Dream of All Living Ghost</value>
   </data>
 </root>

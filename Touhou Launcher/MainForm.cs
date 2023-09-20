@@ -126,41 +126,20 @@ namespace Touhou_Launcher
         {
             1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 7.5, 10.5, 12.3, 13.5, 14.5, 15.5, 9.5, 12.5, 12.8, 14.3, 16.5, 17.5, 18.5
         };
-        public static List<string> gameNames = new List<string>
+        public static List<string> gameNames = ConstructGameNames();
+
+        private static List<string> ConstructGameNames()
         {
-            "HRtP",
-            "SoEW",
-            "PoDD",
-            "LLS",
-            "MS",
-            "EoSD",
-            "PCB",
-            "IN",
-            "PoFV",
-            "MoF",
-            "SA",
-            "UFO",
-            "TD",
-            "DDC",
-            "LoLK",
-            "HSiFS",
-            "WBaWC",
-            "UM",
-            "UDoALG",
-            "IaMP",
-            "SWR",
-            "UoNL",
-            "HM",
-            "ULiL",
-            "AoCF",
-            "StB",
-            "DS",
-            "GFW",
-            "ISC",
-            "VD",
-            "GI",
-            "HBM"
-        };
+            List<string> gameNames = new List<string>();
+
+            foreach (double gameNumber in gameNumbers)
+            {
+                gameNames.Add("Th" + FormatGameNumber(gameNumber));
+            }
+
+            return gameNames;
+        }
+
 
         public static string FormatGameNumber(double gameNumber)
         {
@@ -539,14 +518,14 @@ namespace Touhou_Launcher
                     if (curCfg.gameCFG[game].customBanner && curCfg.gameCFG[game].bannerOn != "")
                         btn.BackgroundImage = Image.FromFile(curCfg.gameCFG[game].bannerOn);
                     else
-                        btn.BackgroundImage = (Bitmap)Properties.Resources.ResourceManager.GetObject((btn.Name == "btnIN" ? "_" : "") + btn.Name.Substring(3).ToLower());
+                        btn.BackgroundImage = (Bitmap)Properties.Resources.ResourceManager.GetObject("Banner_" + btn.Name.Substring(3).ToLower());
                 }
                 else
                 {
                     if (curCfg.gameCFG[game].customBanner && curCfg.gameCFG[game].bannerOff != "")
                         btn.BackgroundImage = Image.FromFile(curCfg.gameCFG[game].bannerOff);
                     else
-                        btn.BackgroundImage = (Bitmap)Properties.Resources.ResourceManager.GetObject((btn.Name == "btnIN" ? "_" : "") + btn.Name.Substring(3).ToLower() + "g");
+                        btn.BackgroundImage = (Bitmap)Properties.Resources.ResourceManager.GetObject("Banner_" + btn.Name.Substring(3).ToLower() + "_off");
 
                 }
             }

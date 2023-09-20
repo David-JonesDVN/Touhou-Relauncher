@@ -70,33 +70,6 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 東方憑依華.
-        /// </summary>
-        public static string AoCF {
-            get {
-                return ResourceManager.GetString("AoCF", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 憑依華.
-        /// </summary>
-        public static string AoCFShort {
-            get {
-                return ResourceManager.GetString("AoCFShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方憑依華　～ Antinomy of Common Flowers.
-        /// </summary>
-        public static string AoCFTitle {
-            get {
-                return ResourceManager.GetString("AoCFTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to 昇順.
         /// </summary>
         public static string ascendingToolStripMenuItem {
@@ -340,33 +313,6 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 東方輝針城.
-        /// </summary>
-        public static string DDC {
-            get {
-                return ResourceManager.GetString("DDC", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 輝針城.
-        /// </summary>
-        public static string DDCShort {
-            get {
-                return ResourceManager.GetString("DDCShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方輝針城　～ Double Dealing Character.
-        /// </summary>
-        public static string DDCTitle {
-            get {
-                return ResourceManager.GetString("DDCTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to 日本語/vpatch.ini, 英語 (non-THCRAP), Custom.exe, thcrap.
         /// </summary>
         public static string defaultExec {
@@ -430,65 +376,11 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ダブルスポイラー.
-        /// </summary>
-        public static string DS {
-            get {
-                return ResourceManager.GetString("DS", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to ダブルスポイラー.
-        /// </summary>
-        public static string DSShort {
-            get {
-                return ResourceManager.GetString("DSShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to ダブルスポイラー　～ 東方文花帖.
-        /// </summary>
-        public static string DSTitle {
-            get {
-                return ResourceManager.GetString("DSTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to English Executable:.
         /// </summary>
         public static string enLabel {
             get {
                 return ResourceManager.GetString("enLabel", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方紅魔郷.
-        /// </summary>
-        public static string EoSD {
-            get {
-                return ResourceManager.GetString("EoSD", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 紅魔郷.
-        /// </summary>
-        public static string EoSDShort {
-            get {
-                return ResourceManager.GetString("EoSDShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方紅魔郷　～ the Embodiment of Scarlet Devil.
-        /// </summary>
-        public static string EoSDTitle {
-            get {
-                return ResourceManager.GetString("EoSDTitle", resourceCulture);
             }
         }
         
@@ -656,87 +548,6 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 妖精大戦争.
-        /// </summary>
-        public static string GFW {
-            get {
-                return ResourceManager.GetString("GFW", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 妖精大戦争.
-        /// </summary>
-        public static string GFWShort {
-            get {
-                return ResourceManager.GetString("GFWShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 妖精大戦争　～ 東方三月精.
-        /// </summary>
-        public static string GFWTitle {
-            get {
-                return ResourceManager.GetString("GFWTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方剛欲異聞.
-        /// </summary>
-        public static string GI {
-            get {
-                return ResourceManager.GetString("GI", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 剛欲異聞.
-        /// </summary>
-        public static string GIShort {
-            get {
-                return ResourceManager.GetString("GIShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方剛欲異聞　～ 水没した沈愁地獄.
-        /// </summary>
-        public static string GITitle {
-            get {
-                return ResourceManager.GetString("GITitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to バレットフィリア達の闇市場.
-        /// </summary>
-        public static string HBM {
-            get {
-                return ResourceManager.GetString("HBM", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to バレットフィリア.
-        /// </summary>
-        public static string HBMShort {
-            get {
-                return ResourceManager.GetString("HBMShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to バレットフィリア達の闇市場　〜 100th Black Market.
-        /// </summary>
-        public static string HBMTitle {
-            get {
-                return ResourceManager.GetString("HBMTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to HDIファイル.
         /// </summary>
         public static string hdiFilter {
@@ -764,114 +575,6 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 東方心綺楼.
-        /// </summary>
-        public static string HM {
-            get {
-                return ResourceManager.GetString("HM", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 心綺楼.
-        /// </summary>
-        public static string HMShort {
-            get {
-                return ResourceManager.GetString("HMShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方心綺楼　～ Hopeless Masquerade.
-        /// </summary>
-        public static string HMTitle {
-            get {
-                return ResourceManager.GetString("HMTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方靈異伝.
-        /// </summary>
-        public static string HRtP {
-            get {
-                return ResourceManager.GetString("HRtP", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 靈異伝.
-        /// </summary>
-        public static string HRtPShort {
-            get {
-                return ResourceManager.GetString("HRtPShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方靈異伝　～ Highly Responsive to Prayers.
-        /// </summary>
-        public static string HRtPTitle {
-            get {
-                return ResourceManager.GetString("HRtPTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方天空璋.
-        /// </summary>
-        public static string HSiFS {
-            get {
-                return ResourceManager.GetString("HSiFS", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 天空璋.
-        /// </summary>
-        public static string HSiFSShort {
-            get {
-                return ResourceManager.GetString("HSiFSShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方天空璋　～ Hidden Star in Four Seasons.
-        /// </summary>
-        public static string HSiFSTitle {
-            get {
-                return ResourceManager.GetString("HSiFSTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方萃夢想.
-        /// </summary>
-        public static string IaMP {
-            get {
-                return ResourceManager.GetString("IaMP", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 萃夢想.
-        /// </summary>
-        public static string IaMPShort {
-            get {
-                return ResourceManager.GetString("IaMPShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方萃夢想　～ Immaterial and Missing Power.
-        /// </summary>
-        public static string IaMPTitle {
-            get {
-                return ResourceManager.GetString("IaMPTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to ID.
         /// </summary>
         public static string idColumn {
@@ -890,65 +593,11 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 東方永夜抄.
-        /// </summary>
-        public static string IN {
-            get {
-                return ResourceManager.GetString("IN", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to 東方ランチャーについて.
         /// </summary>
         public static string info {
             get {
                 return ResourceManager.GetString("info", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 永夜抄.
-        /// </summary>
-        public static string INShort {
-            get {
-                return ResourceManager.GetString("INShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方永夜抄　～ Imperishable Night.
-        /// </summary>
-        public static string INTitle {
-            get {
-                return ResourceManager.GetString("INTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to アマノジャク.
-        /// </summary>
-        public static string ISC {
-            get {
-                return ResourceManager.GetString("ISC", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to アマノジャク.
-        /// </summary>
-        public static string ISCShort {
-            get {
-                return ResourceManager.GetString("ISCShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 弾幕アマノジャク　～ Impossible Spell Card.
-        /// </summary>
-        public static string ISCTitle {
-            get {
-                return ResourceManager.GetString("ISCTitle", resourceCulture);
             }
         }
         
@@ -1007,60 +656,6 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 東方幻想郷.
-        /// </summary>
-        public static string LLS {
-            get {
-                return ResourceManager.GetString("LLS", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 幻想郷.
-        /// </summary>
-        public static string LLSShort {
-            get {
-                return ResourceManager.GetString("LLSShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方幻想郷　～ Lotus Land Story.
-        /// </summary>
-        public static string LLSTitle {
-            get {
-                return ResourceManager.GetString("LLSTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方紺珠伝.
-        /// </summary>
-        public static string LoLK {
-            get {
-                return ResourceManager.GetString("LoLK", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 紺珠伝.
-        /// </summary>
-        public static string LoLKShort {
-            get {
-                return ResourceManager.GetString("LoLKShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方紺珠伝　～ Legacy of Lunatic Kingdom.
-        /// </summary>
-        public static string LoLKTitle {
-            get {
-                return ResourceManager.GetString("LoLKTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to 整数作.
         /// </summary>
         public static string mainGroup {
@@ -1075,60 +670,6 @@ namespace Touhou_Launcher {
         public static string minimizeToTray {
             get {
                 return ResourceManager.GetString("minimizeToTray", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方風神録.
-        /// </summary>
-        public static string MoF {
-            get {
-                return ResourceManager.GetString("MoF", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 風神録.
-        /// </summary>
-        public static string MoFShort {
-            get {
-                return ResourceManager.GetString("MoFShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方風神録　～ Mountain of Faith.
-        /// </summary>
-        public static string MoFTitle {
-            get {
-                return ResourceManager.GetString("MoFTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方怪綺談.
-        /// </summary>
-        public static string MS {
-            get {
-                return ResourceManager.GetString("MS", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 怪綺談.
-        /// </summary>
-        public static string MSShort {
-            get {
-                return ResourceManager.GetString("MSShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方怪綺談　～ Mystic Square.
-        /// </summary>
-        public static string MSTitle {
-            get {
-                return ResourceManager.GetString("MSTitle", resourceCulture);
             }
         }
         
@@ -1268,92 +809,11 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 東方妖々夢.
-        /// </summary>
-        public static string PCB {
-            get {
-                return ResourceManager.GetString("PCB", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 妖々夢.
-        /// </summary>
-        public static string PCBShort {
-            get {
-                return ResourceManager.GetString("PCBShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方妖々夢　～ Perfect Cherry Blossom.
-        /// </summary>
-        public static string PCBTitle {
-            get {
-                return ResourceManager.GetString("PCBTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to ランダムでゲームを起動.
         /// </summary>
         public static string playRandomToolStripMenuItem {
             get {
                 return ResourceManager.GetString("playRandomToolStripMenuItem", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方夢時空.
-        /// </summary>
-        public static string PoDD {
-            get {
-                return ResourceManager.GetString("PoDD", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 夢時空.
-        /// </summary>
-        public static string PoDDShort {
-            get {
-                return ResourceManager.GetString("PoDDShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方夢時空　～ Phantasmagoria of Dim.Dream.
-        /// </summary>
-        public static string PoDDTitle {
-            get {
-                return ResourceManager.GetString("PoDDTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方花映塚.
-        /// </summary>
-        public static string PoFV {
-            get {
-                return ResourceManager.GetString("PoFV", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 花映塚.
-        /// </summary>
-        public static string PoFVShort {
-            get {
-                return ResourceManager.GetString("PoFVShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方花映塚　～ Phantasmagoria of Flower View.
-        /// </summary>
-        public static string PoFVTitle {
-            get {
-                return ResourceManager.GetString("PoFVTitle", resourceCulture);
             }
         }
         
@@ -1476,33 +936,6 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 東方地霊殿.
-        /// </summary>
-        public static string SA {
-            get {
-                return ResourceManager.GetString("SA", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 地霊殿.
-        /// </summary>
-        public static string SAShort {
-            get {
-                return ResourceManager.GetString("SAShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方地霊殿　～ Subterranean Animism.
-        /// </summary>
-        public static string SATitle {
-            get {
-                return ResourceManager.GetString("SATitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to 選択されたパッチ.
         /// </summary>
         public static string selectedPatches {
@@ -1539,33 +972,6 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 東方封魔録.
-        /// </summary>
-        public static string SoEW {
-            get {
-                return ResourceManager.GetString("SoEW", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 封魔録.
-        /// </summary>
-        public static string SoEWShort {
-            get {
-                return ResourceManager.GetString("SoEWShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方封魔録　～ the Story of Eastern Wonderland.
-        /// </summary>
-        public static string SoEWTitle {
-            get {
-                return ResourceManager.GetString("SoEWTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to 並べ替え.
         /// </summary>
         public static string sortToolStripMenuItem {
@@ -1584,60 +990,6 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 東方文花帖.
-        /// </summary>
-        public static string StB {
-            get {
-                return ResourceManager.GetString("StB", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 文花帖.
-        /// </summary>
-        public static string StBShort {
-            get {
-                return ResourceManager.GetString("StBShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方文花帖　～ Shoot the Bullet.
-        /// </summary>
-        public static string StBTitle {
-            get {
-                return ResourceManager.GetString("StBTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方緋想天.
-        /// </summary>
-        public static string SWR {
-            get {
-                return ResourceManager.GetString("SWR", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 緋想天.
-        /// </summary>
-        public static string SWRShort {
-            get {
-                return ResourceManager.GetString("SWRShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方緋想天 ～ Scarlet Weather Rhapsody.
-        /// </summary>
-        public static string SWRTitle {
-            get {
-                return ResourceManager.GetString("SWRTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to 黄昏フロンティア作.
         /// </summary>
         public static string tasofroGroup {
@@ -1647,38 +999,875 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to タイトルの表示.
+        /// </summary>
+        public static string textToolStripMenuItem {
+            get {
+                return ResourceManager.GetString("textToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方靈異伝.
+        /// </summary>
+        public static string Th01 {
+            get {
+                return ResourceManager.GetString("Th01", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 靈異伝.
+        /// </summary>
+        public static string Th01Short {
+            get {
+                return ResourceManager.GetString("Th01Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方靈異伝　～ Highly Responsive to Prayers.
+        /// </summary>
+        public static string Th01Title {
+            get {
+                return ResourceManager.GetString("Th01Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方封魔録.
+        /// </summary>
+        public static string Th02 {
+            get {
+                return ResourceManager.GetString("Th02", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 封魔録.
+        /// </summary>
+        public static string Th02Short {
+            get {
+                return ResourceManager.GetString("Th02Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方封魔録　～ the Story of Eastern Wonderland.
+        /// </summary>
+        public static string Th02Title {
+            get {
+                return ResourceManager.GetString("Th02Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方夢時空.
+        /// </summary>
+        public static string Th03 {
+            get {
+                return ResourceManager.GetString("Th03", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 夢時空.
+        /// </summary>
+        public static string Th03Short {
+            get {
+                return ResourceManager.GetString("Th03Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方夢時空　～ Phantasmagoria of Dim.Dream.
+        /// </summary>
+        public static string Th03Title {
+            get {
+                return ResourceManager.GetString("Th03Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方幻想郷.
+        /// </summary>
+        public static string Th04 {
+            get {
+                return ResourceManager.GetString("Th04", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 幻想郷.
+        /// </summary>
+        public static string Th04Short {
+            get {
+                return ResourceManager.GetString("Th04Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方幻想郷　～ Lotus Land Story.
+        /// </summary>
+        public static string Th04Title {
+            get {
+                return ResourceManager.GetString("Th04Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方怪綺談.
+        /// </summary>
+        public static string Th05 {
+            get {
+                return ResourceManager.GetString("Th05", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 怪綺談.
+        /// </summary>
+        public static string Th05Short {
+            get {
+                return ResourceManager.GetString("Th05Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方怪綺談　～ Mystic Square.
+        /// </summary>
+        public static string Th05Title {
+            get {
+                return ResourceManager.GetString("Th05Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方紅魔郷.
+        /// </summary>
+        public static string Th06 {
+            get {
+                return ResourceManager.GetString("Th06", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 紅魔郷.
+        /// </summary>
+        public static string Th06Short {
+            get {
+                return ResourceManager.GetString("Th06Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方紅魔郷　～ the Embodiment of Scarlet Devil.
+        /// </summary>
+        public static string Th06Title {
+            get {
+                return ResourceManager.GetString("Th06Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方妖々夢.
+        /// </summary>
+        public static string Th07 {
+            get {
+                return ResourceManager.GetString("Th07", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方萃夢想.
+        /// </summary>
+        public static string Th075 {
+            get {
+                return ResourceManager.GetString("Th075", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 萃夢想.
+        /// </summary>
+        public static string Th075Short {
+            get {
+                return ResourceManager.GetString("Th075Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方萃夢想　～ Immaterial and Missing Power.
+        /// </summary>
+        public static string Th075Title {
+            get {
+                return ResourceManager.GetString("Th075Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 妖々夢.
+        /// </summary>
+        public static string Th07Short {
+            get {
+                return ResourceManager.GetString("Th07Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方妖々夢　～ Perfect Cherry Blossom.
+        /// </summary>
+        public static string Th07Title {
+            get {
+                return ResourceManager.GetString("Th07Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方永夜抄.
+        /// </summary>
+        public static string Th08 {
+            get {
+                return ResourceManager.GetString("Th08", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 永夜抄.
+        /// </summary>
+        public static string Th08Short {
+            get {
+                return ResourceManager.GetString("Th08Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方永夜抄　～ Imperishable Night.
+        /// </summary>
+        public static string Th08Title {
+            get {
+                return ResourceManager.GetString("Th08Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方花映塚.
+        /// </summary>
+        public static string Th09 {
+            get {
+                return ResourceManager.GetString("Th09", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方文花帖.
+        /// </summary>
+        public static string Th095 {
+            get {
+                return ResourceManager.GetString("Th095", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 文花帖.
+        /// </summary>
+        public static string Th095Short {
+            get {
+                return ResourceManager.GetString("Th095Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方文花帖　～ Shoot the Bullet.
+        /// </summary>
+        public static string Th095Title {
+            get {
+                return ResourceManager.GetString("Th095Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 花映塚.
+        /// </summary>
+        public static string Th09Short {
+            get {
+                return ResourceManager.GetString("Th09Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方花映塚　～ Phantasmagoria of Flower View.
+        /// </summary>
+        public static string Th09Title {
+            get {
+                return ResourceManager.GetString("Th09Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方風神録.
+        /// </summary>
+        public static string Th10 {
+            get {
+                return ResourceManager.GetString("Th10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方緋想天.
+        /// </summary>
+        public static string Th105 {
+            get {
+                return ResourceManager.GetString("Th105", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 緋想天.
+        /// </summary>
+        public static string Th105Short {
+            get {
+                return ResourceManager.GetString("Th105Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方緋想天 ～ Scarlet Weather Rhapsody.
+        /// </summary>
+        public static string Th105Title {
+            get {
+                return ResourceManager.GetString("Th105Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 風神録.
+        /// </summary>
+        public static string Th10Short {
+            get {
+                return ResourceManager.GetString("Th10Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方風神録　～ Mountain of Faith.
+        /// </summary>
+        public static string Th10Title {
+            get {
+                return ResourceManager.GetString("Th10Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方地霊殿.
+        /// </summary>
+        public static string Th11 {
+            get {
+                return ResourceManager.GetString("Th11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 地霊殿.
+        /// </summary>
+        public static string Th11Short {
+            get {
+                return ResourceManager.GetString("Th11Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方地霊殿　～ Subterranean Animism.
+        /// </summary>
+        public static string Th11Title {
+            get {
+                return ResourceManager.GetString("Th11Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方星蓮船.
+        /// </summary>
+        public static string Th12 {
+            get {
+                return ResourceManager.GetString("Th12", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方非想天則.
+        /// </summary>
+        public static string Th123 {
+            get {
+                return ResourceManager.GetString("Th123", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 非想天則.
+        /// </summary>
+        public static string Th123Short {
+            get {
+                return ResourceManager.GetString("Th123Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方非想天則　～ 超弩級ギニョルの謎を追え.
+        /// </summary>
+        public static string Th123Title {
+            get {
+                return ResourceManager.GetString("Th123Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ダブルスポイラー.
+        /// </summary>
+        public static string Th125 {
+            get {
+                return ResourceManager.GetString("Th125", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ダブルスポイラー.
+        /// </summary>
+        public static string Th125Short {
+            get {
+                return ResourceManager.GetString("Th125Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ダブルスポイラー　～ 東方文花帖.
+        /// </summary>
+        public static string Th125Title {
+            get {
+                return ResourceManager.GetString("Th125Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 妖精大戦争.
+        /// </summary>
+        public static string Th128 {
+            get {
+                return ResourceManager.GetString("Th128", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 妖精大戦争.
+        /// </summary>
+        public static string Th128Short {
+            get {
+                return ResourceManager.GetString("Th128Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 妖精大戦争　～ 東方三月精.
+        /// </summary>
+        public static string Th128Title {
+            get {
+                return ResourceManager.GetString("Th128Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 星蓮船.
+        /// </summary>
+        public static string Th12Short {
+            get {
+                return ResourceManager.GetString("Th12Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方星蓮船　～ Undefined Fantastic Object.
+        /// </summary>
+        public static string Th12Title {
+            get {
+                return ResourceManager.GetString("Th12Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 東方神霊廟.
         /// </summary>
-        public static string TD {
+        public static string Th13 {
             get {
-                return ResourceManager.GetString("TD", resourceCulture);
+                return ResourceManager.GetString("Th13", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方心綺楼.
+        /// </summary>
+        public static string Th135 {
+            get {
+                return ResourceManager.GetString("Th135", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 心綺楼.
+        /// </summary>
+        public static string Th135Short {
+            get {
+                return ResourceManager.GetString("Th135Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方心綺楼　～ Hopeless Masquerade.
+        /// </summary>
+        public static string Th135Title {
+            get {
+                return ResourceManager.GetString("Th135Title", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to 神霊廟.
         /// </summary>
-        public static string TDShort {
+        public static string Th13Short {
             get {
-                return ResourceManager.GetString("TDShort", resourceCulture);
+                return ResourceManager.GetString("Th13Short", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to 東方神霊廟　～ Ten Desires.
         /// </summary>
-        public static string TDTitle {
+        public static string Th13Title {
             get {
-                return ResourceManager.GetString("TDTitle", resourceCulture);
+                return ResourceManager.GetString("Th13Title", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to タイトルの表示.
+        ///   Looks up a localized string similar to 東方輝針城.
         /// </summary>
-        public static string textToolStripMenuItem {
+        public static string Th14 {
             get {
-                return ResourceManager.GetString("textToolStripMenuItem", resourceCulture);
+                return ResourceManager.GetString("Th14", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to アマノジャク.
+        /// </summary>
+        public static string Th143 {
+            get {
+                return ResourceManager.GetString("Th143", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to アマノジャク.
+        /// </summary>
+        public static string Th143Short {
+            get {
+                return ResourceManager.GetString("Th143Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 弾幕アマノジャク　～ Impossible Spell Card.
+        /// </summary>
+        public static string Th143Title {
+            get {
+                return ResourceManager.GetString("Th143Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方深秘録.
+        /// </summary>
+        public static string Th145 {
+            get {
+                return ResourceManager.GetString("Th145", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 深秘録.
+        /// </summary>
+        public static string Th145Short {
+            get {
+                return ResourceManager.GetString("Th145Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方深秘録　～ Urban Legend in Limbo.
+        /// </summary>
+        public static string Th145Title {
+            get {
+                return ResourceManager.GetString("Th145Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 輝針城.
+        /// </summary>
+        public static string Th14Short {
+            get {
+                return ResourceManager.GetString("Th14Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方輝針城　～ Double Dealing Character.
+        /// </summary>
+        public static string Th14Title {
+            get {
+                return ResourceManager.GetString("Th14Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方紺珠伝.
+        /// </summary>
+        public static string Th15 {
+            get {
+                return ResourceManager.GetString("Th15", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方憑依華.
+        /// </summary>
+        public static string Th155 {
+            get {
+                return ResourceManager.GetString("Th155", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 憑依華.
+        /// </summary>
+        public static string Th155Short {
+            get {
+                return ResourceManager.GetString("Th155Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方憑依華　～ Antinomy of Common Flowers.
+        /// </summary>
+        public static string Th155Title {
+            get {
+                return ResourceManager.GetString("Th155Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 紺珠伝.
+        /// </summary>
+        public static string Th15Short {
+            get {
+                return ResourceManager.GetString("Th15Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方紺珠伝　～ Legacy of Lunatic Kingdom.
+        /// </summary>
+        public static string Th15Title {
+            get {
+                return ResourceManager.GetString("Th15Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方天空璋.
+        /// </summary>
+        public static string Th16 {
+            get {
+                return ResourceManager.GetString("Th16", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 秘封ナイトメアダイアリー.
+        /// </summary>
+        public static string Th165 {
+            get {
+                return ResourceManager.GetString("Th165", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ナイトメアダイアリー.
+        /// </summary>
+        public static string Th165Short {
+            get {
+                return ResourceManager.GetString("Th165Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 秘封ナイトメアダイアリー　〜 Violet Detector.
+        /// </summary>
+        public static string Th165Title {
+            get {
+                return ResourceManager.GetString("Th165Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 天空璋.
+        /// </summary>
+        public static string Th16Short {
+            get {
+                return ResourceManager.GetString("Th16Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方天空璋　～ Hidden Star in Four Seasons.
+        /// </summary>
+        public static string Th16Title {
+            get {
+                return ResourceManager.GetString("Th16Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方鬼形獣.
+        /// </summary>
+        public static string Th17 {
+            get {
+                return ResourceManager.GetString("Th17", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方剛欲異聞.
+        /// </summary>
+        public static string Th175 {
+            get {
+                return ResourceManager.GetString("Th175", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 剛欲異聞.
+        /// </summary>
+        public static string Th175Short {
+            get {
+                return ResourceManager.GetString("Th175Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方剛欲異聞　～ 水没した沈愁地獄.
+        /// </summary>
+        public static string Th175Title {
+            get {
+                return ResourceManager.GetString("Th175Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 鬼形獣.
+        /// </summary>
+        public static string Th17Short {
+            get {
+                return ResourceManager.GetString("Th17Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方鬼形獣　～ Wily Beast and Weakest Creature.
+        /// </summary>
+        public static string Th17Title {
+            get {
+                return ResourceManager.GetString("Th17Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方虹龍洞.
+        /// </summary>
+        public static string Th18 {
+            get {
+                return ResourceManager.GetString("Th18", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to バレットフィリア達の闇市場.
+        /// </summary>
+        public static string Th185 {
+            get {
+                return ResourceManager.GetString("Th185", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to バレットフィリア.
+        /// </summary>
+        public static string Th185Short {
+            get {
+                return ResourceManager.GetString("Th185Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to バレットフィリア達の闇市場　〜 100th Black Market.
+        /// </summary>
+        public static string Th185Title {
+            get {
+                return ResourceManager.GetString("Th185Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 虹龍洞.
+        /// </summary>
+        public static string Th18Short {
+            get {
+                return ResourceManager.GetString("Th18Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方虹龍洞 ～ Unconnected Marketeers.
+        /// </summary>
+        public static string Th18Title {
+            get {
+                return ResourceManager.GetString("Th18Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方獣王園.
+        /// </summary>
+        public static string Th19 {
+            get {
+                return ResourceManager.GetString("Th19", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 獣王園.
+        /// </summary>
+        public static string Th19Short {
+            get {
+                return ResourceManager.GetString("Th19Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 東方獣王園　〜 Unfinished Dream of All Living Ghost.
+        /// </summary>
+        public static string Th19Title {
+            get {
+                return ResourceManager.GetString("Th19Title", resourceCulture);
             }
         }
         
@@ -1746,141 +1935,6 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 東方獣王園.
-        /// </summary>
-        public static string UDoALG {
-            get {
-                return ResourceManager.GetString("UDoALG", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 獣王園.
-        /// </summary>
-        public static string UDoALGShort {
-            get {
-                return ResourceManager.GetString("UDoALGShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方獣王園　〜 Unfinished Dream of All Living Ghost.
-        /// </summary>
-        public static string UDoALGTitle {
-            get {
-                return ResourceManager.GetString("UDoALGTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方星蓮船.
-        /// </summary>
-        public static string UFO {
-            get {
-                return ResourceManager.GetString("UFO", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 星蓮船.
-        /// </summary>
-        public static string UFOShort {
-            get {
-                return ResourceManager.GetString("UFOShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方星蓮船　～ Undefined Fantastic Object.
-        /// </summary>
-        public static string UFOTitle {
-            get {
-                return ResourceManager.GetString("UFOTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方深秘録.
-        /// </summary>
-        public static string ULiL {
-            get {
-                return ResourceManager.GetString("ULiL", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 深秘録.
-        /// </summary>
-        public static string ULiLShort {
-            get {
-                return ResourceManager.GetString("ULiLShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方深秘録　～ Urban Legend in Limbo.
-        /// </summary>
-        public static string ULiLTitle {
-            get {
-                return ResourceManager.GetString("ULiLTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方虹龍洞.
-        /// </summary>
-        public static string UM {
-            get {
-                return ResourceManager.GetString("UM", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 虹龍洞.
-        /// </summary>
-        public static string UMShort {
-            get {
-                return ResourceManager.GetString("UMShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方虹龍洞 ～ Unconnected Marketeers.
-        /// </summary>
-        public static string UMTitle {
-            get {
-                return ResourceManager.GetString("UMTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方非想天則.
-        /// </summary>
-        public static string UoNL {
-            get {
-                return ResourceManager.GetString("UoNL", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 非想天則.
-        /// </summary>
-        public static string UoNLShort {
-            get {
-                return ResourceManager.GetString("UoNLShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方非想天則　～ 超弩級ギニョルの謎を追え.
-        /// </summary>
-        public static string UoNLTitle {
-            get {
-                return ResourceManager.GetString("UoNLTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to AppLocaleで実行.
         /// </summary>
         public static string useApplocale {
@@ -1890,65 +1944,11 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 秘封ナイトメアダイアリー.
-        /// </summary>
-        public static string VD {
-            get {
-                return ResourceManager.GetString("VD", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to ナイトメアダイアリー.
-        /// </summary>
-        public static string VDShort {
-            get {
-                return ResourceManager.GetString("VDShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 秘封ナイトメアダイアリー　〜 Violet Detector.
-        /// </summary>
-        public static string VDTitle {
-            get {
-                return ResourceManager.GetString("VDTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to 表示.
         /// </summary>
         public static string viewToolStripMenuItem {
             get {
                 return ResourceManager.GetString("viewToolStripMenuItem", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方鬼形獣.
-        /// </summary>
-        public static string WBaWC {
-            get {
-                return ResourceManager.GetString("WBaWC", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 鬼形獣.
-        /// </summary>
-        public static string WBaWCShort {
-            get {
-                return ResourceManager.GetString("WBaWCShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 東方鬼形獣　～ Wily Beast and Weakest Creature.
-        /// </summary>
-        public static string WBaWCTitle {
-            get {
-                return ResourceManager.GetString("WBaWCTitle", resourceCulture);
             }
         }
         

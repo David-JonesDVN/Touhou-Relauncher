@@ -117,166 +117,163 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AoCF" xml:space="preserve">
+  <data name="Th155" xml:space="preserve">
     <value>Antinomy of Common Flowers</value>
   </data>
-  <data name="AoCFTitle" xml:space="preserve">
+  <data name="Th155Title" xml:space="preserve">
     <value>Touhou 15.5: Antinomy of Common Flowers</value>
   </data>
-  <data name="DDC" xml:space="preserve">
+  <data name="Th14" xml:space="preserve">
     <value>Double Dealing Character</value>
   </data>
-  <data name="DDCTitle" xml:space="preserve">
+  <data name="Th14Title" xml:space="preserve">
     <value>Touhou 14: Double Dealing Character</value>
   </data>
-  <data name="DS" xml:space="preserve">
+  <data name="Th125" xml:space="preserve">
     <value>Double Spoiler</value>
   </data>
-  <data name="DSTitle" xml:space="preserve">
+  <data name="Th125Title" xml:space="preserve">
     <value>Touhou 12.5: Double Spoiler</value>
   </data>
-  <data name="EoSD" xml:space="preserve">
+  <data name="Th06" xml:space="preserve">
     <value>Embodiment of Scarlet Devil</value>
   </data>
-  <data name="EoSDTitle" xml:space="preserve">
+  <data name="Th06Title" xml:space="preserve">
     <value>Touhou 06: the Embodiment of Scarlet Devil</value>
   </data>
-  <data name="GFW" xml:space="preserve">
+  <data name="Th128" xml:space="preserve">
     <value>Great Fairy Wars</value>
   </data>
-  <data name="GFWTitle" xml:space="preserve">
+  <data name="Th128Title" xml:space="preserve">
     <value>Touhou 12.8: Great Fairy Wars</value>
   </data>
-  <data name="HM" xml:space="preserve">
+  <data name="Th135" xml:space="preserve">
     <value>Hopeless Masquerade</value>
   </data>
-  <data name="HMTitle" xml:space="preserve">
+  <data name="Th135Title" xml:space="preserve">
     <value>Touhou 13.5: Hopeless Masquerade</value>
   </data>
-  <data name="HRtP" xml:space="preserve">
-    <value>Highly Responsive to Prayers</value>
-  </data>
-  <data name="HRtPTitle" xml:space="preserve">
+  <data name="Th01Title" xml:space="preserve">
     <value>Touhou 01: Highly Responsive to Prayers</value>
   </data>
-  <data name="HSiFS" xml:space="preserve">
+  <data name="Th16" xml:space="preserve">
     <value>Hidden Star in Four Seasons</value>
   </data>
-  <data name="HSiFSTitle" xml:space="preserve">
+  <data name="Th16Title" xml:space="preserve">
     <value>Touhou 16: Hidden Star in Four Seasons</value>
   </data>
-  <data name="IaMP" xml:space="preserve">
+  <data name="Th075" xml:space="preserve">
     <value>Immaterial and Missing Power</value>
   </data>
-  <data name="IaMPTitle" xml:space="preserve">
+  <data name="Th075Title" xml:space="preserve">
     <value>Touhou 7.5: Immaterial and Missing Power</value>
   </data>
-  <data name="IN" xml:space="preserve">
+  <data name="Th08" xml:space="preserve">
     <value>Imperishable Night</value>
   </data>
-  <data name="INTitle" xml:space="preserve">
+  <data name="Th08Title" xml:space="preserve">
     <value>Touhou 08: Imperishable Night</value>
   </data>
-  <data name="ISC" xml:space="preserve">
+  <data name="Th143" xml:space="preserve">
     <value>Impossible Spell Card</value>
   </data>
-  <data name="ISCTitle" xml:space="preserve">
+  <data name="Th143Title" xml:space="preserve">
     <value>Touhou 14.3: Impossible Spell Card</value>
   </data>
-  <data name="LLS" xml:space="preserve">
+  <data name="Th04" xml:space="preserve">
     <value>Lotus Land Story</value>
   </data>
-  <data name="LLSTitle" xml:space="preserve">
+  <data name="Th04Title" xml:space="preserve">
     <value>Touhou 04: Lotus Land Story</value>
   </data>
-  <data name="LoLK" xml:space="preserve">
+  <data name="Th15" xml:space="preserve">
     <value>Legacy of Lunatic Kingdom</value>
   </data>
-  <data name="LoLKTitle" xml:space="preserve">
+  <data name="Th15Title" xml:space="preserve">
     <value>Touhou 15: Legacy of Lunatic Kingdom</value>
   </data>
-  <data name="MoF" xml:space="preserve">
+  <data name="Th10" xml:space="preserve">
     <value>Mountain of Faith</value>
   </data>
-  <data name="MoFTitle" xml:space="preserve">
+  <data name="Th10Title" xml:space="preserve">
     <value>Touhou 10: Mountain of Faith</value>
   </data>
-  <data name="MS" xml:space="preserve">
+  <data name="Th05" xml:space="preserve">
     <value>Mystic Square</value>
   </data>
-  <data name="MSTitle" xml:space="preserve">
+  <data name="Th05Title" xml:space="preserve">
     <value>Touhou 05: Mystic Square</value>
   </data>
-  <data name="PCB" xml:space="preserve">
+  <data name="Th07" xml:space="preserve">
     <value>Perfect Cherry Blossom</value>
   </data>
-  <data name="PCBTitle" xml:space="preserve">
+  <data name="Th07Title" xml:space="preserve">
     <value>Touhou 07: Perfect Cherry Blossom</value>
   </data>
-  <data name="PoDD" xml:space="preserve">
+  <data name="Th03" xml:space="preserve">
     <value>Phantasmagoria of Dim. Dream</value>
   </data>
-  <data name="PoDDTitle" xml:space="preserve">
+  <data name="Th03Title" xml:space="preserve">
     <value>Touhou 03: Phantasmagoria of Dim. Dream</value>
   </data>
-  <data name="PoFV" xml:space="preserve">
+  <data name="Th09" xml:space="preserve">
     <value>Phantasmagoria of Flower View</value>
   </data>
-  <data name="PoFVTitle" xml:space="preserve">
+  <data name="Th09Title" xml:space="preserve">
     <value>Touhou 09: Phantasmagoria of Flower View</value>
   </data>
-  <data name="SA" xml:space="preserve">
+  <data name="Th11" xml:space="preserve">
     <value>Subterranean Animism</value>
   </data>
-  <data name="SATitle" xml:space="preserve">
+  <data name="Th11Title" xml:space="preserve">
     <value>Touhou 11: Subterranean Animism</value>
   </data>
-  <data name="SoEW" xml:space="preserve">
+  <data name="Th02" xml:space="preserve">
     <value>Story of Eastern Wonderland</value>
   </data>
-  <data name="SoEWTitle" xml:space="preserve">
+  <data name="Th02Title" xml:space="preserve">
     <value>Touhou 02: the Story of Eastern Wonderland</value>
   </data>
-  <data name="StB" xml:space="preserve">
+  <data name="Th095" xml:space="preserve">
     <value>Shoot the Bullet</value>
   </data>
-  <data name="StBTitle" xml:space="preserve">
+  <data name="Th095Title" xml:space="preserve">
     <value>Touhou 9.5: Shoot the Bullet</value>
   </data>
-  <data name="SWR" xml:space="preserve">
+  <data name="Th105" xml:space="preserve">
     <value>Scarlet Weather Rhapsody</value>
   </data>
-  <data name="SWRTitle" xml:space="preserve">
+  <data name="Th105Title" xml:space="preserve">
     <value>Touhou 10.5: Scarlet Weather Rhapsody</value>
   </data>
-  <data name="TD" xml:space="preserve">
+  <data name="Th13" xml:space="preserve">
     <value>Ten Desires</value>
   </data>
-  <data name="TDTitle" xml:space="preserve">
+  <data name="Th13Title" xml:space="preserve">
     <value>Touhou 13: Ten Desires</value>
   </data>
-  <data name="UFO" xml:space="preserve">
+  <data name="Th12" xml:space="preserve">
     <value>Undefined Fantastic Object</value>
   </data>
-  <data name="UFOTitle" xml:space="preserve">
+  <data name="Th12Title" xml:space="preserve">
     <value>Touhou 12: Undefined Fantastic Object</value>
   </data>
-  <data name="ULiL" xml:space="preserve">
+  <data name="Th145" xml:space="preserve">
     <value>Urban Legend in Limbo</value>
   </data>
-  <data name="ULiLTitle" xml:space="preserve">
+  <data name="Th145Title" xml:space="preserve">
     <value>Touhou 14.5: Urban Legend in Limbo</value>
   </data>
-  <data name="UoNL" xml:space="preserve">
+  <data name="Th123" xml:space="preserve">
     <value>Hisoutensoku</value>
   </data>
-  <data name="UoNLTitle" xml:space="preserve">
+  <data name="Th123Title" xml:space="preserve">
     <value>Touhou 12.3: Hisoutensoku</value>
   </data>
-  <data name="VD" xml:space="preserve">
+  <data name="Th165" xml:space="preserve">
     <value>Violet Detector</value>
   </data>
-  <data name="VDTitle" xml:space="preserve">
+  <data name="Th165Title" xml:space="preserve">
     <value>Touhou 16.5: Violet Detector</value>
   </data>
   <data name="Random" xml:space="preserve">
@@ -297,7 +294,7 @@
   <data name="pc98Group" xml:space="preserve">
     <value>PC-98 Games</value>
   </data>
-  <data name="AoCFShort" xml:space="preserve">
+  <data name="Th155Short" xml:space="preserve">
     <value>AoCF</value>
   </data>
   <data name="autoClose" xml:space="preserve">
@@ -336,7 +333,7 @@
   <data name="customLabel" xml:space="preserve">
     <value>Custom.exe:</value>
   </data>
-  <data name="DDCShort" xml:space="preserve">
+  <data name="Th14Short" xml:space="preserve">
     <value>DDC</value>
   </data>
   <data name="defaultLabel" xml:space="preserve">
@@ -345,43 +342,43 @@
   <data name="deleteCategoryToolStripMenuItem" xml:space="preserve">
     <value>Delete Category</value>
   </data>
-  <data name="DSShort" xml:space="preserve">
+  <data name="Th125Short" xml:space="preserve">
     <value>DS</value>
   </data>
   <data name="enLabel" xml:space="preserve">
     <value>English Executable:</value>
   </data>
-  <data name="EoSDShort" xml:space="preserve">
+  <data name="Th06Short" xml:space="preserve">
     <value>EoSD</value>
   </data>
   <data name="games" xml:space="preserve">
     <value>Games</value>
   </data>
-  <data name="GFWShort" xml:space="preserve">
+  <data name="Th128Short" xml:space="preserve">
     <value>GFW</value>
   </data>
   <data name="hdiLabel" xml:space="preserve">
     <value>Game HDI:</value>
   </data>
-  <data name="HMShort" xml:space="preserve">
+  <data name="Th135Short" xml:space="preserve">
     <value>HM</value>
   </data>
-  <data name="HRtPShort" xml:space="preserve">
+  <data name="Th01Short" xml:space="preserve">
     <value>HRtP</value>
   </data>
-  <data name="HSiFSShort" xml:space="preserve">
+  <data name="Th16Short" xml:space="preserve">
     <value>HSiFS</value>
   </data>
-  <data name="IaMPShort" xml:space="preserve">
+  <data name="Th075Short" xml:space="preserve">
     <value>IaMP</value>
   </data>
   <data name="info" xml:space="preserve">
     <value>Info</value>
   </data>
-  <data name="INShort" xml:space="preserve">
+  <data name="Th08Short" xml:space="preserve">
     <value>IN</value>
   </data>
-  <data name="ISCShort" xml:space="preserve">
+  <data name="Th143Short" xml:space="preserve">
     <value>ISC</value>
   </data>
   <data name="jpLabel" xml:space="preserve">
@@ -396,16 +393,16 @@
   <data name="launcherSettings" xml:space="preserve">
     <value>Launcher Settings</value>
   </data>
-  <data name="LLSShort" xml:space="preserve">
+  <data name="Th04Short" xml:space="preserve">
     <value>LLS</value>
   </data>
-  <data name="LoLKShort" xml:space="preserve">
+  <data name="Th15Short" xml:space="preserve">
     <value>LoLK</value>
   </data>
-  <data name="MoFShort" xml:space="preserve">
+  <data name="Th10Short" xml:space="preserve">
     <value>MoF</value>
   </data>
-  <data name="MSShort" xml:space="preserve">
+  <data name="Th05Short" xml:space="preserve">
     <value>MS</value>
   </data>
   <data name="newCategoryToolStripMenuItem" xml:space="preserve">
@@ -429,13 +426,13 @@
   <data name="pc98Settings" xml:space="preserve">
     <value>PC-98 Game Settings</value>
   </data>
-  <data name="PCBShort" xml:space="preserve">
+  <data name="Th07Short" xml:space="preserve">
     <value>PCB</value>
   </data>
-  <data name="PoDDShort" xml:space="preserve">
+  <data name="Th03Short" xml:space="preserve">
     <value>PoDD</value>
   </data>
-  <data name="PoFVShort" xml:space="preserve">
+  <data name="Th09Short" xml:space="preserve">
     <value>PoFV</value>
   </data>
   <data name="randomAll" xml:space="preserve">
@@ -457,37 +454,37 @@ random game option:</value>
   <data name="replays" xml:space="preserve">
     <value>Replays</value>
   </data>
-  <data name="SAShort" xml:space="preserve">
+  <data name="Th11Short" xml:space="preserve">
     <value>SA</value>
   </data>
   <data name="settings" xml:space="preserve">
     <value>Settings</value>
   </data>
-  <data name="SoEWShort" xml:space="preserve">
+  <data name="Th02Short" xml:space="preserve">
     <value>SoEW</value>
   </data>
-  <data name="StBShort" xml:space="preserve">
+  <data name="Th095Short" xml:space="preserve">
     <value>StB</value>
   </data>
-  <data name="SWRShort" xml:space="preserve">
+  <data name="Th105Short" xml:space="preserve">
     <value>SWR</value>
   </data>
-  <data name="TDShort" xml:space="preserve">
+  <data name="Th13Short" xml:space="preserve">
     <value>TD</value>
   </data>
-  <data name="UFOShort" xml:space="preserve">
+  <data name="Th12Short" xml:space="preserve">
     <value>UFO</value>
   </data>
-  <data name="ULiLShort" xml:space="preserve">
+  <data name="Th145Short" xml:space="preserve">
     <value>ULiL</value>
   </data>
-  <data name="UoNLShort" xml:space="preserve">
+  <data name="Th123Short" xml:space="preserve">
     <value>Hisoutensoku</value>
   </data>
   <data name="useApplocale" xml:space="preserve">
     <value>With Applocale</value>
   </data>
-  <data name="VDShort" xml:space="preserve">
+  <data name="Th165Short" xml:space="preserve">
     <value>VD</value>
   </data>
   <data name="windowsSettings" xml:space="preserve">
@@ -703,55 +700,58 @@ random game option:</value>
   <data name="selectedPatches" xml:space="preserve">
     <value>Selected Patches</value>
   </data>
-  <data name="WBaWC" xml:space="preserve">
+  <data name="Th17" xml:space="preserve">
     <value>Wily Beast and Weakest Creature</value>
   </data>
-  <data name="WBaWCShort" xml:space="preserve">
+  <data name="Th17Short" xml:space="preserve">
     <value>WBaWC</value>
   </data>
-  <data name="WBaWCTitle" xml:space="preserve">
+  <data name="Th17Title" xml:space="preserve">
     <value>Touhou 17: Wily Beast and Weakest Creature</value>
   </data>
-  <data name="UM" xml:space="preserve">
+  <data name="Th18" xml:space="preserve">
     <value>Unconnected Marketeers</value>
   </data>
-  <data name="UMShort" xml:space="preserve">
+  <data name="Th18Short" xml:space="preserve">
     <value>UM</value>
   </data>
-  <data name="UMTitle" xml:space="preserve">
-    <value>Touhou 18: Unconnected Marketeers</value>
-  </data>
-  <data name="GI" xml:space="preserve">
+  <data name="Th175" xml:space="preserve">
     <value>Gouyoku Ibun</value>
   </data>
-  <data name="GIShort" xml:space="preserve">
+  <data name="Th175Short" xml:space="preserve">
     <value>GI</value>
   </data>
-  <data name="GITitle" xml:space="preserve">
+  <data name="Th175Title" xml:space="preserve">
     <value>Touhou 17.5: Gouyoku Ibun</value>
   </data>
   <data name="errorNoCategorySelected" xml:space="preserve">
     <value>No Category Selected</value>
   </data>
-  <data name="HBM" xml:space="preserve">
+  <data name="Th185" xml:space="preserve">
     <value>100th Black Market</value>
   </data>
-  <data name="HBMShort" xml:space="preserve">
+  <data name="Th185Short" xml:space="preserve">
     <value>100BM</value>
   </data>
-  <data name="HBMTitle" xml:space="preserve">
+  <data name="Th185Title" xml:space="preserve">
     <value>Touhou 18.5: 100th Black Market</value>
   </data>
   <data name="spinoffGroup" xml:space="preserve">
     <value>Spinoffs</value>
   </data>
-  <data name="UDoALG" xml:space="preserve">
+  <data name="Th19" xml:space="preserve">
     <value>Unfinished Dream of All Living Ghost</value>
   </data>
-  <data name="UDoALGShort" xml:space="preserve">
+  <data name="Th19Short" xml:space="preserve">
     <value>UDoALG</value>
   </data>
-  <data name="UDoALGTitle" xml:space="preserve">
+  <data name="Th19Title" xml:space="preserve">
     <value>Touhou 19: Unfinished Dream of All Living Ghost</value>
+  </data>
+  <data name="Th01" xml:space="preserve">
+    <value>Highly Responsive to Prayers</value>
+  </data>
+  <data name="Th18Title" xml:space="preserve">
+    <value>Touhou 18: Unconnected Marketeers</value>
   </data>
 </root>
