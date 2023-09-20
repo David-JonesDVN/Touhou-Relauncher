@@ -2819,4 +2819,3 @@
         private System.Windows.Forms.ToolStripMenuItem trayTh19;
     }
 }
-
