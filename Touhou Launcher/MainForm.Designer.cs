@@ -104,6 +104,7 @@
             this.chkTh16 = new System.Windows.Forms.CheckBox();
             this.chkTh17 = new System.Windows.Forms.CheckBox();
             this.chkTh18 = new System.Windows.Forms.CheckBox();
+            this.chkTh19 = new System.Windows.Forms.CheckBox();
             this.pc98Random = new System.Windows.Forms.GroupBox();
             this.pc98RandomPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.chkTh01 = new System.Windows.Forms.CheckBox();
@@ -171,6 +172,7 @@
             this.btnTh16 = new System.Windows.Forms.Button();
             this.btnTh17 = new System.Windows.Forms.Button();
             this.btnTh18 = new System.Windows.Forms.Button();
+            this.btnTh19 = new System.Windows.Forms.Button();
             this.pc98Group = new System.Windows.Forms.GroupBox();
             this.pc98LayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.trayMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -194,6 +196,7 @@
             this.trayTh16 = new System.Windows.Forms.ToolStripMenuItem();
             this.trayTh17 = new System.Windows.Forms.ToolStripMenuItem();
             this.trayTh18 = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayTh19 = new System.Windows.Forms.ToolStripMenuItem();
             this.traySpinoff = new System.Windows.Forms.ToolStripMenuItem();
             this.trayTh095 = new System.Windows.Forms.ToolStripMenuItem();
             this.trayTh125 = new System.Windows.Forms.ToolStripMenuItem();
@@ -215,9 +218,6 @@
             this.trayOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.trayExit = new System.Windows.Forms.ToolStripMenuItem();
             this.trayIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.btnTh19 = new System.Windows.Forms.Button();
-            this.chkTh19 = new System.Windows.Forms.CheckBox();
-            this.trayTh19 = new System.Windows.Forms.ToolStripMenuItem();
             this.gameContextMenu.SuspendLayout();
             this.customContextMenu.SuspendLayout();
             this.customFolderContextMenu.SuspendLayout();
@@ -1105,6 +1105,19 @@
             this.chkTh18.Text = "UM";
             this.chkTh18.UseVisualStyleBackColor = true;
             this.chkTh18.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
+            // 
+            // chkTh19
+            // 
+            this.chkTh19.AutoSize = true;
+            this.chkTh19.Checked = true;
+            this.chkTh19.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTh19.Location = new System.Drawing.Point(188, 49);
+            this.chkTh19.Name = "chkTh19";
+            this.chkTh19.Size = new System.Drawing.Size(69, 17);
+            this.chkTh19.TabIndex = 13;
+            this.chkTh19.Text = "UDoALG";
+            this.chkTh19.UseVisualStyleBackColor = true;
+            this.chkTh19.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
             // 
             // pc98Random
             // 
@@ -2111,6 +2124,24 @@
             this.btnTh18.UseVisualStyleBackColor = true;
             this.btnTh18.Click += new System.EventHandler(this.btn_Click);
             // 
+            // btnTh19
+            // 
+            this.btnTh19.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th19_off;
+            this.btnTh19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTh19.ContextMenuStrip = this.gameContextMenu;
+            this.btnTh19.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTh19.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTh19.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnTh19.Location = new System.Drawing.Point(129, 203);
+            this.btnTh19.Name = "btnTh19";
+            this.btnTh19.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnTh19.Size = new System.Drawing.Size(120, 44);
+            this.btnTh19.TabIndex = 13;
+            this.btnTh19.Text = "Unfinished Dream of All Living Ghost";
+            this.btnTh19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTh19.UseVisualStyleBackColor = true;
+            this.btnTh19.Click += new System.EventHandler(this.btn_Click);
+            // 
             // pc98Group
             // 
             this.pc98Group.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -2351,6 +2382,15 @@
             this.trayTh18.Text = "Unconnected Marketeers";
             this.trayTh18.Click += new System.EventHandler(this.tray_Click);
             // 
+            // trayTh19
+            // 
+            this.trayTh19.Image = global::Touhou_Launcher.Properties.Resources.Icon_th19;
+            this.trayTh19.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trayTh19.Name = "trayTh19";
+            this.trayTh19.Size = new System.Drawing.Size(285, 38);
+            this.trayTh19.Text = "Unfinished Dream of All Living Ghost";
+            this.trayTh19.Click += new System.EventHandler(this.tray_Click);
+            // 
             // traySpinoff
             // 
             this.traySpinoff.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -2533,46 +2573,6 @@
             this.trayIcon.Icon = global::Touhou_Launcher.Properties.Resources.thicon;
             this.trayIcon.Text = "Touhou Launcher";
             this.trayIcon.DoubleClick += new System.EventHandler(this.MainForm_Show);
-            // 
-            // btnTh19
-            // 
-            this.btnTh19.BackgroundImage = global::Touhou_Launcher.Properties.Resources.Banner_th19_off;
-            this.btnTh19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTh19.ContextMenuStrip = this.gameContextMenu;
-            this.btnTh19.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTh19.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTh19.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnTh19.Location = new System.Drawing.Point(129, 203);
-            this.btnTh19.Name = "btnTh19";
-            this.btnTh19.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnTh19.Size = new System.Drawing.Size(120, 44);
-            this.btnTh19.TabIndex = 13;
-            this.btnTh19.Text = "Unfinished Dream of All Living Ghost";
-            this.btnTh19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTh19.UseVisualStyleBackColor = true;
-            this.btnTh19.Click += new System.EventHandler(this.btn_Click);
-            // 
-            // chkTh19
-            // 
-            this.chkTh19.AutoSize = true;
-            this.chkTh19.Checked = true;
-            this.chkTh19.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkTh19.Location = new System.Drawing.Point(188, 49);
-            this.chkTh19.Name = "chkTh19";
-            this.chkTh19.Size = new System.Drawing.Size(69, 17);
-            this.chkTh19.TabIndex = 13;
-            this.chkTh19.Text = "UDoALG";
-            this.chkTh19.UseVisualStyleBackColor = true;
-            this.chkTh19.CheckedChanged += new System.EventHandler(this.chkRandom_CheckedChanged);
-            // 
-            // trayTh19
-            // 
-            this.trayTh19.Image = global::Touhou_Launcher.Properties.Resources.Icon_th19;
-            this.trayTh19.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trayTh19.Name = "trayTh19";
-            this.trayTh19.Size = new System.Drawing.Size(285, 38);
-            this.trayTh19.Text = "Unfinished Dream of All Living Ghost";
-            this.trayTh19.Click += new System.EventHandler(this.tray_Click);
             // 
             // MainForm
             // 
