@@ -312,7 +312,7 @@ namespace Touhou_Launcher
             {
                 browser.Filter = filter;
                 browser.FilterIndex = 1;
-                browser.InitialDirectory = initialDirectory;
+                browser.InitialDirectory = initialDirectory; // Sets the initial folder
                 browser.Multiselect = multiSelect;
                 browser.Title = title;
                 if (browser.ShowDialog(owner) == DialogResult.OK)
@@ -348,13 +348,15 @@ namespace Touhou_Launcher
             }
             else if (confirm == DialogResult.No)
             {
-                SaveFileDialog browser = new SaveFileDialog();
-                browser.Filter = rm.GetString("replayFilter") + " (*.rpy)|*.rpy|" + rm.GetString("allFilter") + " (*.*)|*.*";
-                browser.InitialDirectory = path;
-                browser.RestoreDirectory = true;
-                browser.FileName = name;
-                if (browser.ShowDialog(this) == DialogResult.OK)
-                    DownloadFile(url, browser.FileName);
+                using (SaveFileDialog browser = new SaveFileDialog())
+                {
+                    browser.Filter = rm.GetString("replayFilter") + " (*.rpy)|*.rpy|" + rm.GetString("allFilter") + " (*.*)|*.*";
+                    browser.InitialDirectory = path;
+                    browser.RestoreDirectory = true;
+                    browser.FileName = name;
+                    if (browser.ShowDialog(this) == DialogResult.OK)
+                        DownloadFile(url, browser.FileName);
+                }
             }
         }
 
@@ -694,8 +696,10 @@ namespace Touhou_Launcher
         private void configureToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Button btn = (Button)((ContextMenuStrip)((ToolStripMenuItem)sender).GetCurrentParent()).Tag;
-            ConfigForm gameConfig = new ConfigForm(btn);
-            gameConfig.ShowDialog(this);
+            using (ConfigForm gameConfig = new ConfigForm(btn))
+            {
+                gameConfig.ShowDialog(this);
+            }
         }
 
         private void customAdd_Click(object sender, EventArgs e)

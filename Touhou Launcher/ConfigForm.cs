@@ -213,8 +213,10 @@ namespace Touhou_Launcher
             MainForm.curCfg.gameCFG[game].crapCFG[0] = crapGame.SelectedItem.ToString();
             if (crapCfg.SelectedItem.ToString() == "Custom")
             {
-                thcrap profileConfig = new thcrap(this);
-                profileConfig.ShowDialog(this);
+                using (thcrap profileConfig = new thcrap(this))
+                {
+                    profileConfig.ShowDialog(this);
+                }
             }
             else
                 MainForm.curCfg.gameCFG[game].crapCFG[1] = crapCfg.SelectedItem.ToString();
@@ -312,10 +314,12 @@ namespace Touhou_Launcher
 
         private void btnCustomText_Click(object sender, EventArgs e)
         {
-            ColorDialog colorSet = new ColorDialog();
-            colorSet.Color = Color.FromArgb(MainForm.curCfg.gameCFG[game].textColor);
-            if (colorSet.ShowDialog(this) == DialogResult.OK)
-                MainForm.curCfg.gameCFG[game].textColor = colorSet.Color.ToArgb();
+            using (ColorDialog colorSet = new ColorDialog())
+            {
+                colorSet.Color = Color.FromArgb(MainForm.curCfg.gameCFG[game].textColor);
+                if (colorSet.ShowDialog(this) == DialogResult.OK)
+                    MainForm.curCfg.gameCFG[game].textColor = colorSet.Color.ToArgb();
+            }
         }
 
         private void browseHDI_Click(object sender, EventArgs e)
