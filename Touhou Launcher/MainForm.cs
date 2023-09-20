@@ -761,8 +761,7 @@ namespace Touhou_Launcher
 
         private void renameCategoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (customTree.SelectedNode != null)
-                customTree.SelectedNode.BeginEdit();
+            customTree.SelectedNode?.BeginEdit();
         }
 
         private void deleteCategoryToolStripMenuItem_Click(object sender, EventArgs e)
