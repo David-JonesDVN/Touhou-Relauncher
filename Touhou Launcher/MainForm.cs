@@ -99,10 +99,12 @@ namespace Touhou_Launcher
                     else
                         category = 2;
 
-                    gameCFG[i] = new GameConfig(category);
-                    gameCFG[i].GameDir = new List<string> { "", "", "", "" };
-                    gameCFG[i].crapCFG = new List<string> { "None", "None" };
-                    gameCFG[i].appLocale = new List<bool> { false, false, false, false };
+                    gameCFG[i] = new GameConfig(category)
+                    {
+                        GameDir = new List<string> { "", "", "", "" },
+                        crapCFG = new List<string> { "None", "None" },
+                        appLocale = new List<bool> { false, false, false, false }
+                    };
                 }
             }
         }
@@ -588,10 +590,12 @@ namespace Touhou_Launcher
                         else
                             offset++;
                     }
-                    backwardsComp[i] = new GameConfig(category);
-                    backwardsComp[i].GameDir = new List<string> { "", "", "", "" };
-                    backwardsComp[i].crapCFG = new List<string> { "None", "None" };
-                    backwardsComp[i].appLocale = new List<bool> { false, false, false, false };
+                    backwardsComp[i] = new GameConfig(category)
+                    {
+                        GameDir = new List<string> { "", "", "", "" },
+                        crapCFG = new List<string> { "None", "None" },
+                        appLocale = new List<bool> { false, false, false, false }
+                    };
                 }
                 curCfg.gameCFG = backwardsComp;
             }
