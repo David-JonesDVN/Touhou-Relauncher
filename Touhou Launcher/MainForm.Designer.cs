@@ -2784,6 +2784,8 @@
         private System.Windows.Forms.ToolStripMenuItem trayTh175;
         private System.Windows.Forms.Button btnTh185;
         private System.Windows.Forms.CheckBox chkTh185;
+        private System.Windows.Forms.Button btnTh19;
+        private System.Windows.Forms.CheckBox chkTh19;
         private System.Windows.Forms.ToolStripMenuItem trayTh06;
         private System.Windows.Forms.ToolStripMenuItem trayTh07;
         private System.Windows.Forms.ToolStripMenuItem trayTh08;
@@ -2797,6 +2799,7 @@
         private System.Windows.Forms.ToolStripMenuItem trayTh16;
         private System.Windows.Forms.ToolStripMenuItem trayTh17;
         private System.Windows.Forms.ToolStripMenuItem trayTh18;
+        private System.Windows.Forms.ToolStripMenuItem trayTh19;
         private System.Windows.Forms.ToolStripMenuItem trayTh075;
         private System.Windows.Forms.ToolStripMenuItem trayTh105;
         private System.Windows.Forms.ToolStripMenuItem trayTh123;
@@ -2814,8 +2817,5 @@
         private System.Windows.Forms.ToolStripMenuItem trayTh143;
         private System.Windows.Forms.ToolStripMenuItem trayTh165;
         private System.Windows.Forms.ToolStripMenuItem trayTh185;
-        private System.Windows.Forms.Button btnTh19;
-        private System.Windows.Forms.CheckBox chkTh19;
-        private System.Windows.Forms.ToolStripMenuItem trayTh19;
     }
 }
