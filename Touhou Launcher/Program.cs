@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Touhou_Launcher
@@ -19,31 +20,17 @@ namespace Touhou_Launcher
 
         static System.Reflection.Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
         {
-            string str = "";
-            if (args.Name.Contains("Newtonsoft.Json"))
-                str = "Touhou_Launcher.jsonnet.Newtonsoft.Json.dll";
-            if (str != "")
-            {
-                using (System.IO.Stream stream = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream(str))
-                {
-                    try
-                    {
-                        byte[] assemblyData = new byte[stream.Length];
-                        stream.Read(assemblyData, 0, assemblyData.Length);
-                        return System.Reflection.Assembly.Load(assemblyData);
-                    }
-                    catch (System.IO.IOException)
-                    {
-                        return null;
-                    }
-                    catch (BadImageFormatException)
-                    {
-                        return null;
-                    }
-                }
-            }
-            else
-                return null;
+            string dllName = args.Name.Contains(',') ? args.Name.Substring(0, args.Name.IndexOf(',')) : args.Name.Replace(".dll", "");
+
+            dllName = dllName.Replace(".", "_");
+
+            if (dllName.EndsWith("_resources")) return null;
+
+            System.Resources.ResourceManager rm = new System.Resources.ResourceManager(typeof(Program).Namespace + ".Properties.Resources", System.Reflection.Assembly.GetExecutingAssembly());
+
+            byte[] bytes = (byte[])rm.GetObject(dllName);
+
+            return System.Reflection.Assembly.Load(bytes);
         }
     }
 }

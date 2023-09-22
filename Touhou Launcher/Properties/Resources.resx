@@ -19508,7 +19508,7 @@
   <data name="Banner_th185" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAHgAAAAsCAYAAACue3wzAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAAAd0SU1FB+YJAxQMLw8n5lkAADi/SURBVHhehbx5VFVrmubpH7VWV3Wv7urqrtWV
+        vAAADrwBlbxySQAAAAd0SU1FB+YJAxQMLw8n5lkAADi/SURBVHhehbx5VFVrmubpH7VWV3Wv7urqrtWV
         Q3VV1sqIzDvf66zIpIDMiiMCAoKioqIgCIoMgoCCoAwyz/M8zyCDKCKoIPM8CIjjvRmRkVUZcSPjPv28
         3/Fcjaioatd6195nc4bt/u3nfZ/3+75z1tkYmMNCbzf0N2yHs5U9HC2PwNH6CJyt7eBgfhiHjG3gYHYY
         Tpb8m/XHcNpzFK42TipOHHTBKdvjcDvgjOP7HPlahw9xFMf4vD8Nec1Bo704YGSNA7uscXj3Phwy3Qs5
@@ -19756,7 +19756,7 @@
   <data name="Banner_th185_off" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAHgAAAAsCAYAAACue3wzAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAAAd0SU1FB+YJAxQPDfFq9H4AABvzSURBVHhehdxVrGVF08bxc8cVCdcQLpAQNAQb
+        vAAADrwBlbxySQAAAAd0SU1FB+YJAxQPDfFq9H4AABvzSURBVHhehdxVrGVF08bxc8cVCdcQLpAQNAQb
         3N3dHQZ3dx3c3d3d3d3d3d0DIcH7/X718ew0mzPMJPX20l696l9PdfXah3dkqaWWaosttliba6652hpr
         rNFWW221tvrqq9f2Kqus0pZffvlqHevN+bXXXrtsvfXWaxtuuGG166yzTp2Lrbnmmv8y9yy33HJt2WWX
         LVthhRXKjMU4tttuuzb//PPXsZVWWqnG1N/vGWPHjm077LBD22mnndqWW27Ztthiizq20UYbtbXWWque
@@ -20040,7 +20040,7 @@
         m10DywfODjoMXrjleuvyba/b1++svDMwFDJ0dzhyeOQu++7kvaR7L+9n3J9/sOkh+mHhI6lH5Y+VHtf9
         qPdj64jlyJlR19G+J0FPHoyxxp7/lP7Th/H8p+Sn5ROqE42TZpOnp9ynbj5b/Wz8eerz+emCn6V/rn6h
         ++K7Xxx/6ZtZNTP+kv9y4dfiV/Kvjrxe9rp71n/28ZvkN/NzhW/l3x59x3jX+z7s/cR85gfsh4qPeh+7
-        Pnl/eriQvLDwG/eE8/s6uL5TAAAACXBIWXMAAA6/AAAOvwE4BVMkAAA0YklEQVRoQ6WaB1QUV//3Z+mo
+        Pnl/eriQvLDwG/eE8/s6uL5TAAAACXBIWXMAAA69AAAOvQFH+5CtAAA0YklEQVRoQ6WaB1QUV//3Z+mo
         2CvCLtvrbJnd2TazvfeFZem9CIhUFQFRLFixl6iJmhh7b7HGmKixRU1iTH2MmlhiN2I0Vpj3Cs/j3yfJ
         W855z/mcPXfuLDNnP/Pd3/1dAJKxaYiAiYmEMJMnZnFRGJHxJTqDCkbpUgUdxdhCnCXWCnUWJa6W8VgM
         PovJZjMkKgliVMEqiVqvEuMIi0bn0nl0KpNJpSE4AmOw2aOXCJhKfgIK0zEpTaaIVThpYnuCUDeUjQ4l
@@ -20314,7 +20314,7 @@
         m10DywfODjoMXrjleuvyba/b1++svDMwFDJ0dzhyeOQu++7kvaR7L+9n3J9/sOkh+mHhI6lH5Y+VHtf9
         qPdj64jlyJlR19G+J0FPHoyxxp7/lP7Th/H8p+Sn5ROqE42TZpOnp9ynbj5b/Wz8eerz+emCn6V/rn6h
         ++K7Xxx/6ZtZNTP+kv9y4dfiV/Kvjrxe9rp71n/28ZvkN/NzhW/l3x59x3jX+z7s/cR85gfsh4qPeh+7
-        Pnl/eriQvLDwG/eE8/s6uL5TAAAACXBIWXMAAA6/AAAOvwE4BVMkAAAceklEQVRoQ63a55cVVRbG4ftp
+        Pnl/eriQvLDwG/eE8/s6uL5TAAAACXBIWXMAAA69AAAOvQFH+5CtAAAceklEQVRoQ63a55cVVRbG4ftp
         DGPArCgKKuacc8TsmHN2TOiIAcXAiJhzwASICjYNKKKoCEpUgkID3cAAinnpZ/+Jeare6lqXbmaWa83s
         D7XqVp2w92+/Z59TDY29SzvkkEP23HNPNwceeOD+++9/3HHHud9nn338ZIceeqgnhx9++O67777HHnvs
         tttunhx55JEHHXTQMcccc9hhh+2yyy5euTLNDj744FNPPXWvvfYqx957v/3200szs+y7777ue/fu3adP
@@ -20438,5 +20438,9 @@
         rHdFgx4RlAC7nOdWBugrV64MYoYRWBYHaZvCmJoB6sStTDt3ufm2/H/sPnloX19XQF2Xl+aGWc0OghxG
         XCAcIxGltWLMevb8NzA5/Ky0r+2pAAAAAElFTkSuQmCC
 </value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Newtonsoft_Json" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>
