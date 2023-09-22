@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.Web.WebView2.Core;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -337,7 +338,7 @@ namespace Touhou_Launcher
             }
         }
 
-        private void downloadReplay(string path, string name, Uri url, bool th10full = false)
+        private void downloadReplay(string path, string name, string url, bool th10full = false)
         {
             string message = string.Format(rm.GetString("replayDownload"), name, path);
             Console.WriteLine(rm.GetString("replayDownload"));
@@ -364,7 +365,7 @@ namespace Touhou_Launcher
             }
         }
 
-        private async void DownloadFile(Uri uri, string path)
+        private async void DownloadFile(string uri, string path)
         {
             byte[] bytes = await client.GetByteArrayAsync(uri);
             File.WriteAllBytes(path, bytes);
@@ -935,7 +936,23 @@ namespace Touhou_Launcher
 
         private void Replays_CheckedChanged(object sender, EventArgs e)
         {
-            replayBrowser.Navigate(((Control)sender).Text);
+            string url = ((Control)sender).Text;
+            if (sender == maribelReplays)
+            {
+                url = "https://maribelhearn.com/";
+            }
+            else if (sender == lunarcastReplays)
+            {
+                url = "http://replay.lunarcast.net/";
+            }
+            try
+            {
+                replayBrowser.Source = new Uri(url, System.UriKind.Absolute);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void linkReplays_KeyDown(object sender, KeyEventArgs e)
@@ -948,21 +965,21 @@ namespace Touhou_Launcher
             }
         }
 
-        private void replayBrowser_Navigating(object sender, WebBrowserNavigatingEventArgs e)
+        private void replayBrowser_Navigating(object sender, CoreWebView2NavigationStartingEventArgs e)
         {
-            if (e.Url.ToString().EndsWith(".rpy"))
+            if (e.Uri.EndsWith(".rpy"))
             {
                 e.Cancel = true;
-                string name = e.Url.ToString().Substring(e.Url.ToString().LastIndexOf("/") + 1);
+                string name = e.Uri.Substring(e.Uri.LastIndexOf("/") + 1);
                 string game = name.Substring(2, name.LastIndexOf("_") - 2);
                 double gameNum = UnformatGameNumber(game);
                 if (Directory.Exists(Environment.SpecialFolder.ApplicationData + "\\ShanghaiAlice\\th" + game))
                 {
-                    downloadReplay(Environment.SpecialFolder.ApplicationData + "\\ShanghaiAlice\\th" + game, name, e.Url);
+                    downloadReplay(Environment.SpecialFolder.ApplicationData + "\\ShanghaiAlice\\th" + game, name, e.Uri);
                 }
                 else if (Directory.Exists(Environment.SpecialFolder.ApplicationData + "\\ShanghaiAlice\\th" + game + "tr"))
                 {
-                    downloadReplay(Environment.SpecialFolder.ApplicationData + "\\ShanghaiAlice\\th" + game + "tr", name, e.Url);
+                    downloadReplay(Environment.SpecialFolder.ApplicationData + "\\ShanghaiAlice\\th" + game + "tr", name, e.Uri);
                 }
                 else
                 {
@@ -977,15 +994,15 @@ namespace Touhou_Launcher
                                 if (!File.Exists(Path.GetDirectoryName(exe) + "\\replay\\th10_" + i.ToString("00") + ".rpy"))
                                 {
                                     name = "th10_" + i.ToString("00") + ".rpy";
-                                    downloadReplay(Path.GetDirectoryName(exe) + "\\replay\\", "th10_" + i.ToString("00") + ".rpy", e.Url);
+                                    downloadReplay(Path.GetDirectoryName(exe) + "\\replay\\", "th10_" + i.ToString("00") + ".rpy", e.Uri);
                                     return;
                                 }
                             }
-                            downloadReplay(Path.GetDirectoryName(exe) + "\\replay\\", name, e.Url, true);
+                            downloadReplay(Path.GetDirectoryName(exe) + "\\replay\\", name, e.Uri, true);
                         }
                         else
                         {
-                            downloadReplay(Path.GetDirectoryName(exe) + "\\replay\\", name, e.Url);
+                            downloadReplay(Path.GetDirectoryName(exe) + "\\replay\\", name, e.Uri);
                             return;
                         }
                     }

@@ -20440,6 +20440,15 @@
 </value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Microsoft_Web_WebView2_Core" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\packages\Microsoft.Web.WebView2.1.0.2045.28\lib\net45\Microsoft.Web.WebView2.Core.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Microsoft_Web_WebView2_WinForms" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\packages\Microsoft.Web.WebView2.1.0.2045.28\lib\net45\Microsoft.Web.WebView2.WinForms.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Microsoft_Web_WebView2_Wpf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\packages\Microsoft.Web.WebView2.1.0.2045.28\lib\net45\Microsoft.Web.WebView2.Wpf.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Newtonsoft_Json" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
