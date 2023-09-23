@@ -4,7 +4,7 @@ I tried making it more user friendly and added options wherever it was needed.
 
 The Touhou Launcher is a program you can use to set up and launch any Touhou game (and even others if you're using the custom games tab) from the UI or the tray icon. It supports Neko Project II for PC-98 games, game executable files (the game itself, custom.exe, or vpatch.exe), and thcrap.\
 In addition, it supports the addition and removal of patches from the thpatch repository using a checkbox and list format, with dependencies being added automatically.\
-There is also a "Replays" tab you can use to either navigate popular Touhou replay websites (Don't, actually. The .NET web browser is worse than Internet Explorer 8) or enter your own links to let the launcher automatically download and put them in the correct folder.\
+There is also a "Replays" tab you can use to either navigate popular Touhou replay websites or enter your own links to let the launcher automatically download and put them in the correct folder.\
 Finally, each game has a background picture that you can change to whatever you want.
 
 ## Features
