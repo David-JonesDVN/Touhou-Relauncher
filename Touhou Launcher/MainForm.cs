@@ -242,7 +242,7 @@ namespace Touhou_Launcher
                 return NekoProject(hdi, game);
             }
              */
-            string iniFilePath = Path.GetDirectoryName(curCfg.np2Dir) + "\\" + Path.GetFileNameWithoutExtension(curCfg.np2Dir) + ".ini";
+            string iniFilePath = Path.ChangeExtension(curCfg.np2Dir, "ini");
             if (File.Exists(iniFilePath))
             {
                 string[] config = File.ReadAllLines(iniFilePath, Encoding.Unicode);
