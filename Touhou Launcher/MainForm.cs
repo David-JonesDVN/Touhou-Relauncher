@@ -301,13 +301,13 @@ namespace Touhou_Launcher
 
         public static void launchcrap(int game)
         {
-            if (!File.Exists(curCfg.crapDir + "\\bin\\thcrap_loader.exe"))
+            if (!File.Exists(curCfg.crapDir + "\\thcrap_loader.exe"))
                 MessageBox.Show(rm.GetString("errorcrapNotFound"));
             else if (curCfg.gameCFG[game].crapCFG[0] == "None" || curCfg.gameCFG[game].crapCFG[1] == "None")
                 MessageBox.Show(rm.GetString("errorcrapConfigNotSet"));
             else
             {
-                startProcess(curCfg.crapDir + "\\bin\\thcrap_loader.exe", "\"" + curCfg.crapDir + "\\config\\" + curCfg.gameCFG[game].crapCFG[1] + "\" " + curCfg.gameCFG[game].crapCFG[0]);
+                startProcess(curCfg.crapDir + "\\thcrap_loader.exe", "\"" + curCfg.crapDir + "\\config\\" + curCfg.gameCFG[game].crapCFG[1] + "\" " + curCfg.gameCFG[game].crapCFG[0]);
             }
         }
 
@@ -1140,10 +1140,7 @@ namespace Touhou_Launcher
         {
             if (curCfg.crapDir != "")
             {
-                // Check for thcrap_configure_v3 first
-                string processFile = curCfg.crapDir + "\\bin\\thcrap_configure_v3.exe";
-                if (!File.Exists(processFile))
-                    processFile = curCfg.crapDir + "\\bin\\thcrap_configure.exe";
+                string processFile = curCfg.crapDir + "\\thcrap.exe";
                 if (!File.Exists(processFile))
                     MessageBox.Show(rm.GetString("errorcrapNotFound"));
                 else
