@@ -1,6 +1,4 @@
-﻿using Microsoft.Web.WebView2.Core;
-
-namespace Touhou_Launcher
+﻿namespace Touhou_Launcher
 {
     partial class MainForm
     {
@@ -130,7 +128,7 @@ namespace Touhou_Launcher
             this.np2Dir = new System.Windows.Forms.TextBox();
             this.np2Label = new System.Windows.Forms.Label();
             this.replays = new System.Windows.Forms.TabPage();
-            this.replayBrowser = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.replayBrowser = new System.Windows.Forms.WebBrowser();
             this.replayPanel = new System.Windows.Forms.Panel();
             this.linkReplays = new System.Windows.Forms.TextBox();
             this.lunarcastReplays = new System.Windows.Forms.RadioButton();
@@ -249,7 +247,6 @@ namespace Touhou_Launcher
             this.pc98Group.SuspendLayout();
             this.pc98LayoutPanel.SuspendLayout();
             this.trayMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.replayBrowser)).BeginInit();
             this.SuspendLayout();
             // 
             // gameContextMenu
@@ -1406,8 +1403,8 @@ namespace Touhou_Launcher
             this.replayBrowser.Name = "replayBrowser";
             this.replayBrowser.Size = new System.Drawing.Size(534, 526);
             this.replayBrowser.TabIndex = 2;
-            /*this.replayBrowser.Source = new System.Uri("", System.UriKind.Absolute);*/
-            this.replayBrowser.NavigationStarting += new System.EventHandler<CoreWebView2NavigationStartingEventArgs>(this.replayBrowser_Navigating);
+            this.replayBrowser.Url = new System.Uri("", System.UriKind.Relative);
+            this.replayBrowser.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.replayBrowser_Navigating);
             // 
             // replayPanel
             // 
@@ -2626,8 +2623,8 @@ namespace Touhou_Launcher
             this.pc98Group.ResumeLayout(false);
             this.pc98LayoutPanel.ResumeLayout(false);
             this.trayMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.replayBrowser)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -2658,7 +2655,7 @@ namespace Touhou_Launcher
         private System.Windows.Forms.TabPage info;
         private System.Windows.Forms.TabPage settings;
         private System.Windows.Forms.TabPage replays;
-        private Microsoft.Web.WebView2.WinForms.WebView2 replayBrowser;
+        private System.Windows.Forms.WebBrowser replayBrowser;
         private System.Windows.Forms.Panel replayPanel;
         private System.Windows.Forms.RadioButton lunarcastReplays;
         private System.Windows.Forms.RadioButton maribelReplays;
