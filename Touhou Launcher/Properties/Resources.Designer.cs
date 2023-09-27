@@ -1063,6 +1063,16 @@ namespace Touhou_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        public static byte[] Microsoft_Web_WebView2_Wpf {
+            get {
+                object obj = ResourceManager.GetObject("Microsoft_Web_WebView2_Wpf", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         public static byte[] Newtonsoft_Json {
             get {
                 object obj = ResourceManager.GetObject("Newtonsoft_Json", resourceCulture);

@@ -20040,7 +20040,7 @@
         m10DywfODjoMXrjleuvyba/b1++svDMwFDJ0dzhyeOQu++7kvaR7L+9n3J9/sOkh+mHhI6lH5Y+VHtf9
         qPdj64jlyJlR19G+J0FPHoyxxp7/lP7Th/H8p+Sn5ROqE42TZpOnp9ynbj5b/Wz8eerz+emCn6V/rn6h
         ++K7Xxx/6ZtZNTP+kv9y4dfiV/Kvjrxe9rp71n/28ZvkN/NzhW/l3x59x3jX+z7s/cR85gfsh4qPeh+7
-        Pnl/eriQvLDwG/eE8/s6uL5TAAAACXBIWXMAAA68AAAOvAGVvHJJAAA0YklEQVRoQ6WaB1QUV//3Z+mo
+        Pnl/eriQvLDwG/eE8/s6uL5TAAAACXBIWXMAAA69AAAOvQFH+5CtAAA0YklEQVRoQ6WaB1QUV//3Z+mo
         2CvCLtvrbJnd2TazvfeFZem9CIhUFQFRLFixl6iJmhh7b7HGmKixRU1iTH2MmlhiN2I0Vpj3Cs/j3yfJ
         W855z/mcPXfuLDNnP/Pd3/1dAJKxaYiAiYmEMJMnZnFRGJHxJTqDCkbpUgUdxdhCnCXWCnUWJa6W8VgM
         PovJZjMkKgliVMEqiVqvEuMIi0bn0nl0KpNJpSE4AmOw2aOXCJhKfgIK0zEpTaaIVThpYnuCUDeUjQ4l
@@ -20314,7 +20314,7 @@
         m10DywfODjoMXrjleuvyba/b1++svDMwFDJ0dzhyeOQu++7kvaR7L+9n3J9/sOkh+mHhI6lH5Y+VHtf9
         qPdj64jlyJlR19G+J0FPHoyxxp7/lP7Th/H8p+Sn5ROqE42TZpOnp9ynbj5b/Wz8eerz+emCn6V/rn6h
         ++K7Xxx/6ZtZNTP+kv9y4dfiV/Kvjrxe9rp71n/28ZvkN/NzhW/l3x59x3jX+z7s/cR85gfsh4qPeh+7
-        Pnl/eriQvLDwG/eE8/s6uL5TAAAACXBIWXMAAA68AAAOvAGVvHJJAAAceklEQVRoQ63a55cVVRbG4ftp
+        Pnl/eriQvLDwG/eE8/s6uL5TAAAACXBIWXMAAA69AAAOvQFH+5CtAAAceklEQVRoQ63a55cVVRbG4ftp
         DGPArCgKKuacc8TsmHN2TOiIAcXAiJhzwASICjYNKKKoCEpUgkID3cAAinnpZ/+Jeare6lqXbmaWa83s
         D7XqVp2w92+/Z59TDY29SzvkkEP23HNPNwceeOD+++9/3HHHud9nn338ZIceeqgnhx9++O67777HHnvs
         tttunhx55JEHHXTQMcccc9hhh+2yyy5euTLNDj744FNPPXWvvfYqx957v/3200szs+y7777ue/fu3adP
@@ -20445,6 +20445,9 @@
   </data>
   <data name="Microsoft_Web_WebView2_WinForms" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\packages\Microsoft.Web.WebView2.1.0.2045.28\lib\net45\Microsoft.Web.WebView2.WinForms.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Microsoft_Web_WebView2_Wpf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\packages\Microsoft.Web.WebView2.1.0.2045.28\lib\net45\Microsoft.Web.WebView2.Wpf.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Newtonsoft_Json" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
