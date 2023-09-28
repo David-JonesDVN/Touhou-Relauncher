@@ -1,11 +1,10 @@
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 using System.IO;
-using System.Net;
-using Newtonsoft.Json;
+using System.Linq;
+using System.Net.Http;
+using System.Windows.Forms;
 
 namespace Touhou_Launcher
 {
@@ -47,8 +46,8 @@ namespace Touhou_Launcher
 
         private void InitializeLanguage()
         {
-            this.Text = MainForm.rm.GetString("thcrapTitle") + MainForm.rm.GetString(MainForm.nameToID.FirstOrDefault(t => t.Value == cfgForm.game).Key);
-            foreach (ListView list in MainForm.GetAll(this, typeof(ListView)))
+            this.Text = MainForm.rm.GetString("thcrapTitle") + MainForm.rm.GetString(MainForm.gameNames.ElementAtOrDefault(cfgForm.game));
+            foreach (ListView list in MainForm.GetAll<ListView>(this))
             {
                 foreach (ColumnHeader column in list.Columns)
                 {
@@ -77,7 +76,7 @@ namespace Touhou_Launcher
         public thcrap(ConfigForm cfg)
         {
             cfgForm = cfg;
-            gamejs = MainForm.curCfg.crapDir + "\\config\\launcher" + MainForm.idToNumber[cfg.game] + ".js";
+            gamejs = MainForm.curCfg.crapDir + "\\config\\launcher" + MainForm.FormatGameNumber(MainForm.gameNumbers[cfg.game]) + ".js";
             InitializeComponent();
             InitializeLanguage();
         }
@@ -105,8 +104,12 @@ namespace Touhou_Launcher
             {
                 if (MainForm.curCfg.gameCFG[cfgForm.game].GameDir[i] != "" && !games.ContainsValue(MainForm.curCfg.gameCFG[cfgForm.game].GameDir[i].Replace("\\", "/")))
                 {
+                    string thId = "th" + MainForm.FormatGameNumber(MainForm.gameNumbers[cfgForm.game]);
                     string augment = i == 2 ? "_custom" : "";
-                    games.Add("th" + (MainForm.idToNumber[cfgForm.game]).ToString("00") + augment, MainForm.curCfg.gameCFG[cfgForm.game].GameDir[i].Replace("\\", "/"));
+                    if (!games.ContainsKey(thId + augment))
+                    {
+                        games.Add(thId + augment, MainForm.curCfg.gameCFG[cfgForm.game].GameDir[i].Replace("\\", "/"));
+                    }
                 }
             }
             RefreshProfiles();
@@ -114,33 +117,18 @@ namespace Touhou_Launcher
 
         private async void searchRepo(string address)
         {
-            WebClient wc = new WebClient();
-            wc.Encoding = Encoding.UTF8;
+            HttpClient client = MainForm.client;
             while (true)
             {
                 if (!checkedRepos.Contains(address))
                 {
                     try
                     {
-                        addRepo(await wc.DownloadStringTaskAsync(address + "/repo.js"));
+                        addRepo(await client.GetStringAsync(address + "/repo.js"));
                         checkedRepos.Add(address);
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
-                        /* Code for exploring the thcrap mirror manually.
-                        using (var reader = new StreamReader(WebRequest.Create(address).GetResponse().GetResponseStream()))
-                        {
-                            string result = reader.ReadToEnd();
-                            System.Text.RegularExpressions.MatchCollection matches = new System.Text.RegularExpressions.Regex("<a href=\".*\">(?<name>.*)</a>").Matches(result);
-                            //Alt Regex: <a\s+(?:[^>]*?\s+)?href=(["'])(.*?)\1
-                            foreach (System.Text.RegularExpressions.Match match in matches)
-                            {
-                                if (!match.Success) { continue; }
-                                if (match.Groups["name"].Value.EndsWith("/"))
-                                    searchRepo(address + match.Groups["name"].Value, true);
-                            }
-                        }
-                        */
                     }
                 }
                 if (repoQueue.Count > 0)
@@ -187,46 +175,52 @@ namespace Touhou_Launcher
             }
         }
 
-        private void onPatchGet(object sender, DownloadStringCompletedEventArgs e)
+        private void onPatchGet(string patchString, string activeRepo)
         {
-            if (e.Error == null)
+            patchData patch = JsonConvert.DeserializeObject<patchData>(patchString);
+            FileInfo jsPath = new FileInfo(MainForm.curCfg.crapDir + "\\repos\\" + activeRepo + "\\" + patch.id + "\\patch.js");
+            jsPath.Directory.Create();
+            File.WriteAllText(jsPath.FullName, patchString);
+            foreach (string dependency in patch.dependencies)
             {
-                patchData patch = JsonConvert.DeserializeObject<patchData>(e.Result);
-                FileInfo jsPath = new FileInfo(MainForm.curCfg.crapDir + "\\repos\\" + (string)e.UserState + "\\" + patch.id + "\\patch.js");
-                jsPath.Directory.Create();
-                File.WriteAllText(jsPath.FullName, e.Result);
-                foreach (string dependency in patch.dependencies)
+                string[] dependencySet = dependency.Split('/');
+                string repository = "";
+                if (dependencySet.Length == 1)
                 {
-                    string[] dependencySet = dependency.Split('/');
-                    string repository = "";
-                    if (dependencySet.Length == 1)
+                    foreach (KeyValuePair<string, repoData> repo in repos)
                     {
-                        foreach (KeyValuePair<string, repoData> repo in repos)
+                        if (repo.Value.patches.ContainsKey(dependencySet[0]))
                         {
-                            if (repo.Value.patches.ContainsKey(dependencySet[0]))
-                            {
-                                repository = repo.Key;
-                            }
+                            repository = repo.Key;
                         }
                     }
-                    else
-                        repository = dependencySet[0];
-                    addPatch(repository, dependencySet[dependencySet.Length - 1], patchStates.IndexOf((string)e.UserState + "/" + patch.id + "/"));
                 }
+                else
+                    repository = dependencySet[0];
+                addPatch(repository, dependencySet[dependencySet.Length - 1], patchStates.IndexOf(activeRepo + "/" + patch.id + "/"));
             }
         }
 
-        private void addPatch(string repo, string patch, int dependent = -1)
+        private async void addPatch(string repo, string patch, int dependent = -1)
         {
             if (!patchStates.Contains(repo + "/" + patch + "/"))
             {
                 patchStates.Insert(dependent == -1 ? patchStates.Count : dependent, repo + "/" + patch + "/");
                 repoList_SelectedIndexChanged(repoList.Items[repo], new EventArgs());
             }
-            WebClient wc = new WebClient();
-            wc.Encoding = Encoding.UTF8;
-            wc.DownloadStringCompleted += onPatchGet;
-            wc.DownloadStringAsync(new Uri(repos[repo].servers[0] + "/" + patch + "/patch.js"), repo);
+            try
+            {
+                HttpClient client = MainForm.client;
+                using (HttpResponseMessage response = await client.GetAsync(repos[repo].servers[0] + "/" + patch + "/patch.js"))
+                {
+                    response.EnsureSuccessStatusCode();
+                    string content = await response.Content.ReadAsStringAsync();
+                    onPatchGet(content, repo);
+                }
+            }
+            catch (Exception)
+            {
+            }
         }
 
         private void thcrap_Closing(object sender, FormClosingEventArgs e)
@@ -234,7 +228,7 @@ namespace Touhou_Launcher
             profileData profile = new profileData();
             foreach (string patch in patchStates)
             {
-                profile.patches.Add(new Dictionary<string, string> { {"archive", "repos/" + patch} });
+                profile.patches.Add(new Dictionary<string, string> { { "archive", "repos/" + patch } });
             }
             File.WriteAllText(gamejs, JsonConvert.SerializeObject(profile, Formatting.Indented));
             Dictionary<string, string> games = new Dictionary<string, string>();
@@ -295,7 +289,7 @@ namespace Touhou_Launcher
 
         private void browsePath_Click(object sender, EventArgs e)
         {
-            foreach (string file in MainForm.FileBrowser(MainForm.rm.GetString("gameSelectTitle"), MainForm.rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*"))
+            foreach (string file in MainForm.FileBrowser(this, MainForm.rm.GetString("gameSelectTitle"), MainForm.rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*"))
                 path.Text = file;
         }
 

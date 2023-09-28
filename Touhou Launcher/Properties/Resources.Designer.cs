@@ -63,9 +63,9 @@ namespace Touhou_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap _in {
+        public static System.Drawing.Bitmap Banner_th01 {
             get {
-                object obj = ResourceManager.GetObject("_in", resourceCulture);
+                object obj = ResourceManager.GetObject("Banner_th01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Touhou_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap _ing {
+        public static System.Drawing.Bitmap Banner_th01_off {
             get {
-                object obj = ResourceManager.GetObject("_ing", resourceCulture);
+                object obj = ResourceManager.GetObject("Banner_th01_off", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Touhou_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap aocf {
+        public static System.Drawing.Bitmap Banner_th02 {
             get {
-                object obj = ResourceManager.GetObject("aocf", resourceCulture);
+                object obj = ResourceManager.GetObject("Banner_th02", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace Touhou_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap aocfg {
+        public static System.Drawing.Bitmap Banner_th02_off {
             get {
-                object obj = ResourceManager.GetObject("aocfg", resourceCulture);
+                object obj = ResourceManager.GetObject("Banner_th02_off", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace Touhou_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ddc {
+        public static System.Drawing.Bitmap Banner_th03 {
             get {
-                object obj = ResourceManager.GetObject("ddc", resourceCulture);
+                object obj = ResourceManager.GetObject("Banner_th03", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace Touhou_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ddcg {
+        public static System.Drawing.Bitmap Banner_th03_off {
             get {
-                object obj = ResourceManager.GetObject("ddcg", resourceCulture);
+                object obj = ResourceManager.GetObject("Banner_th03_off", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace Touhou_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ds {
+        public static System.Drawing.Bitmap Banner_th04 {
             get {
-                object obj = ResourceManager.GetObject("ds", resourceCulture);
+                object obj = ResourceManager.GetObject("Banner_th04", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace Touhou_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap dsg {
+        public static System.Drawing.Bitmap Banner_th04_off {
             get {
-                object obj = ResourceManager.GetObject("dsg", resourceCulture);
+                object obj = ResourceManager.GetObject("Banner_th04_off", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,9 @@ namespace Touhou_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap eosd {
+        public static System.Drawing.Bitmap Banner_th05 {
             get {
-                object obj = ResourceManager.GetObject("eosd", resourceCulture);
+                object obj = ResourceManager.GetObject("Banner_th05", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +153,9 @@ namespace Touhou_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap eosdg {
+        public static System.Drawing.Bitmap Banner_th05_off {
             get {
-                object obj = ResourceManager.GetObject("eosdg", resourceCulture);
+                object obj = ResourceManager.GetObject("Banner_th05_off", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +163,9 @@ namespace Touhou_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap gfw {
+        public static System.Drawing.Bitmap Banner_th06 {
             get {
-                object obj = ResourceManager.GetObject("gfw", resourceCulture);
+                object obj = ResourceManager.GetObject("Banner_th06", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +173,9 @@ namespace Touhou_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap gfwg {
+        public static System.Drawing.Bitmap Banner_th06_off {
             get {
-                object obj = ResourceManager.GetObject("gfwg", resourceCulture);
+                object obj = ResourceManager.GetObject("Banner_th06_off", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +183,9 @@ namespace Touhou_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap gi {
+        public static System.Drawing.Bitmap Banner_th07 {
             get {
-                object obj = ResourceManager.GetObject("gi", resourceCulture);
+                object obj = ResourceManager.GetObject("Banner_th07", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +193,9 @@ namespace Touhou_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap gig {
+        public static System.Drawing.Bitmap Banner_th07_off {
             get {
-                object obj = ResourceManager.GetObject("gig", resourceCulture);
+                object obj = ResourceManager.GetObject("Banner_th07_off", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +203,9 @@ namespace Touhou_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap hbm {
+        public static System.Drawing.Bitmap Banner_th075 {
             get {
-                object obj = ResourceManager.GetObject("hbm", resourceCulture);
+                object obj = ResourceManager.GetObject("Banner_th075", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +213,9 @@ namespace Touhou_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap hbmg {
+        public static System.Drawing.Bitmap Banner_th075_off {
             get {
-                object obj = ResourceManager.GetObject("hbmg", resourceCulture);
+                object obj = ResourceManager.GetObject("Banner_th075_off", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +223,9 @@ namespace Touhou_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap hm {
+        public static System.Drawing.Bitmap Banner_th08 {
             get {
-                object obj = ResourceManager.GetObject("hm", resourceCulture);
+                object obj = ResourceManager.GetObject("Banner_th08", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +233,9 @@ namespace Touhou_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap hmg {
+        public static System.Drawing.Bitmap Banner_th08_off {
             get {
-                object obj = ResourceManager.GetObject("hmg", resourceCulture);
+                object obj = ResourceManager.GetObject("Banner_th08_off", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +243,9 @@ namespace Touhou_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap hrtp {
+        public static System.Drawing.Bitmap Banner_th09 {
             get {
-                object obj = ResourceManager.GetObject("hrtp", resourceCulture);
+                object obj = ResourceManager.GetObject("Banner_th09", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,9 +253,9 @@ namespace Touhou_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap hrtpg {
+        public static System.Drawing.Bitmap Banner_th09_off {
             get {
-                object obj = ResourceManager.GetObject("hrtpg", resourceCulture);
+                object obj = ResourceManager.GetObject("Banner_th09_off", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,9 +263,9 @@ namespace Touhou_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap hsifs {
+        public static System.Drawing.Bitmap Banner_th095 {
             get {
-                object obj = ResourceManager.GetObject("hsifs", resourceCulture);
+                object obj = ResourceManager.GetObject("Banner_th095", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,9 +273,9 @@ namespace Touhou_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap hsifsg {
+        public static System.Drawing.Bitmap Banner_th095_off {
             get {
-                object obj = ResourceManager.GetObject("hsifsg", resourceCulture);
+                object obj = ResourceManager.GetObject("Banner_th095_off", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,9 +283,9 @@ namespace Touhou_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap iamp {
+        public static System.Drawing.Bitmap Banner_th10 {
             get {
-                object obj = ResourceManager.GetObject("iamp", resourceCulture);
+                object obj = ResourceManager.GetObject("Banner_th10", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,9 +293,429 @@ namespace Touhou_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap iampg {
+        public static System.Drawing.Bitmap Banner_th10_off {
             get {
-                object obj = ResourceManager.GetObject("iampg", resourceCulture);
+                object obj = ResourceManager.GetObject("Banner_th10_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th105 {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th105", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th105_off {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th105_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th11 {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th11_off {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th11_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th12 {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th12_off {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th12_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th123 {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th123", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th123_off {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th123_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th125 {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th125", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th125_off {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th125_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th128 {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th128_off {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th128_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th13 {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th13", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th13_off {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th13_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th135 {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th135", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th135_off {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th135_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th14 {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th14", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th14_off {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th14_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th143 {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th143", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th143_off {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th143_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th145 {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th145", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th145_off {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th145_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th15 {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th15_off {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th15_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th155 {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th155", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th155_off {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th155_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th16 {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th16_off {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th16_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th165 {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th165", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th165_off {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th165_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th17 {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th17", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th17_2 {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th17_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th17_2_off {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th17_2_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th17_off {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th17_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th175 {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th175", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th175_off {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th175_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th18 {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th18", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th18_off {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th18_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th185 {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th185", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th185_off {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th185_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th19 {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th19", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Banner_th19_off {
+            get {
+                object obj = ResourceManager.GetObject("Banner_th19_off", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -406,16 +826,6 @@ namespace Touhou_Launcher.Properties {
         public static System.Drawing.Bitmap Icon_th095 {
             get {
                 object obj = ResourceManager.GetObject("Icon_th095", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Icon_th0951 {
-            get {
-                object obj = ResourceManager.GetObject("Icon_th0951", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -631,102 +1041,12 @@ namespace Touhou_Launcher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        public static System.Drawing.Bitmap isc {
+        public static byte[] Newtonsoft_Json {
             get {
-                object obj = ResourceManager.GetObject("isc", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap iscg {
-            get {
-                object obj = ResourceManager.GetObject("iscg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap lls {
-            get {
-                object obj = ResourceManager.GetObject("lls", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap llsg {
-            get {
-                object obj = ResourceManager.GetObject("llsg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap lolk {
-            get {
-                object obj = ResourceManager.GetObject("lolk", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap lolkg {
-            get {
-                object obj = ResourceManager.GetObject("lolkg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap mof {
-            get {
-                object obj = ResourceManager.GetObject("mof", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap mofg {
-            get {
-                object obj = ResourceManager.GetObject("mofg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap ms {
-            get {
-                object obj = ResourceManager.GetObject("ms", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap msg {
-            get {
-                object obj = ResourceManager.GetObject("msg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                object obj = ResourceManager.GetObject("Newtonsoft_Json", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -743,169 +1063,9 @@ namespace Touhou_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap pcb {
-            get {
-                object obj = ResourceManager.GetObject("pcb", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap pcbg {
-            get {
-                object obj = ResourceManager.GetObject("pcbg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap podd {
-            get {
-                object obj = ResourceManager.GetObject("podd", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap poddg {
-            get {
-                object obj = ResourceManager.GetObject("poddg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap pofv {
-            get {
-                object obj = ResourceManager.GetObject("pofv", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap pofvg {
-            get {
-                object obj = ResourceManager.GetObject("pofvg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         public static System.Drawing.Bitmap random {
             get {
                 object obj = ResourceManager.GetObject("random", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap sa {
-            get {
-                object obj = ResourceManager.GetObject("sa", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap sag {
-            get {
-                object obj = ResourceManager.GetObject("sag", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap soew {
-            get {
-                object obj = ResourceManager.GetObject("soew", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap soewg {
-            get {
-                object obj = ResourceManager.GetObject("soewg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap stb {
-            get {
-                object obj = ResourceManager.GetObject("stb", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap stbg {
-            get {
-                object obj = ResourceManager.GetObject("stbg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap swr {
-            get {
-                object obj = ResourceManager.GetObject("swr", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap swrg {
-            get {
-                object obj = ResourceManager.GetObject("swrg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap td {
-            get {
-                object obj = ResourceManager.GetObject("td", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap tdg {
-            get {
-                object obj = ResourceManager.GetObject("tdg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -917,166 +1077,6 @@ namespace Touhou_Launcher.Properties {
             get {
                 object obj = ResourceManager.GetObject("thicon", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap udoalg {
-            get {
-                object obj = ResourceManager.GetObject("udoalg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap udoalgg {
-            get {
-                object obj = ResourceManager.GetObject("udoalgg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap ufo {
-            get {
-                object obj = ResourceManager.GetObject("ufo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap ufog {
-            get {
-                object obj = ResourceManager.GetObject("ufog", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap ulil {
-            get {
-                object obj = ResourceManager.GetObject("ulil", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap ulilg {
-            get {
-                object obj = ResourceManager.GetObject("ulilg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap um {
-            get {
-                object obj = ResourceManager.GetObject("um", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap umg {
-            get {
-                object obj = ResourceManager.GetObject("umg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap uonl {
-            get {
-                object obj = ResourceManager.GetObject("uonl", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap uonlg {
-            get {
-                object obj = ResourceManager.GetObject("uonlg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap vd {
-            get {
-                object obj = ResourceManager.GetObject("vd", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap vdg {
-            get {
-                object obj = ResourceManager.GetObject("vdg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap wbawc {
-            get {
-                object obj = ResourceManager.GetObject("wbawc", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap wbawc2 {
-            get {
-                object obj = ResourceManager.GetObject("wbawc2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap wbawc2g {
-            get {
-                object obj = ResourceManager.GetObject("wbawc2g", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap wbawcg {
-            get {
-                object obj = ResourceManager.GetObject("wbawcg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

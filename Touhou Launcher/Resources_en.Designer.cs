@@ -70,33 +70,6 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Antinomy of Common Flowers.
-        /// </summary>
-        public static string AoCF {
-            get {
-                return ResourceManager.GetString("AoCF", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to AoCF.
-        /// </summary>
-        public static string AoCFShort {
-            get {
-                return ResourceManager.GetString("AoCFShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 15.5: Antinomy of Common Flowers.
-        /// </summary>
-        public static string AoCFTitle {
-            get {
-                return ResourceManager.GetString("AoCFTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Ascending.
         /// </summary>
         public static string ascendingToolStripMenuItem {
@@ -250,7 +223,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to thcrap_loader Location:.
+        ///   Looks up a localized string similar to thcrap Location:.
         /// </summary>
         public static string crapDirLabel {
             get {
@@ -340,33 +313,6 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Double Dealing Character.
-        /// </summary>
-        public static string DDC {
-            get {
-                return ResourceManager.GetString("DDC", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to DDC.
-        /// </summary>
-        public static string DDCShort {
-            get {
-                return ResourceManager.GetString("DDCShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 14: Double Dealing Character.
-        /// </summary>
-        public static string DDCTitle {
-            get {
-                return ResourceManager.GetString("DDCTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Japanese/vpatch.ini, English (non-THCRAP), Custom.exe, thcrap.
         /// </summary>
         public static string defaultExec {
@@ -430,65 +376,11 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Double Spoiler.
-        /// </summary>
-        public static string DS {
-            get {
-                return ResourceManager.GetString("DS", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to DS.
-        /// </summary>
-        public static string DSShort {
-            get {
-                return ResourceManager.GetString("DSShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 12.5: Double Spoiler.
-        /// </summary>
-        public static string DSTitle {
-            get {
-                return ResourceManager.GetString("DSTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to English Executable:.
         /// </summary>
         public static string enLabel {
             get {
                 return ResourceManager.GetString("enLabel", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Embodiment of Scarlet Devil.
-        /// </summary>
-        public static string EoSD {
-            get {
-                return ResourceManager.GetString("EoSD", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to EoSD.
-        /// </summary>
-        public static string EoSDShort {
-            get {
-                return ResourceManager.GetString("EoSDShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 06: the Embodiment of Scarlet Devil.
-        /// </summary>
-        public static string EoSDTitle {
-            get {
-                return ResourceManager.GetString("EoSDTitle", resourceCulture);
             }
         }
         
@@ -656,87 +548,6 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Great Fairy Wars.
-        /// </summary>
-        public static string GFW {
-            get {
-                return ResourceManager.GetString("GFW", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to GFW.
-        /// </summary>
-        public static string GFWShort {
-            get {
-                return ResourceManager.GetString("GFWShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 12.8: Great Fairy Wars.
-        /// </summary>
-        public static string GFWTitle {
-            get {
-                return ResourceManager.GetString("GFWTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Gouyoku Ibun.
-        /// </summary>
-        public static string GI {
-            get {
-                return ResourceManager.GetString("GI", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to GI.
-        /// </summary>
-        public static string GIShort {
-            get {
-                return ResourceManager.GetString("GIShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 17.5: Gouyoku Ibun.
-        /// </summary>
-        public static string GITitle {
-            get {
-                return ResourceManager.GetString("GITitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 100th Black Market.
-        /// </summary>
-        public static string HBM {
-            get {
-                return ResourceManager.GetString("HBM", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 100BM.
-        /// </summary>
-        public static string HBMShort {
-            get {
-                return ResourceManager.GetString("HBMShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 18.5: 100th Black Market.
-        /// </summary>
-        public static string HBMTitle {
-            get {
-                return ResourceManager.GetString("HBMTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Hard Disk Image Files.
         /// </summary>
         public static string hdiFilter {
@@ -764,114 +575,6 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hopeless Masquerade.
-        /// </summary>
-        public static string HM {
-            get {
-                return ResourceManager.GetString("HM", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to HM.
-        /// </summary>
-        public static string HMShort {
-            get {
-                return ResourceManager.GetString("HMShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 13.5: Hopeless Masquerade.
-        /// </summary>
-        public static string HMTitle {
-            get {
-                return ResourceManager.GetString("HMTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Highly Responsive to Prayers.
-        /// </summary>
-        public static string HRtP {
-            get {
-                return ResourceManager.GetString("HRtP", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to HRtP.
-        /// </summary>
-        public static string HRtPShort {
-            get {
-                return ResourceManager.GetString("HRtPShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 01: Highly Responsive to Prayers.
-        /// </summary>
-        public static string HRtPTitle {
-            get {
-                return ResourceManager.GetString("HRtPTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Hidden Star in Four Seasons.
-        /// </summary>
-        public static string HSiFS {
-            get {
-                return ResourceManager.GetString("HSiFS", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to HSiFS.
-        /// </summary>
-        public static string HSiFSShort {
-            get {
-                return ResourceManager.GetString("HSiFSShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 16: Hidden Star in Four Seasons.
-        /// </summary>
-        public static string HSiFSTitle {
-            get {
-                return ResourceManager.GetString("HSiFSTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Immaterial and Missing Power.
-        /// </summary>
-        public static string IaMP {
-            get {
-                return ResourceManager.GetString("IaMP", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to IaMP.
-        /// </summary>
-        public static string IaMPShort {
-            get {
-                return ResourceManager.GetString("IaMPShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 7.5: Immaterial and Missing Power.
-        /// </summary>
-        public static string IaMPTitle {
-            get {
-                return ResourceManager.GetString("IaMPTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to ID.
         /// </summary>
         public static string idColumn {
@@ -890,65 +593,11 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Imperishable Night.
-        /// </summary>
-        public static string IN {
-            get {
-                return ResourceManager.GetString("IN", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Info.
         /// </summary>
         public static string info {
             get {
                 return ResourceManager.GetString("info", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to IN.
-        /// </summary>
-        public static string INShort {
-            get {
-                return ResourceManager.GetString("INShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 08: Imperishable Night.
-        /// </summary>
-        public static string INTitle {
-            get {
-                return ResourceManager.GetString("INTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Impossible Spell Card.
-        /// </summary>
-        public static string ISC {
-            get {
-                return ResourceManager.GetString("ISC", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to ISC.
-        /// </summary>
-        public static string ISCShort {
-            get {
-                return ResourceManager.GetString("ISCShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 14.3: Impossible Spell Card.
-        /// </summary>
-        public static string ISCTitle {
-            get {
-                return ResourceManager.GetString("ISCTitle", resourceCulture);
             }
         }
         
@@ -1007,60 +656,6 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Lotus Land Story.
-        /// </summary>
-        public static string LLS {
-            get {
-                return ResourceManager.GetString("LLS", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to LLS.
-        /// </summary>
-        public static string LLSShort {
-            get {
-                return ResourceManager.GetString("LLSShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 04: Lotus Land Story.
-        /// </summary>
-        public static string LLSTitle {
-            get {
-                return ResourceManager.GetString("LLSTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Legacy of Lunatic Kingdom.
-        /// </summary>
-        public static string LoLK {
-            get {
-                return ResourceManager.GetString("LoLK", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to LoLK.
-        /// </summary>
-        public static string LoLKShort {
-            get {
-                return ResourceManager.GetString("LoLKShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 15: Legacy of Lunatic Kingdom.
-        /// </summary>
-        public static string LoLKTitle {
-            get {
-                return ResourceManager.GetString("LoLKTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Main Games.
         /// </summary>
         public static string mainGroup {
@@ -1075,60 +670,6 @@ namespace Touhou_Launcher {
         public static string minimizeToTray {
             get {
                 return ResourceManager.GetString("minimizeToTray", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Mountain of Faith.
-        /// </summary>
-        public static string MoF {
-            get {
-                return ResourceManager.GetString("MoF", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to MoF.
-        /// </summary>
-        public static string MoFShort {
-            get {
-                return ResourceManager.GetString("MoFShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 10: Mountain of Faith.
-        /// </summary>
-        public static string MoFTitle {
-            get {
-                return ResourceManager.GetString("MoFTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Mystic Square.
-        /// </summary>
-        public static string MS {
-            get {
-                return ResourceManager.GetString("MS", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to MS.
-        /// </summary>
-        public static string MSShort {
-            get {
-                return ResourceManager.GetString("MSShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 05: Mystic Square.
-        /// </summary>
-        public static string MSTitle {
-            get {
-                return ResourceManager.GetString("MSTitle", resourceCulture);
             }
         }
         
@@ -1268,92 +809,11 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Perfect Cherry Blossom.
-        /// </summary>
-        public static string PCB {
-            get {
-                return ResourceManager.GetString("PCB", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to PCB.
-        /// </summary>
-        public static string PCBShort {
-            get {
-                return ResourceManager.GetString("PCBShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 07: Perfect Cherry Blossom.
-        /// </summary>
-        public static string PCBTitle {
-            get {
-                return ResourceManager.GetString("PCBTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Play Random.
         /// </summary>
         public static string playRandomToolStripMenuItem {
             get {
                 return ResourceManager.GetString("playRandomToolStripMenuItem", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Phantasmagoria of Dim. Dream.
-        /// </summary>
-        public static string PoDD {
-            get {
-                return ResourceManager.GetString("PoDD", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to PoDD.
-        /// </summary>
-        public static string PoDDShort {
-            get {
-                return ResourceManager.GetString("PoDDShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 03: Phantasmagoria of Dim. Dream.
-        /// </summary>
-        public static string PoDDTitle {
-            get {
-                return ResourceManager.GetString("PoDDTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Phantasmagoria of Flower View.
-        /// </summary>
-        public static string PoFV {
-            get {
-                return ResourceManager.GetString("PoFV", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to PoFV.
-        /// </summary>
-        public static string PoFVShort {
-            get {
-                return ResourceManager.GetString("PoFVShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 09: Phantasmagoria of Flower View.
-        /// </summary>
-        public static string PoFVTitle {
-            get {
-                return ResourceManager.GetString("PoFVTitle", resourceCulture);
             }
         }
         
@@ -1478,33 +938,6 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Subterranean Animism.
-        /// </summary>
-        public static string SA {
-            get {
-                return ResourceManager.GetString("SA", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to SA.
-        /// </summary>
-        public static string SAShort {
-            get {
-                return ResourceManager.GetString("SAShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 11: Subterranean Animism.
-        /// </summary>
-        public static string SATitle {
-            get {
-                return ResourceManager.GetString("SATitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Selected Patches.
         /// </summary>
         public static string selectedPatches {
@@ -1541,33 +974,6 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Story of Eastern Wonderland.
-        /// </summary>
-        public static string SoEW {
-            get {
-                return ResourceManager.GetString("SoEW", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to SoEW.
-        /// </summary>
-        public static string SoEWShort {
-            get {
-                return ResourceManager.GetString("SoEWShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 02: the Story of Eastern Wonderland.
-        /// </summary>
-        public static string SoEWTitle {
-            get {
-                return ResourceManager.GetString("SoEWTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Sort.
         /// </summary>
         public static string sortToolStripMenuItem {
@@ -1586,60 +992,6 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Shoot the Bullet.
-        /// </summary>
-        public static string StB {
-            get {
-                return ResourceManager.GetString("StB", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to StB.
-        /// </summary>
-        public static string StBShort {
-            get {
-                return ResourceManager.GetString("StBShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 9.5: Shoot the Bullet.
-        /// </summary>
-        public static string StBTitle {
-            get {
-                return ResourceManager.GetString("StBTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Scarlet Weather Rhapsody.
-        /// </summary>
-        public static string SWR {
-            get {
-                return ResourceManager.GetString("SWR", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to SWR.
-        /// </summary>
-        public static string SWRShort {
-            get {
-                return ResourceManager.GetString("SWRShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 10.5: Scarlet Weather Rhapsody.
-        /// </summary>
-        public static string SWRTitle {
-            get {
-                return ResourceManager.GetString("SWRTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Twilight Frontier Games.
         /// </summary>
         public static string tasofroGroup {
@@ -1649,38 +1001,875 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Show Text?.
+        /// </summary>
+        public static string textToolStripMenuItem {
+            get {
+                return ResourceManager.GetString("textToolStripMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Highly Responsive to Prayers.
+        /// </summary>
+        public static string Th01 {
+            get {
+                return ResourceManager.GetString("Th01", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HRtP.
+        /// </summary>
+        public static string Th01Short {
+            get {
+                return ResourceManager.GetString("Th01Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 01: Highly Responsive to Prayers.
+        /// </summary>
+        public static string Th01Title {
+            get {
+                return ResourceManager.GetString("Th01Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Story of Eastern Wonderland.
+        /// </summary>
+        public static string Th02 {
+            get {
+                return ResourceManager.GetString("Th02", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SoEW.
+        /// </summary>
+        public static string Th02Short {
+            get {
+                return ResourceManager.GetString("Th02Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 02: the Story of Eastern Wonderland.
+        /// </summary>
+        public static string Th02Title {
+            get {
+                return ResourceManager.GetString("Th02Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phantasmagoria of Dim. Dream.
+        /// </summary>
+        public static string Th03 {
+            get {
+                return ResourceManager.GetString("Th03", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PoDD.
+        /// </summary>
+        public static string Th03Short {
+            get {
+                return ResourceManager.GetString("Th03Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 03: Phantasmagoria of Dim. Dream.
+        /// </summary>
+        public static string Th03Title {
+            get {
+                return ResourceManager.GetString("Th03Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lotus Land Story.
+        /// </summary>
+        public static string Th04 {
+            get {
+                return ResourceManager.GetString("Th04", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to LLS.
+        /// </summary>
+        public static string Th04Short {
+            get {
+                return ResourceManager.GetString("Th04Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 04: Lotus Land Story.
+        /// </summary>
+        public static string Th04Title {
+            get {
+                return ResourceManager.GetString("Th04Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mystic Square.
+        /// </summary>
+        public static string Th05 {
+            get {
+                return ResourceManager.GetString("Th05", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MS.
+        /// </summary>
+        public static string Th05Short {
+            get {
+                return ResourceManager.GetString("Th05Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 05: Mystic Square.
+        /// </summary>
+        public static string Th05Title {
+            get {
+                return ResourceManager.GetString("Th05Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Embodiment of Scarlet Devil.
+        /// </summary>
+        public static string Th06 {
+            get {
+                return ResourceManager.GetString("Th06", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EoSD.
+        /// </summary>
+        public static string Th06Short {
+            get {
+                return ResourceManager.GetString("Th06Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 06: the Embodiment of Scarlet Devil.
+        /// </summary>
+        public static string Th06Title {
+            get {
+                return ResourceManager.GetString("Th06Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Perfect Cherry Blossom.
+        /// </summary>
+        public static string Th07 {
+            get {
+                return ResourceManager.GetString("Th07", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Immaterial and Missing Power.
+        /// </summary>
+        public static string Th075 {
+            get {
+                return ResourceManager.GetString("Th075", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to IaMP.
+        /// </summary>
+        public static string Th075Short {
+            get {
+                return ResourceManager.GetString("Th075Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 07.5: Immaterial and Missing Power.
+        /// </summary>
+        public static string Th075Title {
+            get {
+                return ResourceManager.GetString("Th075Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PCB.
+        /// </summary>
+        public static string Th07Short {
+            get {
+                return ResourceManager.GetString("Th07Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 07: Perfect Cherry Blossom.
+        /// </summary>
+        public static string Th07Title {
+            get {
+                return ResourceManager.GetString("Th07Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Imperishable Night.
+        /// </summary>
+        public static string Th08 {
+            get {
+                return ResourceManager.GetString("Th08", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to IN.
+        /// </summary>
+        public static string Th08Short {
+            get {
+                return ResourceManager.GetString("Th08Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 08: Imperishable Night.
+        /// </summary>
+        public static string Th08Title {
+            get {
+                return ResourceManager.GetString("Th08Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phantasmagoria of Flower View.
+        /// </summary>
+        public static string Th09 {
+            get {
+                return ResourceManager.GetString("Th09", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shoot the Bullet.
+        /// </summary>
+        public static string Th095 {
+            get {
+                return ResourceManager.GetString("Th095", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to StB.
+        /// </summary>
+        public static string Th095Short {
+            get {
+                return ResourceManager.GetString("Th095Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 09.5: Shoot the Bullet.
+        /// </summary>
+        public static string Th095Title {
+            get {
+                return ResourceManager.GetString("Th095Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PoFV.
+        /// </summary>
+        public static string Th09Short {
+            get {
+                return ResourceManager.GetString("Th09Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 09: Phantasmagoria of Flower View.
+        /// </summary>
+        public static string Th09Title {
+            get {
+                return ResourceManager.GetString("Th09Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mountain of Faith.
+        /// </summary>
+        public static string Th10 {
+            get {
+                return ResourceManager.GetString("Th10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scarlet Weather Rhapsody.
+        /// </summary>
+        public static string Th105 {
+            get {
+                return ResourceManager.GetString("Th105", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SWR.
+        /// </summary>
+        public static string Th105Short {
+            get {
+                return ResourceManager.GetString("Th105Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 10.5: Scarlet Weather Rhapsody.
+        /// </summary>
+        public static string Th105Title {
+            get {
+                return ResourceManager.GetString("Th105Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MoF.
+        /// </summary>
+        public static string Th10Short {
+            get {
+                return ResourceManager.GetString("Th10Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 10: Mountain of Faith.
+        /// </summary>
+        public static string Th10Title {
+            get {
+                return ResourceManager.GetString("Th10Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Subterranean Animism.
+        /// </summary>
+        public static string Th11 {
+            get {
+                return ResourceManager.GetString("Th11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SA.
+        /// </summary>
+        public static string Th11Short {
+            get {
+                return ResourceManager.GetString("Th11Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 11: Subterranean Animism.
+        /// </summary>
+        public static string Th11Title {
+            get {
+                return ResourceManager.GetString("Th11Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Undefined Fantastic Object.
+        /// </summary>
+        public static string Th12 {
+            get {
+                return ResourceManager.GetString("Th12", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hisoutensoku.
+        /// </summary>
+        public static string Th123 {
+            get {
+                return ResourceManager.GetString("Th123", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hisoutensoku.
+        /// </summary>
+        public static string Th123Short {
+            get {
+                return ResourceManager.GetString("Th123Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 12.3: Hisoutensoku.
+        /// </summary>
+        public static string Th123Title {
+            get {
+                return ResourceManager.GetString("Th123Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Double Spoiler.
+        /// </summary>
+        public static string Th125 {
+            get {
+                return ResourceManager.GetString("Th125", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DS.
+        /// </summary>
+        public static string Th125Short {
+            get {
+                return ResourceManager.GetString("Th125Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 12.5: Double Spoiler.
+        /// </summary>
+        public static string Th125Title {
+            get {
+                return ResourceManager.GetString("Th125Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Great Fairy Wars.
+        /// </summary>
+        public static string Th128 {
+            get {
+                return ResourceManager.GetString("Th128", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GFW.
+        /// </summary>
+        public static string Th128Short {
+            get {
+                return ResourceManager.GetString("Th128Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 12.8: Great Fairy Wars.
+        /// </summary>
+        public static string Th128Title {
+            get {
+                return ResourceManager.GetString("Th128Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UFO.
+        /// </summary>
+        public static string Th12Short {
+            get {
+                return ResourceManager.GetString("Th12Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 12: Undefined Fantastic Object.
+        /// </summary>
+        public static string Th12Title {
+            get {
+                return ResourceManager.GetString("Th12Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ten Desires.
         /// </summary>
-        public static string TD {
+        public static string Th13 {
             get {
-                return ResourceManager.GetString("TD", resourceCulture);
+                return ResourceManager.GetString("Th13", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hopeless Masquerade.
+        /// </summary>
+        public static string Th135 {
+            get {
+                return ResourceManager.GetString("Th135", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HM.
+        /// </summary>
+        public static string Th135Short {
+            get {
+                return ResourceManager.GetString("Th135Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 13.5: Hopeless Masquerade.
+        /// </summary>
+        public static string Th135Title {
+            get {
+                return ResourceManager.GetString("Th135Title", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to TD.
         /// </summary>
-        public static string TDShort {
+        public static string Th13Short {
             get {
-                return ResourceManager.GetString("TDShort", resourceCulture);
+                return ResourceManager.GetString("Th13Short", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Touhou 13: Ten Desires.
         /// </summary>
-        public static string TDTitle {
+        public static string Th13Title {
             get {
-                return ResourceManager.GetString("TDTitle", resourceCulture);
+                return ResourceManager.GetString("Th13Title", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Show Text?.
+        ///   Looks up a localized string similar to Double Dealing Character.
         /// </summary>
-        public static string textToolStripMenuItem {
+        public static string Th14 {
             get {
-                return ResourceManager.GetString("textToolStripMenuItem", resourceCulture);
+                return ResourceManager.GetString("Th14", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Impossible Spell Card.
+        /// </summary>
+        public static string Th143 {
+            get {
+                return ResourceManager.GetString("Th143", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ISC.
+        /// </summary>
+        public static string Th143Short {
+            get {
+                return ResourceManager.GetString("Th143Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 14.3: Impossible Spell Card.
+        /// </summary>
+        public static string Th143Title {
+            get {
+                return ResourceManager.GetString("Th143Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Urban Legend in Limbo.
+        /// </summary>
+        public static string Th145 {
+            get {
+                return ResourceManager.GetString("Th145", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ULiL.
+        /// </summary>
+        public static string Th145Short {
+            get {
+                return ResourceManager.GetString("Th145Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 14.5: Urban Legend in Limbo.
+        /// </summary>
+        public static string Th145Title {
+            get {
+                return ResourceManager.GetString("Th145Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DDC.
+        /// </summary>
+        public static string Th14Short {
+            get {
+                return ResourceManager.GetString("Th14Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 14: Double Dealing Character.
+        /// </summary>
+        public static string Th14Title {
+            get {
+                return ResourceManager.GetString("Th14Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Legacy of Lunatic Kingdom.
+        /// </summary>
+        public static string Th15 {
+            get {
+                return ResourceManager.GetString("Th15", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Antinomy of Common Flowers.
+        /// </summary>
+        public static string Th155 {
+            get {
+                return ResourceManager.GetString("Th155", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AoCF.
+        /// </summary>
+        public static string Th155Short {
+            get {
+                return ResourceManager.GetString("Th155Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 15.5: Antinomy of Common Flowers.
+        /// </summary>
+        public static string Th155Title {
+            get {
+                return ResourceManager.GetString("Th155Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to LoLK.
+        /// </summary>
+        public static string Th15Short {
+            get {
+                return ResourceManager.GetString("Th15Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 15: Legacy of Lunatic Kingdom.
+        /// </summary>
+        public static string Th15Title {
+            get {
+                return ResourceManager.GetString("Th15Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hidden Star in Four Seasons.
+        /// </summary>
+        public static string Th16 {
+            get {
+                return ResourceManager.GetString("Th16", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Violet Detector.
+        /// </summary>
+        public static string Th165 {
+            get {
+                return ResourceManager.GetString("Th165", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VD.
+        /// </summary>
+        public static string Th165Short {
+            get {
+                return ResourceManager.GetString("Th165Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 16.5: Violet Detector.
+        /// </summary>
+        public static string Th165Title {
+            get {
+                return ResourceManager.GetString("Th165Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HSiFS.
+        /// </summary>
+        public static string Th16Short {
+            get {
+                return ResourceManager.GetString("Th16Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 16: Hidden Star in Four Seasons.
+        /// </summary>
+        public static string Th16Title {
+            get {
+                return ResourceManager.GetString("Th16Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wily Beast and Weakest Creature.
+        /// </summary>
+        public static string Th17 {
+            get {
+                return ResourceManager.GetString("Th17", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gouyoku Ibun.
+        /// </summary>
+        public static string Th175 {
+            get {
+                return ResourceManager.GetString("Th175", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GI.
+        /// </summary>
+        public static string Th175Short {
+            get {
+                return ResourceManager.GetString("Th175Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 17.5: Gouyoku Ibun.
+        /// </summary>
+        public static string Th175Title {
+            get {
+                return ResourceManager.GetString("Th175Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WBaWC.
+        /// </summary>
+        public static string Th17Short {
+            get {
+                return ResourceManager.GetString("Th17Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 17: Wily Beast and Weakest Creature.
+        /// </summary>
+        public static string Th17Title {
+            get {
+                return ResourceManager.GetString("Th17Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unconnected Marketeers.
+        /// </summary>
+        public static string Th18 {
+            get {
+                return ResourceManager.GetString("Th18", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 100th Black Market.
+        /// </summary>
+        public static string Th185 {
+            get {
+                return ResourceManager.GetString("Th185", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 100BM.
+        /// </summary>
+        public static string Th185Short {
+            get {
+                return ResourceManager.GetString("Th185Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 18.5: 100th Black Market.
+        /// </summary>
+        public static string Th185Title {
+            get {
+                return ResourceManager.GetString("Th185Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UM.
+        /// </summary>
+        public static string Th18Short {
+            get {
+                return ResourceManager.GetString("Th18Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 18: Unconnected Marketeers.
+        /// </summary>
+        public static string Th18Title {
+            get {
+                return ResourceManager.GetString("Th18Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unfinished Dream of All Living Ghost.
+        /// </summary>
+        public static string Th19 {
+            get {
+                return ResourceManager.GetString("Th19", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UDoALG.
+        /// </summary>
+        public static string Th19Short {
+            get {
+                return ResourceManager.GetString("Th19Short", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Touhou 19: Unfinished Dream of All Living Ghost.
+        /// </summary>
+        public static string Th19Title {
+            get {
+                return ResourceManager.GetString("Th19Title", resourceCulture);
             }
         }
         
@@ -1748,141 +1937,6 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Unfinished Dream of All Living Ghost.
-        /// </summary>
-        public static string UDoALG {
-            get {
-                return ResourceManager.GetString("UDoALG", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to UDoALG.
-        /// </summary>
-        public static string UDoALGShort {
-            get {
-                return ResourceManager.GetString("UDoALGShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 19: Unfinished Dream of All Living Ghost.
-        /// </summary>
-        public static string UDoALGTitle {
-            get {
-                return ResourceManager.GetString("UDoALGTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Undefined Fantastic Object.
-        /// </summary>
-        public static string UFO {
-            get {
-                return ResourceManager.GetString("UFO", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to UFO.
-        /// </summary>
-        public static string UFOShort {
-            get {
-                return ResourceManager.GetString("UFOShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 12: Undefined Fantastic Object.
-        /// </summary>
-        public static string UFOTitle {
-            get {
-                return ResourceManager.GetString("UFOTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Urban Legend in Limbo.
-        /// </summary>
-        public static string ULiL {
-            get {
-                return ResourceManager.GetString("ULiL", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to ULiL.
-        /// </summary>
-        public static string ULiLShort {
-            get {
-                return ResourceManager.GetString("ULiLShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 14.5: Urban Legend in Limbo.
-        /// </summary>
-        public static string ULiLTitle {
-            get {
-                return ResourceManager.GetString("ULiLTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Unconnected Marketeers.
-        /// </summary>
-        public static string UM {
-            get {
-                return ResourceManager.GetString("UM", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to UM.
-        /// </summary>
-        public static string UMShort {
-            get {
-                return ResourceManager.GetString("UMShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 18: Unconnected Marketeers.
-        /// </summary>
-        public static string UMTitle {
-            get {
-                return ResourceManager.GetString("UMTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Hisoutensoku.
-        /// </summary>
-        public static string UoNL {
-            get {
-                return ResourceManager.GetString("UoNL", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Hisoutensoku.
-        /// </summary>
-        public static string UoNLShort {
-            get {
-                return ResourceManager.GetString("UoNLShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 12.3: Hisoutensoku.
-        /// </summary>
-        public static string UoNLTitle {
-            get {
-                return ResourceManager.GetString("UoNLTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to With Applocale.
         /// </summary>
         public static string useApplocale {
@@ -1892,65 +1946,11 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Violet Detector.
-        /// </summary>
-        public static string VD {
-            get {
-                return ResourceManager.GetString("VD", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to VD.
-        /// </summary>
-        public static string VDShort {
-            get {
-                return ResourceManager.GetString("VDShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 16.5: Violet Detector.
-        /// </summary>
-        public static string VDTitle {
-            get {
-                return ResourceManager.GetString("VDTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to View.
         /// </summary>
         public static string viewToolStripMenuItem {
             get {
                 return ResourceManager.GetString("viewToolStripMenuItem", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Wily Beast and Weakest Creature.
-        /// </summary>
-        public static string WBaWC {
-            get {
-                return ResourceManager.GetString("WBaWC", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to WBaWC.
-        /// </summary>
-        public static string WBaWCShort {
-            get {
-                return ResourceManager.GetString("WBaWCShort", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Touhou 17: Wily Beast and Weakest Creature.
-        /// </summary>
-        public static string WBaWCTitle {
-            get {
-                return ResourceManager.GetString("WBaWCTitle", resourceCulture);
             }
         }
         

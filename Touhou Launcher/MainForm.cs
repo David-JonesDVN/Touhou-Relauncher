@@ -1,14 +1,15 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net.Http;
+using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
-using System.IO;
-using System.Diagnostics;
-using Newtonsoft.Json;
 
 namespace Touhou_Launcher
 {
@@ -44,7 +45,7 @@ namespace Touhou_Launcher
             public string Text { get; set; }
             public List<SubNode> Nodes = new List<SubNode>();
             public Dictionary<string, string> Games = new Dictionary<string, string>();
-            
+
             public SubNode(string Text = "The root node")
             {
                 this.Text = Text;
@@ -88,7 +89,7 @@ namespace Touhou_Launcher
             public string StartingRepo = @"https://srv.thpatch.net/";
             public Configs()
             {
-                for (int i = 0; i < gameCFG.Length ; i++)
+                for (int i = 0; i < gameCFG.Length; i++)
                 {
                     int category;
                     if (i < mainGameCount)
@@ -98,80 +99,90 @@ namespace Touhou_Launcher
                     else
                         category = 2;
 
-                    gameCFG[i] = new GameConfig(category);
-                    gameCFG[i].GameDir = new List<string> { "", "", "", "" };
-                    gameCFG[i].crapCFG = new List<string> { "None", "None" };
-                    gameCFG[i].appLocale = new List<bool> { false, false, false, false };
+                    gameCFG[i] = new GameConfig(category)
+                    {
+                        GameDir = new List<string> { "", "", "", "" },
+                        crapCFG = new List<string> { "None", "None" },
+                        appLocale = new List<bool> { false, false, false, false }
+                    };
                 }
             }
         }
 
         private FormWindowState lastState = FormWindowState.Normal;
-        private const int mainGameCount = 19;
-        private const int fightingGameCount = 6;
-        private const int otherGameCount = 7;
-        private const int totalGameCount = mainGameCount + fightingGameCount + otherGameCount;
+        public const int pc98GameCount = 5;
+        public const int mainWindowsGameCount = 14;
+        public const int mainGameCount = pc98GameCount + mainWindowsGameCount;
+        public const int fightingGameCount = 6;
+        public const int otherGameCount = 7;
+        public const int totalGameCount = mainGameCount + fightingGameCount + otherGameCount;
         public static Configs curCfg = Configs.Load();
         public static System.Resources.ResourceManager rm;
-        public static Dictionary<string, int> dirToNumber = new Dictionary<string, int>
+        public static HttpClient client = new HttpClient();
+        public static List<string> defaultExeOptions = new List<string>
         {
-            {"jp", 0},
-            {"en", 1},
-            {"custom", 2},
-            {"crap", 3}
+            "jp",
+            "en",
+            "custom",
+            "crap"
         };
-        public static List<int> idToNumber = new List<int>
+        public static List<double> gameNumbers = new List<double>
         {
-            1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 75, 105, 123, 135, 145, 155, 95, 125, 128, 143, 165, 175, 185
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 7.5, 10.5, 12.3, 13.5, 14.5, 15.5, 9.5, 12.5, 12.8, 14.3, 16.5, 17.5, 18.5
         };
-        public static Dictionary<string, int> nameToID = new Dictionary<string, int>
-        {
-            {"HRtP", 0},
-            {"SoEW", 1},
-            {"PoDD", 2},
-            {"LLS", 3},
-            {"MS", 4},
-            {"EoSD", 5},
-            {"PCB", 6},
-            {"IN", 7},
-            {"PoFV", 8},
-            {"MoF", 9},
-            {"SA", 10},
-            {"UFO", 11},
-            {"TD", 12},
-            {"DDC", 13},
-            {"LoLK", 14},
-            {"HSiFS", 15},
-            {"WBaWC", 16},
-            {"UM", 17},
-            {"UDoALG", 18},
-            {"IaMP", 19},
-            {"SWR", 20},
-            {"UoNL", 21},
-            {"HM", 22},
-            {"ULiL", 23},
-            {"AoCF", 24},
-            {"StB", 25},
-            {"DS", 26},
-            {"GFW", 27},
-            {"ISC", 28},
-            {"VD", 29},
-            {"GI", 30},
-            {"HBM", 31}
-        };
+        public static List<string> gameNames = ConstructGameNames();
 
-        public static IEnumerable<Control> GetAll(Control control, Type type)
+        private static List<string> ConstructGameNames()
         {
-            var controls = control.Controls.Cast<Control>();
+            List<string> gameNames = new List<string>();
 
-            return controls.SelectMany(ctrl => GetAll(ctrl, type))
-                                      .Concat(controls)
-                                      .Where(c => c.GetType() == type);
+            foreach (double gameNumber in gameNumbers)
+            {
+                gameNames.Add("Th" + FormatGameNumber(gameNumber));
+            }
+
+            return gameNames;
+        }
+
+
+        public static string FormatGameNumber(double gameNumber)
+        {
+            string formatted = gameNumber.ToString("00.0");
+            if (formatted.EndsWith(".0"))
+                formatted = formatted.Replace(".0", "");
+            else
+                formatted = formatted.Replace(".", "");
+
+            return formatted;
+        }
+
+        public static double UnformatGameNumber(string formatted)
+        {
+            // Replay sites don't prefix the game numbers with 0s, so these two games have to be checked manually.
+            // As long as ZUN doesn't make 75 mainline Touhou games, this should work properly.
+            if (formatted == "75")
+                return 7.5;
+            else if (formatted == "95")
+                return 9.5;
+
+            double number = Convert.ToDouble(formatted);
+            if (formatted.Length == 3)
+                number /= 10;
+
+            return number;
+        }
+
+        public static IEnumerable<T> GetAll<T>(Control control) where T : Control
+        {
+            IEnumerable<Control> controls = control.Controls.Cast<Control>();
+
+            return controls.SelectMany(ctrl => GetAll<T>(ctrl))
+                                      .Concat(controls).OfType<T>();
         }
 
         private IEnumerable<ContextMenuStrip> GetContextMenus(Control control)
         {
-            return control.GetType().GetFields(System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic).Select(f => f.GetValue(this)).OfType<ContextMenuStrip>();
+            return control.GetType().GetFields(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic).Select(f => f.GetValue(this)).OfType<ContextMenuStrip>();
         }
 
         private SubNode TreeToJSON(TreeNodeCollection parent, SubNode serializableTree)
@@ -212,14 +223,14 @@ namespace Touhou_Launcher
             }
         }
 
-        public static Process startProcess(string dir, string args = "")
+        public static Process startProcess(string file, string args = "")
         {
-            ProcessStartInfo startInfo = new ProcessStartInfo(dir, args);
+            ProcessStartInfo startInfo = new ProcessStartInfo(file, args);
             startInfo.WorkingDirectory = Path.GetDirectoryName(startInfo.FileName);
             return Process.Start(startInfo);
         }
 
-        public static bool NekoProject(string hdi)
+        public static bool NekoProject(string hdiFile)
         {
             /* Code for dedicating a config file to each game
             if (File.Exists(Path.GetDirectoryName(curCfg.np2Dir + "\\np21nt." + game + ".ini")))
@@ -230,51 +241,55 @@ namespace Touhou_Launcher
                 return NekoProject(hdi, game);
             }
              */
-            string[] config = File.ReadAllLines(Path.GetDirectoryName(curCfg.np2Dir) + "\\np21nt.ini", Encoding.Unicode);
-            for (int i = 0; i < config.Length; i++)
+            string iniFilePath = Path.ChangeExtension(curCfg.np2Dir, "ini");
+            if (File.Exists(iniFilePath))
             {
-                if (config[i].Contains("HDD1FILE="))
+                string[] config = File.ReadAllLines(iniFilePath, Encoding.Unicode);
+                for (int i = 0; i < config.Length; i++)
                 {
-                    if (config[i] != "HDD1FILE=" + hdi)
+                    if (config[i].Contains("HDD1FILE="))
                     {
-                        try
+                        if (config[i] != "HDD1FILE=" + hdiFile)
                         {
-                            config[i] = "HDD1FILE=" + hdi;
-                            File.WriteAllLines(Path.GetDirectoryName(curCfg.np2Dir) + "\\np21nt.ini", config, Encoding.Unicode);
+                            try
+                            {
+                                config[i] = "HDD1FILE=" + hdiFile;
+                                File.WriteAllLines(iniFilePath, config, Encoding.Unicode);
+                            }
+                            catch (Exception)
+                            {
+                                return false;
+                            }
                         }
-                        catch (Exception)
-                        {
-                            return false;
-                        }
+                        return true;
                     }
-                    return true;
                 }
             }
             return false;
         }
 
-        public static void launchHDI(string dir)
+        public static void launchHDI(string file)
         {
             if (!File.Exists(curCfg.np2Dir))
                 MessageBox.Show(rm.GetString("errorNP2NotFound"));
-            else if (!NekoProject(dir))
+            else if (!NekoProject(file))
                 MessageBox.Show(rm.GetString("errorInvalidNP2INI"));
             else
                 startProcess(curCfg.np2Dir);
         }
 
-        public static void launchGame(int game, int dir, bool applocale)
+        public static void launchGame(int game, int defaultExe, bool applocale)
         {
-            string gameDir = curCfg.gameCFG[game].GameDir[dir];
-            if (File.Exists(gameDir))
+            string gameFile = curCfg.gameCFG[game].GameDir[defaultExe];
+            if (File.Exists(gameFile))
             {
                 if (applocale && File.Exists("C:\\Windows\\AppPatch\\AppLoc.exe"))
                 {
-                    startProcess("C:\\Windows\\AppPatch\\AppLoc.exe", "\"" + gameDir + "\" \"/L0411\"");
+                    startProcess("C:\\Windows\\AppPatch\\AppLoc.exe", "\"" + gameFile + "\" \"/L0411\"");
                 }
                 else
                 {
-                    startProcess(gameDir);
+                    startProcess(gameFile);
                 }
             }
             else
@@ -285,61 +300,80 @@ namespace Touhou_Launcher
 
         public static void launchcrap(int game)
         {
-            if (!File.Exists(curCfg.crapDir + "\\bin\\thcrap_loader.exe"))
+            if (!File.Exists(curCfg.crapDir + "\\thcrap_loader.exe"))
                 MessageBox.Show(rm.GetString("errorcrapNotFound"));
             else if (curCfg.gameCFG[game].crapCFG[0] == "None" || curCfg.gameCFG[game].crapCFG[1] == "None")
                 MessageBox.Show(rm.GetString("errorcrapConfigNotSet"));
             else
             {
-                startProcess(curCfg.crapDir + "\\bin\\thcrap_loader.exe", "\"" + curCfg.crapDir + "\\config\\" + curCfg.gameCFG[game].crapCFG[1] + "\" " + curCfg.gameCFG[game].crapCFG[0]);
+                startProcess(curCfg.crapDir + "\\thcrap_loader.exe", "\"" + curCfg.crapDir + "\\config\\" + curCfg.gameCFG[game].crapCFG[1] + "\" " + curCfg.gameCFG[game].crapCFG[0]);
             }
         }
 
-        public static string[] FileBrowser(string title, string filter, bool multiSelect = false)
+        public static string[] FileBrowser(IWin32Window owner, string title, string filter, string initialDirectory = "", bool multiSelect = false)
         {
-            OpenFileDialog browser = new OpenFileDialog();
-            browser.Filter = filter;
-            browser.FilterIndex = 1;
-            browser.RestoreDirectory = false;
-            browser.Multiselect = multiSelect;
-            browser.Title = title;
-            if (browser.ShowDialog() == DialogResult.OK)
-                return browser.FileNames;
-            else return new string[0];
+            using (OpenFileDialog browser = new OpenFileDialog())
+            {
+                browser.Filter = filter;
+                browser.FilterIndex = 1;
+                browser.InitialDirectory = initialDirectory; // Sets the initial folder
+                browser.Multiselect = multiSelect;
+                browser.Title = title;
+                if (browser.ShowDialog(owner) == DialogResult.OK)
+                    return browser.FileNames;
+                else return Array.Empty<string>();
+            }
+        }
+
+        public static string FolderBrowser(IWin32Window owner, string title, string initialDirectory = "")
+        {
+            using (FolderBrowserDialog browser = new FolderBrowserDialog())
+            {
+                browser.SelectedPath = initialDirectory; // Sets the initial folder
+                browser.Description = title;
+                if (browser.ShowDialog(owner) == DialogResult.OK)
+                    return browser.SelectedPath;
+                else return null;
+            }
         }
 
         private void downloadReplay(string path, string name, Uri url, bool th10full = false)
         {
-            string message = String.Format(rm.GetString("replayDownload"), name, path);
+            string message = string.Format(rm.GetString("replayDownload"), name, path);
             Console.WriteLine(rm.GetString("replayDownload"));
             if (th10full)
             {
                 message = rm.GetString("replayFull") + message;
             }
             DialogResult confirm = MessageBox.Show(message, rm.GetString("replayDownloadTitle"), MessageBoxButtons.YesNoCancel);
-            using (System.Net.WebClient wc = new System.Net.WebClient())
+            if (confirm == DialogResult.Yes)
             {
-                if (confirm == DialogResult.Yes)
+                DownloadFile(url, path + name);
+            }
+            else if (confirm == DialogResult.No)
+            {
+                using (SaveFileDialog browser = new SaveFileDialog())
                 {
-                    wc.DownloadFile(url, path + name);
-                }
-                else if (confirm == DialogResult.No)
-                {
-                    SaveFileDialog browser = new SaveFileDialog();
                     browser.Filter = rm.GetString("replayFilter") + " (*.rpy)|*.rpy|" + rm.GetString("allFilter") + " (*.*)|*.*";
                     browser.InitialDirectory = path;
                     browser.RestoreDirectory = true;
                     browser.FileName = name;
-                    if (browser.ShowDialog() == DialogResult.OK)
-                        wc.DownloadFile(url, browser.FileName);
+                    if (browser.ShowDialog(this) == DialogResult.OK)
+                        DownloadFile(url, browser.FileName);
                 }
             }
+        }
+
+        private async void DownloadFile(Uri uri, string path)
+        {
+            byte[] bytes = await client.GetByteArrayAsync(uri);
+            File.WriteAllBytes(path, bytes);
         }
 
         private void LoadSettings()
         {
             InitializeLanguage();
-            foreach (Button btn in GetAll(games, typeof(Button)))
+            foreach (Button btn in GetAll<Button>(games))
                 if (btn.Name != "btnRandom")
                     RefreshButton(btn);
             JSONToTree(curCfg.Custom, customTree.Nodes);
@@ -351,13 +385,12 @@ namespace Touhou_Launcher
             minimizeToTray.Checked = curCfg.minimizeToTray;
             showTray.Checked = curCfg.showTray;
             np2Dir.Text = curCfg.np2Dir;
-            if (curCfg.crapDir != "")
-                crapDir.Text = curCfg.crapDir + "\\bin\\thcrap_loader.exe";
+            crapDir.Text = curCfg.crapDir;
             crapStartingRepo.Text = curCfg.StartingRepo;
-            foreach (CheckBox chk in GetAll(randomSettings, typeof(CheckBox)))
+            foreach (CheckBox chk in GetAll<CheckBox>(randomSettings))
             {
                 chk.CheckedChanged -= chkRandom_CheckedChanged;
-                chk.Checked = curCfg.gameCFG[nameToID[chk.Name.Substring(3)]].randomCheck;
+                chk.Checked = curCfg.gameCFG[gameNames.IndexOf(chk.Name.Substring(3))].randomCheck;
                 chk.CheckedChanged += chkRandom_CheckedChanged;
             }
         }
@@ -366,13 +399,17 @@ namespace Touhou_Launcher
         {
             switch (curCfg.language)
             {
-                case 0: rm = new System.Resources.ResourceManager("Touhou_Launcher.Resources_en", System.Reflection.Assembly.GetExecutingAssembly());
+                case 0:
+                    rm = new System.Resources.ResourceManager("Touhou_Launcher.Resources_en", Assembly.GetExecutingAssembly());
                     break;
-                case 1: rm = new System.Resources.ResourceManager("Touhou_Launcher.Resources_jp", System.Reflection.Assembly.GetExecutingAssembly());
+                case 1:
+                    rm = new System.Resources.ResourceManager("Touhou_Launcher.Resources_jp", Assembly.GetExecutingAssembly());
                     break;
-                case 2: rm = new System.Resources.ResourceManager("Touhou_Launcher.Resources_ru", System.Reflection.Assembly.GetExecutingAssembly());
+                case 2:
+                    rm = new System.Resources.ResourceManager("Touhou_Launcher.Resources_ru", Assembly.GetExecutingAssembly());
                     break;
-                case 3: if (File.Exists(Path.GetDirectoryName(Application.ExecutablePath) + "\\Resources_custom.resources"))
+                case 3:
+                    if (File.Exists(Path.GetDirectoryName(Application.ExecutablePath) + "\\Resources_custom.resources"))
                         rm = System.Resources.ResourceManager.CreateFileBasedResourceManager("Resources_custom", Path.GetDirectoryName(Application.ExecutablePath), null);
                     else
                         languageBox.SelectedIndex = 0;
@@ -394,11 +431,11 @@ namespace Touhou_Launcher
             {
                 tMenu.Text = rm.GetString(tMenu.Name.Substring(4));
             }
-            foreach (Button btn in GetAll(games, typeof(Button)))
+            foreach (Button btn in GetAll<Button>(games))
             {
                 if (btn.Name == "btnRandom")
                     btn.Text = rm.GetString(btn.Name.Substring(3));
-                else if (curCfg.gameCFG[nameToID[btn.Name.Substring(3)]].showText)
+                else if (curCfg.gameCFG[gameNames.IndexOf(btn.Name.Substring(3))].showText)
                     btn.Text = rm.GetString(btn.Name.Substring(3));
                 else
                     btn.Text = "";
@@ -412,7 +449,7 @@ namespace Touhou_Launcher
             {
                 tMenu.Text = rm.GetString(tMenu.Name);
             }
-            foreach (CheckBox chk in GetAll(randomSettings, typeof(CheckBox)))
+            foreach (CheckBox chk in GetAll<CheckBox>(randomSettings))
             {
                 chk.Text = rm.GetString(chk.Name.Substring(3) + "Short");
                 toolTip.SetToolTip(chk, rm.GetString(chk.Name.Substring(3) + "Title"));
@@ -469,14 +506,14 @@ namespace Touhou_Launcher
 
         public static void RefreshButton(Button btn)
         {
-            int game = nameToID[btn.Name.Substring(3)];
+            int game = gameNames.IndexOf(btn.Name.Substring(3));
             btn.ForeColor = curCfg.gameCFG[game].customText ? Color.FromArgb(curCfg.gameCFG[game].textColor) : Color.FromArgb(curCfg.gameCFG[game].defaultTextColor);
             if (curCfg.gameCFG[game].showBanner)
             {
                 bool exists = curCfg.gameCFG[game].crapCFG[0] != "None" && curCfg.gameCFG[game].crapCFG[1] != "None";
-                foreach (string dir in curCfg.gameCFG[game].GameDir)
+                foreach (string exe in curCfg.gameCFG[game].GameDir)
                 {
-                    if (dir != "" && dir != curCfg.gameCFG[game].GameDir[3])
+                    if (exe != "" && exe != curCfg.gameCFG[game].GameDir[3])
                     {
                         exists = true;
                         break;
@@ -487,14 +524,14 @@ namespace Touhou_Launcher
                     if (curCfg.gameCFG[game].customBanner && curCfg.gameCFG[game].bannerOn != "")
                         btn.BackgroundImage = Image.FromFile(curCfg.gameCFG[game].bannerOn);
                     else
-                        btn.BackgroundImage = (Bitmap)Touhou_Launcher.Properties.Resources.ResourceManager.GetObject((btn.Name == "btnIN" ? "_" : "") + btn.Name.Substring(3).ToLower());
+                        btn.BackgroundImage = (Bitmap)Properties.Resources.ResourceManager.GetObject("Banner_" + btn.Name.Substring(3).ToLower());
                 }
                 else
                 {
                     if (curCfg.gameCFG[game].customBanner && curCfg.gameCFG[game].bannerOff != "")
                         btn.BackgroundImage = Image.FromFile(curCfg.gameCFG[game].bannerOff);
                     else
-                        btn.BackgroundImage = (Bitmap)Touhou_Launcher.Properties.Resources.ResourceManager.GetObject((btn.Name == "btnIN" ? "_" : "") + btn.Name.Substring(3).ToLower() + "g");
+                        btn.BackgroundImage = (Bitmap)Properties.Resources.ResourceManager.GetObject("Banner_" + btn.Name.Substring(3).ToLower() + "_off");
 
                 }
             }
@@ -555,16 +592,18 @@ namespace Touhou_Launcher
                         else
                             offset++;
                     }
-                    backwardsComp[i] = new GameConfig(category);
-                    backwardsComp[i].GameDir = new List<string> { "", "", "", "" };
-                    backwardsComp[i].crapCFG = new List<string> { "None", "None" };
-                    backwardsComp[i].appLocale = new List<bool> { false, false, false, false };
+                    backwardsComp[i] = new GameConfig(category)
+                    {
+                        GameDir = new List<string> { "", "", "", "" },
+                        crapCFG = new List<string> { "None", "None" },
+                        appLocale = new List<bool> { false, false, false, false }
+                    };
                 }
                 curCfg.gameCFG = backwardsComp;
             }
-            foreach (Button btn in GetAll(games, typeof(Button)))
+            foreach (Button btn in GetAll<Button>(games))
                 if (btn.Name != "btnRandom")
-                    curCfg.gameCFG[nameToID[btn.Name.Substring(3)]].defaultTextColor = btn.ForeColor.ToArgb();
+                    curCfg.gameCFG[gameNames.IndexOf(btn.Name.Substring(3))].defaultTextColor = btn.ForeColor.ToArgb();
             LoadSettings();
         }
 
@@ -579,7 +618,7 @@ namespace Touhou_Launcher
         {
             if (this.WindowState == FormWindowState.Minimized)
             {
-                foreach (FlowLayoutPanel panel in GetAll(mainControl.SelectedTab, typeof(FlowLayoutPanel)))
+                foreach (FlowLayoutPanel panel in GetAll<FlowLayoutPanel>(mainControl.SelectedTab))
                 {
                     panel.AutoScroll = false;
                 }
@@ -591,7 +630,7 @@ namespace Touhou_Launcher
             }
             else if (lastState == FormWindowState.Minimized)
             {
-                foreach (FlowLayoutPanel panel in GetAll(mainControl.SelectedTab, typeof(FlowLayoutPanel)))
+                foreach (FlowLayoutPanel panel in GetAll<FlowLayoutPanel>(mainControl.SelectedTab))
                 {
                     panel.AutoScroll = true;
                 }
@@ -606,28 +645,22 @@ namespace Touhou_Launcher
             curCfg.Save();
         }
 
-        private void DragEnter(object sender, DragEventArgs e)
-        {
-            if (e.Data.GetDataPresent(DataFormats.FileDrop))
-                e.Effect = DragDropEffects.Copy;
-        }
-
         private void btn_Click(object sender, EventArgs e)
         {
-            int game = nameToID[((Button)sender).Name.Substring(3)];
+            int game = gameNames.IndexOf(((Button)sender).Name.Substring(3));
             GameConfig curGame = curCfg.gameCFG[game];
             if (File.Exists(curGame.GameDir[curGame.DefaultDir]) || curGame.DefaultDir == 3)
             {
-                if (game > 4)
+                if (game < pc98GameCount)
+                {
+                    launchHDI(curGame.GameDir[0]);
+                }
+                else
                 {
                     if (curGame.DefaultDir == 3)
                         launchcrap(game);
                     else
                         launchGame(game, curCfg.gameCFG[game].DefaultDir, curCfg.gameCFG[game].DefaultApplocale);
-                }
-                else
-                {
-                    launchHDI(curGame.GameDir[0]);
                 }
                 if (curCfg.autoClose)
                     Application.Exit();
@@ -639,7 +672,7 @@ namespace Touhou_Launcher
         private void btnRandom_Click(object sender, EventArgs e)
         {
             List<string> gameList = new List<string>();
-            foreach (CheckBox box in GetAll(randomSettings, typeof(CheckBox)))
+            foreach (CheckBox box in GetAll<CheckBox>(randomSettings))
             {
                 if (box.Checked)
                     gameList.Add(box.Name.Substring(3));
@@ -669,20 +702,22 @@ namespace Touhou_Launcher
         private void configureToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Button btn = (Button)((ContextMenuStrip)((ToolStripMenuItem)sender).GetCurrentParent()).Tag;
-            ConfigForm gameConfig = new ConfigForm(btn);
-            gameConfig.ShowDialog();
+            using (ConfigForm gameConfig = new ConfigForm(btn))
+            {
+                gameConfig.ShowDialog(this);
+            }
         }
 
         private void customAdd_Click(object sender, EventArgs e)
         {
             if (customTree.SelectedNode != null)
             {
-                customAddItem(FileBrowser(rm.GetString("gameSelectTitle"), rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + rm.GetString("allFilter") + " (*.*)|*.*", true));
+                customAddItem(FileBrowser(this, rm.GetString("gameSelectTitle"), rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + rm.GetString("allFilter") + " (*.*)|*.*"));
             }
-			else
-			{
-				MessageBox.Show(rm.GetString("errorNoCategorySelected"));
-			}
+            else
+            {
+                MessageBox.Show(rm.GetString("errorNoCategorySelected"));
+            }
         }
 
         private void customTree_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
@@ -728,15 +763,14 @@ namespace Touhou_Launcher
 
         private void renameCategoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (customTree.SelectedNode != null)
-                customTree.SelectedNode.BeginEdit();
+            customTree.SelectedNode?.BeginEdit();
         }
 
         private void deleteCategoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (customTree.SelectedNode != null)
             {
-                if (MessageBox.Show(String.Format(rm.GetString("customCategoryDeleteConfirm"), customTree.SelectedNode.Text), "", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                if (MessageBox.Show(string.Format(rm.GetString("customCategoryDeleteConfirm"), customTree.SelectedNode.Text), "", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     customTree.SelectedNode.Remove();
                     curCfg.Custom = TreeToJSON(customTree.Nodes, new SubNode());
@@ -787,15 +821,20 @@ namespace Touhou_Launcher
             }
             switch (customList.View)
             {
-                case View.LargeIcon: largeIconsToolStripMenuItem.Checked = true;
+                case View.LargeIcon:
+                    largeIconsToolStripMenuItem.Checked = true;
                     break;
-                case View.SmallIcon: smallIconsToolStripMenuItem.Checked = true;
+                case View.SmallIcon:
+                    smallIconsToolStripMenuItem.Checked = true;
                     break;
-                case View.List: listToolStripMenuItem.Checked = true;
+                case View.List:
+                    listToolStripMenuItem.Checked = true;
                     break;
-                case View.Details: detailsToolStripMenuItem.Checked = true;
+                case View.Details:
+                    detailsToolStripMenuItem.Checked = true;
                     break;
-                case View.Tile: tileToolStripMenuItem.Checked = true;
+                case View.Tile:
+                    tileToolStripMenuItem.Checked = true;
                     break;
             }
             foreach (ToolStripMenuItem menu in sortToolStripMenuItem.DropDownItems)
@@ -804,9 +843,11 @@ namespace Touhou_Launcher
             }
             switch (customList.Sorting)
             {
-                case SortOrder.Ascending: ascendingToolStripMenuItem.Checked = true;
+                case SortOrder.Ascending:
+                    ascendingToolStripMenuItem.Checked = true;
                     break;
-                case SortOrder.Descending: descendingToolStripMenuItem.Checked = true;
+                case SortOrder.Descending:
+                    descendingToolStripMenuItem.Checked = true;
                     break;
             }
         }
@@ -815,7 +856,7 @@ namespace Touhou_Launcher
         {
             foreach (ListViewItem game in customList.SelectedItems)
             {
-                if (MessageBox.Show(String.Format(rm.GetString("customDeleteConfirm"), game.Text), "", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                if (MessageBox.Show(string.Format(rm.GetString("customDeleteConfirm"), game.Text), "", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     customList.Items.Remove(game);
                     ((Dictionary<string, string>)customTree.SelectedNode.Tag).Remove(game.Name);
@@ -902,18 +943,19 @@ namespace Touhou_Launcher
             if (e.KeyCode == Keys.Enter)
             {
                 maribelReplays.Checked = false;
-                appspotReplays.Checked = false;
+                lunarcastReplays.Checked = false;
                 Replays_CheckedChanged(sender, new EventArgs());
             }
         }
-        
+
         private void replayBrowser_Navigating(object sender, WebBrowserNavigatingEventArgs e)
         {
             if (e.Url.ToString().EndsWith(".rpy"))
             {
                 e.Cancel = true;
                 string name = e.Url.ToString().Substring(e.Url.ToString().LastIndexOf("/") + 1);
-                int game = Convert.ToInt32(name.Substring(2, name.LastIndexOf("_") - 2));
+                string game = name.Substring(2, name.LastIndexOf("_") - 2);
+                double gameNum = UnformatGameNumber(game);
                 if (Directory.Exists(Environment.SpecialFolder.ApplicationData + "\\ShanghaiAlice\\th" + game))
                 {
                     downloadReplay(Environment.SpecialFolder.ApplicationData + "\\ShanghaiAlice\\th" + game, name, e.Url);
@@ -924,26 +966,26 @@ namespace Touhou_Launcher
                 }
                 else
                 {
-                    foreach (string dir in curCfg.gameCFG[idToNumber.IndexOf(game)].GameDir)
+                    foreach (string exe in curCfg.gameCFG[gameNumbers.IndexOf(gameNum)].GameDir)
                     {
-                        if (dir == "")
+                        if (exe == "")
                             continue;
-                        if (game == 9)
+                        if (gameNum == 10)
                         {
                             for (int i = 1; i < 26; i++)
                             {
-                                if (!File.Exists(Path.GetDirectoryName(dir) + "\\replay\\th10_" + i.ToString("00") + ".rpy"))
+                                if (!File.Exists(Path.GetDirectoryName(exe) + "\\replay\\th10_" + i.ToString("00") + ".rpy"))
                                 {
                                     name = "th10_" + i.ToString("00") + ".rpy";
-                                    downloadReplay(Path.GetDirectoryName(dir) + "\\replay\\", "th10_" + i.ToString("00") + ".rpy", e.Url);
+                                    downloadReplay(Path.GetDirectoryName(exe) + "\\replay\\", "th10_" + i.ToString("00") + ".rpy", e.Url);
                                     return;
                                 }
                             }
-                            downloadReplay(Path.GetDirectoryName(dir) + "\\replay\\", name, e.Url, true);
+                            downloadReplay(Path.GetDirectoryName(exe) + "\\replay\\", name, e.Url, true);
                         }
                         else
                         {
-                            downloadReplay(Path.GetDirectoryName(dir) + "\\replay\\", name, e.Url);
+                            downloadReplay(Path.GetDirectoryName(exe) + "\\replay\\", name, e.Url);
                             return;
                         }
                     }
@@ -983,13 +1025,13 @@ namespace Touhou_Launcher
 
         private void crapResetStartingRepo_Click(object sender, EventArgs e)
         {
-            crapStartingRepo.Text = @"https://mirrors.thpatch.net/nmlgc/";
-            curCfg.StartingRepo = @"https://mirrors.thpatch.net/nmlgc/";
+            curCfg.StartingRepo = @"https://srv.thpatch.net/";
+            crapStartingRepo.Text = curCfg.StartingRepo;
         }
 
         private void randomAll_Click(object sender, EventArgs e)
         {
-            foreach (CheckBox chk in GetAll(randomSettings, typeof(CheckBox)))
+            foreach (CheckBox chk in GetAll<CheckBox>(randomSettings))
             {
                 chk.Checked = true;
             }
@@ -997,7 +1039,7 @@ namespace Touhou_Launcher
 
         private void randomNone_Click(object sender, EventArgs e)
         {
-            foreach (CheckBox chk in GetAll(randomSettings, typeof(CheckBox)))
+            foreach (CheckBox chk in GetAll<CheckBox>(randomSettings))
             {
                 chk.Checked = false;
             }
@@ -1005,51 +1047,87 @@ namespace Touhou_Launcher
 
         private void chkRandom_CheckedChanged(object sender, EventArgs e)
         {
-            curCfg.gameCFG[nameToID[((CheckBox)sender).Name.Substring(3)]].randomCheck = ((CheckBox)sender).Checked;
+            curCfg.gameCFG[gameNames.IndexOf(((CheckBox)sender).Name.Substring(3))].randomCheck = ((CheckBox)sender).Checked;
         }
 
-        private void browse_Click(object sender, EventArgs e)
+        private void browseFile_Click(object sender, EventArgs e)
         {
-            TextBox txtbox = (TextBox)launcherSettings.Controls.Find(((Button)sender).Name.Substring(6).ToLower() + "Dir", false).FirstOrDefault(n => n.GetType() == typeof(TextBox));
-            foreach (string file in MainForm.FileBrowser(MainForm.rm.GetString(((Button)sender).Name.Substring(6).ToLower() + "SelectTitle"), MainForm.rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*"))
+            string controlName = ((Button)sender).Name.Substring(6).ToLower() + "Dir"; // Needs to stay as "Dir" because it references the settings
+            FieldInfo field = typeof(Configs).GetField(controlName);
+            string initialDirectory = field == null || (string)field.GetValue(curCfg) == "" ? null : Path.GetDirectoryName((string)(field.GetValue(curCfg)));
+            TextBox txtbox = (TextBox)launcherSettings.Controls.Find(controlName, false).FirstOrDefault(n => n.GetType() == typeof(TextBox));
+            foreach (string file in FileBrowser(this, rm.GetString(((Button)sender).Name.Substring(6).ToLower() + "SelectTitle"), rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + rm.GetString("allFilter") + " (*.*)|*.*", initialDirectory))
             {
                 txtbox.BackColor = SystemColors.Window;
                 txtbox.Text = file;
-                curCfg.np2Dir = np2Dir.Text;
-                string crapPath = Path.GetDirectoryName(crapDir.Text);
-                curCfg.crapDir = (Directory.Exists(crapPath + "\\bin") || !crapPath.EndsWith("\\bin")) ? crapPath : crapPath.Substring(0, crapPath.LastIndexOf("\\bin"));
+                field?.SetValue(curCfg, txtbox.Text);
             }
         }
 
-        private void Dir_LostFocus(object sender, EventArgs e)
+        private void browseFolder_Click(object sender, EventArgs e)
         {
-            if (File.Exists(((TextBox)sender).Text) || ((TextBox)sender).Text == "" || sender == crapStartingRepo)
+            string controlName = ((Button)sender).Name.Substring(6).ToLower() + "Dir";
+            FieldInfo field = typeof(Configs).GetField(controlName);
+            string initialDirectory = (string)(field?.GetValue(curCfg));
+            TextBox txtbox = (TextBox)launcherSettings.Controls.Find(controlName, false).FirstOrDefault(n => n.GetType() == typeof(TextBox));
+            string folder = FolderBrowser(this, rm.GetString(((Button)sender).Name.Substring(6).ToLower() + "SelectTitle"), initialDirectory);
+            if (folder != null)
             {
-                ((TextBox)sender).BackColor = SystemColors.Window;
-                curCfg.np2Dir = np2Dir.Text;
-                string crapPath = Path.GetDirectoryName(crapDir.Text);
-                curCfg.crapDir = (Directory.Exists(crapPath + "\\bin") || !crapPath.EndsWith("\\bin")) ? crapPath : crapPath.Substring(0, crapPath.LastIndexOf("\\bin"));
-                curCfg.StartingRepo = crapStartingRepo.Text;
+                txtbox.BackColor = SystemColors.Window;
+                txtbox.Text = folder;
+                field?.SetValue(curCfg, txtbox.Text);
             }
-            else
-                ((TextBox)sender).BackColor = Color.Red;
+        }
+
+        private void Path_LostFocus(object sender, EventArgs e)
+        {
+            if (sender == np2Dir)
+                if (File.Exists(np2Dir.Text) || np2Dir.Text == "")
+                {
+                    np2Dir.BackColor = SystemColors.Window;
+                    curCfg.np2Dir = np2Dir.Text;
+                }
+                else
+                    np2Dir.BackColor = Color.Red;
+            else if (sender == crapDir)
+                if (Directory.Exists(crapDir.Text) || crapDir.Text == "")
+                {
+                    crapDir.BackColor = SystemColors.Window;
+                    curCfg.crapDir = crapDir.Text;
+                }
+                else
+                    crapDir.BackColor = Color.Red;
+            else if (sender == crapStartingRepo)
+                curCfg.StartingRepo = crapStartingRepo.Text;
+        }
+
+        private void Path_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+                e.Effect = DragDropEffects.Copy;
+        }
+
+        private void File_DragDrop(object sender, DragEventArgs e)
+        {
+            ((TextBox)sender).Text = ((string[])e.Data.GetData(DataFormats.FileDrop)).FirstOrDefault(n => File.Exists(n));
+            Path_LostFocus(sender, new EventArgs());
         }
 
         private void Dir_DragDrop(object sender, DragEventArgs e)
         {
-            ((TextBox)sender).Text = ((string[])e.Data.GetData(DataFormats.FileDrop)).FirstOrDefault(n => File.Exists(n));
-            Dir_LostFocus(sender, new EventArgs());
+            ((TextBox)sender).Text = ((string[])e.Data.GetData(DataFormats.FileDrop)).FirstOrDefault(n => Directory.Exists(n));
+            Path_LostFocus(sender, new EventArgs());
         }
 
         private void crapConfigure_Click(object sender, EventArgs e)
         {
             if (curCfg.crapDir != "")
             {
-                string procDir = curCfg.crapDir + "\\bin\\thcrap_configure.exe";
-                if (!File.Exists(procDir))
+                string processFile = curCfg.crapDir + "\\thcrap.exe";
+                if (!File.Exists(processFile))
                     MessageBox.Show(rm.GetString("errorcrapNotFound"));
                 else
-                    startProcess(procDir);
+                    startProcess(processFile);
             }
         }
 
@@ -1066,7 +1144,7 @@ namespace Touhou_Launcher
         private void buttonToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Button btn = (Button)((ContextMenuStrip)((ToolStripMenuItem)sender).OwnerItem.GetCurrentParent()).Tag;
-            int game = nameToID[btn.Name.Substring(3)];
+            int game = gameNames.IndexOf(btn.Name.Substring(3));
             curCfg.gameCFG[game].showText = textToolStripMenuItem.Checked;
             curCfg.gameCFG[game].showBanner = bannerToolStripMenuItem.Checked;
             curCfg.Save();
@@ -1077,7 +1155,7 @@ namespace Touhou_Launcher
         private void ContextMenu_Opening(object sender, CancelEventArgs e)
         {
             ((ContextMenuStrip)sender).Tag = ((ContextMenuStrip)sender).SourceControl;
-            int game = nameToID[((ContextMenuStrip)sender).SourceControl.Name.Substring(3)];
+            int game = gameNames.IndexOf(((ContextMenuStrip)sender).SourceControl.Name.Substring(3));
             textToolStripMenuItem.Checked = curCfg.gameCFG[game].showText;
             bannerToolStripMenuItem.Checked = curCfg.gameCFG[game].showBanner;
         }

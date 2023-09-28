@@ -1,14 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using System.IO;
 using System.Diagnostics;
-using Newtonsoft.Json;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace Touhou_Launcher
 {
@@ -16,44 +13,44 @@ namespace Touhou_Launcher
     {
         public int game;
         Button parentButton;
-        Dictionary<string, string> crap = new Dictionary<string,string>();
+        Dictionary<string, string> crap = new Dictionary<string, string>();
 
         public ConfigForm(Button parentBtn)
         {
             InitializeComponent();
             parentButton = parentBtn;
-            game = MainForm.nameToID[parentBtn.Name.Substring(3)];
+            game = MainForm.gameNames.IndexOf(parentBtn.Name.Substring(3));
             InitializeLanguage();
             chkCustomBanner.Checked = MainForm.curCfg.gameCFG[game].customBanner;
-            bannerOffDir.Text = MainForm.curCfg.gameCFG[game].bannerOff;
-            bannerOnDir.Text = MainForm.curCfg.gameCFG[game].bannerOn;
+            bannerOffFile.Text = MainForm.curCfg.gameCFG[game].bannerOff;
+            bannerOnFile.Text = MainForm.curCfg.gameCFG[game].bannerOn;
             chkCustomText.Checked = MainForm.curCfg.gameCFG[game].customText;
         }
 
         private void ConfigForm_Load(object sender, EventArgs e)
         {
-            if (game > 4)
-            {
-                foreach (Control ctrl in pc98Settings.Controls)
-                    ctrl.Enabled = false;
-                jpDir.Text = MainForm.curCfg.gameCFG[game].GameDir[0];
-                jpApplocale.Checked = MainForm.curCfg.gameCFG[game].appLocale[0];
-                enDir.Text = MainForm.curCfg.gameCFG[game].GameDir[1];
-                enApplocale.Checked = MainForm.curCfg.gameCFG[game].appLocale[1];
-                customDir.Text = MainForm.curCfg.gameCFG[game].GameDir[2];
-                customApplocale.Checked = MainForm.curCfg.gameCFG[game].appLocale[2];
-                Refreshcrap();
-                crapApplocale.Checked = MainForm.curCfg.gameCFG[game].appLocale[3];
-                defaultExec.SelectedIndex = MainForm.curCfg.gameCFG[game].DefaultDir;
-                defaultApplocale.Checked = MainForm.curCfg.gameCFG[game].DefaultApplocale;
-            }
-            else
+            if (game < MainForm.pc98GameCount)
             {
                 foreach (Control ctrl in windowsSettings.Controls)
                 {
                     ctrl.Enabled = false;
                 }
-                hdiDir.Text = MainForm.curCfg.gameCFG[game].GameDir[0];
+                hdiFile.Text = MainForm.curCfg.gameCFG[game].GameDir[0];
+            }
+            else
+            {
+                foreach (Control ctrl in pc98Settings.Controls)
+                    ctrl.Enabled = false;
+                jpExe.Text = MainForm.curCfg.gameCFG[game].GameDir[0];
+                jpApplocale.Checked = MainForm.curCfg.gameCFG[game].appLocale[0];
+                enExe.Text = MainForm.curCfg.gameCFG[game].GameDir[1];
+                enApplocale.Checked = MainForm.curCfg.gameCFG[game].appLocale[1];
+                customExe.Text = MainForm.curCfg.gameCFG[game].GameDir[2];
+                customApplocale.Checked = MainForm.curCfg.gameCFG[game].appLocale[2];
+                Refreshcrap();
+                crapApplocale.Checked = MainForm.curCfg.gameCFG[game].appLocale[3];
+                defaultExec.SelectedIndex = MainForm.curCfg.gameCFG[game].DefaultDir;
+                defaultApplocale.Checked = MainForm.curCfg.gameCFG[game].DefaultApplocale;
             }
         }
 
@@ -70,8 +67,8 @@ namespace Touhou_Launcher
                     crap = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(MainForm.curCfg.crapDir + "\\config\\games.js"));
                     foreach (KeyValuePair<string, string> line in crap)
                     {
-                        int number = Int32.TryParse(new String(line.Key.Where(Char.IsDigit).ToArray()), out number) ? number : 0;
-                        if (number == MainForm.idToNumber[game] || !line.Key.StartsWith("th"))
+                        string number = new string(line.Key.Where(char.IsDigit).ToArray());
+                        if (number == MainForm.FormatGameNumber(MainForm.gameNumbers[game]) || !line.Key.StartsWith("th"))
                         {
                             crapGame.Items.Add(line.Key);
                         }
@@ -94,7 +91,7 @@ namespace Touhou_Launcher
 
         private void InitializeLanguage()
         {
-            foreach (Button btn in MainForm.GetAll(this, typeof(Button)))
+            foreach (Button btn in MainForm.GetAll<Button>(this))
             {
                 if (btn.Name.Contains("browse"))
                     btn.Text = MainForm.rm.GetString("browse");
@@ -103,24 +100,24 @@ namespace Touhou_Launcher
                 else
                     btn.Text = MainForm.rm.GetString(btn.Name);
             }
-            foreach (CheckBox chk in MainForm.GetAll(this, typeof(CheckBox)))
+            foreach (CheckBox chk in MainForm.GetAll<CheckBox>(this))
             {
                 if (chk.Name.Contains("Applocale"))
                     chk.Text = MainForm.rm.GetString("useApplocale");
                 else
                     chk.Text = MainForm.rm.GetString(chk.Name);
             }
-            foreach (Label lbl in MainForm.GetAll(this, typeof(Label)))
+            foreach (Label lbl in MainForm.GetAll<Label>(this))
             {
-                    lbl.Text = MainForm.rm.GetString(lbl.Name);
+                lbl.Text = MainForm.rm.GetString(lbl.Name);
             }
-            foreach (GroupBox box in MainForm.GetAll(this, typeof(GroupBox)))
+            foreach (GroupBox box in MainForm.GetAll<GroupBox>(this))
             {
                 box.Text = MainForm.rm.GetString(box.Name);
             }
             defaultExec.Items.Clear();
-            defaultExec.Items.AddRange(MainForm.rm.GetString("defaultExec").Split(new string[] {", "}, 4, StringSplitOptions.None));
-            this.Text = MainForm.rm.GetString("gameConfiguration") + MainForm.rm.GetString(MainForm.nameToID.FirstOrDefault(t => t.Value == game).Key);
+            defaultExec.Items.AddRange(MainForm.rm.GetString("defaultExec").Split(new string[] { ", " }, 4, StringSplitOptions.None));
+            this.Text = MainForm.rm.GetString("gameConfiguration") + MainForm.rm.GetString(MainForm.gameNames.ElementAtOrDefault(game));
         }
 
         private void ConfigForm_Closing(object sender, FormClosingEventArgs e)
@@ -139,13 +136,13 @@ namespace Touhou_Launcher
             MainForm.curCfg.Save();
         }
 
-        private void Dir_LostFocus(object sender, EventArgs e)
+        private void File_LostFocus(object sender, EventArgs e)
         {
             if (File.Exists(((TextBox)sender).Text) || ((TextBox)sender).Text == "")
             {
                 ((TextBox)sender).BackColor = SystemColors.Window;
-                int dirID = game > 4 ? MainForm.dirToNumber[((TextBox)sender).Name.Replace("Dir", "")] : 0;
-                MainForm.curCfg.gameCFG[game].GameDir[dirID] = ((TextBox)sender).Text;
+                int defaultExe = game < MainForm.pc98GameCount ? 0 : MainForm.defaultExeOptions.IndexOf(((TextBox)sender).Name.Replace("Exe", ""));
+                MainForm.curCfg.gameCFG[game].GameDir[defaultExe] = ((TextBox)sender).Text;
             }
             else
             {
@@ -153,51 +150,52 @@ namespace Touhou_Launcher
             }
         }
 
-        private void Dir_DragEnter(object sender, DragEventArgs e)
+        private void Path_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
                 e.Effect = DragDropEffects.Copy;
         }
 
-        private void Dir_DragDrop(object sender, DragEventArgs e)
+        private void File_DragDrop(object sender, DragEventArgs e)
         {
             ((TextBox)sender).Text = ((string[])e.Data.GetData(DataFormats.FileDrop)).FirstOrDefault(n => File.Exists(n));
             if (((TextBox)sender).Name.Contains("banner"))
-                bannerDir_LostFocus(sender, new EventArgs());
+                bannerFile_LostFocus(sender, new EventArgs());
             else
-                Dir_LostFocus(sender, new EventArgs());
+                File_LostFocus(sender, new EventArgs());
         }
 
         private void Applocale_CheckedChanged(object sender, EventArgs e)
         {
-            MainForm.curCfg.gameCFG[game].appLocale[MainForm.dirToNumber[((CheckBox)sender).Name.Replace("Applocale", "")]] = ((CheckBox)sender).Checked;
+            MainForm.curCfg.gameCFG[game].appLocale[MainForm.defaultExeOptions.IndexOf(((CheckBox)sender).Name.Replace("Applocale", ""))] = ((CheckBox)sender).Checked;
         }
 
         private void browse_Click(object sender, EventArgs e)
         {
-            Control txtBox = windowsSettings.Controls.Find(((Button)sender).Name.ToLower().Substring(6) + "Dir", false).FirstOrDefault(n => n.GetType() == typeof(TextBox));
-            foreach (string path in MainForm.FileBrowser(MainForm.rm.GetString("gameSelectTitle"), MainForm.rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*"))
+            Control txtBox = windowsSettings.Controls.Find(((Button)sender).Name.Substring(6).ToLower() + "Exe", false).FirstOrDefault(n => n.GetType() == typeof(TextBox));
+            int defaultExe = MainForm.defaultExeOptions.IndexOf(txtBox.Name.Replace("Exe", ""));
+            string initialDirectory = MainForm.curCfg.gameCFG[game].GameDir[defaultExe] == "" ? null : Path.GetDirectoryName(MainForm.curCfg.gameCFG[game].GameDir[defaultExe]);
+            foreach (string path in MainForm.FileBrowser(this, MainForm.rm.GetString("gameSelectTitle"), MainForm.rm.GetString("executableFilter") + " (*.exe, *.bat, *.lnk)|*.exe;*.bat;*.lnk|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*", initialDirectory))
             {
-                int type = MainForm.dirToNumber[txtBox.Name.Replace("Dir", "")];
                 txtBox.Text = path;
-                MainForm.curCfg.gameCFG[game].GameDir[type] = path;
-                string jpPath = Path.GetDirectoryName(path) + "\\th" + (MainForm.idToNumber[game]).ToString("00") + ".exe";
-                string enPath = Path.GetDirectoryName(path) + "\\th" + (MainForm.idToNumber[game]).ToString("00") + "e.exe";
+                MainForm.curCfg.gameCFG[game].GameDir[defaultExe] = path;
+                string jpPath = Path.GetDirectoryName(path) + "\\th" + MainForm.FormatGameNumber(MainForm.gameNumbers[game]) + ".exe";
+                string enPath = Path.GetDirectoryName(path) + "\\th" + MainForm.FormatGameNumber(MainForm.gameNumbers[game]) + "e.exe";
                 string customPath = Path.GetDirectoryName(path);
-                customPath += MainForm.idToNumber[game] == 75 ? "\\Config.exe" : "\\custom.exe";
-                if (type != 0 && File.Exists(jpPath) && MainForm.curCfg.gameCFG[game].GameDir[0] == "")
+                customPath += MainForm.gameNumbers[game] == 7.5 ? "\\Config.exe" : "\\custom.exe";
+                if (defaultExe != 0 && File.Exists(jpPath) && MainForm.curCfg.gameCFG[game].GameDir[0] == "")
                 {
-                    jpDir.Text = jpPath;
+                    jpExe.Text = jpPath;
                     MainForm.curCfg.gameCFG[game].GameDir[0] = jpPath;
                 }
-                if (type != 1 && File.Exists(enPath) && MainForm.curCfg.gameCFG[game].GameDir[1] == "")
+                if (defaultExe != 1 && File.Exists(enPath) && MainForm.curCfg.gameCFG[game].GameDir[1] == "")
                 {
-                    enDir.Text = enPath;
+                    enExe.Text = enPath;
                     MainForm.curCfg.gameCFG[game].GameDir[1] = enPath;
                 }
-                if (type != 2 && File.Exists(customPath) && MainForm.curCfg.gameCFG[game].GameDir[2] == "")
+                if (defaultExe != 2 && File.Exists(customPath) && MainForm.curCfg.gameCFG[game].GameDir[2] == "")
                 {
-                    customDir.Text = customPath;
+                    customExe.Text = customPath;
                     MainForm.curCfg.gameCFG[game].GameDir[2] = customPath;
                 }
                 break;
@@ -206,8 +204,8 @@ namespace Touhou_Launcher
 
         private void launch_Click(object sender, EventArgs e)
         {
-            int dir = MainForm.dirToNumber[((Button)sender).Name.ToLower().Substring(6)];
-            MainForm.launchGame(game, dir, MainForm.curCfg.gameCFG[game].appLocale[dir]);
+            int defaultExe = MainForm.defaultExeOptions.IndexOf(((Button)sender).Name.ToLower().Substring(6));
+            MainForm.launchGame(game, defaultExe, MainForm.curCfg.gameCFG[game].appLocale[defaultExe]);
         }
 
         private void crapCfg_SelectedIndexChanged(object sender, EventArgs e)
@@ -215,8 +213,10 @@ namespace Touhou_Launcher
             MainForm.curCfg.gameCFG[game].crapCFG[0] = crapGame.SelectedItem.ToString();
             if (crapCfg.SelectedItem.ToString() == "Custom")
             {
-                thcrap profileConfig = new thcrap(this);
-                profileConfig.ShowDialog();
+                using (thcrap profileConfig = new thcrap(this))
+                {
+                    profileConfig.ShowDialog(this);
+                }
             }
             else
                 MainForm.curCfg.gameCFG[game].crapCFG[1] = crapCfg.SelectedItem.ToString();
@@ -241,13 +241,14 @@ namespace Touhou_Launcher
 
         private void browseBannerOn_Click(object sender, EventArgs e)
         {
-            foreach (string file in MainForm.FileBrowser(MainForm.rm.GetString("bannerOnSelectTitle"), MainForm.rm.GetString("imageFilter") + " (*.png, *.jpg, *.bmp)|*.png;*.jpg;*.bmp|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*"))
+            string initialDirectory = MainForm.curCfg.gameCFG[game].bannerOn == "" ? null : Path.GetDirectoryName(MainForm.curCfg.gameCFG[game].bannerOn);
+            foreach (string file in MainForm.FileBrowser(this, MainForm.rm.GetString("bannerOnSelectTitle"), MainForm.rm.GetString("imageFilter") + " (*.png, *.jpg, *.bmp)|*.png;*.jpg;*.bmp|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*", initialDirectory))
             {
                 try
                 {
                     Image.FromFile(file);
                     MainForm.curCfg.gameCFG[game].bannerOn = file;
-                    bannerOnDir.Text = file;
+                    bannerOnFile.Text = file;
                 }
                 catch (OutOfMemoryException ex)
                 {
@@ -258,13 +259,14 @@ namespace Touhou_Launcher
 
         private void browseBannerOff_Click(object sender, EventArgs e)
         {
-            foreach (string file in MainForm.FileBrowser(MainForm.rm.GetString("bannerOffSelectTitle"), MainForm.rm.GetString("imageFilter") + " (*.png, *.jpg, *.bmp)|*.png;*.jpg;*.bmp|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*"))
+            string initialDirectory = MainForm.curCfg.gameCFG[game].bannerOff == "" ? null : Path.GetDirectoryName(MainForm.curCfg.gameCFG[game].bannerOff);
+            foreach (string file in MainForm.FileBrowser(this, MainForm.rm.GetString("bannerOffSelectTitle"), MainForm.rm.GetString("imageFilter") + " (*.png, *.jpg, *.bmp)|*.png;*.jpg;*.bmp|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*", initialDirectory))
             {
                 try
                 {
                     Image.FromFile(file);
                     MainForm.curCfg.gameCFG[game].bannerOff = file;
-                    bannerOffDir.Text = file;
+                    bannerOffFile.Text = file;
                 }
                 catch (OutOfMemoryException ex)
                 {
@@ -273,7 +275,7 @@ namespace Touhou_Launcher
             }
         }
 
-        private void bannerDir_LostFocus(object sender, EventArgs e)
+        private void bannerFile_LostFocus(object sender, EventArgs e)
         {
             bool onTxtBox = ((TextBox)sender).Name.Contains("On");
             if (((TextBox)sender).Text != "")
@@ -312,17 +314,20 @@ namespace Touhou_Launcher
 
         private void btnCustomText_Click(object sender, EventArgs e)
         {
-            ColorDialog colorSet = new ColorDialog();
-            colorSet.Color = Color.FromArgb(MainForm.curCfg.gameCFG[game].textColor);
-            if (colorSet.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                MainForm.curCfg.gameCFG[game].textColor = colorSet.Color.ToArgb();
+            using (ColorDialog colorSet = new ColorDialog())
+            {
+                colorSet.Color = Color.FromArgb(MainForm.curCfg.gameCFG[game].textColor);
+                if (colorSet.ShowDialog(this) == DialogResult.OK)
+                    MainForm.curCfg.gameCFG[game].textColor = colorSet.Color.ToArgb();
+            }
         }
 
         private void browseHDI_Click(object sender, EventArgs e)
         {
-            foreach (string file in MainForm.FileBrowser(MainForm.rm.GetString("hdiSelectTitle"), MainForm.rm.GetString("hdiFilter") + " (*.hdi)|*.hdi|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*"))
+            string initialDirectory = MainForm.curCfg.gameCFG[game].GameDir[0] == "" ? null : Path.GetDirectoryName(MainForm.curCfg.gameCFG[game].GameDir[0]);
+            foreach (string file in MainForm.FileBrowser(this, MainForm.rm.GetString("hdiSelectTitle"), MainForm.rm.GetString("hdiFilter") + " (*.hdi)|*.hdi|" + MainForm.rm.GetString("allFilter") + " (*.*)|*.*", initialDirectory))
             {
-                hdiDir.Text = file;
+                hdiFile.Text = file;
                 MainForm.curCfg.gameCFG[game].GameDir[0] = file;
             }
         }
@@ -335,24 +340,24 @@ namespace Touhou_Launcher
         private void openFolder_Click(object sender, EventArgs e)
         {
             string path = "";
-            if (game > 4)
+            if (game < MainForm.pc98GameCount)
             {
-                foreach (TextBox dir in MainForm.GetAll(windowsSettings, typeof(TextBox)))
+                if (hdiFile.Text != "")
                 {
-                    if (dir.Text != "")
-                    {
-                        path = Path.GetDirectoryName(dir.Text);
-                        if (Directory.Exists(path))
-                            break;
-                    }
+                    if (Directory.Exists(Path.GetDirectoryName(hdiFile.Text)))
+                        path = Path.GetDirectoryName(hdiFile.Text);
                 }
             }
             else
             {
-                if (hdiDir.Text != "")
+                foreach (TextBox file in MainForm.GetAll<TextBox>(windowsSettings))
                 {
-                    if (Directory.Exists(Path.GetDirectoryName(hdiDir.Text)))
-                        path = Path.GetDirectoryName(hdiDir.Text);
+                    if (file.Text != "")
+                    {
+                        path = Path.GetDirectoryName(file.Text);
+                        if (Directory.Exists(path))
+                            break;
+                    }
                 }
             }
             if (path != "")
@@ -361,7 +366,7 @@ namespace Touhou_Launcher
 
         private void openAppdata_Click(object sender, EventArgs e)
         {
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData, Environment.SpecialFolderOption.DoNotVerify) + "\\ShanghaiAlice\\th" + (MainForm.idToNumber[game]).ToString("00");
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData, Environment.SpecialFolderOption.DoNotVerify) + "\\ShanghaiAlice\\th" + MainForm.FormatGameNumber(MainForm.gameNumbers[game]);
             if (Directory.Exists(path))
                 Process.Start(path);
             else if (Directory.Exists(path + "tr"))
@@ -373,23 +378,23 @@ namespace Touhou_Launcher
         private void openReplays_Click(object sender, EventArgs e)
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData, Environment.SpecialFolderOption.DoNotVerify) + "\\ShanghaiAlice\\th";
-            if (Directory.Exists(path + MainForm.idToNumber[game].ToString("00") + "\\replay"))
+            if (Directory.Exists(path + MainForm.FormatGameNumber(MainForm.gameNumbers[game]) + "\\replay"))
             {
-                Process.Start(path + MainForm.idToNumber[game].ToString("00") + "\\replay");
+                Process.Start(path + MainForm.FormatGameNumber(MainForm.gameNumbers[game]) + "\\replay");
                 return;
             }
-            else if (Directory.Exists(path + MainForm.idToNumber[game].ToString("00") + "tr\\replay"))
+            else if (Directory.Exists(path + MainForm.FormatGameNumber(MainForm.gameNumbers[game]) + "tr\\replay"))
             {
-                Process.Start(path + MainForm.idToNumber[game].ToString("00") + "tr\\replay");
+                Process.Start(path + MainForm.FormatGameNumber(MainForm.gameNumbers[game]) + "tr\\replay");
                 return;
             }
             else
             {
-                foreach (TextBox dir in MainForm.GetAll(windowsSettings, typeof(TextBox)))
+                foreach (TextBox file in MainForm.GetAll<TextBox>(windowsSettings))
                 {
-                    if (dir.Text != "")
+                    if (file.Text != "")
                     {
-                        string path2 = Path.GetDirectoryName(dir.Text) + "\\replay";
+                        string path2 = Path.GetDirectoryName(file.Text) + "\\replay";
                         if (Directory.Exists(path2))
                         {
                             Process.Start(path2);
