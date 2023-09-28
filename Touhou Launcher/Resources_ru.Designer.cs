@@ -1197,7 +1197,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Touhou 7.5: Immaterial and Missing Power.
+        ///   Looks up a localized string similar to Touhou 07.5: Immaterial and Missing Power.
         /// </summary>
         public static string Th075Title {
             get {
@@ -1278,7 +1278,7 @@ namespace Touhou_Launcher {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Touhou 9.5: Shoot the Bullet.
+        ///   Looks up a localized string similar to Touhou 09.5: Shoot the Bullet.
         /// </summary>
         public static string Th095Title {
             get {
